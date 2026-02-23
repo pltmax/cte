@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(/Users/pierre-louisfranco/Desktop/Project_1/backend/.venv/bin/pip install:*)",
+      "Bash(ping:*)",
+      "Bash(backend/.venv/bin/python:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(docker compose up:*)",
+      "Bash(make dev:*)",
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_variable_defs",
+      "mcp__figma__get_screenshot",
+      "Bash(curl:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(/Applications/Google\\\\ Chrome.app/Contents/MacOS/Google\\\\ Chrome:*)",
+      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome:*)"
+    ]
+  }
+}
