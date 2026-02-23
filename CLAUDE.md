@@ -13,6 +13,7 @@ French exam prep platform (TOEIC, TOEFL, etc.). Full-stack: Next.js (frontend), 
 | Auth      | Supabase Auth (JWT)                                 |
 
 ## Sources of Truth — Read FIRST
+- `docs/context/context_main.json`     → frontend component tree (LogicStamp AST)
 - `docs/context/database.md`           → DB schema, RLS policies, RPC functions
 - `docs/context/api.md`                → FastAPI routes, Pydantic schemas
 - `docs/context/dead_code_report.json` → frontend files NOT to use

@@ -20,7 +20,25 @@
       "Bash(chmod +x:*)",
       "Bash(tail:*)",
       "Bash(npx husky:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(head:*)",
+      "Bash(echo not installed:*)",
+      "Bash(npm install:*)",
+      "Bash(sudo npm:*)",
+      "Bash(which node && node --version && npm config get prefix 2>&1)",
+      "Bash(echo nvm not found:*)",
+      "Bash(export PATH=~/.npm-global/bin:$PATH && stamp --version 2>&1)",
+      "Bash(export PATH=~/.npm-global/bin:$PATH && cd /Users/pierre-louisfranco/Desktop/Project_1/frontend && stamp init 2>&1)",
+      "Bash(export PATH=~/.npm-global/bin:$PATH && stamp context 2>&1)",
+      "Bash(echo:*)",
+      "Bash(export PATH=~/.npm-global/bin:$PATH && cd /Users/pierre-louisfranco/Desktop/Project_1 && npm run context:sync 2>&1)",
+      "Bash(claude mcp:*)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "supabase",
+    "context7",
+    "logicstamp"
+  ],
+  "enableAllProjectMcpServers": true
 }

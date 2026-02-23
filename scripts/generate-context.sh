@@ -4,8 +4,22 @@ set -e
 echo "Generating architectural context..."
 mkdir -p docs/context
 
-# 1. DATABASE (Supabase)
-echo "[1/3] Supabase introspection..."
+# 1. FRONTEND (LogicStamp AST)
+echo "[1/4] Frontend component analysis (LogicStamp)..."
+export PATH=~/.npm-global/bin:$PATH
+if command -v stamp &> /dev/null; then
+  cd frontend && stamp context > /dev/null 2>&1 && cd ..
+  if [ -f frontend/context_main.json ]; then
+    cp frontend/context_main.json docs/context/context_main.json
+    echo "  -> docs/context/context_main.json"
+  fi
+else
+  echo "  SKIPPED: LogicStamp not installed"
+  echo "  To enable: npm install -g logicstamp-context && cd frontend && stamp init"
+fi
+
+# 2. DATABASE (Supabase)
+echo "[2/4] Supabase introspection..."
 if [ -f .env ] && grep -q DATABASE_URL .env 2>/dev/null; then
   npx tsx scripts/introspect-supabase.ts > docs/context/database.md
   echo "  -> docs/context/database.md"
@@ -15,7 +29,7 @@ else
 fi
 
 # 2. FASTAPI API
-echo "[2/3] FastAPI introspection..."
+echo "[3/4] FastAPI introspection..."
 if [ -d backend ] && [ -f backend/requirements.txt ]; then
   python3 scripts/introspect-fastapi.py > docs/context/api.md
   echo "  -> docs/context/api.md"
@@ -24,7 +38,7 @@ else
 fi
 
 # 3. DEAD CODE (Knip)
-echo "[3/3] Dead code detection (Knip)..."
+echo "[4/4] Dead code detection (Knip)..."
 if [ -f frontend/knip.json ]; then
   cd frontend
   npx knip --reporter json > ../docs/context/dead_code_report.json 2>/dev/null || true

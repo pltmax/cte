@@ -1,17 +1,22 @@
 {
   "mcpServers": {
-    "supabase": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@supabase/mcp-server-supabase@latest",
-        "--read-only",
-        "--project-ref=mzgpqtikztwvfrhqqsuq"
+    "context7": {
+        "command": "npx",
+        "args": [
+            "-y",
+            "@upstash/context7-mcp@latest"
       ]
     },
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp@latest"]
+    "supabase": {
+        "type": "http",
+        "url": "https://mcp.supabase.com/mcp"
+    },
+    "logicstamp": {
+        "command": "npx",
+        "args": [
+            "-y",
+            "logicstamp-mcp@latest"
+        ]
     }
   }
 }

@@ -5,7 +5,8 @@
     "context:sync": "bash scripts/generate-context.sh",
     "context:db": "npx tsx scripts/introspect-supabase.ts > docs/context/database.md",
     "context:api": "python3 scripts/introspect-fastapi.py > docs/context/api.md",
-    "context:dead": "cd frontend && npx knip --reporter json > ../docs/context/dead_code_report.json",
+    "context:frontend": "stamp context --out docs/context/frontend_map.json",
+    "context:dead": "cd frontend && npx knip --reporter json > ../docs/context/dead_code_report.json; true",
     "dev:frontend": "cd frontend && npm run dev",
     "dev:backend": "cd backend && .venv/bin/uvicorn app.main:app --reload --port 8000",
     "prepare": "husky"

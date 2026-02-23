@@ -1,6 +1,32 @@
 #!/bin/sh
-# Pre-commit: dead code detection
-# Warns if unused files are detected in the frontend
+# Pre-commit: context regeneration + ADR reminder + dead code detection
+
+echo "[pre-commit] Regenerating architectural context..."
+HUSKY=1 npm run context:sync
+git add docs/context/ 2>/dev/null || true
+
+# Check if architectural files are staged in this commit
+ARCH_FILES_CHANGED=$(git diff --cached --name-only 2>/dev/null | grep -E \
+  "supabase/migrations/|backend/requirements\.txt|backend/app/routers/|backend/app/models/|backend/app/main\.py|frontend/src/app/api/" \
+  | wc -l | tr -d ' ')
+
+if [ "$ARCH_FILES_CHANGED" -gt "0" ]; then
+  echo ""
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo "ADR REMINDER"
+  echo "   Architectural files staged in this commit:"
+  git diff --cached --name-only 2>/dev/null | grep -E \
+    "supabase/migrations/|backend/requirements\.txt|backend/app/routers/|backend/app/models/|backend/app/main\.py|frontend/src/app/api/" \
+    | sed 's/^/   - /'
+  echo ""
+  echo "   If this represents a significant architectural decision,"
+  echo "   create an ADR: use the 'archivist' Claude agent"
+  echo "   or add a file to docs/adr/NNN-kebab-case-title.md"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo ""
+fi
+
+# Dead code detection
 
 if [ -f frontend/knip.json ]; then
   echo "[pre-commit] Running dead code detection (Knip)..."
