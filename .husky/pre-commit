@@ -1,0 +1,32 @@
+#!/bin/sh
+# Pre-commit: dead code detection
+# Warns if unused files are detected in the frontend
+
+if [ -f frontend/knip.json ]; then
+  echo "[pre-commit] Running dead code detection (Knip)..."
+  cd frontend
+  npx knip --reporter json > ../docs/context/dead_code_report.json 2>/dev/null || true
+  cd ..
+
+  # Count dead files
+  DEAD_COUNT=$(node -e "
+    try {
+      const r = JSON.parse(require('fs').readFileSync('docs/context/dead_code_report.json','utf8'));
+      const files = (r.files || []).length;
+      const exports = Object.keys(r.unlisted || {}).length;
+      console.log(files + exports);
+    } catch(e) { console.log(0); }
+  " 2>/dev/null || echo "0")
+
+  if [ "$DEAD_COUNT" -gt "0" ]; then
+    echo ""
+    echo "WARNING: $DEAD_COUNT dead code entries detected."
+    echo "   Review docs/context/dead_code_report.json before committing."
+    echo "   To skip: SKIP_DEAD_CODE=1 git commit ..."
+    echo ""
+    git add docs/context/dead_code_report.json 2>/dev/null || true
+  else
+    echo "[pre-commit] No dead code detected."
+    git add docs/context/dead_code_report.json 2>/dev/null || true
+  fi
+fi

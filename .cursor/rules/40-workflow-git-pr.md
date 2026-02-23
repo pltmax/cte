@@ -14,3 +14,4 @@ alwaysApply: true
   3. **PR Template:**
      - **Summary:** Concise what/why.
      - **Test Plan:** Precise steps to verify (e.g., "Run `make dev`, login, check `/dashboard`").
+- **ADR:** If a commit involves `supabase/migrations/`, `backend/app/routers/`, `backend/app/models/`, or `backend/requirements.txt` — consider creating an ADR in `docs/adr/`. Use the `archivist` Claude agent.

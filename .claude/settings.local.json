@@ -15,7 +15,12 @@
       "Bash(npm run build:*)",
       "Bash(npm run dev:*)",
       "Bash(/Applications/Google\\\\ Chrome.app/Contents/MacOS/Google\\\\ Chrome:*)",
-      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome:*)"
+      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome:*)",
+      "Bash(textutil:*)",
+      "Bash(chmod +x:*)",
+      "Bash(tail:*)",
+      "Bash(npx husky:*)",
+      "Bash(npm run:*)"
     ]
   }
 }
