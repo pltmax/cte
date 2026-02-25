@@ -32,13 +32,24 @@
       "Bash(export PATH=~/.npm-global/bin:$PATH && stamp context 2>&1)",
       "Bash(echo:*)",
       "Bash(export PATH=~/.npm-global/bin:$PATH && cd /Users/pierre-louisfranco/Desktop/Project_1 && npm run context:sync 2>&1)",
-      "Bash(claude mcp:*)"
+      "Bash(claude mcp:*)",
+      "Bash(find /Users/pierre-louisfranco/Desktop/Project_1 -name \"tsconfig.json\" -o -name \"tailwind.config.*\" | grep -v node_modules | xargs ls -la 2>/dev/null)",
+      "Bash(cd:*)",
+      "Bash(python3:*)",
+      "Bash(echo === $\\(basename \"$f\"\\) ===:*)",
+      "Bash(pip install:*)",
+      "WebSearch",
+      "WebFetch(domain:elevenlabs-sdk.mintlify.app)",
+      "Bash(python:*)",
+      "Bash(ELEVENLABS_API_KEY=sk_fc47be7a8cde76fb5db32ace72c829df6d503e0d0f3b1f23 python:*)",
+      "Bash(kill 28757:*)",
+      "WebFetch(domain:www.ets.org)"
     ]
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "supabase",
     "context7",
     "logicstamp"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }

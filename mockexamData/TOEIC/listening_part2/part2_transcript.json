@@ -1,0 +1,1254 @@
+{
+  "questions": [
+    {
+      "category": "requests_suggestions",
+      "question": "Could you help me move this desk to the corner?",
+      "options": [
+        "(A) It's a very nice desk.",
+        "(B) Move it to the left.",
+        "(C) Sure, I'd be happy to."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we grab a coffee before the meeting starts?",
+      "options": [
+        "(A) I just had one, but thanks.",
+        "(B) Two sugars, please.",
+        "(C) In the conference room."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you mind checking these figures for me?",
+      "options": [
+        "(A) About fifteen percent.",
+        "(B) No, not at all.",
+        "(C) The check is in the mail."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you tell me where the nearest post office is?",
+      "options": [
+        "(A) At three o'clock.",
+        "(B) To mail a package.",
+        "(C) I'm sorry, I'm not from around here."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we take a taxi instead of the bus?",
+      "options": [
+        "(A) That sounds like a faster option.",
+        "(B) The bus stop is over there.",
+        "(C) No, I haven't seen it."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you like to join us for dinner tonight?",
+      "options": [
+        "(A) I had a steak.",
+        "(B) I'm afraid I have other plans.",
+        "(C) The restaurant is open."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you lower the volume of the radio?",
+      "options": [
+        "(A) Yes, I'll turn it down right away.",
+        "(B) It's a new station.",
+        "(C) I turned it on."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we postpone the deadline until Friday?",
+      "options": [
+        "(A) Because it's too late.",
+        "(B) We already finished the project.",
+        "(C) That would be a huge relief."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you prefer to meet in the morning or the afternoon?",
+      "options": [
+        "(A) Afternoon would be better for me.",
+        "(B) Yes, I would.",
+        "(C) It's a lovely morning."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you sign this delivery receipt, please?",
+      "options": [
+        "(A) It was delivered yesterday.",
+        "(B) Of course, do you have a pen?",
+        "(C) I saw the sign."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we ask Mr. Kim for his opinion?",
+      "options": [
+        "(A) He's out of the office today.",
+        "(B) He's a manager.",
+        "(C) I think so too."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you be able to give me a lift to the airport?",
+      "options": [
+        "(A) The flight was on time.",
+        "(B) About forty minutes.",
+        "(C) My car is in the shop, unfortunately."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you pass me the stapler?",
+      "options": [
+        "(A) Here you go.",
+        "(B) I'm out of staples.",
+        "(C) It's on the desk."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we try that new Italian place down the street?",
+      "options": [
+        "(A) I've been to Italy twice.",
+        "(B) I've heard their pasta is great.",
+        "(C) It's a long street."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you please send the invoice to the accounting department?",
+      "options": [
+        "(A) I'll do it first thing tomorrow.",
+        "(B) The account is closed.",
+        "(C) It was quite expensive."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you remind me when the presentation begins?",
+      "options": [
+        "(A) It's scheduled for 2:00 PM.",
+        "(B) I'll show you the slides.",
+        "(C) It was a great presentation."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we double-check the guest list?",
+      "options": [
+        "(A) There are fifty guests.",
+        "(B) I already checked out.",
+        "(C) Good idea, let's do that now."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you like me to take your coat?",
+      "options": [
+        "(A) Thank you, that's very kind.",
+        "(B) It's a blue coat.",
+        "(C) I bought it on sale."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you show me how to use the photocopier?",
+      "options": [
+        "(A) There are ten copies.",
+        "(B) Just press this green button.",
+        "(C) It's broken again."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we hire a consultant to help with the marketing?",
+      "options": [
+        "(A) Our budget is a bit tight right now.",
+        "(B) He's a very good consultant.",
+        "(C) The marketing plan is ready."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you mind waiting in the lobby for a few minutes?",
+      "options": [
+        "(A) The lobby is on the first floor.",
+        "(B) I've been waiting for an hour.",
+        "(C) Certainly, I'll take a seat."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you provide me with a copy of the annual report?",
+      "options": [
+        "(A) I'll print one out for you.",
+        "(B) It was a very long year.",
+        "(C) The report is thirty pages."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Why don't we take a short break?",
+      "options": [
+        "(A) We only have ten minutes left.",
+        "(B) I'm not really tired yet.",
+        "(C) It broke yesterday."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Would you like a refill on your water?",
+      "options": [
+        "(A) Yes, please.",
+        "(B) The glass is empty.",
+        "(C) It's cold outside."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "requests_suggestions",
+      "question": "Could you tell Mr. Henderson that I called?",
+      "options": [
+        "(A) He's on the phone.",
+        "(B) I'll give him the message.",
+        "(C) You can call him later."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "This printer is out of ink again, isn't it?",
+      "options": [
+        "(A) It's in the drawer.",
+        "(B) I'll take care of it right away.",
+        "(C) Yes, I printed ten copies."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "Mr. Henderson hasn't signed the contract yet.",
+      "options": [
+        "(A) At the bottom of the page.",
+        "(B) Yes, he's a very good designer.",
+        "(C) I didn't know that. I'll call him."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "We should probably leave for the airport now.",
+      "options": [
+        "(A) I agree; the traffic is getting heavy.",
+        "(B) The flight was delayed by two hours.",
+        "(C) No, I haven't seen my passport."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "You've finished the quarterly report, haven't you?",
+      "options": [
+        "(A) It's held every three months.",
+        "(B) I'm glad you liked it.",
+        "(C) Actually, I still have two pages left."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "The cafeteria is closed for renovations this week.",
+      "options": [
+        "(A) I usually have a sandwich.",
+        "(B) That explains why the doors were locked.",
+        "(C) About fifteen dollars."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "Sarah is the one in charge of the marketing campaign.",
+      "options": [
+        "(A) No, she doesn't like shopping.",
+        "(B) To increase our digital presence.",
+        "(C) Oh, I thought it was Mark."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "You didn't remember to bring the extra chairs, did you?",
+      "options": [
+        "(A) They are very comfortable.",
+        "(B) I'm sorry, it completely slipped my mind.",
+        "(C) There are four people in the meeting."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "This client prefers to be contacted via email.",
+      "options": [
+        "(A) I sent the package yesterday.",
+        "(B) His office is on the fifth floor.",
+        "(C) Thanks for letting me know."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "The lecture starts at 10:00, doesn't it?",
+      "options": [
+        "(A) No, it's been pushed back to 10:30.",
+        "(B) I enjoyed the presentation.",
+        "(C) It was a very long walk."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "We're running low on shipping supplies.",
+      "options": [
+        "(A) The ship departs at noon.",
+        "(B) They are on the top shelf.",
+        "(C) I'll place an order this afternoon."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "You've already met the new intern, haven't you?",
+      "options": [
+        "(A) Yes, we had lunch together yesterday.",
+        "(B) He's looking for a permanent job.",
+        "(C) In the conference room."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "I'm afraid the elevator is still out of order.",
+      "options": [
+        "(A) It's on the third floor.",
+        "(B) Please sign your name here.",
+        "(C) I guess I'll have to take the stairs."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "The budget proposal needs to be submitted by Friday.",
+      "options": [
+        "(A) I've already finished my draft.",
+        "(B) It was quite expensive.",
+        "(C) Twenty dollars per person."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "You aren't going to the retirement party, are you?",
+      "options": [
+        "(A) He has worked here for thirty years.",
+        "(B) The cake was delicious.",
+        "(C) No, I have a previous engagement."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "It's much colder in the office today than usual.",
+      "options": [
+        "(A) I'll turn up the thermostat.",
+        "(B) I prefer the blue one.",
+        "(C) Yes, I have a cold."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "Ms. Kim didn't leave her umbrella here, did she?",
+      "options": [
+        "(A) No, it's not raining.",
+        "(B) Not that I can see.",
+        "(C) She's at a conference in Seoul."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "There's a typo on the first page of the brochure.",
+      "options": [
+        "(A) I read it twice.",
+        "(B) The graphics are very colorful.",
+        "(C) I'll fix it before we print the rest."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "The keynote speaker is late, isn't he?",
+      "options": [
+        "(A) His speech was very inspiring.",
+        "(B) He's stuck in a taxi.",
+        "(C) I don't like public speaking."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "I think we should reschedule our meeting for Tuesday.",
+      "options": [
+        "(A) The meeting was very productive.",
+        "(B) I saw him on Monday.",
+        "(C) Tuesday works for me."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "You haven't seen the stapler anywhere, have you?",
+      "options": [
+        "(A) I'm using it at my desk.",
+        "(B) To keep the papers together.",
+        "(C) No, I haven't seen that movie."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "The commute is much faster if you take the express train.",
+      "options": [
+        "(A) The fare is five dollars.",
+        "(B) It arrives every ten minutes.",
+        "(C) I'll try that tomorrow."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "We don't have enough copies of the agenda for everyone.",
+      "options": [
+        "(A) I'll go make some more.",
+        "(B) It's a very busy schedule.",
+        "(C) I read it this morning."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "This software update is taking much longer than expected.",
+      "options": [
+        "(A) I've already installed it.",
+        "(B) Tell me about it; it's been an hour!",
+        "(C) The version number is 2.0."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "You're coming to the team-building event, aren't you?",
+      "options": [
+        "(A) It was built in 1995.",
+        "(B) The team played very well.",
+        "(C) I wouldn't miss it."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "statements_tag_questions",
+      "question": "We have a lot of work to finish before the deadline.",
+      "options": [
+        "(A) I'm happy to stay late and help.",
+        "(B) The line is very long.",
+        "(C) Yes, the deadline was yesterday."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who is responsible for organizing the annual gala?",
+      "options": [
+        "(A) It's held at the Grand Hotel.",
+        "(B) Ms. Gable from the events team.",
+        "(C) Yes, I'll be there."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where can I find extra toner for the photocopier?",
+      "options": [
+        "(A) In the cabinet labeled \"Supplies.\"",
+        "(B) I'll make twenty copies.",
+        "(C) It's a very fast machine."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When will the technician arrive to fix the server?",
+      "options": [
+        "(A) Sometime before 3:00 PM.",
+        "(B) To upgrade the software.",
+        "(C) No, he didn't call."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who did you speak with at the insurance agency?",
+      "options": [
+        "(A) I talked to a representative named Sarah.",
+        "(B) My policy expires next year.",
+        "(C) It's located downtown."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where did you put the blueprints for the new office?",
+      "options": [
+        "(A) It's a very modern design.",
+        "(B) They are on the architect's desk.",
+        "(C) I'll print them out now."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When is the next flight to Singapore departing?",
+      "options": [
+        "(A) At Gate 42B.",
+        "(B) It takes about six hours.",
+        "(C) In approximately forty-five minutes."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who won the Employee of the Month award?",
+      "options": [
+        "(A) A programmer from the IT department.",
+        "(B) It was a very close race.",
+        "(C) For showing great leadership."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where are the orientation materials for the new interns?",
+      "options": [
+        "(A) They start next Monday.",
+        "(B) On the table in the lobby.",
+        "(C) I'll introduce myself."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When do we expect the shipment from the warehouse?",
+      "options": [
+        "(A) Not until Thursday morning.",
+        "(B) By express delivery.",
+        "(C) It's a large order."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who should I contact if I need a password reset?",
+      "options": [
+        "(A) Try using your old one.",
+        "(B) It was changed last week.",
+        "(C) The help desk, extension 505."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where is the nearest ATM located?",
+      "options": [
+        "(A) Just around the corner, next to the cafe.",
+        "(B) I need to withdraw some cash.",
+        "(C) No, it's not working."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When will the construction on Main Street be finished?",
+      "options": [
+        "(A) They are building a mall.",
+        "(B) According to the news, by October.",
+        "(C) It's causing a lot of traffic."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who is the keynote speaker at the conference?",
+      "options": [
+        "(A) In the main auditorium.",
+        "(B) The speech was very inspiring.",
+        "(C) A well-known economist."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where did the manager go after the meeting?",
+      "options": [
+        "(A) To a client lunch at the bistro.",
+        "(B) It lasted over two hours.",
+        "(C) He seemed very happy."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When does the early-bird registration period end?",
+      "options": [
+        "(A) It's a significant discount.",
+        "(B) At midnight on Friday.",
+        "(C) I already signed up."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who is going to lead the training session today?",
+      "options": [
+        "(A) I learned a lot.",
+        "(B) It's in conference room B.",
+        "(C) The human resources manager."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where can I park my car during the interview?",
+      "options": [
+        "(A) There is a visitor lot behind the building.",
+        "(B) At 10:00 AM sharp.",
+        "(C) I'll drive you there."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When did you last see the project schedule?",
+      "options": [
+        "(A) To plan the next phase.",
+        "(B) We are ahead of schedule.",
+        "(C) I saw it on the breakroom wall this morning."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who is the landlord for this commercial space?",
+      "options": [
+        "(A) A local real estate company.",
+        "(B) The rent is due monthly.",
+        "(C) It's a 5-year lease."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where are the scissors I borrowed from you?",
+      "options": [
+        "(A) To cut some paper.",
+        "(B) You can keep them.",
+        "(C) Check the top shelf of the bookcase."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When is the most convenient time for us to meet?",
+      "options": [
+        "(A) How about Tuesday at noon?",
+        "(B) It was a very productive meeting.",
+        "(C) We met at the airport."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who authorized this expense report?",
+      "options": [
+        "(A) It was quite expensive.",
+        "(B) The department head signed it.",
+        "(C) I'll submit it tomorrow."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Where do you usually go for your lunch break?",
+      "options": [
+        "(A) To the park if the weather is nice.",
+        "(B) I usually bring a sandwich.",
+        "(C) For about an hour."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "When was the company founded?",
+      "options": [
+        "(A) Over fifty years ago.",
+        "(B) In the electronics industry.",
+        "(C) It's a very successful firm."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "who_where_when",
+      "question": "Who left this umbrella in the hallway?",
+      "options": [
+        "(A) It might belong to the receptionist.",
+        "(B) It's raining very hard.",
+        "(C) No, I didn't see it."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "Why is the cafeteria closed today?",
+      "options": [
+        "(A) Because they are installing new kitchen equipment.",
+        "(B) I usually have a salad for lunch.",
+        "(C) Across from the main entrance."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How do I register for the upcoming leadership seminar?",
+      "options": [
+        "(A) It was very informative.",
+        "(B) You can sign up through the company portal.",
+        "(C) No, I didn't see the sign."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "why_how",
+      "question": "Why did Mr. Henderson leave the conference early?",
+      "options": [
+        "(A) He had to catch an international flight.",
+        "(B) It was held in the grand ballroom.",
+        "(C) Yes, quite a bit earlier than expected."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How soon can we expect the shipment of office chairs?",
+      "options": [
+        "(A) They are made of recycled materials.",
+        "(B) By the end of business tomorrow.",
+        "(C) The supplier said they will arrive by Friday."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "why_how",
+      "question": "Why was the training session moved to Room 302?",
+      "options": [
+        "(A) The original room's projector is broken.",
+        "(B) It starts at 9:00 AM sharp.",
+        "(C) It's a very spacious office."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How often does the shuttle bus run to the airport?",
+      "options": [
+        "(A) It costs fifteen dollars.",
+        "(B) The driver is very professional.",
+        "(C) Every twenty minutes on the hour."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "why_how",
+      "question": "Why haven't we received the client's feedback yet?",
+      "options": [
+        "(A) I'll send them a follow-up email right now.",
+        "(B) They were very satisfied with the results.",
+        "(C) No, it's not on the back page."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How much did the catering for the holiday party cost?",
+      "options": [
+        "(A) We ordered Italian food.",
+        "(B) It was surprisingly within our budget.",
+        "(C) About fifty people attended."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "why_how",
+      "question": "Why are you taking the stairs instead of the elevator?",
+      "options": [
+        "(A) The elevator is being serviced today.",
+        "(B) On the fourth floor, turn left.",
+        "(C) To the basement level."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How did the marketing team come up with the new logo?",
+      "options": [
+        "(A) They hired an outside design agency.",
+        "(B) It's much brighter than the old one.",
+        "(C) I think it looks great."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "Why is the commute taking so much longer this morning?",
+      "options": [
+        "(A) I usually take the train.",
+        "(B) There is major construction on the highway.",
+        "(C) It's about ten miles from here."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "why_how",
+      "question": "How do you like the new office layout?",
+      "options": [
+        "(A) I prefer the old desk.",
+        "(B) It's much more collaborative and open.",
+        "(C) I think it is a huge improvement."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "why_how",
+      "question": "Why did you decide to reschedule the interview?",
+      "options": [
+        "(A) The candidate has a scheduling conflict.",
+        "(B) It's a very impressive resume.",
+        "(C) In the small meeting room."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How can we reduce our energy consumption this month?",
+      "options": [
+        "(A) By turning off lights in empty rooms.",
+        "(B) The electric bill was very high.",
+        "(C) It's a renewable energy source."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "Why is the ventilation system making that loud noise?",
+      "options": [
+        "(A) I'll call the maintenance crew to check it.",
+        "(B) No, it isn't very loud in here.",
+        "(C) It was installed last summer."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How did you hear about the job opening at our firm?",
+      "options": [
+        "(A) I've worked here for five years.",
+        "(B) I saw the advertisement on a professional network.",
+        "(C) The opening ceremony was lovely."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "why_how",
+      "question": "Why wasn't the budget proposal approved?",
+      "options": [
+        "(A) We need to provide more cost details.",
+        "(B) It's in the blue folder on your desk.",
+        "(C) I'll approve it later today."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How long does it take to process a travel reimbursement?",
+      "options": [
+        "(A) About two weeks from the date of submission.",
+        "(B) It was a very expensive trip.",
+        "(C) To the accounting department."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "Why are the streetlights still on at noon?",
+      "options": [
+        "(A) There must be a timer malfunction.",
+        "(B) The street is being repaved.",
+        "(C) Because the sensor is likely broken."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "why_how",
+      "question": "How many more copies of the agenda do we need?",
+      "options": [
+        "(A) I already read the agenda.",
+        "(B) Just five more should be enough.",
+        "(C) The meeting is at noon."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "why_how",
+      "question": "Why did the delivery driver call your mobile phone?",
+      "options": [
+        "(A) He couldn't find the building entrance.",
+        "(B) I'll be home all afternoon.",
+        "(C) It's a new smartphone model."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "How do you want these boxes organized?",
+      "options": [
+        "(A) By the date they were received.",
+        "(B) Yes, I'll help you carry them.",
+        "(C) They are quite heavy."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "why_how",
+      "question": "Why are we hiring more part-time staff?",
+      "options": [
+        "(A) To help with the increase in seasonal orders.",
+        "(B) He works in the human resources office.",
+        "(C) To cover the extra evening shifts."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "why_how",
+      "question": "How was your flight to London?",
+      "options": [
+        "(A) For a business conference.",
+        "(B) It was very smooth and on time.",
+        "(C) I'm leaving next Tuesday."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "why_how",
+      "question": "Why is there a \"wet floor\" sign in the lobby?",
+      "options": [
+        "(A) Someone just finished mopping the tiles.",
+        "(B) It's a very large building.",
+        "(C) You can sign your name here."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Do you have the latest sales report?",
+      "options": [
+        "(A) No, I'm still working on it.",
+        "(B) Yes, it's a very long report.",
+        "(C) He reports to the manager."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Is the conference room available at three?",
+      "options": [
+        "(A) Yes, there are three rooms.",
+        "(B) No, it's booked until four.",
+        "(C) Yes, the conference was great."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Are you joining us for lunch today?",
+      "options": [
+        "(A) The lunch menu is on the table.",
+        "(B) It's a very nice restaurant.",
+        "(C) I ate at my desk already."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "yes_no",
+      "question": "Have you met the new intern yet?",
+      "options": [
+        "(A) Yes, he seems very bright.",
+        "(B) The meeting is in Room 2.",
+        "(C) No, I haven't seen the movie."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Does this bus go to the airport?",
+      "options": [
+        "(A) Yes, take your car.",
+        "(B) The airport is very modern.",
+        "(C) Yes, but you need to transfer."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "yes_no",
+      "question": "Is Mr. Kim in his office right now?",
+      "options": [
+        "(A) He'll be back in ten minutes.",
+        "(B) It's a very large office.",
+        "(C) Yes, he is Kim."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Are these files ready for the meeting?",
+      "options": [
+        "(A) I'll meet you there.",
+        "(B) They still need to be signed.",
+        "(C) The filing cabinet is over there."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Have the invitations been sent out?",
+      "options": [
+        "(A) No, I wasn't invited.",
+        "(B) They've been sent to the grand ballroom.",
+        "(C) I mailed them this morning."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "yes_no",
+      "question": "Do we need to bring anything to the workshop?",
+      "options": [
+        "(A) Just a notepad and a pen.",
+        "(B) The workshop was very helpful.",
+        "(C) No, I don't need it."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Is there a pharmacy near the hotel?",
+      "options": [
+        "(A) I stayed there last year.",
+        "(B) It's right around the corner.",
+        "(C) The medicine is expensive."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Are you finished with the photocopier?",
+      "options": [
+        "(A) It's a color copier.",
+        "(B) Yes, about twenty copies.",
+        "(C) Of course, you can use it now."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "yes_no",
+      "question": "Has the mail been delivered yet?",
+      "options": [
+        "(A) To the post office.",
+        "(B) Not yet, it usually comes later.",
+        "(C) I'll mail it for you."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Do you know where the nearest bank is?",
+      "options": [
+        "(A) It's next to the supermarket.",
+        "(B) No, I don't have an account.",
+        "(C) I need to withdraw some money."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Is the project deadline still Friday?",
+      "options": [
+        "(A) I enjoyed the project.",
+        "(B) Yes, Friday is a holiday.",
+        "(C) No, it's been moved to Monday."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "yes_no",
+      "question": "Are the technicians coming today?",
+      "options": [
+        "(A) They're scheduled for tomorrow.",
+        "(B) The technical manual is here.",
+        "(C) Yes, I'm a technician."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Have you seen my car keys?",
+      "options": [
+        "(A) The car is in the garage.",
+        "(B) I think they're on your desk.",
+        "(C) Yes, I can drive."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Does the price include breakfast?",
+      "options": [
+        "(A) It's served from 7 to 10.",
+        "(B) No, that's an additional charge.",
+        "(C) I'd like some eggs, please."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Is this seat taken?",
+      "options": [
+        "(A) I took the bus.",
+        "(B) Yes, it's a very comfortable chair.",
+        "(C) No, please go ahead and sit."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "yes_no",
+      "question": "Are you traveling for business or pleasure?",
+      "options": [
+        "(A) I'll be there for a week.",
+        "(B) Mostly for business.",
+        "(C) Yes, I like traveling."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Has everyone signed the attendance sheet?",
+      "options": [
+        "(A) No, Sarah hasn't signed it yet.",
+        "(B) The flight was on time.",
+        "(C) I'll attend the meeting."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Do you prefer tea or coffee?",
+      "options": [
+        "(A) Yes, I do.",
+        "(B) Two dollars a cup.",
+        "(C) I usually drink coffee in the morning."
+      ],
+      "answer": "C"
+    },
+    {
+      "category": "yes_no",
+      "question": "Is it going to rain this afternoon?",
+      "options": [
+        "(A) I left my umbrella at home.",
+        "(B) The forecast says it'll be sunny.",
+        "(C) It rained all day yesterday."
+      ],
+      "answer": "B"
+    },
+    {
+      "category": "yes_no",
+      "question": "Are you the manager of this department?",
+      "options": [
+        "(A) No, that would be Ms. Wallace.",
+        "(B) The department is on the third floor.",
+        "(C) I'm managing quite well."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Have we received the signed contract?",
+      "options": [
+        "(A) It arrived via email an hour ago.",
+        "(B) We need to sign the document.",
+        "(C) No, the contract is too long."
+      ],
+      "answer": "A"
+    },
+    {
+      "category": "yes_no",
+      "question": "Do you mind if I close the window?",
+      "options": [
+        "(A) Not at all, it's a bit cold.",
+        "(B) The window is made of glass.",
+        "(C) Yes, I can see the view."
+      ],
+      "answer": "A"
+    }
+  ]
+}

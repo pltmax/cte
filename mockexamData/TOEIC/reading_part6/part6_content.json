@@ -1,0 +1,164 @@
+{
+  "passages": [
+    {
+      "doctype": "memo",
+      "text": "To: All Staff\nFrom: Office Manager\nDate: October 12\nSubject: New Security Protocol\n\nStarting next Monday, the company will _______ a new security system for the main entrance. All employees must use their updated ID badges to enter the building.\n\nIf you have not yet received your new badge, please visit the security desk before Friday. Personnel who do not have a valid badge _______ entry into the facility.\n\n_______, visitors must be pre-registered via the online portal. This ensures that we have a record of everyone on-site in case of an emergency.\n\n_______",
+      "questions": [
+        {"options": ["(A) implement", "(B) implements", "(C) implemented", "(D) implementation"], "answer": "A"},
+        {"options": ["(A) refuse", "(B) will be denied", "(C) are denying", "(D) would refuse"], "answer": "B"},
+        {"options": ["(A) Therefore", "(B) Conversely", "(C) Additionally", "(D) Otherwise"], "answer": "C"},
+        {"options": ["(A) The parking lot will also be repaved.", "(B) Security guards are available 24 hours.", "(C) Lunch breaks are being extended by ten minutes.", "(D) We appreciate your cooperation in keeping our workplace safe."], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "notice",
+      "text": "Attention Residents of Bluehill Apartments\n\nPlease be advised that the annual water pipe inspection is scheduled for Wednesday, Nov 5. Work will begin at 8:00 AM and is _______ to conclude by 4:00 PM.\n\nDuring this time, you may experience low water pressure or short periods without water. We apologize for any _______ this may cause.\n\nPlease ensure that all faucets are turned off tightly before you leave your apartment in the morning. _______, residents should avoid using washing machines during the inspection window.\n\n_______",
+      "questions": [
+        {"options": ["(A) expected", "(B) spent", "(C) noticed", "(D) appeared"], "answer": "A"},
+        {"options": ["(A) convenient", "(B) inconvenience", "(C) conveniently", "(D) inconvenient"], "answer": "B"},
+        {"options": ["(A) Instead", "(B) For example", "(C) Furthermore", "(D) However"], "answer": "C"},
+        {"options": ["(A) The gym will be closed for cleaning.", "(B) Pets are not allowed in the lobby.", "(C) A plumber will visit each unit to check for leaks.", "(D) Rent is due on the first of the month."], "answer": "C"}
+      ]
+    },
+    {
+      "doctype": "letter",
+      "text": "Dear Mr. Tanaka,\n\nThank you for your interest in the Senior Accountant position at Finstar Corp. We have reviewed your application and were _______ by your extensive experience in the field.\n\nWe would like to invite you for an interview at our downtown office. Please let us know if you are _______ on Tuesday afternoon.\n\nThe interview will last approximately one hour and will include a short skills assessment. _______.\n\nWe look forward to _______ from you soon.",
+      "questions": [
+        {"options": ["(A) impressed", "(B) impress", "(C) impressive", "(D) impression"], "answer": "A"},
+        {"options": ["(A) available", "(B) beneficial", "(C) frequent", "(D) reliable"], "answer": "A"},
+        {"options": ["(A) You should bring a change of clothes.", "(B) Please bring a copy of your latest certifications.", "(C) The office is currently under construction.", "(D) We have already filled the position."], "answer": "B"},
+        {"options": ["(A) hear", "(B) heard", "(C) hearing", "(D) hears"], "answer": "C"}
+      ]
+    },
+    {
+      "doctype": "advertisement",
+      "text": "Unlock Your Creative Potential\n\nAre you looking to improve your graphic design skills? The Greenville Art Institute is now _______ applications for its winter semester.\n\nOur courses cover everything from basic color theory to advanced digital illustration. Each class is taught by a professional _______ with years of industry experience.\n\nClasses are held in the evenings to accommodate working professionals. _______. Enroll before December 1st to receive a 15% discount on tuition.\n\nVisit our website today to view the full _______ of available courses.",
+      "questions": [
+        {"options": ["(A) accepting", "(B) accepted", "(C) acceptance", "(D) accept"], "answer": "A"},
+        {"options": ["(A) instruct", "(B) instruction", "(C) instructor", "(D) instructional"], "answer": "C"},
+        {"options": ["(A) The institute is located in a rural area.", "(B) Most students fail the final exam.", "(C) Spaces are limited, so early registration is recommended.", "(D) We do not offer financial aid."], "answer": "C"},
+        {"options": ["(A) schedule", "(B) memory", "(C) intention", "(D) portion"], "answer": "A"}
+      ]
+    },
+    {
+      "doctype": "memo",
+      "text": "To: Sales Department\nFrom: Janet Morrow, Director\nDate: June 15\nSubject: Quarterly Performance\n\nI am pleased to announce that our sales figures for the second quarter have _______ our expectations.\n\nThis success is largely due to the launch of the X-2000 line. However, we must not become complacent. We need to _______ our efforts in the upcoming months to maintain this momentum.\n\nNext week, we will hold a mandatory meeting to discuss our strategy for the fall season. _______.\n\nIf you have any suggestions for the agenda, please email them to my _______ by Friday afternoon.",
+      "questions": [
+        {"options": ["(A) exceeded", "(B) exceeding", "(C) excess", "(D) excessive"], "answer": "A"},
+        {"options": ["(A) diminish", "(B) increase", "(C) decrease", "(D) vary"], "answer": "B"},
+        {"options": ["(A) Lunch will not be provided.", "(B) The meeting has been canceled.", "(C) Attendance is required for all staff members.", "(D) Please bring your own laptop."], "answer": "C"},
+        {"options": ["(A) assist", "(B) assisted", "(C) assisting", "(D) assistant"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "letter",
+      "text": "Dear Ms. Gable,\n\nWe are writing to inform you that your subscription to Modern Tech Magazine _______ on December 31.\n\nWe value your readership and would like to offer you a special renewal rate. If you renew before the end of the month, you will receive a 25% discount off the _______ price.\n\nBy renewing now, you will also receive a free digital copy of our \"Tech Trends\" annual report. _______.\n\nTo take advantage of this offer, simply _______ the enclosed form and mail it back to us in the prepaid envelope.",
+      "questions": [
+        {"options": ["(A) expires", "(B) expiration", "(C) expiredly", "(D) expiring"], "answer": "A"},
+        {"options": ["(A) total", "(B) regular", "(C) regulated", "(D) regularity"], "answer": "B"},
+        {"options": ["(A) This report is only sold in bookstores.", "(B) The magazine is going out of business.", "(C) This gift is our way of saying thank you.", "(D) You will be billed for the gift later."], "answer": "C"},
+        {"options": ["(A) complete", "(B) completes", "(C) completing", "(D) completed"], "answer": "A"}
+      ]
+    },
+    {
+      "doctype": "notice",
+      "text": "New Gym Hours\n\nStarting January 1st, the City Wellness Center will be _______ its operating hours to better serve our members.\n\nThe facility will now open at 5:00 AM and close at 11:00 PM daily. We hope this change allows those with busy work schedules to _______ their fitness goals.\n\nPlease note that the pool will still close one hour earlier than the rest of the building for cleaning. _______.\n\nFor a full list of class times and updated schedules, please _______ the front desk.",
+      "questions": [
+        {"options": ["(A) extending", "(B) extension", "(C) extensive", "(D) extend"], "answer": "A"},
+        {"options": ["(A) pursue", "(B) achieve", "(C) achievement", "(D) achievable"], "answer": "B"},
+        {"options": ["(A) Membership fees are increasing.", "(B) The sauna is currently broken.", "(C) Please plan your workouts accordingly.", "(D) Swimming lessons are on sale."], "answer": "C"},
+        {"options": ["(A) visit", "(B) visiting", "(C) visitor", "(D) visited"], "answer": "A"}
+      ]
+    },
+    {
+      "doctype": "email",
+      "text": "To: David Wu\nFrom: Support@FastWeb.com\nDate: March 3\nSubject: Your Inquiry #5592\n\nDear Mr. Wu,\n\nThis email is to _______ that we have received your request for a technical support appointment.\n\nOur records show that your internet connection has been _______ for the last 48 hours.\n\nA technician has been assigned to visit your home on Thursday between 1:00 PM and 3:00 PM. _______.\n\nIf you need to _______ or cancel this appointment, please call us at least 24 hours in advance.",
+      "questions": [
+        {"options": ["(A) confirm", "(B) confirmation", "(C) confirmed", "(D) confirming"], "answer": "A"},
+        {"options": ["(A) stable", "(B) unstable", "(C) instability", "(D) stabilize"], "answer": "B"},
+        {"options": ["(A) The technician will be late.", "(B) You must pay in cash.", "(C) Someone over the age of 18 must be present.", "(D) Please buy a new router."], "answer": "C"},
+        {"options": ["(A) repair", "(B) record", "(C) remind", "(D) reschedule"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "press_release",
+      "text": "For Immediate Release\n\nVENTURA, CA — Solar-Tech Solutions announced today that it will _______ a new research facility in the downtown area.\n\nThe facility will focus on developing high-efficiency batteries for electric vehicles. This project is expected to create over 200 high-paying jobs for _______ engineers and technicians.\n\nConstruction is slated to begin next month and should be completed by the end of the year. _______.\n\nSolar-Tech Solutions remains _______ to providing sustainable energy options for the future.",
+      "questions": [
+        {"options": ["(A) establish", "(B) establishing", "(C) establishment", "(D) established"], "answer": "A"},
+        {"options": ["(A) local", "(B) locally", "(C) locality", "(D) localize"], "answer": "B"},
+        {"options": ["(A) The company is filing for bankruptcy.", "(B) Employees are currently on strike.", "(C) The Mayor has praised the project for its economic benefits.", "(D) Residents are protesting the high cost of electricity."], "answer": "C"},
+        {"options": ["(A) commitment", "(B) commit", "(C) committing", "(D) committed"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "article",
+      "text": "Navigating the Modern Workplace\n\nIn today's fast-paced corporate environment, effective communication is more _______ than ever.\n\nMany companies are now adopting digital collaboration tools to bridge the gap between remote and in-office staff. These platforms allow teams to share files and ideas _______, regardless of their physical location.\n\nHowever, technology alone cannot replace the value of face-to-face interaction. _______.\n\nUltimately, a _______ of both digital and physical communication is the key to a productive team.",
+      "questions": [
+        {"options": ["(A) critical", "(B) critic", "(C) critically", "(D) criticism"], "answer": "A"},
+        {"options": ["(A) instant", "(B) instantly", "(C) instance", "(D) instantiation"], "answer": "B"},
+        {"options": ["(A) Coffee breaks should be eliminated to save time.", "(B) Computers are becoming cheaper every day.", "(C) Managers should still schedule regular in-person meetings.", "(D) Remote work is legally required in most countries."], "answer": "C"},
+        {"options": ["(A) combine", "(B) combined", "(C) combining", "(D) combination"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "memo",
+      "text": "To: All Staff\nFrom: Logistics Department\nDate: July 22\nSubject: Parking Garage Maintenance\n\nPlease be aware that the north section of the parking garage will be _______ for repairs starting this Thursday.\n\nWork is expected to last for approximately three days. During this period, staff members are _______ to park in the south lot or use the overflow area across the street.\n\nWe realize that this may cause some delays during the morning commute. _______.\n\nWe apologize for the inconvenience and thank you for your _______.",
+      "questions": [
+        {"options": ["(A) closed", "(B) closing", "(C) close", "(D) closure"], "answer": "A"},
+        {"options": ["(A) advice", "(B) advised", "(C) advisor", "(D) advising"], "answer": "B"},
+        {"options": ["(A) The garage will be painted bright yellow.", "(B) Parking fees will be doubled next month.", "(C) We suggest arriving 15 minutes earlier than usual.", "(D) The company will provide free bicycles to everyone."], "answer": "C"},
+        {"options": ["(A) patient", "(B) patiently", "(C) patience", "(D) patients"], "answer": "C"}
+      ]
+    },
+    {
+      "doctype": "email",
+      "text": "To: Sarah Jenkins\nFrom: Customer Service\nDate: August 5\nSubject: Refund Request - Order #4491\n\nDear Ms. Jenkins,\n\nWe have received your request for a refund regarding the damaged item in your recent _______ order.\n\nUpon reviewing the photos you provided, we agree that the product was compromised during shipping. We have _______ a full refund to your original credit card.\n\nPlease allow 3 to 5 business days for the credit to appear on your statement. _______.\n\nAs a gesture of goodwill, we have included a coupon for 20% off your _______ purchase.",
+      "questions": [
+        {"options": ["(A) online", "(B) outline", "(C) onlooker", "(D) ongoing"], "answer": "A"},
+        {"options": ["(A) process", "(B) processed", "(C) processing", "(D) processor"], "answer": "B"},
+        {"options": ["(A) You must pay for the return shipping.", "(B) Our store is moving to a new location.", "(C) There is no need to return the damaged item.", "(D) We no longer sell that particular product."], "answer": "C"},
+        {"options": ["(A) near", "(B) follow", "(C) subsequent", "(D) next"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "letter",
+      "text": "Dear Mr. Henderson,\n\nWe are writing to inform you that your application for a small business loan has been _______.\n\nThe funds will be transferred to your designated account within two business days. Please note that the interest rate remains fixed for the _______ of the loan term.\n\nWe are excited to support your company's growth. _______.\n\nIf you have any questions, please do not _______ to contact your loan officer.",
+      "questions": [
+        {"options": ["(A) approved", "(B) approving", "(C) approval", "(D) approves"], "answer": "A"},
+        {"options": ["(A) total", "(B) duration", "(C) timing", "(D) distance"], "answer": "B"},
+        {"options": ["(A) You must repay the full amount by tomorrow.", "(B) The bank will be closed for the holiday.", "(C) Please review the attached repayment schedule.", "(D) We have decided to increase your interest rate."], "answer": "C"},
+        {"options": ["(A) wait", "(B) stop", "(C) pause", "(D) hesitate"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "notice",
+      "text": "Employee Training Workshop\n\nAll staff members are invited to participate in a workshop on \"Conflict Resolution in the Workplace.\" This session is _______ to help teams work together more effectively.\n\nThe workshop will be led by Dr. Aris Thorne, a leading expert in organizational psychology. It will include several _______ exercises designed to build trust.\n\nLunch will be provided for all attendees. _______.\n\nPlease register by Wednesday so that we can have an accurate _______ of participants.",
+      "questions": [
+        {"options": ["(A) intended", "(B) intention", "(C) intentional", "(D) intending"], "answer": "A"},
+        {"options": ["(A) interact", "(B) interactive", "(C) interaction", "(D) interactively"], "answer": "B"},
+        {"options": ["(A) The cafeteria is under renovation.", "(B) Please bring your own sandwiches.", "(C) Vegetarian options will be available upon request.", "(D) Training sessions are always boring."], "answer": "C"},
+        {"options": ["(A) list", "(B) score", "(C) mark", "(D) count"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "advertisement",
+      "text": "GreenWay Landscaping Services\n\nIs your garden looking tired and overgrown? GreenWay Landscaping offers _______ solutions for all your outdoor needs.\n\nOur team of experts specializes in garden design, lawn maintenance, and irrigation system installation. We use only _______ organic fertilizers to ensure the health of your plants.\n\nWe are currently offering a 10% discount for first-time customers. _______.\n\nLet us help you transform your backyard into a beautiful _______!",
+      "questions": [
+        {"options": ["(A) affordable", "(B) afford", "(C) affording", "(D) affordability"], "answer": "A"},
+        {"options": ["(A) high", "(B) premium", "(C) expensive", "(D) primary"], "answer": "B"},
+        {"options": ["(A) Our workers are currently on vacation.", "(B) We do not accept credit cards.", "(C) Call us today for a free, no-obligation estimate.", "(D) The discount expired last month."], "answer": "C"},
+        {"options": ["(A) escape", "(B) station", "(C) office", "(D) oasis"], "answer": "D"}
+      ]
+    },
+    {
+      "doctype": "memo",
+      "text": "To: All Staff\nFrom: IT Department\nDate: September 10\nSubject: Network Maintenance\n\nThe IT department will be performing _______ maintenance on the company servers this Saturday, starting at 9:00 PM.\n\nDuring this time, the internal network and company email will be temporarily _______.\n\nWe expect the maintenance to be completed by Sunday morning. _______.\n\nIf you encounter any issues on Monday morning, please _______ a ticket through the help desk portal.",
+      "questions": [
+        {"options": ["(A) routine", "(B) routinely", "(C) routed", "(D) router"], "answer": "A"},
+        {"options": ["(A) available", "(B) unavailable", "(C) unavailability", "(D) unavailably"], "answer": "B"},
+        {"options": ["(A) Please leave your computers turned on.", "(B) New keyboards will be delivered on Monday.", "(C) We apologize for any disruption this may cause.", "(D) The internet speed will be reduced permanently."], "answer": "C"},
+        {"options": ["(A) take", "(B) send", "(C) make", "(D) submit"], "answer": "D"}
+      ]
+    }
+  ]
+}

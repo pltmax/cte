@@ -1,0 +1,412 @@
+{
+  "questions": [
+    {
+      "image": "manLaptopImg.jpeg",
+      "statements": [
+        "(A) He is removing his headphones.",
+        "(B) He is looking at a computer screen.",
+        "(C) He is typing on a keyboard.",
+        "(D) He is adjusting the position of a television."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q01_A.mp3",
+        "B": "audio/q01_B.mp3",
+        "C": "audio/q01_C.mp3",
+        "D": "audio/q01_D.mp3"
+      },
+      "image_file": "images/manLaptopImg.jpeg"
+    },
+    {
+      "image": "meetingBoardroom.jpeg",
+      "statements": [
+        "(A) One of the men is standing up to leave.",
+        "(B) People are shaking hands across a desk.",
+        "(C) A woman is showing documents to her colleagues.",
+        "(D) People are working together on their homework."
+      ],
+      "answer": "C",
+      "audio_files": {
+        "A": "audio/q02_A.mp3",
+        "B": "audio/q02_B.mp3",
+        "C": "audio/q02_C.mp3",
+        "D": "audio/q02_D.mp3"
+      },
+      "image_file": "images/meetingBoardroom.jpeg"
+    },
+    {
+      "image": "womanLibrary.jpeg",
+      "statements": [
+        "(A) A woman is reaching for a book on a shelf.",
+        "(B) A woman is purchasing a book at a bookstore.",
+        "(C) A woman is packing books into boxes.",
+        "(D) A woman is sitting on a chair in a bookstore."
+      ],
+      "answer": "A",
+      "audio_files": {
+        "A": "audio/q03_A.mp3",
+        "B": "audio/q03_B.mp3",
+        "C": "audio/q03_C.mp3",
+        "D": "audio/q03_D.mp3"
+      },
+      "image_file": "images/womanLibrary.jpeg"
+    },
+    {
+      "image": "womanCashier.jpeg",
+      "statements": [
+        "(A) The cashier is pouring a drink into a cup.",
+        "(B) The cashier is standing behind a service counter.",
+        "(C) The cashier is hanging a clock on the wall.",
+        "(D) The shop is currently closed for repairs."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q04_A.mp3",
+        "B": "audio/q04_B.mp3",
+        "C": "audio/q04_C.mp3",
+        "D": "audio/q04_D.mp3"
+      },
+      "image_file": "images/womanCashier.jpeg"
+    },
+    {
+      "image": "constructionWorkerHelmet.jpeg",
+      "statements": [
+        "(A) A worker is wearing protective equipment.",
+        "(B) A worker is painting a wall bright green.",
+        "(C) A worker is climbing up a metal ladder.",
+        "(D) A worker is putting on his yellow jacket."
+      ],
+      "answer": "A",
+      "audio_files": {
+        "A": "audio/q05_A.mp3",
+        "B": "audio/q05_B.mp3",
+        "C": "audio/q05_C.mp3",
+        "D": "audio/q05_D.mp3"
+      },
+      "image_file": "images/constructionWorkerHelmet.jpeg"
+    },
+    {
+      "image": "emptyCoffeeTerrace.jpeg",
+      "statements": [
+        "(A) People are eating at an outdoor cafe.",
+        "(B) A server is clearing dishes from a table.",
+        "(C) A terrace has been arranged along the sidewalk.",
+        "(D) The street is blocked by a fallen tree."
+      ],
+      "answer": "C",
+      "audio_files": {
+        "A": "audio/q06_A.mp3",
+        "B": "audio/q06_B.mp3",
+        "C": "audio/q06_C.mp3",
+        "D": "audio/q06_D.mp3"
+      },
+      "image_file": "images/emptyCoffeeTerrace.jpeg"
+    },
+    {
+      "image": "carsParkedRow.jpeg",
+      "statements": [
+        "(A) Vehicles are being washed in a garage.",
+        "(B) Cars are parked in an indoor facility.",
+        "(C) Cars are being repaired in a garage.",
+        "(D) A driver is exiting a silver vehicle."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q07_A.mp3",
+        "B": "audio/q07_B.mp3",
+        "C": "audio/q07_C.mp3",
+        "D": "audio/q07_D.mp3"
+      },
+      "image_file": "images/carsParkedRow.jpeg"
+    },
+    {
+      "image": "emptyDesk.jpeg",
+      "statements": [
+        "(A) A laptop has been placed inside a drawer.",
+        "(B) A desk lamp is turned on.",
+        "(C) The office chair is being moved to the corner.",
+        "(D) A cup is being filled with coffee."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q08_A.mp3",
+        "B": "audio/q08_B.mp3",
+        "C": "audio/q08_C.mp3",
+        "D": "audio/q08_D.mp3"
+      },
+      "image_file": "images/emptyDesk.jpeg"
+    },
+    {
+      "image": "officePhotocopier.jpeg",
+      "statements": [
+        "(A) A woman is operating some office machinery.",
+        "(B) A man is handing a document to his colleague.",
+        "(C) They are repairing a broken printer.",
+        "(D) The woman is wearing a formal blue suit."
+      ],
+      "answer": "A",
+      "audio_files": {
+        "A": "audio/q09_A.mp3",
+        "B": "audio/q09_B.mp3",
+        "C": "audio/q09_C.mp3",
+        "D": "audio/q09_D.mp3"
+      },
+      "image_file": "images/officePhotocopier.jpeg"
+    },
+    {
+      "image": "emptyBench.jpeg",
+      "statements": [
+        "(A) A chair overlooks a body of water.",
+        "(B) A wooden fence is being built near a lake.",
+        "(C) Some boats are docked at a harbour.",
+        "(D) A bench overlooks a body of water."
+      ],
+      "answer": "D",
+      "audio_files": {
+        "A": "audio/q10_A.mp3",
+        "B": "audio/q10_B.mp3",
+        "C": "audio/q10_C.mp3",
+        "D": "audio/q10_D.mp3"
+      },
+      "image_file": "images/emptyBench.jpeg"
+    },
+    {
+      "image": "fruitsMarket.jpeg",
+      "statements": [
+        "(A) Customers are weighing fruit on a scale.",
+        "(B) Produce is displayed in wooden baskets.",
+        "(C) A vendor is organizing a stack of fruits.",
+        "(D) People are buying vegetables in a market."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q11_A.mp3",
+        "B": "audio/q11_B.mp3",
+        "C": "audio/q11_C.mp3",
+        "D": "audio/q11_D.mp3"
+      },
+      "image_file": "images/fruitsMarket.jpeg"
+    },
+    {
+      "image": "colleaguesScreen.jpeg",
+      "statements": [
+        "(A) A man is showing his notebook.",
+        "(B) A man is pointing at a whiteboard.",
+        "(C) The office is currently empty of people.",
+        "(D) A group is gathered around a laptop."
+      ],
+      "answer": "D",
+      "audio_files": {
+        "A": "audio/q12_A.mp3",
+        "B": "audio/q12_B.mp3",
+        "C": "audio/q12_C.mp3",
+        "D": "audio/q12_D.mp3"
+      },
+      "image_file": "images/colleaguesScreen.jpeg"
+    },
+    {
+      "image": "emptyCubicles.jpeg",
+      "statements": [
+        "(A) The computers are being disconnected.",
+        "(B) Cubicles are filled with people.",
+        "(C) Cubicles are arranged in rows.",
+        "(D) Employees are leaving the building."
+      ],
+      "answer": "C",
+      "audio_files": {
+        "A": "audio/q13_A.mp3",
+        "B": "audio/q13_B.mp3",
+        "C": "audio/q13_C.mp3",
+        "D": "audio/q13_D.mp3"
+      },
+      "image_file": "images/emptyCubicles.jpeg"
+    },
+    {
+      "image": "waiterServing.jpeg",
+      "statements": [
+        "(A) A waiter is taking an order from a menu.",
+        "(B) A waiter is placing a dish on the table.",
+        "(C) The customers are paying their bill.",
+        "(D) Food is being prepared in the kitchen."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q14_A.mp3",
+        "B": "audio/q14_B.mp3",
+        "C": "audio/q14_C.mp3",
+        "D": "audio/q14_D.mp3"
+      },
+      "image_file": "images/waiterServing.jpeg"
+    },
+    {
+      "image": "whiteboardMeeting.jpeg",
+      "statements": [
+        "(A) He is erasing the board with a cloth.",
+        "(B) He is pointing at some writing.",
+        "(C) He is putting on a pair of glasses.",
+        "(D) The screen is being mounted to the wall."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q15_A.mp3",
+        "B": "audio/q15_B.mp3",
+        "C": "audio/q15_C.mp3",
+        "D": "audio/q15_D.mp3"
+      },
+      "image_file": "images/whiteboardMeeting.jpeg"
+    },
+    {
+      "image": "telephoneOffice.jpeg",
+      "statements": [
+        "(A) A man is hanging up the receiver.",
+        "(B) A man is speaking on a telephone.",
+        "(C) A man is organizing folders on a shelf.",
+        "(D) A man is writing in a notebook."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q16_A.mp3",
+        "B": "audio/q16_B.mp3",
+        "C": "audio/q16_C.mp3",
+        "D": "audio/q16_D.mp3"
+      },
+      "image_file": "images/telephoneOffice.jpeg"
+    },
+    {
+      "image": "manStoringShelves.jpeg",
+      "statements": [
+        "(A) He is cleaning the floor with a mop.",
+        "(B) He is labeling the containers.",
+        "(C) He is loading items into a truck.",
+        "(D) He is reaching for a box on a shelf."
+      ],
+      "answer": "D",
+      "audio_files": {
+        "A": "audio/q17_A.mp3",
+        "B": "audio/q17_B.mp3",
+        "C": "audio/q17_C.mp3",
+        "D": "audio/q17_D.mp3"
+      },
+      "image_file": "images/manStoringShelves.jpeg"
+    },
+    {
+      "image": "womanBrowsingClothes.jpeg",
+      "statements": [
+        "(A) A woman is browsing a clothing rack.",
+        "(B) A woman is trying on a yellow jacket.",
+        "(C) A woman is buying some clothes.",
+        "(D) A woman is folding garments."
+      ],
+      "answer": "A",
+      "audio_files": {
+        "A": "audio/q18_A.mp3",
+        "B": "audio/q18_B.mp3",
+        "C": "audio/q18_C.mp3",
+        "D": "audio/q18_D.mp3"
+      },
+      "image_file": "images/womanBrowsingClothes.jpeg"
+    },
+    {
+      "image": "boardingBus.jpeg",
+      "statements": [
+        "(A) A bus is pulling away from the curb.",
+        "(B) People are boarding a public bus.",
+        "(C) The driver is checking a ticket.",
+        "(D) Passengers are waiting inside the station."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q19_A.mp3",
+        "B": "audio/q19_B.mp3",
+        "C": "audio/q19_C.mp3",
+        "D": "audio/q19_D.mp3"
+      },
+      "image_file": "images/boardingBus.jpeg"
+    },
+    {
+      "image": "gardenerWateringPlants.jpeg",
+      "statements": [
+        "(A) He is planting seeds in the dirt.",
+        "(B) A man is watering plants in a field.",
+        "(C) He is wearing a pair of work gloves.",
+        "(D) The crops are being harvested."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q20_A.mp3",
+        "B": "audio/q20_B.mp3",
+        "C": "audio/q20_C.mp3",
+        "D": "audio/q20_D.mp3"
+      },
+      "image_file": "images/gardenerWateringPlants.jpeg"
+    },
+    {
+      "image": "womanMechanic.jpeg",
+      "statements": [
+        "(A) A woman is working on a vehicle engine.",
+        "(B) A woman is driving a car out of a garage.",
+        "(C) A woman is closing the hood of a car.",
+        "(D) A woman is checking the tire pressure."
+      ],
+      "answer": "A",
+      "audio_files": {
+        "A": "audio/q21_A.mp3",
+        "B": "audio/q21_B.mp3",
+        "C": "audio/q21_C.mp3",
+        "D": "audio/q21_D.mp3"
+      },
+      "image_file": "images/womanMechanic.jpeg"
+    },
+    {
+      "image": "passengersAirport.jpeg",
+      "statements": [
+        "(A) Travelers are checking in their luggage.",
+        "(B) Travelers are boarding their flight.",
+        "(C) Travelers are looking at a flight information board.",
+        "(D) Travelers are sitting in the waiting area."
+      ],
+      "answer": "C",
+      "audio_files": {
+        "A": "audio/q22_A.mp3",
+        "B": "audio/q22_B.mp3",
+        "C": "audio/q22_C.mp3",
+        "D": "audio/q22_D.mp3"
+      },
+      "image_file": "images/passengersAirport.jpeg"
+    },
+    {
+      "image": "pedestriansCrosswalk.jpeg",
+      "statements": [
+        "(A) Pedestrians are walking along the sidewalk.",
+        "(B) Pedestrians are crowded on the sidewalk.",
+        "(C) Pedestrians are walking across a street.",
+        "(D) Pedestrians are standing in front of a building."
+      ],
+      "answer": "C",
+      "audio_files": {
+        "A": "audio/q23_A.mp3",
+        "B": "audio/q23_B.mp3",
+        "C": "audio/q23_C.mp3",
+        "D": "audio/q23_D.mp3"
+      },
+      "image_file": "images/pedestriansCrosswalk.jpeg"
+    },
+    {
+      "image": "vacuumingRug.jpeg",
+      "statements": [
+        "(A) A person is sitting on a gray sofa.",
+        "(B) A person is vacuuming a rug.",
+        "(C) A person is mopping the floor.",
+        "(D) A person is moving a piece of furniture."
+      ],
+      "answer": "B",
+      "audio_files": {
+        "A": "audio/q24_A.mp3",
+        "B": "audio/q24_B.mp3",
+        "C": "audio/q24_C.mp3",
+        "D": "audio/q24_D.mp3"
+      },
+      "image_file": "images/vacuumingRug.jpeg"
+    }
+  ]
+}

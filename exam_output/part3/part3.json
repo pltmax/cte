@@ -1,0 +1,2552 @@
+{
+  "conversations": [
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Hi, Sarah. Have you finished the quarterly budget review yet?"
+        },
+        {
+          "speaker": "F",
+          "text": "Not quite. I'm still waiting for the travel expenses from the marketing department."
+        },
+        {
+          "speaker": "M",
+          "text": "I'll call the marketing manager, Mr. Evans, and ask him to send them over immediately."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the woman currently working on?",
+          "options": [
+            "(A) A marketing campaign",
+            "(B) A budget review",
+            "(C) A travel itinerary",
+            "(D) A hiring plan"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why is the task delayed?",
+          "options": [
+            "(A) Some information is missing",
+            "(B) The computer is broken",
+            "(C) Mr. Evans is on vacation",
+            "(D) The office is closed"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "What will the man do next?",
+          "options": [
+            "(A) Go to the marketing office",
+            "(B) Email the department",
+            "(C) Make a phone call",
+            "(D) Sign a contract"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv01.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'm looking for the lecture hall for the \"Digital Trends\" seminar."
+        },
+        {
+          "speaker": "M",
+          "text": "That was moved to the annex building because the original room had a leak in the ceiling."
+        },
+        {
+          "speaker": "F",
+          "text": "Oh, thank you. I'd better hurry; it starts in five minutes and I don't want to miss the intro."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What event is the woman attending?",
+          "options": [
+            "(A) A building inspection",
+            "(B) A plumbing workshop",
+            "(C) A technology seminar",
+            "(D) A graduation ceremony"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the problem with the original room?",
+          "options": [
+            "(A) It was too small",
+            "(B) It was too far away",
+            "(C) It was double-booked",
+            "(D) It has water damage"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Where is the event now located?",
+          "options": [
+            "(A) In the main lobby",
+            "(B) On the roof",
+            "(C) In a separate building",
+            "(D) In the basement"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv02.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'd like to order a large pepperoni pizza for delivery, please."
+        },
+        {
+          "speaker": "F",
+          "text": "Certainly. That will be $18.50. What is your address?"
+        },
+        {
+          "speaker": "M",
+          "text": "I'm at 422 West Oak Street, Apartment 3B. How long will it take?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man doing?",
+          "options": [
+            "(A) Renting an apartment",
+            "(B) Ordering food",
+            "(C) Complaining about a price",
+            "(D) Reserving a table"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "How much will the man pay?",
+          "options": [
+            "(A) $3.00",
+            "(B) $4.22",
+            "(C) $15.00",
+            "(D) $18.50"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Where is the man located?",
+          "options": [
+            "(A) In a hotel",
+            "(B) In a restaurant",
+            "(C) In an apartment",
+            "(D) In a shopping mall"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv03.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "My computer screen keeps flickering. Do you think it's a loose cable?"
+        },
+        {
+          "speaker": "M",
+          "text": "Let me check. Actually, it looks like the graphics card is failing. You'll need a replacement."
+        },
+        {
+          "speaker": "F",
+          "text": "That sounds expensive. Is it covered under the office warranty?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the problem?",
+          "options": [
+            "(A) A broken keyboard",
+            "(B) A monitor issue",
+            "(C) A power outage",
+            "(D) A software virus"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What does the man suggest?",
+          "options": [
+            "(A) Buying a new cable",
+            "(B) Restarting the computer",
+            "(C) Replacing a part",
+            "(D) Moving the desk"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the woman ask about?",
+          "options": [
+            "(A) The cost of a new computer",
+            "(B) The technician's schedule",
+            "(C) A refund policy",
+            "(D) Warranty coverage"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv04.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Are you ready for your presentation this afternoon?"
+        },
+        {
+          "speaker": "F",
+          "text": "I'm a bit nervous. I haven't checked if the projector in the conference room works."
+        },
+        {
+          "speaker": "M",
+          "text": "Don't worry, I used it this morning for the staff meeting and it worked perfectly."
+        }
+      ],
+      "questions": [
+        {
+          "text": "When is the woman's presentation?",
+          "options": [
+            "(A) This morning",
+            "(B) This afternoon",
+            "(C) Tomorrow",
+            "(D) Next week"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why is the woman concerned?",
+          "options": [
+            "(A) She forgot her notes",
+            "(B) The audience is large",
+            "(C) She hasn't practiced",
+            "(D) Equipment functionality"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What did the man do this morning?",
+          "options": [
+            "(A) Fixed a projector",
+            "(B) Prepared a speech",
+            "(C) Attended a meeting",
+            "(D) Called a technician"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv05.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "The elevator is out of order again. I had to walk up six flights of stairs!"
+        },
+        {
+          "speaker": "F",
+          "text": "They are waiting for a part to be shipped from Germany. It should be fixed by Friday."
+        },
+        {
+          "speaker": "M",
+          "text": "Well, I guess I'll get some exercise until then."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man complaining about?",
+          "options": [
+            "(A) The heat",
+            "(B) The stairs",
+            "(C) Broken machinery",
+            "(D) A late delivery"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Where is the replacement part coming from?",
+          "options": [
+            "(A) Japan",
+            "(B) The local shop",
+            "(C) Germany",
+            "(D) The basement"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "When will the repair likely be finished?",
+          "options": [
+            "(A) Today",
+            "(B) Tomorrow",
+            "(C) Monday",
+            "(D) Friday"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv06.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Can you tell me which platform the express train to London leaves from?"
+        },
+        {
+          "speaker": "M",
+          "text": "That's platform 9, but it's delayed by 20 minutes due to signal problems."
+        },
+        {
+          "speaker": "F",
+          "text": "Oh, that's frustrating. Is there a coffee shop nearby where I can wait?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where is this conversation taking place?",
+          "options": [
+            "(A) An airport",
+            "(B) A train station",
+            "(C) A bus stop",
+            "(D) A coffee shop"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why is the train delayed?",
+          "options": [
+            "(A) Bad weather",
+            "(B) Staff shortages",
+            "(C) A medical emergency",
+            "(D) Technical issues"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What does the woman want to find?",
+          "options": [
+            "(A) A ticket office",
+            "(B) Platform 9",
+            "(C) A place to get a drink",
+            "(D) A luggage locker"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv07.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "We need to hire a photographer for the company gala next month."
+        },
+        {
+          "speaker": "F",
+          "text": "I know a freelancer who specializes in corporate events. I can send you her portfolio."
+        },
+        {
+          "speaker": "M",
+          "text": "That would be great. We need someone who can take both candid shots and group portraits."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the topic of the conversation?",
+          "options": [
+            "(A) Organizing a party",
+            "(B) Hiring a professional",
+            "(C) Taking a vacation",
+            "(D) Buying a camera"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What will the woman provide?",
+          "options": [
+            "(A) A price list",
+            "(B) A camera",
+            "(C) Samples of work",
+            "(D) A guest list"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "When is the gala taking place?",
+          "options": [
+            "(A) This week",
+            "(B) In two weeks",
+            "(C) Next month",
+            "(D) Next year"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv08.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Hello, I'd like to book a round-trip flight to Paris for the second week of June."
+        },
+        {
+          "speaker": "M",
+          "text": "Certainly. Would you prefer a morning or an evening departure?"
+        },
+        {
+          "speaker": "F",
+          "text": "Morning is better. I want to arrive early so I can get to my hotel before dinner."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the woman doing?",
+          "options": [
+            "(A) Checking out of a hotel",
+            "(B) Reserving a flight",
+            "(C) Renting a car",
+            "(D) Planning a dinner"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "When does the woman want to travel?",
+          "options": [
+            "(A) In May",
+            "(B) In June",
+            "(C) In July",
+            "(D) In August"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What is the woman's preference?",
+          "options": [
+            "(A) A window seat",
+            "(B) A direct flight",
+            "(C) A morning flight",
+            "(D) A cheap ticket"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv09.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Have you seen the new employee handbook? It was updated last night."
+        },
+        {
+          "speaker": "F",
+          "text": "I haven't. Did they change the policy on remote work?"
+        },
+        {
+          "speaker": "M",
+          "text": "Yes, we are now allowed to work from home two days a week instead of just one."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What was recently updated?",
+          "options": [
+            "(A) The company website",
+            "(B) The office layout",
+            "(C) A reference document",
+            "(D) The software system"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What specific policy is discussed?",
+          "options": [
+            "(A) The dress code",
+            "(B) Vacation time",
+            "(C) Retirement plans",
+            "(D) Remote work"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What is the new rule?",
+          "options": [
+            "(A) No working from home",
+            "(B) One day of remote work",
+            "(C) Two days of remote work",
+            "(D) Full-time remote work"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv10.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I just checked the supply closet, and we are completely out of printer toner and legal-sized paper."
+        },
+        {
+          "speaker": "F",
+          "text": "That's strange. I placed an order with the vendor last Friday. They usually deliver within 48 hours."
+        },
+        {
+          "speaker": "M",
+          "text": "I'll give them a call and see if there was a delay with the shipment."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the problem?",
+          "options": [
+            "(A) The printer is broken",
+            "(B) The supply closet is locked",
+            "(C) Office materials are missing",
+            "(D) The vendor changed their prices"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "When did the woman place the order?",
+          "options": [
+            "(A) This morning",
+            "(B) Yesterday",
+            "(C) Last Wednesday",
+            "(D) Last Friday"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What will the man do next?",
+          "options": [
+            "(A) Buy paper at a local store",
+            "(B) Organize the closet",
+            "(C) Contact a supplier",
+            "(D) Print a different document"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv11.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Excuse me, I'm here for the 2:00 PM job interview with the human resources manager."
+        },
+        {
+          "speaker": "M",
+          "text": "Ah, yes. Mr. Thompson is expecting you. Please sign the visitor log and take a seat."
+        },
+        {
+          "speaker": "F",
+          "text": "Thank you. Should I leave my coat here, or should I take it with me?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the woman at the office?",
+          "options": [
+            "(A) To deliver a package",
+            "(B) To meet a client",
+            "(C) To fix a computer",
+            "(D) To apply for a position"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Who is the woman meeting with?",
+          "options": [
+            "(A) The CEO",
+            "(B) A security guard",
+            "(C) An HR manager",
+            "(D) A sales representative"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the woman asked to do?",
+          "options": [
+            "(A) Wait outside",
+            "(B) Call Mr. Thompson",
+            "(C) Provide her signature",
+            "(D) Show her identification"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv12.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "We need to find a new caterer for the annual awards banquet in October."
+        },
+        {
+          "speaker": "F",
+          "text": "I agree. The food from the Italian place we used last year was a bit too salty for most guests."
+        },
+        {
+          "speaker": "M",
+          "text": "What about that new French bistro on Main Street? I've heard their service is excellent."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What event are the speakers planning?",
+          "options": [
+            "(A) A retirement party",
+            "(B) A holiday lunch",
+            "(C) A wedding reception",
+            "(D) An awards ceremony"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What was the problem last year?",
+          "options": [
+            "(A) The food arrived late",
+            "(B) The price was too high",
+            "(C) The meal quality was poor",
+            "(D) The venue was too small"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the man suggest?",
+          "options": [
+            "(A) Cooking the food themselves",
+            "(B) Postponing the banquet",
+            "(C) Trying a different restaurant",
+            "(D) Changing the menu items"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv13.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'm thinking about taking the express bus to work starting next week. Parking prices downtown have doubled."
+        },
+        {
+          "speaker": "M",
+          "text": "It's a good move. The bus lane makes the commute much faster during rush hour anyway."
+        },
+        {
+          "speaker": "F",
+          "text": "True, and I can use the company's transit subsidy to pay for the monthly pass."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why does the woman want to stop driving?",
+          "options": [
+            "(A) Her car is being repaired",
+            "(B) She wants to help the environment",
+            "(C) Traffic is too heavy",
+            "(D) Parking is too expensive"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What benefit of the bus does the man mention?",
+          "options": [
+            "(A) It is very clean",
+            "(B) It has free Wi-Fi",
+            "(C) It saves time",
+            "(D) It is less crowded"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "How will the woman pay for her pass?",
+          "options": [
+            "(A) With her own savings",
+            "(B) Using a credit card",
+            "(C) With a gift voucher",
+            "(D) Through a workplace program"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv14.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Did you hear that the library is closing for three weeks for renovations?"
+        },
+        {
+          "speaker": "F",
+          "text": "Yes, I saw the sign. They are replacing all the carpets and repainting the interior."
+        },
+        {
+          "speaker": "M",
+          "text": "I hope I can still return my books while they are closed."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the topic of conversation?",
+          "options": [
+            "(A) A book sale",
+            "(B) A painting class",
+            "(C) A temporary closure",
+            "(D) A library membership"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What work is being done?",
+          "options": [
+            "(A) Building a new wing",
+            "(B) Installing new computers",
+            "(C) Cleaning the windows",
+            "(D) Updating the decor"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What is the man's concern?",
+          "options": [
+            "(A) Finding a new library",
+            "(B) Missing a deadline",
+            "(C) Paying for renovations",
+            "(D) Returning borrowed items"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv15.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "My flight to Seoul departs at 10:00 AM, but I haven't received my digital boarding pass yet."
+        },
+        {
+          "speaker": "M",
+          "text": "You can print a physical one at the self-service kiosk near the check-in counter."
+        },
+        {
+          "speaker": "F",
+          "text": "Oh, that's a relief. I was worried I would have to wait in the long line at the desk."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where is the woman going?",
+          "options": [
+            "(A) Tokyo",
+            "(B) Beijing",
+            "(C) Seoul",
+            "(D) Bangkok"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the woman's problem?",
+          "options": [
+            "(A) Her flight is delayed",
+            "(B) She lost her passport",
+            "(C) She lacks a travel document",
+            "(D) She missed her boarding time"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Where can the woman get her pass?",
+          "options": [
+            "(A) At the security gate",
+            "(B) From a flight attendant",
+            "(C) At an automated machine",
+            "(D) In the lounge"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv16.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "This smartphone has a great camera, but the battery life is quite short."
+        },
+        {
+          "speaker": "F",
+          "text": "That model is on sale right now, but for $50 more, you can get the \"Pro\" version with a larger battery."
+        },
+        {
+          "speaker": "M",
+          "text": "I think it's worth the extra money since I travel so much and can't always find a charger."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What are the speakers discussing?",
+          "options": [
+            "(A) A camera repair",
+            "(B) A travel itinerary",
+            "(C) An electronic device",
+            "(D) A battery charger"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the drawback of the first model?",
+          "options": [
+            "(A) It is too heavy",
+            "(B) It is very expensive",
+            "(C) The camera is poor",
+            "(D) It lacks power longevity"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Why does the man decide on the more expensive option?",
+          "options": [
+            "(A) It has more storage",
+            "(B) It is more stylish",
+            "(C) It is better for his lifestyle",
+            "(D) It comes with a free case"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv17.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "We need to schedule a training session for the new database software."
+        },
+        {
+          "speaker": "M",
+          "text": "The developer said they could come in next Tuesday at 10:00 AM."
+        },
+        {
+          "speaker": "F",
+          "text": "Tuesday won't work. Most of the sales team will be at a regional conference that day."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the purpose of the meeting?",
+          "options": [
+            "(A) To hire a developer",
+            "(B) To fix a computer",
+            "(C) To learn a new system",
+            "(D) To update a website"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "When did the developer suggest meeting?",
+          "options": [
+            "(A) Monday",
+            "(B) Tuesday",
+            "(C) Wednesday",
+            "(D) Thursday"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why is the suggested time a problem?",
+          "options": [
+            "(A) The office will be closed",
+            "(B) The manager is on vacation",
+            "(C) The room is booked",
+            "(D) Staff members will be away"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv18.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'm looking for a gift for my wife. It's our tenth wedding anniversary."
+        },
+        {
+          "speaker": "F",
+          "text": "Congratulations! How about a silver necklace? It's a traditional gift for that milestone."
+        },
+        {
+          "speaker": "M",
+          "text": "That's a wonderful idea. Do you have any with a sapphire stone? That's her favorite color."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man celebrating?",
+          "options": [
+            "(A) A birthday",
+            "(B) A promotion",
+            "(C) An anniversary",
+            "(D) A retirement"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the woman recommend?",
+          "options": [
+            "(A) A watch",
+            "(B) A ring",
+            "(C) A piece of jewelry",
+            "(D) A silver frame"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What detail does the man provide about his wife?",
+          "options": [
+            "(A) Her dress size",
+            "(B) Her favorite flower",
+            "(C) Her preferred gemstone",
+            "(D) Her favorite brand"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv19.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'm calling because the air conditioning in my room is making a very loud noise."
+        },
+        {
+          "speaker": "M",
+          "text": "I'm sorry about that, Mrs. Lee. I'll send a maintenance worker up to room 405 immediately."
+        },
+        {
+          "speaker": "F",
+          "text": "Thank you. I have a conference call in 30 minutes, so I hope it can be fixed quickly."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the woman calling?",
+          "options": [
+            "(A) To book a room",
+            "(B) To order room service",
+            "(C) To report a problem",
+            "(D) To check out early"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Where is the woman located?",
+          "options": [
+            "(A) In the lobby",
+            "(B) In room 305",
+            "(C) In the restaurant",
+            "(D) In room 405"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What is the woman's deadline?",
+          "options": [
+            "(A) She is leaving for the airport",
+            "(B) She has a scheduled call",
+            "(C) She has a dinner reservation",
+            "(D) She needs to sleep"
+          ],
+          "answer": "B"
+        }
+      ],
+      "audio_file": "audio/conv20.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Excuse me, I'm looking for the \"Contemporary Art\" exhibit. Is it on this floor?"
+        },
+        {
+          "speaker": "F",
+          "text": "No, it's actually in the new gallery wing on the third floor. You can take the stairs or the elevator behind the gift shop."
+        },
+        {
+          "speaker": "M",
+          "text": "Great, thanks. Does my general admission ticket cover that exhibit, or is there an extra fee?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where most likely are the speakers?",
+          "options": [
+            "(A) A shopping mall",
+            "(B) A movie theater",
+            "(C) A museum",
+            "(D) A university"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Where is the exhibit located?",
+          "options": [
+            "(A) On the first floor",
+            "(B) In the gift shop",
+            "(C) On the third floor",
+            "(D) In the basement"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the man ask about?",
+          "options": [
+            "(A) The closing time",
+            "(B) The artist's name",
+            "(C) The location of the stairs",
+            "(D) The cost of entry"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv21.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'm sorry, Mr. Jackson, but the 10:30 flight to Toronto has been canceled due to a technical issue."
+        },
+        {
+          "speaker": "M",
+          "text": "That's a problem. I have a client meeting at 2:00 PM. Are there any other flights available before noon?"
+        },
+        {
+          "speaker": "F",
+          "text": "There is one at 11:15, but it's currently full. I can put you on the waiting list."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why was the flight canceled?",
+          "options": [
+            "(A) Severe weather",
+            "(B) Lack of passengers",
+            "(C) Mechanical failure",
+            "(D) A pilot strike"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the man's destination?",
+          "options": [
+            "(A) New York",
+            "(B) London",
+            "(C) Montreal",
+            "(D) Toronto"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What does the woman offer to do?",
+          "options": [
+            "(A) Give a full refund",
+            "(B) Provide a hotel voucher",
+            "(C) Add the man to a list",
+            "(D) Upgrade his seat for free"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv22.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Have you seen the draft for the new marketing brochure?"
+        },
+        {
+          "speaker": "F",
+          "text": "Yes, but I think the font is a bit too small. It might be hard for some people to read."
+        },
+        {
+          "speaker": "M",
+          "text": "You're right. I'll ask the graphic designer to increase the text size before we send it to the printer."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What document are they discussing?",
+          "options": [
+            "(A) A legal contract",
+            "(B) A promotional flyer",
+            "(C) A financial report",
+            "(D) A training manual"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What is the woman's concern?",
+          "options": [
+            "(A) The color scheme",
+            "(B) The total cost",
+            "(C) The readability",
+            "(D) The deadline"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What will the man do next?",
+          "options": [
+            "(A) Print the copies himself",
+            "(B) Hire a new designer",
+            "(C) Modify the layout",
+            "(D) Write a new slogan"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv23.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'd like to sign up for a membership at this gym. Do you have a corporate discount for employees of \"Westside Electronics\"?"
+        },
+        {
+          "speaker": "M",
+          "text": "We do! You'll get 20% off the monthly fee and we'll waive the registration cost."
+        },
+        {
+          "speaker": "F",
+          "text": "That sounds great. Does that include access to the swimming pool?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the woman doing?",
+          "options": [
+            "(A) Buying electronics",
+            "(B) Applying for a job",
+            "(C) Joining a fitness club",
+            "(D) Canceling a subscription"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What benefit is mentioned?",
+          "options": [
+            "(A) Free personal training",
+            "(B) A free towel service",
+            "(C) A price reduction",
+            "(D) A 24-hour access pass"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the woman ask about?",
+          "options": [
+            "(A) The locker rooms",
+            "(B) The yoga classes",
+            "(C) The guest policy",
+            "(D) The pool facilities"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv24.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I need to ship this package to Tokyo by Friday. Which service do you recommend?"
+        },
+        {
+          "speaker": "F",
+          "text": "Our express international shipping is the fastest, but it's quite expensive. It should arrive in two days."
+        },
+        {
+          "speaker": "M",
+          "text": "I'll take that option. It's a very important contract that needs to be signed by Monday."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where is the package being sent?",
+          "options": [
+            "(A) Seoul",
+            "(B) Shanghai",
+            "(C) Tokyo",
+            "(D) Singapore"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Why does the man choose the express service?",
+          "options": [
+            "(A) It is the cheapest option",
+            "(B) It includes insurance",
+            "(C) It is time-sensitive",
+            "(D) It is a large box"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is inside the package?",
+          "options": [
+            "(A) A birthday gift",
+            "(B) A new computer",
+            "(C) Legal documents",
+            "(D) Office supplies"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv25.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'm looking for a new office chair. The one I have now doesn't provide enough back support."
+        },
+        {
+          "speaker": "M",
+          "text": "This ergonomic model is very popular. You can adjust the height and the armrests."
+        },
+        {
+          "speaker": "F",
+          "text": "It's comfortable, but it's a bit over my budget. Do you have anything similar on sale?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the woman's problem?",
+          "options": [
+            "(A) Her desk is too small",
+            "(B) Her chair is uncomfortable",
+            "(C) Her office is too dark",
+            "(D) Her computer is broken"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What feature of the chair is mentioned?",
+          "options": [
+            "(A) It is made of leather",
+            "(B) It has a built-in heater",
+            "(C) It is adjustable",
+            "(D) It comes in many colors"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the woman's concern about the ergonomic chair?",
+          "options": [
+            "(A) The size",
+            "(B) The weight",
+            "(C) The color",
+            "(D) The price"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv26.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "The annual staff picnic is scheduled for this Saturday, but the weather forecast says it's going to rain."
+        },
+        {
+          "speaker": "F",
+          "text": "Should we move it to the following weekend, or just hold it in the company cafeteria?"
+        },
+        {
+          "speaker": "M",
+          "text": "Let's move it to next Saturday. People would prefer to be outside at the park."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What event is being discussed?",
+          "options": [
+            "(A) A business meeting",
+            "(B) A holiday party",
+            "(C) A staff picnic",
+            "(D) A retirement lunch"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the problem with the original plan?",
+          "options": [
+            "(A) Not enough people signed up",
+            "(B) The park is closed",
+            "(C) The budget was cut",
+            "(D) Likely bad weather"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What did the man decide?",
+          "options": [
+            "(A) To cancel the event",
+            "(B) To have it in the cafeteria",
+            "(C) To change the date",
+            "(D) To buy umbrellas for everyone"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv27.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Hello, I'd like to make a reservation for a party of six for tomorrow evening at 7:00."
+        },
+        {
+          "speaker": "M",
+          "text": "I'm sorry, we are fully booked at 7:00. We have a table available at 8:30, though."
+        },
+        {
+          "speaker": "F",
+          "text": "That's a bit late for us. How about Friday night instead?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the woman trying to do?",
+          "options": [
+            "(A) Order a pizza",
+            "(B) Rent a room",
+            "(C) Book a table",
+            "(D) Hire a waiter"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "How many people are in the group?",
+          "options": [
+            "(A) Two",
+            "(B) Four",
+            "(C) Six",
+            "(D) Eight"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the woman suggest at the end?",
+          "options": [
+            "(A) Coming at 8:30",
+            "(B) Ordering take-out",
+            "(C) Finding a new restaurant",
+            "(D) Changing the day"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv28.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'm calling to see if the repairs on my car will be finished today as promised."
+        },
+        {
+          "speaker": "F",
+          "text": "I'm afraid not. We're still waiting for the new brake pads to arrive from the warehouse."
+        },
+        {
+          "speaker": "M",
+          "text": "That's disappointing. I really need my car to get to the airport tomorrow morning."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the man calling?",
+          "options": [
+            "(A) To buy a new car",
+            "(B) To rent a vehicle",
+            "(C) To check on a repair",
+            "(D) To report an accident"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What part is the shop waiting for?",
+          "options": [
+            "(A) A new engine",
+            "(B) A tire",
+            "(C) A window",
+            "(D) Brake components"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Where does the man need to go tomorrow?",
+          "options": [
+            "(A) To his office",
+            "(B) To the mall",
+            "(C) To a wedding",
+            "(D) To the airport"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv29.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'm having trouble using the new photocopier. It keeps jamming every time I try to print on both sides."
+        },
+        {
+          "speaker": "M",
+          "text": "You have to make sure the paper tray is adjusted correctly for that setting."
+        },
+        {
+          "speaker": "F",
+          "text": "Oh, I see. Could you show me how to do that? I have to make 50 copies of this report."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What machine is the woman using?",
+          "options": [
+            "(A) A computer",
+            "(B) A scanner",
+            "(C) A copier",
+            "(D) A fax machine"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the problem?",
+          "options": [
+            "(A) The ink is empty",
+            "(B) The machine is too slow",
+            "(C) A paper jam",
+            "(D) The power is off"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the woman ask the man to do?",
+          "options": [
+            "(A) Call a technician",
+            "(B) Buy more paper",
+            "(C) Demonstrate a fix",
+            "(D) Print the report for her"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv30.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Hi, I'm calling to see if the shoes I ordered online have arrived at the store yet."
+        },
+        {
+          "speaker": "F",
+          "text": "Let me check the delivery log. What is the order number?"
+        },
+        {
+          "speaker": "M",
+          "text": "It's 8-2-2-4. I chose the \"in-store pickup\" option to save on shipping costs."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man inquiring about?",
+          "options": [
+            "(A) A refund policy",
+            "(B) A delivery status",
+            "(C) A store location",
+            "(D) A price match"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "How did the man purchase the item?",
+          "options": [
+            "(A) On the website",
+            "(B) At the mall",
+            "(C) Over the phone",
+            "(D) At a factory outlet"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Why did the man choose in-store pickup?",
+          "options": [
+            "(A) It is faster",
+            "(B) He lives nearby",
+            "(C) To avoid a fee",
+            "(D) To try them on first"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv31.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "We need to find a new venue for the holiday party. The hotel we usually use is undergoing renovations."
+        },
+        {
+          "speaker": "M",
+          "text": "How about the community center? It has a large hall and a professional kitchen."
+        },
+        {
+          "speaker": "F",
+          "text": "That's a good idea. I'll call them this afternoon to check the availability for December 15th."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the problem with the usual hotel?",
+          "options": [
+            "(A) It is too expensive",
+            "(B) It is being repaired",
+            "(C) It is fully booked",
+            "(D) It is too small"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What does the man suggest?",
+          "options": [
+            "(A) Canceling the party",
+            "(B) A different location",
+            "(C) Changing the date",
+            "(D) Hiring a decorator"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "When does the woman want to hold the event?",
+          "options": [
+            "(A) November 15th",
+            "(B) December 1st",
+            "(C) December 15th",
+            "(D) January 1st"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv32.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'm having trouble logging into the company portal. My password keeps getting rejected."
+        },
+        {
+          "speaker": "F",
+          "text": "The system was updated last night. Everyone has to reset their credentials this morning."
+        },
+        {
+          "speaker": "M",
+          "text": "Oh, I didn't see the email about that. I'll go ahead and create a new one now."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man's issue?",
+          "options": [
+            "(A) Accessing a website",
+            "(B) Finding a document",
+            "(C) Sending an email",
+            "(D) Fixing a printer"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "What happened last night?",
+          "options": [
+            "(A) A power outage",
+            "(B) A system update",
+            "(C) A security breach",
+            "(D) A software crash"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What will the man do next?",
+          "options": [
+            "(A) Call IT support",
+            "(B) Wait for an email",
+            "(C) Change his password",
+            "(D) Restart his computer"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv33.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Excuse me, is the fitness center open 24 hours a day for hotel guests?"
+        },
+        {
+          "speaker": "M",
+          "text": "No, it closes at 10:00 PM and reopens at 5:00 AM."
+        },
+        {
+          "speaker": "F",
+          "text": "I see. I was hoping to get a workout in before my flight leaves at 6:00 AM, but I guess I'll have to skip it."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where is this conversation taking place?",
+          "options": [
+            "(A) A gym",
+            "(B) A hotel",
+            "(C) An airport",
+            "(D) A doctor's office"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "When does the fitness center open?",
+          "options": [
+            "(A) At 5:00 AM",
+            "(B) At 6:00 AM",
+            "(C) At 10:00 PM",
+            "(D) At midnight"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Why is the woman disappointed?",
+          "options": [
+            "(A) The equipment is broken",
+            "(B) The pool is closed",
+            "(C) The hours are inconvenient",
+            "(D) She lost her room key"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv34.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'm worried about the presentation tomorrow. My laptop doesn't have an HDMI port for the projector."
+        },
+        {
+          "speaker": "F",
+          "text": "You can borrow the adapter from the IT department. They keep several in the supply room."
+        },
+        {
+          "speaker": "M",
+          "text": "That's a relief. I'll go down there and ask for one before I leave for the day."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man preparing for?",
+          "options": [
+            "(A) A business trip",
+            "(B) A presentation",
+            "(C) A job interview",
+            "(D) A staff meeting"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What is the problem with the man's laptop?",
+          "options": [
+            "(A) The battery is low",
+            "(B) It lacks a connection port",
+            "(C) The screen is dark",
+            "(D) The software is old"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What does the woman suggest?",
+          "options": [
+            "(A) Buying a new laptop",
+            "(B) Rescheduling the talk",
+            "(C) Borrowing an accessory",
+            "(D) Printing the slides"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv35.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'd like to register for the yoga class that starts next Monday."
+        },
+        {
+          "speaker": "M",
+          "text": "Certainly. That class meets twice a week, on Mondays and Wednesdays, at 6:30 PM."
+        },
+        {
+          "speaker": "F",
+          "text": "That schedule works perfectly with my office hours. How much is the registration fee?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the woman interested in?",
+          "options": [
+            "(A) A gym membership",
+            "(B) An exercise class",
+            "(C) A dance lesson",
+            "(D) A meditation app"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "On which days does the class meet?",
+          "options": [
+            "(A) Mondays and Wednesdays",
+            "(B) Tuesdays and Thursdays",
+            "(C) Weekends only",
+            "(D) Every Friday"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "What does the woman ask about?",
+          "options": [
+            "(A) The location",
+            "(B) The instructor",
+            "(C) The cost",
+            "(D) The clothing"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv36.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "The shipment of office chairs was supposed to arrive this morning, but it's still not here."
+        },
+        {
+          "speaker": "F",
+          "text": "I just spoke to the trucking company. There was an accident on the highway, so they are delayed."
+        },
+        {
+          "speaker": "M",
+          "text": "I hope the chairs aren't damaged. We need them for the new employees starting on Monday."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What are the speakers waiting for?",
+          "options": [
+            "(A) New employees",
+            "(B) Furniture",
+            "(C) A repairman",
+            "(D) A cleaning crew"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why is the delivery late?",
+          "options": [
+            "(A) A traffic incident",
+            "(B) Bad weather",
+            "(C) A missing order",
+            "(D) Vehicle breakdown"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "When are the new staff members starting?",
+          "options": [
+            "(A) Today",
+            "(B) Tomorrow",
+            "(C) Next Monday",
+            "(D) Next month"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv37.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Have you had a chance to look at the draft of the merger announcement?"
+        },
+        {
+          "speaker": "M",
+          "text": "I have. I think we need to emphasize the benefits for the shareholders more clearly."
+        },
+        {
+          "speaker": "F",
+          "text": "I agree. I'll rewrite that section and send you a second draft by the end of the day."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What document are they discussing?",
+          "options": [
+            "(A) A press release",
+            "(B) A budget report",
+            "(C) A job offer",
+            "(D) A sales contract"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "What does the man suggest changing?",
+          "options": [
+            "(A) The fonts and colors",
+            "(B) The focus of the content",
+            "(C) The deadline",
+            "(D) The distribution list"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What will the woman do next?",
+          "options": [
+            "(A) Print the document",
+            "(B) Call the shareholders",
+            "(C) Revise the text",
+            "(D) Send an email"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv38.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'm thinking about signing up for a Spanish course this semester."
+        },
+        {
+          "speaker": "F",
+          "text": "That's a great idea! I took a class last year, and it's been very helpful during my business trips."
+        },
+        {
+          "speaker": "M",
+          "text": "I'm just not sure if I should take the evening class or the Saturday morning session."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man considering?",
+          "options": [
+            "(A) Moving to Spain",
+            "(B) Learning a language",
+            "(C) Buying a book",
+            "(D) Taking a vacation"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why was the class helpful for the woman?",
+          "options": [
+            "(A) For her hobby",
+            "(B) For her travel",
+            "(C) For her grades",
+            "(D) For her family"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What is the man undecided about?",
+          "options": [
+            "(A) The cost",
+            "(B) The teacher",
+            "(C) The time",
+            "(D) The level"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv39.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Our visitor from the London branch, Mr. Sterling, will be here at 2:00 PM today."
+        },
+        {
+          "speaker": "F",
+          "text": "Should I book a table for four at the bistro across the street for an early dinner?"
+        },
+        {
+          "speaker": "M",
+          "text": "Actually, he's coming straight from the airport and requested a light lunch instead."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Who is arriving at 2:00 PM?",
+          "options": [
+            "(A) A new client",
+            "(B) A local manager",
+            "(C) An international colleague",
+            "(D) A delivery driver"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What did the woman suggest doing?",
+          "options": [
+            "(A) Booking a hotel",
+            "(B) Giving a tour",
+            "(C) Organizing a dinner",
+            "(D) Canceling a meeting"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the guest prefer?",
+          "options": [
+            "(A) A heavy meal",
+            "(B) A late snack",
+            "(C) A morning coffee",
+            "(D) A midday meal"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv40.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I'm sorry, but the main auditorium is being used for a private event this evening."
+        },
+        {
+          "speaker": "M",
+          "text": "Oh, I thought the lecture on urban planning was held there. Is it canceled?"
+        },
+        {
+          "speaker": "F",
+          "text": "No, it's been moved to the small conference room on the second floor."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the auditorium unavailable?",
+          "options": [
+            "(A) It is under repair",
+            "(B) It is being cleaned",
+            "(C) A private function is occurring",
+            "(D) The power is out"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the topic of the lecture?",
+          "options": [
+            "(A) History",
+            "(B) Gardening",
+            "(C) City development",
+            "(D) Business law"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Where should the man go now?",
+          "options": [
+            "(A) The lobby",
+            "(B) The library",
+            "(C) The basement",
+            "(D) The second floor"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv41.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I've finished the draft for the annual report, but I need the sales figures for December."
+        },
+        {
+          "speaker": "F",
+          "text": "I'm still waiting for the final numbers from the accounting department. They promised to have them by tomorrow."
+        },
+        {
+          "speaker": "M",
+          "text": "That's fine. I'll work on the executive summary in the meantime."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What has the man recently completed?",
+          "options": [
+            "(A) A sales pitch",
+            "(B) A budget plan",
+            "(C) A document draft",
+            "(D) A hiring report"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Why is the report incomplete?",
+          "options": [
+            "(A) A computer error",
+            "(B) Missing data",
+            "(C) A sick employee",
+            "(D) A late shipment"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What will the man do next?",
+          "options": [
+            "(A) Call accounting",
+            "(B) Go home early",
+            "(C) Write a summary",
+            "(D) Print the report"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv42.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "My car is in the shop, so I'll be taking the train to work for the next few days."
+        },
+        {
+          "speaker": "M",
+          "text": "You should buy a weekly pass; it's much cheaper than buying individual tickets every day."
+        },
+        {
+          "speaker": "F",
+          "text": "I'll check the price at the station. Hopefully, the commute isn't too long."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the woman using public transportation?",
+          "options": [
+            "(A) She sold her car",
+            "(B) She wants to save money",
+            "(C) Her car is being fixed",
+            "(D) She lost her license"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the man recommend?",
+          "options": [
+            "(A) Walking to work",
+            "(B) A carpool",
+            "(C) A multi-day ticket",
+            "(D) A different route"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Where will the woman get more information?",
+          "options": [
+            "(A) Online",
+            "(B) From her boss",
+            "(C) At the office",
+            "(D) At the transit hub"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv43.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "The air conditioning in the breakroom isn't working. It's nearly 30 degrees in there!"
+        },
+        {
+          "speaker": "F",
+          "text": "I already called maintenance. They said they'll send someone up after they finish fixing the elevator."
+        },
+        {
+          "speaker": "M",
+          "text": "I hope they hurry. I can't eat my lunch in that heat."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the problem in the breakroom?",
+          "options": [
+            "(A) The lights are off",
+            "(B) The fridge is broken",
+            "(C) The temperature is too high",
+            "(D) The floor is wet"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the maintenance team currently doing?",
+          "options": [
+            "(A) Fixing a leak",
+            "(B) Repairing an elevator",
+            "(C) Painting a wall",
+            "(D) Installing a fan"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "How does the man feel?",
+          "options": [
+            "(A) Excitement",
+            "(B) Boredom",
+            "(C) Impatience",
+            "(D) Surprise"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv44.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I need to renew my passport before my trip to Italy in three months."
+        },
+        {
+          "speaker": "M",
+          "text": "You should do it soon. The processing time has increased to eight weeks lately."
+        },
+        {
+          "speaker": "F",
+          "text": "I'll go to the post office this Friday to submit the application."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where is the woman planning to go?",
+          "options": [
+            "(A) France",
+            "(B) Spain",
+            "(C) Italy",
+            "(D) Greece"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the man say about the passport process?",
+          "options": [
+            "(A) It is very expensive",
+            "(B) It is now online only",
+            "(C) It is faster than before",
+            "(D) It takes longer now"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "When will the woman submit her paperwork?",
+          "options": [
+            "(A) Today",
+            "(B) Tomorrow",
+            "(C) This Friday",
+            "(D) Next month"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv45.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Does this laptop come with a carrying case, or do I have to purchase one separately?"
+        },
+        {
+          "speaker": "F",
+          "text": "It's included in the price this week as part of our \"Back to School\" promotion."
+        },
+        {
+          "speaker": "M",
+          "text": "That's a great deal. I'll take the silver model, please."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the man buying?",
+          "options": [
+            "(A) A briefcase",
+            "(B) A tablet",
+            "(C) A computer",
+            "(D) A school bag"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is mentioned about the carrying case?",
+          "options": [
+            "(A) It is on sale",
+            "(B) It is out of stock",
+            "(C) It is a separate charge",
+            "(D) It is free with purchase"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Which model did the man choose?",
+          "options": [
+            "(A) The black one",
+            "(B) The gold one",
+            "(C) The blue one",
+            "(D) The silver one"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv46.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "The printer on the fourth floor is out of paper again."
+        },
+        {
+          "speaker": "M",
+          "text": "I just checked the supply room, but we're completely out. The new shipment won't arrive until tomorrow."
+        },
+        {
+          "speaker": "F",
+          "text": "I guess I'll have to use the printer in the basement for now."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the issue?",
+          "options": [
+            "(A) The printer is jammed",
+            "(B) The ink is empty",
+            "(C) Lack of paper",
+            "(D) The printer is slow"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "When will the new supplies arrive?",
+          "options": [
+            "(A) Today",
+            "(B) Tomorrow",
+            "(C) Next week",
+            "(D) In two days"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Where will the woman go to print her work?",
+          "options": [
+            "(A) The fourth floor",
+            "(B) The lobby",
+            "(C) The basement",
+            "(D) Across the street"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv47.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'm calling to confirm the delivery time for the new office furniture."
+        },
+        {
+          "speaker": "F",
+          "text": "It's scheduled for Thursday morning between 9:00 and 11:00."
+        },
+        {
+          "speaker": "M",
+          "text": "Can we move it to the afternoon? We have a staff meeting in the lobby all morning."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the man calling?",
+          "options": [
+            "(A) To order furniture",
+            "(B) To cancel a delivery",
+            "(C) To verify a schedule",
+            "(D) To complain about a price"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "When was the original delivery time?",
+          "options": [
+            "(A) Wednesday morning",
+            "(B) Thursday morning",
+            "(C) Thursday afternoon",
+            "(D) Friday morning"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What is happening in the lobby on Thursday morning?",
+          "options": [
+            "(A) A renovation",
+            "(B) A cleaning service",
+            "(C) A client visit",
+            "(D) A staff meeting"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv48.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Have you seen the new employee directory? They finally added the photos."
+        },
+        {
+          "speaker": "M",
+          "text": "Not yet. Does it include the interns who started last week?"
+        },
+        {
+          "speaker": "F",
+          "text": "Yes, everyone is in there. It makes it much easier to recognize people from other departments."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What was recently added to the directory?",
+          "options": [
+            "(A) Phone numbers",
+            "(B) Email addresses",
+            "(C) Job titles",
+            "(D) Pictures"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Who started working last week?",
+          "options": [
+            "(A) The CEO",
+            "(B) The sales team",
+            "(C) Temporary staff",
+            "(D) The manager"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is the benefit of the update?",
+          "options": [
+            "(A) Faster communication",
+            "(B) Identifying coworkers",
+            "(C) Better security",
+            "(D) Easier payroll"
+          ],
+          "answer": "B"
+        }
+      ],
+      "audio_file": "audio/conv49.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'd like to sign up for the advanced accounting seminar."
+        },
+        {
+          "speaker": "F",
+          "text": "You'll need to provide proof that you've completed the introductory course first."
+        },
+        {
+          "speaker": "M",
+          "text": "I have my certificate from last year right here in my bag."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What does the man want to do?",
+          "options": [
+            "(A) Teach a class",
+            "(B) Get a job",
+            "(C) Join a seminar",
+            "(D) Pay a bill"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is a requirement for the seminar?",
+          "options": [
+            "(A) A high fee",
+            "(B) A letter of intent",
+            "(C) A previous course",
+            "(D) Five years of experience"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the man have with him?",
+          "options": [
+            "(A) A resume",
+            "(B) A check",
+            "(C) A textbook",
+            "(D) A certificate"
+          ],
+          "answer": "D"
+        }
+      ],
+      "audio_file": "audio/conv50.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "Is the museum open on Mondays? I have a friend visiting from out of town."
+        },
+        {
+          "speaker": "M",
+          "text": "No, we're closed on Mondays for maintenance, but we stay open late on Fridays."
+        },
+        {
+          "speaker": "F",
+          "text": "That's good to know. We'll go on Friday evening then."
+        }
+      ],
+      "questions": [
+        {
+          "text": "When is the museum closed?",
+          "options": [
+            "(A) Fridays",
+            "(B) Saturdays",
+            "(C) Mondays",
+            "(D) Sundays"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Why is the museum closed on that day?",
+          "options": [
+            "(A) Lack of staff",
+            "(B) Private events",
+            "(C) Maintenance work",
+            "(D) Holiday break"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is special about Fridays?",
+          "options": [
+            "(A) Free entry",
+            "(B) Guided tours",
+            "(C) Extra hours",
+            "(D) Live music"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv51.mp3"
+    },
+    {
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I need to book a flight to Chicago for the trade show next month."
+        },
+        {
+          "speaker": "F",
+          "text": "You should book it today. Prices usually go up after the 15th of the month."
+        },
+        {
+          "speaker": "M",
+          "text": "Thanks for the tip. I'll go online and do it during my break."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where is the man going?",
+          "options": [
+            "(A) New York",
+            "(B) Chicago",
+            "(C) Los Angeles",
+            "(D) Miami"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why is the man traveling?",
+          "options": [
+            "(A) For a wedding",
+            "(B) For a vacation",
+            "(C) For an event",
+            "(D) For a family visit"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the woman suggest about the timing?",
+          "options": [
+            "(A) Wait for a sale",
+            "(B) Book in the morning",
+            "(C) Purchase tickets now",
+            "(D) Change the destination"
+          ],
+          "answer": "C"
+        }
+      ],
+      "audio_file": "audio/conv52.mp3"
+    }
+  ]
+}

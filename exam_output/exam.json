@@ -1,0 +1,1677 @@
+{
+  "part1": null,
+  "part2": null,
+  "part3": null,
+  "part4": {
+    "talks": [
+      {
+        "title": "Voicemail Message",
+        "text": "Hello, this is Marcus from the maintenance department. I'm calling regarding your request to fix the overhead lights in office 402. I was planning to come by this afternoon, but a pipe burst in the basement, and I need to prioritize that. I'll be there tomorrow morning at 9:00 AM instead. Sorry for the inconvenience.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Where does the speaker work?",
+            "options": [
+              "(A) Human Resources",
+              "(B) Maintenance",
+              "(C) Accounting",
+              "(D) Security"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What was the original problem?",
+            "options": [
+              "(A) A broken window",
+              "(B) A leaking pipe",
+              "(C) A faulty light fixture",
+              "(D) A noisy air conditioner"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "When will the speaker arrive?",
+            "options": [
+              "(A) This afternoon",
+              "(B) Tomorrow morning",
+              "(C) Next week",
+              "(D) In two days"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk01.mp3"
+      },
+      {
+        "title": "Public Announcement",
+        "text": "Attention all shoppers. We are happy to announce that for the next hour, we are having a flash sale on all smart televisions and kitchen mixers. Please head to the appropriate floor to take advantage of these 30% discounts. Also, don't forget to visit our bakery for a free sample of our new sourdough bread.",
+        "graphic_title": "Store Directory",
+        "graphic_doctype": "directory",
+        "graphic": {
+          "Floor 1": "Groceries and Bakery",
+          "Floor 2": "Clothing and Shoes",
+          "Floor 3": "Electronics and Appliances",
+          "Floor 4": "Furniture and Home Decor"
+        },
+        "questions": [
+          {
+            "text": "What is being offered at a discount?",
+            "options": [
+              "(A) Shoes",
+              "(B) Groceries",
+              "(C) Appliances",
+              "(D) Furniture"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Look at the graphic. Which floor should customers go to for the flash sale?",
+            "options": [
+              "(A) Floor 1",
+              "(B) Floor 2",
+              "(C) Floor 3",
+              "(D) Floor 4"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What can shoppers get for free?",
+            "options": [
+              "(A) A television",
+              "(B) A sourdough sample",
+              "(C) A store catalog",
+              "(D) A discount coupon"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk02.mp3"
+      },
+      {
+        "title": "Business Briefing",
+        "text": "Good morning, everyone. Before we start our shift, I have an update regarding our new software system. We were supposed to transition to 'CloudSync' today, but the IT team found a bug in the security settings. Therefore, we will continue using our current system until Monday. Please attend the training session in the conference room at 2:00 PM today as scheduled.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the purpose of the talk?",
+            "options": [
+              "(A) To introduce a new employee",
+              "(B) To announce a delay",
+              "(C) To complain about a security breach",
+              "(D) To cancel a training session"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What happened to the 'CloudSync' launch?",
+            "options": [
+              "(A) It was successful",
+              "(B) It was moved to 2:00 PM",
+              "(C) It was rescheduled for next week",
+              "(D) It was permanently canceled"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What should the listeners do at 2:00 PM?",
+            "options": [
+              "(A) Start using the new software",
+              "(B) Go to the conference room",
+              "(C) Call the IT department",
+              "(D) Leave work early"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk03.mp3"
+      },
+      {
+        "title": "Advertisement",
+        "text": "Is your lawn looking tired and brown? Call GreenThumb Landscaping today! We offer a full range of services, from basic mowing to complex garden design. If you sign up for a one-year contract this month, we'll include free monthly fertilization. Visit our website to see photos of our previous projects.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What service does the company provide?",
+            "options": [
+              "(A) Interior design",
+              "(B) Carpet cleaning",
+              "(C) Yard maintenance",
+              "(D) House painting"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "How can customers get a free service?",
+            "options": [
+              "(A) By visiting the website",
+              "(B) By referring a friend",
+              "(C) By posting a photo",
+              "(D) By signing a long-term agreement"
+            ],
+            "answer": "D"
+          },
+          {
+            "text": "What is available on the company's website?",
+            "options": [
+              "(A) A price calculator",
+              "(B) Images of past work",
+              "(C) A list of employees",
+              "(D) An online chat feature"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk04.mp3"
+      },
+      {
+        "title": "News Report",
+        "text": "This is Sarah Jenkins with your local news. Traffic is currently backed up on Route 12 due to a minor accident near the bridge. Drivers are advised to take the scenic bypass instead. Looking at our upcoming weather, the cold front arriving mid-week will bring some unexpected precipitation, so make sure you have your winter gear ready by the morning of the fourth day.",
+        "graphic_title": "Weather Forecast",
+        "graphic_doctype": "weather_chart",
+        "graphic": {
+          "Monday": "Sunny (25°C)",
+          "Tuesday": "Rainy (18°C)",
+          "Wednesday": "Windy (15°C)",
+          "Thursday": "Snowy (2°C)"
+        },
+        "questions": [
+          {
+            "text": "Why is traffic slow on Route 12?",
+            "options": [
+              "(A) Road construction",
+              "(B) A vehicle collision",
+              "(C) Heavy rain",
+              "(D) A bridge closure"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What does the speaker suggest drivers do?",
+            "options": [
+              "(A) Stay home",
+              "(B) Drive slowly",
+              "(C) Use an alternative route",
+              "(D) Wait for the bridge to open"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Look at the graphic. What type of weather is expected on Thursday?",
+            "options": [
+              "(A) Sun",
+              "(B) Rain",
+              "(C) Wind",
+              "(D) Snow"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk05.mp3"
+      },
+      {
+        "title": "Recorded Message",
+        "text": "You have reached the offices of Riverdale Medical. Our office is currently closed for the lunch hour. We will reopen at 1:30 PM. If you are calling to schedule an appointment, please press 1. If you have a prescription refill request, please call the pharmacy directly at 555-0199. For emergencies, please hang up and dial 911.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Why is the office currently unavailable?",
+            "options": [
+              "(A) It is a holiday",
+              "(B) It is the lunch break",
+              "(C) It is undergoing repairs",
+              "(D) It has moved locations"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What should a caller do to book a visit?",
+            "options": [
+              "(A) Press a button on the phone",
+              "(B) Call back at 1:30 PM",
+              "(C) Visit the office in person",
+              "(D) Call the pharmacy"
+            ],
+            "answer": "A"
+          },
+          {
+            "text": "What information is provided for prescription refills?",
+            "options": [
+              "(A) An email address",
+              "(B) A doctor's name",
+              "(C) A website link",
+              "(D) A phone number"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk06.mp3"
+      },
+      {
+        "title": "Tour Guide",
+        "text": "Welcome to the National Space Museum. My name is David, and I'll be your guide today. We will begin our tour in the Rocket Gallery, where you can see actual engines used in the Apollo missions. Please remember that flash photography is strictly prohibited as it can damage some of the older artifacts. We will end the tour at the gift shop in approximately one hour.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Where is the tour taking place?",
+            "options": [
+              "(A) An art gallery",
+              "(B) A space museum",
+              "(C) A rocket factory",
+              "(D) A history library"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What rule are the visitors asked to follow?",
+            "options": [
+              "(A) Do not touch the engines",
+              "(B) Stay with the group",
+              "(C) Do not use camera flashes",
+              "(D) Keep their voices low"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "How long will the tour last?",
+            "options": [
+              "(A) 30 minutes",
+              "(B) 60 minutes",
+              "(C) 90 minutes",
+              "(D) Two hours"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk07.mp3"
+      },
+      {
+        "title": "Introduction",
+        "text": "It is my great pleasure to introduce our keynote speaker, Dr. Elena Rossi. Dr. Rossi has spent the last decade researching renewable energy at the University of Rome. Today, she will discuss her latest project involving solar-powered water filtration systems. Please join me in giving her a warm welcome.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Who is the speaker introducing?",
+            "options": [
+              "(A) A university student",
+              "(B) A research assistant",
+              "(C) A keynote speaker",
+              "(D) A project manager"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is Dr. Rossi's area of expertise?",
+            "options": [
+              "(A) Water management",
+              "(B) Ancient history",
+              "(C) Renewable energy",
+              "(D) Italian architecture"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is the specific topic of the speech?",
+            "options": [
+              "(A) University of Rome's history",
+              "(B) Solar water filtration",
+              "(C) Future of Italian politics",
+              "(D) How to get a research grant"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk08.mp3"
+      },
+      {
+        "title": "Instruction",
+        "text": "Welcome to the annual Small Business Expo. When you entered, you should have received a badge and a folder. Please keep your badge visible at all times for security reasons. We have a small change to the schedule printed in your folders. The workshop on marketing has been extended by thirty minutes, so the lunch break will start later than originally planned.",
+        "graphic_title": "Conference Schedule",
+        "graphic_doctype": "schedule",
+        "graphic": {
+          "9:00 - 10:00": "Opening Remarks",
+          "10:00 - 11:30": "Marketing Workshop",
+          "11:30 - 1:00": "Networking Lunch",
+          "1:00 - 2:30": "Financial Planning"
+        },
+        "questions": [
+          {
+            "text": "What should attendees keep visible?",
+            "options": [
+              "(A) Their folders",
+              "(B) Their identification badges",
+              "(C) Their laptops",
+              "(D) Their business cards"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What change does the speaker mention?",
+            "options": [
+              "(A) The venue has changed",
+              "(B) A speaker is missing",
+              "(C) An event will last longer",
+              "(D) Lunch has been canceled"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Look at the graphic. According to the speaker, what time will the lunch likely begin now?",
+            "options": [
+              "(A) 11:30",
+              "(B) 12:00",
+              "(C) 1:00",
+              "(D) 1:30"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk09.mp3"
+      },
+      {
+        "title": "Advertisement",
+        "text": "Are you tired of paying high prices for your monthly cell phone plan? Switch to ClearCall Wireless! We offer unlimited talk and text for just $25 a month. Plus, if you bring your own device, we'll give you a $50 credit on your first bill. Stop by any of our ten locations in the city today to make the switch.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is being advertised?",
+            "options": [
+              "(A) A new smartphone",
+              "(B) A repair service",
+              "(C) A mobile phone plan",
+              "(D) An internet router"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is the monthly cost of the service?",
+            "options": [
+              "(A) $10",
+              "(B) $25",
+              "(C) $50",
+              "(D) $75"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "How can a customer receive a $50 credit?",
+            "options": [
+              "(A) By referring a family member",
+              "(B) By signing a two-year deal",
+              "(C) By keeping their current phone",
+              "(D) By visiting all ten locations"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk10.mp3"
+      },
+      {
+        "title": "Voicemail Message",
+        "text": "Hi, this is Linda from Sunnyvale Travel. I'm calling to let you know that your hotel reservation in Madrid has been confirmed. However, the hotel notified us that their rooftop pool will be closed for maintenance during your stay. As an apology, they are offering you a voucher for a free dinner at their award-winning restaurant. I'll email the voucher to you shortly.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the purpose of the call?",
+            "options": [
+              "(A) To book a flight",
+              "(B) To confirm a hotel stay",
+              "(C) To cancel a tour",
+              "(D) To request a payment"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What is the problem mentioned?",
+            "options": [
+              "(A) The room is not ready",
+              "(B) The flight was delayed",
+              "(C) A facility is unavailable",
+              "(D) The price has increased"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What will the speaker send to the listener?",
+            "options": [
+              "(A) A map of Madrid",
+              "(B) A dinner voucher",
+              "(C) A new itinerary",
+              "(D) A refund check"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk11.mp3"
+      },
+      {
+        "title": "Business Presentation",
+        "text": "Take a look at the screen. You'll see our sales performance for the past year. As you can see, we had a very strong start, but we hit a significant slump during the summer months due to the supply chain disruption. Fortunately, our holiday marketing campaign was a massive success, leading to our highest growth period at the end of the year. We hope to maintain this momentum into the next quarter.",
+        "graphic_title": "Quarterly Sales Growth",
+        "graphic_doctype": "chart",
+        "graphic": {
+          "Q1": "5%",
+          "Q2": "12%",
+          "Q3": "-2%",
+          "Q4": "18%"
+        },
+        "questions": [
+          {
+            "text": "What caused a decline in sales?",
+            "options": [
+              "(A) High employee turnover",
+              "(B) Supply chain issues",
+              "(C) A failed advertisement",
+              "(D) Competitor pricing"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "Look at the graphic. Which quarter represents the \"summer slump\" mentioned by the speaker?",
+            "options": [
+              "(A) Q1",
+              "(B) Q2",
+              "(C) Q3",
+              "(D) Q4"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What does the speaker credit for the year-end success?",
+            "options": [
+              "(A) A new product launch",
+              "(B) A holiday campaign",
+              "(C) A reduction in prices",
+              "(D) An expansion into Europe"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk12.mp3"
+      },
+      {
+        "title": "Radio Advertisement",
+        "text": "Are you looking to improve your professional skills? The City Evening College is now enrolling for the spring semester. We offer courses in everything from web design to project management. Classes are held twice a week starting at 7:00 PM, making it easy to study after work. Register by the end of this week to have your lab fees waived!",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Who is the target audience for this ad?",
+            "options": [
+              "(A) Full-time students",
+              "(B) Retired teachers",
+              "(C) Working professionals",
+              "(D) High school children"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "When do the classes take place?",
+            "options": [
+              "(A) On weekends",
+              "(B) In the evenings",
+              "(C) During the lunch hour",
+              "(D) Early in the morning"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "How can a student save money?",
+            "options": [
+              "(A) By enrolling in two classes",
+              "(B) By paying in cash",
+              "(C) By registering early",
+              "(D) By bringing their own laptop"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk13.mp3"
+      },
+      {
+        "title": "Plant Safety Briefing",
+        "text": "Before we begin the tour of the manufacturing floor, I must go over a few safety requirements. Everyone must wear a hard hat and safety goggles at all times. Also, please stay within the yellow painted lines on the floor; these are designated walking paths to keep you away from the automated machinery. If you hear a loud siren, please follow me to the nearest exit immediately.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the speaker mainly discussing?",
+            "options": [
+              "(A) Machine maintenance",
+              "(B) Hiring procedures",
+              "(C) Safety regulations",
+              "(D) Product quality"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What should visitors look for on the floor?",
+            "options": [
+              "(A) Fire extinguishers",
+              "(B) Yellow lines",
+              "(C) Emergency buttons",
+              "(D) Tool boxes"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What should listeners do if they hear a siren?",
+            "options": [
+              "(A) Turn off the machines",
+              "(B) Call for help",
+              "(C) Put on their goggles",
+              "(D) Exit the building"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk14.mp3"
+      },
+      {
+        "title": "Voicemail Message",
+        "text": "Hello, this is David from the IT department. I received your message about your computer not connecting to the office printer. I've checked the server and everything seems fine on our end, so it might be a hardware issue with your specific machine. I'll be tied up in meetings all morning, so please call the main desk to see if another technician is available to assist you before noon.",
+        "graphic_title": "Office Extension List",
+        "graphic_doctype": "directory",
+        "graphic": {
+          "IT Support": "Ext. 10",
+          "Payroll": "Ext. 20",
+          "Sales": "Ext. 30",
+          "Reception": "Ext. 0"
+        },
+        "questions": [
+          {
+            "text": "What is the listener's problem?",
+            "options": [
+              "(A) A forgotten password",
+              "(B) A printer connection issue",
+              "(C) A broken monitor",
+              "(D) A missing file"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "Why is the speaker unable to help immediately?",
+            "options": [
+              "(A) He is on vacation",
+              "(B) He is fixing a server",
+              "(C) He is in meetings",
+              "(D) He is out of the office"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Look at the graphic. Which extension should the listener dial to find another technician?",
+            "options": [
+              "(A) Ext. 10",
+              "(B) Ext. 20",
+              "(C) Ext. 30",
+              "(D) Ext. 0"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk15.mp3"
+      },
+      {
+        "title": "Public Service Announcement",
+        "text": "The Department of Transportation would like to remind residents that the annual 'Bike to Work' week begins this Monday. To encourage cycling, the city has installed temporary bike lanes on 5th Avenue and Broadway. Additionally, all city buses will be equipped with front-loading bike racks. Let's work together to reduce traffic congestion and improve our air quality.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What event is being announced?",
+            "options": [
+              "(A) A marathon",
+              "(B) A cycling event",
+              "(C) A car show",
+              "(D) A street fair"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What change has been made to city buses?",
+            "options": [
+              "(A) Lower fares",
+              "(B) New routes",
+              "(C) Bike racks added",
+              "(D) Electric engines"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is a goal of this initiative?",
+            "options": [
+              "(A) To raise money for charity",
+              "(B) To increase bus ridership",
+              "(C) To promote tourism",
+              "(D) To reduce traffic"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk16.mp3"
+      },
+      {
+        "title": "Product Introduction",
+        "text": "I'm thrilled to introduce our newest kitchen appliance, the 'QuickChef 3000.' This multi-cooker can steam, sauté, and pressure cook all in one device. It features a digital interface with over fifty pre-set recipes. Best of all, it uses 70% less energy than a conventional oven. It will be available in major retail stores starting next Tuesday.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the 'QuickChef 3000'?",
+            "options": [
+              "(A) A dishwasher",
+              "(B) A refrigerator",
+              "(C) A multi-cooker",
+              "(D) A microwave"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is highlighted as a main benefit?",
+            "options": [
+              "(A) Its large size",
+              "(B) Its low price",
+              "(C) Its energy efficiency",
+              "(D) Its colorful design"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "When will the product go on sale?",
+            "options": [
+              "(A) Today",
+              "(B) Tomorrow",
+              "(C) This weekend",
+              "(D) Next Tuesday"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk17.mp3"
+      },
+      {
+        "title": "Weather Report",
+        "text": "Good morning, listeners. It's a beautiful start to the day with clear skies, but don't let that fool you. A low-pressure system is moving in from the west. We expect light showers to start around lunchtime, but the heaviest rainfall will hit right during the evening commute. If you're planning to walk home from work, you'll definitely want to bring an umbrella for the late afternoon.",
+        "graphic_title": "Precipitation Probability",
+        "graphic_doctype": "chart",
+        "graphic": {
+          "10 AM": "10%",
+          "1 PM": "40%",
+          "4 PM": "85%",
+          "7 PM": "20%"
+        },
+        "questions": [
+          {
+            "text": "How is the weather at the time of the broadcast?",
+            "options": [
+              "(A) Rainy",
+              "(B) Clear",
+              "(C) Snowy",
+              "(D) Windy"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "Look at the graphic. At what time is rain most likely to occur?",
+            "options": [
+              "(A) 10 AM",
+              "(B) 1 PM",
+              "(C) 4 PM",
+              "(D) 7 PM"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What does the speaker suggest listeners do?",
+            "options": [
+              "(A) Leave work early",
+              "(B) Drive instead of walk",
+              "(C) Carry an umbrella",
+              "(D) Wear a heavy coat"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk18.mp3"
+      },
+      {
+        "title": "Business News",
+        "text": "In business news today, the tech giant 'Aperion' has announced it will be opening a new headquarters in Austin, Texas. This move is expected to create over 2,000 jobs in the local area over the next two years. The company cited the city's growing talent pool and favorable tax environment as the primary reasons for the relocation. Construction is set to begin this July.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What did the company 'Aperion' announce?",
+            "options": [
+              "(A) A merger",
+              "(B) A new office location",
+              "(C) A product recall",
+              "(D) A bankruptcy filing"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "How many jobs will be created?",
+            "options": [
+              "(A) 500",
+              "(B) 1,000",
+              "(C) 2,000",
+              "(D) 5,000"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "When will construction start?",
+            "options": [
+              "(A) This July",
+              "(B) This December",
+              "(C) Next January",
+              "(D) Next July"
+            ],
+            "answer": "A"
+          }
+        ],
+        "audio_file": "audio/talk19.mp3"
+      },
+      {
+        "title": "Store Announcement",
+        "text": "Attention shoppers, we would like to remind you that our customer loyalty program is changing. Starting next month, points will no longer expire at the end of the year. Instead, you can save them up for larger rewards, such as $50 gift cards. To update your account information, please visit the service desk located near the main entrance. Thank you for shopping with us.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is changing at the store?",
+            "options": [
+              "(A) The store hours",
+              "(B) The return policy",
+              "(C) The loyalty program",
+              "(D) The store's location"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is a benefit of the new system?",
+            "options": [
+              "(A) Points do not expire",
+              "(B) Double points on weekends",
+              "(C) Lower prices for members",
+              "(D) Free home delivery"
+            ],
+            "answer": "A"
+          },
+          {
+            "text": "Where can customers update their accounts?",
+            "options": [
+              "(A) On the store website",
+              "(B) At the checkout counter",
+              "(C) At the service desk",
+              "(D) Through a mobile app"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk20.mp3"
+      },
+      {
+        "title": "Business Briefing",
+        "text": "Good morning, team. I have a quick update regarding our client, Nexus Corp. They've requested a change in the color scheme for the new website design. Instead of the blue and grey we originally proposed, they want a more vibrant green and white theme to match their new branding. Please pause work on the current layout until the design team sends over the updated style guide this afternoon.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the talk mainly about?",
+            "options": [
+              "(A) A new project deadline",
+              "(B) A change in design requirements",
+              "(C) A budget increase",
+              "(D) A client meeting schedule"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What color combination does the client now want?",
+            "options": [
+              "(A) Blue and grey",
+              "(B) Red and black",
+              "(C) Green and white",
+              "(D) Yellow and orange"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What are the listeners told to do?",
+            "options": [
+              "(A) Call the client",
+              "(B) Stop working on the layout",
+              "(C) Finish the blue design",
+              "(D) Go home early"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk21.mp3"
+      },
+      {
+        "title": "Public Announcement",
+        "text": "Attention passengers at Central Station. Due to mechanical issues on the tracks near the bridge, all Express trains have been suspended until further notice. Passengers traveling northbound should take the next Local train instead. Please note that the Local train will depart from its usual location as shown on the schedule. We apologize for the delay.",
+        "graphic_title": "Train Schedule - Northbound",
+        "graphic_doctype": "schedule",
+        "graphic": {
+          "8:15 AM": "Express (Platform 1)",
+          "8:45 AM": "Local (Platform 4)",
+          "9:15 AM": "Express (Platform 2)",
+          "9:45 AM": "Local (Platform 4)"
+        },
+        "questions": [
+          {
+            "text": "Why are some trains suspended?",
+            "options": [
+              "(A) Bad weather",
+              "(B) Staff shortages",
+              "(C) Track maintenance",
+              "(D) Mechanical problems"
+            ],
+            "answer": "D"
+          },
+          {
+            "text": "Look at the graphic. Which platform should passengers go to for the next available train?",
+            "options": [
+              "(A) Platform 1",
+              "(B) Platform 2",
+              "(C) Platform 3",
+              "(D) Platform 4"
+            ],
+            "answer": "D"
+          },
+          {
+            "text": "What does the speaker suggest passengers do?",
+            "options": [
+              "(A) Wait for the Express",
+              "(B) Take a Local train",
+              "(C) Ask for a refund",
+              "(D) Travel southbound"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk22.mp3"
+      },
+      {
+        "title": "Telephone Message",
+        "text": "Hello, this is Mr. Henderson from the accounting department. I'm calling to follow up on the invoice I sent you last Tuesday. We noticed that the total amount listed was incorrect because the shipping charges were not included. I have sent a revised invoice to your email address. Please ignore the first one and use the new document for your payment records.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Where does the speaker work?",
+            "options": [
+              "(A) Shipping",
+              "(B) Accounting",
+              "(C) Sales",
+              "(D) Human Resources"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What was wrong with the original invoice?",
+            "options": [
+              "(A) The date was wrong",
+              "(B) It was missing a signature",
+              "(C) It had an incorrect total",
+              "(D) It was sent to the wrong person"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What should the listener do?",
+            "options": [
+              "(A) Pay the first invoice",
+              "(B) Use the revised document",
+              "(C) Call Mr. Henderson back",
+              "(D) Send a shipping receipt"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk23.mp3"
+      },
+      {
+        "title": "Store Advertisement",
+        "text": "Looking for a new laptop for college? Stop by 'TechHub' this weekend for our annual student sale! We are offering 15% off all laptops and tablets. Plus, every purchase comes with a free wireless mouse and a one-year subscription to our antivirus software. Just show your valid student ID at the register to claim these savings.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is being advertised?",
+            "options": [
+              "(A) A university course",
+              "(B) A software repair service",
+              "(C) A computer sale",
+              "(D) A wireless internet plan"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What item is given for free with a purchase?",
+            "options": [
+              "(A) A laptop bag",
+              "(B) A wireless mouse",
+              "(C) A set of headphones",
+              "(D) A printer"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What must a customer provide to get a discount?",
+            "options": [
+              "(A) A coupon from a newspaper",
+              "(B) A credit card",
+              "(C) A student ID",
+              "(D) An email address"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk24.mp3"
+      },
+      {
+        "title": "Excerpt from a Meeting",
+        "text": "Thank you all for coming. Let's look at where we stand on the new smartphone project. The research phase took longer than expected, but it gave us great insights. Currently, the engineering team is building the first physical model. We expect to move into the trial phase by early next month. If we stay on track, we will hit the mass manufacturing stage by the end of the year.",
+        "graphic_title": "Project Milestones",
+        "graphic_doctype": "timeline",
+        "graphic": {
+          "Research": "Completed",
+          "Prototype": "In Progress",
+          "Testing": "Not Started",
+          "Production": "Not Started"
+        },
+        "questions": [
+          {
+            "text": "What is the meeting about?",
+            "options": [
+              "(A) A marketing strategy",
+              "(B) A product development update",
+              "(C) A quarterly budget review",
+              "(D) An employee training session"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "Look at the graphic. Which stage of the project is the team currently working on?",
+            "options": [
+              "(A) Research",
+              "(B) Prototype",
+              "(C) Testing",
+              "(D) Production"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "When does the speaker hope to start mass manufacturing?",
+            "options": [
+              "(A) Next month",
+              "(B) In three months",
+              "(C) By the end of the year",
+              "(D) Next summer"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk25.mp3"
+      },
+      {
+        "title": "Voicemail Message",
+        "text": "Hi, this is Jessica from the catering company. I'm calling about your order for the retirement party this Friday. You requested 50 vegetarian wraps, but our supplier just informed us they are out of the spinach tortillas you wanted. We can substitute them with whole-wheat tortillas instead. Please let me know if this is acceptable by 4:00 PM today.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the reason for the call?",
+            "options": [
+              "(A) To confirm a delivery time",
+              "(B) To suggest an ingredient change",
+              "(C) To request a payment",
+              "(D) To cancel an event"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What event is being catered?",
+            "options": [
+              "(A) A wedding",
+              "(B) A birthday party",
+              "(C) A retirement party",
+              "(D) A business lunch"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "When does the listener need to respond?",
+            "options": [
+              "(A) This Friday",
+              "(B) By 4:00 PM today",
+              "(C) In one hour",
+              "(D) Tomorrow morning"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk26.mp3"
+      },
+      {
+        "title": "Public Service Announcement",
+        "text": "The City Water Department will be conducting maintenance on the main pipelines in the West End district this Sunday. Residents in the area may experience low water pressure or temporary service interruptions between 8:00 AM and 2:00 PM. We recommend storing enough water for your household needs on Saturday evening. We appreciate your patience during these necessary repairs.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is happening this Sunday?",
+            "options": [
+              "(A) A street fair",
+              "(B) Utility maintenance",
+              "(C) A marathon",
+              "(D) A recycling drive"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What is a possible problem for residents?",
+            "options": [
+              "(A) Power outages",
+              "(B) No internet access",
+              "(C) Low water pressure",
+              "(D) Closed roads"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What does the speaker suggest doing on Saturday?",
+            "options": [
+              "(A) Calling the department",
+              "(B) Buying bottled water",
+              "(C) Cleaning the house",
+              "(D) Saving a water supply"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk27.mp3"
+      },
+      {
+        "title": "Tour Guide",
+        "text": "As we walk through the botanical garden's Tropical House, please be aware of the high humidity levels, which are necessary for these exotic ferns. To your left is the rare Orchid collection. These flowers only bloom once every three years. Please stay on the paved path and refrain from touching the plants. Our next stop will be the Butterfly Pavilion.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Where is the speaker?",
+            "options": [
+              "(A) A zoo",
+              "(B) A botanical garden",
+              "(C) A farm",
+              "(D) A park"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What is special about the Orchids mentioned?",
+            "options": [
+              "(A) They are very large",
+              "(B) They are blue",
+              "(C) They bloom infrequently",
+              "(D) They are used for medicine"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What will the group visit next?",
+            "options": [
+              "(A) The gift shop",
+              "(B) The exit",
+              "(C) The Butterfly Pavilion",
+              "(D) The rose garden"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk28.mp3"
+      },
+      {
+        "title": "Weather Report",
+        "text": "It's going to be a day of drastic changes, folks. We're starting off quite chilly, but once the sun comes out, we'll see a pleasant rise in temperature. In fact, the warmest part of the day will be nearly double the temperature we have right now. However, once the sun sets, the temperature will drop rapidly, and we may even see some frost on the ground late tonight.",
+        "graphic_title": "Temperatures",
+        "graphic_doctype": "chart",
+        "graphic": {
+          "Morning": "12°C",
+          "Afternoon": "22°C",
+          "Evening": "10°C",
+          "Night": "4°C"
+        },
+        "questions": [
+          {
+            "text": "What is the main topic of the report?",
+            "options": [
+              "(A) Approaching rain",
+              "(B) Wind speeds",
+              "(C) Temperature fluctuations",
+              "(D) Storm warnings"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Look at the graphic. What is the peak temperature expected today?",
+            "options": [
+              "(A) 12°C",
+              "(B) 22°C",
+              "(C) 10°C",
+              "(D) 4°C"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What might happen tonight?",
+            "options": [
+              "(A) A thunderstorm",
+              "(B) Heavy fog",
+              "(C) Frost formation",
+              "(D) High winds"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk29.mp3"
+      },
+      {
+        "title": "Instruction",
+        "text": "Welcome to your first day at 'Prime Logistics.' Your primary duty will be scanning incoming packages and sorting them by zip code. You must wear your high-visibility vest and steel-toed boots at all times while on the warehouse floor. If a package is marked 'Fragile,' please place it on the separate blue conveyor belt for manual handling. Let's get started with a tour of the facility.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Where does this talk take place?",
+            "options": [
+              "(A) A retail store",
+              "(B) A logistics warehouse",
+              "(C) A post office",
+              "(D) A construction site"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What is a task for the new employees?",
+            "options": [
+              "(A) Driving trucks",
+              "(B) Cleaning floors",
+              "(C) Sorting packages",
+              "(D) Answering phones"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What should be done with 'Fragile' items?",
+            "options": [
+              "(A) Put them in boxes",
+              "(B) Use a specific belt",
+              "(C) Call a supervisor",
+              "(D) Leave them on the floor"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk30.mp3"
+      },
+      {
+        "title": "Recorded Message",
+        "text": "Thank you for calling the Grandview Cinema. Our box office is currently closed. To purchase tickets for today's showings, please visit our website or use our mobile app. Note that we are offering a special discount for our 4:00 PM matinee of 'Mountain Peak'—all seats are half-price. Our concession stand now features organic popcorn and locally made sodas. Enjoy the show!",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the speaker's main purpose?",
+            "options": [
+              "(A) To complain about a film",
+              "(B) To provide theater information",
+              "(C) To hire new ushers",
+              "(D) To announce a movie cancellation"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "How can a caller get a discount today?",
+            "options": [
+              "(A) By buying a large popcorn",
+              "(B) By joining a loyalty club",
+              "(C) By attending a specific time",
+              "(D) By showing a student ID"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is new at the concession stand?",
+            "options": [
+              "(A) Hot dogs",
+              "(B) Ice cream",
+              "(C) Candy bars",
+              "(D) Organic snacks"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk31.mp3"
+      },
+      {
+        "title": "Business Presentation",
+        "text": "As we review our annual expenditures, you'll notice a shift in where our capital is going. Last year, our biggest expense was physical equipment, but this year, our investment in cloud-based subscriptions has taken the top spot. We have successfully reduced our travel costs by using video conferencing. Moving forward, we aim to keep our smallest expense category—general office supplies—under 10% of the total budget.",
+        "graphic_title": "Office Spending",
+        "graphic_doctype": "chart",
+        "graphic": {
+          "Software": "40%",
+          "Hardware": "30%",
+          "Travel": "20%",
+          "Supplies": "10%"
+        },
+        "questions": [
+          {
+            "text": "What was the company's largest expense this year?",
+            "options": [
+              "(A) Computer hardware",
+              "(B) Software subscriptions",
+              "(C) Business travel",
+              "(D) Office furniture"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "Look at the graphic. Which category accounts for 20% of the spending?",
+            "options": [
+              "(A) Software",
+              "(B) Hardware",
+              "(C) Travel",
+              "(D) Supplies"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "How did the company reduce travel costs?",
+            "options": [
+              "(A) By flying economy class",
+              "(B) By using video technology",
+              "(C) By canceling all trips",
+              "(D) By moving the office"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk32.mp3"
+      },
+      {
+        "title": "Voicemail Message",
+        "text": "Hello, this is Brenda from 'City Fitness.' I'm calling to let you know that the yoga class you signed up for on Tuesday morning has been moved to Thursday at the same time. The instructor, Mr. Lee, has a family emergency. If you cannot attend the new session, please let us know and we will credit your account for a future class. We apologize for any inconvenience.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Why is the class being rescheduled?",
+            "options": [
+              "(A) The gym is being renovated",
+              "(B) There were not enough students",
+              "(C) The teacher is unavailable",
+              "(D) The building lost power"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "When will the new class take place?",
+            "options": [
+              "(A) Tuesday evening",
+              "(B) Wednesday morning",
+              "(C) Thursday morning",
+              "(D) Friday afternoon"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What does the speaker offer to those who cannot attend?",
+            "options": [
+              "(A) A cash refund",
+              "(B) A credit for later use",
+              "(C) A free water bottle",
+              "(D) A private lesson"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk33.mp3"
+      },
+      {
+        "title": "Advertisement",
+        "text": "Don't spend your weekend cleaning the house! Let 'Sparkle Services' handle it for you. We provide professional cleaning for homes and offices. Our team uses only environmentally friendly products that are safe for pets and children. Call us by Wednesday to receive a $20 discount on your first deep-clean. Visit our website to read testimonials from our happy customers.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What type of business is being advertised?",
+            "options": [
+              "(A) A pet store",
+              "(B) A landscaping company",
+              "(C) A cleaning service",
+              "(D) A grocery delivery"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is special about the products used?",
+            "options": [
+              "(A) They are very cheap",
+              "(B) They are eco-friendly",
+              "(C) They are imported from Europe",
+              "(D) They smell like lemons"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "How can a customer get a discount?",
+            "options": [
+              "(A) By booking on a weekend",
+              "(B) By referring a neighbor",
+              "(C) By calling early in the week",
+              "(D) By signing up for a year"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk34.mp3"
+      },
+      {
+        "title": "Public Announcement",
+        "text": "Welcome to the Metropolitan Museum. We are currently hosting a special temporary exhibit of marble statues from the 20th century. This collection is located in the hall directly adjacent to the Renaissance Art gallery. Please note that sketches are allowed, but the use of charcoal is prohibited. After your visit, please exit through the designated area to browse our selection of art books and souvenirs.",
+        "graphic_title": "Museum Floor Plan",
+        "graphic_doctype": "floor_plan",
+        "graphic": {
+          "Room A": "Ancient Egypt",
+          "Room B": "Renaissance Art",
+          "Room C": "Modern Sculpture",
+          "Room D": "Gift Shop"
+        },
+        "questions": [
+          {
+            "text": "What is the special exhibit featuring?",
+            "options": [
+              "(A) Oil paintings",
+              "(B) Ancient coins",
+              "(C) Modern sculptures",
+              "(D) Photography"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Look at the graphic. In which room is the special exhibit located?",
+            "options": [
+              "(A) Room A",
+              "(B) Room B",
+              "(C) Room C",
+              "(D) Room D"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What are visitors allowed to do?",
+            "options": [
+              "(A) Use charcoal",
+              "(B) Take photographs",
+              "(C) Touch the statues",
+              "(D) Draw sketches"
+            ],
+            "answer": "D"
+          }
+        ],
+        "audio_file": "audio/talk35.mp3"
+      },
+      {
+        "title": "Radio News Report",
+        "text": "In local news, the 'Northside Bridge' will be closed to all traffic starting at midnight this Friday. City engineers will be performing essential structural repairs that are expected to take forty-eight hours. Commuters who normally use the bridge to reach the downtown area are encouraged to take the subway or use the ferry service. The bridge is expected to reopen in time for the Monday morning rush hour.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "When will the bridge close?",
+            "options": [
+              "(A) Monday morning",
+              "(B) Wednesday night",
+              "(C) Friday midnight",
+              "(D) Sunday afternoon"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Why is the bridge being closed?",
+            "options": [
+              "(A) A film is being shot",
+              "(B) Structural maintenance",
+              "(C) A marathon race",
+              "(D) Severe weather"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What alternative does the speaker suggest?",
+            "options": [
+              "(A) Riding a bicycle",
+              "(B) Taking a ferry",
+              "(C) Working from home",
+              "(D) Walking across the bridge"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk36.mp3"
+      },
+      {
+        "title": "Instruction",
+        "text": "Welcome to the 'Quality Electronics' assembly line. Safety is our number one priority. Before you enter the cleanroom, you must put on a protective suit, a hairnet, and shoe covers. This prevents dust from damaging the microchips we are building. Also, please remember that no food or drinks are permitted in the work area. If you need a break, please use the designated lounge on the first floor.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "Where is this talk most likely occurring?",
+            "options": [
+              "(A) A restaurant kitchen",
+              "(B) A clothing store",
+              "(C) A computer factory",
+              "(D) A hospital ward"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What is the purpose of the protective clothing?",
+            "options": [
+              "(A) To keep employees warm",
+              "(B) To prevent contamination",
+              "(C) To identify different teams",
+              "(D) To protect against chemicals"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "Where should employees go for a break?",
+            "options": [
+              "(A) The cleanroom",
+              "(B) The parking lot",
+              "(C) The first-floor lounge",
+              "(D) The assembly line"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk37.mp3"
+      },
+      {
+        "title": "Weather Report",
+        "text": "Good morning. We are tracking a major storm system that will move through the area today. While the morning will be relatively calm, the intensity will pick up significantly as the day progresses. We expect the most dangerous conditions to occur around sunset, when wind gusts could reach speeds high enough to knock down power lines. Conditions will settle down quite quickly after midnight.",
+        "graphic_title": "Wind Speed",
+        "graphic_doctype": "chart",
+        "graphic": {
+          "6 AM": "10 kph",
+          "12 PM": "25 kph",
+          "6 PM": "60 kph",
+          "12 AM": "15 kph"
+        },
+        "questions": [
+          {
+            "text": "What is the main subject of the report?",
+            "options": [
+              "(A) A heatwave",
+              "(B) A drought",
+              "(C) A major storm",
+              "(D) Heavy snowfall"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "Look at the graphic. At what time will the wind be strongest?",
+            "options": [
+              "(A) 6 AM",
+              "(B) 12 PM",
+              "(C) 6 PM",
+              "(D) 12 AM"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What does the speaker warn about?",
+            "options": [
+              "(A) Flooded roads",
+              "(B) Falling power lines",
+              "(C) Poor visibility",
+              "(D) Extreme cold"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk38.mp3"
+      },
+      {
+        "title": "Excerpt from a Meeting",
+        "text": "Before we adjourn, I'd like to thank everyone for their hard work on the 'Aero-Tech' project. Because we finished the design phase two weeks ahead of schedule, the board of directors has approved a bonus for the entire engineering team. You will see this reflected in your next paycheck. Now, let's head to the cafeteria—the company is providing lunch to celebrate our success.",
+        "graphic_title": null,
+        "graphic_doctype": null,
+        "graphic": null,
+        "questions": [
+          {
+            "text": "What is the reason for the celebration?",
+            "options": [
+              "(A) A new CEO was hired",
+              "(B) An early project completion",
+              "(C) A high sales record",
+              "(D) A company anniversary"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "How will the employees be rewarded?",
+            "options": [
+              "(A) With extra vacation days",
+              "(B) With new laptops",
+              "(C) With a financial bonus",
+              "(D) With a promotion"
+            ],
+            "answer": "C"
+          },
+          {
+            "text": "What will the employees do next?",
+            "options": [
+              "(A) Start a new project",
+              "(B) Go to the cafeteria",
+              "(C) Go home early",
+              "(D) Call the board of directors"
+            ],
+            "answer": "B"
+          }
+        ],
+        "audio_file": "audio/talk39.mp3"
+      },
+      {
+        "title": "Product Advertisement",
+        "text": "Are you looking for a better way to manage your team's schedule? Try 'TaskMaster Pro.' Our software allows you to assign tasks and track progress in real-time. For a limited time, we are offering our most popular option—which allows up to five users—at a 25% discount. It's perfect for small households or small business teams. Download your free trial today!",
+        "graphic_title": "Subscription Plans",
+        "graphic_doctype": "table",
+        "graphic": {
+          "Basic": "$10/mo (1 device)",
+          "Family": "$20/mo (5 devices)",
+          "Premium": "$30/mo (10 devices)",
+          "Business": "$100/mo (Unlimited)"
+        },
+        "questions": [
+          {
+            "text": "What does the software help users do?",
+            "options": [
+              "(A) Edit photos",
+              "(B) Manage schedules",
+              "(C) Design websites",
+              "(D) Write code"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "Look at the graphic. Which plan is the speaker offering a discount on?",
+            "options": [
+              "(A) Basic",
+              "(B) Family",
+              "(C) Premium",
+              "(D) Business"
+            ],
+            "answer": "B"
+          },
+          {
+            "text": "What is available for free?",
+            "options": [
+              "(A) A mobile phone",
+              "(B) A training session",
+              "(C) A software trial",
+              "(D) A customer support call"
+            ],
+            "answer": "C"
+          }
+        ],
+        "audio_file": "audio/talk40.mp3"
+      }
+    ]
+  },
+  "part5": null,
+  "part6": null,
+  "part7": null
+}
