@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-02-26 11:20
+> Auto-generated on 2026-02-26 11:39
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -14,7 +14,32 @@
 | `supabase_vault` | 0.3.1 |
 | `uuid-ossp` | 1.1 |
 
-## Tables (1)
+## Tables (2)
+
+### `mock_exams` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `user_id` | `uuid` | ✗ | — |
+| `created_at` | `timestamp with time zone` | ✗ | `now()` |
+| `completed_at` | `timestamp with time zone` | ✓ | — |
+| `status` | `text` | ✗ | `'pending'::text` |
+| `score` | `integer` | ✓ | — |
+| `listening_score` | `integer` | ✓ | — |
+| `reading_score` | `integer` | ✓ | — |
+
+**RLS Policies:**
+
+- **Users can insert their own mock exams** (INSERT, PERMISSIVE)
+  - WITH CHECK: `(auth.uid() = user_id)`
+- **Users can update their own mock exams** (UPDATE, PERMISSIVE)
+  - USING: `(auth.uid() = user_id)`
+- **Users can view their own mock exams** (SELECT, PERMISSIVE)
+  - USING: `(auth.uid() = user_id)`
 
 ### `profiles` — ✅ RLS enabled
 
@@ -58,6 +83,7 @@
 - `20260226000001_profiles_add_fields.sql`
 - `20260226000002_profiles_phone_e164.sql`
 - `20260226000003_profiles_add_credits.sql`
+- `20260226000004_mock_exams.sql`
 - `20260226120000_profiles_phone_unique.sql`
 - `20260226130000_profiles_phone_required.sql`
 
