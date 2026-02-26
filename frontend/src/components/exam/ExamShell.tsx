@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import ExamHeader from "@/components/exam/ExamHeader";
 import Part1Intro from "@/components/exam/Part1Intro";
 import Part1Question from "@/components/exam/Part1Question";
+import Part2Shell from "@/components/exam/Part2Shell";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -12,12 +13,12 @@ const PART1_TOTAL = 6;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "intro" | "question" | "done";
+type Phase = "p1_intro" | "p1" | "p2" | "done";
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
 export default function ExamShell() {
-  const [phase, setPhase] = useState<Phase>("intro");
+  const [phase, setPhase] = useState<Phase>("p1_intro");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(LISTENING_SECONDS);
@@ -33,30 +34,41 @@ export default function ExamShell() {
     return () => clearInterval(id);
   }, [timerActive, secondsLeft]);
 
-  // ── Handlers ──────────────────────────────────────────────────────────────
-  const handleStart = useCallback(() => {
+  // ── Part 1 handlers ───────────────────────────────────────────────────────
+  const handlePart1Start = useCallback(() => {
     setTimerActive(true);
-    setPhase("question");
+    setPhase("p1");
     setQuestionIndex(0);
   }, []);
 
-  const handleSelect = useCallback(
+  const handleP1Select = useCallback(
     (answer: string) => {
       setAnswers((prev) => ({ ...prev, [questionIndex]: answer }));
     },
     [questionIndex]
   );
 
-  const handleAdvance = useCallback(() => {
+  const handleP1Advance = useCallback(() => {
     setQuestionIndex((i) => {
       const next = i + 1;
       if (next >= PART1_TOTAL) {
-        setPhase("done");
+        // Pause timer while user reads Part 2 intro
         setTimerActive(false);
+        setPhase("p2");
         return i;
       }
       return next;
     });
+  }, []);
+
+  // ── Part 2 handlers ───────────────────────────────────────────────────────
+  const handlePart2Start = useCallback(() => {
+    setTimerActive(true);
+  }, []);
+
+  const handlePart2Complete = useCallback(() => {
+    setTimerActive(false);
+    setPhase("done");
   }, []);
 
   // ── Render ────────────────────────────────────────────────────────────────
@@ -68,23 +80,29 @@ export default function ExamShell() {
         <div className="w-full max-w-2xl">
           <div
             className="bg-white rounded-2xl border border-gray-100"
-            style={{
-              boxShadow:
-                "0px 2px 8px 0px rgba(0,0,0,0.08)",
-            }}
+            style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
           >
-            {phase === "intro" && <Part1Intro onStart={handleStart} />}
+            {phase === "p1_intro" && (
+              <Part1Intro onStart={handlePart1Start} />
+            )}
 
-            {phase === "question" && (
-              // key forces a full remount on each new question —
-              // this resets all internal timers and state cleanly
+            {phase === "p1" && (
+              // key forces a full remount on each new question
               <Part1Question
                 key={questionIndex}
                 questionIndex={questionIndex}
                 totalQuestions={PART1_TOTAL}
                 selectedAnswer={answers[questionIndex] ?? null}
-                onSelect={handleSelect}
-                onAutoAdvance={handleAdvance}
+                onSelect={handleP1Select}
+                onAutoAdvance={handleP1Advance}
+              />
+            )}
+
+            {phase === "p2" && (
+              <Part2Shell
+                onStart={handlePart2Start}
+                onComplete={handlePart2Complete}
+                inExam
               />
             )}
 
@@ -107,17 +125,14 @@ export default function ExamShell() {
                 </div>
                 <div>
                   <h2 className="text-xl font-bold text-foreground">
-                    Partie 1 terminée
+                    Section Écoute terminée
                   </h2>
                   <p className="text-sm text-gray-500 mt-1">
-                    {Object.keys(answers).length} réponse
-                    {Object.keys(answers).length > 1 ? "s" : ""} sur{" "}
-                    {PART1_TOTAL} question
-                    {PART1_TOTAL > 1 ? "s" : ""}
+                    Parties 1 &amp; 2 complétées
                   </p>
                 </div>
                 <p className="text-xs text-gray-400">
-                  La partie 2 sera disponible prochainement.
+                  Les parties suivantes seront disponibles prochainement.
                 </p>
               </div>
             )}

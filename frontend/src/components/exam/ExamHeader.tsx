@@ -41,7 +41,9 @@ export default function ExamHeader({
         {/* Right: timer */}
         <div
           className={`flex items-center gap-2 px-4 py-2 rounded-xl font-mono text-sm font-semibold transition-colors ${
-            isLow
+            !timerActive
+              ? "bg-gray-100 text-gray-300"
+              : isLow
               ? "bg-red-50 text-red-600"
               : "bg-gray-50 text-gray-700"
           }`}
