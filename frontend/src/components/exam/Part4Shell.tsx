@@ -2,13 +2,15 @@
 
 import { useState, useCallback } from "react";
 import Part4Intro from "@/components/exam/Part4Intro";
-import Part4Talk from "@/components/exam/Part4Talk";
+import Part4Talk, { type TalkData } from "@/components/exam/Part4Talk";
+import rawData from "@mockdata/TOEIC/listening_part4/part4_transcript.json";
 
-// ─── Config ───────────────────────────────────────────────────────────────────
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
-const PART4_TOTAL = 30;
+const talks: TalkData[] = (rawData as { talks: TalkData[] }).talks;
+const TOTAL_TALKS = talks.length;
 const QUESTIONS_PER_TALK = 3;
-const TOTAL_TALKS = Math.ceil(PART4_TOTAL / QUESTIONS_PER_TALK); // 10
+const PART4_TOTAL = TOTAL_TALKS * QUESTIONS_PER_TALK;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -31,7 +33,7 @@ export default function Part4Shell({
   const [talkIndex, setTalkIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({}); // keyed by global 0-based index
 
-  const talkStart = talkIndex * QUESTIONS_PER_TALK; // 0-based global start
+  const talkStart = talkIndex * QUESTIONS_PER_TALK;
 
   const handleStart = useCallback(() => {
     onStart?.();
@@ -65,6 +67,7 @@ export default function Part4Shell({
         // key forces full remount on each new talk → resets all timers
         <Part4Talk
           key={talkIndex}
+          talk={talks[talkIndex]}
           talkIndex={talkIndex}
           totalTalks={TOTAL_TALKS}
           startQuestionNumber={talkStart + 1}

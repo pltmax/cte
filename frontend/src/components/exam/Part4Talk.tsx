@@ -4,127 +4,39 @@ import { useState, useEffect, useCallback } from "react";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const AUDIO_DURATION_MS = 15_000; // simulated monologue
+const AUDIO_DURATION_MS = 15_000;
 const GRACE_PERIOD_S = 10;
 const LETTERS = ["A", "B", "C", "D"] as const;
 const FLICKER_MS = 850;
 
-// ─── Talk metadata (doctype) ─────────────────────────────────────────────────
+// ─── Data types ───────────────────────────────────────────────────────────────
 
-const TALKS = [
-  {
-    type: "Annonce",
-    description: "Annonce diffusée en entreprise",
-  },
-  {
-    type: "Publicité",
-    description: "Publicité radiophonique",
-  },
-  {
-    type: "Message vocal",
-    description: "Message laissé sur répondeur",
-  },
-  {
-    type: "Bulletin météo",
-    description: "Prévisions météorologiques",
-  },
-  {
-    type: "Discours",
-    description: "Discours lors d'un événement",
-  },
-  {
-    type: "Info routière",
-    description: "Bulletin de circulation routière",
-  },
-  {
-    type: "Tour guidé",
-    description: "Commentaire lors d'une visite guidée",
-  },
-  {
-    type: "Bulletin d'infos",
-    description: "Bulletin radiophonique d'informations",
-  },
-  {
-    type: "Notice interne",
-    description: "Communication interne d'entreprise",
-  },
-  {
-    type: "Message vocal",
-    description: "Message de bienvenue automatisé",
-  },
-] as const;
-
-// ─── Placeholder question data ────────────────────────────────────────────────
-
-const Q_TEMPLATES = [
-  {
-    q: "Où ce document est-il probablement diffusé ?",
-    opts: [
-      "Dans un aéroport",
-      "Dans un magasin",
-      "Dans une entreprise",
-      "Dans un musée",
-    ],
-  },
-  {
-    q: "Quel est l'objet principal de ce document ?",
-    opts: [
-      "Un changement de programme",
-      "Une promotion commerciale",
-      "Un rappel de réunion",
-      "Une alerte météo",
-    ],
-  },
-  {
-    q: "Que doit faire l'auditeur selon ce document ?",
-    opts: [
-      "Appeler un numéro",
-      "Se rendre à un lieu",
-      "Confirmer sa présence",
-      "Visiter un site web",
-    ],
-  },
-  {
-    q: "Quand se déroule l'événement mentionné ?",
-    opts: [
-      "Ce soir",
-      "Demain matin",
-      "La semaine prochaine",
-      "Le mois prochain",
-    ],
-  },
-  {
-    q: "À qui ce document s'adresse-t-il principalement ?",
-    opts: [
-      "Aux clients",
-      "Aux employés",
-      "Au grand public",
-      "Aux visiteurs",
-    ],
-  },
-  {
-    q: "Quel problème est signalé dans ce document ?",
-    opts: [
-      "Un retard important",
-      "Une fermeture temporaire",
-      "Un manque de stock",
-      "Une panne technique",
-    ],
-  },
-  {
-    q: "Quelle information supplémentaire est donnée à la fin ?",
-    opts: [
-      "Des horaires d'ouverture",
-      "Un numéro de contact",
-      "Une adresse web",
-      "Une date limite",
-    ],
-  },
-] as const;
-
-function getQuestion(talkIndex: number, qIndex: number) {
-  return Q_TEMPLATES[(talkIndex * 3 + qIndex) % Q_TEMPLATES.length];
+export interface TalkQuestion {
+  text: string;
+  options: string[]; // "(A) …", "(B) …", "(C) …", "(D) …"
+  answer: string;
 }
+
+export interface TalkData {
+  title: string;
+  text: string;
+  questions: TalkQuestion[];
+  graphic_doctype?: string;
+  graphic_title?: string;
+  graphic?: Record<string, string>;
+}
+
+// ─── Doctype display labels ───────────────────────────────────────────────────
+
+const DOCTYPE_LABELS: Record<string, string> = {
+  directory: "Répertoire",
+  schedule: "Programme",
+  chart: "Graphique",
+  timeline: "Chronologie",
+  floor_plan: "Plan",
+  table: "Tableau",
+  weather_chart: "Météo",
+};
 
 // ─── Sound icon ───────────────────────────────────────────────────────────────
 
@@ -176,13 +88,71 @@ function SoundIcon({ isPlaying }: { isPlaying: boolean }) {
   );
 }
 
+// ─── Graphic container (rendered only when graphic_doctype exists) ─────────────
+
+function GraphicContainer({
+  doctype,
+  title,
+  graphic,
+}: {
+  doctype: string;
+  title: string;
+  graphic: Record<string, string>;
+}) {
+  const label = DOCTYPE_LABELS[doctype] ?? doctype;
+  const entries = Object.entries(graphic);
+
+  return (
+    <div className="rounded-xl border border-[#e9d9ff] bg-[#faf6ff] overflow-hidden">
+      {/* Container header */}
+      <div className="px-5 py-3 flex items-center gap-3 border-b border-[#e9d9ff]">
+        <div className="w-7 h-7 rounded-md bg-[#6600CC]/10 flex items-center justify-center shrink-0">
+          <svg
+            className="w-4 h-4 text-[#6600CC]"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.8}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3 10h18M3 14h18M10 3v18"
+            />
+          </svg>
+        </div>
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-xs font-semibold text-[#6600CC] uppercase tracking-widest">
+            {label}
+          </span>
+          <span className="text-xs text-gray-400">—</span>
+          <span className="text-sm font-semibold text-gray-700">{title}</span>
+        </div>
+      </div>
+
+      {/* Key-value rows */}
+      <div className="divide-y divide-[#f0e6ff]">
+        {entries.map(([key, value]) => (
+          <div key={key} className="flex items-baseline gap-3 px-5 py-2.5">
+            <span className="text-xs font-semibold text-[#6600CC] w-32 shrink-0">
+              {key}
+            </span>
+            <span className="text-sm text-gray-700">{value}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface Part4TalkProps {
-  talkIndex: number; // 0-based
-  totalTalks: number; // 10
-  startQuestionNumber: number; // 1-based (e.g. 1, 4, 7, …)
-  totalQuestions: number; // 30
+  talk: TalkData;
+  talkIndex: number;
+  totalTalks: number;
+  startQuestionNumber: number;
+  totalQuestions: number;
   answers: Record<number, string>; // keyed by local index 0, 1, 2
   onSelect: (localIndex: number, letter: string) => void;
   onTalkComplete: () => void;
@@ -191,6 +161,7 @@ interface Part4TalkProps {
 // ─── Part4Talk ────────────────────────────────────────────────────────────────
 
 export default function Part4Talk({
+  talk,
   talkIndex,
   totalTalks,
   startQuestionNumber,
@@ -206,7 +177,6 @@ export default function Part4Talk({
 
   const onTalkCompleteRef = useCallback(onTalkComplete, [onTalkComplete]); // eslint-disable-line
 
-  const talk = TALKS[talkIndex % TALKS.length];
   const isPlaying = audioPhase === "playing";
 
   // Phase 1: audio
@@ -262,31 +232,14 @@ export default function Part4Talk({
         />
       </div>
 
-      {/* Doctype container */}
-      <div className="rounded-xl border border-[#e9d9ff] bg-[#faf6ff] px-5 py-4 flex items-center gap-4">
-        <div className="w-10 h-10 rounded-lg bg-[#6600CC]/10 flex items-center justify-center shrink-0">
-          <svg
-            className="w-5 h-5 text-[#6600CC]"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.8}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-            />
-          </svg>
-        </div>
-        <div>
-          <p className="text-xs font-semibold text-[#6600CC] uppercase tracking-widest">
-            Type de document
-          </p>
-          <p className="text-sm font-bold text-gray-800 mt-0.5">{talk.type}</p>
-          <p className="text-xs text-gray-500 mt-0.5">{talk.description}</p>
-        </div>
-      </div>
+      {/* Graphic container — only when talk has a graphic_doctype */}
+      {talk.graphic_doctype && talk.graphic_title && talk.graphic && (
+        <GraphicContainer
+          doctype={talk.graphic_doctype}
+          title={talk.graphic_title}
+          graphic={talk.graphic}
+        />
+      )}
 
       {/* Audio status row */}
       <div className="flex items-center gap-3 px-4 py-3 bg-gray-50 rounded-xl">
@@ -314,9 +267,8 @@ export default function Part4Talk({
 
       {/* Questions */}
       <div className="flex flex-col gap-4">
-        {[0, 1, 2].map((localIdx) => {
+        {talk.questions.map((question, localIdx) => {
           const qNum = startQuestionNumber + localIdx;
-          const { q, opts } = getQuestion(talkIndex, localIdx);
           const selected = answers[localIdx] ?? null;
 
           return (
@@ -327,13 +279,18 @@ export default function Part4Talk({
               {/* Question text */}
               <p className="text-sm font-medium text-gray-800">
                 <span className="text-[#6600CC] font-bold mr-2">{qNum}.</span>
-                {q}
+                {question.text}
               </p>
 
               {/* Answer grid — 2 columns */}
               <div className="grid grid-cols-2 gap-2">
                 {LETTERS.map((letter, i) => {
                   const isSelected = selected === letter;
+                  // Strip "(A) " prefix from option text
+                  const optText = question.options[i]?.replace(
+                    /^\([A-D]\)\s*/,
+                    ""
+                  );
                   return (
                     <button
                       key={letter}
@@ -353,7 +310,7 @@ export default function Part4Talk({
                       >
                         {letter}
                       </span>
-                      <span className="leading-snug">{opts[i]}</span>
+                      <span className="leading-snug">{optText}</span>
                     </button>
                   );
                 })}
