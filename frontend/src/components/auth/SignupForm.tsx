@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { createClient } from "@/lib/supabase/client";
 import type { HowHeard } from "@/types/profile";
 
@@ -12,6 +13,24 @@ const HOW_HEARD_OPTIONS: { value: HowHeard; label: string }[] = [
   { value: "ecole", label: "École / Université" },
   { value: "autre", label: "Autre" },
 ];
+
+function normalizePhone(raw: string): string | null {
+  const trimmed = raw.trim();
+  if (!trimmed) return null;
+  const parsed = parsePhoneNumberFromString(trimmed, "FR");
+  if (!parsed || !parsed.isValid()) return null;
+  return parsed.number; // E.164 e.g. "+33612345678"
+}
+
+function isPhoneDuplicateError(message: string): boolean {
+  const lower = message.toLowerCase();
+  return (
+    lower.includes("profiles_phone_e164_unique") ||
+    lower.includes("unique constraint") ||
+    lower.includes("duplicate key") ||
+    lower.includes("phone_e164")
+  );
+}
 
 export default function SignupForm() {
   const [loading, setLoading] = useState(false);
@@ -28,10 +47,42 @@ export default function SignupForm() {
     const password = formData.get("password") as string;
     const firstName = formData.get("first_name") as string;
     const lastName = formData.get("last_name") as string;
-    const phone = formData.get("phone") as string;
+    const rawPhone = (formData.get("phone") as string) ?? "";
     const howHeard = formData.get("how_heard") as HowHeard;
 
+    // Normalize phone to E.164; reject if provided but invalid
+    let phoneE164: string | null = null;
+    if (rawPhone.trim()) {
+      phoneE164 = normalizePhone(rawPhone);
+      if (!phoneE164) {
+        setError(
+          "Numéro de téléphone invalide. Utilise le format international (ex : +33 6 12 34 56 78)."
+        );
+        setLoading(false);
+        return;
+      }
+    }
+
     const supabase = createClient();
+
+    // Pre-check uniqueness for fast UX (before signUp creates the auth user)
+    if (phoneE164) {
+      const { data: available, error: rpcError } = await supabase.rpc(
+        "is_phone_available",
+        { p_phone_e164: phoneE164 }
+      );
+      if (rpcError) {
+        setError("Une erreur est survenue. Réessaie dans quelques instants.");
+        setLoading(false);
+        return;
+      }
+      if (!available) {
+        setError("Ce numéro de téléphone est déjà associé à un compte.");
+        setLoading(false);
+        return;
+      }
+    }
+
     const { error: authError } = await supabase.auth.signUp({
       email,
       password,
@@ -41,14 +92,19 @@ export default function SignupForm() {
           first_name: firstName,
           last_name: lastName,
           full_name: `${firstName} ${lastName}`,
-          phone,
+          phone: rawPhone.trim() || null,
+          phone_e164: phoneE164,
           how_heard: howHeard,
         },
       },
     });
 
     if (authError) {
-      setError(authError.message);
+      if (isPhoneDuplicateError(authError.message)) {
+        setError("Ce numéro de téléphone est déjà associé à un compte.");
+      } else {
+        setError(authError.message);
+      }
       setLoading(false);
       return;
     }
