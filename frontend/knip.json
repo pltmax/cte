@@ -1,0 +1,29 @@
+{
+  "$schema": "https://unpkg.com/knip@latest/schema.json",
+  "entry": [
+    "src/app/**/{page,layout,route,loading,error,not-found,template}.{ts,tsx}",
+    "src/middleware.ts",
+    "src/app/api/**/route.ts",
+    "next.config.{js,ts,mjs}"
+  ],
+  "project": ["src/**/*.{ts,tsx}"],
+  "ignore": [
+    "**/*.d.ts",
+    ".next/**",
+    "node_modules/**",
+    "**/*.stories.{ts,tsx}",
+    "src/components/ui/**",
+    "src/types/**",
+    "src/lib/constants.ts"
+  ],
+  "ignoreDependencies": [
+    "tailwindcss",
+    "@tailwindcss/postcss",
+    "autoprefixer",
+    "postcss",
+    "eslint",
+    "eslint-config-next",
+    "server-only"
+  ],
+  "ignoreExportsUsedInFile": true
+}

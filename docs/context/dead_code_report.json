@@ -1,1 +1,1 @@
-{"files":["src/lib/supabase.ts"],"issues":[{"file":"package.json","dependencies":[{"name":"@supabase/supabase-js","line":12,"col":6,"pos":208}],"devDependencies":[],"optionalPeerDependencies":[],"unlisted":[],"binaries":[],"unresolved":[],"exports":[],"types":[],"enumMembers":{},"duplicates":[],"catalog":[]}]}
+{"files":["src/lib/supabase.ts"],"issues":[]}
