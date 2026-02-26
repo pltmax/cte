@@ -2,27 +2,23 @@
 
 import { useState, useEffect, useCallback } from "react";
 import ExamHeader from "@/components/exam/ExamHeader";
-import Part1Intro from "@/components/exam/Part1Intro";
-import Part1Question from "@/components/exam/Part1Question";
+import Part1Shell from "@/components/exam/Part1Shell";
 import Part2Shell from "@/components/exam/Part2Shell";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 const LISTENING_SECONDS = 45 * 60; // 45 minutes
-const PART1_TOTAL = 6;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "p1_intro" | "p1" | "p2" | "done";
+type Phase = "p1" | "p2" | "done";
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
 export default function ExamShell() {
-  const [phase, setPhase] = useState<Phase>("p1_intro");
-  const [questionIndex, setQuestionIndex] = useState(0);
+  const [phase, setPhase] = useState<Phase>("p1");
   const [timerActive, setTimerActive] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(LISTENING_SECONDS);
-  const [answers, setAnswers] = useState<Record<number, string>>({});
 
   // ── Global countdown ──────────────────────────────────────────────────────
   useEffect(() => {
@@ -37,28 +33,12 @@ export default function ExamShell() {
   // ── Part 1 handlers ───────────────────────────────────────────────────────
   const handlePart1Start = useCallback(() => {
     setTimerActive(true);
-    setPhase("p1");
-    setQuestionIndex(0);
   }, []);
 
-  const handleP1Select = useCallback(
-    (answer: string) => {
-      setAnswers((prev) => ({ ...prev, [questionIndex]: answer }));
-    },
-    [questionIndex]
-  );
-
-  const handleP1Advance = useCallback(() => {
-    setQuestionIndex((i) => {
-      const next = i + 1;
-      if (next >= PART1_TOTAL) {
-        // Pause timer while user reads Part 2 intro
-        setTimerActive(false);
-        setPhase("p2");
-        return i;
-      }
-      return next;
-    });
+  const handlePart1Complete = useCallback(() => {
+    // Pause timer while user reads Part 2 intro
+    setTimerActive(false);
+    setPhase("p2");
   }, []);
 
   // ── Part 2 handlers ───────────────────────────────────────────────────────
@@ -82,19 +62,11 @@ export default function ExamShell() {
             className="bg-white rounded-2xl border border-gray-100"
             style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
           >
-            {phase === "p1_intro" && (
-              <Part1Intro onStart={handlePart1Start} />
-            )}
-
             {phase === "p1" && (
-              // key forces a full remount on each new question
-              <Part1Question
-                key={questionIndex}
-                questionIndex={questionIndex}
-                totalQuestions={PART1_TOTAL}
-                selectedAnswer={answers[questionIndex] ?? null}
-                onSelect={handleP1Select}
-                onAutoAdvance={handleP1Advance}
+              <Part1Shell
+                onStart={handlePart1Start}
+                onComplete={handlePart1Complete}
+                inExam
               />
             )}
 

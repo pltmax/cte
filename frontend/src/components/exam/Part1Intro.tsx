@@ -1,6 +1,12 @@
 "use client";
 
-export default function Part1Intro({ onStart }: { onStart: () => void }) {
+export default function Part1Intro({
+  onStart,
+  inExam = false,
+}: {
+  onStart: () => void;
+  inExam?: boolean;
+}) {
   return (
     <div className="px-10 py-12 flex flex-col gap-8">
       {/* Label + title */}
@@ -62,7 +68,9 @@ export default function Part1Intro({ onStart }: { onStart: () => void }) {
           Commencer la partie 1 →
         </button>
         <p className="text-xs text-gray-400">
-          Le minuteur démarre au clic sur ce bouton.
+          {inExam
+            ? "Le minuteur démarre au clic sur ce bouton."
+            : "L'audio démarre automatiquement à chaque question."}
         </p>
       </div>
     </div>
