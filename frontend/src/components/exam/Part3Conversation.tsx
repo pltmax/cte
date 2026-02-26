@@ -177,13 +177,18 @@ export default function Part3Conversation({
         if (s <= 1) {
           clearInterval(id);
           setAudioPhase("done");
-          onCompleteRef();
           return 0;
         }
         return s - 1;
       });
     }, 1000);
     return () => clearInterval(id);
+  }, [audioPhase]);
+
+  // Phase 3: fire parent callback once audioPhase settles to "done"
+  useEffect(() => {
+    if (audioPhase !== "done") return;
+    onCompleteRef();
   }, [audioPhase, onCompleteRef]);
 
   const progressPct =

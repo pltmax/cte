@@ -7,6 +7,7 @@ import { useState, useEffect, useCallback } from "react";
 const AUDIO_DURATION_MS = 8_000; // simulated audio length
 const GRACE_PERIOD_S = 5; // countdown after audio before auto-advance
 const LETTERS = ["A", "B", "C", "D"] as const;
+const AUDIO_ICON_FLICKER_MS = 1_000;
 
 // ─── Sound icon ───────────────────────────────────────────────────────────────
 
@@ -18,7 +19,7 @@ function SoundIcon({ isPlaying }: { isPlaying: boolean }) {
       setTick(false);
       return;
     }
-    const id = setInterval(() => setTick((t) => !t), 600);
+    const id = setInterval(() => setTick((t) => !t), AUDIO_ICON_FLICKER_MS);
     return () => clearInterval(id);
   }, [isPlaying]);
 
@@ -97,7 +98,7 @@ export default function Part1Question({
     return () => clearTimeout(id);
   }, []); // runs once per mount (key resets between questions)
 
-  // Phase 2: grace period countdown → auto-advance
+  // Phase 2: grace period countdown
   useEffect(() => {
     if (audioPhase !== "grace") return;
     const id = setInterval(() => {
@@ -105,13 +106,18 @@ export default function Part1Question({
         if (s <= 1) {
           clearInterval(id);
           setAudioPhase("done");
-          advanceRef();
           return 0;
         }
         return s - 1;
       });
     }, 1000);
     return () => clearInterval(id);
+  }, [audioPhase]);
+
+  // Phase 3: fire parent callback once audioPhase settles to "done"
+  useEffect(() => {
+    if (audioPhase !== "done") return;
+    advanceRef();
   }, [audioPhase, advanceRef]);
 
   return (
