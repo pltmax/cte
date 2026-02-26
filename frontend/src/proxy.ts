@@ -38,7 +38,15 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // /reset-password requires a valid session (arrived via reset-link callback)
+  if (!user && pathname === "/reset-password") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/forgot-password";
+    return NextResponse.redirect(url);
+  }
+
   // Redirect already-authenticated users away from auth pages
+  // (but NOT from /reset-password — they need it to set their new password)
   if (user && (pathname === "/login" || pathname === "/signup")) {
     const url = request.nextUrl.clone();
     url.pathname = "/dashboard";
