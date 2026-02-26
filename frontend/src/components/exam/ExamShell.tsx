@@ -7,6 +7,7 @@ import Part2Shell from "@/components/exam/Part2Shell";
 import Part3Shell from "@/components/exam/Part3Shell";
 import Part4Shell from "@/components/exam/Part4Shell";
 import Part5Shell from "@/components/exam/Part5Shell";
+import Part6Shell from "@/components/exam/Part6Shell";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -15,7 +16,7 @@ const READING_SECONDS = 75 * 60; // 75 minutes
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "p1" | "p2" | "p3" | "p4" | "p5" | "done";
+type Phase = "p1" | "p2" | "p3" | "p4" | "p5" | "p6" | "done";
 
 const LISTENING_PHASES: Phase[] = ["p1", "p2", "p3", "p4"];
 
@@ -72,6 +73,13 @@ export default function ExamShell() {
   const handlePart5Start = useCallback(() => setTimerActive(true), []);
   const handlePart5Complete = useCallback(() => {
     setTimerActive(false);
+    setPhase("p6");
+  }, []);
+
+  // ── Part 6 ────────────────────────────────────────────────────────────────
+  const handlePart6Start = useCallback(() => setTimerActive(true), []);
+  const handlePart6Complete = useCallback(() => {
+    setTimerActive(false);
     setPhase("done");
   }, []);
 
@@ -126,6 +134,14 @@ export default function ExamShell() {
               />
             )}
 
+            {phase === "p6" && (
+              <Part6Shell
+                onStart={handlePart6Start}
+                onComplete={handlePart6Complete}
+                inExam
+              />
+            )}
+
             {phase === "done" && (
               <div className="px-10 py-14 flex flex-col items-center text-center gap-5">
                 <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center">
@@ -148,7 +164,7 @@ export default function ExamShell() {
                     Examen terminé
                   </h2>
                   <p className="text-sm text-gray-500 mt-1">
-                    Parties 1 à 5 complétées
+                    Parties 1 à 6 complétées
                   </p>
                 </div>
                 <p className="text-xs text-gray-400">
