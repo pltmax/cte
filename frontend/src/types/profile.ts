@@ -16,6 +16,7 @@ export interface Profile {
   email: string | null;
   phone: string | null;
   how_heard: HowHeard | null;
+  credit_number: number;
   role: UserRole;
   created_at: string;
   updated_at: string;

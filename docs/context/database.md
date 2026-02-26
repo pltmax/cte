@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-02-26 10:19
+> Auto-generated on 2026-02-26 11:20
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -34,6 +34,7 @@
 | `phone` | `text` | ✓ | — |
 | `how_heard` | `text` | ✓ | — |
 | `phone_e164` | `text` | ✓ | — |
+| `credit_number` | `integer` | ✗ | `0` |
 
 **RLS Policies:**
 
@@ -56,6 +57,7 @@
 - `20260223161544_initial_schema.sql`
 - `20260226000001_profiles_add_fields.sql`
 - `20260226000002_profiles_phone_e164.sql`
+- `20260226000003_profiles_add_credits.sql`
 - `20260226120000_profiles_phone_unique.sql`
 - `20260226130000_profiles_phone_required.sql`
 
