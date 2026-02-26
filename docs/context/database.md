@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-02-26 09:01
+> Auto-generated on 2026-02-26 10:19
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -57,4 +57,5 @@
 - `20260226000001_profiles_add_fields.sql`
 - `20260226000002_profiles_phone_e164.sql`
 - `20260226120000_profiles_phone_unique.sql`
+- `20260226130000_profiles_phone_required.sql`
 

@@ -1,1 +1,1 @@
-{"files":["src/lib/supabase.ts"],"issues":[]}
+{"files":["src/lib/supabase.ts","src/components/auth/LogoutButton.tsx"],"issues":[]}
