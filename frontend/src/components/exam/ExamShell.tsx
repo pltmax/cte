@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import ExamHeader from "@/components/exam/ExamHeader";
 import Part1Shell from "@/components/exam/Part1Shell";
 import Part2Shell from "@/components/exam/Part2Shell";
+import Part3Shell from "@/components/exam/Part3Shell";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -11,7 +12,7 @@ const LISTENING_SECONDS = 45 * 60; // 45 minutes
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "p1" | "p2" | "done";
+type Phase = "p1" | "p2" | "p3" | "done";
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
@@ -48,6 +49,16 @@ export default function ExamShell() {
 
   const handlePart2Complete = useCallback(() => {
     setTimerActive(false);
+    setPhase("p3");
+  }, []);
+
+  // ── Part 3 handlers ───────────────────────────────────────────────────────
+  const handlePart3Start = useCallback(() => {
+    setTimerActive(true);
+  }, []);
+
+  const handlePart3Complete = useCallback(() => {
+    setTimerActive(false);
     setPhase("done");
   }, []);
 
@@ -56,8 +67,8 @@ export default function ExamShell() {
     <div className="min-h-screen bg-[#f5f7fa] flex flex-col font-sans">
       <ExamHeader secondsLeft={secondsLeft} timerActive={timerActive} />
 
-      <main className="flex-1 flex items-center justify-center px-6 py-10">
-        <div className="w-full max-w-2xl">
+      <main className="flex-1 flex items-center justify-center px-6 py-15">
+        <div className="w-full max-w-4xl">
           <div
             className="bg-white rounded-2xl border border-gray-100"
             style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
@@ -74,6 +85,14 @@ export default function ExamShell() {
               <Part2Shell
                 onStart={handlePart2Start}
                 onComplete={handlePart2Complete}
+                inExam
+              />
+            )}
+
+            {phase === "p3" && (
+              <Part3Shell
+                onStart={handlePart3Start}
+                onComplete={handlePart3Complete}
                 inExam
               />
             )}
@@ -100,7 +119,7 @@ export default function ExamShell() {
                     Section Écoute terminée
                   </h2>
                   <p className="text-sm text-gray-500 mt-1">
-                    Parties 1 &amp; 2 complétées
+                    Parties 1, 2 &amp; 3 complétées
                   </p>
                 </div>
                 <p className="text-xs text-gray-400">
