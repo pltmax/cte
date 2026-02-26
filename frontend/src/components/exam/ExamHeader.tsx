@@ -12,9 +12,11 @@ function formatTime(totalSeconds: number): string {
 export default function ExamHeader({
   secondsLeft,
   timerActive,
+  timerLabel = "Écoute",
 }: {
   secondsLeft: number;
   timerActive: boolean;
+  timerLabel?: string;
 }) {
   const isLow = timerActive && secondsLeft < 5 * 60;
 
@@ -63,7 +65,7 @@ export default function ExamHeader({
           </svg>
           {formatTime(secondsLeft)}
           <span className="text-xs font-sans font-normal text-gray-400 ml-1">
-            Écoute
+            {timerLabel}
           </span>
         </div>
       </div>

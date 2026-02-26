@@ -6,14 +6,18 @@ import Part1Shell from "@/components/exam/Part1Shell";
 import Part2Shell from "@/components/exam/Part2Shell";
 import Part3Shell from "@/components/exam/Part3Shell";
 import Part4Shell from "@/components/exam/Part4Shell";
+import Part5Shell from "@/components/exam/Part5Shell";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 const LISTENING_SECONDS = 45 * 60; // 45 minutes
+const READING_SECONDS = 75 * 60; // 75 minutes
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "p1" | "p2" | "p3" | "p4" | "done";
+type Phase = "p1" | "p2" | "p3" | "p4" | "p5" | "done";
+
+const LISTENING_PHASES: Phase[] = ["p1", "p2", "p3", "p4"];
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
@@ -21,6 +25,8 @@ export default function ExamShell() {
   const [phase, setPhase] = useState<Phase>("p1");
   const [timerActive, setTimerActive] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(LISTENING_SECONDS);
+
+  const timerLabel = LISTENING_PHASES.includes(phase) ? "Écoute" : "Lecture";
 
   // ── Global countdown ──────────────────────────────────────────────────────
   useEffect(() => {
@@ -32,43 +38,39 @@ export default function ExamShell() {
     return () => clearInterval(id);
   }, [timerActive, secondsLeft]);
 
-  // ── Part 1 handlers ───────────────────────────────────────────────────────
-  const handlePart1Start = useCallback(() => {
-    setTimerActive(true);
-  }, []);
-
+  // ── Part 1 ────────────────────────────────────────────────────────────────
+  const handlePart1Start = useCallback(() => setTimerActive(true), []);
   const handlePart1Complete = useCallback(() => {
-    // Pause timer while user reads Part 2 intro
     setTimerActive(false);
     setPhase("p2");
   }, []);
 
-  // ── Part 2 handlers ───────────────────────────────────────────────────────
-  const handlePart2Start = useCallback(() => {
-    setTimerActive(true);
-  }, []);
-
+  // ── Part 2 ────────────────────────────────────────────────────────────────
+  const handlePart2Start = useCallback(() => setTimerActive(true), []);
   const handlePart2Complete = useCallback(() => {
     setTimerActive(false);
     setPhase("p3");
   }, []);
 
-  // ── Part 3 handlers ───────────────────────────────────────────────────────
-  const handlePart3Start = useCallback(() => {
-    setTimerActive(true);
-  }, []);
-
+  // ── Part 3 ────────────────────────────────────────────────────────────────
+  const handlePart3Start = useCallback(() => setTimerActive(true), []);
   const handlePart3Complete = useCallback(() => {
     setTimerActive(false);
     setPhase("p4");
   }, []);
 
-  // ── Part 4 handlers ───────────────────────────────────────────────────────
-  const handlePart4Start = useCallback(() => {
-    setTimerActive(true);
+  // ── Part 4 ────────────────────────────────────────────────────────────────
+  const handlePart4Start = useCallback(() => setTimerActive(true), []);
+  const handlePart4Complete = useCallback(() => {
+    // Transition to reading section: reset timer to 75 minutes
+    setTimerActive(false);
+    setSecondsLeft(READING_SECONDS);
+    setPhase("p5");
   }, []);
 
-  const handlePart4Complete = useCallback(() => {
+  // ── Part 5 ────────────────────────────────────────────────────────────────
+  const handlePart5Start = useCallback(() => setTimerActive(true), []);
+  const handlePart5Complete = useCallback(() => {
     setTimerActive(false);
     setPhase("done");
   }, []);
@@ -76,7 +78,11 @@ export default function ExamShell() {
   // ── Render ────────────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-[#f5f7fa] flex flex-col font-sans">
-      <ExamHeader secondsLeft={secondsLeft} timerActive={timerActive} />
+      <ExamHeader
+        secondsLeft={secondsLeft}
+        timerActive={timerActive}
+        timerLabel={timerLabel}
+      />
 
       <main className="flex-1 flex items-center justify-center px-6 py-15">
         <div className="w-full max-w-4xl">
@@ -91,7 +97,6 @@ export default function ExamShell() {
                 inExam
               />
             )}
-
             {phase === "p2" && (
               <Part2Shell
                 onStart={handlePart2Start}
@@ -99,7 +104,6 @@ export default function ExamShell() {
                 inExam
               />
             )}
-
             {phase === "p3" && (
               <Part3Shell
                 onStart={handlePart3Start}
@@ -107,11 +111,17 @@ export default function ExamShell() {
                 inExam
               />
             )}
-
             {phase === "p4" && (
               <Part4Shell
                 onStart={handlePart4Start}
                 onComplete={handlePart4Complete}
+                inExam
+              />
+            )}
+            {phase === "p5" && (
+              <Part5Shell
+                onStart={handlePart5Start}
+                onComplete={handlePart5Complete}
                 inExam
               />
             )}
@@ -135,10 +145,10 @@ export default function ExamShell() {
                 </div>
                 <div>
                   <h2 className="text-xl font-bold text-foreground">
-                    Section Écoute terminée
+                    Examen terminé
                   </h2>
                   <p className="text-sm text-gray-500 mt-1">
-                    Parties 1, 2, 3 &amp; 4 complétées — Section Écoute terminée
+                    Parties 1 à 5 complétées
                   </p>
                 </div>
                 <p className="text-xs text-gray-400">
