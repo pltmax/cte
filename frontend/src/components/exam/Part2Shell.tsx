@@ -3,15 +3,24 @@
 import { useState, useCallback } from "react";
 import Part2Intro from "@/components/exam/Part2Intro";
 import Part2Batch from "@/components/exam/Part2Batch";
-
-// ─── Config ───────────────────────────────────────────────────────────────────
-
-const PART2_TOTAL = 25;
-const BATCH_SIZE = 3;
+import rawP2 from "@mockdata/TOEIC/listening_part2/part2_transcript.json";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "intro" | "questions" | "done";
+interface P2QuestionData {
+  question: string;
+  options: string[];
+  answer: string;
+  // Populated by scripts/gcs/upload_to_gcs.py after GCS upload
+  question_audio_url?: string;
+  option_audio_urls?: { A: string; B: string; C: string };
+}
+
+// ─── Config ───────────────────────────────────────────────────────────────────
+
+const p2Data = rawP2 as { questions: P2QuestionData[] };
+const PART2_TOTAL = 25; // TOEIC Part 2 uses 25 questions
+const BATCH_SIZE = 5;
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
@@ -29,7 +38,7 @@ export default function Part2Shell({
   onComplete,
   inExam = false,
 }: Part2ShellProps) {
-  const [phase, setPhase] = useState<Phase>("intro");
+  const [phase, setPhase] = useState<"intro" | "questions" | "done">("intro");
   // First global question index of the current batch (0-based)
   const [batchStart, setBatchStart] = useState(0);
   // All answers keyed by global 0-based question index
@@ -60,6 +69,13 @@ export default function Part2Shell({
     }
   }, [batchStart, batchSize, onComplete]);
 
+  // Slice the question audio data for the current batch
+  const batchQuestions = p2Data.questions.slice(batchStart, batchStart + batchSize);
+  const questionAudios = batchQuestions.map((q) => ({
+    questionAudioUrl: q.question_audio_url,
+    optionAudioUrls: q.option_audio_urls,
+  }));
+
   return (
     <>
       {phase === "intro" && (
@@ -75,7 +91,6 @@ export default function Part2Shell({
           startQuestionNumber={batchStart + 1}
           totalQuestions={PART2_TOTAL}
           answers={
-            // Pass only the answers for this batch, re-keyed to local indices
             Object.fromEntries(
               Object.entries(answers)
                 .filter(([k]) => {
@@ -87,6 +102,7 @@ export default function Part2Shell({
           }
           onSelect={handleSelect}
           onBatchComplete={handleBatchComplete}
+          questionAudios={questionAudios}
         />
       )}
 

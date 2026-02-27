@@ -4,22 +4,22 @@ import LoginForm from "@/components/auth/LoginForm";
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center font-sans px-4">
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center font-sans px-4 py-5">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/">
             <Image
               src="/logoWhiteMode1.svg"
               alt="Choppe Ton Exam"
-              width={70}
-              height={70}
+              width={100}
+              height={100}
               className="mx-auto"
             />
           </Link>
         </div>
 
         <div
-          className="bg-white px-8 py-10"
+          className="bg-white px-8 py-6"
           style={{
             borderRadius: "var(--main-card-corner-radius)",
             boxShadow:

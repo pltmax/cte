@@ -117,7 +117,7 @@ function BodyText({ text }: { text: string }) {
           {/* Numbered blank badge between segments */}
           {i < segments.length - 1 && (
             <span className="inline-flex items-center justify-center mx-1 px-2 py-0.5 bg-[#6600CC]/10 border border-[#6600CC]/30 rounded text-[#6600CC] font-bold text-xs align-middle">
-              [{i + 1}]
+              ____ [{i + 1}]
             </span>
           )}
         </Fragment>
@@ -240,7 +240,7 @@ export default function Part6Passage({
               className="rounded-xl border border-gray-100 p-5 flex flex-col gap-3"
             >
               <p className="text-xs font-bold text-[#6600CC] uppercase tracking-wider">
-                Blanc [{localIdx + 1}]
+                Q.[{localIdx + 1}]
               </p>
 
               <div

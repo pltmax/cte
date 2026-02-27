@@ -1,13 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const AUDIO_DURATION_MS = 8_000; // simulated audio length
+const AUDIO_DURATION_MS = 8_000; // simulated audio length (fallback)
 const GRACE_PERIOD_S = 5; // countdown after audio before auto-advance
 const LETTERS = ["A", "B", "C", "D"] as const;
 const AUDIO_ICON_FLICKER_MS = 1_000;
+// The 4 statement files are played sequentially: A → B → C → D
+const AUDIO_SEQUENCE = ["A", "B", "C", "D"] as const;
 
 // ─── Sound icon ───────────────────────────────────────────────────────────────
 
@@ -73,6 +76,10 @@ interface Part1QuestionProps {
   selectedAnswer: string | null;
   onSelect: (answer: string) => void;
   onAutoAdvance: () => void;
+  /** GCS image URL — shown when available, placeholder otherwise */
+  imageUrl?: string;
+  /** GCS audio URLs for each statement — drives real playback when provided */
+  audioUrls?: { A: string; B: string; C: string; D: string };
 }
 
 export default function Part1Question({
@@ -81,22 +88,49 @@ export default function Part1Question({
   selectedAnswer,
   onSelect,
   onAutoAdvance,
+  imageUrl,
+  audioUrls,
 }: Part1QuestionProps) {
   const [audioPhase, setAudioPhase] = useState<"playing" | "grace" | "done">(
     "playing"
   );
   const [graceLeft, setGraceLeft] = useState(GRACE_PERIOD_S);
+  // Index into AUDIO_SEQUENCE (A=0, B=1, C=2, D=3)
+  const [seqIdx, setSeqIdx] = useState(0);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Stable ref for onAutoAdvance to avoid re-triggering effects
+  const hasAudio = !!audioUrls;
+
+  // Stable ref for onAutoAdvance
   const advanceRef = useCallback(onAutoAdvance, [onAutoAdvance]); // eslint-disable-line
 
-  // Phase 1: simulated audio → transitions to grace when done
+  // Phase 1: start audio (real or simulated)
   useEffect(() => {
     setAudioPhase("playing");
     setGraceLeft(GRACE_PERIOD_S);
+    setSeqIdx(0);
+    if (hasAudio) return; // real audio drives the transition via onEnded
     const id = setTimeout(() => setAudioPhase("grace"), AUDIO_DURATION_MS);
     return () => clearTimeout(id);
-  }, []); // runs once per mount (key resets between questions)
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps — runs once per mount (key resets)
+
+  // Real audio: when seqIdx changes, load + play the corresponding statement
+  useEffect(() => {
+    if (!hasAudio || !audioRef.current) return;
+    const letter = AUDIO_SEQUENCE[seqIdx];
+    audioRef.current.src = audioUrls![letter];
+    audioRef.current.play().catch(console.error);
+  }, [seqIdx]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Real audio: when a statement ends, advance to next or enter grace
+  const handleAudioEnded = useCallback(() => {
+    setSeqIdx((prev) => {
+      const next = prev + 1;
+      if (next < AUDIO_SEQUENCE.length) return next;
+      setAudioPhase("grace");
+      return prev;
+    });
+  }, []);
 
   // Phase 2: grace period countdown
   useEffect(() => {
@@ -114,7 +148,7 @@ export default function Part1Question({
     return () => clearInterval(id);
   }, [audioPhase]);
 
-  // Phase 3: fire parent callback once audioPhase settles to "done"
+  // Phase 3: fire parent callback
   useEffect(() => {
     if (audioPhase !== "done") return;
     advanceRef();
@@ -142,29 +176,47 @@ export default function Part1Question({
         />
       </div>
 
-      {/* Image placeholder */}
-      <div className="w-full aspect-video bg-gray-50 rounded-xl border border-gray-200 flex flex-col items-center justify-center gap-2">
-        <svg
-          className="w-12 h-12 text-gray-200"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={1.2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+      {/* Image — real or placeholder */}
+      {imageUrl ? (
+        <div className="w-full aspect-video rounded-xl overflow-hidden border border-gray-200 relative">
+          <Image
+            src={imageUrl}
+            alt={`Photo ${questionIndex + 1}`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 600px"
+            priority
           />
-        </svg>
-        <span className="text-xs text-gray-300">
-          Photo {questionIndex + 1}
-        </span>
-      </div>
+        </div>
+      ) : (
+        <div className="w-full aspect-video bg-gray-50 rounded-xl border border-gray-200 flex flex-col items-center justify-center gap-2">
+          <svg
+            className="w-12 h-12 text-gray-200"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          <span className="text-xs text-gray-300">
+            Photo {questionIndex + 1}
+          </span>
+        </div>
+      )}
 
       {/* Sound indicator */}
       <div className="flex flex-col items-center gap-2">
         <SoundIcon isPlaying={audioPhase === "playing"} />
+        {hasAudio && audioPhase === "playing" && (
+          <p className="text-xs text-gray-400">
+            Énoncé {seqIdx + 1} / {AUDIO_SEQUENCE.length}
+          </p>
+        )}
         <div className="h-5 flex items-center">
           {audioPhase === "playing" && (
             <p className="text-xs text-gray-400 animate-pulse">
@@ -208,6 +260,9 @@ export default function Part1Question({
           );
         })}
       </div>
+
+      {/* Hidden audio element for real playback */}
+      <audio ref={audioRef} onEnded={handleAudioEnded} className="hidden" />
     </div>
   );
 }

@@ -1,12 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const AUDIO_DURATION_MS = 9_000; // simulated question + 3 answers
+const AUDIO_DURATION_MS = 9_000; // simulated fallback
 const GRACE_PERIOD_S = 3;
 const LETTERS = ["A", "B", "C"] as const;
+const AUDIO_ICON_FLICKER_MS = 850;
+// Audio sequence per question: question prompt → option A → B → C
+const AUDIO_SEQUENCE = ["question", "A", "B", "C"] as const;
+type SeqKey = (typeof AUDIO_SEQUENCE)[number];
 
 // ─── Mini sound icon ──────────────────────────────────────────────────────────
 
@@ -18,7 +22,7 @@ function MiniSoundIcon({ state }: { state: "playing" | "done" | "upcoming" }) {
       setTick(false);
       return;
     }
-    const id = setInterval(() => setTick((t) => !t), 600);
+    const id = setInterval(() => setTick((t) => !t), AUDIO_ICON_FLICKER_MS);
     return () => clearInterval(id);
   }, [state]);
 
@@ -58,14 +62,21 @@ function MiniSoundIcon({ state }: { state: "playing" | "done" | "upcoming" }) {
 
 type QuestionState = "playing" | "grace" | "done" | "upcoming";
 
+interface QuestionAudio {
+  questionAudioUrl?: string;
+  optionAudioUrls?: { A: string; B: string; C: string };
+}
+
 interface Part2BatchProps {
   batchIndex: number;
-  batchSize: number; // 1–3
-  startQuestionNumber: number; // e.g. 7 → questions 7, 8, 9
+  batchSize: number; // 1–5
+  startQuestionNumber: number;
   totalQuestions: number;
-  answers: Record<number, string>; // keyed by local index (0, 1, 2)
+  answers: Record<number, string>;
   onSelect: (localIndex: number, letter: string) => void;
   onBatchComplete: () => void;
+  /** Audio URLs per question in the batch (populated after GCS upload) */
+  questionAudios?: QuestionAudio[];
 }
 
 // ─── Part2Batch ───────────────────────────────────────────────────────────────
@@ -78,27 +89,62 @@ export default function Part2Batch({
   answers,
   onSelect,
   onBatchComplete,
+  questionAudios,
 }: Part2BatchProps) {
   const [activeLocal, setActiveLocal] = useState(0);
   const [questionPhase, setQuestionPhase] = useState<
     "playing" | "grace" | "done"
   >("playing");
   const [graceLeft, setGraceLeft] = useState(GRACE_PERIOD_S);
+  const [seqIdx, setSeqIdx] = useState(0);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const isLastQuestion = activeLocal === batchSize - 1;
-
-  // Stable ref for onBatchComplete
   const onBatchCompleteRef = useCallback(onBatchComplete, [onBatchComplete]); // eslint-disable-line
 
-  // Phase 1: audio → grace
+  const currentAudio = questionAudios?.[activeLocal];
+  const hasAudio =
+    !!currentAudio?.questionAudioUrl || !!currentAudio?.optionAudioUrls;
+
+  function getAudioUrl(qa: QuestionAudio, key: SeqKey): string | undefined {
+    if (key === "question") return qa.questionAudioUrl;
+    return qa.optionAudioUrls?.[key as "A" | "B" | "C"];
+  }
+
+  // Phase 1: audio (real or simulated) — resets when activeLocal changes
   useEffect(() => {
     setQuestionPhase("playing");
     setGraceLeft(GRACE_PERIOD_S);
+    setSeqIdx(0);
+    if (hasAudio) return; // real audio drives transition
     const id = setTimeout(() => setQuestionPhase("grace"), AUDIO_DURATION_MS);
     return () => clearTimeout(id);
-  }, [activeLocal]);
+  }, [activeLocal]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Phase 2: grace countdown → done
+  // Real audio: play the current sequence step
+  useEffect(() => {
+    if (!hasAudio || !audioRef.current || !currentAudio) return;
+    const key = AUDIO_SEQUENCE[seqIdx];
+    const url = getAudioUrl(currentAudio, key);
+    if (!url) {
+      // Skip missing URL — treat as if ended
+      handleAudioEnded();
+      return;
+    }
+    audioRef.current.src = url;
+    audioRef.current.play().catch(console.error);
+  }, [seqIdx, activeLocal]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleAudioEnded = useCallback(() => {
+    setSeqIdx((prev) => {
+      const next = prev + 1;
+      if (next < AUDIO_SEQUENCE.length) return next;
+      setQuestionPhase("grace");
+      return prev;
+    });
+  }, []);
+
+  // Phase 2: grace countdown
   useEffect(() => {
     if (questionPhase !== "grace") return;
     const id = setInterval(() => {
@@ -124,7 +170,6 @@ export default function Part2Batch({
     }
   }, [questionPhase, isLastQuestion, onBatchCompleteRef]);
 
-  // Progress (across the full exam)
   const globalEnd = startQuestionNumber + batchSize - 1;
   const progressPct = (globalEnd / totalQuestions) * 100;
 
@@ -168,7 +213,7 @@ export default function Part2Batch({
             rowState === "playing"
               ? "playing"
               : rowState === "grace"
-              ? "playing" // keep flickering during grace
+              ? "playing"
               : rowState === "done"
               ? "done"
               : "upcoming";
@@ -202,7 +247,6 @@ export default function Part2Batch({
                   </span>
                 </div>
 
-                {/* Spacer */}
                 <div className="flex-1" />
 
                 {/* A / B / C buttons */}
@@ -230,7 +274,7 @@ export default function Part2Batch({
                 </div>
               </div>
 
-              {/* Grace countdown — only under the active row */}
+              {/* Grace countdown / playing indicator under active row */}
               <div className="h-5 flex items-center pl-5">
                 {isActive && questionPhase === "grace" && (
                   <p className="text-xs text-gray-500">
@@ -251,6 +295,9 @@ export default function Part2Batch({
           );
         })}
       </div>
+
+      {/* Hidden audio element */}
+      <audio ref={audioRef} onEnded={handleAudioEnded} className="hidden" />
     </div>
   );
 }

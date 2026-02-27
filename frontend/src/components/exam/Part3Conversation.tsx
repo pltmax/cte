@@ -1,85 +1,13 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const AUDIO_DURATION_MS = 12_000; // simulated conversation
-const GRACE_PERIOD_S = 10; // time to answer 3 questions after audio
+const AUDIO_DURATION_MS = 12_000; // simulated fallback
+const GRACE_PERIOD_S = 10;
 const LETTERS = ["A", "B", "C", "D"] as const;
 const FLICKER_MS = 850;
-
-// ─── Placeholder question data ────────────────────────────────────────────────
-
-const Q_TEMPLATES = [
-  {
-    q: "Quel est le sujet principal de cette conversation ?",
-    opts: [
-      "Un changement de planning",
-      "Une commande de matériel",
-      "Un problème technique",
-      "Une réunion annulée",
-    ],
-  },
-  {
-    q: "Où se déroule probablement cette conversation ?",
-    opts: [
-      "Dans un bureau",
-      "Dans un restaurant",
-      "À l'aéroport",
-      "Dans une salle de réunion",
-    ],
-  },
-  {
-    q: "Que vont probablement faire les personnes ensuite ?",
-    opts: [
-      "Envoyer un rapport",
-      "Appeler un client",
-      "Modifier le document",
-      "Prendre rendez-vous",
-    ],
-  },
-  {
-    q: "Quel problème est mentionné dans la conversation ?",
-    opts: [
-      "Un délai trop court",
-      "Un budget dépassé",
-      "Une erreur de livraison",
-      "Un dossier manquant",
-    ],
-  },
-  {
-    q: "Quelle est la relation entre les deux personnes ?",
-    opts: [
-      "Collègues de travail",
-      "Client et vendeur",
-      "Supérieur et employé",
-      "Partenaires commerciaux",
-    ],
-  },
-  {
-    q: "Qu'est-ce que l'homme suggère de faire ?",
-    opts: [
-      "Reporter la réunion",
-      "Contacter le service",
-      "Vérifier les stocks",
-      "Préparer une présentation",
-    ],
-  },
-  {
-    q: "De quoi la femme a-t-elle besoin ?",
-    opts: [
-      "D'une confirmation écrite",
-      "D'un nouveau budget",
-      "D'une aide supplémentaire",
-      "D'un accès au système",
-    ],
-  },
-] as const;
-
-function getQuestion(convIndex: number, qIndex: number) {
-  return Q_TEMPLATES[(convIndex * 3 + qIndex) % Q_TEMPLATES.length];
-}
 
 // ─── Sound icon ───────────────────────────────────────────────────────────────
 
@@ -133,14 +61,61 @@ function SoundIcon({ isPlaying }: { isPlaying: boolean }) {
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
+interface ConvQuestion {
+  text: string;
+  options: string[];
+  answer: string;
+}
+
 interface Part3ConversationProps {
-  conversationIndex: number; // 0-based
-  totalConversations: number; // 13
-  startQuestionNumber: number; // 1-based global (e.g. 1, 4, 7, …)
-  totalQuestions: number; // 39
-  answers: Record<number, string>; // keyed by local index 0, 1, 2
+  conversationIndex: number;
+  totalConversations: number;
+  startQuestionNumber: number;
+  totalQuestions: number;
+  answers: Record<number, string>;
   onSelect: (localIndex: number, letter: string) => void;
   onConversationComplete: () => void;
+  /** GCS conversation audio URL (populated after upload) */
+  audioUrl?: string;
+  /** Real questions from transcript JSON (populated immediately) */
+  questions?: ConvQuestion[];
+}
+
+// ─── Placeholder questions ─────────────────────────────────────────────────────
+// Used only if real questions are not yet available (pre-upload state)
+
+const Q_TEMPLATES = [
+  {
+    text: "Quel est le sujet principal de cette conversation ?",
+    options: [
+      "(A) Un changement de planning",
+      "(B) Une commande de matériel",
+      "(C) Un problème technique",
+      "(D) Une réunion annulée",
+    ],
+  },
+  {
+    text: "Où se déroule probablement cette conversation ?",
+    options: [
+      "(A) Dans un bureau",
+      "(B) Dans un restaurant",
+      "(C) À l'aéroport",
+      "(D) Dans une salle de réunion",
+    ],
+  },
+  {
+    text: "Que vont probablement faire les personnes ensuite ?",
+    options: [
+      "(A) Envoyer un rapport",
+      "(B) Appeler un client",
+      "(C) Modifier le document",
+      "(D) Prendre rendez-vous",
+    ],
+  },
+] as const;
+
+function getPlaceholderQuestion(convIdx: number, qIdx: number) {
+  return Q_TEMPLATES[(convIdx * 3 + qIdx) % Q_TEMPLATES.length];
 }
 
 // ─── Part3Conversation ────────────────────────────────────────────────────────
@@ -153,21 +128,34 @@ export default function Part3Conversation({
   answers,
   onSelect,
   onConversationComplete,
+  audioUrl,
+  questions,
 }: Part3ConversationProps) {
   const [audioPhase, setAudioPhase] = useState<"playing" | "grace" | "done">(
     "playing"
   );
   const [graceLeft, setGraceLeft] = useState(GRACE_PERIOD_S);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
+  const hasAudio = !!audioUrl;
   const onCompleteRef = useCallback(onConversationComplete, [onConversationComplete]); // eslint-disable-line
 
-  // Phase 1: audio
+  // Phase 1: start audio (real or simulated)
   useEffect(() => {
     setAudioPhase("playing");
     setGraceLeft(GRACE_PERIOD_S);
+    if (hasAudio && audioRef.current) {
+      audioRef.current.src = audioUrl!;
+      audioRef.current.play().catch(console.error);
+      return;
+    }
     const id = setTimeout(() => setAudioPhase("grace"), AUDIO_DURATION_MS);
     return () => clearTimeout(id);
-  }, []); // once per mount; key resets between conversations
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps — once per mount; key resets between convs
+
+  const handleAudioEnded = useCallback(() => {
+    setAudioPhase("grace");
+  }, []);
 
   // Phase 2: grace countdown
   useEffect(() => {
@@ -185,15 +173,13 @@ export default function Part3Conversation({
     return () => clearInterval(id);
   }, [audioPhase]);
 
-  // Phase 3: fire parent callback once audioPhase settles to "done"
+  // Phase 3: fire parent callback
   useEffect(() => {
     if (audioPhase !== "done") return;
     onCompleteRef();
   }, [audioPhase, onCompleteRef]);
 
-  const progressPct =
-    ((conversationIndex + 1) / totalConversations) * 100;
-
+  const progressPct = ((conversationIndex + 1) / totalConversations) * 100;
   const isPlaying = audioPhase === "playing";
 
   return (
@@ -241,12 +227,17 @@ export default function Part3Conversation({
         </div>
       </div>
 
-      {/* Questions */}
+      {/* Questions — real data or placeholder */}
       <div className="flex flex-col gap-4">
         {[0, 1, 2].map((localIdx) => {
           const qNum = startQuestionNumber + localIdx;
-          const { q, opts } = getQuestion(conversationIndex, localIdx);
           const selected = answers[localIdx] ?? null;
+
+          // Use real questions from JSON when available
+          const realQ = questions?.[localIdx];
+          const placeholder = getPlaceholderQuestion(conversationIndex, localIdx);
+          const qText = realQ?.text ?? placeholder.text;
+          const qOpts: readonly string[] = realQ?.options ?? placeholder.options;
 
           return (
             <div
@@ -256,13 +247,15 @@ export default function Part3Conversation({
               {/* Question text */}
               <p className="text-sm font-medium text-gray-800">
                 <span className="text-[#6600CC] font-bold mr-2">{qNum}.</span>
-                {q}
+                {qText}
               </p>
 
               {/* Answer grid — 2 columns */}
               <div className="grid grid-cols-2 gap-2">
                 {LETTERS.map((letter, i) => {
                   const isSelected = selected === letter;
+                  // Strip "(A) " prefix when displaying option text
+                  const optText = qOpts[i]?.replace(/^\([A-D]\)\s*/, "") ?? letter;
                   return (
                     <button
                       key={letter}
@@ -282,7 +275,7 @@ export default function Part3Conversation({
                       >
                         {letter}
                       </span>
-                      <span className="leading-snug">{opts[i]}</span>
+                      <span className="leading-snug">{optText}</span>
                     </button>
                   );
                 })}
@@ -291,6 +284,9 @@ export default function Part3Conversation({
           );
         })}
       </div>
+
+      {/* Hidden audio element */}
+      <audio ref={audioRef} onEnded={handleAudioEnded} className="hidden" />
     </div>
   );
 }

@@ -50,37 +50,39 @@ export default function SignupForm() {
     const rawPhone = (formData.get("phone") as string) ?? "";
     const howHeard = formData.get("how_heard") as HowHeard;
 
-    // Normalize phone to E.164; reject if provided but invalid
-    let phoneE164: string | null = null;
-    if (rawPhone.trim()) {
-      phoneE164 = normalizePhone(rawPhone);
-      if (!phoneE164) {
-        setError(
-          "Numéro de téléphone invalide. Utilise le format international (ex : +33 6 12 34 56 78)."
-        );
-        setLoading(false);
-        return;
-      }
+    // Phone is required
+    if (!rawPhone.trim()) {
+      setError("Le numéro de téléphone est obligatoire.");
+      setLoading(false);
+      return;
+    }
+
+    // Normalize to E.164; reject if invalid
+    const phoneE164 = normalizePhone(rawPhone);
+    if (!phoneE164) {
+      setError(
+        "Numéro de téléphone invalide. Utilise le format international (ex : +33 6 12 34 56 78)."
+      );
+      setLoading(false);
+      return;
     }
 
     const supabase = createClient();
 
     // Pre-check uniqueness for fast UX (before signUp creates the auth user)
-    if (phoneE164) {
-      const { data: available, error: rpcError } = await supabase.rpc(
-        "is_phone_available",
-        { p_phone_e164: phoneE164 }
-      );
-      if (rpcError) {
-        setError("Une erreur est survenue. Réessaie dans quelques instants.");
-        setLoading(false);
-        return;
-      }
-      if (!available) {
-        setError("Ce numéro de téléphone est déjà associé à un compte.");
-        setLoading(false);
-        return;
-      }
+    const { data: available, error: rpcError } = await supabase.rpc(
+      "is_phone_available",
+      { p_phone_e164: phoneE164 }
+    );
+    if (rpcError) {
+      setError("Une erreur est survenue. Réessaie dans quelques instants.");
+      setLoading(false);
+      return;
+    }
+    if (!available) {
+      setError("Ce numéro de téléphone est déjà associé à un compte.");
+      setLoading(false);
+      return;
     }
 
     const { error: authError } = await supabase.auth.signUp({
@@ -92,7 +94,7 @@ export default function SignupForm() {
           first_name: firstName,
           last_name: lastName,
           full_name: `${firstName} ${lastName}`,
-          phone: rawPhone.trim() || null,
+          phone: rawPhone.trim(),
           phone_e164: phoneE164,
           how_heard: howHeard,
         },
@@ -210,13 +212,13 @@ export default function SignupForm() {
           htmlFor="phone"
           className="block text-sm font-medium text-foreground mb-1.5"
         >
-          Numéro de téléphone{" "}
-          <span className="text-gray-400 font-normal">(facultatif)</span>
+          Numéro de téléphone
         </label>
         <input
           id="phone"
           name="phone"
           type="tel"
+          required
           autoComplete="tel"
           placeholder="+33 6 12 34 56 78"
           className="w-full px-4 py-3 border border-[var(--text-field-stroke-color)] rounded-[var(--text-field-corner-radius)] text-sm focus:outline-none focus:ring-2 focus:ring-[#6600CC] focus:border-transparent"

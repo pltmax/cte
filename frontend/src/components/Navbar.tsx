@@ -1,39 +1,94 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const NAV_TABS = [
+  { label: "Le concept", href: "/#concept", id: "concept" },
+  { label: "Lance-toi", href: "/#lance-toi", id: "lance-toi" },
+  { label: "Avis", href: "/#avis", id: "avis" },
+];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isLanding = pathname === "/";
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!isLanding) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+    );
+
+    NAV_TABS.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [isLanding]);
+
   return (
-    <header
-      className="w-full bg-gradient-to-r from-[#ffffff] to-[rgba(102,0,204,0.8)]"
-      style={{ boxShadow: "0px 2px 2px 0px rgba(0,0,0,0.25)" }}
-    >
-      <div className="flex items-center justify-between w-full px-10 py-4">
-        <Link href="/" className="flex items-center px-10">
+    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
+      <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-6 py-4">
+        {/* Logo */}
+        <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/logoWhiteMode1.svg"
             alt="Choppe Ton Exam Logo"
-            height={90}
-            width={90}
+            height={70}
+            width={70}
             priority
             className="block"
-            style={{ maxWidth: "90px", height: "auto" }}
           />
         </Link>
 
-        <nav className="flex items-center gap-3">
+        {/* Right side: tabs + auth buttons */}
+        <div className="flex items-center gap-2">
+          {isLanding && (
+            <nav className="hidden md:flex items-center gap-1 mr-2">
+              {NAV_TABS.map((tab) => {
+                const isActive = activeSection === tab.id;
+                return (
+                  <a
+                    key={tab.href}
+                    href={tab.href}
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                      isActive
+                        ? "bg-[#f3ebff] text-[#6600CC] font-semibold"
+                        : "text-gray-600 hover:bg-[#f3ebff] hover:text-[#6600CC]"
+                    }`}
+                  >
+                    {tab.label}
+                  </a>
+                );
+              })}
+            </nav>
+          )}
+
           <Link
             href="/login"
-            className="px-6 py-2.5 text-base font-semibold text-white border border-white/50 rounded-full hover:bg-white/10 transition-colors"
+            className="px-4 py-1.5 text-sm font-semibold text-[#6600CC] border border-[#6600CC]/30 rounded-full hover:bg-[#f3ebff] transition-colors"
           >
             Se connecter
           </Link>
           <Link
             href="/signup"
-            className="px-6 py-2.5 text-base font-semibold text-[#6600CC] bg-white rounded-full hover:bg-white/90 transition-colors"
+            className="px-4 py-1.5 text-sm font-semibold text-white bg-[#6600CC] rounded-full hover:bg-[#5500aa] transition-colors"
           >
             S&apos;inscrire
           </Link>
-        </nav>
+        </div>
       </div>
     </header>
   );

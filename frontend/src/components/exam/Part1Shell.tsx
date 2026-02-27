@@ -3,14 +3,23 @@
 import { useState, useCallback } from "react";
 import Part1Intro from "@/components/exam/Part1Intro";
 import Part1Question from "@/components/exam/Part1Question";
-
-// ─── Config ───────────────────────────────────────────────────────────────────
-
-const PART1_TOTAL = 6;
+import rawP1 from "@mockdata/TOEIC/listening_part1/part1_transcript.json";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "intro" | "questions" | "done";
+interface P1QuestionData {
+  image: string;
+  statements: string[];
+  answer: string;
+  // Populated by scripts/gcs/upload_to_gcs.py after GCS upload
+  image_url?: string;
+  audio_urls?: { A: string; B: string; C: string; D: string };
+}
+
+// ─── Config ───────────────────────────────────────────────────────────────────
+
+const p1Data = rawP1 as { questions: P1QuestionData[] };
+const PART1_TOTAL = 6; // TOEIC Part 1 uses 6 questions
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
@@ -28,7 +37,7 @@ export default function Part1Shell({
   onComplete,
   inExam = false,
 }: Part1ShellProps) {
-  const [phase, setPhase] = useState<Phase>("intro");
+  const [phase, setPhase] = useState<"intro" | "questions" | "done">("intro");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
 
@@ -57,6 +66,8 @@ export default function Part1Shell({
     });
   }, [onComplete]);
 
+  const currentQuestion = p1Data.questions[questionIndex];
+
   return (
     <>
       {phase === "intro" && (
@@ -72,6 +83,8 @@ export default function Part1Shell({
           selectedAnswer={answers[questionIndex] ?? null}
           onSelect={handleSelect}
           onAutoAdvance={handleAdvance}
+          imageUrl={currentQuestion?.image_url}
+          audioUrls={currentQuestion?.audio_urls}
         />
       )}
 

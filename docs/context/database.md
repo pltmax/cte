@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-02-26 14:48
+> Auto-generated on 2026-02-27 14:13
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -14,7 +14,7 @@
 | `supabase_vault` | 0.3.1 |
 | `uuid-ossp` | 1.1 |
 
-## Tables (2)
+## Tables (7)
 
 ### `mock_exams` — ✅ RLS enabled
 
@@ -60,6 +60,7 @@
 | `how_heard` | `text` | ✓ | — |
 | `phone_e164` | `text` | ✓ | — |
 | `credit_number` | `integer` | ✗ | `0` |
+| `stripe_customer_id` | `text` | ✓ | — |
 
 **RLS Policies:**
 
@@ -67,6 +68,116 @@
   - USING: `(auth.uid() = id)`
 - **Users can update their own profiles.** (UPDATE, PERMISSIVE)
   - USING: `(auth.uid() = id)`
+
+### `subscriptions` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `text` | ✗ | — |
+| `user_id` | `uuid` | ✗ | — |
+| `stripe_customer_id` | `text` | ✗ | — |
+| `status` | `text` | ✗ | — |
+| `current_period_end` | `timestamp with time zone` | ✓ | — |
+| `cancel_at` | `timestamp with time zone` | ✓ | — |
+| `created_at` | `timestamp with time zone` | ✗ | `now()` |
+| `updated_at` | `timestamp with time zone` | ✗ | `now()` |
+
+**RLS Policies:**
+
+- **Users can view their own subscriptions** (SELECT, PERMISSIVE)
+  - USING: `(auth.uid() = user_id)`
+
+### `toeic_listening_part1` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `position` | `integer` | ✗ | — |
+| `image` | `text` | ✓ | — |
+| `statements` | `jsonb` | ✗ | — |
+| `answer` | `text` | ✗ | — |
+| `image_url` | `text` | ✓ | — |
+| `audio_urls` | `jsonb` | ✓ | — |
+| `is_exam` | `boolean` | ✗ | `true` |
+| `created_at` | `timestamp with time zone` | ✓ | `now()` |
+
+**RLS Policies:**
+
+- **authenticated users can read toeic_listening_part1** (SELECT, PERMISSIVE)
+  - USING: `(auth.role() = 'authenticated'::text)`
+
+### `toeic_listening_part2` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `position` | `integer` | ✗ | — |
+| `category` | `text` | ✓ | — |
+| `question` | `text` | ✗ | — |
+| `options` | `jsonb` | ✗ | — |
+| `answer` | `text` | ✗ | — |
+| `question_audio_url` | `text` | ✓ | — |
+| `option_audio_urls` | `jsonb` | ✓ | — |
+| `is_exam` | `boolean` | ✗ | `true` |
+| `created_at` | `timestamp with time zone` | ✓ | `now()` |
+
+**RLS Policies:**
+
+- **authenticated users can read toeic_listening_part2** (SELECT, PERMISSIVE)
+  - USING: `(auth.role() = 'authenticated'::text)`
+
+### `toeic_listening_part3` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `position` | `integer` | ✗ | — |
+| `dialogue` | `jsonb` | ✗ | — |
+| `questions` | `jsonb` | ✗ | — |
+| `audio_url` | `text` | ✓ | — |
+| `is_exam` | `boolean` | ✗ | `true` |
+| `created_at` | `timestamp with time zone` | ✓ | `now()` |
+
+**RLS Policies:**
+
+- **authenticated users can read toeic_listening_part3** (SELECT, PERMISSIVE)
+  - USING: `(auth.role() = 'authenticated'::text)`
+
+### `toeic_listening_part4` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `position` | `integer` | ✗ | — |
+| `title` | `text` | ✓ | — |
+| `text` | `text` | ✗ | — |
+| `questions` | `jsonb` | ✗ | — |
+| `audio_url` | `text` | ✓ | — |
+| `graphic_title` | `text` | ✓ | — |
+| `graphic_doctype` | `text` | ✓ | — |
+| `graphic` | `jsonb` | ✓ | — |
+| `is_exam` | `boolean` | ✗ | `true` |
+| `created_at` | `timestamp with time zone` | ✓ | `now()` |
+
+**RLS Policies:**
+
+- **authenticated users can read toeic_listening_part4** (SELECT, PERMISSIVE)
+  - USING: `(auth.role() = 'authenticated'::text)`
 
 ## RPC Functions (4)
 
@@ -86,4 +197,7 @@
 - `20260226000004_mock_exams.sql`
 - `20260226120000_profiles_phone_unique.sql`
 - `20260226130000_profiles_phone_required.sql`
+- `20260227000001_admin_rpcs.sql`
+- `20260227000002_stripe.sql`
+- `20260227000003_toeic_listening_tables.sql`
 

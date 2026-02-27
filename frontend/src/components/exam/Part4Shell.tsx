@@ -7,6 +7,7 @@ import rawData from "@mockdata/TOEIC/listening_part4/part4_transcript.json";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
+// Cast to include optional audio_url (populated by scripts/gcs/upload_to_gcs.py)
 const talks: TalkData[] = (rawData as { talks: TalkData[] }).talks;
 const TOTAL_TALKS = talks.length;
 const QUESTIONS_PER_TALK = 3;

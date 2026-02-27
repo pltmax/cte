@@ -18,6 +18,7 @@ export interface Profile {
   how_heard: HowHeard | null;
   credit_number: number;
   role: UserRole;
+  stripe_customer_id: string | null;
   created_at: string;
   updated_at: string;
 }

@@ -3,16 +3,29 @@
 import { useState, useCallback } from "react";
 import Part3Intro from "@/components/exam/Part3Intro";
 import Part3Conversation from "@/components/exam/Part3Conversation";
-
-// ─── Config ───────────────────────────────────────────────────────────────────
-
-const PART3_TOTAL = 39;
-const QUESTIONS_PER_CONV = 3;
-const TOTAL_CONVS = Math.ceil(PART3_TOTAL / QUESTIONS_PER_CONV); // 13
+import rawP3 from "@mockdata/TOEIC/listening_part3/part3_transcript.json";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Phase = "intro" | "questions" | "done";
+interface P3Question {
+  text: string;
+  options: string[];
+  answer: string;
+}
+
+interface P3Conv {
+  dialogue: Array<{ speaker: string; text: string }>;
+  questions: P3Question[];
+  // Populated by scripts/gcs/upload_to_gcs.py after GCS upload
+  audio_url?: string;
+}
+
+// ─── Config ───────────────────────────────────────────────────────────────────
+
+const p3Data = rawP3 as { conversations: P3Conv[] };
+const QUESTIONS_PER_CONV = 3;
+const TOTAL_CONVS = Math.min(13, p3Data.conversations.length); // 13 for TOEIC Part 3
+const PART3_TOTAL = TOTAL_CONVS * QUESTIONS_PER_CONV;
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
@@ -27,11 +40,11 @@ export default function Part3Shell({
   onComplete,
   inExam = false,
 }: Part3ShellProps) {
-  const [phase, setPhase] = useState<Phase>("intro");
+  const [phase, setPhase] = useState<"intro" | "questions" | "done">("intro");
   const [conversationIndex, setConversationIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({}); // keyed by global 0-based index
 
-  const convStart = conversationIndex * QUESTIONS_PER_CONV; // 0-based global start
+  const convStart = conversationIndex * QUESTIONS_PER_CONV;
 
   const handleStart = useCallback(() => {
     onStart?.();
@@ -54,6 +67,8 @@ export default function Part3Shell({
       setConversationIndex(next);
     }
   }, [conversationIndex, onComplete]);
+
+  const currentConv = p3Data.conversations[conversationIndex];
 
   return (
     <>
@@ -79,6 +94,8 @@ export default function Part3Shell({
           )}
           onSelect={handleSelect}
           onConversationComplete={handleConversationComplete}
+          audioUrl={currentConv?.audio_url}
+          questions={currentConv?.questions}
         />
       )}
 

@@ -8,7 +8,14 @@
         "(C) He is typing on a keyboard.",
         "(D) He is adjusting the position of a television."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/manLaptopImg.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q01_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q01_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q01_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q01_D.mp3"
+      }
     },
     {
       "image": "meetingBoardroom.jpeg",
@@ -18,7 +25,14 @@
         "(C) A woman is showing documents to her colleagues.",
         "(D) People are working together on their homework."
       ],
-      "answer": "C"
+      "answer": "C",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/meetingBoardroom.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q02_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q02_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q02_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q02_D.mp3"
+      }
     },
     {
       "image": "womanLibrary.jpeg",
@@ -28,7 +42,14 @@
         "(C) A woman is packing books into boxes.",
         "(D) A woman is sitting on a chair in a bookstore."
       ],
-      "answer": "A"
+      "answer": "A",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/womanLibrary.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q03_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q03_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q03_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q03_D.mp3"
+      }
     },
     {
       "image": "womanCashier.jpeg",
@@ -38,7 +59,14 @@
         "(C) The cashier is hanging a clock on the wall.",
         "(D) The shop is currently closed for repairs."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/womanCashier.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q04_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q04_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q04_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q04_D.mp3"
+      }
     },
     {
       "image": "constructionWorkerHelmet.jpeg",
@@ -48,7 +76,14 @@
         "(C) A worker is climbing up a metal ladder.",
         "(D) A worker is putting on his yellow jacket."
       ],
-      "answer": "A"
+      "answer": "A",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/constructionWorkerHelmet.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q05_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q05_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q05_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q05_D.mp3"
+      }
     },
     {
       "image": "emptyCoffeeTerrace.jpeg",
@@ -58,7 +93,14 @@
         "(C) A terrace has been arranged along the sidewalk.",
         "(D) The street is blocked by a fallen tree."
       ],
-      "answer": "C"
+      "answer": "C",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/emptyCoffeeTerrace.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q06_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q06_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q06_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q06_D.mp3"
+      }
     },
     {
       "image": "carsParkedRow.jpeg",
@@ -68,7 +110,14 @@
         "(C) Cars are being repaired in a garage.",
         "(D) A driver is exiting a silver vehicle."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/carsParkedRow.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q07_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q07_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q07_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q07_D.mp3"
+      }
     },
     {
       "image": "emptyDesk.jpeg",
@@ -78,7 +127,14 @@
         "(C) The office chair is being moved to the corner.",
         "(D) A cup is being filled with coffee."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/emptyDesk.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q08_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q08_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q08_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q08_D.mp3"
+      }
     },
     {
       "image": "officePhotocopier.jpeg",
@@ -88,7 +144,14 @@
         "(C) They are repairing a broken printer.",
         "(D) The woman is wearing a formal blue suit."
       ],
-      "answer": "A"
+      "answer": "A",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/officePhotocopier.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q09_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q09_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q09_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q09_D.mp3"
+      }
     },
     {
       "image": "emptyBench.jpeg",
@@ -98,7 +161,14 @@
         "(C) Some boats are docked at a harbour.",
         "(D) A bench overlooks a body of water."
       ],
-      "answer": "D"
+      "answer": "D",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/emptyBench.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q10_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q10_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q10_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q10_D.mp3"
+      }
     },
     {
       "image": "fruitsMarket.jpeg",
@@ -108,7 +178,14 @@
         "(C) A vendor is organizing a stack of fruits.",
         "(D) People are buying vegetables in a market."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/fruitsMarket.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q11_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q11_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q11_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q11_D.mp3"
+      }
     },
     {
       "image": "colleaguesScreen.jpeg",
@@ -118,7 +195,14 @@
         "(C) The office is currently empty of people.",
         "(D) A group is gathered around a laptop."
       ],
-      "answer": "D"
+      "answer": "D",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/colleaguesScreen.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q12_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q12_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q12_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q12_D.mp3"
+      }
     },
     {
       "image": "emptyCubicles.jpeg",
@@ -128,7 +212,14 @@
         "(C) Cubicles are arranged in rows.",
         "(D) Employees are leaving the building."
       ],
-      "answer": "C"
+      "answer": "C",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/emptyCubicles.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q13_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q13_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q13_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q13_D.mp3"
+      }
     },
     {
       "image": "waiterServing.jpeg",
@@ -138,7 +229,14 @@
         "(C) The customers are paying their bill.",
         "(D) Food is being prepared in the kitchen."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/waiterServing.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q14_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q14_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q14_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q14_D.mp3"
+      }
     },
     {
       "image": "whiteboardMeeting.jpeg",
@@ -148,7 +246,14 @@
         "(C) He is putting on a pair of glasses.",
         "(D) The screen is being mounted to the wall."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/whiteboardMeeting.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q15_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q15_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q15_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q15_D.mp3"
+      }
     },
     {
       "image": "telephoneOffice.jpeg",
@@ -158,7 +263,14 @@
         "(C) A man is organizing folders on a shelf.",
         "(D) A man is writing in a notebook."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/telephoneOffice.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q16_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q16_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q16_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q16_D.mp3"
+      }
     },
     {
       "image": "manStoringShelves.jpeg",
@@ -168,7 +280,14 @@
         "(C) He is loading items into a truck.",
         "(D) He is reaching for a box on a shelf."
       ],
-      "answer": "D"
+      "answer": "D",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/manStoringShelves.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q17_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q17_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q17_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q17_D.mp3"
+      }
     },
     {
       "image": "womanBrowsingClothes.jpeg",
@@ -178,7 +297,14 @@
         "(C) A woman is buying some clothes.",
         "(D) A woman is folding garments."
       ],
-      "answer": "A"
+      "answer": "A",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/womanBrowsingClothes.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q18_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q18_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q18_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q18_D.mp3"
+      }
     },
     {
       "image": "boardingBus.jpeg",
@@ -188,7 +314,14 @@
         "(C) The driver is checking a ticket.",
         "(D) Passengers are waiting inside the station."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/boardingBus.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q19_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q19_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q19_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q19_D.mp3"
+      }
     },
     {
       "image": "gardenerWateringPlants.jpeg",
@@ -198,7 +331,14 @@
         "(C) He is wearing a pair of work gloves.",
         "(D) The crops are being harvested."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/gardenerWateringPlants.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q20_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q20_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q20_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q20_D.mp3"
+      }
     },
     {
       "image": "womanMechanic.jpeg",
@@ -208,7 +348,14 @@
         "(C) A woman is closing the hood of a car.",
         "(D) A woman is checking the tire pressure."
       ],
-      "answer": "A"
+      "answer": "A",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/womanMechanic.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q21_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q21_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q21_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q21_D.mp3"
+      }
     },
     {
       "image": "passengersAirport.jpeg",
@@ -218,7 +365,14 @@
         "(C) Travelers are looking at a flight information board.",
         "(D) Travelers are sitting in the waiting area."
       ],
-      "answer": "C"
+      "answer": "C",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/passengersAirport.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q22_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q22_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q22_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q22_D.mp3"
+      }
     },
     {
       "image": "pedestriansCrosswalk.jpeg",
@@ -228,7 +382,14 @@
         "(C) Pedestrians are walking across a street.",
         "(D) Pedestrians are standing in front of a building."
       ],
-      "answer": "C"
+      "answer": "C",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/pedestriansCrosswalk.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q23_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q23_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q23_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q23_D.mp3"
+      }
     },
     {
       "image": "vacuumingRug.jpeg",
@@ -238,7 +399,14 @@
         "(C) A person is mopping the floor.",
         "(D) A person is moving a piece of furniture."
       ],
-      "answer": "B"
+      "answer": "B",
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/images/vacuumingRug.jpeg",
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q24_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q24_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q24_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/toeic/part1/audio/q24_D.mp3"
+      }
     }
   ]
 }

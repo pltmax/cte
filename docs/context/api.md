@@ -1,19 +1,4 @@
-# Project 1 API — API Context
+# API Context — Introspection Failed
 
-> Auto-generated on 2026-02-26 15:48
-> Do not edit manually. Regenerate with: `npm run context:api`
-
-## Summary
-- **Version:** 0.1.0
-- **Routes:** 2
-- **Schemas:** 0
-
-## Routes
-
-### Default
-
-| Method | Path | Auth | Summary |
-|--------|------|------|---------|
-| `GET` | `/` | 🌐 | Root |
-| `GET` | `/health` | 🌐 | Health |
-
+> Could not reach FastAPI server or import app module.
+> Start the backend with `make backend` then rerun `npm run context:api`.

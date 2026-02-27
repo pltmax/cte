@@ -143,24 +143,22 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`relative flex flex-col bg-white border-r border-gray-100 shrink-0 transition-[width] duration-200 ease-in-out`}
-      style={{ width: isCollapsed ? 64 : 240, minHeight: "100vh" }}
+      className={`relative flex flex-col bg-white border-r border-gray-100 shrink-0 h-screen transition-[width] duration-200 ease-in-out`}
+      style={{ width: isCollapsed ? 72 : 240 }}
     >
       {/* Logo */}
       <div
-        className={`flex items-center py-6 ${
-          isCollapsed ? "justify-center" : "px-5"
-        }`}
+        className={`flex px-5 items-center py-6 mb-5`}
       >
         <Link href="/dashboard">
           <Image
             src="/logoWhiteMode1.svg"
             alt="Choppe Ton Exam"
-            width={40}
-            height={40}
+            width={80}
+            height={80}
             priority
             className={`transition-all duration-200 ${
-              isCollapsed ? "w-8 h-8" : "w-10 h-10"
+              isCollapsed ? "w-10 h-10" : "w-20 h-20"
             }`}
           />
         </Link>
@@ -180,7 +178,7 @@ export default function Sidebar() {
       </button>
 
       {/* Navigation */}
-      <nav className="flex-1 px-2 pt-2 space-y-0.5 overflow-hidden">
+      <nav className="flex-1 min-h-0 px-2 pt-2 space-y-0.5 overflow-y-auto overflow-x-hidden">
         {/* Guides (accordion) */}
         <div>
           <button
@@ -229,7 +227,7 @@ export default function Sidebar() {
       </nav>
 
       {/* Settings — pinned to bottom */}
-      <div ref={settingsRef} className="relative px-2 pb-4">
+      <div ref={settingsRef} className="relative px-2 pb-4 shrink-0">
         {/* Popover — opens upward */}
         {settingsOpen && (
           <div className="absolute bottom-16 left-2 z-20 bg-white border border-gray-100 rounded-xl shadow-lg py-1.5 min-w-[180px]">

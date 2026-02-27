@@ -1,6 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
+// Any authenticated user
+const AUTH_ONLY_PATHS = ["/dashboard", "/exam"];
+// Authenticated + premium (or admin) role
+const PREMIUM_PATHS = ["/exercices", "/mockexams"];
+
 export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
@@ -31,22 +36,42 @@ export async function proxy(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  // Protect /dashboard and /exam (require auth)
-  if (!user && (pathname.startsWith("/dashboard") || pathname.startsWith("/exam"))) {
+  const needsAuth = AUTH_ONLY_PATHS.some((p) => pathname.startsWith(p));
+  const needsPremium = PREMIUM_PATHS.some((p) => pathname.startsWith(p));
+
+  // ── Unauthenticated → /login ─────────────────────────────────────────────
+  if ((needsAuth || needsPremium) && !user) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.redirect(url);
   }
 
-  // /reset-password requires a valid session (arrived via reset-link callback)
+  // ── Authenticated but not premium → /premium-required ───────────────────
+  if (needsPremium && user) {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("role")
+      .eq("id", user.id)
+      .single();
+
+    const isPremium =
+      profile?.role === "premium" || profile?.role === "admin";
+
+    if (!isPremium) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/premium-required";
+      return NextResponse.redirect(url);
+    }
+  }
+
+  // ── /reset-password requires a valid session ─────────────────────────────
   if (!user && pathname === "/reset-password") {
     const url = request.nextUrl.clone();
     url.pathname = "/forgot-password";
     return NextResponse.redirect(url);
   }
 
-  // Redirect already-authenticated users away from auth pages
-  // (but NOT from /reset-password — they need it to set their new password)
+  // ── Redirect authenticated users away from auth pages ────────────────────
   if (user && (pathname === "/login" || pathname === "/signup")) {
     const url = request.nextUrl.clone();
     url.pathname = "/dashboard";

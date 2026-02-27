@@ -31,8 +31,7 @@ export default function Part1Intro({
           <span className="font-semibold">(B)</span>,{" "}
           <span className="font-semibold">(C)</span> et{" "}
           <span className="font-semibold">(D)</span> ne sont{" "}
-          <span className="font-semibold">pas imprimées</span> dans votre
-          livret de test et ne seront énoncées{" "}
+          <span className="font-semibold">pas affichées </span> à l'écran et ne seront énoncées{" "}
           <span className="font-semibold">qu&apos;une seule fois</span>.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed">

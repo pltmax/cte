@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Part5Intro from "@/components/exam/Part5Intro";
 import Part5Batch, { type P5Question } from "@/components/exam/Part5Batch";
 import rawData from "@mockdata/TOEIC/reading_part5/part5_content.json";
@@ -43,6 +43,21 @@ export default function Part5Shell({
     onStart?.();
     setPhase("questions");
   }, [onStart]);
+
+  const scrollToTop = useCallback(() => {
+    // In (app) layout, <main> is the scroll container; in other routes the window may scroll.
+    const main = document.querySelector("main");
+    if (main && "scrollTo" in main) {
+      (main as HTMLElement).scrollTo({ top: 0, behavior: "auto" });
+    }
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
+  useEffect(() => {
+    if (phase !== "questions") return;
+    // Ensure we scroll after the new batch content has rendered.
+    requestAnimationFrame(scrollToTop);
+  }, [phase, batchIndex, scrollToTop]);
 
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
