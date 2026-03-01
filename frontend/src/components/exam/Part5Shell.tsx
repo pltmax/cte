@@ -7,12 +7,10 @@ import rawData from "@mockdata/TOEIC/reading_part5/part5_content.json";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const questions: P5Question[] = (
+const allQuestions: P5Question[] = (
   rawData as { questions: P5Question[] }
 ).questions;
-const PART5_TOTAL = questions.length;
-const BATCH_SIZE = 10;
-const TOTAL_BATCHES = Math.ceil(PART5_TOTAL / BATCH_SIZE);
+const BATCH_SIZE = 5;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -22,21 +20,34 @@ type Phase = "intro" | "questions" | "done";
 
 interface Part5ShellProps {
   onStart?: () => void;
-  onComplete?: () => void;
+  onComplete?: (answers: Record<number, string>) => void;
   inExam?: boolean;
+  /** Exam-specific question subset; falls back to full JSON when absent */
+  questions?: P5Question[];
+  /** When inExam, adds an exam-wide numbering offset (1-based display) */
+  questionNumberOffset?: number;
+  /** When inExam, display total questions across the whole exam (e.g. 200) */
+  examTotalQuestions?: number;
 }
 
 export default function Part5Shell({
   onStart,
   onComplete,
   inExam = false,
+  questions: questionsProp,
+  questionNumberOffset = 0,
+  examTotalQuestions,
 }: Part5ShellProps) {
+  const questionsData = questionsProp ?? allQuestions;
+  const PART5_TOTAL = questionsData.length;
+  const TOTAL_BATCHES = Math.ceil(PART5_TOTAL / BATCH_SIZE);
+
   const [phase, setPhase] = useState<Phase>("intro");
   const [batchIndex, setBatchIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({}); // keyed by global 0-based index
 
   const batchStart = batchIndex * BATCH_SIZE;
-  const batchQuestions = questions.slice(batchStart, batchStart + BATCH_SIZE);
+  const batchQuestions = questionsData.slice(batchStart, batchStart + BATCH_SIZE);
   const isLast = batchIndex === TOTAL_BATCHES - 1;
 
   const handleStart = useCallback(() => {
@@ -69,11 +80,11 @@ export default function Part5Shell({
   const handleNext = useCallback(() => {
     if (isLast) {
       setPhase("done");
-      onComplete?.();
+      onComplete?.(answers);
     } else {
       setBatchIndex((i) => i + 1);
     }
-  }, [isLast, onComplete]);
+  }, [isLast, onComplete, answers]);
 
   return (
     <>
@@ -87,8 +98,10 @@ export default function Part5Shell({
           questions={batchQuestions}
           batchIndex={batchIndex}
           totalBatches={TOTAL_BATCHES}
-          startQuestionNumber={batchStart + 1}
-          totalQuestions={PART5_TOTAL}
+          startQuestionNumber={
+            (inExam ? questionNumberOffset : 0) + (batchStart + 1)
+          }
+          totalQuestions={inExam ? (examTotalQuestions ?? 200) : PART5_TOTAL}
           answers={Object.fromEntries(
             Object.entries(answers)
               .filter(([k]) => {

@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-02-27 14:13
+> Auto-generated on 2026-03-01 10:52
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -14,7 +14,7 @@
 | `supabase_vault` | 0.3.1 |
 | `uuid-ossp` | 1.1 |
 
-## Tables (7)
+## Tables (10)
 
 ### `mock_exams` — ✅ RLS enabled
 
@@ -31,6 +31,8 @@
 | `score` | `integer` | ✓ | — |
 | `listening_score` | `integer` | ✓ | — |
 | `reading_score` | `integer` | ✓ | — |
+| `dataset_id` | `smallint` | ✗ | `1` |
+| `answers` | `jsonb` | ✓ | — |
 
 **RLS Policies:**
 
@@ -106,6 +108,7 @@
 | `audio_urls` | `jsonb` | ✓ | — |
 | `is_exam` | `boolean` | ✗ | `true` |
 | `created_at` | `timestamp with time zone` | ✓ | `now()` |
+| `dataset_id` | `smallint` | ✓ | — |
 
 **RLS Policies:**
 
@@ -129,6 +132,7 @@
 | `option_audio_urls` | `jsonb` | ✓ | — |
 | `is_exam` | `boolean` | ✗ | `true` |
 | `created_at` | `timestamp with time zone` | ✓ | `now()` |
+| `dataset_id` | `smallint` | ✓ | — |
 
 **RLS Policies:**
 
@@ -149,6 +153,7 @@
 | `audio_url` | `text` | ✓ | — |
 | `is_exam` | `boolean` | ✗ | `true` |
 | `created_at` | `timestamp with time zone` | ✓ | `now()` |
+| `dataset_id` | `smallint` | ✓ | — |
 
 **RLS Policies:**
 
@@ -173,18 +178,84 @@
 | `graphic` | `jsonb` | ✓ | — |
 | `is_exam` | `boolean` | ✗ | `true` |
 | `created_at` | `timestamp with time zone` | ✓ | `now()` |
+| `dataset_id` | `smallint` | ✓ | — |
 
 **RLS Policies:**
 
 - **authenticated users can read toeic_listening_part4** (SELECT, PERMISSIVE)
   - USING: `(auth.role() = 'authenticated'::text)`
 
-## RPC Functions (4)
+### `toeic_reading_part5` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `position` | `integer` | ✗ | — |
+| `text` | `text` | ✗ | — |
+| `options` | `jsonb` | ✗ | — |
+| `answer` | `text` | ✗ | — |
+| `is_exam` | `boolean` | ✗ | `true` |
+| `created_at` | `timestamp with time zone` | ✓ | `now()` |
+| `dataset_id` | `smallint` | ✓ | — |
+
+**RLS Policies:**
+
+- **authenticated users can read toeic_reading_part5** (SELECT, PERMISSIVE)
+  - USING: `(auth.role() = 'authenticated'::text)`
+
+### `toeic_reading_part6` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `position` | `integer` | ✗ | — |
+| `doctype` | `text` | ✓ | — |
+| `text` | `text` | ✗ | — |
+| `questions` | `jsonb` | ✗ | — |
+| `is_exam` | `boolean` | ✗ | `true` |
+| `created_at` | `timestamp with time zone` | ✓ | `now()` |
+| `dataset_id` | `smallint` | ✓ | — |
+
+**RLS Policies:**
+
+- **authenticated users can read toeic_reading_part6** (SELECT, PERMISSIVE)
+  - USING: `(auth.role() = 'authenticated'::text)`
+
+### `toeic_reading_part7` — ✅ RLS enabled
+
+
+**Columns:**
+
+| Column | Type | Nullable | Default |
+|--------|------|----------|---------|
+| `id` | `uuid` | ✗ | `gen_random_uuid()` |
+| `position` | `integer` | ✗ | — |
+| `documents` | `jsonb` | ✗ | — |
+| `questions` | `jsonb` | ✗ | — |
+| `is_exam` | `boolean` | ✗ | `true` |
+| `created_at` | `timestamp with time zone` | ✓ | `now()` |
+| `dataset_id` | `smallint` | ✓ | — |
+
+**RLS Policies:**
+
+- **authenticated users can read toeic_reading_part7** (SELECT, PERMISSIVE)
+  - USING: `(auth.role() = 'authenticated'::text)`
+
+## RPC Functions (7)
 
 | Function | Arguments | Returns | Security |
 |----------|-----------|---------|----------|
+| `complete_exam` | `exam_id uuid, p_listening_score integer DEFAULT NULL::integer, p_reading_score integer DEFAULT NULL::integer, p_score integer DEFAULT NULL::integer, p_answers jsonb DEFAULT NULL::jsonb` | `void` | SECURITY DEFINER |
+| `complete_exam` | `exam_id uuid` | `void` | SECURITY DEFINER |
 | `handle_new_user` | `none` | `trigger` | SECURITY DEFINER |
 | `is_phone_available` | `p_phone_e164 text` | `boolean` | SECURITY DEFINER |
+| `launch_exam` | `none` | `uuid` | SECURITY DEFINER |
 | `rls_auto_enable` | `none` | `event_trigger` | SECURITY DEFINER |
 | `update_updated_at_column` | `none` | `trigger` | SECURITY INVOKER |
 
@@ -200,4 +271,10 @@
 - `20260227000001_admin_rpcs.sql`
 - `20260227000002_stripe.sql`
 - `20260227000003_toeic_listening_tables.sql`
+- `20260227000004_mock_exams_dataset_id.sql`
+- `20260227000005_toeic_reading_tables.sql`
+- `20260227000006_toeic_parts_dataset_id.sql`
+- `20260228000001_launch_exam_admin_bypass.sql`
+- `20260301000001_complete_exam.sql`
+- `20260301000002_mock_exams_answers.sql`
 

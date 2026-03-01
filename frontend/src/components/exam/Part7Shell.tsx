@@ -1,23 +1,13 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 import Part7Intro from "@/components/exam/Part7Intro";
 import Part7Passage, { type P7Passage } from "@/components/exam/Part7Passage";
 import rawData from "@mockdata/TOEIC/reading_part7/part7_content.json";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const passages: P7Passage[] = (rawData as { passages: P7Passage[] }).passages;
-const TOTAL_PASSAGES = passages.length;
-
-// Precompute 1-based start question number for each passage
-const QUESTION_STARTS: number[] = [];
-let _cum = 1;
-for (const p of passages) {
-  QUESTION_STARTS.push(_cum);
-  _cum += p.questions.length;
-}
-const PART7_TOTAL = _cum - 1;
+const allPassages: P7Passage[] = (rawData as { passages: P7Passage[] }).passages;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -27,15 +17,38 @@ type Phase = "intro" | "questions" | "done";
 
 interface Part7ShellProps {
   onStart?: () => void;
-  onComplete?: () => void;
+  onComplete?: (answers: Record<number, string>) => void;
   inExam?: boolean;
+  /** Exam-specific passage subset; falls back to full JSON when absent */
+  passages?: P7Passage[];
+  /** When inExam, adds an exam-wide numbering offset (1-based display) */
+  questionNumberOffset?: number;
+  /** When inExam, display total questions across the whole exam (e.g. 200) */
+  examTotalQuestions?: number;
 }
 
 export default function Part7Shell({
   onStart,
   onComplete,
   inExam = false,
+  passages: passagesProp,
+  questionNumberOffset = 0,
+  examTotalQuestions,
 }: Part7ShellProps) {
+  const passages = passagesProp ?? allPassages;
+  const TOTAL_PASSAGES = passages.length;
+
+  // Precompute 1-based start question number for each passage
+  const { questionStarts, part7Total } = useMemo(() => {
+    const starts: number[] = [];
+    let cum = 1;
+    for (const p of passages) {
+      starts.push(cum);
+      cum += p.questions.length;
+    }
+    return { questionStarts: starts, part7Total: cum - 1 };
+  }, [passages]);
+
   const [phase, setPhase] = useState<Phase>("intro");
   const [passageIndex, setPassageIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({}); // keyed by global 0-based index
@@ -60,7 +73,7 @@ export default function Part7Shell({
 
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
-      const globalIndex = QUESTION_STARTS[passageIndex] - 1 + localIndex;
+      const globalIndex = questionStarts[passageIndex] - 1 + localIndex;
       setAnswers((prev) => ({ ...prev, [globalIndex]: letter }));
     },
     [passageIndex]
@@ -69,14 +82,14 @@ export default function Part7Shell({
   const handleNext = useCallback(() => {
     if (isLast) {
       setPhase("done");
-      onComplete?.();
+      onComplete?.(answers);
     } else {
       setPassageIndex((i) => i + 1);
     }
-  }, [isLast, onComplete]);
+  }, [isLast, onComplete, answers]);
 
   // Derive local answers for the current passage
-  const passageStart = QUESTION_STARTS[passageIndex] - 1;
+  const passageStart = questionStarts[passageIndex] - 1;
   const passageQCount = passages[passageIndex].questions.length;
   const localAnswers = Object.fromEntries(
     Object.entries(answers)
@@ -99,8 +112,10 @@ export default function Part7Shell({
           passage={passages[passageIndex]}
           passageIndex={passageIndex}
           totalPassages={TOTAL_PASSAGES}
-          startQuestionNumber={QUESTION_STARTS[passageIndex]}
-          totalQuestions={PART7_TOTAL}
+          startQuestionNumber={
+            (inExam ? questionNumberOffset : 0) + questionStarts[passageIndex]
+          }
+          totalQuestions={inExam ? (examTotalQuestions ?? 200) : part7Total}
           answers={localAnswers}
           onSelect={handleSelect}
           onNext={handleNext}
@@ -131,9 +146,9 @@ export default function Part7Shell({
             </h2>
             <p className="text-sm text-gray-500 mt-1">
               {Object.keys(answers).length} réponse
-              {Object.keys(answers).length > 1 ? "s" : ""} sur {PART7_TOTAL}{" "}
+              {Object.keys(answers).length > 1 ? "s" : ""} sur {part7Total}{" "}
               question
-              {PART7_TOTAL > 1 ? "s" : ""}
+              {part7Total > 1 ? "s" : ""}
             </p>
           </div>
           {!inExam && (

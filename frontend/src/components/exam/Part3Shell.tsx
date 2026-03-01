@@ -4,42 +4,44 @@ import { useState, useCallback } from "react";
 import Part3Intro from "@/components/exam/Part3Intro";
 import Part3Conversation from "@/components/exam/Part3Conversation";
 import rawP3 from "@mockdata/TOEIC/listening_part3/part3_transcript.json";
+import type { ExamP3Conv } from "@/types/exam-data";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-interface P3Question {
-  text: string;
-  options: string[];
-  answer: string;
-}
-
-interface P3Conv {
-  dialogue: Array<{ speaker: string; text: string }>;
-  questions: P3Question[];
-  // Populated by scripts/gcs/upload_to_gcs.py after GCS upload
-  audio_url?: string;
-}
+type P3Conv = ExamP3Conv;
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const p3Data = rawP3 as { conversations: P3Conv[] };
+const allConversations = (
+  rawP3 as { conversations: P3Conv[] }
+).conversations;
 const QUESTIONS_PER_CONV = 3;
-const TOTAL_CONVS = Math.min(13, p3Data.conversations.length); // 13 for TOEIC Part 3
-const PART3_TOTAL = TOTAL_CONVS * QUESTIONS_PER_CONV;
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
 
 interface Part3ShellProps {
   onStart?: () => void;
-  onComplete?: () => void;
+  onComplete?: (answers: Record<number, string>) => void;
   inExam?: boolean;
+  /** Exam-specific conversation subset; falls back to first 13 when absent */
+  conversations?: P3Conv[];
+  /** When inExam, adds an exam-wide numbering offset (1-based display) */
+  questionNumberOffset?: number;
+  /** When inExam, display total questions across the whole exam (e.g. 200) */
+  examTotalQuestions?: number;
 }
 
 export default function Part3Shell({
   onStart,
   onComplete,
   inExam = false,
+  conversations: conversationsProp,
+  questionNumberOffset = 0,
+  examTotalQuestions,
 }: Part3ShellProps) {
+  const conversationsData = conversationsProp ?? allConversations.slice(0, 13);
+  const TOTAL_CONVS = conversationsData.length;
+  const PART3_TOTAL = TOTAL_CONVS * QUESTIONS_PER_CONV;
   const [phase, setPhase] = useState<"intro" | "questions" | "done">("intro");
   const [conversationIndex, setConversationIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({}); // keyed by global 0-based index
@@ -62,13 +64,13 @@ export default function Part3Shell({
     const next = conversationIndex + 1;
     if (next >= TOTAL_CONVS) {
       setPhase("done");
-      onComplete?.();
+      onComplete?.(answers);
     } else {
       setConversationIndex(next);
     }
-  }, [conversationIndex, onComplete]);
+  }, [conversationIndex, onComplete, answers]);
 
-  const currentConv = p3Data.conversations[conversationIndex];
+  const currentConv = conversationsData[conversationIndex];
 
   return (
     <>
@@ -82,8 +84,10 @@ export default function Part3Shell({
           key={conversationIndex}
           conversationIndex={conversationIndex}
           totalConversations={TOTAL_CONVS}
-          startQuestionNumber={convStart + 1}
-          totalQuestions={PART3_TOTAL}
+          startQuestionNumber={
+            (inExam ? questionNumberOffset : 0) + (convStart + 1)
+          }
+          totalQuestions={inExam ? (examTotalQuestions ?? 200) : PART3_TOTAL}
           answers={Object.fromEntries(
             Object.entries(answers)
               .filter(([k]) => {

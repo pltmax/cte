@@ -4,22 +4,15 @@ import { useState, useCallback } from "react";
 import Part2Intro from "@/components/exam/Part2Intro";
 import Part2Batch from "@/components/exam/Part2Batch";
 import rawP2 from "@mockdata/TOEIC/listening_part2/part2_transcript.json";
+import type { ExamP2Question } from "@/types/exam-data";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-interface P2QuestionData {
-  question: string;
-  options: string[];
-  answer: string;
-  // Populated by scripts/gcs/upload_to_gcs.py after GCS upload
-  question_audio_url?: string;
-  option_audio_urls?: { A: string; B: string; C: string };
-}
+type P2QuestionData = ExamP2Question;
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const p2Data = rawP2 as { questions: P2QuestionData[] };
-const PART2_TOTAL = 25; // TOEIC Part 2 uses 25 questions
+const allQuestions = (rawP2 as { questions: P2QuestionData[] }).questions;
 const BATCH_SIZE = 5;
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
@@ -27,17 +20,28 @@ const BATCH_SIZE = 5;
 interface Part2ShellProps {
   /** Called when user clicks "Commencer la partie 2" — use to resume timer */
   onStart?: () => void;
-  /** Called when all 25 questions are answered */
-  onComplete?: () => void;
+  /** Called when all questions are answered */
+  onComplete?: (answers: Record<number, string>) => void;
   /** Controls copy in Part2Intro ("Le minuteur reprend…" vs default) */
   inExam?: boolean;
+  /** Exam-specific question subset; falls back to full JSON when absent */
+  questions?: P2QuestionData[];
+  /** When inExam, adds an exam-wide numbering offset (1-based display) */
+  questionNumberOffset?: number;
+  /** When inExam, display total questions across the whole exam (e.g. 200) */
+  examTotalQuestions?: number;
 }
 
 export default function Part2Shell({
   onStart,
   onComplete,
   inExam = false,
+  questions: questionsProp,
+  questionNumberOffset = 0,
+  examTotalQuestions,
 }: Part2ShellProps) {
+  const questionsData = questionsProp ?? allQuestions;
+  const PART2_TOTAL = questionsData.length;
   const [phase, setPhase] = useState<"intro" | "questions" | "done">("intro");
   // First global question index of the current batch (0-based)
   const [batchStart, setBatchStart] = useState(0);
@@ -63,14 +67,14 @@ export default function Part2Shell({
     const nextStart = batchStart + batchSize;
     if (nextStart >= PART2_TOTAL) {
       setPhase("done");
-      onComplete?.();
+      onComplete?.(answers);
     } else {
       setBatchStart(nextStart);
     }
-  }, [batchStart, batchSize, onComplete]);
+  }, [batchStart, batchSize, onComplete, answers]);
 
   // Slice the question audio data for the current batch
-  const batchQuestions = p2Data.questions.slice(batchStart, batchStart + batchSize);
+  const batchQuestions = questionsData.slice(batchStart, batchStart + batchSize);
   const questionAudios = batchQuestions.map((q) => ({
     questionAudioUrl: q.question_audio_url,
     optionAudioUrls: q.option_audio_urls,
@@ -88,8 +92,10 @@ export default function Part2Shell({
           key={batchIndex}
           batchIndex={batchIndex}
           batchSize={batchSize}
-          startQuestionNumber={batchStart + 1}
-          totalQuestions={PART2_TOTAL}
+          startQuestionNumber={
+            (inExam ? questionNumberOffset : 0) + (batchStart + 1)
+          }
+          totalQuestions={inExam ? (examTotalQuestions ?? 200) : PART2_TOTAL}
           answers={
             Object.fromEntries(
               Object.entries(answers)

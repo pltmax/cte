@@ -7,11 +7,8 @@ import rawData from "@mockdata/TOEIC/listening_part4/part4_transcript.json";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-// Cast to include optional audio_url (populated by scripts/gcs/upload_to_gcs.py)
-const talks: TalkData[] = (rawData as { talks: TalkData[] }).talks;
-const TOTAL_TALKS = talks.length;
+const allTalks: TalkData[] = (rawData as { talks: TalkData[] }).talks;
 const QUESTIONS_PER_TALK = 3;
-const PART4_TOTAL = TOTAL_TALKS * QUESTIONS_PER_TALK;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -21,15 +18,27 @@ type Phase = "intro" | "questions" | "done";
 
 interface Part4ShellProps {
   onStart?: () => void;
-  onComplete?: () => void;
+  onComplete?: (answers: Record<number, string>) => void;
   inExam?: boolean;
+  /** Exam-specific talk subset; falls back to full JSON when absent */
+  talks?: TalkData[];
+  /** When inExam, adds an exam-wide numbering offset (1-based display) */
+  questionNumberOffset?: number;
+  /** When inExam, display total questions across the whole exam (e.g. 200) */
+  examTotalQuestions?: number;
 }
 
 export default function Part4Shell({
   onStart,
   onComplete,
   inExam = false,
+  talks: talksProp,
+  questionNumberOffset = 0,
+  examTotalQuestions,
 }: Part4ShellProps) {
+  const talks = talksProp ?? allTalks;
+  const TOTAL_TALKS = talks.length;
+  const PART4_TOTAL = TOTAL_TALKS * QUESTIONS_PER_TALK;
   const [phase, setPhase] = useState<Phase>("intro");
   const [talkIndex, setTalkIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({}); // keyed by global 0-based index
@@ -52,11 +61,11 @@ export default function Part4Shell({
     const next = talkIndex + 1;
     if (next >= TOTAL_TALKS) {
       setPhase("done");
-      onComplete?.();
+      onComplete?.(answers);
     } else {
       setTalkIndex(next);
     }
-  }, [talkIndex, onComplete]);
+  }, [talkIndex, onComplete, answers]);
 
   return (
     <>
@@ -71,8 +80,10 @@ export default function Part4Shell({
           talk={talks[talkIndex]}
           talkIndex={talkIndex}
           totalTalks={TOTAL_TALKS}
-          startQuestionNumber={talkStart + 1}
-          totalQuestions={PART4_TOTAL}
+          startQuestionNumber={
+            (inExam ? questionNumberOffset : 0) + (talkStart + 1)
+          }
+          totalQuestions={inExam ? (examTotalQuestions ?? 200) : PART4_TOTAL}
           answers={Object.fromEntries(
             Object.entries(answers)
               .filter(([k]) => {

@@ -7,12 +7,10 @@ import rawData from "@mockdata/TOEIC/reading_part6/part6_content.json";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const passages: PassageData[] = (
+const allPassages: PassageData[] = (
   rawData as { passages: PassageData[] }
 ).passages;
-const TOTAL_PASSAGES = passages.length;
 const QUESTIONS_PER_PASSAGE = 4;
-const PART6_TOTAL = TOTAL_PASSAGES * QUESTIONS_PER_PASSAGE;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -22,15 +20,28 @@ type Phase = "intro" | "questions" | "done";
 
 interface Part6ShellProps {
   onStart?: () => void;
-  onComplete?: () => void;
+  onComplete?: (answers: Record<number, string>) => void;
   inExam?: boolean;
+  /** Exam-specific passage subset; falls back to full JSON when absent */
+  passages?: PassageData[];
+  /** When inExam, adds an exam-wide numbering offset (1-based display) */
+  questionNumberOffset?: number;
+  /** When inExam, display total questions across the whole exam (e.g. 200) */
+  examTotalQuestions?: number;
 }
 
 export default function Part6Shell({
   onStart,
   onComplete,
   inExam = false,
+  passages: passagesProp,
+  questionNumberOffset = 0,
+  examTotalQuestions,
 }: Part6ShellProps) {
+  const passages = passagesProp ?? allPassages;
+  const TOTAL_PASSAGES = passages.length;
+  const PART6_TOTAL = TOTAL_PASSAGES * QUESTIONS_PER_PASSAGE;
+
   const [phase, setPhase] = useState<Phase>("intro");
   const [passageIndex, setPassageIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({}); // keyed by global 0-based index
@@ -65,11 +76,11 @@ export default function Part6Shell({
   const handleNext = useCallback(() => {
     if (isLast) {
       setPhase("done");
-      onComplete?.();
+      onComplete?.(answers);
     } else {
       setPassageIndex((i) => i + 1);
     }
-  }, [isLast, onComplete]);
+  }, [isLast, onComplete, answers]);
 
   return (
     <>
@@ -83,8 +94,10 @@ export default function Part6Shell({
           passage={passages[passageIndex]}
           passageIndex={passageIndex}
           totalPassages={TOTAL_PASSAGES}
-          startQuestionNumber={passageStart + 1}
-          totalQuestions={PART6_TOTAL}
+          startQuestionNumber={
+            (inExam ? questionNumberOffset : 0) + (passageStart + 1)
+          }
+          totalQuestions={inExam ? (examTotalQuestions ?? 200) : PART6_TOTAL}
           answers={Object.fromEntries(
             Object.entries(answers)
               .filter(([k]) => {
