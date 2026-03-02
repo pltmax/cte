@@ -1,4 +1,5 @@
 from typing import Annotated
+from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException
 
@@ -15,7 +16,7 @@ router = APIRouter(prefix="/api/v1/admin", tags=["admin"])
     summary="Grant premium role to a user",
 )
 async def grant_premium(
-    user_id: str,
+    user_id: UUID,
     _: Annotated[str, Depends(require_admin)],
 ) -> MessageResponse:
     """Set a user's role to 'premium'. Requires admin authorization."""
@@ -24,7 +25,7 @@ async def grant_premium(
     result = (
         admin.table("profiles")
         .update({"role": "premium"})
-        .eq("id", user_id)
+        .eq("id", str(user_id))
         .execute()
     )
 
@@ -40,7 +41,7 @@ async def grant_premium(
     summary="Add credits to a user's account",
 )
 async def add_credits(
-    user_id: str,
+    user_id: UUID,
     body: AddCreditsRequest,
     _: Annotated[str, Depends(require_admin)],
 ) -> MessageResponse:
@@ -50,7 +51,7 @@ async def add_credits(
     try:
         admin.rpc(
             "increment_credits",
-            {"target_user_id": user_id, "amount": body.amount},
+            {"target_user_id": str(user_id), "amount": body.amount},
         ).execute()
     except Exception as exc:
         if "user_not_found" in str(exc):

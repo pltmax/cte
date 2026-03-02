@@ -105,7 +105,9 @@ export default function SignupForm() {
       if (isPhoneDuplicateError(authError.message)) {
         setError("Ce numéro de téléphone est déjà associé à un compte.");
       } else {
-        setError(authError.message);
+        // Do not surface raw Supabase errors — they leak DB internals (table
+      // names, constraint names, etc.). Show a generic message instead.
+      setError("Une erreur est survenue. Vérifie tes informations et réessaie.");
       }
       setLoading(false);
       return;

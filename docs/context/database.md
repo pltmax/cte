@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-03-01 10:52
+> Auto-generated on 2026-03-02 08:37
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -277,4 +277,5 @@
 - `20260228000001_launch_exam_admin_bypass.sql`
 - `20260301000001_complete_exam.sql`
 - `20260301000002_mock_exams_answers.sql`
+- `20260302000001_security_hardening.sql`
 

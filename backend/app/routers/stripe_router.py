@@ -7,6 +7,7 @@ from fastapi import APIRouter, Depends, Header, HTTPException, Request
 
 from app.db import get_admin_client
 from app.dependencies import require_auth
+from app.limiter import limiter
 from app.models.stripe import CheckoutRequest, CheckoutResponse, PortalResponse
 
 # ─── Stripe config ────────────────────────────────────────────────────────────
@@ -58,7 +59,9 @@ def _ts_to_iso(unix_ts: int | None) -> str | None:
 
 
 @router.post("/checkout", response_model=CheckoutResponse)
+@limiter.limit("10/minute")
 async def create_checkout_session(
+    request: Request,
     body: CheckoutRequest,
     user_id: Annotated[str, Depends(require_auth)],
 ) -> CheckoutResponse:
@@ -114,7 +117,9 @@ async def create_checkout_session(
 
 
 @router.post("/portal", response_model=PortalResponse)
+@limiter.limit("10/minute")
 async def create_portal_session(
+    request: Request,
     user_id: Annotated[str, Depends(require_auth)],
 ) -> PortalResponse:
     """Create a Stripe Customer Portal session for subscription management."""
