@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 function formatTime(totalSeconds: number): string {
   const m = Math.floor(totalSeconds / 60);
@@ -25,15 +24,13 @@ export default function ExamHeader({
       <div className="max-w-3xl mx-auto flex items-center justify-between">
         {/* Left: logo + title */}
         <div className="flex items-center gap-4">
-          <Link href="/dashboard">
-            <Image
-              src="/logoWhiteMode1.svg"
-              alt="Choppe Ton Exam"
-              width={36}
-              height={36}
-              priority
-            />
-          </Link>
+          <Image
+            src="/logoWhiteMode1.svg"
+            alt="Choppe Ton Exam"
+            width={36}
+            height={36}
+            priority
+          />
           <div className="w-px h-5 bg-gray-200" />
           <span className="text-sm font-semibold text-gray-700">
             Examen d&apos;entraînement

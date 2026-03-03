@@ -37,7 +37,7 @@ export default function ForgotPasswordPage() {
           <ForgotPasswordForm />
 
           <p className="mt-6 text-center text-sm text-gray-500">
-            Tu te souviens ?{" "}
+            Tu t'en souviens ?{" "}
             <Link
               href="/login"
               className="text-[#6600CC] font-semibold hover:underline"

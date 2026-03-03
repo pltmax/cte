@@ -432,9 +432,17 @@ export default function Part4Talk({
     setAudioPhase("playing");
     setGraceLeft(GRACE_PERIOD_S);
     if (hasAudio && audioRef.current) {
-      audioRef.current.src = talk.audio_url!;
-      audioRef.current.play().catch(console.error);
-      return;
+      const el = audioRef.current;
+      el.src = talk.audio_url!;
+      el.play().catch((err: unknown) => {
+        // AbortError is expected when cleanup pauses the element (React Strict Mode
+        // double-invocation, or component unmounting mid-play). Suppress it.
+        if (err instanceof Error && err.name === "AbortError") return;
+        console.error(err);
+      });
+      return () => {
+        el.pause();
+      };
     }
     const id = setTimeout(() => setAudioPhase("grace"), AUDIO_DURATION_MS);
     return () => clearTimeout(id);

@@ -1,16 +1,18 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+type AudioMap = Record<"A" | "B" | "C" | "D", HTMLAudioElement>;
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const AUDIO_DURATION_MS = 8_000; // simulated audio length (fallback)
-const GRACE_PERIOD_S = 5; // countdown after audio before auto-advance
 const LETTERS = ["A", "B", "C", "D"] as const;
 const AUDIO_ICON_FLICKER_MS = 1_000;
-// The 4 statement files are played sequentially: A → B → C → D
-const AUDIO_SEQUENCE = ["A", "B", "C", "D"] as const;
+const WAIT_BEFORE_AUDIO_S = 3;
+const GRACE_PERIOD_S = 5;
 
 // ─── Sound icon ───────────────────────────────────────────────────────────────
 
@@ -26,11 +28,7 @@ function SoundIcon({ isPlaying }: { isPlaying: boolean }) {
     return () => clearInterval(id);
   }, [isPlaying]);
 
-  const color = !isPlaying
-    ? "#D1D5DB"
-    : tick
-    ? "#6600CC"
-    : "#D1D5DB";
+  const color = !isPlaying ? "#D1D5DB" : tick ? "#6600CC" : "#D1D5DB";
 
   return (
     <svg
@@ -40,19 +38,16 @@ function SoundIcon({ isPlaying }: { isPlaying: boolean }) {
       fill="none"
       aria-label={isPlaying ? "Audio en cours" : "Audio terminé"}
     >
-      {/* Speaker body */}
       <path
         d="M3 9v6h4l5 5V4L7 9H3z"
         fill={color}
         style={{ transition: "fill 0.3s ease" }}
       />
-      {/* Inner wave */}
       <path
         d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
         fill={color}
         style={{ transition: "fill 0.3s ease" }}
       />
-      {/* Outer wave — only when playing */}
       <path
         d="M19 6.46C21.39 8.03 23 10.31 23 12.96s-1.61 4.93-4 6.5"
         stroke={color}
@@ -69,90 +64,173 @@ function SoundIcon({ isPlaying }: { isPlaying: boolean }) {
 }
 
 // ─── Part1Question ────────────────────────────────────────────────────────────
+//
+// Self-contained 3-phase audio machine.  Part1Shell mounts a fresh instance
+// for each question (via key={questionIndex}), so all internal state resets
+// automatically between questions.
 
 interface Part1QuestionProps {
   questionIndex: number;
   totalQuestions: number;
+  displayQuestionNumber?: number;
+  displayTotalQuestions?: number;
   selectedAnswer: string | null;
   onSelect: (answer: string) => void;
-  onAutoAdvance: () => void;
-  /** GCS image URL — shown when available, placeholder otherwise */
   imageUrl?: string;
-  /** GCS audio URLs for each statement — drives real playback when provided */
   audioUrls?: { A: string; B: string; C: string; D: string };
+  preloadedAudios?: AudioMap;
+  onGraceStart: () => void;
+  onAutoAdvance: () => void;
 }
 
 export default function Part1Question({
   questionIndex,
   totalQuestions,
+  displayQuestionNumber,
+  displayTotalQuestions,
   selectedAnswer,
   onSelect,
-  onAutoAdvance,
   imageUrl,
   audioUrls,
+  preloadedAudios,
+  onGraceStart,
+  onAutoAdvance,
 }: Part1QuestionProps) {
-  const [audioPhase, setAudioPhase] = useState<"playing" | "grace" | "done">(
-    "playing"
-  );
-  const [graceLeft, setGraceLeft] = useState(GRACE_PERIOD_S);
-  // Index into AUDIO_SEQUENCE (A=0, B=1, C=2, D=3)
+  // ─── Internal 3-phase state ──────────────────────────────────────────────
+  //
+  //  "waiting" → image shown, 3-s countdown before audio starts
+  //  "playing" → audio chain A→B→C→D is running, SoundIcon flickers
+  //  "grace"   → audio finished, 5-s countdown before auto-advance
+
+  const [phase, setPhase] = useState<"waiting" | "playing" | "grace">("waiting");
+  const [countdown, setCountdown] = useState(WAIT_BEFORE_AUDIO_S);
   const [seqIdx, setSeqIdx] = useState(0);
-  const audioRef = useRef<HTMLAudioElement>(null);
 
-  const hasAudio = !!audioUrls;
+  // Stable refs so async callbacks always call the latest prop version.
+  const onGraceStartRef = useRef(onGraceStart);
+  const onAutoAdvanceRef = useRef(onAutoAdvance);
+  useEffect(() => { onGraceStartRef.current = onGraceStart; }, [onGraceStart]);
+  useEffect(() => { onAutoAdvanceRef.current = onAutoAdvance; }, [onAutoAdvance]);
 
-  // Stable ref for onAutoAdvance
-  const advanceRef = useCallback(onAutoAdvance, [onAutoAdvance]); // eslint-disable-line
+  // ─── Phase: waiting ──────────────────────────────────────────────────────
+  // 3 → 2 → 1 → 0, then switch to "playing".
 
-  // Phase 1: start audio (real or simulated)
   useEffect(() => {
-    setAudioPhase("playing");
-    setGraceLeft(GRACE_PERIOD_S);
-    setSeqIdx(0);
-    if (hasAudio) return; // real audio drives the transition via onEnded
-    const id = setTimeout(() => setAudioPhase("grace"), AUDIO_DURATION_MS);
-    return () => clearTimeout(id);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps — runs once per mount (key resets)
+    if (phase !== "waiting") return;
 
-  // Real audio: when seqIdx changes, load + play the corresponding statement
-  useEffect(() => {
-    if (!hasAudio || !audioRef.current) return;
-    const letter = AUDIO_SEQUENCE[seqIdx];
-    audioRef.current.src = audioUrls![letter];
-    audioRef.current.play().catch(console.error);
-  }, [seqIdx]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Real audio: when a statement ends, advance to next or enter grace
-  const handleAudioEnded = useCallback(() => {
-    setSeqIdx((prev) => {
-      const next = prev + 1;
-      if (next < AUDIO_SEQUENCE.length) return next;
-      setAudioPhase("grace");
-      return prev;
-    });
-  }, []);
-
-  // Phase 2: grace period countdown
-  useEffect(() => {
-    if (audioPhase !== "grace") return;
+    let remaining = WAIT_BEFORE_AUDIO_S;
     const id = setInterval(() => {
-      setGraceLeft((s) => {
-        if (s <= 1) {
-          clearInterval(id);
-          setAudioPhase("done");
-          return 0;
-        }
-        return s - 1;
-      });
+      remaining--;
+      if (remaining <= 0) {
+        clearInterval(id);
+        setCountdown(0);
+        setPhase("playing");
+      } else {
+        setCountdown(remaining);
+      }
     }, 1000);
-    return () => clearInterval(id);
-  }, [audioPhase]);
 
-  // Phase 3: fire parent callback
+    return () => clearInterval(id);
+  }, [phase]);
+
+  // ─── Phase: playing ──────────────────────────────────────────────────────
+  // Resolve audio elements, play A→B→C→D via onended chain, then enter grace.
+
   useEffect(() => {
-    if (audioPhase !== "done") return;
-    advanceRef();
-  }, [audioPhase, advanceRef]);
+    if (phase !== "playing") return;
+
+    // Resolve audio elements from preloaded cache or create fresh ones.
+    let audioEls: HTMLAudioElement[] | null = null;
+    let owned = false; // true → we created them, must clean up src on exit
+
+    if (preloadedAudios) {
+      audioEls = LETTERS.map((l) => preloadedAudios[l]);
+    } else if (audioUrls) {
+      owned = true;
+      audioEls = LETTERS.map((l) => {
+        const el = new Audio(audioUrls[l]);
+        el.preload = "auto";
+        return el;
+      });
+    }
+
+    // No audio available: skip straight to grace.
+    if (!audioEls) {
+      setCountdown(GRACE_PERIOD_S);
+      setPhase("grace");
+      onGraceStartRef.current();
+      return;
+    }
+
+    let cancelled = false;
+    const els = audioEls;
+
+    function enterGrace() {
+      if (cancelled) return;
+      setCountdown(GRACE_PERIOD_S);
+      setPhase("grace");
+      onGraceStartRef.current();
+    }
+
+    function playFrom(idx: number) {
+      if (cancelled || idx >= LETTERS.length) {
+        if (!cancelled) enterGrace();
+        return;
+      }
+
+      const el = els[idx];
+      setSeqIdx(idx);
+      el.onended = () => playFrom(idx + 1);
+
+      const doPlay = () => {
+        if (!cancelled) el.play().catch(console.error);
+      };
+
+      if (el.readyState >= 3) {
+        doPlay();
+      } else {
+        el.addEventListener("canplay", doPlay, { once: true });
+      }
+    }
+
+    playFrom(0);
+
+    return () => {
+      cancelled = true;
+      for (const el of els) {
+        el.onended = null;
+        el.pause();
+      }
+      if (owned) {
+        for (const el of els) el.src = "";
+      }
+    };
+  }, [phase]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ─── Phase: grace ─────────────────────────────────────────────────────────
+  // 5 → 4 → 3 → 2 → 1 → 0, then call onAutoAdvance.
+
+  useEffect(() => {
+    if (phase !== "grace") return;
+
+    let remaining = GRACE_PERIOD_S;
+    const id = setInterval(() => {
+      remaining--;
+      if (remaining <= 0) {
+        clearInterval(id);
+        setCountdown(0);
+        onAutoAdvanceRef.current();
+      } else {
+        setCountdown(remaining);
+      }
+    }, 1000);
+
+    return () => clearInterval(id);
+  }, [phase]);
+
+  // ─── Render ───────────────────────────────────────────────────────────────
+
+  const hasAudio = !!(preloadedAudios || audioUrls);
 
   return (
     <div className="p-8 flex flex-col gap-6">
@@ -162,7 +240,8 @@ export default function Part1Question({
           Partie 1 — Photographies
         </span>
         <span className="text-xs text-gray-400 tabular-nums">
-          {questionIndex + 1} / {totalQuestions}
+          {displayQuestionNumber ?? questionIndex + 1} /{" "}
+          {displayTotalQuestions ?? totalQuestions}
         </span>
       </div>
 
@@ -211,22 +290,31 @@ export default function Part1Question({
 
       {/* Sound indicator */}
       <div className="flex flex-col items-center gap-2">
-        <SoundIcon isPlaying={audioPhase === "playing"} />
-        {hasAudio && audioPhase === "playing" && (
+        <SoundIcon isPlaying={phase === "playing"} />
+
+        {hasAudio && phase === "playing" && (
           <p className="text-xs text-gray-400">
-            Énoncé {seqIdx + 1} / {AUDIO_SEQUENCE.length}
+            Énoncé {seqIdx + 1} / {LETTERS.length}
           </p>
         )}
+
         <div className="h-5 flex items-center">
-          {audioPhase === "playing" && (
+          {phase === "waiting" && (
+            <p className="text-xs text-gray-400">
+              Audio dans{" "}
+              <span className="font-semibold tabular-nums">{countdown}</span>
+              &thinsp;s…
+            </p>
+          )}
+          {phase === "playing" && (
             <p className="text-xs text-gray-400 animate-pulse">
               Écoute en cours…
             </p>
           )}
-          {audioPhase === "grace" && (
+          {phase === "grace" && (
             <p className="text-xs text-gray-500">
               Question suivante dans{" "}
-              <span className="font-semibold tabular-nums">{graceLeft}</span>
+              <span className="font-semibold tabular-nums">{countdown}</span>
               &thinsp;s
             </p>
           )}
@@ -260,9 +348,6 @@ export default function Part1Question({
           );
         })}
       </div>
-
-      {/* Hidden audio element for real playback */}
-      <audio ref={audioRef} onEnded={handleAudioEnded} className="hidden" />
     </div>
   );
 }

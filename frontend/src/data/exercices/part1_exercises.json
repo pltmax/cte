@@ -1,0 +1,519 @@
+{
+  "advice": {
+    "intro": "6 photos, 4 énoncés (A–D) pour chacune. L'audio ne passe qu'une seule fois et rien n'est écrit à l'écran.",
+    "strategy": "Observe la photo avant l'audio : identifie le(s) sujet(s), l'action ou l'état, et les objets au premier plan.",
+    "traps": [
+      {
+        "label": "Mauvaise action",
+        "example": "writing au lieu de reading"
+      },
+      {
+        "label": "Mauvais objet",
+        "example": "a document au lieu de a book"
+      },
+      {
+        "label": "Personne inventée",
+        "example": "une personne absente de la photo"
+      },
+      {
+        "label": "Mauvais lieu",
+        "example": "at the counter au lieu de at the table"
+      },
+      {
+        "label": "Inversion d'état",
+        "example": "piled in a sink au lieu de stacked on a shelf"
+      },
+      {
+        "label": "Décalage temporel",
+        "example": "setting up chairs alors que la réunion est déjà commencée"
+      }
+    ]
+  },
+  "types": [
+    {
+      "id": "une_personne",
+      "label": "Une personne",
+      "description": "La photo montre une seule personne."
+    },
+    {
+      "id": "plusieurs_personnes",
+      "label": "Plusieurs personnes",
+      "description": "La photo montre un groupe de personnes."
+    },
+    {
+      "id": "scene_vide",
+      "label": "Scène sans personne",
+      "description": "La photo ne montre aucune personne."
+    }
+  ],
+  "questions": [
+    {
+      "image": "manReading.jpeg",
+      "type": "une_personne",
+      "statements": [
+        "(A) A man is writing notes in a notebook.",
+        "(B) A man is seated, reading a book.",
+        "(C) A man is placing books onto a shelf.",
+        "(D) A man is holding up a document to show a colleague."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Un homme assis en train de lire — action principale sans ambiguïté.",
+        "distractors": {
+          "A": "Même posture que la lecture, mais « writing » implique un stylo et une production active.",
+          "C": "Contexte de bibliothèque plausible, mais l'action de ranger n'est pas visible sur la photo.",
+          "D": "Personne inventée : aucun collègue n'apparaît sur la photo."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q01_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q01_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q01_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q01_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/manReading.jpeg"
+    },
+    {
+      "image": "womanCafe.jpeg",
+      "type": "une_personne",
+      "statements": [
+        "(A) A woman is seated at a café table.",
+        "(B) A woman is ordering a drink at a café counter.",
+        "(C) A woman is wiping down a café table with a cloth.",
+        "(D) Two women are having a conversation over coffee."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Une femme assise à une table de café.",
+        "distractors": {
+          "B": "Mauvais lieu + mauvaise action : elle n'est pas au comptoir en train de commander.",
+          "C": "Mauvais rôle : elle est cliente, pas en train d'essuyer la table.",
+          "D": "Personne inventée : une seule femme est visible, pas deux."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q02_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q02_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q02_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q02_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/womanCafe.jpeg"
+    },
+    {
+      "image": "womanConstruction.jpeg",
+      "type": "une_personne",
+      "statements": [
+        "(A) A woman is operating heavy machinery at a construction site.",
+        "(B) A woman is reviewing plans at a construction site.",
+        "(C) A woman is installing scaffolding on a building exterior.",
+        "(D) A woman is handing tools to a construction worker."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Une femme qui examine des plans sur un chantier — rôle de supervision.",
+        "distractors": {
+          "A": "Mauvaise action : opérer des engins lourds est bien plus physique que ce qui est montré.",
+          "C": "Mauvaise action : installer des échafaudages est un rôle d'ouvrier, pas de superviseur.",
+          "D": "Personne inventée : aucun ouvrier n'est visible pour recevoir des outils."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q03_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q03_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q03_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q03_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/womanConstruction.jpeg"
+    },
+    {
+      "image": "peopleHandshake.jpeg",
+      "type": "plusieurs_personnes",
+      "statements": [
+        "(A) Two people are signing a contract at a desk.",
+        "(B) A group of colleagues are exchanging business cards.",
+        "(C) Two people are bowing to greet each other.",
+        "(D) Two people are shaking hands."
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "Deux personnes se serrent la main — description directe du geste visible.",
+        "distractors": {
+          "A": "Mauvaise action : signer un contrat partage le même contexte mais le geste physique est totalement différent.",
+          "B": "Mauvaise action + quantité : l'échange de cartes implique un groupe, pas deux personnes.",
+          "C": "Mauvaise action : une révérence est un geste de salutation différent d'une poignée de main."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q04_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q04_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q04_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q04_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/peopleHandshake.jpeg"
+    },
+    {
+      "image": "peopleMeeting.jpeg",
+      "type": "plusieurs_personnes",
+      "statements": [
+        "(A) A presenter is writing on a whiteboard.",
+        "(B) Employees are setting up a meeting room.",
+        "(C) People are gathered around a screen for a presentation.",
+        "(D) People are seated around a conference table."
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "Des personnes assises autour d'une table de conférence.",
+        "distractors": {
+          "A": "Vue partielle : un tableau blanc peut être en arrière-plan, mais personne n'est en train d'y écrire.",
+          "B": "Décalage temporel : préparer la salle décrit l'instant avant la réunion, pas la réunion elle-même.",
+          "C": "Focalisation erronée : un écran n'est pas le point focal de la scène décrite."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q05_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q05_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q05_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q05_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/peopleMeeting.jpeg"
+    },
+    {
+      "image": "peopleWaitingTrain.jpeg",
+      "type": "plusieurs_personnes",
+      "statements": [
+        "(A) Passengers are boarding a train through an open door.",
+        "(B) People are waiting on a train platform.",
+        "(C) Commuters are exiting a train at the station.",
+        "(D) A crowd is purchasing tickets at the station entrance."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Des personnes qui attendent sur un quai de gare.",
+        "distractors": {
+          "A": "Décalage temporel : monter dans le train est l'étape suivante après l'attente, pas ce qui est montré.",
+          "C": "Inversion : sortir du train est l'action opposée à l'attente sur le quai.",
+          "D": "Mauvais lieu + action : acheter des billets se passe au guichet, absent de la photo."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q06_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q06_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q06_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q06_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/peopleWaitingTrain.jpeg"
+    },
+    {
+      "image": "parkingLot.jpeg",
+      "type": "scene_vide",
+      "statements": [
+        "(A) Cars are lined up at a drive-through window.",
+        "(B) Vehicles are parked in an outdoor lot.",
+        "(C) A driver is parking a car inside a garage.",
+        "(D) Mechanics are inspecting cars in a workshop."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Des véhicules garés dans un parking extérieur — état statique, pas d'action en cours.",
+        "distractors": {
+          "A": "Mauvais lieu : le drive-through implique une fenêtre de service absente de la photo.",
+          "C": "Personne inventée + mauvais lieu : aucun conducteur actif ni garage intérieur n'est visible.",
+          "D": "Personnes inventées : aucun mécanicien ni atelier n'apparaît sur la photo."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q07_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q07_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q07_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q07_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/parkingLot.jpeg"
+    },
+    {
+      "image": "dishesStacked.jpeg",
+      "type": "scene_vide",
+      "statements": [
+        "(A) A person is washing dishes at a kitchen sink.",
+        "(B) Dishes are piled up in a sink after a meal.",
+        "(C) Plates are neatly stacked on a surface.",
+        "(D) A waiter is carrying a tray of plates to a table."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Des assiettes proprement empilées sur une surface — état des objets, aucune personne.",
+        "distractors": {
+          "A": "Personne inventée : aucun personnage ne lave la vaisselle dans l'évier.",
+          "B": "Inversion d'état : « piled in a sink » confond un tas désordonné dans l'évier avec des assiettes rangées.",
+          "D": "Personne inventée : aucun serveur ni plateau en mouvement n'est visible."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q08_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q08_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q08_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q08_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/dishesStacked.jpeg"
+    },
+    {
+      "image": "officeEmpty.jpeg",
+      "type": "scene_vide",
+      "statements": [
+        "(A) Workstations are neatly arranged in an office.",
+        "(B) Employees are working at their computer stations.",
+        "(C) Office furniture is being moved out of the room.",
+        "(D) Technicians are installing computer equipment."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Des postes de travail ordonnés dans un bureau vide — état des objets, aucune personne.",
+        "distractors": {
+          "B": "Personne inventée : le bureau est vide, aucun employé n'est à l'écran.",
+          "C": "Mauvaise action : les meubles sont en place, pas en cours de déménagement.",
+          "D": "Personnes inventées : aucun technicien n'installe quoi que ce soit."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q09_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q09_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q09_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q09_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/officeEmpty.jpeg"
+    },
+    {
+      "image": "manAirport.jpeg",
+      "type": "une_personne",
+      "statements": [
+        "(A) He is boarding a flight at the gate.",
+        "(B) He is rolling a suitcase across the concourse.",
+        "(C) He is retrieving his luggage from a carousel.",
+        "(D) He is handing his boarding pass to an agent."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Un homme tirant une valise à roulettes dans le hall de l'aéroport — l'action en cours et le vocabulaire (rolling, concourse) sont précis.",
+        "distractors": {
+          "A": "Décalage temporel : l'embarquement est une action future ou différente ; ici, il ne fait que marcher.",
+          "C": "Mauvaise action + Mauvais lieu : il a déjà son bagage en main, il n'est pas en train de le récupérer sur le tapis roulant.",
+          "D": "Personne inventée : aucun agent d'embarquement n'est visible sur l'image."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q10_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q10_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q10_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q10_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/manAirport.jpeg"
+    },
+    {
+      "image": "womanLawn.jpeg",
+      "type": "une_personne",
+      "statements": [
+        "(A) She is pushing a lawnmower across the grass.",
+        "(B) She is raking fallen leaves into a pile.",
+        "(C) She is trimming the hedges along the fence.",
+        "(D) She is watering the flower beds with a hose."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Une femme pousse une tondeuse à gazon sur la pelouse — description directe de l'action et de l'outil visible.",
+        "distractors": {
+          "B": "Mauvaise action : râteler des feuilles (raking) implique un râteau, pas une tondeuse à gazon.",
+          "C": "Mauvaise action : tailler des haies est une tâche extérieure plausible, mais l'outil (taille-haie) est différent d'une tondeuse.",
+          "D": "Mauvais outil : arroser des plates-bandes implique un tuyau ou un arrosoir, non visible sur la photo."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q11_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q11_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q11_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q11_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/womanLawn.jpeg"
+    },
+    {
+      "image": "womanScientist.jpeg",
+      "type": "une_personne",
+      "statements": [
+        "(A) A lab technician is adjusting the lenses of a camera.",
+        "(B) A researcher is peering through a microscope.",
+        "(C) A scientist is pouring liquid into a glass beaker.",
+        "(D) An instructor is demonstrating an experiment to students."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Un chercheur regarde attentivement dans un microscope — utilise un vocabulaire de niveau avancé (« peering ») typique du TOEIC.",
+        "distractors": {
+          "A": "Mauvais objet : la posture pourrait correspondre, mais l'objet est un microscope et non un appareil photo.",
+          "C": "Mauvaise action : verser un liquide est une action de laboratoire classique, mais elle n'est pas en train de manipuler des béchers ici.",
+          "D": "Personnes inventées : le scientifique est seul dans le cadre, il n'y a ni élèves ni public."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q12_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q12_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q12_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q12_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/womanScientist.jpeg"
+    },
+    {
+      "image": "peopleReception.jpeg",
+      "type": "plusieurs_personnes",
+      "statements": [
+        "(A) Some travelers are standing with their luggage at a front desk.",
+        "(B) A receptionist is handing a room key to the guests.",
+        "(C) A bellhop is loading suitcases onto a luggage cart.",
+        "(D) Customers are eating in a hotel dining area."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Des voyageurs se tiennent avec leurs bagages à la réception — une description globale et statique exacte de la scène.",
+        "distractors": {
+          "B": "Décalage temporel : le réceptionniste leur parle, mais on ne le voit pas encore tendre une clé ou finaliser l'enregistrement.",
+          "C": "Personne inventée / Mauvaise action : il y a bien des valises, mais aucun bagagiste (bellhop) ne les charge sur un chariot.",
+          "D": "Mauvais lieu : les personnes sont dans le hall d'accueil, pas dans un restaurant ou une salle à manger."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q13_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q13_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q13_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q13_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/peopleReception.jpeg"
+    },
+    {
+      "image": "peopleWorklift.jpeg",
+      "type": "plusieurs_personnes",
+      "statements": [
+        "(A) Workers are operating a forklift in an aisle.",
+        "(B) Merchandise is being unloaded from a delivery truck.",
+        "(C) A group of employees is reviewing information together.",
+        "(D) They are stacking boxes onto empty warehouse shelves."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Un groupe d'employés examine des informations ensemble — utilisation typique du TOEIC d'un verbe général (reviewing) pour décrire une réunion informelle autour d'un document ou d'une tablette.",
+        "distractors": {
+          "A": "Mauvaise action : le chariot élévateur (forklift) est bien présent, mais il est garé et inoccupé.",
+          "B": "Mauvais lieu : la scène se passe à l'intérieur des allées de l'entrepôt, aucun camion de livraison n'est visible.",
+          "D": "Mauvaise action : les employés sont en train de discuter, ils ne sont pas activement en train de ranger ou d'empiler des cartons (stacking)."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q14_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q14_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q14_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q14_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/peopleWorklift.jpeg"
+    },
+    {
+      "image": "peopleXray.jpeg",
+      "type": "plusieurs_personnes",
+      "statements": [
+        "(A) A practitioner is examining a patient's mouth with a tool.",
+        "(B) A medical professional is pointing at an image on a monitor.",
+        "(C) The patient is putting on a pair of protective gloves.",
+        "(D) X-rays are being printed out on paper."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Un professionnel de la santé montre du doigt une image sur un écran — description précise de l'action principale sans interpréter la conversation.",
+        "distractors": {
+          "A": "Mauvaise action : la praticienne ne regarde pas dans la bouche du patient avec un outil de dentiste, elle regarde un écran.",
+          "C": "Mauvais sujet : c'est le médecin qui porte des gants bleus, pas le patient qui est simplement assis.",
+          "D": "Mauvais objet : les radiographies sont au format numérique sur un écran, elles ne sortent pas d'une imprimante."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q15_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q15_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q15_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q15_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/peopleXray.jpeg"
+    },
+    {
+      "image": "boatsHarbor.jpeg",
+      "type": "scene_vide",
+      "statements": [
+        "(A) Boats are secured to a wooden pier.",
+        "(B) A crew is cleaning the deck of a ship.",
+        "(C) Passengers are boarding a ferry.",
+        "(D) The vessels are sailing out to sea."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Des bateaux sont amarrés à une jetée en bois — description statique correcte des objets et du lieu.",
+        "distractors": {
+          "B": "Personnes inventées : aucun équipage n'est visible sur les ponts pour nettoyer.",
+          "C": "Personnes inventées + Mauvaise action : personne ne monte à bord et ce ne sont pas des ferries.",
+          "D": "Mauvaise action : les bateaux sont à l'arrêt au quai, ils ne naviguent pas en mer."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q16_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q16_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q16_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q16_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/boatsHarbor.jpeg"
+    },
+    {
+      "image": "emptyAuditorium.jpeg",
+      "type": "scene_vide",
+      "statements": [
+        "(A) Flags are displayed on the stage.",
+        "(B) The auditorium seating is completely empty.",
+        "(C) Performers are dancing on the wooden floor.",
+        "(D) A worker is sweeping the aisles between the seats."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Des drapeaux sont exposés sur la scène — bien qu'il y ait une foule, le TOEIC utilise très souvent une bonne réponse basée sur des objets inanimés en arrière-plan pour tester l'observation globale.",
+        "distractors": {
+          "B": "Inversion d'état : piège absolu ! La salle est remplie d'un public, elle n'est pas vide.",
+          "C": "Mauvaise action : il y a un orateur au pupitre, mais aucune troupe de danseurs en mouvement.",
+          "D": "Personne inventée : aucun agent d'entretien n'est visible en train de balayer."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q17_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q17_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q17_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q17_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/emptyAuditorium.jpeg"
+    },
+    {
+      "image": "tollHighway.jpeg",
+      "type": "scene_vide",
+      "statements": [
+        "(A) A driver is handing money to a toll attendant.",
+        "(B) The highway is closed for construction.",
+        "(C) Workers are repairing the roof of the structure.",
+        "(D) Traffic barricades are lined up along the lane."
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "Des barrières de circulation sont alignées le long de la voie — focalisation précise sur les balises de signalisation orange et blanches au premier plan.",
+        "distractors": {
+          "A": "Action invisible / Personne inventée : on voit des véhicules, mais on ne distingue aucun échange d'argent ni guichetier (l'action n'est pas confirmée par l'image).",
+          "B": "Interprétation erronée : la route est clairement ouverte à la circulation, elle n'est pas fermée.",
+          "C": "Personnes inventées : aucun ouvrier n'est sur le toit des péages."
+        }
+      },
+      "audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q18_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q18_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q18_C.mp3",
+        "D": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/audio/q18_D.mp3"
+      },
+      "image_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part1/images/tollHighway.jpeg"
+    }
+  ]
+}

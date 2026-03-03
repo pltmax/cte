@@ -1,0 +1,1211 @@
+{
+  "advice": {
+    "intro": "10 questions : une déclaration ou une question, suivie de trois réponses orales (A/B/C). L'audio passe une seule fois, rien n'est affiché à l'écran.",
+    "strategy": "Écoute le premier mot de la question et le premier mot de chaque réponse — les pièges se révèlent presque toujours dès les premières syllabes.",
+    "traps": [
+      {
+        "label": "Homophone / sosie sonore",
+        "example": "close au lieu de closed, tacks au lieu de tax"
+      },
+      {
+        "label": "Répétition exacte d'un mot",
+        "example": "si « budget » est dans la question et dans la réponse"
+      },
+      {
+        "label": "Confusion de type de question",
+        "example": "répondre « 45 minutes » à « What time? »"
+      },
+      {
+        "label": "Yes/No inadapté",
+        "example": "débuter par Yes pour une question en Wh- ou autre"
+      },
+      {
+        "label": "Réponse indirecte valide",
+        "example": "offre de chercher l'info, refus poli, troisième option"
+      },
+      {
+        "label": "Correction de prémisse",
+        "example": "« actually, it was due yesterday »"
+      }
+    ]
+  },
+  "types": [
+    {
+      "id": "wh_questions",
+      "label": "Questions en Wh-",
+      "description": "Who, What, Where, When, Why, How — identifie le mot interrogatif dès la première seconde."
+    },
+    {
+      "id": "indirect_polite_questions",
+      "label": "Questions polies indirectes",
+      "description": "Would you mind, Could you, Do you happen to know — rarement un simple Oui/Non."
+    },
+    {
+      "id": "choice_or_questions",
+      "label": "Questions alternatives",
+      "description": "A ou B — jamais Yes/No ; la réponse peut choisir, rejeter ou accepter les deux."
+    },
+    {
+      "id": "statements",
+      "label": "Énoncés",
+      "description": "Pas une question — écoute l'intention : problème, bonne nouvelle, opinion, écart."
+    },
+    {
+      "id": "tag_questions",
+      "label": "Questions-tags",
+      "description": "Ignore le tag (relance) final ; réponds selon la vérité de l'action principale."
+    }
+  ],
+  "questions": [
+    {
+      "category": "wh_questions",
+      "question": "Whose signature is required on the final lease agreement?",
+      "options": [
+        "(A) It's valid for another year.",
+        "(B) Yes, you can see the signs from here.",
+        "(C) The property manager needs to sign it."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Identifie directement l'autorité requise — réponse exacte à « Whose? ».",
+        "distractors": {
+          "A": "Répond à « How long is it valid? » — confusion totale de type de question.",
+          "B": "Double piège : « Yes » (toujours faux pour Wh-) + « signs » imite « signature » phonétiquement."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q01_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q01_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q01_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q01_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "What time does the shuttle to the airport leave?",
+      "options": [
+        "(A) It takes about forty-five minutes.",
+        "(B) There's one departing at 4:15.",
+        "(C) Right outside the main entrance."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Fournit une heure précise — exactement ce que demande « What time? ».",
+        "distractors": {
+          "A": "Répond à « How long does it take? » — durée au lieu d'heure.",
+          "C": "Répond à « Where? » — lieu au lieu d'heure."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q02_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q02_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q02_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q02_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "Why has the factory floor been closed off today?",
+      "options": [
+        "(A) They are installing the new assembly line.",
+        "(B) Because it's very close to the highway.",
+        "(C) I left my clothes on the second floor."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Donne une raison concrète sans marqueur « because » — valide en Partie 2 avancée.",
+        "distractors": {
+          "B": "Piège phonétique : « close » (adjectif) sonne presque identique à « closed » (participe).",
+          "C": "Double piège : « clothes » ≈ « closed » + « floor » répété mot pour mot depuis la question."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q03_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q03_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q03_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q03_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "How did you manage to fix the network issue so quickly?",
+      "options": [
+        "(A) The manager is currently in a meeting.",
+        "(B) It's a very quick process.",
+        "(C) I just rebooted the main server."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Donne une méthode concrète — exactement ce que demande « How? ».",
+        "distractors": {
+          "A": "Piège morphologique : « manager » partage la racine de « manage » mais désigne une personne.",
+          "B": "Répète « quick » exactement — signal d'alarme le plus fiable de la Partie 2."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q04_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q04_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q04_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q04_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "Where should I submit the reimbursement form?",
+      "options": [
+        "(A) To the human resources online portal.",
+        "(B) By the end of the week, please.",
+        "(C) I forgot to form a committee."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Un portail en ligne est un lieu valide pour « Where? » — ne pas s'attendre uniquement à un lieu physique.",
+        "distractors": {
+          "B": "Répond à « When? » — décalage classique de type de question.",
+          "C": "Piège grammatical : « form » utilisé comme verbe (« to form a committee ») au lieu de nom."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q05_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q05_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q05_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q05_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "Who is overseeing the catering arrangements for the upcoming merger celebration?",
+      "options": [
+        "(A) We're expecting around two hundred guests.",
+        "(B) The committee hasn't finalized the assignments yet.",
+        "(C) I arranged the files in alphabetical order."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Réponse évasive / indirecte (très fréquente à haut niveau) — au lieu de nommer une personne, la réponse indique que la décision n'est pas encore prise.",
+        "distractors": {
+          "A": "Répond à « How many? » — glissement vers une donnée numérique liée au contexte (fête/invités).",
+          "C": "Double piège : homophone/sosie sonore (« arranged » pour « arrangements ») + changement total de contexte."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q06_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q06_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q06_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q06_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "Why were the quarterly profit margins significantly lower than projected?",
+      "options": [
+        "(A) Actually, they exceeded our expectations.",
+        "(B) We need to leave a larger margin of error.",
+        "(C) To lower the overall production costs."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Correction de la prémisse — piège ultime du TOEIC. La réponse rejette l'affirmation de la question (les profits n'étaient pas bas, ils étaient excellents).",
+        "distractors": {
+          "B": "Répétition du mot « margin » mais utilisé dans une expression (« margin of error ») qui n'a rien à voir avec les finances.",
+          "C": "Utilise le mot « lower » (présent dans la question comme adjectif) en tant que verbe, et répond à un faux objectif."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q07_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q07_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q07_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q07_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "Where can I locate the most recent demographic data for our target market?",
+      "options": [
+        "(A) The marketing team usually targets young professionals.",
+        "(B) It's scheduled to be released early next week.",
+        "(C) Didn't the director email you the link this morning?"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Contre-question — au lieu de donner un lieu physique ou un dossier, la personne répond par une question suggérant que l'information est déjà en possession de l'interlocuteur.",
+        "distractors": {
+          "A": "Recycle le vocabulaire (« marketing », « targets ») pour formuler un énoncé hors sujet.",
+          "B": "Répond à « When? » au lieu de « Where? »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q08_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q08_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q08_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q08_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "When are they planning to completely phase out the legacy software system?",
+      "options": [
+        "(A) It's a two-step authentication process.",
+        "(B) Not until the new interface is fully tested.",
+        "(C) Yes, they are out of the office today."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Réponse conditionnelle — au lieu de donner une date précise, la réponse lie l'action à l'achèvement d'une autre tâche (les tests).",
+        "distractors": {
+          "A": "Association thématique (logiciel/système) mais phrase sans aucun rapport avec la question posée.",
+          "C": "Double piège : utilisation de « Yes » (fatal pour les questions Wh-) + jeu de mots sur « phase out » et « out of the office »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q09_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q09_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q09_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q09_C.mp3"
+      }
+    },
+    {
+      "category": "wh_questions",
+      "question": "How did the logistics team manage to expedite the overseas shipping?",
+      "options": [
+        "(A) By switching to a different freight carrier.",
+        "(B) The shipping department is on the ground floor.",
+        "(C) They expect a large shipment from overseas."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Indique la méthode précise (« By switching... ») avec un vocabulaire avancé (« freight carrier » pour transporteur de fret).",
+        "distractors": {
+          "B": "Répond à « Where? » — indique l'emplacement du service d'expédition.",
+          "C": "Recyclage massif du vocabulaire (« expect » qui ressemble à « expedite », « shipment », « overseas ») sans répondre au « How? »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q10_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q10_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q10_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q10_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Would you mind reviewing this quarterly financial report before I send it to the board?",
+      "options": [
+        "(A) Not at all, just leave it on my desk.",
+        "(B) The view from the boardroom is spectacular.",
+        "(C) Yes, it's a quarter past three."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Pour « Would you mind? », accepter requiert une forme négative — « Not at all ».",
+        "distractors": {
+          "B": "Double homophone : « view » ≈ « review » + « boardroom » ≈ « board ».",
+          "C": "Double piège : « Yes » = refus + « quarter past three » ≈ « quarterly »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q51_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q51_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q51_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q51_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Do you happen to know if the 3:00 PM train to Boston has departed yet?",
+      "options": [
+        "(A) Yes, I know him very well.",
+        "(B) I can check the departure board for you.",
+        "(C) It takes about three hours to get there."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Offre de trouver l'information — réponse indirecte très courante, plus naturelle qu'un simple Oui/Non.",
+        "distractors": {
+          "A": "Glissement sémantique : « know » au sens de connaissance personnelle au lieu de savoir factuel.",
+          "C": "Répond à « How long? » — durée du trajet au lieu du statut de départ."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q52_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q52_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q52_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q52_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Could you help me set up the projector in the main auditorium?",
+      "options": [
+        "(A) The new project was very successful.",
+        "(B) I'm actually about to step into a conference call.",
+        "(C) Yes, the present is for the speaker."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Refus poli avec excuse crédible — réponse très fréquente pour « Could you…? ».",
+        "distractors": {
+          "A": "Troncature : « project » ≠ « projector », sens totalement différent.",
+          "C": "Association multicouche : « present » ≈ présentation + « speaker » lié au contexte projecteur."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q53_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q53_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q53_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q53_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "I was wondering if we should cater lunch for the client meeting on Thursday.",
+      "options": [
+        "(A) I wonder about the weather too.",
+        "(B) No, they told me they prefer to eat out.",
+        "(C) The meeting room is down the hall on the right."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Donne une décision claire — reconnaît que « I was wondering if » est une suggestion, pas une question factuelle.",
+        "distractors": {
+          "A": "Répète « wonder » mot pour mot — signal d'alarme absolu en Partie 2.",
+          "C": "Recycle « meeting » + « meeting room » — répond à un « Where? » que personne n'a posé."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q54_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q54_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q54_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q54_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Can you tell me how to access the secure client database?",
+      "options": [
+        "(A) You'll need to ask IT for a temporary password.",
+        "(B) I told him about the security update yesterday.",
+        "(C) The data was collected last month."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Redirige vers l'autorité compétente (IT) — réponse indirecte réaliste et très courante.",
+        "distractors": {
+          "B": "Double recyclage : « told » ≈ « tell » + « security » ≈ « secure ».",
+          "C": "Suppression de suffixe : « data » extrait de « database », sens déplacé."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q55_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q55_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q55_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q55_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Would you mind taking the meeting minutes during the conference call this afternoon?",
+      "options": [
+        "(A) It lasted for about forty-five minutes.",
+        "(B) Not at all, as long as someone else presents the quarterly data.",
+        "(C) The conference room is completely booked."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Acceptation conditionnelle — pour « Would you mind » (Ça vous dérangerait de), l'acceptation se fait par la négative (« Not at all » = ça ne me dérange pas) suivie ici d'une condition réaliste au bureau.",
+        "distractors": {
+          "A": "Piège sémantique redoutable : le mot « minutes » est utilisé dans la question pour désigner le « compte-rendu », mais cette option l'utilise comme unité de temps.",
+          "C": "Répétition de mots et hors sujet : reprend « conference », mais parle d'une salle physique alors qu'il s'agit d'un appel (call)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q16_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q16_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q16_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q16_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Do you happen to know if the IT department has rolled out the new cybersecurity protocols yet?",
+      "options": [
+        "(A) Yes, I know the IT director very well.",
+        "(B) I rolled up the carpet in the lobby yesterday.",
+        "(C) Check the company intranet; they usually post updates there."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Délégation / Redirection — face à une demande d'information pointue, une excellente réponse TOEIC consiste à indiquer où ou à qui s'adresser pour trouver la réponse, sans répondre par oui ou par non.",
+        "distractors": {
+          "A": "Glissement sémantique : répond au verbe « know » comme s'il s'agissait de connaître une personne, au lieu d'une information factuelle.",
+          "B": "Piège phonétique et lexical : utilise « rolled up » (enrouler) pour piéger ceux qui ont entendu « rolled out » (déployer)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q17_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q17_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q17_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q17_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "I was wondering if we could postpone the supplier negotiation until next week.",
+      "options": [
+        "(A) I wonder what the weather will be like.",
+        "(B) That might be best, since the legal team is still reviewing the contract.",
+        "(C) The post office is closed on Sundays."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Approbation avec justification — reconnaît que « I was wondering if » est en réalité une suggestion (repousser la réunion) et l'accepte en donnant une excellente raison professionnelle.",
+        "distractors": {
+          "A": "Répétition exacte d'un mot (« wonder »), piège classique du TOEIC pour les candidats qui s'accrochent au premier mot qu'ils reconnaissent.",
+          "C": "Faux-ami phonétique : « post office » est utilisé pour imiter la sonorité du début du mot « postpone »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q18_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q18_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q18_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q18_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Could you possibly review my presentation slides before I pitch to the investors tomorrow?",
+      "options": [
+        "(A) I’d love to, but I’m swamped with the end-of-month payroll.",
+        "(B) The view from the hotel was absolutely beautiful.",
+        "(C) We pitched a tent in the national park."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Refus poli avec excuse — une structure très fréquente. L'interlocuteur utilise « I'd love to, but... » (J'aimerais beaucoup, mais...) suivi d'une contrainte professionnelle (payroll = paie).",
+        "distractors": {
+          "B": "Extraction de syllabe : isole « view » du mot « review » et l'utilise dans un contexte touristique complètement décalé.",
+          "C": "Polysémie : utilise le verbe « pitch » dans le sens de « monter une tente », au lieu du sens commercial (faire une présentation/argumentaire) de la question."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q19_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q19_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q19_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q19_C.mp3"
+      }
+    },
+    {
+      "category": "indirect_polite_questions",
+      "question": "Is there any chance we can get an extension on the marketing project deadline?",
+      "options": [
+        "(A) The extension cord is in the supply closet.",
+        "(B) The client was pretty firm about needing it by Friday.",
+        "(C) Yes, I read the project guidelines carefully."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Refus indirect et réaliste — au lieu de dire un « non » brutal, la réponse évoque une contrainte externe inéluctable (l'exigence du client) pour signifier que le délai ne sera pas étendu.",
+        "distractors": {
+          "A": "Piège du mot à double sens : « extension » est utilisé ici dans le sens de « rallonge électrique » (extension cord) au lieu d'un délai supplémentaire.",
+          "C": "Répétition de mots et fausse assurance : commence par « Yes » et recycle le mot « project », mais ne répond pas du tout à la demande de délai."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q20_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q20_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q20_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q20_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Are we taking the company car to the regional conference, or should we book a flight?",
+      "options": [
+        "(A) Yes, the flight is fully booked.",
+        "(B) Actually, let's just take the express train.",
+        "(C) The conference starts early on Thursday."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Troisième option — rejette les deux alternatives pour en proposer une nouvelle (train).",
+        "distractors": {
+          "A": "Double piège : « Yes » (fatal pour les alternatives) + répétition exacte de « flight ».",
+          "C": "Répond à « When? » — recycle « conference » sans traiter le choix posé."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q11_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q11_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q11_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q11_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Would you prefer the corner office, or the one closer to the breakroom?",
+      "options": [
+        "(A) Which one gets more natural light?",
+        "(B) The breakroom is on the second floor.",
+        "(C) No, I don't work in the corner."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Contre-question pour obtenir plus d'info — réponse sophistiquée très fréquente en Partie 2 avancée.",
+        "distractors": {
+          "B": "Extraction d'un mot : « breakroom » repris tel quel, déplacé dans un contexte de lieu.",
+          "C": "Piège du « No » (faux pour les alternatives) + interprétation littérale de « corner » comme direction."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q12_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q12_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q12_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q12_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Should I email the updated agenda to the board members, or print out hard copies?",
+      "options": [
+        "(A) I reported the email issue to IT this morning.",
+        "(B) The board meeting was very productive.",
+        "(C) Could you actually do both, just in case?"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Accepte les deux alternatives — tout aussi valide que de les rejeter.",
+        "distractors": {
+          "A": "Recycle « email » + « reported » ≈ rapport — parle d'un problème IT sans rapport.",
+          "B": "Extrait « board » dans un contexte de réunion — ne répond pas au choix e-mail / impression."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q13_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q13_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q13_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q13_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Are you going to present the quarterly sales data using a pie chart or a bar graph?",
+      "options": [
+        "(A) Whichever is easier to read from the back of the room.",
+        "(B) I bought a delicious pie at the bakery.",
+        "(C) The sales team is at the bar."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Indifférence avec justification — « Whichever » est une bonne réponse très fréquente aux questions alternatives.",
+        "distractors": {
+          "B": "Homophone : « pie » (nourriture) au lieu de « pie chart ».",
+          "C": "Homophone : « bar » (pub) au lieu de « bar graph »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q14_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q14_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q14_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q14_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Is the final draft of the marketing budget due this Friday, or next Monday?",
+      "options": [
+        "(A) Yes, the budget is extremely tight this year.",
+        "(B) We market our products globally now.",
+        "(C) It was actually due yesterday."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Corrige la prémisse — la date limite est déjà passée, ni vendredi ni lundi n'est correct.",
+        "distractors": {
+          "A": "Double piège : « Yes » (fatal) + répétition exacte de « budget ».",
+          "B": "Recycle « market » comme verbe au lieu d'adjectif dans « marketing budget »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q15_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q15_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q15_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q15_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Should we renew the lease for our current office space, or start looking for a larger building?",
+      "options": [
+        "(A) Yes, the new building is very spacious.",
+        "(B) Let's wait until we see the fourth-quarter revenue projections.",
+        "(C) I will release the press statement tomorrow."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Report de décision — une stratégie d'esquive très courante et réaliste dans le monde des affaires. L'interlocuteur refuse de choisir avant d'avoir plus d'informations.",
+        "distractors": {
+          "A": "Double piège : commencer par « Yes » est toujours faux pour une question alternative (A ou B) + répétition exacte du mot « building ».",
+          "C": "Piège phonétique : « release » (publier/relâcher) sonne presque exactement comme « lease » (bail)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q26_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q26_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q26_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q26_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Are you planning to drive to the client's headquarters, or take the commuter train?",
+      "options": [
+        "(A) The head of the department is driving.",
+        "(B) No, I didn't train the new employees yet.",
+        "(C) Actually, they suggested setting up a video conference instead."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Rejet des deux options (Troisième voie) — la réponse indique que ni la voiture ni le train ne seront utilisés, car la réunion se fera à distance.",
+        "distractors": {
+          "A": "Extraction trompeuse : isole « head » du mot « headquarters » (siège social) et recycle le verbe « driving ».",
+          "B": "Piège du « No » + glissement sémantique : utilise « train » comme verbe (former) au lieu du nom (moyen de transport)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q27_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q27_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q27_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q27_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Would you prefer me to issue the invoice in euros or in dollars?",
+      "options": [
+        "(A) His voice was quite difficult to hear over the phone.",
+        "(B) Either currency is fine, as long as the VAT is included.",
+        "(C) I sent the invitations out yesterday afternoon."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Indifférence avec condition — « Either is fine » (Peu importe/Les deux me vont) est une excellente réponse aux questions alternatives, ici enrichie d'une exigence professionnelle (la TVA / VAT).",
+        "distractors": {
+          "A": "Rime et homophone : « his voice » (sa voix) est utilisé pour imiter la sonorité de « invoice » (facture).",
+          "C": "Faux-ami phonétique partiel : « invitations » ressemble vaguement à « invoice », conçu pour piéger une écoute inattentive."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q28_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q28_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q28_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q28_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Is the executive committee leaning towards acquiring the startup, or merging with our main competitor?",
+      "options": [
+        "(A) The annual tennis competition is scheduled for next month.",
+        "(B) Yes, the committee meets every Tuesday morning.",
+        "(C) Have they even finished reviewing the financial due diligence?"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Contre-question — remet en cause la validité même du choix. La personne souligne que la décision ne peut pas être prise car l'audit financier n'est pas terminé.",
+        "distractors": {
+          "A": "Dérivation hors sujet : transforme « competitor » (concurrent) en « competition » (tournoi) dans un contexte sportif abstrait.",
+          "B": "Piège du « Yes » (interdit pour une alternative) + répétition rassurante mais inutile du mot « committee »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q29_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q29_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q29_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q29_C.mp3"
+      }
+    },
+    {
+      "category": "choice_or_questions",
+      "question": "Should I book the morning flight to Chicago, or the one that leaves late in the afternoon?",
+      "options": [
+        "(A) You'd better check the CEO's availability first.",
+        "(B) I usually read a good book on long flights.",
+        "(C) The late shift starts at 4 PM."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Délégation d'autorité — refuse de choisir A ou B car une étape préliminaire (vérifier l'agenda du PDG) est requise.",
+        "distractors": {
+          "B": "Polysémie fatale : utilise « book » dans son sens nominal (un livre) au lieu du sens verbal de la question (réserver), et recycle « flight ».",
+          "C": "Association d'idées trompeuse : reprend « late » et le lie à une heure (« 4 PM ») pour imiter « afternoon », mais parle d'horaires de travail (shift)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q30_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q30_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q30_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q30_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "The projector bulb just burned out, and the clients will be here in ten minutes.",
+      "options": [
+        "(A) The project was a huge success.",
+        "(B) I'll call maintenance to bring a spare right away.",
+        "(C) Yes, I burned the toast this morning."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Problème urgent → offre de solution immédiate — schéma quasi-systématique pour les énoncés.",
+        "distractors": {
+          "A": "Troncature : « project » extrait de « projector » + connotation positive incompatible avec l'urgence.",
+          "C": "Répète « burned » mot pour mot dans un contexte hors sujet (toast du matin)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q56_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q56_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q56_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q56_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "It's absolutely freezing in this conference room.",
+      "options": [
+        "(A) I can turn down the air conditioning if you'd like.",
+        "(B) The winter forecast is quite cold this year.",
+        "(C) Yes, the conference is in room 4B."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Plainte = demande indirecte de solution — proposition de régler la clim.",
+        "distractors": {
+          "B": "Association thématique : « winter/cold/forecast » évoquent « freezing » mais répondent à une météo, pas à une salle.",
+          "C": "Fragmente « conference room » en deux concepts sans rapport + utilise « Yes » pour paraître réactif."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q57_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q57_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q57_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q57_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "Management just announced that our expanded marketing budget for Q3 has been approved.",
+      "options": [
+        "(A) The announcer is on the radio.",
+        "(B) I haven't proved it to them yet.",
+        "(C) That's a huge relief! Now we can launch the ad campaign."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Bonne nouvelle → réaction émotionnelle + étape logique suivante — format idéal.",
+        "distractors": {
+          "A": "Forme lexicale : « announcer » (personne) ≠ « announced » (verbe) + « radio » hors contexte.",
+          "B": "Rime phonétique : « proved » rime avec « approved » — même terminaison, sens totalement différent."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q58_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q58_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q58_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q58_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "I thought Mr. Henderson was supposed to lead the software training workshop today.",
+      "options": [
+        "(A) His flight from Seattle was delayed by a storm.",
+        "(B) I bought a new pair of training shoes yesterday.",
+        "(C) The shop is usually closed on Sundays."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Énoncé d'écart (« I thought… ») → explication de l'absence — vol retardé.",
+        "distractors": {
+          "B": "Glissement sémantique : « training shoes » (sport) ≠ « training workshop » (professionnel).",
+          "C": "Extraction de sous-mot : « shop » extrait de « workshop » + contexte commercial sans rapport."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q59_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q59_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q59_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q59_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "This new inventory database is so much more intuitive than the old system.",
+      "options": [
+        "(A) Yes, we interface with clients on a daily basis.",
+        "(B) I couldn't agree more; it saves me hours of manual data entry.",
+        "(C) The base of the statue is made of marble."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Opinion → accord avec raison concrète — format idéal pour réagir à une opinion.",
+        "distractors": {
+          "A": "Mot technique : « interface » sonne logiciel mais parle de clients, pas de la base de données.",
+          "C": "Suppression de suffixe : « base » extrait de « database » + contexte architectural absurde (statue, marbre)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q60_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q60_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q60_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q60_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "The quarterly sales figures seem much lower than what we projected in January.",
+      "options": [
+        "(A) The projector is in the main conference room.",
+        "(B) Let me ask the analytics team to run the numbers again.",
+        "(C) I figured you would be out of the office today."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Réaction à un problème sous-entendu — face à des chiffres décevants ou anormaux, proposer de revérifier les données est la suite professionnelle logique.",
+        "distractors": {
+          "A": "Faux-ami morphologique : « projector » (appareil) est utilisé pour faire écho au verbe « projected » (prévu/estimé).",
+          "C": "Polysémie : utilise le verbe « figured » (j'ai imaginé/pensé) pour piéger ceux qui ont entendu le nom « figures » (chiffres) dans la question."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q36_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q36_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q36_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q36_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "The main server is going down for emergency maintenance in ten minutes.",
+      "options": [
+        "(A) I'd better save all my open documents right away.",
+        "(B) The maintenance crew is usually on the ground floor.",
+        "(C) Yes, they served an excellent lunch at the cafeteria."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Action immédiate en réponse à une alerte — annonce d'une coupure informatique imminente, la réaction logique est de sauvegarder son travail.",
+        "distractors": {
+          "B": "Répétition hors contexte : reprend le mot « maintenance », mais l'utilise pour décrire l'emplacement de l'équipe physique, ignorant l'urgence informatique.",
+          "C": "Homophone : « served » (servi) est utilisé pour imiter la sonorité de « server » (serveur informatique)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q37_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q37_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q37_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q37_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "I'm concerned we don't have enough budget to run the national ad campaign.",
+      "options": [
+        "(A) We could always scale it back to a regional level.",
+        "(B) The political campaign was very successful last year.",
+        "(C) No, I didn't add the totals up correctly."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Proposition d'alternative — face à une plainte ou une inquiétude financière, proposer un compromis (réduire l'échelle de national à régional) est une excellente réponse indirecte.",
+        "distractors": {
+          "B": "Glissement de contexte : recycle le mot « campaign » mais le place dans un contexte politique au lieu de publicitaire.",
+          "C": "Homophone et faux-ami : le verbe « add » (additionner) sonne exactement comme « ad » (abréviation d'advertisement/publicité)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q38_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q38_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q38_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q38_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "Mr. Reynolds mentioned that the revised blueprints would be ready by noon.",
+      "options": [
+        "(A) I wore my new blue suit to the interview.",
+        "(B) He actually just called to ask for a deadline extension.",
+        "(C) The printer is out of paper again."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Mise à jour d'information / Contradiction — une stratégie avancée où la personne corrige l'information donnée dans l'énoncé (les plans ne seront pas prêts, il a demandé un délai).",
+        "distractors": {
+          "A": "Extraction de syllabe : isole « blue » du mot « blueprints » (plans d'architecte) pour créer une phrase sur les vêtements.",
+          "C": "Association d'idées trompeuse : on imprime souvent des plans, l'option évoque donc une imprimante pour tromper une écoute globale floue."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q39_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q39_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q39_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q39_C.mp3"
+      }
+    },
+    {
+      "category": "statements",
+      "question": "It looks like the marketing department has completely reorganized their seating arrangement.",
+      "options": [
+        "(A) I'm looking forward to the new department store opening.",
+        "(B) Please take a seat in the waiting area.",
+        "(C) Yes, they wanted to encourage more collaboration among the teams."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Explication d'un constat — l'interlocuteur confirme l'observation (Oui) et fournit la raison stratégique derrière ce changement (encourager la collaboration).",
+        "distractors": {
+          "A": "Glissement sémantique : utilise « department store » (grand magasin) pour piéger ceux qui ont entendu « marketing department ».",
+          "B": "Dérivation du mot racine : utilise « seat » (siège/s'asseoir) de manière littérale au lieu du concept d'organisation des bureaux (« seating arrangement »)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q40_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q40_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q40_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q40_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "You haven't submitted the quarterly tax documents yet, have you?",
+      "options": [
+        "(A) No, I haven't seen that documentary.",
+        "(B) Yes, I sent them to accounting yesterday.",
+        "(C) I have a few tacks on my desk."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Répondre en fonction de la vérité de l'action, pas de la relance (fin) — « Yes » = les documents ont été envoyés.",
+        "distractors": {
+          "A": "Double piège : « No » (semble s'accorder avec la relance négative) + « documentary » ≈ « documents ».",
+          "C": "Homophone exact : « tacks » = « tax »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q21_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q21_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q21_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q21_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "You've already reviewed the updated safety guidelines, right?",
+      "options": [
+        "(A) Go straight down the hall, then take a right.",
+        "(B) The view from the office is very safe.",
+        "(C) I read through the manual this morning."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Confirmation indirecte sans Oui/Non — schéma très fréquent pour les questions tag (avec relance).",
+        "distractors": {
+          "A": "Interprétation littérale de « right? » comme instruction directionnelle.",
+          "B": "Double extraction : « view » dans « reviewed » + « safe » dans « safety »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q22_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q22_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q22_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q22_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "The new regional manager is transferring from the Tokyo office, isn't she?",
+      "options": [
+        "(A) Yes, she starts her new role on Monday.",
+        "(B) He managed to catch his flight just in time.",
+        "(C) The bank transfer was very expensive."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Confirme avec le bon pronom « she » + détail de prise de poste cohérent.",
+        "distractors": {
+          "B": "Pronom erroné « He » + « managed » ≈ « manager » + « flight » plausible pour Tokyo — trois pièges cumulés.",
+          "C": "Glissement sémantique : « transfer » bancaire au lieu de mutation professionnelle."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q23_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q23_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q23_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q23_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "We're going to use the same catering company we hired last year, aren't we?",
+      "options": [
+        "(A) Actually, we found a cheaper vendor this time.",
+        "(B) The company is hiring fifty new employees.",
+        "(C) Yes, they were very highly rated."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Corrige l'hypothèse — un nouveau prestataire a été trouvé cette fois.",
+        "distractors": {
+          "B": "Recycle « company » + « hired » dans un contexte de recrutement sans rapport.",
+          "C": "Séduisant : commence par « Yes » + approbation, mais ne confirme pas si la même entreprise sera utilisée."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q24_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q24_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q24_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q24_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "The budget proposal was approved by the board yesterday, wasn't it?",
+      "options": [
+        "(A) Yes, they signed off on it in the afternoon.",
+        "(B) I'm getting quite bored with this proposal.",
+        "(C) No, I haven't proved it to them yet."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Confirme avec un synonyme (« signed off on ») + détail temporel cohérent avec « yesterday ».",
+        "distractors": {
+          "B": "Homophone exact : « bored » = « board » + « proposal » répété mot pour mot.",
+          "C": "Rime : « proved » ≈ « approved » + present perfect contradictoire avec le passé simple."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q25_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q25_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q25_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q25_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "You've already forwarded the revised budget to the accounting department, haven't you?",
+      "options": [
+        "(A) Actually, the director wanted to review it one more time.",
+        "(B) Yes, the department store is closing soon.",
+        "(C) I'm counting on your support for this project."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Correction de la prémisse — l'interlocuteur ignore la relance (haven't you?) et explique de manière indirecte que l'action n'a pas été faite car le directeur a bloqué le processus.",
+        "distractors": {
+          "B": "Glissement sémantique et faux-ami : utilise « department store » (grand magasin) pour tromper l'oreille qui a reconnu « department », combiné à un « Yes » rassurant mais hors sujet.",
+          "C": "Jeu de mots phonétique : le verbe « counting » (compter sur) est utilisé pour imiter la sonorité de « accounting » (comptabilité)."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q46_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q46_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q46_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q46_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "The keynote speaker is arriving on the morning flight from Berlin, right?",
+      "options": [
+        "(A) He spoke very clearly during the presentation.",
+        "(B) No, they changed his itinerary to the afternoon express train.",
+        "(C) The flight was fully booked last week."
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "Contradiction directe et détaillée — réfute l'hypothèse (le vol du matin) en apportant la véritable information (le train de l'après-midi).",
+        "distractors": {
+          "A": "Piège grammatical et temporel : dérive « spoke » du mot « speaker », et parle d'un événement passé alors que la question porte sur une arrivée future.",
+          "C": "Recyclage inutile : reprend le mot « flight » pour formuler un énoncé sur les réservations qui ne répond pas à la question de l'arrivée du conférencier."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q47_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q47_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q47_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q47_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "We aren't required to wear formal attire to the corporate retreat, are we?",
+      "options": [
+        "(A) Just business casual, according to the schedule.",
+        "(B) Yes, we need to retire the old equipment soon.",
+        "(C) I’m quite tired from all the traveling."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Confirmation par l'affirmative d'une règle — au lieu de s'emmêler dans un Yes/No face à la forme négative (« We aren't... are we? »), la réponse donne directement le code vestimentaire attendu.",
+        "distractors": {
+          "B": "Double homophone : le verbe « retire » (mettre au rebut / prendre sa retraite) est utilisé pour ressembler à « attire » (tenue) et « retreat » (retraite d'entreprise).",
+          "C": "Faux-ami phonétique : « tired » (fatigué) sonne presque exactement comme la fin du mot « attire »."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q48_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q48_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q48_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q48_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "The maintenance crew hasn't fixed the air conditioning in the lobby yet, have they?",
+      "options": [
+        "(A) I've been conditioning my hair with a new product.",
+        "(B) Yes, the crew usually arrives at 8 AM.",
+        "(C) They're waiting on a replacement part from the supplier."
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Explication de la situation — la réponse confirme implicitement que la climatisation n'est pas réparée en fournissant la raison exacte (l'attente d'une pièce).",
+        "distractors": {
+          "A": "Polysémie absurde : utilise le mot « conditioning » dans un contexte de soins capillaires (après-shampoing) au lieu de l'air conditionné.",
+          "B": "Association partielle : commence par « Yes » et reprend le mot « crew », mais parle de leurs horaires habituels au lieu du statut de la réparation."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q49_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q49_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q49_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q49_C.mp3"
+      }
+    },
+    {
+      "category": "tag_questions",
+      "question": "You're still planning to attend the software training seminar in Chicago, aren't you?",
+      "options": [
+        "(A) Unless something urgent comes up at the office.",
+        "(B) The trains are always delayed this time of year.",
+        "(C) I plan to buy some new software tomorrow."
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "Acceptation conditionnelle — une réaction extrêmement réaliste dans un contexte professionnel. La personne confirme son intention, mais y ajoute une réserve de dernière minute.",
+        "distractors": {
+          "B": "Homophone et glissement de sens : utilise le nom « trains » (véhicules) pour piéger les candidats ayant entendu « training » (formation).",
+          "C": "Répétition massive : recycle les mots « plan » et « software », mais transforme une participation à un séminaire en une action d'achat."
+        }
+      },
+      "question_audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q50_question.mp3",
+      "option_audio_urls": {
+        "A": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q50_A.mp3",
+        "B": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q50_B.mp3",
+        "C": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part2/audio/q50_C.mp3"
+      }
+    }
+  ]
+}

@@ -145,9 +145,15 @@ export default function Part3Conversation({
     setAudioPhase("playing");
     setGraceLeft(GRACE_PERIOD_S);
     if (hasAudio && audioRef.current) {
-      audioRef.current.src = audioUrl!;
-      audioRef.current.play().catch(console.error);
-      return;
+      const el = audioRef.current;
+      el.src = audioUrl!;
+      el.play().catch((err: unknown) => {
+        if (err instanceof Error && err.name === "AbortError") return;
+        console.error(err);
+      });
+      return () => {
+        el.pause();
+      };
     }
     const id = setTimeout(() => setAudioPhase("grace"), AUDIO_DURATION_MS);
     return () => clearTimeout(id);

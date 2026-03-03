@@ -1,0 +1,1176 @@
+{
+  "advice": {
+    "intro": "5 conversations entre 2 ou 3 locuteurs, 3 questions par conversation. L'audio ne passe qu'une seule fois.",
+    "strategy": "Lis les 3 questions et leurs options avant d'écouter : cela te dit exactement quelle information chercher.",
+    "traps": [
+      {
+        "label": "Recyclage de vocabulaire",
+        "example": "un mot-clé de l'audio réapparaît dans une mauvaise option"
+      },
+      {
+        "label": "Vérités partielles",
+        "example": "une option est mentionnée mais ne répond pas à la question posée"
+      },
+      {
+        "label": "Confusion entre locuteurs",
+        "example": "attribuer la proposition de l'homme à la femme, ou vice versa"
+      },
+      {
+        "label": "Trop spécifique / trop vague",
+        "example": "confondre un détail avec le but principal de la conversation"
+      }
+    ]
+  },
+  "conversations": [
+    {
+      "type": "Business strategy — organizational restructuring timeline",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Before we wrap up, I want to address the restructuring timeline. The board wants the new regional structure implemented by the end of Q2, not Q3 as we initially planned."
+        },
+        {
+          "speaker": "F",
+          "text": "That's a significant pull-forward. Our current IT infrastructure won't support the consolidated reporting system by that date — we've already flagged that with the CTO."
+        },
+        {
+          "speaker": "M",
+          "text": "Understood. I can reallocate part of the contingency budget to accelerate the infrastructure upgrade. Let's loop in the CTO on Thursday to reassess the timeline."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the main topic of discussion?",
+          "options": [
+            "(A) A new product launch timeline",
+            "(B) A company reorganization schedule",
+            "(C) A budget shortfall in Q3",
+            "(D) A board of directors election"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The speakers focus on the reorganization schedule — department consolidation dates and system readiness are the central topics of discussion.",
+            "distractors": {
+              "A": "A product launch is never mentioned.",
+              "C": "Budget shortfall does not come up — the discussion is about timing, not finances.",
+              "D": "Board elections are not part of the conversation."
+            }
+          }
+        },
+        {
+          "text": "What concern does the woman raise?",
+          "options": [
+            "(A) The budget is insufficient for the project",
+            "(B) The board has not yet approved the changes",
+            "(C) The technology systems are not ready",
+            "(D) The regional director lacks authority"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman explicitly says IT infrastructure needs to be upgraded before the changes can go live — system readiness is her concern.",
+            "distractors": {
+              "A": "Budget insufficiency is not her concern; she focuses on system readiness.",
+              "B": "Board approval is not raised as an issue.",
+              "D": "The regional director's authority is not discussed."
+            }
+          }
+        },
+        {
+          "text": "What does the man propose to do?",
+          "options": [
+            "(A) Postpone the restructuring to Q3",
+            "(B) Hire a new CTO",
+            "(C) Schedule a meeting with the CTO",
+            "(D) Present the revised budget to the board"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The man says he will set up a call with the CTO to assess the infrastructure readiness timeline.",
+            "distractors": {
+              "A": "He does not propose postponing to Q3; he is looking for a solution.",
+              "B": "Hiring a new CTO is not mentioned.",
+              "D": "Presenting a revised budget to the board is not proposed."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv01.mp3"
+    },
+    {
+      "type": "Technical crisis — server failure during an external audit",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I'm aware the financial reporting module is down. Our team traced it to a corrupted database index following last night's scheduled patch. We're in the process of rolling back to the previous stable version."
+        },
+        {
+          "speaker": "F",
+          "text": "How long is that going to take? Our external audit starts at 2 PM and the auditors will need read access to three years of transaction records."
+        },
+        {
+          "speaker": "M",
+          "text": "I'd estimate 90 minutes for the rollback and validation. To be safe, I'd recommend asking the auditors to push their start time to 3:30. I'll have everything verified and provide you with a written confirmation by then."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What caused the system problem?",
+          "options": [
+            "(A) A hardware failure in the server room",
+            "(B) A software update that went wrong",
+            "(C) Unauthorized access by an external party",
+            "(D) An error made by the finance team"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The IT manager confirms the system went down due to a failed patch rollback during a routine software update.",
+            "distractors": {
+              "A": "Hardware failure is not mentioned — the cause is a software update.",
+              "C": "Unauthorized external access is not the cause; it was an internal update issue.",
+              "D": "The finance team is not involved in the outage."
+            }
+          }
+        },
+        {
+          "text": "Why is the woman concerned about the timing?",
+          "options": [
+            "(A) The company is due for a regulatory inspection",
+            "(B) She has a board presentation scheduled at 2 PM",
+            "(C) External reviewers are scheduled to arrive that afternoon",
+            "(D) The IT team is unavailable after midday"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "External reviewers (auditors) are due to arrive that afternoon, which is why the timing of the outage is critical.",
+            "distractors": {
+              "A": "A regulatory inspection is not mentioned — the concern is the arriving external auditors.",
+              "B": "She has no board presentation scheduled.",
+              "D": "IT team availability after midday is not raised as a concern."
+            }
+          }
+        },
+        {
+          "text": "What does the IT manager say he will provide?",
+          "options": [
+            "(A) A backup copy of the transaction records",
+            "(B) A written confirmation once the system is restored",
+            "(C) A new login for the auditors",
+            "(D) A summary of the patch release notes"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The IT manager commits to sending a written confirmation to the woman once the system is fully restored.",
+            "distractors": {
+              "A": "A backup copy of transaction records is not offered.",
+              "C": "Creating new logins for the auditors is not mentioned.",
+              "D": "Patch release notes are not part of the offer."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv02.mp3"
+    },
+    {
+      "type": "Sales — contract renewal and price renegotiation",
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "We've been reviewing the renewal terms and frankly, the 12% price increase for the maintenance contract is difficult to justify to my board. Our own margins have been under pressure all year."
+        },
+        {
+          "speaker": "M",
+          "text": "I understand, and I appreciate your directness. What if we structured a two-year deal with the first year locked at the current rate and a more modest 5% adjustment in year two? We'd also include priority response times at no additional charge."
+        },
+        {
+          "speaker": "F",
+          "text": "That's more workable. I'll need to see the full revised proposal in writing before I can take it to the executive committee next Tuesday."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the woman's main concern?",
+          "options": [
+            "(A) The quality of the maintenance services",
+            "(B) The proposed price increase",
+            "(C) The length of the new contract",
+            "(D) The account manager's current response time"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The woman's opening objection is about the new rate being significantly higher than the current contract — pricing is her main concern.",
+            "distractors": {
+              "A": "Service quality is not raised as a concern.",
+              "C": "The contract length is not her objection.",
+              "D": "Response time is not mentioned in the conversation."
+            }
+          }
+        },
+        {
+          "text": "What does the man include in his revised proposal?",
+          "options": [
+            "(A) A one-year contract at the original rate",
+            "(B) A free upgrade to the service platform",
+            "(C) Priority support at no additional cost",
+            "(D) A 12% discount on future orders"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "In his revised proposal the man adds priority support at no additional cost as a concession to address the woman's concerns.",
+            "distractors": {
+              "A": "A contract at the original rate is not offered.",
+              "B": "A free platform upgrade is not part of the proposal.",
+              "D": "A 12% discount is not mentioned — the concession is priority support."
+            }
+          }
+        },
+        {
+          "text": "What does the woman say she will do next?",
+          "options": [
+            "(A) Sign the contract immediately",
+            "(B) Present the proposal to her executive team",
+            "(C) Escalate the issue directly to the board",
+            "(D) Request a meeting with the man's manager"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The woman says she needs to present the revised proposal to her executive team before any decision can be made.",
+            "distractors": {
+              "A": "She does not sign immediately — she must consult her leadership team first.",
+              "C": "Escalating to the board directly is not what she says.",
+              "D": "She does not request a meeting with the man's manager."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv03.mp3"
+    },
+    {
+      "type": "HR — performance review and competing job offer",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Your output this quarter has been exceptional, particularly your work streamlining the forecasting model — the finance team says it cut their reporting time by 30%. I'd like to nominate you for the senior team lead role opening in Q1."
+        },
+        {
+          "speaker": "F",
+          "text": "I'm genuinely interested, but I want to be transparent: I've been approached by another firm, and I'm carefully weighing my options. I wouldn't want to commit to a new role here and then reconsider."
+        },
+        {
+          "speaker": "M",
+          "text": "I appreciate your honesty. Before you make any decisions, let me arrange a meeting with the division VP so you can understand the full scope of what this position could offer."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the man meeting with the woman?",
+          "options": [
+            "(A) To address a recent performance issue",
+            "(B) To discuss a potential promotion",
+            "(C) To introduce her to the finance team",
+            "(D) To review quarterly budget projections"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The conversation opens with the man presenting the woman with a new position that has become available — the meeting is about a potential promotion.",
+            "distractors": {
+              "A": "No performance issue is raised in the conversation.",
+              "C": "He is not introducing her to the finance team.",
+              "D": "Quarterly budget projections are not the subject of the meeting."
+            }
+          }
+        },
+        {
+          "text": "What does the woman reveal during the conversation?",
+          "options": [
+            "(A) She plans to transfer to the finance department",
+            "(B) She is considering an offer from another company",
+            "(C) She is not confident in her technical skills",
+            "(D) She has already accepted a position elsewhere"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The woman discloses that she has received an offer from another company and is currently weighing her options.",
+            "distractors": {
+              "A": "She is not planning an internal transfer — the offer is from an external company.",
+              "C": "She does not express doubts about her technical skills.",
+              "D": "She has not yet accepted the other position — she is still considering it."
+            }
+          }
+        },
+        {
+          "text": "What does the man offer to arrange?",
+          "options": [
+            "(A) A salary negotiation session",
+            "(B) A meeting with a senior executive",
+            "(C) A formal skills assessment for the new role",
+            "(D) An introduction to the competitor's recruiter"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The man offers to set up a meeting with a senior executive so the woman can discuss the opportunity at a higher level.",
+            "distractors": {
+              "A": "A formal salary negotiation session is not explicitly offered — he arranges a meeting first.",
+              "C": "No skills assessment is mentioned.",
+              "D": "He is not putting her in contact with the competitor."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv04.mp3"
+    },
+    {
+      "type": "Event planning — last-minute venue cancellation",
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I just heard back from the Grand Meridian — they've had a major water leak and the ballroom won't be available for our annual conference in three weeks."
+        },
+        {
+          "speaker": "M",
+          "text": "Three weeks? That's nowhere near enough lead time to find a comparable space. How many attendees are we expecting?"
+        },
+        {
+          "speaker": "F",
+          "text": "We have 340 registered, and about half of them have already booked their travel. We can't push the date without significant financial and reputational cost."
+        },
+        {
+          "speaker": "M",
+          "text": "Let me call the convention center downtown — they had availability when we toured last spring. I'll get back to you within the hour."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What problem are the speakers discussing?",
+          "options": [
+            "(A) The conference has been cancelled by the organizers",
+            "(B) Their reserved venue is no longer available",
+            "(C) Attendance is lower than expected",
+            "(D) The marketing budget has been cut"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The speakers learn that their reserved conference venue has suffered water damage and is no longer available for the planned date.",
+            "distractors": {
+              "A": "The conference itself has not been cancelled — only the venue is unavailable.",
+              "C": "Attendance figures are not the issue.",
+              "D": "Budget cuts are not mentioned."
+            }
+          }
+        },
+        {
+          "text": "What does the woman say about the attendees?",
+          "options": [
+            "(A) Most of them are local and can attend on any date",
+            "(B) Many have already made travel arrangements",
+            "(C) Some have requested a refund",
+            "(D) They have been notified of a possible date change"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The woman warns that rescheduling will be very difficult because many attendees have already booked flights and hotels.",
+            "distractors": {
+              "A": "She does not say attendees are all local and flexible.",
+              "C": "Refund requests are not mentioned.",
+              "D": "Attendees have not been notified of any changes yet."
+            }
+          }
+        },
+        {
+          "text": "What will the man do next?",
+          "options": [
+            "(A) Contact the Grand Meridian to negotiate a repair timeline",
+            "(B) Reach out to a venue he visited previously",
+            "(C) Notify all registered attendees of the cancellation",
+            "(D) Postpone the conference by one month"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The man says he will contact another venue he had previously visited, which may have availability for the conference dates.",
+            "distractors": {
+              "A": "He is not contacting the Grand Meridian about repairs — that venue is completely unavailable.",
+              "C": "He is not notifying attendees; he needs to find a venue first.",
+              "D": "No formal postponement decision has been made yet."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv05.mp3"
+    },
+    {
+      "type": "Facilities — corporate office relocation decision",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "The lease on our current floor expires in February, and the building management isn't renewing at the same rate — they're asking for a 35% increase. The alternative is moving to the new development on Carlisle Street."
+        },
+        {
+          "speaker": "F",
+          "text": "I've seen the floor plan for Carlisle Street. The layout is more efficient, but I'm concerned about the commute impact for our staff. We surveyed the team last year and a significant number rely on the Greenway Line, which doesn't serve that area."
+        },
+        {
+          "speaker": "M",
+          "text": "That's a valid point. I'll add a transport subsidy proposal to the relocation package and share it with HR before we commit to anything."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why is the company considering moving offices?",
+          "options": [
+            "(A) The current building is being demolished",
+            "(B) The rent at their current location is increasing significantly",
+            "(C) The floor plan of the current office is poorly designed",
+            "(D) The building management contract has been terminated"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The man explains that the landlord has announced a significant rent increase at their current location, which is the trigger for considering a move.",
+            "distractors": {
+              "A": "The building is not being demolished.",
+              "C": "Floor plan or layout issues are not the reason — the rent increase is.",
+              "D": "The building management contract ending is not mentioned."
+            }
+          }
+        },
+        {
+          "text": "What concern does the woman raise about the new location?",
+          "options": [
+            "(A) The office space may be too small for the team",
+            "(B) The construction of the building is not yet complete",
+            "(C) Many employees would face a more difficult commute",
+            "(D) The rent there is higher than at the current office"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman points out that the new location on Carlisle Street would significantly extend many employees' daily commute.",
+            "distractors": {
+              "A": "Office space size is not raised as a concern.",
+              "B": "Construction completion is not an issue.",
+              "D": "The new rent is not described as higher — she doesn't object on cost grounds."
+            }
+          }
+        },
+        {
+          "text": "What does the man say he will do before a final decision is made?",
+          "options": [
+            "(A) Survey the staff about the proposed new location",
+            "(B) Negotiate a lower renewal rate with the current landlord",
+            "(C) Submit a travel allowance plan to the HR department",
+            "(D) Visit the Carlisle Street site with the facilities team"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The man says he will prepare and submit a travel allowance plan to HR to address the commute concern before a final decision is reached.",
+            "distractors": {
+              "A": "Surveying staff is not what he proposes — he focuses on the travel allowance solution.",
+              "B": "Negotiating a lower renewal rate with the current landlord is not mentioned.",
+              "D": "He does not say he will visit the Carlisle Street site; he commits to the HR plan."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv06.mp3"
+    },
+    {
+      "type": "Marketing — product launch delayed by quality control issue",
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "We've finalized the packaging and the digital campaign goes live Monday, but QA flagged a calibration issue with roughly 8% of units from the third production batch. We're still awaiting the engineer's final report."
+        },
+        {
+          "speaker": "M",
+          "text": "Eight percent isn't trivial — depending on retail volume that could be thousands of defective units in stores. If that surfaces during the launch window, the press coverage alone will cost us more than a full recall."
+        },
+        {
+          "speaker": "F",
+          "text": "Agreed. I'm proposing we hold the third batch pending QA sign-off and ship only the first two batches for the initial retail push. It delays full-stock availability by about ten days, but it protects the launch integrity."
+        },
+        {
+          "speaker": "M",
+          "text": "That's a reasonable trade-off. Get the QA lead's written clearance and I'll inform the regional sales managers this afternoon."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What issue is affecting part of the production?",
+          "options": [
+            "(A) The packaging has not been finalized",
+            "(B) A defect has been found in some units",
+            "(C) The digital campaign has been postponed",
+            "(D) The engineering team has rejected the product design"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "QA has identified a defect affecting part of the third production batch, which is causing concern about the planned launch.",
+            "distractors": {
+              "A": "Packaging finalization is not the issue.",
+              "C": "The digital campaign has not been postponed — the product defect is the problem.",
+              "D": "The engineering team has not rejected the design."
+            }
+          }
+        },
+        {
+          "text": "What does the woman propose?",
+          "options": [
+            "(A) Cancelling the third production batch entirely",
+            "(B) Delaying the entire product launch until all units are cleared",
+            "(C) Releasing only the unaffected inventory first",
+            "(D) Recalling all units already shipped to retailers"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman proposes releasing the units from the first two unaffected batches immediately while the third batch defect is investigated.",
+            "distractors": {
+              "A": "She does not propose cancelling the third batch — she wants to investigate it.",
+              "B": "She explicitly opposes delaying the entire launch.",
+              "D": "No recall of already-shipped units is proposed."
+            }
+          }
+        },
+        {
+          "text": "What will the VP of Sales do next?",
+          "options": [
+            "(A) Obtain the engineer's report from the QA team",
+            "(B) Visit the production facility to assess the defect",
+            "(C) Brief the regional distribution network",
+            "(D) Revise the digital campaign launch date"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The VP of Sales commits to briefing the regional distribution network about the phased launch plan.",
+            "distractors": {
+              "A": "Obtaining the engineer's report is the QA team's responsibility, not the VP of Sales.",
+              "B": "He is not visiting the production facility.",
+              "D": "Revising the digital campaign date is not his next step."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv07.mp3"
+    },
+    {
+      "type": "Finance — project budget reallocation request",
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "The prototype phase came in 18% under the original allocation, and we'd like to redirect those savings toward piloting in four additional markets rather than returning the funds to the central budget."
+        },
+        {
+          "speaker": "M",
+          "text": "I understand the logic, but the finance committee has a standing policy requiring unspent project funds to be returned at phase completion. Redirecting them requires a formal amendment and committee approval."
+        },
+        {
+          "speaker": "F",
+          "text": "Is there a fast-track option? The pilot window opens in six weeks and we'd lose the market opportunity if we wait for the standard 90-day review cycle."
+        },
+        {
+          "speaker": "M",
+          "text": "There is an expedited process for time-sensitive proposals. Submit a one-page business case to my office by Friday and I can put it on next week's agenda."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What does the woman want to do with the remaining project funds?",
+          "options": [
+            "(A) Return them to the central budget as required by policy",
+            "(B) Expand the project's reach into new markets",
+            "(C) Reinvest them in the completed prototype phase",
+            "(D) Transfer them to another department's budget"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The woman wants to use the remaining project funds to expand into two new geographic markets identified during the project.",
+            "distractors": {
+              "A": "She explicitly does not want to return the funds — she wants to redeploy them.",
+              "C": "The prototype phase is complete; she wants to expand into new markets, not reinvest in past work.",
+              "D": "Transferring funds to another department is not her request."
+            }
+          }
+        },
+        {
+          "text": "Why is timing critical for the woman?",
+          "options": [
+            "(A) The finance committee meets only once a year",
+            "(B) A business opportunity will close before the standard approval process ends",
+            "(C) Senior management moved the project deadline forward",
+            "(D) The allocated funding will expire at the end of the quarter"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "A partnership window in two of the target markets closes before the standard 6-week approval cycle would be completed.",
+            "distractors": {
+              "A": "The frequency of the finance committee's meetings is not stated as once a year.",
+              "C": "Senior management did not move the project deadline — the external market opportunity is time-sensitive.",
+              "D": "Funding expiration at quarter-end is not explicitly cited as the reason."
+            }
+          }
+        },
+        {
+          "text": "What does the man ask the woman to submit?",
+          "options": [
+            "(A) A revised version of the original project budget",
+            "(B) A short written justification before the end of the week",
+            "(C) A formal request countersigned by her department head",
+            "(D) A detailed financial model projecting returns from the new markets"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The man asks her to send a short written justification memo to him by the end of the week so he can fast-track the approval.",
+            "distractors": {
+              "A": "A revised full project budget is not requested — just a brief justification.",
+              "C": "A countersignature from her department head is not required.",
+              "D": "A detailed financial model is not requested — he only wants a concise justification."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv08.mp3"
+    },
+    {
+      "type": "Professional services — new client onboarding complication",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Welcome to the platform. Before we start the configuration walkthrough, I need to flag that your organization's data is hosted on a legacy system we don't have a native connector for."
+        },
+        {
+          "speaker": "F",
+          "text": "Our IT team mentioned this might be an issue. We're in the middle of migrating to a cloud infrastructure, but that won't be fully live for another four months."
+        },
+        {
+          "speaker": "M",
+          "text": "In the interim, we can build a custom data bridge using your existing API documentation. It adds roughly three weeks to the onboarding timeline and there's an additional implementation fee, but it should be fully transparent once live."
+        },
+        {
+          "speaker": "F",
+          "text": "That's acceptable. I'll need formal documentation of the additional cost so I can get sign-off from our procurement office."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What problem is identified at the start of the conversation?",
+          "options": [
+            "(A) The client's platform license has not been activated",
+            "(B) The client's data system is incompatible with the service",
+            "(C) The client's staff have not completed required training",
+            "(D) The configuration of the new system has already been delayed"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The onboarding specialist discovers that the client's legacy data system uses a proprietary format that is not directly compatible with the service platform.",
+            "distractors": {
+              "A": "The license activation is not mentioned as the problem.",
+              "C": "Staff training completion is not the issue raised.",
+              "D": "A configuration delay has not yet occurred — the incompatibility is the newly discovered issue."
+            }
+          }
+        },
+        {
+          "text": "What does the man propose as a solution?",
+          "options": [
+            "(A) Waiting until the client's cloud migration is complete",
+            "(B) Using the client's API to build a temporary integration",
+            "(C) Transferring the client's data manually in the interim",
+            "(D) Connecting directly to the legacy system without modification"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The man proposes connecting to the client's existing API as a temporary bridge while the client completes their cloud migration.",
+            "distractors": {
+              "A": "He does not suggest waiting passively for the cloud migration — he proposes acting now with the API.",
+              "C": "Manual data transfer is not proposed.",
+              "D": "Connecting directly to the legacy system without modification is not mentioned."
+            }
+          }
+        },
+        {
+          "text": "What does the woman say she needs before the work can proceed?",
+          "options": [
+            "(A) Approval from her IT department",
+            "(B) A timeline extension for the overall onboarding",
+            "(C) Written documentation of the additional charges",
+            "(D) A meeting with the man's technical supervisor"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman says she cannot approve additional work without a written breakdown of the extra charges the solution will incur.",
+            "distractors": {
+              "A": "IT department approval is not what she requires — she needs cost documentation.",
+              "B": "A timeline extension for the onboarding is not requested.",
+              "D": "A meeting with his technical supervisor is not requested."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv09.mp3"
+    },
+    {
+      "type": "Operations — supply chain disruption and contingency planning",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Our primary packaging supplier just notified us they're suspending production for six weeks due to fire damage at their main facility. That affects approximately 40% of our Q3 packaging needs."
+        },
+        {
+          "speaker": "F",
+          "text": "What's our inventory buffer? And do we have a secondary supplier qualified for this material grade?"
+        },
+        {
+          "speaker": "M",
+          "text": "We have about three weeks of stock on hand. There is a secondary supplier in Portugal we've used before, but their lead time is typically eight weeks and their unit cost runs about 22% higher."
+        },
+        {
+          "speaker": "F",
+          "text": "Authorize the Portugal order immediately — even at the higher cost, a production line stoppage would be far more expensive. In the meantime, negotiate with the primary supplier to see if they can ship from a secondary facility if they have one."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the main problem the speakers are addressing?",
+          "options": [
+            "(A) A product recall caused by packaging defects",
+            "(B) An interruption in the supply of packaging materials",
+            "(C) A sudden increase in raw material costs",
+            "(D) Delays in the Q3 production schedule"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The company's primary packaging supplier has halted deliveries, creating a supply gap that threatens the Q3 production schedule.",
+            "distractors": {
+              "A": "A product recall is not discussed.",
+              "C": "Raw material cost increases are not the issue — it is a supply interruption.",
+              "D": "Q3 production delays are a consequence of the problem, not the problem itself."
+            }
+          }
+        },
+        {
+          "text": "What is a drawback of using the secondary supplier?",
+          "options": [
+            "(A) They have never worked with the company before",
+            "(B) They cannot meet the required material specifications",
+            "(C) Their delivery time and pricing are less competitive",
+            "(D) Their facility is currently undergoing a safety inspection"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The secondary supplier in Portugal can fulfil the order but their lead time is longer and their unit cost is higher than the primary supplier.",
+            "distractors": {
+              "A": "The secondary supplier has worked with the company before — familiarity is not the drawback.",
+              "B": "Their specifications are compatible — delivery time and cost are the disadvantages.",
+              "D": "A safety inspection at the secondary supplier's facility is not mentioned."
+            }
+          }
+        },
+        {
+          "text": "What does the woman instruct the man to do in addition to placing the Portugal order?",
+          "options": [
+            "(A) Contact the primary supplier's insurers about compensation",
+            "(B) Reduce Q3 production targets to match available stock",
+            "(C) Check whether the primary supplier can ship from another site",
+            "(D) Identify a third supplier as an additional backup"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman instructs the man to also contact the primary supplier's other regional facilities to see if they can ship from an alternative site.",
+            "distractors": {
+              "A": "Contacting the primary supplier's insurers is not mentioned.",
+              "B": "Reducing Q3 production targets is not what she instructs.",
+              "D": "Identifying a third supplier as an additional backup is not what she asks for."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv10.mp3"
+    },
+    {
+      "type": "Customer service — client contract cancellation threat",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "I just got off the phone with our largest account — Harrington Medical. They're threatening to cancel their three-year service contract unless we resolve the API latency issues by end of next week."
+        },
+        {
+          "speaker": "F",
+          "text": "That's our highest-revenue client. Have we identified the root cause yet, or are we still in the diagnostic phase?"
+        },
+        {
+          "speaker": "M",
+          "text": "The engineering team pinpointed it to a misconfigured load balancer installed during last month's infrastructure update. A patch is ready to deploy, but it requires a maintenance window."
+        },
+        {
+          "speaker": "F",
+          "text": "Schedule the maintenance for this Saturday night and personally call Mr. Harrington to brief him beforehand. Losing that contract would be a serious blow to our Q3 figures."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the main problem described in the conversation?",
+          "options": [
+            "(A) A server went offline during a software infrastructure update",
+            "(B) A client is threatening to cancel their service contract",
+            "(C) An API integration project is running behind schedule",
+            "(D) The engineering team has requested additional maintenance time"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The central issue is that a major client has lost confidence after repeated service disruptions and is now threatening to terminate their contract.",
+            "distractors": {
+              "A": "A server going offline was the technical symptom, but the main problem is the client threatening to cancel.",
+              "C": "API integration delays are not the main problem.",
+              "D": "The engineering team's maintenance request is not the central issue."
+            }
+          }
+        },
+        {
+          "text": "What caused the performance issue?",
+          "options": [
+            "(A) An error in the original API configuration",
+            "(B) An overload of client requests during peak business hours",
+            "(C) A misconfigured load balancer from a recent infrastructure update",
+            "(D) A bug introduced by a third-party software upgrade"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "A load balancer was misconfigured during a recent infrastructure update, causing response time degradation that the client experienced during peak hours.",
+            "distractors": {
+              "A": "The original API configuration is not at fault — the cause is the recent infrastructure change.",
+              "B": "Client request overload is not the stated cause — the misconfiguration is.",
+              "D": "A third-party software bug is not mentioned."
+            }
+          }
+        },
+        {
+          "text": "What does the woman instruct the man to do?",
+          "options": [
+            "(A) Postpone the maintenance window to avoid further disruption",
+            "(B) Deploy the patch immediately without scheduling maintenance",
+            "(C) Schedule Saturday night maintenance and call the client directly",
+            "(D) Escalate the issue to the board of directors"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman tells the man to book a Saturday night maintenance window for the patch and to personally phone the client before then to reassure them.",
+            "distractors": {
+              "A": "She does not instruct him to postpone the maintenance — she schedules it for Saturday night.",
+              "B": "Deploying the patch immediately without a maintenance window is not her instruction.",
+              "D": "Escalating to the board of directors is not mentioned."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv11.mp3"
+    },
+    {
+      "type": "Travel logistics — visa denial and conference keynote",
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I just heard back from the consulate — your visa application for the Singapore summit has been denied because the invitation letter listed last year's company address. We have two days to resubmit."
+        },
+        {
+          "speaker": "M",
+          "text": "That's the conference I'm supposed to open with the keynote. Can we resubmit in time, or should we be looking at alternatives?"
+        },
+        {
+          "speaker": "F",
+          "text": "I've already drafted a corrected letter and can courier it to the consulate this afternoon if you sign it now. Emergency 48-hour processing is available — the consul officer confirmed it."
+        },
+        {
+          "speaker": "M",
+          "text": "Get it done. Also check whether our Singapore partner can handle a last-minute registration update in case my arrival gets delayed by a day."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why was the man's visa application denied?",
+          "options": [
+            "(A) His passport had expired before the application was submitted",
+            "(B) The conference registration form was filled out incorrectly",
+            "(C) The invitation letter contained an outdated company address",
+            "(D) The consulate required additional financial documentation"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The consulate rejected the application because the official invitation letter still listed the company's old address, which did not match the registration.",
+            "distractors": {
+              "A": "His passport validity is not the reason for denial.",
+              "B": "The conference registration form was not the problem — the invitation letter was.",
+              "D": "Additional financial documentation was not cited as the reason."
+            }
+          }
+        },
+        {
+          "text": "What is the man's role at the Singapore conference?",
+          "options": [
+            "(A) He is attending as a general company representative",
+            "(B) He is delivering the opening keynote speech",
+            "(C) He is signing a trade agreement at the summit",
+            "(D) He is chairing a panel discussion on business strategy"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The man is scheduled to deliver the opening keynote, which makes his presence at the conference non-negotiable.",
+            "distractors": {
+              "A": "He is not a general company representative — he has a keynote role, making his absence very costly.",
+              "C": "He is not signing a trade agreement.",
+              "D": "He is not chairing a panel discussion."
+            }
+          }
+        },
+        {
+          "text": "What does the man ask the woman to check?",
+          "options": [
+            "(A) Whether the consulate can guarantee visa approval before departure",
+            "(B) Whether the conference has alternative dates available",
+            "(C) Whether the Singapore partner can accommodate a delayed arrival",
+            "(D) Whether the company's travel insurance covers visa denials"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The man asks the woman to contact the Singapore partner to find out if they can adjust the schedule to accommodate a one-day late arrival.",
+            "distractors": {
+              "A": "He does not ask whether the consulate can guarantee approval — he is looking for a workaround.",
+              "B": "He does not ask about alternative conference dates.",
+              "D": "He does not ask about travel insurance coverage."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv12.mp3"
+    },
+    {
+      "type": "Legal and compliance — data breach GDPR notification deadline",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "Our security monitoring system flagged a suspicious data export from the CRM at 2 AM last night. Preliminary analysis suggests that customer contact records for about twelve thousand accounts may have been accessed externally."
+        },
+        {
+          "speaker": "F",
+          "text": "Do we know if it's a confirmed breach or still at the suspected stage? That distinction matters significantly for our notification obligations under GDPR."
+        },
+        {
+          "speaker": "M",
+          "text": "Security has confirmed it. We're at 72 hours from the confirmed timestamp, which means our legal notification deadline to the data protection authority expires Thursday morning."
+        },
+        {
+          "speaker": "F",
+          "text": "Then we activate the incident response plan immediately. Draft the supervisory authority notification by tomorrow noon, and hold the customer communication until legal counsel has reviewed it."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What type of incident is being discussed?",
+          "options": [
+            "(A) A ransomware attack that encrypted company files",
+            "(B) An unauthorized external access to customer data records",
+            "(C) A system outage caused by an overloaded server",
+            "(D) An internal fraud involving financial account data"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "An external actor gained unauthorized access to the company's customer records, constituting a personal data breach under GDPR.",
+            "distractors": {
+              "A": "Ransomware encrypting company files is not described — the incident is unauthorized external access.",
+              "C": "A system outage is not the incident — data was accessed without authorization.",
+              "D": "Internal financial fraud involving employee accounts is not mentioned."
+            }
+          }
+        },
+        {
+          "text": "What is significant about the 72-hour window?",
+          "options": [
+            "(A) It is the time remaining to identify the source of the breach",
+            "(B) It is the legal deadline to notify the data protection authority",
+            "(C) It is the period during which customers can freeze their accounts",
+            "(D) It is the maximum time allowed before the CRM must be shut down"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Under GDPR, the company must notify the relevant data protection authority within 72 hours of becoming aware of the breach — missing this deadline carries severe penalties.",
+            "distractors": {
+              "A": "The 72 hours is not the timeframe for identifying the breach source — it is the regulatory notification deadline.",
+              "C": "It is not a window for customers to freeze their accounts.",
+              "D": "It has nothing to do with shutting down the CRM."
+            }
+          }
+        },
+        {
+          "text": "What does the woman say about the customer communication?",
+          "options": [
+            "(A) It should be sent immediately to prevent customer panic",
+            "(B) It should be coordinated directly with the CRM provider first",
+            "(C) It must be reviewed by legal counsel before being sent",
+            "(D) It should only be sent to the twelve thousand affected accounts"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman specifies that any message going out to customers must be signed off by legal counsel before it is released, to avoid further liability.",
+            "distractors": {
+              "A": "Sending immediately without legal review is precisely what she warns against.",
+              "B": "Coordinating with the CRM provider before communicating is not her instruction.",
+              "D": "She does not restrict communication to only the affected accounts — she says legal must approve the message first."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv13.mp3"
+    },
+    {
+      "type": "HR — hybrid work equipment request and duty-of-care obligation",
+      "dialogue": [
+        {
+          "speaker": "F",
+          "text": "I've reviewed your department's equipment requisition for the hybrid work rollout — fourteen standing desks and ergonomic chairs for home offices. The total exceeds the discretionary budget threshold significantly."
+        },
+        {
+          "speaker": "M",
+          "text": "We have thirty-two staff moving to hybrid schedules, and several have documented musculoskeletal conditions on file with HR. Providing appropriate equipment isn't a perk — it's a duty-of-care obligation."
+        },
+        {
+          "speaker": "F",
+          "text": "I'm not disputing the obligation. I need a formal occupational health assessment for each flagged employee to justify the overspend to finance. Can you get those to me within ten days?"
+        },
+        {
+          "speaker": "M",
+          "text": "Ten days is tight given occupational health's current backlog, but I'll flag it as a priority referral. In the meantime, can we approve the first tranche for the five most critical cases?"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the main subject of the conversation?",
+          "options": [
+            "(A) The company's decision to transition to a fully remote work model",
+            "(B) A budget disagreement over ergonomic equipment for hybrid staff",
+            "(C) An employee's request to work from an overseas location",
+            "(D) A health insurance claim related to a workplace injury"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The conversation centres on a request to spend beyond the standard equipment budget to purchase ergonomic workstations for employees working in a hybrid model at home.",
+            "distractors": {
+              "A": "The company is implementing hybrid work, not transitioning to fully remote.",
+              "C": "Working from an overseas location is not the topic.",
+              "D": "A health insurance claim or workplace injury is not discussed."
+            }
+          }
+        },
+        {
+          "text": "What does the woman require before approving the overspend?",
+          "options": [
+            "(A) Written approval from the board of directors",
+            "(B) A report submitted directly by the finance department",
+            "(C) A formal occupational health assessment for each affected employee",
+            "(D) A signed agreement from each employee requesting equipment"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The woman says each employee must have a formal occupational health assessment before she can authorise spending above the allocated budget, to justify the duty-of-care requirement.",
+            "distractors": {
+              "A": "Board of directors approval is not required — an occupational health assessment is.",
+              "B": "A report from the finance department is not what she asks for.",
+              "D": "Signed agreements from employees are not what she requires before approving the spend."
+            }
+          }
+        },
+        {
+          "text": "What does the man propose as an immediate interim measure?",
+          "options": [
+            "(A) Delaying the hybrid rollout until the budget is reallocated",
+            "(B) Requesting emergency funding from the executive leadership team",
+            "(C) Approving equipment for the five most critical cases first",
+            "(D) Having employees purchase equipment and submit reimbursement claims"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "As a practical first step, the man proposes approving ergonomic equipment for the five employees whose health needs are most urgent while the formal assessment process begins.",
+            "distractors": {
+              "A": "He does not propose delaying the hybrid rollout.",
+              "B": "He does not suggest requesting emergency funding from leadership.",
+              "D": "Having employees buy equipment and claim reimbursement is not proposed."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv14.mp3"
+    },
+    {
+      "type": "Procurement — emergency vendor substitution after force majeure",
+      "dialogue": [
+        {
+          "speaker": "M",
+          "text": "GlobalTech just invoked a force majeure clause and pulled out of our automation components contract — they're citing the new trade tariff changes. This directly threatens the assembly line launch scheduled for March."
+        },
+        {
+          "speaker": "F",
+          "text": "How much lead time do we have before inventory runs out, and do we have any qualified alternates on our approved vendor list?"
+        },
+        {
+          "speaker": "M",
+          "text": "About six weeks of stock remaining. There are two alternates — Meridian Components and EuroParts. Meridian meets our quality specs but runs about 18% higher per unit. EuroParts is cheaper, but their quality certification expires in April."
+        },
+        {
+          "speaker": "F",
+          "text": "Go with Meridian — quality and continuity take priority over unit cost. Simultaneously, have legal open a claim against GlobalTech for breach of the force majeure clause terms, and put EuroParts on a six-month performance review pipeline."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Why did GlobalTech cancel the contract?",
+          "options": [
+            "(A) The company had failed to meet the agreed payment terms",
+            "(B) GlobalTech cited new trade tariffs as a force majeure event",
+            "(C) The delivered components did not meet the required quality specifications",
+            "(D) GlobalTech was acquired by a competitor and halted all contracts"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "GlobalTech invoked a force majeure clause, citing newly imposed trade tariffs that they claim make fulfilment of the contract commercially impossible.",
+            "distractors": {
+              "A": "Payment terms failure is not the stated reason for GlobalTech's cancellation.",
+              "C": "Quality specification failures are not mentioned.",
+              "D": "GlobalTech was not acquired — they cited trade tariffs."
+            }
+          }
+        },
+        {
+          "text": "What is the drawback of using EuroParts as an alternative supplier?",
+          "options": [
+            "(A) Their components are incompatible with the assembly line specifications",
+            "(B) They are significantly more expensive per unit than Meridian",
+            "(C) Their quality certification is due to expire shortly",
+            "(D) They have no established prior relationship with the company"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "EuroParts' ISO quality certification is close to its expiry date, which raises concerns about their compliance status as a long-term supplier.",
+            "distractors": {
+              "A": "Component incompatibility with the assembly line is not raised as an issue.",
+              "B": "Pricing is not the drawback — the certification expiry is.",
+              "D": "They do have a prior relationship with the company — the certification issue is the drawback, not lack of familiarity."
+            }
+          }
+        },
+        {
+          "text": "What does the woman instruct regarding GlobalTech?",
+          "options": [
+            "(A) Renegotiate the contract to account for the new tariff conditions",
+            "(B) Have legal pursue a claim for breach of the force majeure terms",
+            "(C) Request a financial compensation payment for the March delay",
+            "(D) Permanently remove GlobalTech from the approved vendor list"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The woman instructs the man to pass the GlobalTech file to the legal team to assess whether the force majeure claim is valid and, if not, pursue a breach-of-contract claim.",
+            "distractors": {
+              "A": "Renegotiating with GlobalTech is not what she instructs — she hands it to legal.",
+              "C": "Seeking financial compensation specifically for the March delay is not her instruction.",
+              "D": "Permanently removing GlobalTech from the approved vendor list is not mentioned."
+            }
+          }
+        }
+      ],
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part3/audio/conv15.mp3"
+    }
+  ]
+}

@@ -6,12 +6,17 @@ import { createClient } from "@/lib/supabase/client";
 
 export default function LaunchExamButton({
   hasCredits,
+  isAdmin = false,
 }: {
   hasCredits: boolean;
+  isAdmin?: boolean;
 }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+
+  // Admins can always launch regardless of credits
+  const canLaunch = hasCredits || isAdmin;
 
   const handleLaunch = async () => {
     setLoading(true);
@@ -34,23 +39,23 @@ export default function LaunchExamButton({
   };
 
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col gap-1.5">
       <button
-        disabled={!hasCredits || loading}
+        disabled={!canLaunch || loading}
         onClick={handleLaunch}
-        className={`px-12 py-4 text-base font-bold rounded-full transition-colors ${
-          hasCredits && !loading
-            ? "bg-[#6600CC] text-white hover:bg-[#5500aa] shadow-md cursor-pointer"
-            : "bg-gray-200 text-gray-400 cursor-not-allowed"
+        className={`px-6 py-2.5 text-sm font-semibold rounded-lg transition-colors ${
+          canLaunch && !loading
+            ? "bg-[#6600CC] text-white hover:bg-[#5500aa] cursor-pointer"
+            : "bg-gray-100 text-gray-400 cursor-not-allowed"
         }`}
       >
         {loading
           ? "Démarrage…"
-          : hasCredits
-          ? "Lancer l'examen →"
+          : canLaunch
+          ? "Démarrer l'examen"
           : "Crédits insuffisants"}
       </button>
-      {error && <p className="text-sm text-red-500">{error}</p>}
+      {error && <p className="text-xs text-red-500">{error}</p>}
     </div>
   );
 }

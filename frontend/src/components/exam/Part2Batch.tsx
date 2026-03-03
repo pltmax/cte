@@ -1,16 +1,18 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const AUDIO_DURATION_MS = 9_000; // simulated fallback
-const GRACE_PERIOD_S = 3;
+const AUDIO_DURATION_MS = 9_000; // simulated fallback when no audio URLs
+const GRACE_PERIOD_S = 5;
 const LETTERS = ["A", "B", "C"] as const;
 const AUDIO_ICON_FLICKER_MS = 850;
 // Audio sequence per question: question prompt → option A → B → C
 const AUDIO_SEQUENCE = ["question", "A", "B", "C"] as const;
 type SeqKey = (typeof AUDIO_SEQUENCE)[number];
+// Pause inserted between question enunciation and first option
+const QA_PAUSE_MS = 1_000;
 
 // ─── Mini sound icon ──────────────────────────────────────────────────────────
 
@@ -75,14 +77,21 @@ interface Part2BatchProps {
   answers: Record<number, string>;
   onSelect: (localIndex: number, letter: string) => void;
   onBatchComplete: () => void;
-  /** Audio URLs per question in the batch (populated after GCS upload) */
+  /** Audio URLs per question in the batch */
   questionAudios?: QuestionAudio[];
+}
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function getAudioUrl(qa: QuestionAudio, key: SeqKey): string | undefined {
+  if (key === "question") return qa.questionAudioUrl;
+  return qa.optionAudioUrls?.[key as "A" | "B" | "C"];
 }
 
 // ─── Part2Batch ───────────────────────────────────────────────────────────────
 
 export default function Part2Batch({
-  batchIndex,
+  batchIndex: _batchIndex,
   batchSize,
   startQuestionNumber,
   totalQuestions,
@@ -92,83 +101,154 @@ export default function Part2Batch({
   questionAudios,
 }: Part2BatchProps) {
   const [activeLocal, setActiveLocal] = useState(0);
-  const [questionPhase, setQuestionPhase] = useState<
-    "playing" | "grace" | "done"
-  >("playing");
+  const [questionPhase, setQuestionPhase] = useState<"playing" | "grace" | "done">("playing");
   const [graceLeft, setGraceLeft] = useState(GRACE_PERIOD_S);
   const [seqIdx, setSeqIdx] = useState(0);
-  const audioRef = useRef<HTMLAudioElement>(null);
 
-  const isLastQuestion = activeLocal === batchSize - 1;
-  const onBatchCompleteRef = useCallback(onBatchComplete, [onBatchComplete]); // eslint-disable-line
+  // Stable refs — always point to latest values without being in effect dep arrays.
+  const onBatchCompleteRef = useRef(onBatchComplete);
+  useEffect(() => { onBatchCompleteRef.current = onBatchComplete; }, [onBatchComplete]);
 
-  const currentAudio = questionAudios?.[activeLocal];
-  const hasAudio =
-    !!currentAudio?.questionAudioUrl || !!currentAudio?.optionAudioUrls;
+  // Captured each render; read inside the "done" effect via ref to avoid
+  // that effect re-firing just because isLastQuestion changed.
+  const isLastQuestionRef = useRef(false);
+  isLastQuestionRef.current = activeLocal === batchSize - 1;
 
-  function getAudioUrl(qa: QuestionAudio, key: SeqKey): string | undefined {
-    if (key === "question") return qa.questionAudioUrl;
-    return qa.optionAudioUrls?.[key as "A" | "B" | "C"];
-  }
+  // ─── Audio + playing phase — runs when activeLocal changes ───────────────
+  //
+  // Creates fresh Audio elements for each question (no shared element, no
+  // src-switching race → no AbortError). The playFrom chain inserts a 1-second
+  // pause after the question audio before the first option starts.
 
-  // Phase 1: audio (real or simulated) — resets when activeLocal changes
   useEffect(() => {
     setQuestionPhase("playing");
     setGraceLeft(GRACE_PERIOD_S);
     setSeqIdx(0);
-    if (hasAudio) return; // real audio drives transition
-    const id = setTimeout(() => setQuestionPhase("grace"), AUDIO_DURATION_MS);
-    return () => clearTimeout(id);
+
+    const qa = questionAudios?.[activeLocal];
+    const hasAudio = !!qa?.questionAudioUrl || !!qa?.optionAudioUrls;
+
+    // No audio: simulate with a fixed timer then enter grace.
+    if (!hasAudio) {
+      const id = setTimeout(() => {
+        setGraceLeft(GRACE_PERIOD_S);
+        setQuestionPhase("grace");
+      }, AUDIO_DURATION_MS);
+      return () => clearTimeout(id);
+    }
+
+    // Build Audio elements up front so preload="auto" starts buffering immediately.
+    let cancelled = false;
+    const els: Partial<Record<SeqKey, HTMLAudioElement>> = {};
+    for (const key of AUDIO_SEQUENCE) {
+      const url = qa ? getAudioUrl(qa, key) : undefined;
+      if (url) {
+        const el = new Audio(url);
+        el.preload = "auto";
+        els[key] = el;
+      }
+    }
+
+    const pendingTimers: ReturnType<typeof setTimeout>[] = [];
+
+    function enterGrace() {
+      if (cancelled) return;
+      setGraceLeft(GRACE_PERIOD_S);
+      setQuestionPhase("grace");
+    }
+
+    function playFrom(idx: number) {
+      if (cancelled || idx >= AUDIO_SEQUENCE.length) {
+        if (!cancelled) enterGrace();
+        return;
+      }
+
+      const key = AUDIO_SEQUENCE[idx];
+      const el = els[key];
+
+      // 1-second pause between the question enunciation (idx 0) and option A (idx 1).
+      const delayMs = idx === 1 ? QA_PAUSE_MS : 0;
+
+      const doStart = () => {
+        if (cancelled) return;
+        setSeqIdx(idx);
+
+        if (!el) {
+          // Missing URL for this step — skip it.
+          playFrom(idx + 1);
+          return;
+        }
+
+        el.onended = () => playFrom(idx + 1);
+        const doPlay = () => {
+          if (!cancelled) el.play().catch(console.error);
+        };
+        if (el.readyState >= 3) {
+          doPlay();
+        } else {
+          el.addEventListener("canplay", doPlay, { once: true });
+        }
+      };
+
+      if (delayMs > 0) {
+        const tid = setTimeout(doStart, delayMs);
+        pendingTimers.push(tid);
+      } else {
+        doStart();
+      }
+    }
+
+    playFrom(0);
+
+    return () => {
+      cancelled = true;
+      for (const tid of pendingTimers) clearTimeout(tid);
+      for (const el of Object.values(els)) {
+        if (el) {
+          el.onended = null;
+          el.pause();
+          el.src = "";
+        }
+      }
+    };
   }, [activeLocal]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Real audio: play the current sequence step
-  useEffect(() => {
-    if (!hasAudio || !audioRef.current || !currentAudio) return;
-    const key = AUDIO_SEQUENCE[seqIdx];
-    const url = getAudioUrl(currentAudio, key);
-    if (!url) {
-      // Skip missing URL — treat as if ended
-      handleAudioEnded();
-      return;
-    }
-    audioRef.current.src = url;
-    audioRef.current.play().catch(console.error);
-  }, [seqIdx, activeLocal]); // eslint-disable-line react-hooks/exhaustive-deps
+  // ─── Grace countdown ─────────────────────────────────────────────────────
 
-  const handleAudioEnded = useCallback(() => {
-    setSeqIdx((prev) => {
-      const next = prev + 1;
-      if (next < AUDIO_SEQUENCE.length) return next;
-      setQuestionPhase("grace");
-      return prev;
-    });
-  }, []);
-
-  // Phase 2: grace countdown
   useEffect(() => {
     if (questionPhase !== "grace") return;
+    let remaining = GRACE_PERIOD_S;
     const id = setInterval(() => {
-      setGraceLeft((s) => {
-        if (s <= 1) {
-          clearInterval(id);
-          setQuestionPhase("done");
-          return 0;
-        }
-        return s - 1;
-      });
+      remaining--;
+      if (remaining <= 0) {
+        clearInterval(id);
+        setGraceLeft(0);
+        setQuestionPhase("done");
+      } else {
+        setGraceLeft(remaining);
+      }
     }, 1000);
     return () => clearInterval(id);
   }, [questionPhase]);
 
-  // Phase 3: advance or complete batch
+  // ─── Advance or complete ──────────────────────────────────────────────────
+  //
+  // IMPORTANT: isLastQuestion is intentionally NOT in the dep array.
+  // Using a ref instead prevents this effect from firing prematurely when
+  // activeLocal advances from batchSize-2 → batchSize-1 while questionPhase
+  // is still "done" (stale from the previous question), which would skip
+  // the last question entirely.
+
   useEffect(() => {
     if (questionPhase !== "done") return;
-    if (isLastQuestion) {
-      onBatchCompleteRef();
+    if (isLastQuestionRef.current) {
+      onBatchCompleteRef.current();
     } else {
       setActiveLocal((l) => l + 1);
     }
-  }, [questionPhase, isLastQuestion, onBatchCompleteRef]);
+  }, [questionPhase]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ─── Render ───────────────────────────────────────────────────────────────
 
   const globalEnd = startQuestionNumber + batchSize - 1;
   const progressPct = (globalEnd / totalQuestions) * 100;
@@ -210,13 +290,9 @@ export default function Part2Batch({
             : "upcoming";
 
           const iconState =
-            rowState === "playing"
-              ? "playing"
-              : rowState === "grace"
-              ? "playing"
-              : rowState === "done"
-              ? "done"
-              : "upcoming";
+            rowState === "playing" || rowState === "grace" ? "playing"
+            : rowState === "done" ? "done"
+            : "upcoming";
 
           const selectedAnswer = answers[localIdx] ?? null;
 
@@ -279,15 +355,13 @@ export default function Part2Batch({
                 {isActive && questionPhase === "grace" && (
                   <p className="text-xs text-gray-500">
                     Question suivante dans{" "}
-                    <span className="font-semibold tabular-nums">
-                      {graceLeft}
-                    </span>
+                    <span className="font-semibold tabular-nums">{graceLeft}</span>
                     &thinsp;s
                   </p>
                 )}
                 {isActive && questionPhase === "playing" && (
                   <p className="text-xs text-gray-400 animate-pulse">
-                    Écoute en cours…
+                    {seqIdx === 0 ? "Question…" : `Énoncé ${seqIdx} / 3`}
                   </p>
                 )}
               </div>
@@ -295,9 +369,6 @@ export default function Part2Batch({
           );
         })}
       </div>
-
-      {/* Hidden audio element */}
-      <audio ref={audioRef} onEnded={handleAudioEnded} className="hidden" />
     </div>
   );
 }

@@ -1,0 +1,1784 @@
+{
+  "advice": {
+    "intro": "15 phrases incomplètes, chacune suivie de quatre choix de mots ou d'expressions (A, B, C, D). Tu dois choisir le terme qui complète le mieux la phrase.",
+    "strategy": "Détermine si le blanc attend un nom, verbe, adjectif ou adverbe, et élimine les options incompatibles. Mémorise les prépositions et conjonctions fréquentes. Avance vite : 30 secondes/question, devine si tu bloques.",
+    "traps": [
+      {
+        "label": "Confusion de catégorie grammaticale",
+        "example": "Choisir 'decision' là où 'decide' est attendu (ou inversement)"
+      },
+      {
+        "label": "Synonymes partiels",
+        "example": "Hésiter entre 'comply with' et 'conform to' sans vérifier la préposition imposée"
+      },
+      {
+        "label": "Futur dans une subordonnée temporelle",
+        "example": "Écrire 'will start' après 'when' ou 'by the time' au lieu du présent simple"
+      },
+      {
+        "label": "Mauvais type de pronom",
+        "example": "Utiliser 'who' pour une chose, 'which' après une virgule avec 'that', ou 'them' au lieu de 'themselves'"
+      },
+      {
+        "label": "Confusion entre adverbe et adjectif",
+        "example": "Choisir 'quick' au lieu de 'quickly' pour modifier un verbe, ou inversement"
+      },
+      {
+        "label": "Association de mots qui ne fonctionne pas",
+        "example": "Sélectionner 'make a picture' au lieu de 'take a picture'"
+      }
+    ]
+  },
+  "category_tips": {
+    "word_form": "Identifie la fonction grammaticale du blanc dans la phrase avant de regarder les réponses. Pose-toi ces questions dans l'ordre : (1) Le blanc est-il le sujet ou le complément d'objet d'un verbe ? → nom. (2) Le blanc modifie-t-il un nom ? → adjectif. (3) Le blanc modifie-t-il un verbe, un adjectif ou un autre adverbe ? → adverbe. (4) Le blanc suit-il un auxiliaire ou est-il le prédicat principal ? → forme verbale. Les quatre choix appartiennent presque toujours à la même famille lexicale — la forme du mot, pas son sens, est le critère de sélection.",
+    "vocabulary": "Méfie-toi des synonymes partiels. Dans la Partie 5 du TOEIC, les quatre options sont souvent des mots de sens proche — mais seul l'un d'eux forme la collocation naturelle avec les autres mots de la phrase. Lis la phrase entière pour repérer les indices de collocation (verbe + nom, adjectif + nom, verbe + préposition) et élimine les mots qui appartiennent à un registre différent (trop informel, trop technique, trop général). Si deux options semblent également correctes, c'est presque toujours la collocation professionnelle standard qui l'emporte.",
+    "verb_tense": "Identifie l'indice temporel de la phrase avant de regarder les options : les marqueurs comme 'since', 'for', 'already', 'yet', 'by the time', 'last week', 'currently' déterminent presque mécaniquement le temps requis. 'Since' et 'for' appellent le present perfect. Un marqueur de temps passé précis (yesterday, in 2019, last month) exige le simple past. 'Currently', 'right now', 'at the moment' demandent le present continuous. Si aucun marqueur n'est présent, le contexte sémantique (habitude, vérité générale, action en cours, résultat actuel) est ton guide.",
+    "preposition": "Les prépositions en contexte professionnel s'apprennent comme des blocs figés — il ne sert à rien d'en déduire la logique. Mémorise les collocations les plus fréquentes du TOEIC : 'responsible for', 'in charge of', 'comply with', 'in accordance with', 'on behalf of', 'prior to', 'due to', 'in addition to', 'at the discretion of', 'subject to'. Pour chaque question, identifie le verbe, le nom ou l'adjectif autour du blanc — c'est lui qui impose la préposition, pas le sens général de la phrase.",
+    "conjunction": "Distingue deux grandes familles : (1) les conjonctions de subordination qui introduisent une proposition (although, because, unless, provided that, whereas) — elles doivent être suivies d'un sujet + verbe ; (2) les adverbes de liaison qui relient deux phrases indépendantes (however, therefore, furthermore, nevertheless) — ils sont précédés d'un point ou d'un point-virgule. Le piège classique est de confondre 'despite' (préposition, suivie d'un nom ou d'un gérondif) avec 'although' (conjonction, suivie d'une proposition). 'Despite the fact that' est la passerelle entre les deux.",
+    "pronoun": "Pour les pronoms relatifs, applique une règle simple : 'who' pour les personnes (sujet), 'whom' pour les personnes (objet), 'which' pour les choses, 'whose' pour la possession. 'That' peut remplacer 'who' ou 'which' dans les propositions relatives restrictives mais jamais dans les non-restrictives (entre virgules). Pour les pronoms réfléchis, vérifie que le sujet de la phrase et le pronom réfléchi désignent la même entité. Pour les pronoms possessifs, fais attention à l'accord en nombre avec le référent, pas avec le nom qui suit."
+  },
+  "questions": [
+    {
+      "category": "word_form",
+      "sentence": "The board's _____ to relocate the headquarters was announced at the annual shareholders' meeting.",
+      "options": [
+        "(A) decide",
+        "(B) decision",
+        "(C) decisive",
+        "(D) decisively"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "La structure 'possessif + NOM + infinitif' est un patron syntaxique très courant en anglais formel : 'the company's decision to expand', 'the manager's refusal to sign'. Le blanc est le noyau nominal de ce groupe — seul 'decision' (B) est un nom et peut occuper cette position. Les pièges (A), (C) et (D) appartiennent tous à la même famille lexicale mais sont de catégories grammaticales incompatibles avec la position du blanc.",
+        "distractors": {
+          "A": "'decide' est un verbe — il ne peut pas occuper la position de sujet après un génitif",
+          "C": "'decisive' est un adjectif — il ne peut pas être le sujet d'un verbe",
+          "D": "'decisively' est un adverbe — il ne peut pas non plus fonctionner comme sujet"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The new logistics software significantly _____ the time required to process each customer order.",
+      "options": [
+        "(A) reduction",
+        "(B) reduce",
+        "(C) reduced",
+        "(D) reductive"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Reduced' (C) est la seule forme verbale fléchie de la liste, conjuguée au simple past, qui peut occuper la position de prédicat principal. Le TOEIC teste souvent la confusion entre 'reduction' (nom) et 'reduced' (verbe) car ils partagent la même racine et ont une apparence similaire à l'écrit. L'indice décisif est la structure syntaxique : sujet + _____ + objet = verbe conjugué obligatoire.",
+        "distractors": {
+          "A": "'reduction' est un nom — deux noms ne peuvent pas se suivre sans préposition dans cette structure",
+          "B": "'reduce' est la base verbale — elle est incorrecte sans auxiliaire dans une phrase affirmative",
+          "D": "'reductive' est un adjectif — il ne peut pas être prédicat d'un sujet non humain dans ce contexte"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "Mr. Okafor is widely regarded as one of the most _____ negotiators in the industry.",
+      "options": [
+        "(A) skill",
+        "(B) skills",
+        "(C) skillful",
+        "(D) skillfully"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Le patron 'most + ADJECTIF + nom' est l'un des plus fréquents du TOEIC dans les questions de word form. L'adjectif 'skillful' (C) est le seul choix qui peut fonctionner ici comme modificateur antéposé. Les pièges (A) et (B) exploitent la familiarité du mot 'skill' — les candidats qui s'accrochent au sens sans analyser la structure grammaticale seront attirés par ces options.",
+        "distractors": {
+          "A": "'skill' est un nom singulier — un nom ne modifie pas directement un autre nom dans cette structure",
+          "B": "'skills' est un nom pluriel — même problème",
+          "D": "'skillfully' est un adverbe — les adverbes modifient des verbes ou des adjectifs, pas des noms"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "All invoices must be submitted _____ by the fifteenth of each month to ensure timely payment.",
+      "options": [
+        "(A) electronic",
+        "(B) electronics",
+        "(C) electronically",
+        "(D) electron"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Electronically' (C) est l'adverbe de manière qui modifie 'submitted', indiquant la façon dont les factures doivent être envoyées. C'est le patron classique des questions d'adverbe en TOEIC : 'please respond promptly', 'submit electronically', 'process efficiently'. L'erreur la plus fréquente est de choisir (A) 'electronic' par proximité de sens, sans remarquer qu'un adjectif ne peut pas modifier un verbe directement.",
+        "distractors": {
+          "A": "'electronic' est un adjectif — il modifie un nom, pas un verbe",
+          "B": "'electronics' est un nom — il ne peut pas modifier un verbe",
+          "D": "'electron' est un nom scientifique sans rapport avec le contexte administratif"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "Before _____ any agreement, both parties must verify the terms with their respective legal counsel.",
+      "options": [
+        "(A) sign",
+        "(B) signed",
+        "(C) signing",
+        "(D) signature"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "La règle 'préposition + gérondif' est l'une des plus testées du TOEIC. 'Before signing' (C) est la seule construction grammaticalement correcte. Les conjonctions de temps suivies d'un gérondif — 'before signing', 'after reviewing', 'upon receiving' — sont des formules quasi figées dans la correspondance professionnelle en anglais et apparaissent régulièrement dans la Partie 5.",
+        "distractors": {
+          "A": "'sign' est la base verbale — elle ne peut pas suivre une préposition directement",
+          "B": "'signed' est le participe passé — il ne peut pas non plus suivre une préposition dans cette position",
+          "D": "'signature' est un nom qui pourrait théoriquement suivre 'before', mais il faudrait alors un article ('before a signature'), ce qui change le sens"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The recent _____ of the downtown branch has attracted a significant number of new clients.",
+      "options": [
+        "(A) renovate",
+        "(B) renovation",
+        "(C) renovated",
+        "(D) renovating"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Renovation' (B) est le nom déverbal qui désigne le processus ou le résultat du fait de rénover. La structure 'The + adjectif + NOM + of' est un schéma nominal très courant en anglais formel : 'the recent renovation of', 'the successful completion of', 'the final approval of'. L'article défini 'The' est l'indice le plus fort que le blanc doit être occupé par un nom.",
+        "distractors": {
+          "A": "'renovate' est un verbe — il ne peut pas suivre un adjectif dans une position nominale",
+          "C": "'renovated' est le participe passé — il pourrait modifier un nom comme adjectif, mais il ne peut pas être le noyau du groupe nominal ici",
+          "D": "'renovating' est le gérondif ou le participe présent — sans auxiliaire, il ne peut pas occuper la position de nom noyau dans ce contexte"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The marketing team's proposal was _____ received by the executive committee.",
+      "options": [
+        "(A) enthusiasm",
+        "(B) enthusiast",
+        "(C) enthusiastic",
+        "(D) enthusiastically"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "Le schéma 'auxiliaire + ADVERBE + participe passé' est l'un des patrons classiques des questions d'adverbe du TOEIC : 'was enthusiastically received', 'has been widely praised', 'was strongly recommended'. L'adverbe 'enthusiastically' (D) modifie 'received' en précisant la manière dont la proposition a été accueillie. Le piège (C) est particulièrement dangereux car 'enthusiastic' et 'enthusiastically' se ressemblent fortement à l'écrit.",
+        "distractors": {
+          "A": "'enthusiasm' est un nom — un nom ne peut pas modifier un participe passé directement",
+          "B": "'enthusiast' est un nom désignant une personne passionnée — même problème",
+          "C": "'enthusiastic' est un adjectif — les adjectifs modifient des noms, pas des formes verbales"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "Employees are encouraged to report any _____ in workplace safety protocols to their direct supervisors.",
+      "options": [
+        "(A) violate",
+        "(B) violent",
+        "(C) violations",
+        "(D) violently"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Violations' (C) est le nom pluriel qui désigne les infractions ou manquements aux protocoles. 'Any + NOM pluriel' est une construction standard pour exprimer l'existence possible de cas indéterminés : 'report any violations', 'submit any questions', 'flag any discrepancies'. La forme plurielle est ici préférable au singulier car on anticipe plusieurs manquements potentiels.",
+        "distractors": {
+          "A": "'violate' est un verbe — il ne peut pas suivre 'any' dans une position nominale",
+          "B": "'violent' est un adjectif — sans nom qui le suit, il ne peut pas être le noyau du groupe nominal ici",
+          "D": "'violently' est un adverbe — il ne peut pas suivre 'any'"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The auditors concluded that the financial records had been maintained _____ throughout the fiscal year.",
+      "options": [
+        "(A) accurate",
+        "(B) accuracy",
+        "(C) accurately",
+        "(D) inaccurate"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Accurately' (C) est l'adverbe de manière qui modifie 'maintained'. Le TOEIC teste fréquemment la paire adjectif/adverbe dans des constructions passives : 'has been accurately recorded', 'was carefully reviewed', 'has been consistently applied'. Le piège (D) est particulièrement vicieux car 'inaccurate' appartient à la bonne famille lexicale et représente le contraire logique — les candidats qui lisent trop vite peuvent confondre préfixe et suffixe.",
+        "distractors": {
+          "A": "'accurate' est un adjectif — il pourrait modifier un nom mais pas un participe passé dans cette position",
+          "B": "'accuracy' est un nom — il ne peut pas fonctionner comme modificateur d'un verbe",
+          "D": "'inaccurate' est un adjectif de sens négatif — en plus d'être une mauvaise catégorie grammaticale, il contredit le sens positif de la conclusion des auditeurs"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The panel recommended that all candidates undergo a thorough _____ of their credentials before being considered.",
+      "options": [
+        "(A) verify",
+        "(B) verifying",
+        "(C) verified",
+        "(D) verification"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "'Verification' (D) est le nom déverbal standard dérivé de 'verify'. La paire 'verify → verification' est représentative des dérivations nominales fréquentes dans le vocabulaire professionnel du TOEIC : 'qualify → qualification', 'certify → certification', 'notify → notification'. Le patron 'adjectif + NOM déverbal + of' est très courant dans la langue administrative : 'a thorough verification of', 'a detailed examination of', 'a formal approval of'.",
+        "distractors": {
+          "A": "'verify' est un verbe — il ne peut pas être modifié par un adjectif dans cette position",
+          "B": "'verifying' pourrait être un gérondif (nom verbal), mais 'a thorough verifying of' est une construction non idiomatique en anglais formel",
+          "C": "'verified' est un participe passé — il pourrait modifier un nom comme adjectif mais ne peut pas être le noyau nominal ici"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The CEO _____ the importance of maintaining open communication between all departments during the transition.",
+      "options": [
+        "(A) pressured",
+        "(B) stressed",
+        "(C) pushed",
+        "(D) forced"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Stress' (B) dans ce contexte signifie 'insister sur', 'souligner', 'mettre en avant' — c'est la collocation standard avec 'the importance of' en anglais professionnel. 'Stress the importance', 'emphasize the importance', 'underline the importance' et 'highlight the importance' sont les quatre verbes qui collocatent naturellement avec cette expression. Les trois autres options décrivent une pression physique ou interpersonnelle et ne s'appliquent pas à un concept abstrait comme 'importance'.",
+        "distractors": {
+          "A": "'pressured' signifie faire pression sur quelqu'un pour qu'il agisse — il se construit avec un objet personne, pas avec 'the importance of'",
+          "C": "'pushed' a le même problème : on pousse quelqu'un, pas une idée abstraite dans ce registre",
+          "D": "'forced' implique une contrainte exercée sur une personne, pas la mise en valeur d'un concept"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The pharmaceutical company plans to _____ its new allergy medication on the European market next spring.",
+      "options": [
+        "(A) throw",
+        "(B) open",
+        "(C) launch",
+        "(D) start"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Launch' (C) est le terme technique standard pour la mise sur le marché d'un produit : 'product launch', 'launch a new drug', 'launch a campaign'. C'est l'une des collocations les plus fréquentes du TOEIC dans les contextes marketing et pharmaceutique. Le piège (D) 'start' est le plus dangereux car il est sémantiquement proche (commencer) mais ne forme pas la collocation établie.",
+        "distractors": {
+          "A": "'throw' est un verbe physique sans emploi figuré établi dans ce contexte commercial précis",
+          "B": "'open' s'utilise pour des lieux (ouvrir un magasin) mais pas pour des produits sur un marché dans ce sens",
+          "D": "'start' est trop générique et ne forme pas de collocation avec 'medication on the market'"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The merger agreement allows Vertex Corp. to _____ full ownership of the subsidiary within two years.",
+      "options": [
+        "(A) earn",
+        "(B) win",
+        "(C) gain",
+        "(D) collect"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Gain' (C) est le verbe standard pour l'acquisition graduelle de propriété, de contrôle ou d'influence dans un contexte business : 'gain ownership', 'gain control', 'gain market share'. C'est une collocation figée que le TOEIC teste régulièrement. La confusion avec 'earn' (A) est la plus commune — les deux expriment l'idée d'obtenir quelque chose, mais 'earn' implique une rémunération pour un travail, tandis que 'gain' implique une acquisition par accord ou par processus.",
+        "distractors": {
+          "A": "'earn' s'applique à une compensation reçue en échange d'un travail — 'earn a salary', 'earn a bonus'. La propriété ne s'acquiert pas en la méritant dans ce contexte",
+          "B": "'win' implique une compétition ou un concours — on gagne un prix, pas la propriété d'une filiale dans un accord de fusion",
+          "D": "'collect' signifie rassembler ou percevoir (des taxes, des données) mais ne collocate pas avec 'ownership'"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "All participants are required to _____ a signed consent form before the clinical trial begins.",
+      "options": [
+        "(A) deliver",
+        "(B) provide",
+        "(C) submit",
+        "(D) hand"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Submit' (C) est le verbe technique pour la remise officielle d'un document à une autorité : 'submit a form', 'submit an application', 'submit a report'. Il implique une relation hiérarchique (on soumet à une autorité) et une formalité administrative — exactement le contexte d'un essai clinique réglementé. C'est l'une des collocations les plus fréquentes du TOEIC dans les sections administratives et médicales.",
+        "distractors": {
+          "A": "'deliver' signifie livrer physiquement quelque chose à un lieu ou à une personne — on délivre un colis, pas un formulaire dans ce registre formel",
+          "B": "'provide' est plausible ('provide a form') mais il est moins spécifique : 'provide' signifie fournir en général, sans l'idée de remettre officiellement à une autorité",
+          "D": "'hand' est trop informel dans ce contexte clinique réglementé — 'hand in' serait plus acceptable mais 'hand' seul est incomplet"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The new energy-efficient systems are expected to significantly _____ operational costs across all facilities.",
+      "options": [
+        "(A) decrease",
+        "(B) diminish",
+        "(C) lower",
+        "(D) cut"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "'Cut costs' (D) est la collocation la plus établie et la plus fréquente dans la langue des affaires en anglais : 'cut costs', 'cut expenses', 'cost-cutting measures'. C'est une expression quasi figée qui apparaît dans les rapports d'entreprise, les communiqués de presse et les présentations aux investisseurs. Le TOEIC teste régulièrement cette collocation car les quatre synonymes partiels peuvent sembler équivalents hors contexte.",
+        "distractors": {
+          "A": "'decrease' s'utilise surtout comme verbe intransitif ('costs decreased') ou dans des contextes statistiques. Avec 'costs' comme objet direct, il est grammaticalement possible mais moins idiomatique",
+          "B": "'diminish' implique une réduction graduelle et souvent involontaire — il collocate mal avec 'costs' dans un contexte de mesure délibérée",
+          "C": "'lower' est plausible ('lower costs') mais appartient à un registre légèrement plus conversationnel"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "All vendors must _____ with the new data protection regulations before signing the service agreement.",
+      "options": [
+        "(A) conform",
+        "(B) comply",
+        "(C) obey",
+        "(D) follow"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Comply with' (B) est la collocation figée standard pour le respect des réglementations, lois et normes dans un contexte professionnel et juridique : 'comply with regulations', 'comply with the law', 'comply with industry standards'. C'est un phrasème inséparable — la préposition 'with' est imposée par le verbe, et aucune autre préposition ne fonctionnerait. Le TOEIC teste cette collocation très fréquemment car les entreprises doivent constamment se conformer à des normes.",
+        "distractors": {
+          "A": "'conform' peut s'utiliser avec 'to' ('conform to standards') mais pas avec 'with' suivi de 'regulations' — la préposition est différente",
+          "C": "'obey' collocate avec des personnes ou des ordres directs ('obey a supervisor') mais est rarement utilisé avec des règlements abstraits dans un registre professionnel",
+          "D": "'follow' est trop général et informel — 'follow regulations' est possible en anglais courant mais pas la collocation standard dans un contrat"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The project manager will _____ specific responsibilities to each team member at the start of the kick-off meeting.",
+      "options": [
+        "(A) distribute",
+        "(B) divide",
+        "(C) assign",
+        "(D) allocate"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Assign' (C) est le verbe standard pour l'attribution d'une tâche ou d'une responsabilité à une personne identifiée : 'assign a task', 'assign responsibilities', 'assign a role'. Il implique une relation directe entre une autorité (le manager) et un individu (le membre de l'équipe). C'est l'une des collocations les plus fréquentes dans le vocabulaire de la gestion de projet du TOEIC.",
+        "distractors": {
+          "A": "'distribute' implique une répartition en quantités d'un ensemble divisible (distribuer des ressources, des copies) — on ne 'distribue' pas des responsabilités à des individus nommément désignés",
+          "B": "'divide' signifie couper en parties — il s'applique à un tout qu'on fragmente, pas à des rôles qu'on attribue",
+          "D": "'allocate' est très proche et plausible ('allocate tasks') mais s'utilise davantage pour des ressources (budgets, temps, personnel) que pour des responsabilités dans un contexte de réunion"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "Due to the speaker's illness, the keynote presentation has been _____ until further notice.",
+      "options": [
+        "(A) delayed",
+        "(B) cancelled",
+        "(C) rescheduled",
+        "(D) postponed"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "'Postponed' (D) est le terme exact pour remettre à plus tard sans fixer immédiatement une nouvelle date. La nuance entre 'postponed' et 'rescheduled' est un piège classique du TOEIC : 'postponed' = repoussé (nouvelle date inconnue), 'rescheduled' = reprogrammé (nouvelle date fixée). 'Until further notice' est l'indice contextuel qui impose 'postponed' — c'est précisément parce qu'aucune nouvelle date n'est connue qu'on n'utilise pas 'rescheduled'.",
+        "distractors": {
+          "A": "'delayed' implique un retard court et involontaire — une réunion retardée de 15 minutes est 'delayed'. 'Until further notice' implique une durée indéterminée, incompatible avec le sens ordinaire de 'delayed'",
+          "B": "'cancelled' signifie annulé définitivement — 'until further notice' implique qu'elle aura lieu plus tard, pas qu'elle est supprimée",
+          "C": "'rescheduled' signifie qu'une nouvelle date a déjà été fixée — or 'until further notice' indique précisément qu'aucune nouvelle date n'a encore été communiquée"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The HR department will _____ all staff members of the changes to the employee benefits package by Friday.",
+      "options": [
+        "(A) advise",
+        "(B) inform",
+        "(C) notify",
+        "(D) announce"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Notify' (C) est le terme le plus formel et le plus précis pour signifier qu'une organisation remplit son obligation d'informer ses membres d'un changement la concernant : 'notify employees', 'notify clients', 'notify all parties'. La structure 'notify + personne + of + changement' est une formule figée très fréquente dans les communications RH du TOEIC. La distinction avec 'inform' réside dans le niveau de formalité et l'idée d'obligation — 'notify' a une connotation quasi-légale.",
+        "distractors": {
+          "A": "'advise' signifie conseiller — 'advise someone to do something'. Utilisé avec 'of', il est possible ('advise of changes') mais dans ce contexte, le RH ne donne pas des conseils, il informe",
+          "B": "'inform' est très proche et presque synonyme de 'notify' — mais 'notify' est plus formel et implique une obligation légale ou réglementaire de communication",
+          "D": "'announce' s'utilise pour une déclaration publique ou officielle devant un auditoire — 'announce to' fonctionne différemment de 'notify'"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "Industry analysts _____ that the demand for renewable energy solutions will double within the next decade.",
+      "options": [
+        "(A) expect",
+        "(B) anticipate",
+        "(C) predict",
+        "(D) foresee"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Predict' (C) est le verbe standard pour les projections chiffrées et étayées par des données que font les analystes, les économistes et les experts : 'analysts predict', 'economists predict', 'the report predicts'. Il implique une démarche rationnelle et quantitative — exactement ce qu'on attend d'analystes sectoriels. La nuance entre 'predict' et 'forecast' (non proposé ici) est minime ; entre 'predict' et 'foresee', la différence réside dans la méthode (données vs. intuition).",
+        "distractors": {
+          "A": "'expect' est correct grammaticalement mais exprime une attente personnelle ou subjective — 'analysts expect' est possible mais moins précis qu'un terme de prévision quantifiée",
+          "B": "'anticipate' exprime une expectative fondée sur des indices présents — il est possible mais légèrement moins factuel",
+          "D": "'foresee' a une connotation quasi-prophétique ou intuitive, inappropriée pour des analystes fondant leurs projections sur des données"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The finance department _____ the quarterly budget report since last Tuesday, but it is still not complete.",
+      "options": [
+        "(A) prepares",
+        "(B) prepared",
+        "(C) has been preparing",
+        "(D) had prepared"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Has been preparing' (C) est le present perfect continuous, qui exprime une action commencée dans le passé (since last Tuesday) et toujours en cours au moment de l'énoncé ('it is still not complete'). L'indice 'since + point temporel' est le signal le plus fort du TOEIC pour le present perfect ou le present perfect continuous. La différence entre les deux : le continuous souligne la durée et la continuité de l'action, ce qui est renforcé ici par 'but it is still not complete'.",
+        "distractors": {
+          "A": "'prepares' est le présent simple — il décrit une habitude ou une vérité générale, pas une action qui s'étend depuis un point passé jusqu'à maintenant",
+          "B": "'prepared' est le simple past — il placerait l'action comme terminée dans le passé, ce qui contredit 'it is still not complete'",
+          "D": "'had prepared' est le plus-que-parfait — il décrit une action terminée avant un autre moment passé, incompatible avec 'since' et le contexte actuel"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The board of directors _____ the merger agreement at their meeting last Thursday.",
+      "options": [
+        "(A) approves",
+        "(B) approved",
+        "(C) has approved",
+        "(D) was approving"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Approved' (B) est le simple past, le seul temps compatible avec un marqueur de temps passé précis ('last Thursday', 'yesterday', 'in 2022', 'last month'). C'est l'une des règles les plus testées du TOEIC : jamais de present perfect avec un marqueur de temps passé précis. Le piège (C) 'has approved' est le plus dangereux car il exprime aussi un passé — mais le present perfect exige que le résultat soit lié au présent, ce qui est contredit par la précision temporelle 'last Thursday'.",
+        "distractors": {
+          "A": "'approves' est le présent simple — il est incompatible avec 'last Thursday'",
+          "C": "'has approved' est le present perfect — il est interdit en présence d'un marqueur de temps passé précis comme 'last Thursday'",
+          "D": "'was approving' est le past continuous — il décrirait une action en cours au moment de 'last Thursday', ce qui ne correspond pas au contexte (une décision de vote est ponctuelle, pas continue)"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "Ms. Reyes _____ already _____ her annual performance review before the new HR policy was implemented.",
+      "options": [
+        "(A) has / completed",
+        "(B) had / completed",
+        "(C) was / completing",
+        "(D) will have / completed"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Had completed' (B) est le past perfect, utilisé pour exprimer qu'une action (compléter l'évaluation) s'est terminée avant une autre action passée (l'implémentation de la politique). L'adverbe 'already' renforce l'idée d'antériorité. Le schéma 'past perfect + before/after/when + simple past' est l'un des schémas de séquence temporelle les plus fréquents du TOEIC.",
+        "distractors": {
+          "A": "'has completed' est le present perfect — il établit un lien avec le présent, ce qui est incompatible avec un contexte entièrement situé dans le passé",
+          "C": "'was completing' est le past continuous — il décrirait une action en cours au moment où la politique a été implémentée, ce qui contredit le sens de 'already'",
+          "D": "'will have completed' est le future perfect — il est incompatible avec un contexte passé"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "Our team is currently _____ the new client portal and expects to complete the rollout by end of month.",
+      "options": [
+        "(A) tests",
+        "(B) will test",
+        "(C) testing",
+        "(D) has tested"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Testing' (C) complète la forme progressive 'is currently testing'. Les marqueurs du present continuous les plus fréquents du TOEIC sont : 'currently', 'at the moment', 'right now', 'at present', 'this week/month/quarter'. Le présent simple décrirait une procédure de test habituelle, ce qui est une nuance importante : 'our team tests the portal' = c'est leur habitude ; 'our team is testing the portal' = ils le font en ce moment.",
+        "distractors": {
+          "A": "'tests' est le présent simple — il décrit une habitude ou une routine, pas une action en cours maintenant, et crée une structure agrammaticale avec 'is'",
+          "B": "'will test' est le futur — incompatible avec 'currently' et crée une structure agrammaticale avec 'is'",
+          "D": "'has tested' est le present perfect — incompatible avec 'is currently'"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "By the time the new branch opens next year, the construction team _____ for over eighteen months.",
+      "options": [
+        "(A) will work",
+        "(B) has been working",
+        "(C) will have been working",
+        "(D) worked"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Will have been working' (C) est le future perfect continuous, utilisé pour décrire une action qui sera en cours depuis un point passé jusqu'à un moment précis dans le futur. Le schéma 'By the time + futur, sujet + will have been + -ing + for + durée' est l'un des points de grammaire avancés les plus testés dans la Partie 5 du TOEIC. La clé est la combinaison de 'by the time' (borne future) et 'for eighteen months' (durée de l'action).",
+        "distractors": {
+          "A": "'will work' est le futur simple — il ne tient pas compte de la durée de l'action ('for over eighteen months')",
+          "B": "'has been working' est le present perfect continuous — il est ancré dans le présent, pas dans un point futur",
+          "D": "'worked' est le simple past — incompatible avec un contexte futur ('next year')"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The regional sales figures _____ dramatically since the new incentive program was introduced three months ago.",
+      "options": [
+        "(A) improved",
+        "(B) improve",
+        "(C) had improved",
+        "(D) have improved"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "'Have improved' (D) est le present perfect, utilisé ici pour exprimer un changement intervenu depuis un point passé ('three months ago') et dont le résultat est toujours pertinent maintenant. 'Since + groupe nominal passé' est le déclencheur mécanique du present perfect dans la Partie 5. La distinction fondamentale : le simple past (A) décrit un événement passé isolé ; le present perfect (D) relie le passé au présent.",
+        "distractors": {
+          "A": "'improved' est le simple past — il nécessiterait un marqueur de temps passé précis. 'Since' n'est pas un marqueur de temps précis — il établit un pont entre le passé et le présent",
+          "B": "'improve' est le présent simple — incompatible avec 'since'",
+          "C": "'had improved' est le past perfect — il décrirait une amélioration antérieure à un autre moment passé, ce qui créerait un fossé temporel non justifié"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "When the inspector arrives tomorrow morning, the maintenance crew _____ the electrical system for three hours.",
+      "options": [
+        "(A) will check",
+        "(B) will have been checking",
+        "(C) is checking",
+        "(D) checks"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Will have been checking' (B) est le future perfect continuous. Il exprime qu'au moment de l'arrivée de l'inspecteur (point futur), l'équipe sera en train de vérifier depuis trois heures déjà. Le schéma 'When + présent (futur), sujet + will have been + -ing + for + durée' est identique au schéma 'by the time' mais avec une conjonction temporelle différente. 'When' dans une subordonnée de temps se construit toujours avec un présent, même si le sens est futur.",
+        "distractors": {
+          "A": "'will check' est le futur simple — il ne rend pas compte de la durée en cours ('for three hours') ni de l'antériorité par rapport à l'arrivée de l'inspecteur",
+          "C": "'is checking' est le present continuous — il décrit une action en cours maintenant, pas dans le futur",
+          "D": "'checks' est le présent simple — incompatible avec un contexte clairement futur"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The company _____ its environmental impact policy every two years to stay aligned with international standards.",
+      "options": [
+        "(A) is reviewing",
+        "(B) reviews",
+        "(C) reviewed",
+        "(D) will have reviewed"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Reviews' (B) est le présent simple, utilisé pour décrire des habitudes, des procédures régulières et des vérités générales dans un contexte professionnel. Les marqueurs de fréquence comme 'every two years', 'annually', 'quarterly', 'on a regular basis' imposent mécaniquement le présent simple en anglais standard. C'est l'usage le plus fondamental du présent simple en anglais professionnel.",
+        "distractors": {
+          "A": "'is reviewing' est le present continuous — il décrit une action en cours en ce moment, pas une habitude régulière",
+          "C": "'reviewed' est le simple past — il placerait l'action dans le passé uniquement, incompatible avec une politique toujours en vigueur",
+          "D": "'will have reviewed' est le future perfect — il décrirait une action future accomplie, sans rapport avec la fréquence régulière décrite"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The client _____ the proposal three times before finally accepting the revised terms last week.",
+      "options": [
+        "(A) has rejected",
+        "(B) rejects",
+        "(C) had rejected",
+        "(D) was rejecting"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Had rejected' (C) est le past perfect, utilisé pour montrer que les trois rejections ont précédé l'acceptation finale ('last week'). L'adverbe 'three times' accentue la répétition des actions antérieures. Le schéma 'past perfect + nombre de fois + before + simple past' est une structure narrative très fréquente dans les contextes business du TOEIC pour décrire des négociations ou des processus d'approbation.",
+        "distractors": {
+          "A": "'has rejected' est le present perfect — il crée un lien avec le présent, incompatible avec la séquence entièrement passée décrite",
+          "B": "'rejects' est le présent simple — incompatible avec 'last week'",
+          "D": "'was rejecting' est le past continuous — il décrirait un rejet en cours au moment de l'acceptation, ce qui est sémantiquement incohérent avec l'idée de trois rejets distincts"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "If the contract _____ by both parties before the deadline, the project launch would proceed as planned.",
+      "options": [
+        "(A) is signed",
+        "(B) was signed",
+        "(C) were signed",
+        "(D) had been signed"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Were signed' (C) est le subjonctif passé utilisé dans le conditionnel de type 2 : 'If + sujet + were + participe passé, sujet + would + base'. La forme 'were' est requise en anglais formel pour tous les sujets (même singulier) dans les conditionnelles de type 2. Le TOEIC teste fréquemment la distinction entre les trois types de conditionnels, en particulier la confusion entre type 2 (were + would) et type 3 (had been + would have).",
+        "distractors": {
+          "A": "'is signed' forme le conditionnel de type 1 ('If it is signed, it will proceed') — mais 'would proceed' dans la principale indique clairement un type 2",
+          "B": "'was signed' est grammaticalement proche mais 'were' est la forme subjonctive correcte pour le type 2, même avec un sujet singulier — 'were' est préférable en anglais formel",
+          "D": "'had been signed' forme le conditionnel de type 3 (passé irréel) — incompatible avec la principale au conditionnel présent"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "Ms. Park is _____ charge of coordinating all logistics for the upcoming product launch event.",
+      "options": [
+        "(A) at",
+        "(B) on",
+        "(C) in",
+        "(D) under"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'In charge of' (C) est une expression figée signifiant 'responsable de', 'chargé de'. Elle fait partie des collocations prépositionnelles les plus fréquentes du TOEIC : 'in charge of', 'in need of', 'in favor of', 'in lieu of'. Le seul moyen de répondre correctement est de l'avoir mémorisée — aucune déduction logique ne permet de préférer 'in' à 'at', 'on' ou 'under'.",
+        "distractors": {
+          "A": "'at charge of' n'existe pas en anglais",
+          "B": "'on charge of' n'existe pas non plus dans ce sens",
+          "D": "'under charge of' n'est pas idiomatique dans ce contexte de responsabilité — 'under the charge of someone' peut s'utiliser pour désigner la supervision d'un individu sur un autre, mais 'in charge of' est l'expression standard"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The legal team confirmed that the new supplier contract complies fully _____ local labor regulations.",
+      "options": [
+        "(A) to",
+        "(B) with",
+        "(C) by",
+        "(D) for"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Comply with' (B) est la seule collocation correcte de ce verbe. Comme pour de nombreux verbes en anglais, la préposition est imposée par le verbe lui-même et non par le sens général de la phrase. Les collocations 'verbe + with' fréquentes du TOEIC : 'comply with', 'deal with', 'meet with', 'interfere with', 'provide someone with'. La confusion la plus fréquente est avec 'conform to' — les deux signifient 'respecter', mais la préposition change.",
+        "distractors": {
+          "A": "'comply to' n'est pas idiomatique en anglais standard — 'conform to' existe, mais 'comply' exige toujours 'with'",
+          "C": "'comply by' n'existe pas",
+          "D": "'comply for' n'existe pas non plus dans ce sens"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The travel reimbursements will be processed _____ accordance with the company's updated expense policy.",
+      "options": [
+        "(A) at",
+        "(B) by",
+        "(C) in",
+        "(D) on"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'In accordance with' (C) est une locution prépositionnelle figée signifiant 'conformément à' ou 'en accord avec'. C'est l'une des expressions les plus fréquentes du TOEIC dans les contextes administratifs et légaux : 'in accordance with the policy', 'in accordance with the law', 'in accordance with your request'. Elle appartient à la famille des locutions prépositionnelles en 'in + nom + with' : 'in compliance with', 'in line with', 'in keeping with'.",
+        "distractors": {
+          "A": "'at accordance with' n'existe pas",
+          "B": "'by accordance with' n'existe pas non plus",
+          "D": "'on accordance with' n'est pas idiomatique"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "Mr. Chen signed the agreement _____ behalf of the entire executive team.",
+      "options": [
+        "(A) for",
+        "(B) in",
+        "(C) on",
+        "(D) at"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'On behalf of' (C) est la seule formulation correcte en anglais britannique et américain contemporain. Elle signifie 'au nom de', 'de la part de', 'en représentant'. C'est une expression quasi obligatoire dans les contextes de signature de contrats, de représentation légale et de délégation : 'I am writing on behalf of', 'signed on behalf of the board'. Elle apparaît très fréquemment dans les e-mails et lettres commerciales du TOEIC.",
+        "distractors": {
+          "A": "'for behalf of' n'existe pas",
+          "B": "'in behalf of' est une variante américaine archaïque, jamais utilisée dans le TOEIC",
+          "D": "'at behalf of' n'existe pas"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "All requests for additional funding must be submitted _____ the end of the third fiscal quarter.",
+      "options": [
+        "(A) by",
+        "(B) until",
+        "(C) before",
+        "(D) within"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'By' (A) est la préposition standard pour les dates limites dans un contexte professionnel : 'by Friday', 'by the deadline', 'by the end of the quarter'. La distinction cruciale entre 'by' et 'until' : 'by' = au plus tard à ce moment (date limite), 'until' = jusqu'à ce moment (durée continue). C'est l'une des paires prépositionnelles les plus testées du TOEIC.",
+        "distractors": {
+          "B": "'until' exprime une durée qui se poursuit jusqu'à un point — 'wait until the end' (attendre jusqu'à la fin). Il s'utilise pour des états ou des actions continues, pas pour des dates limites ponctuelles",
+          "C": "'before' est proche de 'by' mais implique strictement l'antériorité — 'before the end' exclut le dernier jour, tandis que 'by the end' inclut le dernier jour",
+          "D": "'within' exprime un délai à partir du présent — 'within three days' = dans un délai de trois jours. Sans complément de durée, il ne convient pas ici"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The product recall was issued _____ a manufacturing defect discovered during routine quality testing.",
+      "options": [
+        "(A) because",
+        "(B) owing",
+        "(C) due to",
+        "(D) since"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Due to' (C) est une locution prépositionnelle de cause suivie obligatoirement d'un groupe nominal : 'due to a defect', 'due to the delay', 'due to unforeseen circumstances'. C'est l'expression de cause la plus fréquente du TOEIC dans les contextes de justification et d'explication officielle. La paire à retenir : 'due to + groupe nominal' vs. 'because + proposition (sujet + verbe)'.",
+        "distractors": {
+          "A": "'because' est une conjonction — elle doit être suivie d'une proposition avec sujet et verbe, pas d'un groupe nominal",
+          "B": "'owing' seul ne suffit pas — la forme correcte est 'owing to', mais sans 'to', il n'est pas complet",
+          "D": "'since' peut exprimer la cause mais fonctionne comme une conjonction — il doit être suivi d'une proposition"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The training session is scheduled _____ Monday at nine AM in the main conference room.",
+      "options": [
+        "(A) in",
+        "(B) on",
+        "(C) at",
+        "(D) for"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'On' (B) est la préposition standard pour les jours de la semaine et les dates : 'on Monday', 'on March 15th', 'on the weekend'. La règle AT-ON-IN pour le temps est fondamentale : AT pour les heures (at 9 AM, at noon), ON pour les jours et dates (on Monday, on April 5th), IN pour les mois, années et saisons (in March, in 2024). Cette question combine 'on Monday' (jour) et 'at nine AM' (heure), testant ainsi les deux à la fois.",
+        "distractors": {
+          "A": "'in Monday' n'est jamais correct — 'in' s'utilise pour les mois, années, saisons et moments de la journée généraux",
+          "C": "'at Monday' n'est pas idiomatique — 'at' s'utilise pour les heures précises et certaines expressions (at night, at noon)",
+          "D": "'for Monday' aurait le sens de 'prévu pour lundi dans le futur' — c'est possible dans certains contextes mais 'on Monday' est la construction standard pour indiquer le jour"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The new policy is _____ effect as of the first day of the upcoming fiscal year.",
+      "options": [
+        "(A) into",
+        "(B) in",
+        "(C) to",
+        "(D) on"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Into' (A) est correct dans l'expression 'come into effect' / 'go into effect', qui signifie 'entrer en vigueur'. La distinction avec 'in effect' (B) est subtile mais importante : 'The policy is in effect' = la politique est actuellement en vigueur (état statique) ; 'The policy comes into effect' = la politique entre en vigueur (changement d'état dynamique). 'As of the first day of the upcoming fiscal year' indique un changement à venir, ce qui impose 'into'.",
+        "distractors": {
+          "B": "'in effect' existe et signifie 'en vigueur' (état statique), mais la structure 'is _____ effect as of' décrit le mouvement vers cet état — 'into' marque le changement d'état, pas l'état lui-même",
+          "C": "'to effect' n'est pas idiomatique dans ce contexte",
+          "D": "'on effect' n'existe pas"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The conference registration fee covers all workshop sessions, meals, and access _____ the online resource library.",
+      "options": [
+        "(A) of",
+        "(B) for",
+        "(C) to",
+        "(D) with"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Access to' (C) est la seule collocation correcte du nom 'access' dans ce sens : 'access to information', 'access to resources', 'access to the building'. 'To' est la préposition imposée par 'access' pour introduire l'objet auquel on accède. C'est une collocation nominale figée parmi les plus fréquentes du TOEIC, notamment dans les contextes de technologie, de ressources et d'infrastructure.",
+        "distractors": {
+          "A": "'access of' n'existe pas en anglais standard",
+          "B": "'access for' peut s'utiliser dans certains contextes ('access for disabled visitors') mais pas avec un complément de lieu ou de service comme 'the online library'",
+          "D": "'access with' n'est pas idiomatique"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "_____ the growing demand for sustainable packaging, the company has invested in new biodegradable materials.",
+      "options": [
+        "(A) Despite",
+        "(B) Although",
+        "(C) In response to",
+        "(D) However"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'In response to' (C) est une locution prépositionnelle de réaction signifiant 'en réponse à', 'face à'. Elle est suivie d'un groupe nominal et exprime que l'investissement est une réaction directe à la demande croissante. Les locutions prépositionnelles de cause et de réaction fréquentes du TOEIC : 'in response to', 'due to', 'as a result of', 'in light of', 'owing to'. Toutes sont suivies d'un groupe nominal — jamais d'une proposition directe.",
+        "distractors": {
+          "A": "'Despite' exprime la concession — 'despite the demand' signifierait que l'investissement se fait malgré la demande, ce qui est sémantiquement l'inverse",
+          "B": "'Although' est une conjonction — elle doit être suivie d'une proposition (sujet + verbe), pas d'un groupe nominal",
+          "D": "'However' est un adverbe de liaison — il ne peut pas précéder un groupe nominal en début de phrase"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "_____ the negotiations were lengthy and complex, both parties reached a mutually beneficial agreement.",
+      "options": [
+        "(A) Despite",
+        "(B) However",
+        "(C) Although",
+        "(D) Due to"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Although' (C) est une conjonction de subordination de contraste, suivie obligatoirement d'une proposition complète (sujet + verbe). C'est l'équivalent de 'bien que' en français. La distinction fondamentale à retenir : 'Although + proposition' vs. 'Despite + groupe nominal/gérondif'. 'Despite the lengthy negotiations' et 'Although the negotiations were lengthy' expriment le même sens mais avec des structures grammaticales différentes. Ce piège est l'un des plus fréquents de la Partie 5.",
+        "distractors": {
+          "A": "'Despite' est une préposition — elle doit être suivie d'un nom ou d'un gérondif, pas d'une proposition complète",
+          "B": "'However' est un adverbe de liaison — il ne peut pas introduire une proposition subordonnée ; il relie deux phrases indépendantes",
+          "D": "'Due to' est une locution prépositionnelle de cause — elle exprime une cause, pas un contraste, et doit être suivie d'un groupe nominal"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The factory increased production by 40 percent last quarter; _____, inventory levels remain critically low.",
+      "options": [
+        "(A) therefore",
+        "(B) furthermore",
+        "(C) however",
+        "(D) otherwise"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'However' (C) est l'adverbe de liaison de contraste le plus fréquent en anglais professionnel. Il signifie 'cependant', 'pourtant', 'néanmoins'. La structure 'proposition indépendante ; however, proposition indépendante' est l'une des structures de liaison les plus utilisées dans les e-mails, rapports et mémos du TOEIC. La ponctuation est importante : 'however' en position initiale est précédé d'un point-virgule ou d'un point, pas d'une virgule seule.",
+        "distractors": {
+          "A": "'therefore' exprime la conséquence logique — si la production a augmenté, 'therefore' dirait que les stocks sont faibles pour cette raison, ce qui n'a pas de sens",
+          "B": "'furthermore' exprime l'addition d'un fait similaire — il ne marque pas de contraste",
+          "D": "'otherwise' exprime la condition alternative — il ne relie pas deux faits contrastés"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The new overtime policy will apply to all hourly employees _____ they have been with the company for fewer than six months.",
+      "options": [
+        "(A) unless",
+        "(B) so that",
+        "(C) in order to",
+        "(D) as long as"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Unless' (A) signifie 'sauf si', 'à moins que' — il introduit la seule condition sous laquelle la règle ne s'applique pas. 'Unless + sujet + verbe' est l'équivalent de 'if not + sujet + verbe' : 'the policy will apply unless they have been here fewer than 6 months' = 'the policy will apply if they have not been here fewer than 6 months'. C'est l'une des conjonctions conditionnelles les plus testées du TOEIC car sa logique négative peut déstabiliser un lecteur rapide.",
+        "distractors": {
+          "B": "'so that' exprime le but — 'la politique s'applique pour que les employés aient moins de six mois' n'a pas de sens logique",
+          "C": "'in order to' exprime le but et doit être suivi d'un infinitif, pas d'une proposition complète",
+          "D": "'as long as' exprime une condition positive de maintien — 'la politique s'applique tant qu'ils ont moins de six mois' inverserait la logique"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The head office is located in Paris, _____ the regional distribution centers are spread across five continents.",
+      "options": [
+        "(A) therefore",
+        "(B) whereas",
+        "(C) besides",
+        "(D) provided that"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Whereas' (B) est une conjonction de coordination qui exprime un contraste direct entre deux réalités comparables. Il signifie 'alors que', 'tandis que'. La nuance avec 'although' : 'although' exprime une concession (un fait surprenant malgré un autre), tandis que 'whereas' exprime une simple opposition ou comparaison de deux faits parallèles. 'Whereas' est très fréquent dans les descriptions d'entreprise, les comparaisons de produits et les rapports sectoriels du TOEIC.",
+        "distractors": {
+          "A": "'therefore' exprime la conséquence — le siège serait à Paris parce que les centres sont distribués, ce qui n'a pas de sens logique ici",
+          "C": "'besides' est un adverbe ou une préposition signifiant 'en plus de' — il ajoute plutôt qu'il ne contraste",
+          "D": "'provided that' exprime une condition — il n'y a pas de relation conditionnelle entre les deux propositions"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "Please confirm your attendance at least 48 hours in advance _____ the catering team can make the necessary arrangements.",
+      "options": [
+        "(A) despite",
+        "(B) so that",
+        "(C) although",
+        "(D) unless"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'So that' (B) est la conjonction de but qui introduit le résultat ou l'objectif visé par une action. Elle est synonyme de 'in order that' (plus formel). La distinction avec 'so' seul : 'so that' est suivi d'un sujet + verbe modal ('so that they can...'), tandis que 'so' seul peut introduire une conséquence sans intention ('he was tired, so he left'). 'So that + can/could' est la structure la plus fréquente pour le but dans le TOEIC.",
+        "distractors": {
+          "A": "'despite' est une préposition de concession — elle doit être suivie d'un groupe nominal, pas d'une proposition",
+          "C": "'although' exprime une concession — 'confirme ta présence bien que l'équipe puisse s'organiser' n'a pas de sens logique",
+          "D": "'unless' exprime une condition négative — 'confirme ta présence à moins que l'équipe puisse s'organiser' inverse complètement le sens voulu"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The product received excellent reviews from early adopters; _____, the sales team is optimistic about the upcoming commercial launch.",
+      "options": [
+        "(A) nonetheless",
+        "(B) therefore",
+        "(C) whereas",
+        "(D) although"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Therefore' (B) est l'adverbe de liaison de conséquence logique, signifiant 'donc', 'par conséquent', 'c'est pourquoi'. La chaîne logique ici est : bonnes critiques → donc optimisme. Les adverbes de liaison de conséquence fréquents du TOEIC : 'therefore', 'consequently', 'as a result', 'thus', 'hence'. La distinction avec 'furthermore' (addition) et 'however' (contraste) est fondamentale pour réussir la Partie 5.",
+        "distractors": {
+          "A": "'nonetheless' exprime la concession — 'malgré les bonnes critiques, l'équipe est optimiste' implique que l'optimisme existe contre toute attente, ce qui va à l'encontre de la logique",
+          "C": "'whereas' exprime un contraste direct — il comparerait deux faits opposés, pas une cause et un effet",
+          "D": "'although' est une conjonction de subordination — elle ne peut pas relier deux propositions indépendantes après un point-virgule"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The new teleworking arrangement will remain in place _____ productivity levels stay above the benchmark set in Q1.",
+      "options": [
+        "(A) as long as",
+        "(B) even though",
+        "(C) due to",
+        "(D) in addition to"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'As long as' (A) est une conjonction conditionnelle signifiant 'tant que', 'à condition que'. Elle exprime qu'une situation se maintient sous la condition que quelque chose reste vrai. Synonymes fréquents dans le TOEIC : 'provided that', 'providing that', 'on the condition that'. La nuance entre 'as long as' (durée + condition) et 'unless' (exception) : 'as long as productivity stays high' = la condition positive nécessaire au maintien de l'arrangement.",
+        "distractors": {
+          "B": "'even though' exprime une concession — l'arrangement resterait en place 'même si la productivité est élevée', ce qui serait logiquement étrange",
+          "C": "'due to' est une locution prépositionnelle de cause — elle doit être suivie d'un groupe nominal",
+          "D": "'in addition to' est une locution additive — elle signifie 'en plus de', sans lien conditionnel"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "_____ the renovation being over budget, the project manager decided to proceed with the original design plan.",
+      "options": [
+        "(A) Although",
+        "(B) Despite",
+        "(C) However",
+        "(D) Even if"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Despite' (B) est une préposition de concession qui doit être suivie d'un groupe nominal, d'un pronom ou d'un gérondif — jamais d'une proposition complète (sujet + verbe). 'Despite the renovation being over budget' est la structure 'despite + nom + gérondif', une construction formelle très fréquente en anglais des affaires. La règle absolue : 'Despite + nom/gérondif' vs. 'Although + proposition'. Ce piège est récurrent dans la Partie 5.",
+        "distractors": {
+          "A": "'Although' est une conjonction — elle doit être suivie d'une proposition complète (sujet + verbe), pas d'un gérondif",
+          "C": "'However' est un adverbe de liaison — il ne peut pas introduire un groupe prépositionnel en début de phrase",
+          "D": "'Even if' est une conjonction — elle doit être suivie d'une proposition (sujet + verbe), pas d'un gérondif"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The updated safety guidelines will be distributed to all employees; _____, a mandatory training session will be held next week.",
+      "options": [
+        "(A) on the other hand",
+        "(B) in contrast",
+        "(C) furthermore",
+        "(D) nevertheless"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Furthermore' (C) est l'adverbe de liaison d'addition et de renforcement, signifiant 'de plus', 'en outre', 'par ailleurs'. Il ajoute une information qui renforce ou complète la précédente. Les adverbes d'addition fréquents du TOEIC : 'furthermore', 'moreover', 'in addition', 'additionally'. La distinction avec 'however' (contraste) et 'therefore' (conséquence) est le cœur des questions de conjonction de la Partie 5.",
+        "distractors": {
+          "A": "'On the other hand' exprime un contraste ou une perspective différente — les deux mesures ne sont pas opposées",
+          "B": "'In contrast' exprime une opposition directe — distribuer des directives n'est pas l'opposé d'organiser une formation",
+          "D": "'Nevertheless' exprime une concession — 'malgré la distribution, une formation aura lieu' implique une relation adversative qui n'existe pas ici"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The marketing campaign will be approved _____ the projected costs remain within the allocated budget.",
+      "options": [
+        "(A) as long as",
+        "(B) even though",
+        "(C) despite",
+        "(D) however"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'As long as' (A) introduit la condition dont dépend l'approbation de la campagne. Cette question est délibérément similaire à la question 7 de cette catégorie pour ancrer la règle : 'as long as' et 'provided that' sont interchangeables dans ce contexte. En TOEIC avancé, les questions de conjonction conditionnelle testent souvent 'as long as', 'provided that' et 'unless' dans des situations très proches pour vérifier la compréhension fine de chacune.",
+        "distractors": {
+          "B": "'Even though' exprime une concession — 'la campagne sera approuvée même si les coûts dépassent le budget' inverserait le sens logique",
+          "C": "'Despite' est une préposition — elle doit être suivie d'un groupe nominal, pas d'une proposition complète",
+          "D": "'However' est un adverbe de liaison — il ne peut pas introduire une proposition subordonnée conditionnelle"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The committee will consider all candidates _____ submit their applications before the closing date.",
+      "options": [
+        "(A) which",
+        "(B) whom",
+        "(C) whose",
+        "(D) who"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "'Who' (D) est le pronom relatif sujet pour les personnes. La règle de base : 'who' = sujet pour les personnes, 'whom' = objet pour les personnes, 'which' = sujet ou objet pour les choses, 'whose' = possession. Pour déterminer si 'who' ou 'whom' est correct, on peut remplacer par 'he/she' (→ who) ou 'him/her' (→ whom) : 'they submit' → 'who'.",
+        "distractors": {
+          "A": "'which' est le pronom relatif pour les choses — il ne s'applique pas à des personnes",
+          "B": "'whom' est le pronom relatif objet pour les personnes — or ici, le pronom est sujet ('candidates who submit')",
+          "C": "'whose' est le pronom relatif de possession — il serait suivi d'un nom, pas d'un verbe"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The accounting software, _____ was recently upgraded, has significantly reduced the time needed for monthly reconciliations.",
+      "options": [
+        "(A) that",
+        "(B) who",
+        "(C) which",
+        "(D) whose"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Which' (C) est le pronom relatif sujet pour les choses dans les propositions relatives restrictives et non restrictives. La règle clé : dans une relative non restrictive (entre virgules), seul 'which' (chose) ou 'who' (personne) peut être utilisé — jamais 'that'. Les virgules autour de la proposition relative sont l'indice visuel le plus fort dans la Partie 5.",
+        "distractors": {
+          "A": "'that' ne peut jamais être utilisé dans une proposition relative non restrictive (entre virgules) — c'est une règle absolue en anglais standard",
+          "B": "'who' s'utilise pour les personnes — un logiciel n'est pas une personne",
+          "D": "'whose' exprime la possession — il serait suivi d'un nom, pas directement d'un verbe"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The board approved the proposal from the consultant _____ innovative approach to cost reduction had impressed the finance team.",
+      "options": [
+        "(A) who",
+        "(B) whom",
+        "(C) whose",
+        "(D) which"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Whose' (C) est le pronom relatif de possession pour les personnes et les choses. L'indice visuel infaillible : si le blank est immédiatement suivi d'un nom (sans article ou avec article), c'est 'whose'. Structure : 'the consultant whose approach' = 'the consultant's approach'. 'Whose' est l'équivalent relatif du génitif en 's'. C'est l'un des pronoms relatifs les moins bien maîtrisés et donc les plus fréquemment testés dans la Partie 5.",
+        "distractors": {
+          "A": "'who' est le pronom sujet pour les personnes — mais ici, le blank est suivi d'un nom, pas d'un verbe directement",
+          "B": "'whom' est le pronom objet pour les personnes — même problème",
+          "D": "'which' s'utilise pour les choses — or le référent est 'the consultant', une personne"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The regional director, to _____ all branch managers report directly, will be visiting the Tokyo office next Monday.",
+      "options": [
+        "(A) who",
+        "(B) whom",
+        "(C) whose",
+        "(D) which"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Whom' (B) est le pronom relatif objet pour les personnes. La règle est mécanique : préposition + pronom relatif → toujours 'whom' (personnes) ou 'which' (choses), jamais 'who' ou 'that'. La structure 'préposition + whom' (to whom, for whom, with whom, about whom) est formelle et typique de l'anglais écrit professionnel — elle apparaît régulièrement dans les e-mails et documents du TOEIC.",
+        "distractors": {
+          "A": "'who' est la forme sujet — elle ne peut pas suivre une préposition",
+          "C": "'whose' est le pronom de possession — il serait suivi d'un nom",
+          "D": "'which' s'utilise pour les choses — le référent est 'the regional director', une personne"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The development team completed the entire migration process by _____ without requesting additional resources.",
+      "options": [
+        "(A) them",
+        "(B) their",
+        "(C) themselves",
+        "(D) they"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Themselves' (C) est le pronom réfléchi pluriel. L'expression 'by + pronom réfléchi' est une structure idiomatique signifiant 'tout seul' : 'by myself', 'by yourself', 'by himself', 'by themselves'. C'est l'une des structures les plus fréquentes du TOEIC pour exprimer l'autonomie dans un contexte professionnel.",
+        "distractors": {
+          "A": "'them' est un pronom objet — 'by them' signifierait 'par eux' (agent passif), pas 'seuls'",
+          "B": "'their' est un pronom possessif — il doit être suivi d'un nom",
+          "D": "'they' est un pronom sujet — il ne peut pas suivre une préposition"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "Employees may choose _____ health insurance plan best suits their individual and family needs.",
+      "options": [
+        "(A) whatever",
+        "(B) whichever",
+        "(C) whoever",
+        "(D) however"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Whichever' (B) est le pronom indéfini relatif utilisé pour exprimer un choix libre parmi un ensemble fini et défini d'options : 'whichever plan', 'whichever option', 'whichever route'. Il signifie 'celui de... qui', 'n'importe lequel de... qui'. La distinction avec 'whatever' : 'whichever' = choix parmi un ensemble défini ; 'whatever' = choix totalement libre et non délimité.",
+        "distractors": {
+          "A": "'whatever' exprime un choix ouvert, sans limites définies — 'whatever you want' (n'importe quoi). Ici, les plans sont définis, pas ouverts",
+          "C": "'whoever' désigne des personnes, pas des plans d'assurance",
+          "D": "'however' est un adverbe de manière ou de liaison — il ne peut pas introduire un groupe nominal"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The revised contract and its annexes have been sent to the legal team for final review; _____ is expected to be returned by Thursday.",
+      "options": [
+        "(A) they",
+        "(B) it",
+        "(C) its",
+        "(D) them"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'It' (B) est le pronom sujet singulier qui renvoie à l'ensemble du document (le contrat et ses annexes comme un tout unifié). En anglais professionnel, un document avec ses pièces jointes est souvent traité comme une entité singulière. Le TOEIC teste cet accord entre un antécédent collectif et son pronom — si le groupe est perçu comme une entité, 'it' ; s'il est perçu comme des éléments distincts, 'they'.",
+        "distractors": {
+          "A": "'they' est un pronom sujet pluriel — si on considère 'contract and annexes' comme pluriel, 'they' serait grammaticalement possible, mais 'it' est préféré quand l'ensemble est traité comme une unité documentaire",
+          "C": "'its' est un pronom possessif — il doit être suivi d'un nom",
+          "D": "'them' est un pronom objet pluriel — il ne peut pas être sujet d'un verbe"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The company will award the contract to _____ submits the most competitive bid by the deadline.",
+      "options": [
+        "(A) who",
+        "(B) whom",
+        "(C) whoever",
+        "(D) whichever"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Whoever' (C) est le pronom indéfini relatif pour les personnes, signifiant 'quiconque', 'celui qui'. Il combine en lui-même l'antécédent et le pronom relatif : 'whoever submits' = 'the person who submits'. Il peut être sujet ou objet selon sa fonction dans la relative. Ici, 'to whoever submits' = 'to the person who submits' — 'whoever' est bien sujet de 'submits', malgré la préposition 'to' qui précède l'ensemble.",
+        "distractors": {
+          "A": "'who' est un pronom relatif standard — il nécessite un antécédent explicite (someone who, the person who). Ici, il n'y a pas d'antécédent",
+          "B": "'whom' est la forme objet — mais ici, le pronom est sujet de 'submits'",
+          "D": "'whichever' désigne des choses parmi un ensemble défini — ici, on parle de candidats potentiels (personnes)"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The new branch manager introduced _____ to the team during the orientation session on Monday.",
+      "options": [
+        "(A) him",
+        "(B) his",
+        "(C) he",
+        "(D) himself"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "'Himself' (D) est le pronom réfléchi masculin singulier, utilisé quand le sujet accomplit une action sur lui-même. 'The manager introduced himself' = le manager s'est présenté. Le TOEIC teste les pronoms réfléchis dans deux contextes : (1) l'action réfléchie sur soi-même ('introduce himself') et (2) l'action accomplie sans aide ('by themselves'). La distinction entre 'him' (une autre personne) et 'himself' (la même personne) est l'enjeu central de cette question.",
+        "distractors": {
+          "A": "'him' est un pronom objet — il renverrait à une autre personne (le manager a présenté quelqu'un d'autre), ce qui change le sens",
+          "B": "'his' est un pronom possessif — il doit être suivi d'un nom",
+          "C": "'he' est un pronom sujet — il ne peut pas être objet d'un verbe"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The HR department will send a reminder to all employees _____ have not yet completed the mandatory compliance training.",
+      "options": [
+        "(A) which",
+        "(B) whose",
+        "(C) whom",
+        "(D) who"
+      ],
+      "answer": "D",
+      "explanation": {
+        "correct": "'Who' (D) est le pronom relatif sujet pour les personnes. Cette question reprend délibérément le même schéma que la première question de la catégorie pour ancrer la règle fondamentale : 'who' = sujet + personne, 'whom' = objet + personne. La clé de la distinction est de tester la fonction syntaxique : si le pronom peut être remplacé par 'they/he/she' dans la relative, c'est 'who' ; s'il peut être remplacé par 'them/him/her', c'est 'whom'. Ici : 'they have not completed' → 'who'.",
+        "distractors": {
+          "A": "'which' s'utilise pour les choses — les employés sont des personnes",
+          "B": "'whose' est le pronom de possession — il serait suivi d'un nom ('whose training'), pas directement du verbe 'have'",
+          "C": "'whom' est la forme objet — or le pronom est sujet de 'have not yet completed'"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The committee was impressed by the _____ of the candidate's response to the technical questions.",
+      "options": [
+        "(A) comprehensive",
+        "(B) comprehensively",
+        "(C) comprehensiveness",
+        "(D) comprehend"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Comprehensiveness' (C) est le nom abstrait dérivé de l'adjectif 'comprehensive' via le suffixe '-ness'. Ce type de dérivation — adjectif + -ness → nom abstrait — est régulièrement testé au TOEIC : 'effective → effectiveness', 'responsive → responsiveness', 'aware → awareness'. Le patron 'the + NOM déverbal/dénominal + of' structure un groupe nominal formel très courant dans les évaluations professionnelles.",
+        "distractors": {
+          "A": "'comprehensive' est un adjectif — ne peut pas être le noyau du groupe nominal précédé de 'the'",
+          "B": "'comprehensively' est un adverbe — jamais noyau d'un groupe nominal",
+          "D": "'comprehend' est un verbe — incompatible avec la position après l'article défini"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "Employees who _____ perform above expectations are eligible for a quarterly performance bonus.",
+      "options": [
+        "(A) consistent",
+        "(B) consistently",
+        "(C) consistency",
+        "(D) consists"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Consistently' (B) est l'adverbe de manière qui modifie le verbe 'perform', indiquant la régularité de la performance. Dans les propositions relatives, l'adverbe peut se placer entre le pronom relatif et le verbe : 'employees who consistently perform', 'staff who regularly contribute'. Le TOEIC teste souvent la position des adverbes par rapport aux verbes dans les propositions subordonnées.",
+        "distractors": {
+          "A": "'consistent' est un adjectif — il modifie un nom, pas un verbe",
+          "C": "'consistency' est un nom — il ne peut pas modifier un verbe",
+          "D": "'consists' est une forme verbale conjuguée — deux formes verbales ne peuvent pas se combiner directement de cette façon"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The project's _____ ahead of schedule allowed the company to take on two additional contracts.",
+      "options": [
+        "(A) complete",
+        "(B) completing",
+        "(C) completion",
+        "(D) completely"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Completion' (C) est le nom déverbal standard dérivé de 'complete'. Le TOEIC teste régulièrement la série 'complete → completion → completely → complete (adj)'. La structure 'possessif + NOM déverbal' est très courante : 'the project's completion', 'the department's reorganization', 'the team's achievement'.",
+        "distractors": {
+          "A": "'complete' est soit un adjectif soit un verbe — ne peut pas être le noyau d'un groupe nominal après un génitif dans ce contexte",
+          "B": "'completing' est le gérondif — 'The project's completing' n'est pas idiomatique en anglais formel",
+          "D": "'completely' est un adverbe — jamais noyau d'un groupe nominal"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The board's new governance policies are _____ aligned with international best practices in corporate transparency.",
+      "options": [
+        "(A) broad",
+        "(B) broadly",
+        "(C) broaden",
+        "(D) breadth"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Broadly' (B) est l'adverbe qui modifie 'aligned', indiquant le degré ou la portée de l'alignement. Le schéma 'auxiliaire + ADVERBE + participe passé' est classique au TOEIC : 'are broadly aligned', 'is widely recognized', 'has been fully implemented'. L'adverbe 'broadly' en particulier est très fréquent dans le discours corporatif pour exprimer un alignement général sans être absolu.",
+        "distractors": {
+          "A": "'broad' est un adjectif — il modifie des noms, pas des participes dans cette position",
+          "C": "'broaden' est un verbe — deux formes verbales ne peuvent pas se combiner de cette façon",
+          "D": "'breadth' est un nom — un nom ne peut pas modifier un participe passé"
+        }
+      }
+    },
+    {
+      "category": "word_form",
+      "sentence": "The _____ of the quarterly earnings exceeded all analyst forecasts by a considerable margin.",
+      "options": [
+        "(A) announce",
+        "(B) announcer",
+        "(C) announcement",
+        "(D) announced"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Announcement' (C) est le nom d'action standard dérivé de 'announce' via le suffixe '-ment'. Dans le discours financier, on parle de 'the announcement of earnings', 'the announcement of results', 'the announcement of the merger'. La dérivation 'announce → announcement' est l'un des patrons de suffixation les plus productifs en anglais professionnel, avec '-tion/-ation', '-ness', et '-al'.",
+        "distractors": {
+          "A": "'announce' est un verbe — ne peut pas suivre directement l'article",
+          "B": "'announcer' désigne une personne — 'the announcer of earnings' est sémantiquement incorrect dans ce contexte",
+          "D": "'announced' est un participe passé — ne peut pas être le noyau nominal ici"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The charity event successfully _____ over $50,000 in donations for the local children's hospital.",
+      "options": [
+        "(A) collected",
+        "(B) gathered",
+        "(C) raised",
+        "(D) earned"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Raise' (C) est le verbe quasi exclusif pour la collecte de fonds dans un contexte caritatif ou de financement : 'raise funds', 'raise money', 'raise $50,000'. L'expression 'fundraising' (collecte de fonds) est dérivée de ce verbe et indique sa centralité. Le TOEIC teste régulièrement 'raise' dans les textes sur les événements philanthropiques et les campagnes de dons.",
+        "distractors": {
+          "A": "'collected' peut s'employer avec 'donations' mais 'raise funds' est la collocation dominante pour un événement caritatif",
+          "B": "'gathered' s'applique à des personnes ou des objets physiques rassemblés — 'gathered donations' n'est pas une collocation établie",
+          "D": "'earned' implique une rémunération pour un travail — une organisation caritative ne gagne pas des dons, elle les recueille"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The company decided to _____ several non-core divisions in order to focus on its primary business segments.",
+      "options": [
+        "(A) close",
+        "(B) shut",
+        "(C) divest",
+        "(D) dismiss"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Divest' (C) est le terme technique standard en finance d'entreprise pour la cession d'actifs, de filiales ou de divisions : 'divest non-core assets', 'divestiture strategy', 'divest a subsidiary'. Il implique non pas une fermeture mais une vente à un tiers. Le TOEIC teste ce vocabulaire financier spécialisé dans les textes sur les fusions-acquisitions et les restructurations d'entreprise.",
+        "distractors": {
+          "A": "'close' signifie fermer définitivement une activité sans nécessairement la vendre — 'close a division' implique une cessation, pas une cession",
+          "B": "'shut' a le même problème que 'close', avec un registre encore plus courant et informel",
+          "D": "'dismiss' signifie licencier des personnes ou rejeter une idée — il ne s'applique pas à des unités d'entreprise"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The hotel has _____ all guest reservations until the renovation work is complete.",
+      "options": [
+        "(A) extended",
+        "(B) transferred",
+        "(C) suspended",
+        "(D) paused"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Suspended' (C) est le terme officiel standard pour l'arrêt temporaire d'un service, d'une activité ou d'un droit : 'suspend operations', 'suspend reservations', 'suspend service'. Il implique une interruption officielle et temporaire avec intention de reprendre — exactement le contexte d'une rénovation. 'Suspend' est très fréquent dans les communications officielles du TOEIC : annonces d'hôtels, d'administrations, d'entreprises.",
+        "distractors": {
+          "A": "'extended' signifie prolongé dans le temps — ici, les réservations ne sont pas prolongées mais interrompues",
+          "B": "'transferred' signifie déplacées vers autre chose — des réservations transférées seraient déplacées vers un autre hôtel ou une autre date, ce qui n'est pas indiqué",
+          "D": "'paused' est possible sémantiquement mais appartient à un registre technique/informatique et est trop informel dans un contexte hôtelier"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "The employee handbook clearly _____ the procedures for requesting annual leave and managing absence.",
+      "options": [
+        "(A) describes",
+        "(B) explains",
+        "(C) outlines",
+        "(D) defines"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Outlines' (C) est le verbe standard pour la présentation structurée et synthétique d'un ensemble d'informations ou d'étapes dans un document : 'outline the procedures', 'outline the key steps', 'outline the requirements'. Il implique une organisation claire et lisible — exactement ce qu'on attend d'un handbook. Le TOEIC teste régulièrement ce verbe dans les textes sur les manuels d'entreprise et les politiques internes.",
+        "distractors": {
+          "A": "'describes' s'utilise pour une description narrative ou détaillée — moins précis pour un manuel qui liste des étapes de façon structurée",
+          "B": "'explains' implique une démarche pédagogique pour faire comprendre quelque chose de complexe — différent de présenter une liste de procédures",
+          "D": "'defines' signifie donner la définition formelle d'un terme — il conviendrait si on donnait des définitions, pas des listes d'étapes"
+        }
+      }
+    },
+    {
+      "category": "vocabulary",
+      "sentence": "Both parties have agreed to _____ the final payment schedule before signing the partnership agreement.",
+      "options": [
+        "(A) confirm",
+        "(B) settle",
+        "(C) finalize",
+        "(D) establish"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Finalize' (C) est le verbe standard pour l'achèvement et la mise au point définitive d'un accord, d'un document ou d'une décision : 'finalize the details', 'finalize the contract', 'finalize the schedule'. Il implique que le processus est sur le point d'être complété et rendu irrévocable. C'est l'un des verbes les plus fréquents dans les textes de négociation commerciale du TOEIC.",
+        "distractors": {
+          "A": "'confirm' signifie valider quelque chose qui existait déjà — ici, il s'agit de compléter les derniers détails, pas de confirmer un calendrier déjà établi",
+          "B": "'settle' implique davantage la résolution d'un litige ou d'un désaccord — le contexte est ici une négociation coopérative",
+          "D": "'establish' signifie créer ou mettre en place quelque chose qui n'existait pas — mais ici le calendrier est en cours de négociation, pas absent"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "By the time the quarterly review _____, all department heads will have submitted their progress reports.",
+      "options": [
+        "(A) begins",
+        "(B) will begin",
+        "(C) began",
+        "(D) had begun"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "La règle 'pas de futur dans une proposition subordonnée temporelle' est fondamentale en anglais : 'By the time + présent simple, ... + futur parfait'. Ce patron est très fréquent au TOEIC : 'By the time you receive this letter, the shipment will already have arrived.' L'erreur (B) est la plus tentante car le sens est futur — mais la règle grammaticale interdit le futur dans ce type de subordonnée.",
+        "distractors": {
+          "B": "'will begin' est fautif — en anglais, les propositions temporelles avec 'when', 'before', 'after', 'by the time' ne prennent jamais le futur même si le sens est futur",
+          "C": "'began' est le simple past — la phrase est orientée vers l'avenir, pas le passé",
+          "D": "'had begun' est le plus-que-parfait — réservé à une action antérieure à un autre événement passé"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The company _____ its environmental policy every two years to ensure compliance with updated regulations.",
+      "options": [
+        "(A) revises",
+        "(B) is revising",
+        "(C) has revised",
+        "(D) will have revised"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Revises' (A) est le présent simple qui exprime une action habituelle répétée à intervalles réguliers — exactement ce qu'indique 'every two years'. Les marqueurs de fréquence comme 'every [période]', 'annually', 'monthly', 'regularly' sont des indices clés du présent simple au TOEIC. La confusion la plus fréquente est avec (B) le présent continu, qui décrit une action temporaire en cours, pas une politique d'entreprise permanente.",
+        "distractors": {
+          "B": "'is revising' est le présent continu — il s'utilise pour une action en cours à ce moment précis, pas une pratique périodique",
+          "C": "'has revised' est le present perfect — il décrit un résultat actuel d'une action passée, pas une habitude",
+          "D": "'will have revised' est le futur parfait — il décrit une action qui sera complétée avant un moment futur donné"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The architect _____ the blueprints when the client unexpectedly arrived at the office to discuss the changes.",
+      "options": [
+        "(A) reviews",
+        "(B) was reviewing",
+        "(C) had reviewed",
+        "(D) reviewed"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Was reviewing' (B) est le past continuous qui décrit l'action en cours au moment de l'interruption. Le patron 'past continuous + when + simple past' est l'une des structures les plus testées au TOEIC : 'was reviewing when... arrived', 'was conducting when... called', 'was preparing when... interrupted'. C'est le schéma standard de narration d'une interruption dans le passé.",
+        "distractors": {
+          "A": "'reviews' est le présent simple — incompatible avec une narration au passé",
+          "C": "'had reviewed' est le plus-que-parfait — il impliquerait que la révision était terminée avant l'arrivée du client, ce qui contredit le sens",
+          "D": "'reviewed' au simple past placerait deux actions ponctuelles simultanées, sans exprimer l'idée d'une interruption"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "The construction of the new headquarters _____ for three weeks before engineers discovered a problem with the foundation.",
+      "options": [
+        "(A) had been underway",
+        "(B) is underway",
+        "(C) has been underway",
+        "(D) would be underway"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Had been underway' (A) est le past perfect continuous qui exprime la durée d'une action en cours jusqu'à un moment passé spécifique. Le patron 'had been [action] + for [durée] + before [simple past]' est fréquent au TOEIC pour indiquer qu'un processus était en cours quand un événement le perturbe. La difficulté réside dans la distinction avec (C) — la clé est que tous les événements sont dans le passé.",
+        "distractors": {
+          "B": "'is underway' est le présent — incompatible avec un contexte narratif entièrement au passé",
+          "C": "'has been underway' est le present perfect continuous — il relie le passé au présent actuel, mais ici l'événement (la découverte) est dans le passé",
+          "D": "'would be underway' est le conditionnel — il exprime une hypothèse, pas un fait narratif"
+        }
+      }
+    },
+    {
+      "category": "verb_tense",
+      "sentence": "If the company _____ its marketing budget last quarter, it might have avoided the sharp decline in brand awareness.",
+      "options": [
+        "(A) increases",
+        "(B) increased",
+        "(C) had increased",
+        "(D) would have increased"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "Le conditionnel de type 3 suit la structure 'If + had + participe passé, ... + would/could/might + have + participe passé'. Il exprime une hypothèse contrefactuelle sur le passé. 'Had increased' (C) est la forme correcte pour la subordonnée hypothétique. Le piège (B) correspond au type 2 ('If + simple past, ... + would + base verbale') qui porte sur le présent ou l'avenir.",
+        "distractors": {
+          "A": "'increases' est le présent simple — incompatible avec une hypothèse sur le passé",
+          "B": "'increased' est le simple past — c'est le conditionnel de type 2 (hypothèse sur le présent/futur), pas le type 3",
+          "D": "'would have increased' appartient à la principale de type 3, pas à la subordonnée en 'if'"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The new safety regulations will take effect _____ January 1st and will apply to all manufacturing facilities.",
+      "options": [
+        "(A) in",
+        "(B) at",
+        "(C) on",
+        "(D) from"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "La préposition 'on' (C) est obligatoire avec les dates incluant un numéro de jour : 'on January 1st', 'on Monday', 'on the 15th'. La règle mnémotechnique est : 'in' pour les périodes (an, mois, saison), 'on' pour les jours et dates, 'at' pour les moments précis (heure). 'Take effect on [date]' est la collocation officielle standard dans tous les documents réglementaires et juridiques.",
+        "distractors": {
+          "A": "'in' s'utilise avec les mois ('in January'), les saisons, les années ('in 2025') — pas avec une date précise incluant le numéro du jour",
+          "B": "'at' s'utilise avec les heures ('at 9 a.m.') et certaines expressions ('at night') — jamais avec une date",
+          "D": "'from' est plausible dans 'from January 1st' mais 'take effect on [date]' est la collocation standard dans les documents officiels"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The project was delivered _____ budget despite several unexpected delays during the construction phase.",
+      "options": [
+        "(A) under",
+        "(B) below",
+        "(C) within",
+        "(D) inside"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Under budget' (A) est la collocation standard pour indiquer que les coûts réels sont inférieurs aux prévisions : 'delivered under budget', 'completed under budget', 'came in under budget'. Avec 'on budget' (dans le budget prévu) et 'over budget' (au-delà du budget), ces trois expressions forment un groupe figé très fréquent dans les rapports de gestion de projet du TOEIC.",
+        "distractors": {
+          "B": "'below budget' est grammaticalement et sémantiquement possible, mais 'under budget' est la collocation quasi figée et la plus fréquente dans le discours professionnel",
+          "C": "'within budget' signifie 'dans les limites du budget' — légèrement différent de 'inférieur au budget'",
+          "D": "'inside budget' n'est pas une collocation établie en anglais professionnel"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The new employee orientation program is _____ charge of the Human Resources Development team.",
+      "options": [
+        "(A) in",
+        "(B) under",
+        "(C) at",
+        "(D) on"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'In charge of' (A) est la collocation figée standard pour exprimer la responsabilité d'une personne ou d'une équipe : 'in charge of the program', 'in charge of the project', 'put someone in charge of'. C'est l'une des collocations prépositionnelles les plus fréquentes du TOEIC. La confusion avec 'responsible for' est courante — les deux expriment la responsabilité mais 'in charge of' insiste davantage sur le contrôle et la supervision.",
+        "distractors": {
+          "B": "'under charge' n'est pas une collocation établie en anglais standard",
+          "C": "'at charge' n'est pas une expression anglaise correcte dans ce sens",
+          "D": "'on charge' n'existe pas dans ce sens"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The managing director was _____ a business trip in Singapore when the emergency board meeting was called.",
+      "options": [
+        "(A) in",
+        "(B) on",
+        "(C) at",
+        "(D) for"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'On a business trip' (B) est la collocation figée standard : on est 'on' un voyage tout comme on est 'on' une mission, 'on' duty, 'on' leave. Cette préposition exprime l'état actuel d'être engagé dans une activité de déplacement. Le TOEIC teste fréquemment les collocations 'on + [type d'activité professionnelle]' : 'on a business trip', 'on assignment', 'on leave', 'on duty'.",
+        "distractors": {
+          "A": "'in a business trip' n'est pas une expression correcte en anglais",
+          "C": "'at a business trip' n'est pas correct — 'at' s'utilise pour des événements statiques (at a conference, at a meeting), pas pour un voyage",
+          "D": "'for a business trip' exprime le but ('il est parti pour un voyage') mais pas l'état d'être en train d'en faire un"
+        }
+      }
+    },
+    {
+      "category": "preposition",
+      "sentence": "The new pricing policy was implemented _____ accordance with the recommendations of the external consulting firm.",
+      "options": [
+        "(A) in",
+        "(B) on",
+        "(C) by",
+        "(D) with"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'In accordance with' (A) est une locution prépositionnelle figée qui signifie 'conformément à', 'en accord avec' : 'in accordance with the regulations', 'in accordance with company policy', 'in accordance with the agreement'. Elle est caractéristique du registre juridique et administratif et apparaît très régulièrement dans les textes du TOEIC. C'est l'une des locutions les plus testées dans la catégorie des prépositions composées.",
+        "distractors": {
+          "B": "'on accordance' n'existe pas",
+          "C": "'by accordance' n'existe pas",
+          "D": "'with accordance' n'est pas la formulation correcte — bien que 'with' soit dans l'expression complète, la préposition qui précède 'accordance' est 'in'"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The construction project was completed on time _____ the team faced several unexpected logistical challenges.",
+      "options": [
+        "(A) because",
+        "(B) although",
+        "(C) so that",
+        "(D) unless"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Although' (B) est la conjonction de concession qui introduit une proposition subordonnée s'opposant à la proposition principale. C'est le patron 'résultat + although + obstacle' ou 'although + obstacle, résultat'. Les conjonctions de concession les plus fréquentes au TOEIC sont 'although', 'even though', 'despite the fact that' — toutes suivies d'un sujet + verbe.",
+        "distractors": {
+          "A": "'because' exprime la cause — 'completed on time because faced challenges' est sémantiquement incohérent (l'obstacle ne cause pas le succès)",
+          "C": "'so that' exprime le but — grammaticalement incorrect ici car il faudrait un auxiliaire supplémentaire",
+          "D": "'unless' exprime une condition négative ('sauf si') — incompatible avec le sens"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "Please ensure that all invoices are approved by the department head _____ they are submitted to the finance office.",
+      "options": [
+        "(A) in case",
+        "(B) provided that",
+        "(C) before",
+        "(D) whenever"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Before' (C) est la conjonction temporelle qui établit clairement que l'approbation doit précéder la soumission : 'approved before they are submitted'. Dans les directives et procédures internes du TOEIC, 'before' est la conjonction standard pour exprimer une séquence obligatoire d'étapes. La confusion la plus fréquente est avec (B) 'provided that', qui rendrait la phrase conditionnelle plutôt que temporelle.",
+        "distractors": {
+          "A": "'in case' exprime une précaution pour une éventualité ('au cas où') — il n'établit pas une séquence obligatoire",
+          "B": "'provided that' exprime une condition ('à condition que') — possible mais moins précis pour une séquence temporelle obligatoire",
+          "D": "'whenever' exprime la répétition ('chaque fois que') — il n'implique pas la même idée de séquence prescriptive"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "_____ the report was submitted on time, several figures in the financial section needed to be revised.",
+      "options": [
+        "(A) Although",
+        "(B) However",
+        "(C) Despite",
+        "(D) Nevertheless"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Although' (A) est une conjonction de subordination qui peut introduire directement une proposition avec sujet + verbe : 'Although the report was submitted on time, ...'. Ce contraste entre conjonctions de subordination ('although', 'even though', 'whereas') et adverbes de liaison ('however', 'nevertheless', 'nonetheless') est l'un des tests les plus fréquents dans la catégorie conjonctions du TOEIC.",
+        "distractors": {
+          "B": "",
+          "C": "'Despite' est une préposition — suivie d'un nom ou d'un gérondif, jamais d'un sujet + verbe directement",
+          "D": "'Nevertheless' est un adverbe de liaison — même problème que"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The factory will resume full production _____ the equipment inspection has been completed and certified by the safety team.",
+      "options": [
+        "(A) once",
+        "(B) since",
+        "(C) although",
+        "(D) so that"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Once' (A) est la conjonction temporelle qui exprime l'immédiateté : 'dès que', 'une fois que'. 'Once the inspection has been completed, the factory will resume' est un patron courant dans les communications opérationnelles et les directives de sécurité du TOEIC. Comme toutes les conjonctions temporelles, 'once' est suivi du present perfect dans une subordonnée orientée vers le futur — jamais du futur simple.",
+        "distractors": {
+          "B": "'since' exprime soit la cause soit le point de départ dans le temps — aucun des deux n'est approprié ici",
+          "C": "'although' exprime la concession — ici il n'y a pas d'opposition mais une condition préalable",
+          "D": "'so that' exprime le but — 'will resume so that the inspection has been completed' est sémantiquement incohérent"
+        }
+      }
+    },
+    {
+      "category": "conjunction",
+      "sentence": "The proposal will be accepted _____ all board members agree on the revised financial projections.",
+      "options": [
+        "(A) provided that",
+        "(B) even though",
+        "(C) in order that",
+        "(D) as soon as"
+      ],
+      "answer": "A",
+      "explanation": {
+        "correct": "'Provided that' (A) est une conjonction conditionnelle formelle qui signifie 'à condition que', 'pourvu que' : 'will be accepted provided that all members agree'. Elle est plus formelle que 'if' et est typique des textes contractuels et réglementaires du TOEIC. 'Provided that' impose que la condition soit présentée comme une exigence non négociable — exactement le sens voulu ici.",
+        "distractors": {
+          "B": "'even though' exprime la concession — 'la proposition sera acceptée même si tous les membres sont d'accord' est sémantiquement incohérent",
+          "C": "'in order that' exprime le but — logiquement inversé ici",
+          "D": "'as soon as' est temporel et non conditionnel — 'dès que tous les membres sont d'accord' implique que leur accord est certain, pas conditionnel"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The team leader will review all submissions _____ are received before the deadline.",
+      "options": [
+        "(A) who",
+        "(B) whom",
+        "(C) which",
+        "(D) whose"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Which' (C) est le pronom relatif standard pour les choses dans les propositions relatives : 'submissions which are received', 'documents which require approval'. Le TOEIC teste régulièrement le choix entre 'who' (personnes, sujet) / 'whom' (personnes, objet) / 'which' (choses) / 'whose' (possession). La clé est que 'submissions' est clairement une chose, imposant 'which'. Notez que 'that' aurait également été correct mais n'est pas proposé ici.",
+        "distractors": {
+          "A": "'who' est réservé aux personnes quand elles sont sujet de la proposition relative — 'submissions' est une chose",
+          "B": "'whom' est réservé aux personnes quand elles sont objet — même problème",
+          "D": "'whose' exprime la possession — 'submissions whose are received' est grammaticalement incorrect"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The board has not yet decided _____ will lead the new strategic initiatives committee.",
+      "options": [
+        "(A) which",
+        "(B) whom",
+        "(C) who",
+        "(D) whose"
+      ],
+      "answer": "C",
+      "explanation": {
+        "correct": "'Who' (C) est le pronom interrogatif/relatif pour les personnes en position de sujet. La distinction 'who' (sujet) vs. 'whom' (objet) est l'un des tests classiques du TOEIC : dans 'who will lead' (sujet + verbe), 'who' est le sujet ; dans 'whom the board will appoint' (objet), 'whom' est correct. Pour identifier la fonction, on peut remplacer par 'he/she' (sujet → 'who') ou 'him/her' (objet → 'whom').",
+        "distractors": {
+          "A": "'which' est pour les choses — ici il s'agit d'une personne",
+          "B": "'whom' est le pronom objet — ici le pronom est le sujet de 'will lead', donc 'who' (sujet) est correct",
+          "D": "'whose' exprime la possession — grammaticalement impossible ici sans un nom qui suive"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The marketing team prepared the campaign entirely by _____, without any external agency involvement.",
+      "options": [
+        "(A) them",
+        "(B) themselves",
+        "(C) their",
+        "(D) they"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'By themselves' (B) est la construction réfléchie standard qui exprime l'autonomie et l'absence d'aide extérieure : 'did it by themselves', 'completed it by herself', 'built it by himself'. La préposition 'by' avec un pronom réfléchi est figée dans ce sens. Au TOEIC, les questions sur les pronoms réfléchis testent souvent la distinction entre le pronom objet ('them') et le pronom réfléchi ('themselves') dans les contextes d'agentivité et d'autonomie.",
+        "distractors": {
+          "A": "'them' est le pronom personnel objet — 'by them' signifie 'par eux' (agent passif), ce qui changerait complètement le sens",
+          "C": "'their' est le déterminant possessif — grammaticalement impossible après une préposition seul",
+          "D": "'they' est le pronom sujet — ne peut pas suivre une préposition"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The committee approved the revised budget, _____ was a significant relief for the project management team.",
+      "options": [
+        "(A) that",
+        "(B) which",
+        "(C) it",
+        "(D) what"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Which' (B) est le seul pronom relatif qui peut introduire une proposition relative non restrictive avec pour référent l'ensemble de la proposition précédente : 'The committee approved the budget, which was a relief.' La règle absolue est : 'that' = restrictif (sans virgule), 'which' = non restrictif possible (avec virgule). En outre, 'which' peut référer à une proposition entière, pas seulement à un nom — usage très fréquent dans les e-mails et rapports d'entreprise du TOEIC.",
+        "distractors": {
+          "A": "'that' ne peut jamais introduire une proposition relative non restrictive (entre virgules) — c'est une règle absolue en anglais formel",
+          "C": "'it' est un pronom personnel qui nécessiterait une nouvelle proposition principale (avec un verbe conjugué), pas une relative subordonnée",
+          "D": "'what' introduit une proposition nominale ('ce qui/que') — il ne peut pas référer à la proposition précédente de la même façon"
+        }
+      }
+    },
+    {
+      "category": "pronoun",
+      "sentence": "The board congratulated _____ on successfully navigating the company through its most challenging quarter in a decade.",
+      "options": [
+        "(A) themselves",
+        "(B) itself",
+        "(C) him",
+        "(D) oneself"
+      ],
+      "answer": "B",
+      "explanation": {
+        "correct": "'Itself' (B) est le pronom réfléchi singulier pour les entités non humaines ou les noms collectifs singuliers en anglais américain : 'the company prided itself on...', 'the organization distinguished itself...', 'the board congratulated itself on...'. En anglais américain, les noms collectifs (board, committee, government, team) sont traités comme des singuliers grammaticaux — contrairement à l'anglais britannique. Au TOEIC (qui suit l'usage américain standard), 'the board' + 'itself' est la seule combinaison correcte.",
+        "distractors": {
+          "A": "'themselves' est le pronom réfléchi pluriel — incompatible avec 'the board' qui est singulier en anglais américain",
+          "C": "'him' est un pronom personnel objet masculin — 'the board' est une entité collective, pas une personne",
+          "D": "'oneself' est le pronom réfléchi de la personne impersonnelle ('one') — il s'utilise dans des formulations générales, pas avec un sujet spécifique"
+        }
+      }
+    }
+  ],
+  "types": [
+    {
+      "id": "word_form",
+      "label": "Forme du mot",
+      "description": "Choisissez la catégorie grammaticale (nom, verbe, adjectif ou adverbe) qui correspond à la position du blanc dans la phrase."
+    },
+    {
+      "id": "vocabulary",
+      "label": "Vocabulaire",
+      "description": "Choisissez le mot dont le sens et la collocation s'accordent le mieux au contexte professionnel de la phrase."
+    },
+    {
+      "id": "verb_tense",
+      "label": "Temps verbaux",
+      "description": "Choisissez le temps ou l'aspect verbal qui correspond aux indices temporels et au contexte de la phrase."
+    },
+    {
+      "id": "preposition",
+      "label": "Prépositions",
+      "description": "Choisissez la préposition ou la locution prépositionnelle qui forme la collocation correcte avec les mots autour du blanc."
+    },
+    {
+      "id": "conjunction",
+      "label": "Conjonctions",
+      "description": "Choisissez le mot de liaison (conjonction de subordination ou adverbe de liaison) qui exprime la relation logique correcte entre les deux propositions."
+    },
+    {
+      "id": "pronoun",
+      "label": "Pronoms",
+      "description": "Choisissez le pronom dont le type (relatif, réfléchi, personnel, possessif) et la forme correspondent à l'antécédent et à la fonction grammaticale."
+    }
+  ]
+}

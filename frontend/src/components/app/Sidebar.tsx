@@ -200,7 +200,24 @@ export default function Sidebar() {
           </button>
           {guidesOpen && !isCollapsed && (
             <div className="mt-0.5 ml-4 pl-3 border-l border-gray-100 space-y-0.5 py-0.5">
-              {/* Guide sub-items will be added here */}
+              <Link
+                href="/guides/toeic"
+                className={navItem(isActive("/guides/toeic"))}
+              >
+                <span className="truncate">Guide TOEIC</span>
+              </Link>
+              <Link
+                href="/guides/ecoute"
+                className={navItem(isActive("/guides/ecoute"))}
+              >
+                <span className="truncate">Guide Écoute</span>
+              </Link>
+              <Link
+                href="/guides/lecture"
+                className={navItem(isActive("/guides/lecture"))}
+              >
+                <span className="truncate">Guide Lecture</span>
+              </Link>
             </div>
           )}
         </div>

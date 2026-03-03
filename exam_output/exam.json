@@ -1,1676 +1,2011 @@
 {
   "part1": null,
-  "part2": null,
-  "part3": null,
-  "part4": {
-    "talks": [
+  "part2": {
+    "questions": [
       {
-        "title": "Voicemail Message",
-        "text": "Hello, this is Marcus from the maintenance department. I'm calling regarding your request to fix the overhead lights in office 402. I was planning to come by this afternoon, but a pipe burst in the basement, and I need to prioritize that. I'll be there tomorrow morning at 9:00 AM instead. Sorry for the inconvenience.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Where does the speaker work?",
-            "options": [
-              "(A) Human Resources",
-              "(B) Maintenance",
-              "(C) Accounting",
-              "(D) Security"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What was the original problem?",
-            "options": [
-              "(A) A broken window",
-              "(B) A leaking pipe",
-              "(C) A faulty light fixture",
-              "(D) A noisy air conditioner"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "When will the speaker arrive?",
-            "options": [
-              "(A) This afternoon",
-              "(B) Tomorrow morning",
-              "(C) Next week",
-              "(D) In two days"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you help me move this desk to the corner?",
+        "options": [
+          "(A) It's a very nice desk.",
+          "(B) Move it to the left.",
+          "(C) Sure, I'd be happy to."
         ],
-        "audio_file": "audio/talk01.mp3"
+        "answer": "C",
+        "question_audio": "audio/q01_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q01_A.mp3",
+          "B": "audio/q01_B.mp3",
+          "C": "audio/q01_C.mp3"
+        }
       },
       {
-        "title": "Public Announcement",
-        "text": "Attention all shoppers. We are happy to announce that for the next hour, we are having a flash sale on all smart televisions and kitchen mixers. Please head to the appropriate floor to take advantage of these 30% discounts. Also, don't forget to visit our bakery for a free sample of our new sourdough bread.",
-        "graphic_title": "Store Directory",
-        "graphic_doctype": "directory",
-        "graphic": {
-          "Floor 1": "Groceries and Bakery",
-          "Floor 2": "Clothing and Shoes",
-          "Floor 3": "Electronics and Appliances",
-          "Floor 4": "Furniture and Home Decor"
-        },
-        "questions": [
-          {
-            "text": "What is being offered at a discount?",
-            "options": [
-              "(A) Shoes",
-              "(B) Groceries",
-              "(C) Appliances",
-              "(D) Furniture"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Look at the graphic. Which floor should customers go to for the flash sale?",
-            "options": [
-              "(A) Floor 1",
-              "(B) Floor 2",
-              "(C) Floor 3",
-              "(D) Floor 4"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What can shoppers get for free?",
-            "options": [
-              "(A) A television",
-              "(B) A sourdough sample",
-              "(C) A store catalog",
-              "(D) A discount coupon"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we grab a coffee before the meeting starts?",
+        "options": [
+          "(A) I just had one, but thanks.",
+          "(B) Two sugars, please.",
+          "(C) In the conference room."
         ],
-        "audio_file": "audio/talk02.mp3"
+        "answer": "A",
+        "question_audio": "audio/q02_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q02_A.mp3",
+          "B": "audio/q02_B.mp3",
+          "C": "audio/q02_C.mp3"
+        }
       },
       {
-        "title": "Business Briefing",
-        "text": "Good morning, everyone. Before we start our shift, I have an update regarding our new software system. We were supposed to transition to 'CloudSync' today, but the IT team found a bug in the security settings. Therefore, we will continue using our current system until Monday. Please attend the training session in the conference room at 2:00 PM today as scheduled.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the purpose of the talk?",
-            "options": [
-              "(A) To introduce a new employee",
-              "(B) To announce a delay",
-              "(C) To complain about a security breach",
-              "(D) To cancel a training session"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What happened to the 'CloudSync' launch?",
-            "options": [
-              "(A) It was successful",
-              "(B) It was moved to 2:00 PM",
-              "(C) It was rescheduled for next week",
-              "(D) It was permanently canceled"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What should the listeners do at 2:00 PM?",
-            "options": [
-              "(A) Start using the new software",
-              "(B) Go to the conference room",
-              "(C) Call the IT department",
-              "(D) Leave work early"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you mind checking these figures for me?",
+        "options": [
+          "(A) About fifteen percent.",
+          "(B) No, not at all.",
+          "(C) The check is in the mail."
         ],
-        "audio_file": "audio/talk03.mp3"
+        "answer": "B",
+        "question_audio": "audio/q03_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q03_A.mp3",
+          "B": "audio/q03_B.mp3",
+          "C": "audio/q03_C.mp3"
+        }
       },
       {
-        "title": "Advertisement",
-        "text": "Is your lawn looking tired and brown? Call GreenThumb Landscaping today! We offer a full range of services, from basic mowing to complex garden design. If you sign up for a one-year contract this month, we'll include free monthly fertilization. Visit our website to see photos of our previous projects.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What service does the company provide?",
-            "options": [
-              "(A) Interior design",
-              "(B) Carpet cleaning",
-              "(C) Yard maintenance",
-              "(D) House painting"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "How can customers get a free service?",
-            "options": [
-              "(A) By visiting the website",
-              "(B) By referring a friend",
-              "(C) By posting a photo",
-              "(D) By signing a long-term agreement"
-            ],
-            "answer": "D"
-          },
-          {
-            "text": "What is available on the company's website?",
-            "options": [
-              "(A) A price calculator",
-              "(B) Images of past work",
-              "(C) A list of employees",
-              "(D) An online chat feature"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you tell me where the nearest post office is?",
+        "options": [
+          "(A) At three o'clock.",
+          "(B) To mail a package.",
+          "(C) I'm sorry, I'm not from around here."
         ],
-        "audio_file": "audio/talk04.mp3"
+        "answer": "C",
+        "question_audio": "audio/q04_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q04_A.mp3",
+          "B": "audio/q04_B.mp3",
+          "C": "audio/q04_C.mp3"
+        }
       },
       {
-        "title": "News Report",
-        "text": "This is Sarah Jenkins with your local news. Traffic is currently backed up on Route 12 due to a minor accident near the bridge. Drivers are advised to take the scenic bypass instead. Looking at our upcoming weather, the cold front arriving mid-week will bring some unexpected precipitation, so make sure you have your winter gear ready by the morning of the fourth day.",
-        "graphic_title": "Weather Forecast",
-        "graphic_doctype": "weather_chart",
-        "graphic": {
-          "Monday": "Sunny (25°C)",
-          "Tuesday": "Rainy (18°C)",
-          "Wednesday": "Windy (15°C)",
-          "Thursday": "Snowy (2°C)"
-        },
-        "questions": [
-          {
-            "text": "Why is traffic slow on Route 12?",
-            "options": [
-              "(A) Road construction",
-              "(B) A vehicle collision",
-              "(C) Heavy rain",
-              "(D) A bridge closure"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What does the speaker suggest drivers do?",
-            "options": [
-              "(A) Stay home",
-              "(B) Drive slowly",
-              "(C) Use an alternative route",
-              "(D) Wait for the bridge to open"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Look at the graphic. What type of weather is expected on Thursday?",
-            "options": [
-              "(A) Sun",
-              "(B) Rain",
-              "(C) Wind",
-              "(D) Snow"
-            ],
-            "answer": "D"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we take a taxi instead of the bus?",
+        "options": [
+          "(A) That sounds like a faster option.",
+          "(B) The bus stop is over there.",
+          "(C) No, I haven't seen it."
         ],
-        "audio_file": "audio/talk05.mp3"
+        "answer": "A",
+        "question_audio": "audio/q05_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q05_A.mp3",
+          "B": "audio/q05_B.mp3",
+          "C": "audio/q05_C.mp3"
+        }
       },
       {
-        "title": "Recorded Message",
-        "text": "You have reached the offices of Riverdale Medical. Our office is currently closed for the lunch hour. We will reopen at 1:30 PM. If you are calling to schedule an appointment, please press 1. If you have a prescription refill request, please call the pharmacy directly at 555-0199. For emergencies, please hang up and dial 911.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Why is the office currently unavailable?",
-            "options": [
-              "(A) It is a holiday",
-              "(B) It is the lunch break",
-              "(C) It is undergoing repairs",
-              "(D) It has moved locations"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What should a caller do to book a visit?",
-            "options": [
-              "(A) Press a button on the phone",
-              "(B) Call back at 1:30 PM",
-              "(C) Visit the office in person",
-              "(D) Call the pharmacy"
-            ],
-            "answer": "A"
-          },
-          {
-            "text": "What information is provided for prescription refills?",
-            "options": [
-              "(A) An email address",
-              "(B) A doctor's name",
-              "(C) A website link",
-              "(D) A phone number"
-            ],
-            "answer": "D"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you like to join us for dinner tonight?",
+        "options": [
+          "(A) I had a steak.",
+          "(B) I'm afraid I have other plans.",
+          "(C) The restaurant is open."
         ],
-        "audio_file": "audio/talk06.mp3"
+        "answer": "B",
+        "question_audio": "audio/q06_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q06_A.mp3",
+          "B": "audio/q06_B.mp3",
+          "C": "audio/q06_C.mp3"
+        }
       },
       {
-        "title": "Tour Guide",
-        "text": "Welcome to the National Space Museum. My name is David, and I'll be your guide today. We will begin our tour in the Rocket Gallery, where you can see actual engines used in the Apollo missions. Please remember that flash photography is strictly prohibited as it can damage some of the older artifacts. We will end the tour at the gift shop in approximately one hour.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Where is the tour taking place?",
-            "options": [
-              "(A) An art gallery",
-              "(B) A space museum",
-              "(C) A rocket factory",
-              "(D) A history library"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What rule are the visitors asked to follow?",
-            "options": [
-              "(A) Do not touch the engines",
-              "(B) Stay with the group",
-              "(C) Do not use camera flashes",
-              "(D) Keep their voices low"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "How long will the tour last?",
-            "options": [
-              "(A) 30 minutes",
-              "(B) 60 minutes",
-              "(C) 90 minutes",
-              "(D) Two hours"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you lower the volume of the radio?",
+        "options": [
+          "(A) Yes, I'll turn it down right away.",
+          "(B) It's a new station.",
+          "(C) I turned it on."
         ],
-        "audio_file": "audio/talk07.mp3"
+        "answer": "A",
+        "question_audio": "audio/q07_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q07_A.mp3",
+          "B": "audio/q07_B.mp3",
+          "C": "audio/q07_C.mp3"
+        }
       },
       {
-        "title": "Introduction",
-        "text": "It is my great pleasure to introduce our keynote speaker, Dr. Elena Rossi. Dr. Rossi has spent the last decade researching renewable energy at the University of Rome. Today, she will discuss her latest project involving solar-powered water filtration systems. Please join me in giving her a warm welcome.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Who is the speaker introducing?",
-            "options": [
-              "(A) A university student",
-              "(B) A research assistant",
-              "(C) A keynote speaker",
-              "(D) A project manager"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is Dr. Rossi's area of expertise?",
-            "options": [
-              "(A) Water management",
-              "(B) Ancient history",
-              "(C) Renewable energy",
-              "(D) Italian architecture"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is the specific topic of the speech?",
-            "options": [
-              "(A) University of Rome's history",
-              "(B) Solar water filtration",
-              "(C) Future of Italian politics",
-              "(D) How to get a research grant"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we postpone the deadline until Friday?",
+        "options": [
+          "(A) Because it's too late.",
+          "(B) We already finished the project.",
+          "(C) That would be a huge relief."
         ],
-        "audio_file": "audio/talk08.mp3"
+        "answer": "C",
+        "question_audio": "audio/q08_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q08_A.mp3",
+          "B": "audio/q08_B.mp3",
+          "C": "audio/q08_C.mp3"
+        }
       },
       {
-        "title": "Instruction",
-        "text": "Welcome to the annual Small Business Expo. When you entered, you should have received a badge and a folder. Please keep your badge visible at all times for security reasons. We have a small change to the schedule printed in your folders. The workshop on marketing has been extended by thirty minutes, so the lunch break will start later than originally planned.",
-        "graphic_title": "Conference Schedule",
-        "graphic_doctype": "schedule",
-        "graphic": {
-          "9:00 - 10:00": "Opening Remarks",
-          "10:00 - 11:30": "Marketing Workshop",
-          "11:30 - 1:00": "Networking Lunch",
-          "1:00 - 2:30": "Financial Planning"
-        },
-        "questions": [
-          {
-            "text": "What should attendees keep visible?",
-            "options": [
-              "(A) Their folders",
-              "(B) Their identification badges",
-              "(C) Their laptops",
-              "(D) Their business cards"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What change does the speaker mention?",
-            "options": [
-              "(A) The venue has changed",
-              "(B) A speaker is missing",
-              "(C) An event will last longer",
-              "(D) Lunch has been canceled"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Look at the graphic. According to the speaker, what time will the lunch likely begin now?",
-            "options": [
-              "(A) 11:30",
-              "(B) 12:00",
-              "(C) 1:00",
-              "(D) 1:30"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you prefer to meet in the morning or the afternoon?",
+        "options": [
+          "(A) Afternoon would be better for me.",
+          "(B) Yes, I would.",
+          "(C) It's a lovely morning."
         ],
-        "audio_file": "audio/talk09.mp3"
+        "answer": "A",
+        "question_audio": "audio/q09_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q09_A.mp3",
+          "B": "audio/q09_B.mp3",
+          "C": "audio/q09_C.mp3"
+        }
       },
       {
-        "title": "Advertisement",
-        "text": "Are you tired of paying high prices for your monthly cell phone plan? Switch to ClearCall Wireless! We offer unlimited talk and text for just $25 a month. Plus, if you bring your own device, we'll give you a $50 credit on your first bill. Stop by any of our ten locations in the city today to make the switch.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is being advertised?",
-            "options": [
-              "(A) A new smartphone",
-              "(B) A repair service",
-              "(C) A mobile phone plan",
-              "(D) An internet router"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is the monthly cost of the service?",
-            "options": [
-              "(A) $10",
-              "(B) $25",
-              "(C) $50",
-              "(D) $75"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "How can a customer receive a $50 credit?",
-            "options": [
-              "(A) By referring a family member",
-              "(B) By signing a two-year deal",
-              "(C) By keeping their current phone",
-              "(D) By visiting all ten locations"
-            ],
-            "answer": "C"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you sign this delivery receipt, please?",
+        "options": [
+          "(A) It was delivered yesterday.",
+          "(B) Of course, do you have a pen?",
+          "(C) I saw the sign."
         ],
-        "audio_file": "audio/talk10.mp3"
+        "answer": "B",
+        "question_audio": "audio/q10_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q10_A.mp3",
+          "B": "audio/q10_B.mp3",
+          "C": "audio/q10_C.mp3"
+        }
       },
       {
-        "title": "Voicemail Message",
-        "text": "Hi, this is Linda from Sunnyvale Travel. I'm calling to let you know that your hotel reservation in Madrid has been confirmed. However, the hotel notified us that their rooftop pool will be closed for maintenance during your stay. As an apology, they are offering you a voucher for a free dinner at their award-winning restaurant. I'll email the voucher to you shortly.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the purpose of the call?",
-            "options": [
-              "(A) To book a flight",
-              "(B) To confirm a hotel stay",
-              "(C) To cancel a tour",
-              "(D) To request a payment"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What is the problem mentioned?",
-            "options": [
-              "(A) The room is not ready",
-              "(B) The flight was delayed",
-              "(C) A facility is unavailable",
-              "(D) The price has increased"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What will the speaker send to the listener?",
-            "options": [
-              "(A) A map of Madrid",
-              "(B) A dinner voucher",
-              "(C) A new itinerary",
-              "(D) A refund check"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we ask Mr. Kim for his opinion?",
+        "options": [
+          "(A) He's out of the office today.",
+          "(B) He's a manager.",
+          "(C) I think so too."
         ],
-        "audio_file": "audio/talk11.mp3"
+        "answer": "A",
+        "question_audio": "audio/q11_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q11_A.mp3",
+          "B": "audio/q11_B.mp3",
+          "C": "audio/q11_C.mp3"
+        }
       },
       {
-        "title": "Business Presentation",
-        "text": "Take a look at the screen. You'll see our sales performance for the past year. As you can see, we had a very strong start, but we hit a significant slump during the summer months due to the supply chain disruption. Fortunately, our holiday marketing campaign was a massive success, leading to our highest growth period at the end of the year. We hope to maintain this momentum into the next quarter.",
-        "graphic_title": "Quarterly Sales Growth",
-        "graphic_doctype": "chart",
-        "graphic": {
-          "Q1": "5%",
-          "Q2": "12%",
-          "Q3": "-2%",
-          "Q4": "18%"
-        },
-        "questions": [
-          {
-            "text": "What caused a decline in sales?",
-            "options": [
-              "(A) High employee turnover",
-              "(B) Supply chain issues",
-              "(C) A failed advertisement",
-              "(D) Competitor pricing"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "Look at the graphic. Which quarter represents the \"summer slump\" mentioned by the speaker?",
-            "options": [
-              "(A) Q1",
-              "(B) Q2",
-              "(C) Q3",
-              "(D) Q4"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What does the speaker credit for the year-end success?",
-            "options": [
-              "(A) A new product launch",
-              "(B) A holiday campaign",
-              "(C) A reduction in prices",
-              "(D) An expansion into Europe"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you be able to give me a lift to the airport?",
+        "options": [
+          "(A) The flight was on time.",
+          "(B) About forty minutes.",
+          "(C) My car is in the shop, unfortunately."
         ],
-        "audio_file": "audio/talk12.mp3"
+        "answer": "C",
+        "question_audio": "audio/q12_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q12_A.mp3",
+          "B": "audio/q12_B.mp3",
+          "C": "audio/q12_C.mp3"
+        }
       },
       {
-        "title": "Radio Advertisement",
-        "text": "Are you looking to improve your professional skills? The City Evening College is now enrolling for the spring semester. We offer courses in everything from web design to project management. Classes are held twice a week starting at 7:00 PM, making it easy to study after work. Register by the end of this week to have your lab fees waived!",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Who is the target audience for this ad?",
-            "options": [
-              "(A) Full-time students",
-              "(B) Retired teachers",
-              "(C) Working professionals",
-              "(D) High school children"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "When do the classes take place?",
-            "options": [
-              "(A) On weekends",
-              "(B) In the evenings",
-              "(C) During the lunch hour",
-              "(D) Early in the morning"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "How can a student save money?",
-            "options": [
-              "(A) By enrolling in two classes",
-              "(B) By paying in cash",
-              "(C) By registering early",
-              "(D) By bringing their own laptop"
-            ],
-            "answer": "C"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you pass me the stapler?",
+        "options": [
+          "(A) Here you go.",
+          "(B) I'm out of staples.",
+          "(C) It's on the desk."
         ],
-        "audio_file": "audio/talk13.mp3"
+        "answer": "A",
+        "question_audio": "audio/q13_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q13_A.mp3",
+          "B": "audio/q13_B.mp3",
+          "C": "audio/q13_C.mp3"
+        }
       },
       {
-        "title": "Plant Safety Briefing",
-        "text": "Before we begin the tour of the manufacturing floor, I must go over a few safety requirements. Everyone must wear a hard hat and safety goggles at all times. Also, please stay within the yellow painted lines on the floor; these are designated walking paths to keep you away from the automated machinery. If you hear a loud siren, please follow me to the nearest exit immediately.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the speaker mainly discussing?",
-            "options": [
-              "(A) Machine maintenance",
-              "(B) Hiring procedures",
-              "(C) Safety regulations",
-              "(D) Product quality"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What should visitors look for on the floor?",
-            "options": [
-              "(A) Fire extinguishers",
-              "(B) Yellow lines",
-              "(C) Emergency buttons",
-              "(D) Tool boxes"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What should listeners do if they hear a siren?",
-            "options": [
-              "(A) Turn off the machines",
-              "(B) Call for help",
-              "(C) Put on their goggles",
-              "(D) Exit the building"
-            ],
-            "answer": "D"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we try that new Italian place down the street?",
+        "options": [
+          "(A) I've been to Italy twice.",
+          "(B) I've heard their pasta is great.",
+          "(C) It's a long street."
         ],
-        "audio_file": "audio/talk14.mp3"
+        "answer": "B",
+        "question_audio": "audio/q14_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q14_A.mp3",
+          "B": "audio/q14_B.mp3",
+          "C": "audio/q14_C.mp3"
+        }
       },
       {
-        "title": "Voicemail Message",
-        "text": "Hello, this is David from the IT department. I received your message about your computer not connecting to the office printer. I've checked the server and everything seems fine on our end, so it might be a hardware issue with your specific machine. I'll be tied up in meetings all morning, so please call the main desk to see if another technician is available to assist you before noon.",
-        "graphic_title": "Office Extension List",
-        "graphic_doctype": "directory",
-        "graphic": {
-          "IT Support": "Ext. 10",
-          "Payroll": "Ext. 20",
-          "Sales": "Ext. 30",
-          "Reception": "Ext. 0"
-        },
-        "questions": [
-          {
-            "text": "What is the listener's problem?",
-            "options": [
-              "(A) A forgotten password",
-              "(B) A printer connection issue",
-              "(C) A broken monitor",
-              "(D) A missing file"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "Why is the speaker unable to help immediately?",
-            "options": [
-              "(A) He is on vacation",
-              "(B) He is fixing a server",
-              "(C) He is in meetings",
-              "(D) He is out of the office"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Look at the graphic. Which extension should the listener dial to find another technician?",
-            "options": [
-              "(A) Ext. 10",
-              "(B) Ext. 20",
-              "(C) Ext. 30",
-              "(D) Ext. 0"
-            ],
-            "answer": "D"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you please send the invoice to the accounting department?",
+        "options": [
+          "(A) I'll do it first thing tomorrow.",
+          "(B) The account is closed.",
+          "(C) It was quite expensive."
         ],
-        "audio_file": "audio/talk15.mp3"
+        "answer": "A",
+        "question_audio": "audio/q15_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q15_A.mp3",
+          "B": "audio/q15_B.mp3",
+          "C": "audio/q15_C.mp3"
+        }
       },
       {
-        "title": "Public Service Announcement",
-        "text": "The Department of Transportation would like to remind residents that the annual 'Bike to Work' week begins this Monday. To encourage cycling, the city has installed temporary bike lanes on 5th Avenue and Broadway. Additionally, all city buses will be equipped with front-loading bike racks. Let's work together to reduce traffic congestion and improve our air quality.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What event is being announced?",
-            "options": [
-              "(A) A marathon",
-              "(B) A cycling event",
-              "(C) A car show",
-              "(D) A street fair"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What change has been made to city buses?",
-            "options": [
-              "(A) Lower fares",
-              "(B) New routes",
-              "(C) Bike racks added",
-              "(D) Electric engines"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is a goal of this initiative?",
-            "options": [
-              "(A) To raise money for charity",
-              "(B) To increase bus ridership",
-              "(C) To promote tourism",
-              "(D) To reduce traffic"
-            ],
-            "answer": "D"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you remind me when the presentation begins?",
+        "options": [
+          "(A) It's scheduled for 2:00 PM.",
+          "(B) I'll show you the slides.",
+          "(C) It was a great presentation."
         ],
-        "audio_file": "audio/talk16.mp3"
+        "answer": "A",
+        "question_audio": "audio/q16_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q16_A.mp3",
+          "B": "audio/q16_B.mp3",
+          "C": "audio/q16_C.mp3"
+        }
       },
       {
-        "title": "Product Introduction",
-        "text": "I'm thrilled to introduce our newest kitchen appliance, the 'QuickChef 3000.' This multi-cooker can steam, sauté, and pressure cook all in one device. It features a digital interface with over fifty pre-set recipes. Best of all, it uses 70% less energy than a conventional oven. It will be available in major retail stores starting next Tuesday.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the 'QuickChef 3000'?",
-            "options": [
-              "(A) A dishwasher",
-              "(B) A refrigerator",
-              "(C) A multi-cooker",
-              "(D) A microwave"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is highlighted as a main benefit?",
-            "options": [
-              "(A) Its large size",
-              "(B) Its low price",
-              "(C) Its energy efficiency",
-              "(D) Its colorful design"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "When will the product go on sale?",
-            "options": [
-              "(A) Today",
-              "(B) Tomorrow",
-              "(C) This weekend",
-              "(D) Next Tuesday"
-            ],
-            "answer": "D"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we double-check the guest list?",
+        "options": [
+          "(A) There are fifty guests.",
+          "(B) I already checked out.",
+          "(C) Good idea, let's do that now."
         ],
-        "audio_file": "audio/talk17.mp3"
+        "answer": "C",
+        "question_audio": "audio/q17_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q17_A.mp3",
+          "B": "audio/q17_B.mp3",
+          "C": "audio/q17_C.mp3"
+        }
       },
       {
-        "title": "Weather Report",
-        "text": "Good morning, listeners. It's a beautiful start to the day with clear skies, but don't let that fool you. A low-pressure system is moving in from the west. We expect light showers to start around lunchtime, but the heaviest rainfall will hit right during the evening commute. If you're planning to walk home from work, you'll definitely want to bring an umbrella for the late afternoon.",
-        "graphic_title": "Precipitation Probability",
-        "graphic_doctype": "chart",
-        "graphic": {
-          "10 AM": "10%",
-          "1 PM": "40%",
-          "4 PM": "85%",
-          "7 PM": "20%"
-        },
-        "questions": [
-          {
-            "text": "How is the weather at the time of the broadcast?",
-            "options": [
-              "(A) Rainy",
-              "(B) Clear",
-              "(C) Snowy",
-              "(D) Windy"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "Look at the graphic. At what time is rain most likely to occur?",
-            "options": [
-              "(A) 10 AM",
-              "(B) 1 PM",
-              "(C) 4 PM",
-              "(D) 7 PM"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What does the speaker suggest listeners do?",
-            "options": [
-              "(A) Leave work early",
-              "(B) Drive instead of walk",
-              "(C) Carry an umbrella",
-              "(D) Wear a heavy coat"
-            ],
-            "answer": "C"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you like me to take your coat?",
+        "options": [
+          "(A) Thank you, that's very kind.",
+          "(B) It's a blue coat.",
+          "(C) I bought it on sale."
         ],
-        "audio_file": "audio/talk18.mp3"
+        "answer": "A",
+        "question_audio": "audio/q18_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q18_A.mp3",
+          "B": "audio/q18_B.mp3",
+          "C": "audio/q18_C.mp3"
+        }
       },
       {
-        "title": "Business News",
-        "text": "In business news today, the tech giant 'Aperion' has announced it will be opening a new headquarters in Austin, Texas. This move is expected to create over 2,000 jobs in the local area over the next two years. The company cited the city's growing talent pool and favorable tax environment as the primary reasons for the relocation. Construction is set to begin this July.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What did the company 'Aperion' announce?",
-            "options": [
-              "(A) A merger",
-              "(B) A new office location",
-              "(C) A product recall",
-              "(D) A bankruptcy filing"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "How many jobs will be created?",
-            "options": [
-              "(A) 500",
-              "(B) 1,000",
-              "(C) 2,000",
-              "(D) 5,000"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "When will construction start?",
-            "options": [
-              "(A) This July",
-              "(B) This December",
-              "(C) Next January",
-              "(D) Next July"
-            ],
-            "answer": "A"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you show me how to use the photocopier?",
+        "options": [
+          "(A) There are ten copies.",
+          "(B) Just press this green button.",
+          "(C) It's broken again."
         ],
-        "audio_file": "audio/talk19.mp3"
+        "answer": "B",
+        "question_audio": "audio/q19_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q19_A.mp3",
+          "B": "audio/q19_B.mp3",
+          "C": "audio/q19_C.mp3"
+        }
       },
       {
-        "title": "Store Announcement",
-        "text": "Attention shoppers, we would like to remind you that our customer loyalty program is changing. Starting next month, points will no longer expire at the end of the year. Instead, you can save them up for larger rewards, such as $50 gift cards. To update your account information, please visit the service desk located near the main entrance. Thank you for shopping with us.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is changing at the store?",
-            "options": [
-              "(A) The store hours",
-              "(B) The return policy",
-              "(C) The loyalty program",
-              "(D) The store's location"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is a benefit of the new system?",
-            "options": [
-              "(A) Points do not expire",
-              "(B) Double points on weekends",
-              "(C) Lower prices for members",
-              "(D) Free home delivery"
-            ],
-            "answer": "A"
-          },
-          {
-            "text": "Where can customers update their accounts?",
-            "options": [
-              "(A) On the store website",
-              "(B) At the checkout counter",
-              "(C) At the service desk",
-              "(D) Through a mobile app"
-            ],
-            "answer": "C"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we hire a consultant to help with the marketing?",
+        "options": [
+          "(A) Our budget is a bit tight right now.",
+          "(B) He's a very good consultant.",
+          "(C) The marketing plan is ready."
         ],
-        "audio_file": "audio/talk20.mp3"
+        "answer": "A",
+        "question_audio": "audio/q20_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q20_A.mp3",
+          "B": "audio/q20_B.mp3",
+          "C": "audio/q20_C.mp3"
+        }
       },
       {
-        "title": "Business Briefing",
-        "text": "Good morning, team. I have a quick update regarding our client, Nexus Corp. They've requested a change in the color scheme for the new website design. Instead of the blue and grey we originally proposed, they want a more vibrant green and white theme to match their new branding. Please pause work on the current layout until the design team sends over the updated style guide this afternoon.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the talk mainly about?",
-            "options": [
-              "(A) A new project deadline",
-              "(B) A change in design requirements",
-              "(C) A budget increase",
-              "(D) A client meeting schedule"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What color combination does the client now want?",
-            "options": [
-              "(A) Blue and grey",
-              "(B) Red and black",
-              "(C) Green and white",
-              "(D) Yellow and orange"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What are the listeners told to do?",
-            "options": [
-              "(A) Call the client",
-              "(B) Stop working on the layout",
-              "(C) Finish the blue design",
-              "(D) Go home early"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you mind waiting in the lobby for a few minutes?",
+        "options": [
+          "(A) The lobby is on the first floor.",
+          "(B) I've been waiting for an hour.",
+          "(C) Certainly, I'll take a seat."
         ],
-        "audio_file": "audio/talk21.mp3"
+        "answer": "C",
+        "question_audio": "audio/q21_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q21_A.mp3",
+          "B": "audio/q21_B.mp3",
+          "C": "audio/q21_C.mp3"
+        }
       },
       {
-        "title": "Public Announcement",
-        "text": "Attention passengers at Central Station. Due to mechanical issues on the tracks near the bridge, all Express trains have been suspended until further notice. Passengers traveling northbound should take the next Local train instead. Please note that the Local train will depart from its usual location as shown on the schedule. We apologize for the delay.",
-        "graphic_title": "Train Schedule - Northbound",
-        "graphic_doctype": "schedule",
-        "graphic": {
-          "8:15 AM": "Express (Platform 1)",
-          "8:45 AM": "Local (Platform 4)",
-          "9:15 AM": "Express (Platform 2)",
-          "9:45 AM": "Local (Platform 4)"
-        },
-        "questions": [
-          {
-            "text": "Why are some trains suspended?",
-            "options": [
-              "(A) Bad weather",
-              "(B) Staff shortages",
-              "(C) Track maintenance",
-              "(D) Mechanical problems"
-            ],
-            "answer": "D"
-          },
-          {
-            "text": "Look at the graphic. Which platform should passengers go to for the next available train?",
-            "options": [
-              "(A) Platform 1",
-              "(B) Platform 2",
-              "(C) Platform 3",
-              "(D) Platform 4"
-            ],
-            "answer": "D"
-          },
-          {
-            "text": "What does the speaker suggest passengers do?",
-            "options": [
-              "(A) Wait for the Express",
-              "(B) Take a Local train",
-              "(C) Ask for a refund",
-              "(D) Travel southbound"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you provide me with a copy of the annual report?",
+        "options": [
+          "(A) I'll print one out for you.",
+          "(B) It was a very long year.",
+          "(C) The report is thirty pages."
         ],
-        "audio_file": "audio/talk22.mp3"
+        "answer": "A",
+        "question_audio": "audio/q22_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q22_A.mp3",
+          "B": "audio/q22_B.mp3",
+          "C": "audio/q22_C.mp3"
+        }
       },
       {
-        "title": "Telephone Message",
-        "text": "Hello, this is Mr. Henderson from the accounting department. I'm calling to follow up on the invoice I sent you last Tuesday. We noticed that the total amount listed was incorrect because the shipping charges were not included. I have sent a revised invoice to your email address. Please ignore the first one and use the new document for your payment records.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Where does the speaker work?",
-            "options": [
-              "(A) Shipping",
-              "(B) Accounting",
-              "(C) Sales",
-              "(D) Human Resources"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What was wrong with the original invoice?",
-            "options": [
-              "(A) The date was wrong",
-              "(B) It was missing a signature",
-              "(C) It had an incorrect total",
-              "(D) It was sent to the wrong person"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What should the listener do?",
-            "options": [
-              "(A) Pay the first invoice",
-              "(B) Use the revised document",
-              "(C) Call Mr. Henderson back",
-              "(D) Send a shipping receipt"
-            ],
-            "answer": "B"
-          }
+        "category": "requests_suggestions",
+        "question": "Why don't we take a short break?",
+        "options": [
+          "(A) We only have ten minutes left.",
+          "(B) I'm not really tired yet.",
+          "(C) It broke yesterday."
         ],
-        "audio_file": "audio/talk23.mp3"
+        "answer": "B",
+        "question_audio": "audio/q23_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q23_A.mp3",
+          "B": "audio/q23_B.mp3",
+          "C": "audio/q23_C.mp3"
+        }
       },
       {
-        "title": "Store Advertisement",
-        "text": "Looking for a new laptop for college? Stop by 'TechHub' this weekend for our annual student sale! We are offering 15% off all laptops and tablets. Plus, every purchase comes with a free wireless mouse and a one-year subscription to our antivirus software. Just show your valid student ID at the register to claim these savings.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is being advertised?",
-            "options": [
-              "(A) A university course",
-              "(B) A software repair service",
-              "(C) A computer sale",
-              "(D) A wireless internet plan"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What item is given for free with a purchase?",
-            "options": [
-              "(A) A laptop bag",
-              "(B) A wireless mouse",
-              "(C) A set of headphones",
-              "(D) A printer"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What must a customer provide to get a discount?",
-            "options": [
-              "(A) A coupon from a newspaper",
-              "(B) A credit card",
-              "(C) A student ID",
-              "(D) An email address"
-            ],
-            "answer": "C"
-          }
+        "category": "requests_suggestions",
+        "question": "Would you like a refill on your water?",
+        "options": [
+          "(A) Yes, please.",
+          "(B) The glass is empty.",
+          "(C) It's cold outside."
         ],
-        "audio_file": "audio/talk24.mp3"
+        "answer": "A",
+        "question_audio": "audio/q24_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q24_A.mp3",
+          "B": "audio/q24_B.mp3",
+          "C": "audio/q24_C.mp3"
+        }
       },
       {
-        "title": "Excerpt from a Meeting",
-        "text": "Thank you all for coming. Let's look at where we stand on the new smartphone project. The research phase took longer than expected, but it gave us great insights. Currently, the engineering team is building the first physical model. We expect to move into the trial phase by early next month. If we stay on track, we will hit the mass manufacturing stage by the end of the year.",
-        "graphic_title": "Project Milestones",
-        "graphic_doctype": "timeline",
-        "graphic": {
-          "Research": "Completed",
-          "Prototype": "In Progress",
-          "Testing": "Not Started",
-          "Production": "Not Started"
-        },
-        "questions": [
-          {
-            "text": "What is the meeting about?",
-            "options": [
-              "(A) A marketing strategy",
-              "(B) A product development update",
-              "(C) A quarterly budget review",
-              "(D) An employee training session"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "Look at the graphic. Which stage of the project is the team currently working on?",
-            "options": [
-              "(A) Research",
-              "(B) Prototype",
-              "(C) Testing",
-              "(D) Production"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "When does the speaker hope to start mass manufacturing?",
-            "options": [
-              "(A) Next month",
-              "(B) In three months",
-              "(C) By the end of the year",
-              "(D) Next summer"
-            ],
-            "answer": "C"
-          }
+        "category": "requests_suggestions",
+        "question": "Could you tell Mr. Henderson that I called?",
+        "options": [
+          "(A) He's on the phone.",
+          "(B) I'll give him the message.",
+          "(C) You can call him later."
         ],
-        "audio_file": "audio/talk25.mp3"
+        "answer": "B",
+        "question_audio": "audio/q25_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q25_A.mp3",
+          "B": "audio/q25_B.mp3",
+          "C": "audio/q25_C.mp3"
+        }
       },
       {
-        "title": "Voicemail Message",
-        "text": "Hi, this is Jessica from the catering company. I'm calling about your order for the retirement party this Friday. You requested 50 vegetarian wraps, but our supplier just informed us they are out of the spinach tortillas you wanted. We can substitute them with whole-wheat tortillas instead. Please let me know if this is acceptable by 4:00 PM today.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the reason for the call?",
-            "options": [
-              "(A) To confirm a delivery time",
-              "(B) To suggest an ingredient change",
-              "(C) To request a payment",
-              "(D) To cancel an event"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What event is being catered?",
-            "options": [
-              "(A) A wedding",
-              "(B) A birthday party",
-              "(C) A retirement party",
-              "(D) A business lunch"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "When does the listener need to respond?",
-            "options": [
-              "(A) This Friday",
-              "(B) By 4:00 PM today",
-              "(C) In one hour",
-              "(D) Tomorrow morning"
-            ],
-            "answer": "B"
-          }
+        "category": "statements_tag_questions",
+        "question": "This printer is out of ink again, isn't it?",
+        "options": [
+          "(A) It's in the drawer.",
+          "(B) I'll take care of it right away.",
+          "(C) Yes, I printed ten copies."
         ],
-        "audio_file": "audio/talk26.mp3"
+        "answer": "B",
+        "question_audio": "audio/q26_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q26_A.mp3",
+          "B": "audio/q26_B.mp3",
+          "C": "audio/q26_C.mp3"
+        }
       },
       {
-        "title": "Public Service Announcement",
-        "text": "The City Water Department will be conducting maintenance on the main pipelines in the West End district this Sunday. Residents in the area may experience low water pressure or temporary service interruptions between 8:00 AM and 2:00 PM. We recommend storing enough water for your household needs on Saturday evening. We appreciate your patience during these necessary repairs.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is happening this Sunday?",
-            "options": [
-              "(A) A street fair",
-              "(B) Utility maintenance",
-              "(C) A marathon",
-              "(D) A recycling drive"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What is a possible problem for residents?",
-            "options": [
-              "(A) Power outages",
-              "(B) No internet access",
-              "(C) Low water pressure",
-              "(D) Closed roads"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What does the speaker suggest doing on Saturday?",
-            "options": [
-              "(A) Calling the department",
-              "(B) Buying bottled water",
-              "(C) Cleaning the house",
-              "(D) Saving a water supply"
-            ],
-            "answer": "D"
-          }
+        "category": "statements_tag_questions",
+        "question": "Mr. Henderson hasn't signed the contract yet.",
+        "options": [
+          "(A) At the bottom of the page.",
+          "(B) Yes, he's a very good designer.",
+          "(C) I didn't know that. I'll call him."
         ],
-        "audio_file": "audio/talk27.mp3"
+        "answer": "C",
+        "question_audio": "audio/q27_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q27_A.mp3",
+          "B": "audio/q27_B.mp3",
+          "C": "audio/q27_C.mp3"
+        }
       },
       {
-        "title": "Tour Guide",
-        "text": "As we walk through the botanical garden's Tropical House, please be aware of the high humidity levels, which are necessary for these exotic ferns. To your left is the rare Orchid collection. These flowers only bloom once every three years. Please stay on the paved path and refrain from touching the plants. Our next stop will be the Butterfly Pavilion.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Where is the speaker?",
-            "options": [
-              "(A) A zoo",
-              "(B) A botanical garden",
-              "(C) A farm",
-              "(D) A park"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What is special about the Orchids mentioned?",
-            "options": [
-              "(A) They are very large",
-              "(B) They are blue",
-              "(C) They bloom infrequently",
-              "(D) They are used for medicine"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What will the group visit next?",
-            "options": [
-              "(A) The gift shop",
-              "(B) The exit",
-              "(C) The Butterfly Pavilion",
-              "(D) The rose garden"
-            ],
-            "answer": "C"
-          }
+        "category": "statements_tag_questions",
+        "question": "We should probably leave for the airport now.",
+        "options": [
+          "(A) I agree; the traffic is getting heavy.",
+          "(B) The flight was delayed by two hours.",
+          "(C) No, I haven't seen my passport."
         ],
-        "audio_file": "audio/talk28.mp3"
+        "answer": "A",
+        "question_audio": "audio/q28_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q28_A.mp3",
+          "B": "audio/q28_B.mp3",
+          "C": "audio/q28_C.mp3"
+        }
       },
       {
-        "title": "Weather Report",
-        "text": "It's going to be a day of drastic changes, folks. We're starting off quite chilly, but once the sun comes out, we'll see a pleasant rise in temperature. In fact, the warmest part of the day will be nearly double the temperature we have right now. However, once the sun sets, the temperature will drop rapidly, and we may even see some frost on the ground late tonight.",
-        "graphic_title": "Temperatures",
-        "graphic_doctype": "chart",
-        "graphic": {
-          "Morning": "12°C",
-          "Afternoon": "22°C",
-          "Evening": "10°C",
-          "Night": "4°C"
-        },
-        "questions": [
-          {
-            "text": "What is the main topic of the report?",
-            "options": [
-              "(A) Approaching rain",
-              "(B) Wind speeds",
-              "(C) Temperature fluctuations",
-              "(D) Storm warnings"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Look at the graphic. What is the peak temperature expected today?",
-            "options": [
-              "(A) 12°C",
-              "(B) 22°C",
-              "(C) 10°C",
-              "(D) 4°C"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What might happen tonight?",
-            "options": [
-              "(A) A thunderstorm",
-              "(B) Heavy fog",
-              "(C) Frost formation",
-              "(D) High winds"
-            ],
-            "answer": "C"
-          }
+        "category": "statements_tag_questions",
+        "question": "You've finished the quarterly report, haven't you?",
+        "options": [
+          "(A) It's held every three months.",
+          "(B) I'm glad you liked it.",
+          "(C) Actually, I still have two pages left."
         ],
-        "audio_file": "audio/talk29.mp3"
+        "answer": "C",
+        "question_audio": "audio/q29_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q29_A.mp3",
+          "B": "audio/q29_B.mp3",
+          "C": "audio/q29_C.mp3"
+        }
       },
       {
-        "title": "Instruction",
-        "text": "Welcome to your first day at 'Prime Logistics.' Your primary duty will be scanning incoming packages and sorting them by zip code. You must wear your high-visibility vest and steel-toed boots at all times while on the warehouse floor. If a package is marked 'Fragile,' please place it on the separate blue conveyor belt for manual handling. Let's get started with a tour of the facility.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Where does this talk take place?",
-            "options": [
-              "(A) A retail store",
-              "(B) A logistics warehouse",
-              "(C) A post office",
-              "(D) A construction site"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What is a task for the new employees?",
-            "options": [
-              "(A) Driving trucks",
-              "(B) Cleaning floors",
-              "(C) Sorting packages",
-              "(D) Answering phones"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What should be done with 'Fragile' items?",
-            "options": [
-              "(A) Put them in boxes",
-              "(B) Use a specific belt",
-              "(C) Call a supervisor",
-              "(D) Leave them on the floor"
-            ],
-            "answer": "B"
-          }
+        "category": "statements_tag_questions",
+        "question": "The cafeteria is closed for renovations this week.",
+        "options": [
+          "(A) I usually have a sandwich.",
+          "(B) That explains why the doors were locked.",
+          "(C) About fifteen dollars."
         ],
-        "audio_file": "audio/talk30.mp3"
+        "answer": "B",
+        "question_audio": "audio/q30_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q30_A.mp3",
+          "B": "audio/q30_B.mp3",
+          "C": "audio/q30_C.mp3"
+        }
       },
       {
-        "title": "Recorded Message",
-        "text": "Thank you for calling the Grandview Cinema. Our box office is currently closed. To purchase tickets for today's showings, please visit our website or use our mobile app. Note that we are offering a special discount for our 4:00 PM matinee of 'Mountain Peak'—all seats are half-price. Our concession stand now features organic popcorn and locally made sodas. Enjoy the show!",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the speaker's main purpose?",
-            "options": [
-              "(A) To complain about a film",
-              "(B) To provide theater information",
-              "(C) To hire new ushers",
-              "(D) To announce a movie cancellation"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "How can a caller get a discount today?",
-            "options": [
-              "(A) By buying a large popcorn",
-              "(B) By joining a loyalty club",
-              "(C) By attending a specific time",
-              "(D) By showing a student ID"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is new at the concession stand?",
-            "options": [
-              "(A) Hot dogs",
-              "(B) Ice cream",
-              "(C) Candy bars",
-              "(D) Organic snacks"
-            ],
-            "answer": "D"
-          }
+        "category": "statements_tag_questions",
+        "question": "Sarah is the one in charge of the marketing campaign.",
+        "options": [
+          "(A) No, she doesn't like shopping.",
+          "(B) To increase our digital presence.",
+          "(C) Oh, I thought it was Mark."
         ],
-        "audio_file": "audio/talk31.mp3"
+        "answer": "C",
+        "question_audio": "audio/q31_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q31_A.mp3",
+          "B": "audio/q31_B.mp3",
+          "C": "audio/q31_C.mp3"
+        }
       },
       {
-        "title": "Business Presentation",
-        "text": "As we review our annual expenditures, you'll notice a shift in where our capital is going. Last year, our biggest expense was physical equipment, but this year, our investment in cloud-based subscriptions has taken the top spot. We have successfully reduced our travel costs by using video conferencing. Moving forward, we aim to keep our smallest expense category—general office supplies—under 10% of the total budget.",
-        "graphic_title": "Office Spending",
-        "graphic_doctype": "chart",
-        "graphic": {
-          "Software": "40%",
-          "Hardware": "30%",
-          "Travel": "20%",
-          "Supplies": "10%"
-        },
-        "questions": [
-          {
-            "text": "What was the company's largest expense this year?",
-            "options": [
-              "(A) Computer hardware",
-              "(B) Software subscriptions",
-              "(C) Business travel",
-              "(D) Office furniture"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "Look at the graphic. Which category accounts for 20% of the spending?",
-            "options": [
-              "(A) Software",
-              "(B) Hardware",
-              "(C) Travel",
-              "(D) Supplies"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "How did the company reduce travel costs?",
-            "options": [
-              "(A) By flying economy class",
-              "(B) By using video technology",
-              "(C) By canceling all trips",
-              "(D) By moving the office"
-            ],
-            "answer": "B"
-          }
+        "category": "statements_tag_questions",
+        "question": "You didn't remember to bring the extra chairs, did you?",
+        "options": [
+          "(A) They are very comfortable.",
+          "(B) I'm sorry, it completely slipped my mind.",
+          "(C) There are four people in the meeting."
         ],
-        "audio_file": "audio/talk32.mp3"
+        "answer": "B",
+        "question_audio": "audio/q32_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q32_A.mp3",
+          "B": "audio/q32_B.mp3",
+          "C": "audio/q32_C.mp3"
+        }
       },
       {
-        "title": "Voicemail Message",
-        "text": "Hello, this is Brenda from 'City Fitness.' I'm calling to let you know that the yoga class you signed up for on Tuesday morning has been moved to Thursday at the same time. The instructor, Mr. Lee, has a family emergency. If you cannot attend the new session, please let us know and we will credit your account for a future class. We apologize for any inconvenience.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Why is the class being rescheduled?",
-            "options": [
-              "(A) The gym is being renovated",
-              "(B) There were not enough students",
-              "(C) The teacher is unavailable",
-              "(D) The building lost power"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "When will the new class take place?",
-            "options": [
-              "(A) Tuesday evening",
-              "(B) Wednesday morning",
-              "(C) Thursday morning",
-              "(D) Friday afternoon"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What does the speaker offer to those who cannot attend?",
-            "options": [
-              "(A) A cash refund",
-              "(B) A credit for later use",
-              "(C) A free water bottle",
-              "(D) A private lesson"
-            ],
-            "answer": "B"
-          }
+        "category": "statements_tag_questions",
+        "question": "This client prefers to be contacted via email.",
+        "options": [
+          "(A) I sent the package yesterday.",
+          "(B) His office is on the fifth floor.",
+          "(C) Thanks for letting me know."
         ],
-        "audio_file": "audio/talk33.mp3"
+        "answer": "C",
+        "question_audio": "audio/q33_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q33_A.mp3",
+          "B": "audio/q33_B.mp3",
+          "C": "audio/q33_C.mp3"
+        }
       },
       {
-        "title": "Advertisement",
-        "text": "Don't spend your weekend cleaning the house! Let 'Sparkle Services' handle it for you. We provide professional cleaning for homes and offices. Our team uses only environmentally friendly products that are safe for pets and children. Call us by Wednesday to receive a $20 discount on your first deep-clean. Visit our website to read testimonials from our happy customers.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What type of business is being advertised?",
-            "options": [
-              "(A) A pet store",
-              "(B) A landscaping company",
-              "(C) A cleaning service",
-              "(D) A grocery delivery"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is special about the products used?",
-            "options": [
-              "(A) They are very cheap",
-              "(B) They are eco-friendly",
-              "(C) They are imported from Europe",
-              "(D) They smell like lemons"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "How can a customer get a discount?",
-            "options": [
-              "(A) By booking on a weekend",
-              "(B) By referring a neighbor",
-              "(C) By calling early in the week",
-              "(D) By signing up for a year"
-            ],
-            "answer": "C"
-          }
+        "category": "statements_tag_questions",
+        "question": "The lecture starts at 10:00, doesn't it?",
+        "options": [
+          "(A) No, it's been pushed back to 10:30.",
+          "(B) I enjoyed the presentation.",
+          "(C) It was a very long walk."
         ],
-        "audio_file": "audio/talk34.mp3"
+        "answer": "A",
+        "question_audio": "audio/q34_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q34_A.mp3",
+          "B": "audio/q34_B.mp3",
+          "C": "audio/q34_C.mp3"
+        }
       },
       {
-        "title": "Public Announcement",
-        "text": "Welcome to the Metropolitan Museum. We are currently hosting a special temporary exhibit of marble statues from the 20th century. This collection is located in the hall directly adjacent to the Renaissance Art gallery. Please note that sketches are allowed, but the use of charcoal is prohibited. After your visit, please exit through the designated area to browse our selection of art books and souvenirs.",
-        "graphic_title": "Museum Floor Plan",
-        "graphic_doctype": "floor_plan",
-        "graphic": {
-          "Room A": "Ancient Egypt",
-          "Room B": "Renaissance Art",
-          "Room C": "Modern Sculpture",
-          "Room D": "Gift Shop"
-        },
-        "questions": [
-          {
-            "text": "What is the special exhibit featuring?",
-            "options": [
-              "(A) Oil paintings",
-              "(B) Ancient coins",
-              "(C) Modern sculptures",
-              "(D) Photography"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Look at the graphic. In which room is the special exhibit located?",
-            "options": [
-              "(A) Room A",
-              "(B) Room B",
-              "(C) Room C",
-              "(D) Room D"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What are visitors allowed to do?",
-            "options": [
-              "(A) Use charcoal",
-              "(B) Take photographs",
-              "(C) Touch the statues",
-              "(D) Draw sketches"
-            ],
-            "answer": "D"
-          }
+        "category": "statements_tag_questions",
+        "question": "We're running low on shipping supplies.",
+        "options": [
+          "(A) The ship departs at noon.",
+          "(B) They are on the top shelf.",
+          "(C) I'll place an order this afternoon."
         ],
-        "audio_file": "audio/talk35.mp3"
+        "answer": "C",
+        "question_audio": "audio/q35_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q35_A.mp3",
+          "B": "audio/q35_B.mp3",
+          "C": "audio/q35_C.mp3"
+        }
       },
       {
-        "title": "Radio News Report",
-        "text": "In local news, the 'Northside Bridge' will be closed to all traffic starting at midnight this Friday. City engineers will be performing essential structural repairs that are expected to take forty-eight hours. Commuters who normally use the bridge to reach the downtown area are encouraged to take the subway or use the ferry service. The bridge is expected to reopen in time for the Monday morning rush hour.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "When will the bridge close?",
-            "options": [
-              "(A) Monday morning",
-              "(B) Wednesday night",
-              "(C) Friday midnight",
-              "(D) Sunday afternoon"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Why is the bridge being closed?",
-            "options": [
-              "(A) A film is being shot",
-              "(B) Structural maintenance",
-              "(C) A marathon race",
-              "(D) Severe weather"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What alternative does the speaker suggest?",
-            "options": [
-              "(A) Riding a bicycle",
-              "(B) Taking a ferry",
-              "(C) Working from home",
-              "(D) Walking across the bridge"
-            ],
-            "answer": "B"
-          }
+        "category": "statements_tag_questions",
+        "question": "You've already met the new intern, haven't you?",
+        "options": [
+          "(A) Yes, we had lunch together yesterday.",
+          "(B) He's looking for a permanent job.",
+          "(C) In the conference room."
         ],
-        "audio_file": "audio/talk36.mp3"
+        "answer": "A",
+        "question_audio": "audio/q36_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q36_A.mp3",
+          "B": "audio/q36_B.mp3",
+          "C": "audio/q36_C.mp3"
+        }
       },
       {
-        "title": "Instruction",
-        "text": "Welcome to the 'Quality Electronics' assembly line. Safety is our number one priority. Before you enter the cleanroom, you must put on a protective suit, a hairnet, and shoe covers. This prevents dust from damaging the microchips we are building. Also, please remember that no food or drinks are permitted in the work area. If you need a break, please use the designated lounge on the first floor.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "Where is this talk most likely occurring?",
-            "options": [
-              "(A) A restaurant kitchen",
-              "(B) A clothing store",
-              "(C) A computer factory",
-              "(D) A hospital ward"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What is the purpose of the protective clothing?",
-            "options": [
-              "(A) To keep employees warm",
-              "(B) To prevent contamination",
-              "(C) To identify different teams",
-              "(D) To protect against chemicals"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "Where should employees go for a break?",
-            "options": [
-              "(A) The cleanroom",
-              "(B) The parking lot",
-              "(C) The first-floor lounge",
-              "(D) The assembly line"
-            ],
-            "answer": "C"
-          }
+        "category": "statements_tag_questions",
+        "question": "I'm afraid the elevator is still out of order.",
+        "options": [
+          "(A) It's on the third floor.",
+          "(B) Please sign your name here.",
+          "(C) I guess I'll have to take the stairs."
         ],
-        "audio_file": "audio/talk37.mp3"
+        "answer": "C",
+        "question_audio": "audio/q37_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q37_A.mp3",
+          "B": "audio/q37_B.mp3",
+          "C": "audio/q37_C.mp3"
+        }
       },
       {
-        "title": "Weather Report",
-        "text": "Good morning. We are tracking a major storm system that will move through the area today. While the morning will be relatively calm, the intensity will pick up significantly as the day progresses. We expect the most dangerous conditions to occur around sunset, when wind gusts could reach speeds high enough to knock down power lines. Conditions will settle down quite quickly after midnight.",
-        "graphic_title": "Wind Speed",
-        "graphic_doctype": "chart",
-        "graphic": {
-          "6 AM": "10 kph",
-          "12 PM": "25 kph",
-          "6 PM": "60 kph",
-          "12 AM": "15 kph"
-        },
-        "questions": [
-          {
-            "text": "What is the main subject of the report?",
-            "options": [
-              "(A) A heatwave",
-              "(B) A drought",
-              "(C) A major storm",
-              "(D) Heavy snowfall"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "Look at the graphic. At what time will the wind be strongest?",
-            "options": [
-              "(A) 6 AM",
-              "(B) 12 PM",
-              "(C) 6 PM",
-              "(D) 12 AM"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What does the speaker warn about?",
-            "options": [
-              "(A) Flooded roads",
-              "(B) Falling power lines",
-              "(C) Poor visibility",
-              "(D) Extreme cold"
-            ],
-            "answer": "B"
-          }
+        "category": "statements_tag_questions",
+        "question": "The budget proposal needs to be submitted by Friday.",
+        "options": [
+          "(A) I've already finished my draft.",
+          "(B) It was quite expensive.",
+          "(C) Twenty dollars per person."
         ],
-        "audio_file": "audio/talk38.mp3"
+        "answer": "A",
+        "question_audio": "audio/q38_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q38_A.mp3",
+          "B": "audio/q38_B.mp3",
+          "C": "audio/q38_C.mp3"
+        }
       },
       {
-        "title": "Excerpt from a Meeting",
-        "text": "Before we adjourn, I'd like to thank everyone for their hard work on the 'Aero-Tech' project. Because we finished the design phase two weeks ahead of schedule, the board of directors has approved a bonus for the entire engineering team. You will see this reflected in your next paycheck. Now, let's head to the cafeteria—the company is providing lunch to celebrate our success.",
-        "graphic_title": null,
-        "graphic_doctype": null,
-        "graphic": null,
-        "questions": [
-          {
-            "text": "What is the reason for the celebration?",
-            "options": [
-              "(A) A new CEO was hired",
-              "(B) An early project completion",
-              "(C) A high sales record",
-              "(D) A company anniversary"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "How will the employees be rewarded?",
-            "options": [
-              "(A) With extra vacation days",
-              "(B) With new laptops",
-              "(C) With a financial bonus",
-              "(D) With a promotion"
-            ],
-            "answer": "C"
-          },
-          {
-            "text": "What will the employees do next?",
-            "options": [
-              "(A) Start a new project",
-              "(B) Go to the cafeteria",
-              "(C) Go home early",
-              "(D) Call the board of directors"
-            ],
-            "answer": "B"
-          }
+        "category": "statements_tag_questions",
+        "question": "You aren't going to the retirement party, are you?",
+        "options": [
+          "(A) He has worked here for thirty years.",
+          "(B) The cake was delicious.",
+          "(C) No, I have a previous engagement."
         ],
-        "audio_file": "audio/talk39.mp3"
+        "answer": "C",
+        "question_audio": "audio/q39_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q39_A.mp3",
+          "B": "audio/q39_B.mp3",
+          "C": "audio/q39_C.mp3"
+        }
       },
       {
-        "title": "Product Advertisement",
-        "text": "Are you looking for a better way to manage your team's schedule? Try 'TaskMaster Pro.' Our software allows you to assign tasks and track progress in real-time. For a limited time, we are offering our most popular option—which allows up to five users—at a 25% discount. It's perfect for small households or small business teams. Download your free trial today!",
-        "graphic_title": "Subscription Plans",
-        "graphic_doctype": "table",
-        "graphic": {
-          "Basic": "$10/mo (1 device)",
-          "Family": "$20/mo (5 devices)",
-          "Premium": "$30/mo (10 devices)",
-          "Business": "$100/mo (Unlimited)"
-        },
-        "questions": [
-          {
-            "text": "What does the software help users do?",
-            "options": [
-              "(A) Edit photos",
-              "(B) Manage schedules",
-              "(C) Design websites",
-              "(D) Write code"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "Look at the graphic. Which plan is the speaker offering a discount on?",
-            "options": [
-              "(A) Basic",
-              "(B) Family",
-              "(C) Premium",
-              "(D) Business"
-            ],
-            "answer": "B"
-          },
-          {
-            "text": "What is available for free?",
-            "options": [
-              "(A) A mobile phone",
-              "(B) A training session",
-              "(C) A software trial",
-              "(D) A customer support call"
-            ],
-            "answer": "C"
-          }
+        "category": "statements_tag_questions",
+        "question": "It's much colder in the office today than usual.",
+        "options": [
+          "(A) I'll turn up the thermostat.",
+          "(B) I prefer the blue one.",
+          "(C) Yes, I have a cold."
         ],
-        "audio_file": "audio/talk40.mp3"
+        "answer": "A",
+        "question_audio": "audio/q40_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q40_A.mp3",
+          "B": "audio/q40_B.mp3",
+          "C": "audio/q40_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "Ms. Kim didn't leave her umbrella here, did she?",
+        "options": [
+          "(A) No, it's not raining.",
+          "(B) Not that I can see.",
+          "(C) She's at a conference in Seoul."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q41_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q41_A.mp3",
+          "B": "audio/q41_B.mp3",
+          "C": "audio/q41_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "There's a typo on the first page of the brochure.",
+        "options": [
+          "(A) I read it twice.",
+          "(B) The graphics are very colorful.",
+          "(C) I'll fix it before we print the rest."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q42_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q42_A.mp3",
+          "B": "audio/q42_B.mp3",
+          "C": "audio/q42_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "The keynote speaker is late, isn't he?",
+        "options": [
+          "(A) His speech was very inspiring.",
+          "(B) He's stuck in a taxi.",
+          "(C) I don't like public speaking."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q43_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q43_A.mp3",
+          "B": "audio/q43_B.mp3",
+          "C": "audio/q43_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "I think we should reschedule our meeting for Tuesday.",
+        "options": [
+          "(A) The meeting was very productive.",
+          "(B) I saw him on Monday.",
+          "(C) Tuesday works for me."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q44_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q44_A.mp3",
+          "B": "audio/q44_B.mp3",
+          "C": "audio/q44_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "You haven't seen the stapler anywhere, have you?",
+        "options": [
+          "(A) I'm using it at my desk.",
+          "(B) To keep the papers together.",
+          "(C) No, I haven't seen that movie."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q45_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q45_A.mp3",
+          "B": "audio/q45_B.mp3",
+          "C": "audio/q45_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "The commute is much faster if you take the express train.",
+        "options": [
+          "(A) The fare is five dollars.",
+          "(B) It arrives every ten minutes.",
+          "(C) I'll try that tomorrow."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q46_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q46_A.mp3",
+          "B": "audio/q46_B.mp3",
+          "C": "audio/q46_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "We don't have enough copies of the agenda for everyone.",
+        "options": [
+          "(A) I'll go make some more.",
+          "(B) It's a very busy schedule.",
+          "(C) I read it this morning."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q47_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q47_A.mp3",
+          "B": "audio/q47_B.mp3",
+          "C": "audio/q47_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "This software update is taking much longer than expected.",
+        "options": [
+          "(A) I've already installed it.",
+          "(B) Tell me about it; it's been an hour!",
+          "(C) The version number is 2.0."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q48_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q48_A.mp3",
+          "B": "audio/q48_B.mp3",
+          "C": "audio/q48_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "You're coming to the team-building event, aren't you?",
+        "options": [
+          "(A) It was built in 1995.",
+          "(B) The team played very well.",
+          "(C) I wouldn't miss it."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q49_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q49_A.mp3",
+          "B": "audio/q49_B.mp3",
+          "C": "audio/q49_C.mp3"
+        }
+      },
+      {
+        "category": "statements_tag_questions",
+        "question": "We have a lot of work to finish before the deadline.",
+        "options": [
+          "(A) I'm happy to stay late and help.",
+          "(B) The line is very long.",
+          "(C) Yes, the deadline was yesterday."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q50_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q50_A.mp3",
+          "B": "audio/q50_B.mp3",
+          "C": "audio/q50_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who is responsible for organizing the annual gala?",
+        "options": [
+          "(A) It's held at the Grand Hotel.",
+          "(B) Ms. Gable from the events team.",
+          "(C) Yes, I'll be there."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q51_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q51_A.mp3",
+          "B": "audio/q51_B.mp3",
+          "C": "audio/q51_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where can I find extra toner for the photocopier?",
+        "options": [
+          "(A) In the cabinet labeled \"Supplies.\"",
+          "(B) I'll make twenty copies.",
+          "(C) It's a very fast machine."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q52_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q52_A.mp3",
+          "B": "audio/q52_B.mp3",
+          "C": "audio/q52_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When will the technician arrive to fix the server?",
+        "options": [
+          "(A) Sometime before 3:00 PM.",
+          "(B) To upgrade the software.",
+          "(C) No, he didn't call."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q53_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q53_A.mp3",
+          "B": "audio/q53_B.mp3",
+          "C": "audio/q53_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who did you speak with at the insurance agency?",
+        "options": [
+          "(A) I talked to a representative named Sarah.",
+          "(B) My policy expires next year.",
+          "(C) It's located downtown."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q54_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q54_A.mp3",
+          "B": "audio/q54_B.mp3",
+          "C": "audio/q54_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where did you put the blueprints for the new office?",
+        "options": [
+          "(A) It's a very modern design.",
+          "(B) They are on the architect's desk.",
+          "(C) I'll print them out now."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q55_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q55_A.mp3",
+          "B": "audio/q55_B.mp3",
+          "C": "audio/q55_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When is the next flight to Singapore departing?",
+        "options": [
+          "(A) At Gate 42B.",
+          "(B) It takes about six hours.",
+          "(C) In approximately forty-five minutes."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q56_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q56_A.mp3",
+          "B": "audio/q56_B.mp3",
+          "C": "audio/q56_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who won the Employee of the Month award?",
+        "options": [
+          "(A) A programmer from the IT department.",
+          "(B) It was a very close race.",
+          "(C) For showing great leadership."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q57_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q57_A.mp3",
+          "B": "audio/q57_B.mp3",
+          "C": "audio/q57_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where are the orientation materials for the new interns?",
+        "options": [
+          "(A) They start next Monday.",
+          "(B) On the table in the lobby.",
+          "(C) I'll introduce myself."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q58_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q58_A.mp3",
+          "B": "audio/q58_B.mp3",
+          "C": "audio/q58_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When do we expect the shipment from the warehouse?",
+        "options": [
+          "(A) Not until Thursday morning.",
+          "(B) By express delivery.",
+          "(C) It's a large order."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q59_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q59_A.mp3",
+          "B": "audio/q59_B.mp3",
+          "C": "audio/q59_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who should I contact if I need a password reset?",
+        "options": [
+          "(A) Try using your old one.",
+          "(B) It was changed last week.",
+          "(C) The help desk, extension 505."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q60_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q60_A.mp3",
+          "B": "audio/q60_B.mp3",
+          "C": "audio/q60_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where is the nearest ATM located?",
+        "options": [
+          "(A) Just around the corner, next to the cafe.",
+          "(B) I need to withdraw some cash.",
+          "(C) No, it's not working."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q61_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q61_A.mp3",
+          "B": "audio/q61_B.mp3",
+          "C": "audio/q61_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When will the construction on Main Street be finished?",
+        "options": [
+          "(A) They are building a mall.",
+          "(B) According to the news, by October.",
+          "(C) It's causing a lot of traffic."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q62_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q62_A.mp3",
+          "B": "audio/q62_B.mp3",
+          "C": "audio/q62_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who is the keynote speaker at the conference?",
+        "options": [
+          "(A) In the main auditorium.",
+          "(B) The speech was very inspiring.",
+          "(C) A well-known economist."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q63_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q63_A.mp3",
+          "B": "audio/q63_B.mp3",
+          "C": "audio/q63_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where did the manager go after the meeting?",
+        "options": [
+          "(A) To a client lunch at the bistro.",
+          "(B) It lasted over two hours.",
+          "(C) He seemed very happy."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q64_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q64_A.mp3",
+          "B": "audio/q64_B.mp3",
+          "C": "audio/q64_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When does the early-bird registration period end?",
+        "options": [
+          "(A) It's a significant discount.",
+          "(B) At midnight on Friday.",
+          "(C) I already signed up."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q65_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q65_A.mp3",
+          "B": "audio/q65_B.mp3",
+          "C": "audio/q65_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who is going to lead the training session today?",
+        "options": [
+          "(A) I learned a lot.",
+          "(B) It's in conference room B.",
+          "(C) The human resources manager."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q66_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q66_A.mp3",
+          "B": "audio/q66_B.mp3",
+          "C": "audio/q66_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where can I park my car during the interview?",
+        "options": [
+          "(A) There is a visitor lot behind the building.",
+          "(B) At 10:00 AM sharp.",
+          "(C) I'll drive you there."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q67_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q67_A.mp3",
+          "B": "audio/q67_B.mp3",
+          "C": "audio/q67_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When did you last see the project schedule?",
+        "options": [
+          "(A) To plan the next phase.",
+          "(B) We are ahead of schedule.",
+          "(C) I saw it on the breakroom wall this morning."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q68_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q68_A.mp3",
+          "B": "audio/q68_B.mp3",
+          "C": "audio/q68_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who is the landlord for this commercial space?",
+        "options": [
+          "(A) A local real estate company.",
+          "(B) The rent is due monthly.",
+          "(C) It's a 5-year lease."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q69_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q69_A.mp3",
+          "B": "audio/q69_B.mp3",
+          "C": "audio/q69_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where are the scissors I borrowed from you?",
+        "options": [
+          "(A) To cut some paper.",
+          "(B) You can keep them.",
+          "(C) Check the top shelf of the bookcase."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q70_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q70_A.mp3",
+          "B": "audio/q70_B.mp3",
+          "C": "audio/q70_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When is the most convenient time for us to meet?",
+        "options": [
+          "(A) How about Tuesday at noon?",
+          "(B) It was a very productive meeting.",
+          "(C) We met at the airport."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q71_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q71_A.mp3",
+          "B": "audio/q71_B.mp3",
+          "C": "audio/q71_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who authorized this expense report?",
+        "options": [
+          "(A) It was quite expensive.",
+          "(B) The department head signed it.",
+          "(C) I'll submit it tomorrow."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q72_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q72_A.mp3",
+          "B": "audio/q72_B.mp3",
+          "C": "audio/q72_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Where do you usually go for your lunch break?",
+        "options": [
+          "(A) To the park if the weather is nice.",
+          "(B) I usually bring a sandwich.",
+          "(C) For about an hour."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q73_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q73_A.mp3",
+          "B": "audio/q73_B.mp3",
+          "C": "audio/q73_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "When was the company founded?",
+        "options": [
+          "(A) Over fifty years ago.",
+          "(B) In the electronics industry.",
+          "(C) It's a very successful firm."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q74_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q74_A.mp3",
+          "B": "audio/q74_B.mp3",
+          "C": "audio/q74_C.mp3"
+        }
+      },
+      {
+        "category": "who_where_when",
+        "question": "Who left this umbrella in the hallway?",
+        "options": [
+          "(A) It might belong to the receptionist.",
+          "(B) It's raining very hard.",
+          "(C) No, I didn't see it."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q75_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q75_A.mp3",
+          "B": "audio/q75_B.mp3",
+          "C": "audio/q75_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why is the cafeteria closed today?",
+        "options": [
+          "(A) Because they are installing new kitchen equipment.",
+          "(B) I usually have a salad for lunch.",
+          "(C) Across from the main entrance."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q76_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q76_A.mp3",
+          "B": "audio/q76_B.mp3",
+          "C": "audio/q76_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How do I register for the upcoming leadership seminar?",
+        "options": [
+          "(A) It was very informative.",
+          "(B) You can sign up through the company portal.",
+          "(C) No, I didn't see the sign."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q77_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q77_A.mp3",
+          "B": "audio/q77_B.mp3",
+          "C": "audio/q77_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why did Mr. Henderson leave the conference early?",
+        "options": [
+          "(A) He had to catch an international flight.",
+          "(B) It was held in the grand ballroom.",
+          "(C) Yes, quite a bit earlier than expected."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q78_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q78_A.mp3",
+          "B": "audio/q78_B.mp3",
+          "C": "audio/q78_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How soon can we expect the shipment of office chairs?",
+        "options": [
+          "(A) They are made of recycled materials.",
+          "(B) By the end of business tomorrow.",
+          "(C) The supplier said they will arrive by Friday."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q79_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q79_A.mp3",
+          "B": "audio/q79_B.mp3",
+          "C": "audio/q79_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why was the training session moved to Room 302?",
+        "options": [
+          "(A) The original room's projector is broken.",
+          "(B) It starts at 9:00 AM sharp.",
+          "(C) It's a very spacious office."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q80_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q80_A.mp3",
+          "B": "audio/q80_B.mp3",
+          "C": "audio/q80_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How often does the shuttle bus run to the airport?",
+        "options": [
+          "(A) It costs fifteen dollars.",
+          "(B) The driver is very professional.",
+          "(C) Every twenty minutes on the hour."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q81_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q81_A.mp3",
+          "B": "audio/q81_B.mp3",
+          "C": "audio/q81_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why haven't we received the client's feedback yet?",
+        "options": [
+          "(A) I'll send them a follow-up email right now.",
+          "(B) They were very satisfied with the results.",
+          "(C) No, it's not on the back page."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q82_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q82_A.mp3",
+          "B": "audio/q82_B.mp3",
+          "C": "audio/q82_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How much did the catering for the holiday party cost?",
+        "options": [
+          "(A) We ordered Italian food.",
+          "(B) It was surprisingly within our budget.",
+          "(C) About fifty people attended."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q83_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q83_A.mp3",
+          "B": "audio/q83_B.mp3",
+          "C": "audio/q83_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why are you taking the stairs instead of the elevator?",
+        "options": [
+          "(A) The elevator is being serviced today.",
+          "(B) On the fourth floor, turn left.",
+          "(C) To the basement level."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q84_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q84_A.mp3",
+          "B": "audio/q84_B.mp3",
+          "C": "audio/q84_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How did the marketing team come up with the new logo?",
+        "options": [
+          "(A) They hired an outside design agency.",
+          "(B) It's much brighter than the old one.",
+          "(C) I think it looks great."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q85_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q85_A.mp3",
+          "B": "audio/q85_B.mp3",
+          "C": "audio/q85_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why is the commute taking so much longer this morning?",
+        "options": [
+          "(A) I usually take the train.",
+          "(B) There is major construction on the highway.",
+          "(C) It's about ten miles from here."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q86_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q86_A.mp3",
+          "B": "audio/q86_B.mp3",
+          "C": "audio/q86_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How do you like the new office layout?",
+        "options": [
+          "(A) I prefer the old desk.",
+          "(B) It's much more collaborative and open.",
+          "(C) I think it is a huge improvement."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q87_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q87_A.mp3",
+          "B": "audio/q87_B.mp3",
+          "C": "audio/q87_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why did you decide to reschedule the interview?",
+        "options": [
+          "(A) The candidate has a scheduling conflict.",
+          "(B) It's a very impressive resume.",
+          "(C) In the small meeting room."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q88_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q88_A.mp3",
+          "B": "audio/q88_B.mp3",
+          "C": "audio/q88_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How can we reduce our energy consumption this month?",
+        "options": [
+          "(A) By turning off lights in empty rooms.",
+          "(B) The electric bill was very high.",
+          "(C) It's a renewable energy source."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q89_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q89_A.mp3",
+          "B": "audio/q89_B.mp3",
+          "C": "audio/q89_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why is the ventilation system making that loud noise?",
+        "options": [
+          "(A) I'll call the maintenance crew to check it.",
+          "(B) No, it isn't very loud in here.",
+          "(C) It was installed last summer."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q90_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q90_A.mp3",
+          "B": "audio/q90_B.mp3",
+          "C": "audio/q90_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How did you hear about the job opening at our firm?",
+        "options": [
+          "(A) I've worked here for five years.",
+          "(B) I saw the advertisement on a professional network.",
+          "(C) The opening ceremony was lovely."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q91_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q91_A.mp3",
+          "B": "audio/q91_B.mp3",
+          "C": "audio/q91_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why wasn't the budget proposal approved?",
+        "options": [
+          "(A) We need to provide more cost details.",
+          "(B) It's in the blue folder on your desk.",
+          "(C) I'll approve it later today."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q92_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q92_A.mp3",
+          "B": "audio/q92_B.mp3",
+          "C": "audio/q92_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How long does it take to process a travel reimbursement?",
+        "options": [
+          "(A) About two weeks from the date of submission.",
+          "(B) It was a very expensive trip.",
+          "(C) To the accounting department."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q93_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q93_A.mp3",
+          "B": "audio/q93_B.mp3",
+          "C": "audio/q93_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why are the streetlights still on at noon?",
+        "options": [
+          "(A) There must be a timer malfunction.",
+          "(B) The street is being repaved.",
+          "(C) Because the sensor is likely broken."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q94_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q94_A.mp3",
+          "B": "audio/q94_B.mp3",
+          "C": "audio/q94_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How many more copies of the agenda do we need?",
+        "options": [
+          "(A) I already read the agenda.",
+          "(B) Just five more should be enough.",
+          "(C) The meeting is at noon."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q95_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q95_A.mp3",
+          "B": "audio/q95_B.mp3",
+          "C": "audio/q95_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why did the delivery driver call your mobile phone?",
+        "options": [
+          "(A) He couldn't find the building entrance.",
+          "(B) I'll be home all afternoon.",
+          "(C) It's a new smartphone model."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q96_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q96_A.mp3",
+          "B": "audio/q96_B.mp3",
+          "C": "audio/q96_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How do you want these boxes organized?",
+        "options": [
+          "(A) By the date they were received.",
+          "(B) Yes, I'll help you carry them.",
+          "(C) They are quite heavy."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q97_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q97_A.mp3",
+          "B": "audio/q97_B.mp3",
+          "C": "audio/q97_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why are we hiring more part-time staff?",
+        "options": [
+          "(A) To help with the increase in seasonal orders.",
+          "(B) He works in the human resources office.",
+          "(C) To cover the extra evening shifts."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q98_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q98_A.mp3",
+          "B": "audio/q98_B.mp3",
+          "C": "audio/q98_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "How was your flight to London?",
+        "options": [
+          "(A) For a business conference.",
+          "(B) It was very smooth and on time.",
+          "(C) I'm leaving next Tuesday."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q99_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q99_A.mp3",
+          "B": "audio/q99_B.mp3",
+          "C": "audio/q99_C.mp3"
+        }
+      },
+      {
+        "category": "why_how",
+        "question": "Why is there a \"wet floor\" sign in the lobby?",
+        "options": [
+          "(A) Someone just finished mopping the tiles.",
+          "(B) It's a very large building.",
+          "(C) You can sign your name here."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q100_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q100_A.mp3",
+          "B": "audio/q100_B.mp3",
+          "C": "audio/q100_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Do you have the latest sales report?",
+        "options": [
+          "(A) No, I'm still working on it.",
+          "(B) Yes, it's a very long report.",
+          "(C) He reports to the manager."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q101_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q101_A.mp3",
+          "B": "audio/q101_B.mp3",
+          "C": "audio/q101_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Is the conference room available at three?",
+        "options": [
+          "(A) Yes, there are three rooms.",
+          "(B) No, it's booked until four.",
+          "(C) Yes, the conference was great."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q102_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q102_A.mp3",
+          "B": "audio/q102_B.mp3",
+          "C": "audio/q102_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Are you joining us for lunch today?",
+        "options": [
+          "(A) The lunch menu is on the table.",
+          "(B) It's a very nice restaurant.",
+          "(C) I ate at my desk already."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q103_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q103_A.mp3",
+          "B": "audio/q103_B.mp3",
+          "C": "audio/q103_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Have you met the new intern yet?",
+        "options": [
+          "(A) Yes, he seems very bright.",
+          "(B) The meeting is in Room 2.",
+          "(C) No, I haven't seen the movie."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q104_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q104_A.mp3",
+          "B": "audio/q104_B.mp3",
+          "C": "audio/q104_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Does this bus go to the airport?",
+        "options": [
+          "(A) Yes, take your car.",
+          "(B) The airport is very modern.",
+          "(C) Yes, but you need to transfer."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q105_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q105_A.mp3",
+          "B": "audio/q105_B.mp3",
+          "C": "audio/q105_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Is Mr. Kim in his office right now?",
+        "options": [
+          "(A) He'll be back in ten minutes.",
+          "(B) It's a very large office.",
+          "(C) Yes, he is Kim."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q106_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q106_A.mp3",
+          "B": "audio/q106_B.mp3",
+          "C": "audio/q106_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Are these files ready for the meeting?",
+        "options": [
+          "(A) I'll meet you there.",
+          "(B) They still need to be signed.",
+          "(C) The filing cabinet is over there."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q107_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q107_A.mp3",
+          "B": "audio/q107_B.mp3",
+          "C": "audio/q107_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Have the invitations been sent out?",
+        "options": [
+          "(A) No, I wasn't invited.",
+          "(B) They've been sent to the grand ballroom.",
+          "(C) I mailed them this morning."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q108_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q108_A.mp3",
+          "B": "audio/q108_B.mp3",
+          "C": "audio/q108_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Do we need to bring anything to the workshop?",
+        "options": [
+          "(A) Just a notepad and a pen.",
+          "(B) The workshop was very helpful.",
+          "(C) No, I don't need it."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q109_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q109_A.mp3",
+          "B": "audio/q109_B.mp3",
+          "C": "audio/q109_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Is there a pharmacy near the hotel?",
+        "options": [
+          "(A) I stayed there last year.",
+          "(B) It's right around the corner.",
+          "(C) The medicine is expensive."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q110_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q110_A.mp3",
+          "B": "audio/q110_B.mp3",
+          "C": "audio/q110_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Are you finished with the photocopier?",
+        "options": [
+          "(A) It's a color copier.",
+          "(B) Yes, about twenty copies.",
+          "(C) Of course, you can use it now."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q111_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q111_A.mp3",
+          "B": "audio/q111_B.mp3",
+          "C": "audio/q111_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Has the mail been delivered yet?",
+        "options": [
+          "(A) To the post office.",
+          "(B) Not yet, it usually comes later.",
+          "(C) I'll mail it for you."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q112_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q112_A.mp3",
+          "B": "audio/q112_B.mp3",
+          "C": "audio/q112_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Do you know where the nearest bank is?",
+        "options": [
+          "(A) It's next to the supermarket.",
+          "(B) No, I don't have an account.",
+          "(C) I need to withdraw some money."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q113_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q113_A.mp3",
+          "B": "audio/q113_B.mp3",
+          "C": "audio/q113_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Is the project deadline still Friday?",
+        "options": [
+          "(A) I enjoyed the project.",
+          "(B) Yes, Friday is a holiday.",
+          "(C) No, it's been moved to Monday."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q114_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q114_A.mp3",
+          "B": "audio/q114_B.mp3",
+          "C": "audio/q114_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Are the technicians coming today?",
+        "options": [
+          "(A) They're scheduled for tomorrow.",
+          "(B) The technical manual is here.",
+          "(C) Yes, I'm a technician."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q115_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q115_A.mp3",
+          "B": "audio/q115_B.mp3",
+          "C": "audio/q115_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Have you seen my car keys?",
+        "options": [
+          "(A) The car is in the garage.",
+          "(B) I think they're on your desk.",
+          "(C) Yes, I can drive."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q116_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q116_A.mp3",
+          "B": "audio/q116_B.mp3",
+          "C": "audio/q116_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Does the price include breakfast?",
+        "options": [
+          "(A) It's served from 7 to 10.",
+          "(B) No, that's an additional charge.",
+          "(C) I'd like some eggs, please."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q117_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q117_A.mp3",
+          "B": "audio/q117_B.mp3",
+          "C": "audio/q117_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Is this seat taken?",
+        "options": [
+          "(A) I took the bus.",
+          "(B) Yes, it's a very comfortable chair.",
+          "(C) No, please go ahead and sit."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q118_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q118_A.mp3",
+          "B": "audio/q118_B.mp3",
+          "C": "audio/q118_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Are you traveling for business or pleasure?",
+        "options": [
+          "(A) I'll be there for a week.",
+          "(B) Mostly for business.",
+          "(C) Yes, I like traveling."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q119_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q119_A.mp3",
+          "B": "audio/q119_B.mp3",
+          "C": "audio/q119_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Has everyone signed the attendance sheet?",
+        "options": [
+          "(A) No, Sarah hasn't signed it yet.",
+          "(B) The flight was on time.",
+          "(C) I'll attend the meeting."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q120_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q120_A.mp3",
+          "B": "audio/q120_B.mp3",
+          "C": "audio/q120_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Do you prefer tea or coffee?",
+        "options": [
+          "(A) Yes, I do.",
+          "(B) Two dollars a cup.",
+          "(C) I usually drink coffee in the morning."
+        ],
+        "answer": "C",
+        "question_audio": "audio/q121_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q121_A.mp3",
+          "B": "audio/q121_B.mp3",
+          "C": "audio/q121_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Is it going to rain this afternoon?",
+        "options": [
+          "(A) I left my umbrella at home.",
+          "(B) The forecast says it'll be sunny.",
+          "(C) It rained all day yesterday."
+        ],
+        "answer": "B",
+        "question_audio": "audio/q122_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q122_A.mp3",
+          "B": "audio/q122_B.mp3",
+          "C": "audio/q122_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Are you the manager of this department?",
+        "options": [
+          "(A) No, that would be Ms. Wallace.",
+          "(B) The department is on the third floor.",
+          "(C) I'm managing quite well."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q123_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q123_A.mp3",
+          "B": "audio/q123_B.mp3",
+          "C": "audio/q123_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Have we received the signed contract?",
+        "options": [
+          "(A) It arrived via email an hour ago.",
+          "(B) We need to sign the document.",
+          "(C) No, the contract is too long."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q124_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q124_A.mp3",
+          "B": "audio/q124_B.mp3",
+          "C": "audio/q124_C.mp3"
+        }
+      },
+      {
+        "category": "yes_no",
+        "question": "Do you mind if I close the window?",
+        "options": [
+          "(A) Not at all, it's a bit cold.",
+          "(B) The window is made of glass.",
+          "(C) Yes, I can see the view."
+        ],
+        "answer": "A",
+        "question_audio": "audio/q125_question.mp3",
+        "option_audio_files": {
+          "A": "audio/q125_A.mp3",
+          "B": "audio/q125_B.mp3",
+          "C": "audio/q125_C.mp3"
+        }
       }
     ]
   },
+  "part3": null,
+  "part4": null,
   "part5": null,
   "part6": null,
   "part7": null

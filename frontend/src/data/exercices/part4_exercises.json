@@ -1,0 +1,763 @@
+{
+  "advice": {
+    "intro": "5 monologues courts (messages vocaux, annonces, publicités, reportages) et 3 questions par extrait. L'audio ne passe qu'une seule fois.",
+    "strategy": "Lis les 3 questions et leurs options avant l'audio : cela te dit exactement quelle information chercher. Pour les questions avec graphique, croise systématiquement ce que tu entends avec le visuel — une information du graphique sera souvent paraphrasée, pas citée mot pour mot.",
+    "traps": [
+      {
+        "label": "Recyclage de vocabulaire",
+        "example": "un mot-clé du discours réapparaît dans une mauvaise option"
+      },
+      {
+        "label": "Confusion chronologique",
+        "example": "inversion de deux actions ou décalage passé/futur"
+      },
+      {
+        "label": "Vérité partielle",
+        "example": "l'option est ancrée dans un vrai détail mais ajoute ou retire un élément"
+      },
+      {
+        "label": "Piège graphique",
+        "example": "la mauvaise option reprend mot pour mot le label du graphique alors que l'audio le paraphrase"
+      }
+    ]
+  },
+  "talks": [
+    {
+      "title": "Voicemail Message",
+      "text": "Hi, this is Denise Hargrove calling from Meridian Legal Partners. I'm leaving this message for Mr. Ito regarding his contract renewal. We've reviewed the terms you submitted, and while we're in agreement on the payment schedule, our senior partner has flagged a concern about the non-compete clause duration — specifically, the three-year period you've proposed. We'd like to discuss reducing it to eighteen months, which is more in line with industry standards. I'll be available tomorrow afternoon after two o'clock. Please call me back at your earliest convenience, or have your assistant schedule a call through our main office line.",
+      "questions": [
+        {
+          "text": "What is the main purpose of the call?",
+          "options": [
+            "(A) To confirm a signed contract",
+            "(B) To discuss a term in a contract",
+            "(C) To request a payment deadline extension",
+            "(D) To introduce a new legal partner"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What concern does the speaker raise?",
+          "options": [
+            "(A) The payment schedule is unacceptable",
+            "(B) The contract was submitted late",
+            "(C) The non-compete period is too long",
+            "(D) The industry standards have changed"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What does the speaker ask Mr. Ito to do?",
+          "options": [
+            "(A) Revise and resubmit the contract",
+            "(B) Contact the speaker or arrange a call",
+            "(C) Visit the office in person tomorrow",
+            "(D) Send an email to the senior partner"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explanation": "Q1 trap: (A) is a partial truth — the payment schedule was actually agreed upon, which might suggest things are settled, but the call's purpose is to dispute a remaining clause. (C) is vocabulary recycling: 'payment' appears in the talk, but no extension is requested. Q2 trap: (A) is a direct reversal — the payment schedule is the one thing they do agree on. (D) is an inference bait: the speaker mentions 'industry standards' as justification, but she is not saying standards have changed, only that the proposed duration differs from them. Q3 trap: (C) is a chronology trap — the speaker says she is available 'tomorrow afternoon', but she does not ask for an in-person visit; she says 'call me back'. (D) goes beyond the talk; she never mentions email.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk01.mp3"
+    },
+    {
+      "title": "Advertisement",
+      "text": "Is your business losing hours each week to manual data entry? Nexara Solutions has the answer. Our AI-powered workflow automation platform connects your existing tools — your CRM, your accounting software, your email — and eliminates repetitive tasks in under 48 hours of setup. Unlike other platforms that charge per user, Nexara operates on a flat monthly fee regardless of team size, making it the ideal choice for growing companies. Right now, we're offering a 60-day free trial with full access to all premium features. No credit card required. Visit nexara.io today and let your team focus on what actually matters.",
+      "questions": [
+        {
+          "text": "What problem does the advertisement address?",
+          "options": [
+            "(A) Difficulty hiring qualified staff",
+            "(B) Time wasted on repetitive tasks",
+            "(C) High costs of customer relationship software",
+            "(D) Slow internet connections in offices"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "How does Nexara's pricing differ from competitors?",
+          "options": [
+            "(A) It charges based on the number of tasks automated",
+            "(B) It offers a permanent free version",
+            "(C) It uses a fixed fee independent of team size",
+            "(D) It requires an annual upfront payment"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What is offered to new customers right now?",
+          "options": [
+            "(A) A discounted first month",
+            "(B) A two-month trial at no cost",
+            "(C) Free onboarding by a consultant",
+            "(D) A rebate after 30 days"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explanation": "Q1 trap: (C) is vocabulary recycling — 'CRM' (customer relationship management) is mentioned as one of the tools Nexara connects to, but the advertisement never says CRM software is expensive; the problem is time lost to manual work. Q2 trap: (A) is a plausible-sounding fabrication that blends 'automation' with 'pricing' — never stated. (D) is an inference bait: an annual fee might seem logical for a flat-rate SaaS product, but the talk specifies 'flat monthly fee'. Q3 trap: (A) says 'discounted first month', but the talk says '60-day free trial' — that is two months, not one, and it is free, not discounted. (C) invents a consultant; no human onboarding is mentioned.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk02.mp3"
+    },
+    {
+      "title": "Conference Announcement",
+      "text": "Good morning, delegates. Welcome to the third day of the International Sustainability Forum. Before we begin, I have a few housekeeping announcements. Today's keynote by Dr. Anita Rao has been moved from the Grand Hall to the Riverside Room due to a sound system upgrade taking place in the Grand Hall. The networking lunch will still be held on the terrace as scheduled. Also, the workshop on carbon offset financing, originally listed as running until four o'clock, will now end at three-thirty to allow time for the panel discussion that was added to the program last night. Please update your printed schedules accordingly.",
+      "graphic_title": "Day 3 — Session Schedule",
+      "graphic_doctype": "schedule",
+      "graphic": {
+        "09:00 – 10:30": "Keynote: Dr. Anita Rao — Grand Hall",
+        "11:00 – 12:30": "Workshop: Carbon Offset Financing — Room B",
+        "12:30 – 14:00": "Networking Lunch — Terrace",
+        "15:00 – 16:30": "Panel Discussion — Riverside Room"
+      },
+      "questions": [
+        {
+          "text": "Why has the keynote location been changed?",
+          "options": [
+            "(A) The Grand Hall is fully booked",
+            "(B) Dr. Rao requested a smaller room",
+            "(C) Audio equipment work is underway in the Grand Hall",
+            "(D) The terrace is unavailable today"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Look at the graphic. Which information in the printed schedule is now incorrect?",
+          "options": [
+            "(A) The keynote location",
+            "(B) The lunch venue",
+            "(C) The workshop end time",
+            "(D) The panel discussion start time"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "What change was made to the carbon offset workshop?",
+          "options": [
+            "(A) It was moved to a different room",
+            "(B) It was cancelled entirely",
+            "(C) It will finish earlier than planned",
+            "(D) It will now include an extra speaker"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explanation": "Q1 trap: (A) is an inference bait — the room is unavailable for the keynote, but the reason is the sound system upgrade, not that it is 'fully booked' (a rephrasing that introduces a false cause). (D) is a distractor using 'terrace', which is mentioned in the same sentence but for the lunch, which is unchanged. Q2 graphic trap: This is the key graphic-question trap. The printed schedule shows the keynote in the Grand Hall — but the speaker just announced it has moved to the Riverside Room. (B) and (D) are correct per the graphic and unchanged per the talk. (C) is partially incorrect in the schedule too, but the question asks what is 'now incorrect' because of the announcement — the keynote location is the first and most explicit change stated. Q3 trap: (A) confuses the two changes — the location change applies to the keynote, not the workshop. (D) invents a new speaker; only the end time changed.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk03.mp3"
+    },
+    {
+      "title": "News Report",
+      "text": "This is Caroline Voss with this morning's business update. Helix Dynamics, the biotechnology firm based in Lyon, has confirmed that it will merge with American pharmaceutical giant Soltera Inc. in a deal valued at approximately 4.2 billion euros. The merger, expected to close in the third quarter of next year, is pending regulatory approval from both the European Medicines Agency and the US Food and Drug Administration. Helix's CEO stated that the move will accelerate the commercialisation of three oncology drugs currently in late-stage clinical trials. Shareholders of Helix saw their stock rise nearly twelve percent in early morning trading following the announcement.",
+      "questions": [
+        {
+          "text": "What is the main subject of the report?",
+          "options": [
+            "(A) A new drug approval by the FDA",
+            "(B) A corporate acquisition in biotechnology",
+            "(C) A regulatory investigation into Soltera",
+            "(D) A stock market crash in the pharmaceutical sector"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What must happen before the deal is finalised?",
+          "options": [
+            "(A) Helix must complete its clinical trials",
+            "(B) Shareholders must vote on the merger",
+            "(C) Two regulatory bodies must approve it",
+            "(D) Soltera must raise additional capital"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "How did Helix shareholders react to the news?",
+          "options": [
+            "(A) They sold their shares in large numbers",
+            "(B) Their stock value increased significantly",
+            "(C) They demanded a higher acquisition price",
+            "(D) They filed a complaint with the European regulator"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explanation": "Q1 trap: (A) is vocabulary recycling — 'FDA' and 'drug' both appear in the talk, but the FDA is mentioned as a regulatory approver, not as an agency approving a drug. (D) is the opposite of what happened (stock rose, not crashed). Q2 trap: (A) is partial truth — clinical trials are mentioned, but the talk says the drugs are 'currently in late-stage trials', meaning they are ongoing; there is no statement that they must be completed before the merger closes. (B) invents a shareholder vote; it was never mentioned. Q3 trap: (A) is a direct reversal — the stock rose, which means buyers are likely active, not sellers. (C) is an inference bait: a rising stock doesn't necessarily mean shareholders want a higher price — that goes well beyond what was stated.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk04.mp3"
+    },
+    {
+      "title": "Award Ceremony Introduction",
+      "text": "Ladies and gentlemen, it is my honour to introduce this evening's recipient of the Whitmore Prize for Innovation in Public Service. Over the past fifteen years, our guest has led three separate initiatives that have collectively reduced emergency response times in urban areas by an average of twenty-two percent. Most recently, she spearheaded the rollout of the city's AI-assisted dispatch system, which went live just eight months ago and has already been cited as a model for municipalities across the country. She holds degrees in systems engineering and public administration, and before joining the city, she spent a decade with the private sector in logistics consulting. Please join me in welcoming Director Claudia Reyes.",
+      "questions": [
+        {
+          "text": "What is the purpose of the talk?",
+          "options": [
+            "(A) To announce a new government programme",
+            "(B) To present an award to a public official",
+            "(C) To promote a technology company's product",
+            "(D) To recruit candidates for a leadership role"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What has Director Reyes most recently accomplished?",
+          "options": [
+            "(A) Completing a degree in systems engineering",
+            "(B) Reducing emergency response times by 22%",
+            "(C) Launching an AI-driven emergency dispatch system",
+            "(D) Joining a private logistics consulting firm"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Where did Director Reyes work before her current role?",
+          "options": [
+            "(A) At a university research centre",
+            "(B) In the logistics consulting industry",
+            "(C) At a municipal emergency department",
+            "(D) At a national public health agency"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explanation": "Q1 trap: (C) is a partial truth — an AI system is described, but the talk is clearly a ceremony introduction, not a product pitch. The distinction is purpose vs. content. Q2 trap: (B) is a chronology confusion — reducing response times by 22% is the cumulative achievement of three initiatives over 15 years, not the 'most recent' one. The most recent is the AI dispatch system (8 months ago). (D) is a reversal: she left private consulting to join the city, she did not join a consulting firm recently. (A) is a partial truth: the degrees are real, but completing them is not her most recent accomplishment. Q3 trap: (C) is an inference bait — she now works in emergency services, so it seems plausible she came from an emergency department, but the talk explicitly states she came from 'private sector logistics consulting'.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk05.mp3"
+    },
+    {
+      "title": "Museum Audio Guide",
+      "text": "Welcome to Gallery Seven of the National Museum of Industrial History. The artefacts in this room span the period from 1880 to 1920, the height of the Second Industrial Revolution. The centrepiece of the gallery is the original steam-powered loom on your left, donated by the Harcastle family in 1973. Notice the dual-shaft mechanism — an innovation patented in 1891 that doubled the output of a standard loom without increasing its footprint. The smaller items in the display case to your right include tools used by the engineers who maintained these machines and a logbook from the Harcastle mill dated 1896. Photography is permitted in this gallery, but please ensure your flash is disabled to protect the more fragile textile samples displayed near the windows.",
+      "questions": [
+        {
+          "text": "What period does Gallery Seven cover?",
+          "options": [
+            "(A) 1820 to 1860",
+            "(B) 1850 to 1900",
+            "(C) 1880 to 1920",
+            "(D) 1900 to 1950"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What made the dual-shaft mechanism significant?",
+          "options": [
+            "(A) It reduced the physical size of the loom",
+            "(B) It increased production without expanding the machine",
+            "(C) It allowed the loom to run without steam power",
+            "(D) It was the first mechanism patented by the Harcastle family"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What instruction is given to visitors who want to take photographs?",
+          "options": [
+            "(A) They must obtain a permit at the entrance",
+            "(B) They are not allowed in Gallery Seven",
+            "(C) They should turn off their flash",
+            "(D) They may only photograph the central display"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explanation": "Q1 trap: Options (B) and (D) are boundary-shift traps — they overlap partially with the stated range but shift one end. Candidates who hear '1880' or '1920' but do not register both may select an adjacent option. Q2 trap: (A) is a direct reversal — the mechanism 'doubled output without increasing footprint', meaning the machine did not get bigger. Reversing this gives 'reduced size', which is wrong. (C) is a content fabrication; steam power is mentioned as part of the machine's description, not as something the dual-shaft removed. (D) is a partial truth: the Harcastle family donated the loom, but the talk does not say they filed the patent. Q3 trap: (A) and (B) are common 'museum rules' that test-takers might expect but that were never stated. (D) is a restriction that wasn't imposed — visitors can photograph, they just need to disable flash.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk06.mp3"
+    },
+    {
+      "title": "Automated Bank Phone Line",
+      "text": "Thank you for calling Crestfield Bank. Please listen carefully, as our menu options have recently changed. For account balance and recent transactions, press one. For wire transfers and international payments, press two. To report a lost or stolen card, press three. For mortgage and loan enquiries, press four. To speak with a customer service representative, press zero. Please note that effective the first of next month, a processing fee will apply to all wire transfers initiated through this phone line. Transfers made through our mobile app or online banking portal will remain free of charge. We recommend switching to digital channels to avoid this fee.",
+      "graphic_title": "Crestfield Bank — Fee Schedule",
+      "graphic_doctype": "price_list",
+      "graphic": {
+        "Account balance enquiry": "Free",
+        "Wire transfer (phone line)": "€4.50 per transfer",
+        "Wire transfer (app / online)": "Free",
+        "Card replacement": "€8.00",
+        "International payment": "€6.00"
+      },
+      "questions": [
+        {
+          "text": "What change does the bank announce?",
+          "options": [
+            "(A) Online banking will no longer be free",
+            "(B) A fee will be charged for phone wire transfers",
+            "(C) Customer service will only be available online",
+            "(D) The mobile app menu has been updated"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Look at the graphic. How much will a wire transfer through the phone line cost?",
+          "options": [
+            "(A) Free",
+            "(B) €6.00",
+            "(C) €8.00",
+            "(D) €4.50"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "What does the bank recommend to customers?",
+          "options": [
+            "(A) Opening a premium account to waive fees",
+            "(B) Calling during off-peak hours",
+            "(C) Using the app or website for transfers",
+            "(D) Visiting a branch in person"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explanation": "Q1 trap: (A) is a direct reversal — the talk explicitly says app and online transfers 'will remain free of charge'. (D) is a vocabulary recycling trap: the talk says 'our menu options have recently changed', which could suggest the app menu changed, but it is specifically the phone menu that changed. Q2 graphic trap: The graphic lists three different fees that could be confused: €4.50 for phone wire transfers, €6.00 for international payments, and €8.00 for card replacement. (B) matches international payments, (C) matches card replacement — both are present in the graphic to bait candidates who pick the wrong row. The answer requires combining the graphic (€4.50) with the talk's confirmation of a phone-line fee. Q3 trap: (A) is an inference bait — the concept of a 'premium account' is a plausible bank product, but it is never mentioned. (D) is another common banking context inference that the talk never suggests.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk07.mp3"
+    },
+    {
+      "title": "Company Safety Broadcast",
+      "text": "Attention all staff. This is a reminder that the annual fire evacuation drill is scheduled for this Thursday at eleven AM. When the alarm sounds, all employees must immediately stop what they are doing, shut down any active machinery, and proceed to their designated assembly point. Staff on floors one through three should exit via Stairwell A and assemble in the north car park. Staff on floors four and above should use Stairwell C — please note that Stairwell B is currently closed for maintenance and must not be used under any circumstances. After the drill, department heads are asked to submit a headcount report to the Safety Officer by twelve-thirty. Failure to participate without a pre-approved exemption will be logged in your personnel file.",
+      "graphic_title": "Building Evacuation Map",
+      "graphic_doctype": "directory",
+      "graphic": {
+        "Floors 1–3": "Exit: Stairwell A → Assembly: North car park",
+        "Floors 4–6": "Exit: Stairwell B → Assembly: South car park",
+        "Floors 7+": "Exit: Stairwell C → Assembly: East car park"
+      },
+      "questions": [
+        {
+          "text": "What should employees do before leaving their workstation?",
+          "options": [
+            "(A) Collect their personal belongings",
+            "(B) Notify their department head",
+            "(C) Shut down any active machinery",
+            "(D) Check that their colleagues are present"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Look at the graphic. Which information in the evacuation map is now outdated?",
+          "options": [
+            "(A) The assembly point for floors 1–3",
+            "(B) The stairwell assigned to floors 4–6",
+            "(C) The assembly point for floors 7 and above",
+            "(D) The stairwell assigned to floors 1–3"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What must department heads do after the drill?",
+          "options": [
+            "(A) Attend a debrief session with the Safety Officer",
+            "(B) File a personnel exemption report",
+            "(C) Submit a headcount to the Safety Officer",
+            "(D) Inspect Stairwell B for maintenance completion"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explanation": "Q1 trap: (A) is a common test-taking assumption — people instinctively think they should grab belongings during an evacuation, but the talk says to 'immediately stop' and proceed; no mention of collecting items. (B) is an inference bait: department heads have a post-drill role, but notifying them before leaving is never instructed. Q2 graphic trap: The graphic shows floors 4–6 using Stairwell B and assembling in the south car park. The talk announces Stairwell B is closed for maintenance — meaning the graphic entry for floors 4–6 is now wrong. Candidates who don't integrate the spoken update with the visual will miss this. (A) and (D) are unchanged by the announcement. Q3 trap: (A) invents a debrief session — the task mentioned is a written headcount report, not a meeting. (D) confuses who deals with Stairwell B: that is a maintenance matter, not a department head's responsibility.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk08.mp3"
+    },
+    {
+      "title": "Travel Advisory Recording",
+      "text": "Thank you for calling the Northern Rail Passenger Information Line. Due to severe weather forecast for this weekend, several services will be affected. On Saturday, all trains on the Coastal Express route will be suspended for the entire day. Limited shuttle buses will operate between Harwick Central and Port Aldren, but journey times will be significantly longer. On Sunday, full train services are expected to resume, though some delays are possible in the morning. Passengers travelling on Saturday are strongly advised to rebook on an alternative date using our website or app at no extra charge. Ticket holders who prefer a refund may request one at any staffed ticket office before Friday at five PM.",
+      "graphic_title": "Weekend Service Status",
+      "graphic_doctype": "weather_chart",
+      "graphic": {
+        "Saturday — Coastal Express": "Suspended",
+        "Saturday — Shuttle Bus (Harwick ↔ Port Aldren)": "Operating (limited)",
+        "Sunday — Coastal Express": "Expected to resume",
+        "Sunday — All other lines": "Normal service"
+      },
+      "questions": [
+        {
+          "text": "Why are train services disrupted this weekend?",
+          "options": [
+            "(A) Track maintenance work",
+            "(B) A strike by rail workers",
+            "(C) Forecasted bad weather",
+            "(D) A signal system failure"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "What option is available to passengers who do not want to travel on Saturday?",
+          "options": [
+            "(A) They can claim compensation online",
+            "(B) They can rebook for a different date at no cost",
+            "(C) They will be automatically transferred to Sunday",
+            "(D) They can use the shuttle bus at a reduced price"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Look at the graphic. What does the graphic show about Sunday services on the Coastal Express?",
+          "options": [
+            "(A) They will be suspended",
+            "(B) They will operate normally without delays",
+            "(C) They are expected to resume",
+            "(D) They will be replaced by shuttle buses"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explanation": "Q1 trap: (A) is the most common trap in rail disruption contexts — maintenance is the default assumption candidates reach for, but the talk clearly states 'severe weather forecast'. (B) is a fabrication with no basis in the talk. Q2 trap: (A) is vocabulary recycling — 'rebook' and 'no extra charge' are in the talk, but 'compensation' is a different concept not mentioned. (C) is a fabrication that sounds like a helpful policy but was never stated. (D) is a partial truth: shuttle buses are available, but the talk says nothing about a 'reduced price' — the rebooking at no extra charge applies to train tickets. Q3 graphic trap: (B) adds 'without delays' — the graphic says 'Expected to resume' and the talk itself notes 'some delays are possible in the morning', making (B) a direct contradiction. (D) confuses Saturday's shuttle arrangement with Sunday's train status.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk09.mp3"
+    },
+    {
+      "title": "Employee Onboarding Recording",
+      "text": "Welcome to Calpine Group. This recorded message is part of your onboarding programme and covers the key systems you will use in your first week. On day one, your line manager will walk you through our project management platform, Taskflow, and create your account credentials. On day two, you will attend a mandatory half-day session with the IT Security team covering data handling protocols and acceptable use policies — this session is not optional and must be completed before you are granted full network access. From day three onwards, you will work alongside a dedicated buddy from your department, who will help you navigate day-to-day processes. If you have any questions before your start date, please contact HR at onboarding@calpine.com, not your line manager, as managers may not have received your full onboarding file yet.",
+      "questions": [
+        {
+          "text": "What will the new employee's line manager do on day one?",
+          "options": [
+            "(A) Lead the IT Security training session",
+            "(B) Set up the employee's project management account",
+            "(C) Introduce the employee to their department buddy",
+            "(D) Send the employee's onboarding file to HR"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "What happens if the IT Security session is not completed?",
+          "options": [
+            "(A) The employee's start date will be postponed",
+            "(B) The employee will be assigned additional training",
+            "(C) The employee cannot access the full network",
+            "(D) The employee's buddy programme will be cancelled"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Who should new employees contact with questions before their start date?",
+          "options": [
+            "(A) Their line manager",
+            "(B) The IT Security team",
+            "(C) Their department buddy",
+            "(D) The HR onboarding team"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explanation": "Q1 trap: (A) is a speaker confusion trap — the IT Security team leads the day-two session, not the line manager. Both are authority figures mentioned in the talk, making this a classic attribution error. (C) is a chronology confusion: the buddy programme starts on day three, not day one. (D) is a reversal: HR has the onboarding file; the talk implies the line manager may not have received it yet. Q2 trap: (A) and (B) are inference baits — they describe plausible consequences of missing compliance training in a corporate context, but neither is stated. The talk explicitly says the session must be completed 'before you are granted full network access', making (C) the only grounded answer. Q3 trap: (A) is the most dangerous trap — the talk explicitly tells you not to contact your line manager before your start date, and the reason given (they may not have the file yet) makes this a highly memorable negative instruction. Candidates who hear 'line manager' prominently throughout the talk may default to (A) without registering the correction.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk10.mp3"
+    },
+    {
+      "title": "Radio Advertisement",
+      "text": "Are you tired of expensive gym memberships and commutes that eat into your workout time? Meridian Fit is the answer. Our new app gives you access to over five hundred guided workout sessions — everything from beginner yoga to high-intensity interval training — right on your phone. For a limited time, new subscribers can access our full premium library free for thirty days. After your trial, continue with our standard plan at just fourteen ninety-nine per month, or upgrade to our annual plan at eighty-nine dollars — that's more than forty percent off the monthly rate. Download Meridian Fit from the app store today and use the code MERIDIAN30 at checkout to activate your free trial. Offer expires at the end of this month. Visit meridianfit dot com for full terms and conditions.",
+      "questions": [
+        {
+          "text": "What is the main purpose of this recording?",
+          "options": [
+            "(A) To announce a new gym opening",
+            "(B) To promote a fitness application",
+            "(C) To advertise personal training services",
+            "(D) To encourage gym membership renewals"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording promotes Meridian Fit, a workout app with guided sessions available on a smartphone.",
+            "distractors": {
+              "A": "Vocabulary trap — the word 'gym' appears in the opening line, but the product is an app, not a gym.",
+              "C": "Inference bait — personal training is a fitness-context assumption; it is never mentioned.",
+              "D": "Partial reversal — the ad contrasts itself with gym memberships rather than promoting them."
+            }
+          }
+        },
+        {
+          "text": "How much does the annual plan cost?",
+          "options": [
+            "(A) $14.99",
+            "(B) $30.00",
+            "(C) $89.00",
+            "(D) $179.88"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording explicitly states the annual plan is eighty-nine dollars.",
+            "distractors": {
+              "A": "Vocabulary recycling — $14.99 is the monthly rate, which is mentioned first and may stick in the listener's memory.",
+              "B": "Fabricated — $30.00 is not stated anywhere; candidates may infer it from the '30-day trial'.",
+              "D": "Inference — $179.88 would be twelve times the monthly rate; the recording never makes this calculation."
+            }
+          }
+        },
+        {
+          "text": "What must listeners do to activate the free trial?",
+          "options": [
+            "(A) Visit the company's website",
+            "(B) Sign up before the end of the year",
+            "(C) Enter a promotional code at checkout",
+            "(D) Purchase an annual subscription first"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording instructs listeners to use the code MERIDIAN30 at checkout to activate the free trial.",
+            "distractors": {
+              "A": "Partial truth — the website is mentioned, but only for terms and conditions, not to activate the trial.",
+              "B": "Chronology error — the offer expires at the end of 'this month', not the year.",
+              "D": "Direct reversal — the trial is free and does not require a prior purchase."
+            }
+          }
+        }
+      ],
+      "explanation": "Q1 trap: (A) is a vocabulary trap — 'gym' appears in the opening sentence but the product advertised is an app. (C) is an inference bait; personal training is never mentioned. Q2 trap: (A) is vocabulary recycling — $14.99 is the monthly rate, prominently mentioned, and candidates who don't catch 'annual' will pick it. (D) is a calculation inference: twelve times $14.99 is never stated in the recording. Q3 trap: (A) is a partial truth — the website is mentioned for terms and conditions only, not for trial activation. (B) reverses the deadline: the offer expires at the end of 'this month', not the year.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk11.mp3"
+    },
+    {
+      "title": "Company Facilities Broadcast",
+      "text": "Attention all staff. This is an announcement from the Facilities Management team. Beginning next Monday, the main parking lot on the south side of the building will be temporarily closed for resurfacing work. The project is expected to take three weeks. During this period, employees are asked to use the overflow parking area located on Hartley Road, approximately five minutes' walk from the main entrance. A free shuttle bus will run between the Hartley Road lot and the building entrance every fifteen minutes, from seven-thirty in the morning until eight o'clock in the evening. Employees who prefer to use public transport during the renovation period are eligible for a fifty percent reimbursement on monthly transit passes. Please submit reimbursement requests to HR before the fifteenth of each month. Thank you for your patience during this time.",
+      "questions": [
+        {
+          "text": "Why is the main parking lot being closed?",
+          "options": [
+            "(A) It is being converted into a green space",
+            "(B) A new security barrier is being installed",
+            "(C) It is undergoing resurfacing work",
+            "(D) The building expansion project requires the space"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The announcement explicitly states the lot is closed for resurfacing work.",
+            "distractors": {
+              "A": "Fabricated — no mention of a green space conversion anywhere in the recording.",
+              "B": "Inference bait — a security barrier is a plausible facilities project but is never stated.",
+              "D": "Fabricated — building expansion is not mentioned; the reason is purely resurfacing."
+            }
+          }
+        },
+        {
+          "text": "What transportation is available to employees during the closure?",
+          "options": [
+            "(A) A free taxi voucher service",
+            "(B) A shuttle bus running every fifteen minutes",
+            "(C) A carpooling arrangement organized by HR",
+            "(D) A temporary public bus route from the nearest station"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording states a free shuttle bus will run every fifteen minutes between the Hartley Road lot and the building entrance.",
+            "distractors": {
+              "A": "Fabrication — a taxi voucher is a plausible corporate perk but is never mentioned.",
+              "C": "Fabrication — HR is mentioned only in relation to transit reimbursements, not carpooling.",
+              "D": "Near-miss — public transport is mentioned, but the shuttle is a corporate service, not a public bus from a station."
+            }
+          }
+        },
+        {
+          "text": "What should employees who use public transport submit to HR?",
+          "options": [
+            "(A) A daily commute log",
+            "(B) A request for a monthly parking permit",
+            "(C) A reimbursement request before the fifteenth",
+            "(D) A signed form from their line manager"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording instructs employees to submit reimbursement requests to HR before the fifteenth of each month.",
+            "distractors": {
+              "A": "Fabricated — no daily commute reporting is required.",
+              "B": "Reversal trap — employees are asked to use the overflow lot, not apply for parking permits.",
+              "D": "Fabricated — no manager sign-off is mentioned."
+            }
+          }
+        }
+      ],
+      "explanation": "Q1 trap: (A), (B), and (D) are all plausible facilities-context inferences but are never stated — the recording gives 'resurfacing work' as the explicit reason. Q2 trap: (A) is a fabricated benefit that sounds like a typical corporate perk; the recording specifies a shuttle, not taxis. (D) introduces 'station' and 'public bus', which fit the mention of public transport but misrepresent the corporate shuttle service. Q3 trap: (A) invents a daily reporting requirement. (B) confuses the reimbursement request with a parking permit application — the Hartley Road lot is simply used without a permit.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk12.mp3"
+    },
+    {
+      "title": "Department Store Announcement",
+      "text": "Welcome, shoppers. Today is the final day of our annual Summer Clearance Sale. All discounted items can be found on the second and third floors. Please note that the electronics section, located on the fourth floor, is not included in today's clearance discount — those items are available at regular price. Also, the customer service desk has moved temporarily to the ground floor, near the main entrance, while renovations are carried out on the second floor. If you have a store loyalty card, remember that clearance purchases today qualify for double reward points. Our in-store café will be closing one hour earlier than usual at four o'clock this afternoon to allow staff to prepare for our new season display, which begins tomorrow. Thank you for shopping with us, and enjoy the sale.",
+      "graphic_title": "Store Floor Directory",
+      "graphic_doctype": "directory",
+      "graphic": {
+        "Ground Floor": "Customer Services · Food Court",
+        "Second Floor": "Ladies' Fashion · Customer Services (Renovation)",
+        "Third Floor": "Men's Fashion · Home Accessories",
+        "Fourth Floor": "Electronics · Appliances"
+      },
+      "questions": [
+        {
+          "text": "What is the main purpose of this announcement?",
+          "options": [
+            "(A) To introduce a new loyalty card programme",
+            "(B) To inform shoppers about the Summer Clearance Sale",
+            "(C) To announce the store's permanent renovation plans",
+            "(D) To promote the store's new season collection"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The announcement covers today's clearance sale — locations, exclusions, loyalty points, and café hours — all related to the sale event.",
+            "distractors": {
+              "A": "Partial truth — the loyalty card is mentioned, but introducing it is not the purpose; it is already in use.",
+              "C": "Exaggeration — the renovation is temporary and secondary to the sale announcement.",
+              "D": "Vocabulary recycling — 'new season display' is mentioned but it begins tomorrow; today's event is the sale."
+            }
+          }
+        },
+        {
+          "text": "Look at the graphic. Which floor entry in the directory is now out of date?",
+          "options": [
+            "(A) Ground Floor",
+            "(B) Second Floor",
+            "(C) Third Floor",
+            "(D) Fourth Floor"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The directory lists Customer Services on the Second Floor, but the announcement states it has moved to the ground floor due to second-floor renovations — making that entry incorrect.",
+            "distractors": {
+              "A": "Direction reversal — the ground floor is now correct (Customer Services moved there); candidates may select it thinking 'new location = new entry', but the question asks which entry is out of date.",
+              "C": "Unchanged — Men's Fashion and Home Accessories on the third floor are not affected by any announcement.",
+              "D": "Unchanged — the fourth floor electronics section is mentioned only to note it is excluded from the sale, not relocated."
+            }
+          }
+        },
+        {
+          "text": "Why is the café closing earlier than usual today?",
+          "options": [
+            "(A) It is participating in the clearance event",
+            "(B) Staff need time to prepare the new season display",
+            "(C) A delivery of new café equipment is scheduled",
+            "(D) Reduced staffing levels affect opening hours"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording explicitly states the café closes early 'to allow staff to prepare for our new season display, which begins tomorrow'.",
+            "distractors": {
+              "A": "Inference bait — the early closure coincides with the sale day, but the stated reason is the display setup, not the sale.",
+              "C": "Fabricated — no equipment delivery is mentioned.",
+              "D": "Fabricated — staffing levels are never cited as a reason."
+            }
+          }
+        }
+      ],
+      "explanation": "Q1 trap: (A) is a partial truth — the loyalty card is mentioned, but the announcement does not introduce it as new. (D) is vocabulary recycling: 'new season display' appears but it begins tomorrow; today is about the clearance sale. Q2 graphic trap: The directory shows Customer Services on both the Ground Floor and the Second Floor. The announcement moves Customer Services to the ground floor because of second-floor renovations — so the Second Floor entry is now wrong. Candidates who hear 'ground floor' as the new location may incorrectly select (A), confusing the new correct location with the outdated entry. Q3 trap: (A) is an inference bait — the timing coincides with the sale, but the recording gives an explicit reason: display preparation. (C) and (D) are fabrications that sound like plausible business reasons but are never stated.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk13.mp3"
+    },
+    {
+      "title": "Property Management Recording",
+      "text": "Hello, this is a recorded message from Westfield Property Management. This message is for all residents of Cedar Grove Apartments. We wish to inform you that essential maintenance work will be carried out on the building's water supply system on Thursday, the twenty-second. The water supply will be interrupted from eight o'clock in the morning until approximately two o'clock in the afternoon. We recommend that residents store sufficient water for their needs before Thursday morning. During the outage, building management will have bottled water available at the front desk. Please note that the laundry room on the basement level will also be closed during this period. If you have any questions or concerns, please contact the management office directly between nine and five, Monday through Friday. We apologize for any inconvenience this may cause.",
+      "questions": [
+        {
+          "text": "Why is the water supply being interrupted?",
+          "options": [
+            "(A) The building is connecting to a new water network",
+            "(B) Essential maintenance is being done on the water system",
+            "(C) A water pipe burst overnight",
+            "(D) Routine annual inspections are scheduled"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording states that 'essential maintenance work will be carried out on the building's water supply system'.",
+            "distractors": {
+              "A": "Fabricated — a network connection upgrade is never mentioned.",
+              "C": "Fabricated — no emergency pipe burst is cited; the work is planned maintenance.",
+              "D": "Inference bait — 'routine annual inspection' sounds official but is never stated; the recording says 'essential maintenance'."
+            }
+          }
+        },
+        {
+          "text": "Where can residents obtain bottled water during the outage?",
+          "options": [
+            "(A) From vending machines in the lobby",
+            "(B) At the management office",
+            "(C) At the front desk",
+            "(D) From the laundry room on the basement level"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording states bottled water will be available at the front desk during the outage.",
+            "distractors": {
+              "B": "Near-miss — the management office is mentioned later as the contact point for questions, not as the water distribution point.",
+              "D": "Direct reversal — the laundry room is explicitly closed during the outage, making it the last place to go."
+            }
+          }
+        },
+        {
+          "text": "What does the recording advise residents to do before Thursday?",
+          "options": [
+            "(A) Contact the management office to raise any concerns",
+            "(B) Use the laundry room before it closes",
+            "(C) Store an adequate supply of water",
+            "(D) Move vehicles from the building car park"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording explicitly recommends that residents 'store sufficient water for their needs before Thursday morning'.",
+            "distractors": {
+              "A": "Partial truth — contacting the management office is offered as an option, not an instruction before Thursday; it is available Monday through Friday generally.",
+              "B": "Partial truth — the laundry room closure is mentioned, but the recording does not instruct residents to use it first.",
+              "D": "Fabricated — no mention of a car park or vehicle movement."
+            }
+          }
+        }
+      ],
+      "explanation": "Q1 trap: (A) and (C) are fabricated causes that fit a water disruption scenario but are never stated. (D) is an inference bait: 'routine annual inspection' sounds plausible but the recording specifies 'essential maintenance'. Q2 trap: (B) is a near-miss — the management office is mentioned in the same recording but as the contact for questions, not for water distribution. (D) is a direct reversal: the laundry room is explicitly closed during the outage. Q3 trap: (A) is a partial truth — contacting the office is an option offered for questions in general, not a specific pre-Thursday instruction. (B) is also a partial truth: the laundry room closure is mentioned, but using it first is not advised. (D) is a complete fabrication.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk14.mp3"
+    },
+    {
+      "title": "Webinar Introduction Recording",
+      "text": "Good afternoon and welcome to this month's edition of the Leadership Foundations webinar series. Today's session will run from two o'clock until four-thirty. We will begin with a thirty-minute presentation by our guest speaker, Dr. Helen Park from the Whitmore Business Institute, on the topic of building high-performance teams. Following a short break, we will move to a forty-five minute interactive case study — please ensure you have downloaded the case study document from the portal before we begin. The final segment, originally scheduled as a sixty-minute Q-and-A, has been extended to seventy-five minutes at the request of participants who attended last month's session. As a reminder, today's session will be recorded and made available to registered participants within forty-eight hours. Please disable your microphone unless you are speaking.",
+      "graphic_title": "Leadership Foundations — Session Agenda",
+      "graphic_doctype": "schedule",
+      "graphic": {
+        "14:00 – 14:30": "Guest presentation — Dr. Helen Park",
+        "14:30 – 14:45": "Break",
+        "14:45 – 15:30": "Interactive case study",
+        "15:30 – 16:30": "Q&A session"
+      },
+      "questions": [
+        {
+          "text": "What is the main purpose of this recording?",
+          "options": [
+            "(A) To introduce the guest speaker's academic credentials",
+            "(B) To welcome participants and outline the session",
+            "(C) To announce the cancellation of the Q&A segment",
+            "(D) To remind participants to register for the webinar"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording welcomes participants, runs through session timings, and gives instructions — its purpose is to introduce the full session.",
+            "distractors": {
+              "A": "Partial truth — the speaker's name and institution are mentioned, but they are only one element of the welcome; the purpose is broader.",
+              "C": "Direct reversal — the Q&A was extended, not cancelled.",
+              "D": "Fabrication — no registration prompt is made; participants are already in the session."
+            }
+          }
+        },
+        {
+          "text": "Look at the graphic. Which agenda item differs from what was originally scheduled?",
+          "options": [
+            "(A) The guest presentation",
+            "(B) The break",
+            "(C) The interactive case study",
+            "(D) The Q&A session"
+          ],
+          "answer": "D",
+          "explanation": {
+            "correct": "The graphic shows the Q&A running from 15:30 to 16:30 (sixty minutes). The recording announces it has been extended to seventy-five minutes, so the end time in the graphic is now wrong.",
+            "distractors": {
+              "A": "Unchanged — the guest presentation is confirmed at thirty minutes with no alteration announced.",
+              "B": "Unchanged — the break timing is not modified.",
+              "C": "Unchanged — the forty-five-minute case study is confirmed as scheduled."
+            }
+          }
+        },
+        {
+          "text": "What are participants asked to do before the case study begins?",
+          "options": [
+            "(A) Submit questions for the Q&A in advance",
+            "(B) Download the case study document from the portal",
+            "(C) Introduce themselves in the session chat",
+            "(D) Review the recording of last month's session"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording explicitly instructs participants to download the case study document from the portal before the case study segment begins.",
+            "distractors": {
+              "A": "Inference bait — a Q&A naturally involves questions, but submitting them in advance is never requested.",
+              "C": "Fabricated — no introductions in the chat are requested.",
+              "D": "Partial truth — last month's session is mentioned only to explain why the Q&A was extended; reviewing it is not an instruction."
+            }
+          }
+        }
+      ],
+      "explanation": "Q1 trap: (A) is a partial truth — the speaker's name and institution are mentioned, but the recording's purpose is to introduce the entire session, not solely the speaker. (C) is a direct reversal: the Q&A was extended, not cancelled. (D) is a fabrication — participants are already registered and attending. Q2 graphic trap: The graphic shows the Q&A ending at 16:30, reflecting the original sixty-minute duration. The recording announces a seventy-five-minute extension, pushing the actual end time beyond 16:30 — making the graphic's Q&A entry outdated. Candidates may select (A) because the speaker is prominently mentioned, but no change to the presentation slot is announced. Q3 trap: (A) is an inference bait — a Q&A segment naturally prompts the assumption that questions should be submitted in advance, but this is never stated. (D) confuses the mention of last month's session (used to explain the Q&A extension) with an instruction to review it.",
+      "audio_url": "https://storage.googleapis.com/choppetonexam_toeic/exercices/part4/audio/talk15.mp3"
+    }
+  ]
+}

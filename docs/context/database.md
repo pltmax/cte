@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-03-02 08:37
+> Auto-generated on 2026-03-03 21:51
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -38,8 +38,6 @@
 
 - **Users can insert their own mock exams** (INSERT, PERMISSIVE)
   - WITH CHECK: `(auth.uid() = user_id)`
-- **Users can update their own mock exams** (UPDATE, PERMISSIVE)
-  - USING: `(auth.uid() = user_id)`
 - **Users can view their own mock exams** (SELECT, PERMISSIVE)
   - USING: `(auth.uid() = user_id)`
 
@@ -70,6 +68,13 @@
   - USING: `(auth.uid() = id)`
 - **Users can update their own profiles.** (UPDATE, PERMISSIVE)
   - USING: `(auth.uid() = id)`
+  - WITH CHECK: `((auth.uid() = id) AND (role = ( SELECT profiles_1.role
+   FROM profiles profiles_1
+  WHERE (profiles_1.id = auth.uid()))) AND (credit_number = ( SELECT profiles_1.credit_number
+   FROM profiles profiles_1
+  WHERE (profiles_1.id = auth.uid()))) AND (NOT (stripe_customer_id IS DISTINCT FROM ( SELECT profiles_1.stripe_customer_id
+   FROM profiles profiles_1
+  WHERE (profiles_1.id = auth.uid())))))`
 
 ### `subscriptions` — ✅ RLS enabled
 
@@ -112,8 +117,10 @@
 
 **RLS Policies:**
 
-- **authenticated users can read toeic_listening_part1** (SELECT, PERMISSIVE)
-  - USING: `(auth.role() = 'authenticated'::text)`
+- **premium users can read toeic_listening_part1** (SELECT, PERMISSIVE)
+  - USING: `(EXISTS ( SELECT 1
+   FROM profiles
+  WHERE ((profiles.id = auth.uid()) AND (profiles.role = ANY (ARRAY['premium'::text, 'admin'::text])))))`
 
 ### `toeic_listening_part2` — ✅ RLS enabled
 
@@ -136,8 +143,10 @@
 
 **RLS Policies:**
 
-- **authenticated users can read toeic_listening_part2** (SELECT, PERMISSIVE)
-  - USING: `(auth.role() = 'authenticated'::text)`
+- **premium users can read toeic_listening_part2** (SELECT, PERMISSIVE)
+  - USING: `(EXISTS ( SELECT 1
+   FROM profiles
+  WHERE ((profiles.id = auth.uid()) AND (profiles.role = ANY (ARRAY['premium'::text, 'admin'::text])))))`
 
 ### `toeic_listening_part3` — ✅ RLS enabled
 
@@ -157,8 +166,10 @@
 
 **RLS Policies:**
 
-- **authenticated users can read toeic_listening_part3** (SELECT, PERMISSIVE)
-  - USING: `(auth.role() = 'authenticated'::text)`
+- **premium users can read toeic_listening_part3** (SELECT, PERMISSIVE)
+  - USING: `(EXISTS ( SELECT 1
+   FROM profiles
+  WHERE ((profiles.id = auth.uid()) AND (profiles.role = ANY (ARRAY['premium'::text, 'admin'::text])))))`
 
 ### `toeic_listening_part4` — ✅ RLS enabled
 
@@ -182,8 +193,10 @@
 
 **RLS Policies:**
 
-- **authenticated users can read toeic_listening_part4** (SELECT, PERMISSIVE)
-  - USING: `(auth.role() = 'authenticated'::text)`
+- **premium users can read toeic_listening_part4** (SELECT, PERMISSIVE)
+  - USING: `(EXISTS ( SELECT 1
+   FROM profiles
+  WHERE ((profiles.id = auth.uid()) AND (profiles.role = ANY (ARRAY['premium'::text, 'admin'::text])))))`
 
 ### `toeic_reading_part5` — ✅ RLS enabled
 
@@ -203,8 +216,10 @@
 
 **RLS Policies:**
 
-- **authenticated users can read toeic_reading_part5** (SELECT, PERMISSIVE)
-  - USING: `(auth.role() = 'authenticated'::text)`
+- **premium users can read toeic_reading_part5** (SELECT, PERMISSIVE)
+  - USING: `(EXISTS ( SELECT 1
+   FROM profiles
+  WHERE ((profiles.id = auth.uid()) AND (profiles.role = ANY (ARRAY['premium'::text, 'admin'::text])))))`
 
 ### `toeic_reading_part6` — ✅ RLS enabled
 
@@ -224,8 +239,10 @@
 
 **RLS Policies:**
 
-- **authenticated users can read toeic_reading_part6** (SELECT, PERMISSIVE)
-  - USING: `(auth.role() = 'authenticated'::text)`
+- **premium users can read toeic_reading_part6** (SELECT, PERMISSIVE)
+  - USING: `(EXISTS ( SELECT 1
+   FROM profiles
+  WHERE ((profiles.id = auth.uid()) AND (profiles.role = ANY (ARRAY['premium'::text, 'admin'::text])))))`
 
 ### `toeic_reading_part7` — ✅ RLS enabled
 
@@ -244,15 +261,17 @@
 
 **RLS Policies:**
 
-- **authenticated users can read toeic_reading_part7** (SELECT, PERMISSIVE)
-  - USING: `(auth.role() = 'authenticated'::text)`
+- **premium users can read toeic_reading_part7** (SELECT, PERMISSIVE)
+  - USING: `(EXISTS ( SELECT 1
+   FROM profiles
+  WHERE ((profiles.id = auth.uid()) AND (profiles.role = ANY (ARRAY['premium'::text, 'admin'::text])))))`
 
 ## RPC Functions (7)
 
 | Function | Arguments | Returns | Security |
 |----------|-----------|---------|----------|
-| `complete_exam` | `exam_id uuid, p_listening_score integer DEFAULT NULL::integer, p_reading_score integer DEFAULT NULL::integer, p_score integer DEFAULT NULL::integer, p_answers jsonb DEFAULT NULL::jsonb` | `void` | SECURITY DEFINER |
 | `complete_exam` | `exam_id uuid` | `void` | SECURITY DEFINER |
+| `complete_exam` | `exam_id uuid, p_listening_score integer DEFAULT NULL::integer, p_reading_score integer DEFAULT NULL::integer, p_score integer DEFAULT NULL::integer, p_answers jsonb DEFAULT NULL::jsonb` | `void` | SECURITY DEFINER |
 | `handle_new_user` | `none` | `trigger` | SECURITY DEFINER |
 | `is_phone_available` | `p_phone_e164 text` | `boolean` | SECURITY DEFINER |
 | `launch_exam` | `none` | `uuid` | SECURITY DEFINER |
