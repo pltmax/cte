@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useExerciseCompletion } from "@/hooks/useExerciseCompletion";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -47,6 +48,7 @@ interface ExoPart2ShellProps {
   questions: ExoP2Question[];
   types: ExoType[];
   advice: Advice;
+  exerciseKey: string;
 }
 
 type Phase = "advice" | "questions" | "done";
@@ -59,8 +61,10 @@ export default function ExoPart2Shell({
   questions,
   types,
   advice,
+  exerciseKey,
 }: ExoPart2ShellProps) {
   const router = useRouter();
+  const { markCompleted } = useExerciseCompletion();
   const [phase, setPhase] = useState<Phase>("advice");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -103,6 +107,7 @@ export default function ExoPart2Shell({
 
   function handleNext() {
     if (currentIndex + 1 >= totalQuestions) {
+      markCompleted(exerciseKey);
       setPhase("done");
     } else {
       setCurrentIndex((i) => i + 1);
@@ -187,7 +192,12 @@ export default function ExoPart2Shell({
           Partie 2 — Exercice
         </p>
         <h1 className="text-2xl font-bold text-gray-900 mb-1">Questions-réponses</h1>
-        <p className="text-sm text-gray-500 mb-6">{advice.intro}</p>
+        <p className="text-sm text-gray-500 mb-5">{advice.intro}</p>
+
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#ddd6fe] bg-[#f3eeff] px-4 py-1.5 mb-5">
+          <span className="text-sm font-semibold text-[#7c3aed]">{types[0].label}</span>
+          <span className="text-xs text-[#9f7aea]">· {totalQuestions} questions</span>
+        </div>
 
         {/* Strategy tip */}
         <div className="flex gap-3 items-start bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6">

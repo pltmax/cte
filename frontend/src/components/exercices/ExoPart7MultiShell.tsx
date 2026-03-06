@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useExerciseCompletion } from "@/hooks/useExerciseCompletion";
 
@@ -22,25 +22,26 @@ interface Explanation {
   distractors: Partial<Record<"A" | "B" | "C" | "D", string>>;
 }
 
-interface Question {
+interface P7MultiQuestion {
   text: string;
   options: string[];
   answer: string;
   explanation: Explanation;
 }
 
-interface Talk {
+interface P7Document {
+  doctype: string;
   title: string;
   text: string;
-  graphic_title?: string;
-  graphic_doctype?: string;
-  graphic?: Record<string, string>;
-  questions: Question[];
-  audio_url: string;
 }
 
-interface ExoPart4ShellProps {
-  talks: Talk[];
+interface P7MultiPassage {
+  documents: P7Document[];
+  questions: P7MultiQuestion[];
+}
+
+interface ExoPart7MultiShellProps {
+  passages: P7MultiPassage[];
   advice: Advice;
   exerciseLabel: string;
   exerciseKey: string;
@@ -50,168 +51,150 @@ type Phase = "advice" | "questions" | "done";
 
 const OPTION_KEYS = ["A", "B", "C", "D"] as const;
 
+const DOCTYPE_LABELS: Record<string, string> = {
+  article: "Article",
+  email: "Email",
+  notice: "Avis",
+  memo: "Mémo",
+  job_posting: "Offre d'emploi",
+  advertisement: "Annonce",
+  letter: "Lettre",
+  flyer: "Flyer",
+  review: "Avis client",
+  schedule: "Planning",
+  text_message: "SMS",
+  invoice: "Facture",
+  itinerary: "Itinéraire",
+  product_label: "Étiquette produit",
+  menu: "Menu",
+  form: "Formulaire",
+  business_card: "Carte de visite",
+};
+
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKey }: ExoPart4ShellProps) {
+export default function ExoPart7MultiShell({
+  passages,
+  advice,
+  exerciseLabel,
+  exerciseKey,
+}: ExoPart7MultiShellProps) {
   const router = useRouter();
   const { markCompleted } = useExerciseCompletion();
   const [phase, setPhase] = useState<Phase>("advice");
-  const [currentTalkIndex, setCurrentTalkIndex] = useState(0);
-  const [hasPlayedAudio, setHasPlayedAudio] = useState(false);
+  const [currentPassageIndex, setCurrentPassageIndex] = useState(0);
   const [currentAnswers, setCurrentAnswers] = useState<Record<number, string>>({});
   const [verified, setVerified] = useState(false);
   const [allAnswers, setAllAnswers] = useState<Record<number, Record<number, string>>>({});
-  const [isPlaying, setIsPlaying] = useState(false);
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
 
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const audioUrlRef = useRef<string | null>(null);
+  const totalPassages = passages.length;
+  const currentPassage = passages[currentPassageIndex];
+  const allSelected =
+    Object.keys(currentAnswers).length === currentPassage?.questions.length;
+  const canVerify = allSelected && !verified;
 
-  useEffect(() => {
-    document.querySelector("main")?.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentTalkIndex]);
-
-  const currentTalk = talks[currentTalkIndex];
-  const totalTalks = talks.length;
-  const allAnswered = Object.keys(currentAnswers).length === currentTalk?.questions.length;
-  const canVerify = hasPlayedAudio && allAnswered && !verified;
-
-  const totalQs = talks.reduce((acc, t) => acc + t.questions.length, 0);
-  const totalCorrect = Object.entries(allAnswers).reduce((acc, [talkIdxStr, qAnswers]) => {
-    const talk = talks[Number(talkIdxStr)];
+  const totalQuestions = passages.reduce((sum, p) => sum + p.questions.length, 0);
+  const totalCorrect = passages.reduce((sum, passage, pIdx) => {
+    const pAnswers = allAnswers[pIdx] ?? {};
     return (
-      acc +
-      Object.entries(qAnswers).filter(
-        ([qIdxStr, ans]) => talk.questions[Number(qIdxStr)].answer === ans
-      ).length
+      sum +
+      passage.questions.filter((q, qIdx) => pAnswers[qIdx] === q.answer).length
     );
   }, 0);
 
-  // ─── Handlers ─────────────────────────────────────────────────────────────
+  // ─── Handlers ───────────────────────────────────────────────────────────────
 
-  function handleSelect(qIndex: number, key: string) {
-    if (verified || !hasPlayedAudio) return;
-    setCurrentAnswers((prev) => ({ ...prev, [qIndex]: key }));
+  function handleSelect(questionIdx: number, key: string) {
+    if (verified) return;
+    setCurrentAnswers((prev) => ({ ...prev, [questionIdx]: key }));
   }
 
   function handleVerify() {
     if (!canVerify) return;
     setVerified(true);
-    setAllAnswers((prev) => ({ ...prev, [currentTalkIndex]: currentAnswers }));
-    stopAudio();
+    setAllAnswers((prev) => ({ ...prev, [currentPassageIndex]: currentAnswers }));
     document.querySelector("main")?.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  useEffect(() => {
+    document.querySelector("main")?.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPassageIndex]);
+
   function handleNext() {
-    if (currentTalkIndex + 1 >= totalTalks) {
+    if (currentPassageIndex + 1 >= totalPassages) {
       markCompleted(exerciseKey);
       setPhase("done");
     } else {
-      setCurrentTalkIndex((i) => i + 1);
+      setCurrentPassageIndex((i) => i + 1);
       setCurrentAnswers({});
       setVerified(false);
-      setHasPlayedAudio(false);
-      stopAudio();
     }
   }
 
   function handleRestart() {
     setPhase("advice");
-    setCurrentTalkIndex(0);
+    setCurrentPassageIndex(0);
     setCurrentAnswers({});
     setVerified(false);
     setAllAnswers({});
-    setHasPlayedAudio(false);
-    stopAudio();
   }
 
-  function stopAudio() {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-    setIsPlaying(false);
-  }
+  // ─── Option style helpers ────────────────────────────────────────────────────
 
-  function handleAudioToggle() {
-    if (isPlaying) { stopAudio(); return; }
-
-    if (audioUrlRef.current !== currentTalk.audio_url) {
-      if (audioRef.current) audioRef.current.pause();
-      audioRef.current = new Audio(currentTalk.audio_url);
-      audioUrlRef.current = currentTalk.audio_url;
-      audioRef.current.addEventListener("ended", () => setIsPlaying(false));
-    }
-
-    audioRef.current!.currentTime = 0;
-    audioRef.current!.play().catch(() => setIsPlaying(false));
-    setIsPlaying(true);
-    setHasPlayedAudio(true);
-  }
-
-  // ─── Option button style ───────────────────────────────────────────────────
-
-  function getOptionStyle(qIndex: number, key: string): string {
+  function getOptionStyle(questionIdx: number, key: string): string {
     const base =
       "w-full text-left px-4 py-2.5 rounded-xl border text-sm transition-colors duration-150 flex items-center gap-3";
-    const q = currentTalk.questions[qIndex];
-
-    if (!hasPlayedAudio)
-      return `${base} border-gray-100 text-gray-300 cursor-not-allowed`;
-
+    const q = currentPassage.questions[questionIdx];
     if (!verified) {
-      if (currentAnswers[qIndex] === key)
+      if (currentAnswers[questionIdx] === key)
         return `${base} border-[#7c3aed] bg-[#faf5ff] text-[#7c3aed] cursor-pointer`;
       return `${base} border-gray-200 hover:border-[#c4a0f0] hover:bg-[#faf6ff] text-gray-800 cursor-pointer`;
     }
-
     if (key === q.answer)
       return `${base} border-green-400 bg-green-50 text-green-700 font-medium cursor-default`;
-    if (key === currentAnswers[qIndex])
+    if (key === currentAnswers[questionIdx])
       return `${base} border-red-300 bg-red-50 text-red-700 cursor-default`;
     return `${base} border-gray-100 text-gray-400 cursor-default`;
   }
 
-  function getLetterBadgeStyle(qIndex: number, key: string): string {
+  function getLetterBadgeStyle(questionIdx: number, key: string): string {
     const base =
       "shrink-0 w-5 h-5 rounded-full text-xs font-bold flex items-center justify-center";
-    const q = currentTalk.questions[qIndex];
-
-    if (!hasPlayedAudio) return `${base} bg-gray-100 text-gray-300`;
-
+    const q = currentPassage.questions[questionIdx];
     if (!verified) {
-      if (currentAnswers[qIndex] === key) return `${base} bg-[#7c3aed] text-white`;
+      if (currentAnswers[questionIdx] === key) return `${base} bg-[#7c3aed] text-white`;
       return `${base} bg-gray-100 text-gray-500`;
     }
-
     if (key === q.answer) return `${base} bg-green-500 text-white`;
-    if (key === currentAnswers[qIndex]) return `${base} bg-red-100 text-red-600`;
+    if (key === currentAnswers[questionIdx]) return `${base} bg-red-100 text-red-600`;
     return `${base} bg-gray-100 text-gray-400`;
   }
 
-  const progress = ((currentTalkIndex + (verified ? 1 : 0)) / totalTalks) * 100;
-
   // ── Advice phase ─────────────────────────────────────────────────────────────
+
   if (phase === "advice") {
     return (
       <div className="p-8 md:p-10">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#7c3aed] mb-3">
-          Partie 4 — Exercice
+          Partie 7 — {exerciseLabel}
         </p>
-        <h1 className="text-2xl font-bold text-gray-900 mb-1">Monologues</h1>
+        <h1 className="text-2xl font-bold text-gray-900 mb-1">
+          Lecture de documents multiples
+        </h1>
         <p className="text-sm text-gray-500 mb-5">{advice.intro}</p>
 
         <div className="inline-flex items-center gap-2 rounded-full border border-[#ddd6fe] bg-[#f3eeff] px-4 py-1.5 mb-5">
           <span className="text-sm font-semibold text-[#7c3aed]">{exerciseLabel}</span>
-          <span className="text-xs text-[#9f7aea]">· {totalTalks} monologue{totalTalks > 1 ? "s" : ""} · {totalQs} questions</span>
+          <span className="text-xs text-[#9f7aea]">
+            · {totalPassages} ensembles · {totalQuestions} questions
+          </span>
         </div>
 
-        {/* Strategy tip */}
         <div className="flex gap-3 items-start bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6">
           <p className="text-sm text-amber-800">{advice.strategy}</p>
         </div>
 
-        {/* Traps grid */}
         <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
           Les {advice.traps.length} pièges à éviter
         </p>
@@ -236,13 +219,14 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
           onClick={() => setPhase("questions")}
           className="bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors duration-150 cursor-pointer"
         >
-          Aller aux questions →
+          Aller aux textes →
         </button>
       </div>
     );
   }
 
   // ── Done phase ────────────────────────────────────────────────────────────────
+
   if (phase === "done") {
     return (
       <div className="p-8 md:p-10">
@@ -263,7 +247,7 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
             <p className="text-sm text-gray-500">
               Score :{" "}
               <span className="font-semibold text-gray-800">
-                {totalCorrect} / {totalQs}
+                {totalCorrect} / {totalQuestions}
               </span>{" "}
               bonne{totalCorrect > 1 ? "s" : ""} réponse{totalCorrect > 1 ? "s" : ""}
             </p>
@@ -271,26 +255,40 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
         </div>
 
         <div className="space-y-2 mb-8">
-          {talks.map((talk, i) => {
-            const qAnswers = allAnswers[i] ?? {};
-            const correct = talk.questions.filter(
-              (q, qi) => qAnswers[qi] === q.answer
+          {passages.map((passage, pIdx) => {
+            const pAnswers = allAnswers[pIdx] ?? {};
+            const correct = passage.questions.filter(
+              (q, qIdx) => pAnswers[qIdx] === q.answer
             ).length;
-            const total = talk.questions.length;
+            const total = passage.questions.length;
+            const allCorrect = correct === total;
             return (
               <div
-                key={i}
+                key={pIdx}
                 className="flex items-center justify-between rounded-xl border border-gray-100 px-4 py-3 bg-gray-50"
               >
-                <p className="text-sm font-medium text-gray-700 truncate pr-4">
-                  Talk {i + 1} — {talk.title}
-                </p>
+                <div className="flex items-center gap-2 min-w-0 flex-wrap">
+                  {passage.documents.map((doc, dIdx) => (
+                    <span
+                      key={dIdx}
+                      className={`shrink-0 text-xs font-semibold uppercase tracking-wide rounded-md px-2 py-0.5 ${
+                        allCorrect
+                          ? "bg-green-100 text-green-700"
+                          : correct === 0
+                          ? "bg-red-100 text-red-600"
+                          : "bg-amber-100 text-amber-700"
+                      }`}
+                    >
+                      {DOCTYPE_LABELS[doc.doctype] ?? doc.doctype}
+                    </span>
+                  ))}
+                </div>
                 <span
-                  className={`shrink-0 text-sm font-semibold tabular-nums ${
-                    correct === total
+                  className={`shrink-0 text-xs font-semibold ml-3 tabular-nums ${
+                    allCorrect
                       ? "text-green-600"
                       : correct === 0
-                      ? "text-red-500"
+                      ? "text-red-600"
                       : "text-amber-600"
                   }`}
                 >
@@ -320,9 +318,13 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
   }
 
   // ── Questions phase ───────────────────────────────────────────────────────────
+
+  const progressPct =
+    ((currentPassageIndex + (verified ? 1 : 0)) / totalPassages) * 100;
+
   return (
     <div className="p-6 md:p-8">
-      {/* X button + floating quit confirm */}
+      {/* Quit button */}
       <div className="relative mb-4 w-fit">
         <button
           onClick={() => setShowQuitConfirm((v) => !v)}
@@ -335,7 +337,9 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
         </button>
         {showQuitConfirm && (
           <div className="absolute top-10 left-0 z-20 w-72 bg-white rounded-xl border border-gray-200 shadow-lg p-4">
-            <p className="text-sm text-gray-700 mb-3">Êtes-vous sûr de vouloir quitter la page ?</p>
+            <p className="text-sm text-gray-700 mb-3">
+              Êtes-vous sûr de vouloir quitter la page ?
+            </p>
             <div className="flex gap-2">
               <button
                 onClick={() => router.push("/exercices")}
@@ -353,87 +357,77 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
           </div>
         )}
       </div>
+
       {/* Progress */}
       <div className="flex items-center justify-between mb-2">
         <p className="text-xs font-medium text-gray-500">
-          Monologue {currentTalkIndex + 1} / {totalTalks}
+          Ensemble {currentPassageIndex + 1} / {totalPassages}
         </p>
+        <span className="text-xs font-semibold text-[#7c3aed]">{exerciseLabel}</span>
       </div>
-      <div className="w-full h-1 bg-gray-100 rounded-full mb-5 overflow-hidden">
+      <div className="w-full h-1 bg-gray-100 rounded-full mb-6 overflow-hidden">
         <div
           className="h-full bg-[#7c3aed] rounded-full transition-all duration-300"
-          style={{ width: `${progress}%` }}
+          style={{ width: `${progressPct}%` }}
         />
       </div>
 
-      {/* Topic banner */}
-      <div className="mb-5 rounded-xl bg-[#f3eeff] border border-[#ddd6fe] px-4 py-3">
-        <p className="text-sm font-semibold text-[#7c3aed]">{currentTalk.title}</p>
-      </div>
-
-      {/* Graphic (if present) */}
-      {currentTalk.graphic && currentTalk.graphic_title && (
-        <div className="mb-5 rounded-xl border border-gray-200 overflow-hidden">
-          <div className="px-4 py-2 bg-gray-50 border-b border-gray-200">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
-              {currentTalk.graphic_title}
-            </p>
-          </div>
-          <table className="w-full text-sm">
-            <tbody>
-              {Object.entries(currentTalk.graphic).map(([key, value], i) => (
-                <tr key={i} className="border-b border-gray-100 last:border-b-0">
-                  <td className="px-4 py-2.5 text-gray-600 font-medium w-1/2 align-top">{key}</td>
-                  <td className="px-4 py-2.5 text-gray-800 align-top">{value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* Document count badge */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-xs font-semibold uppercase tracking-wide text-[#7c3aed] bg-[#ede9fe] rounded-md px-2 py-0.5">
+          {currentPassage.documents.length} document{currentPassage.documents.length > 1 ? "s" : ""}
+        </span>
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {currentPassage.documents.map((doc, i) => (
+            <span key={i} className="text-xs text-gray-400 font-medium">
+              {DOCTYPE_LABELS[doc.doctype] ?? doc.doctype}
+              {i < currentPassage.documents.length - 1 && (
+                <span className="ml-1.5 text-gray-200">·</span>
+              )}
+            </span>
+          ))}
         </div>
-      )}
-
-      {/* Audio button */}
-      <div className="flex justify-center mb-6">
-        <button
-          onClick={handleAudioToggle}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#7c3aed] hover:bg-[#6d28d9] text-white text-sm font-semibold transition-colors duration-150 cursor-pointer"
-        >
-          {isPlaying ? (
-            <>
-              <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <rect x="6" y="4" width="4" height="16" rx="1" />
-                <rect x="14" y="4" width="4" height="16" rx="1" />
-              </svg>
-              Arrêter
-            </>
-          ) : (
-            <>
-              <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-              Écouter le monologue
-            </>
-          )}
-        </button>
       </div>
 
-      {/* 3 Questions */}
+      {/* Documents stacked */}
+      <div className="flex flex-col gap-3 mb-6">
+        {currentPassage.documents.map((doc, dIdx) => (
+          <div key={dIdx} className="rounded-xl bg-gray-50 border border-gray-100">
+            {/* Document header */}
+            <div className="flex items-center gap-2 px-5 py-3 border-b border-gray-100">
+              <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 bg-white border border-gray-200 rounded-md px-2 py-0.5">
+                {DOCTYPE_LABELS[doc.doctype] ?? doc.doctype}
+              </span>
+              <span className="text-xs text-gray-500 font-medium truncate">{doc.title}</span>
+            </div>
+            {/* Document text */}
+            <div className="px-5 py-4">
+              <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-line">
+                {doc.text}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Questions */}
       <div className="flex flex-col gap-6 mb-6">
-        {currentTalk.questions.map((q, qIdx) => (
+        {currentPassage.questions.map((question, qIdx) => (
           <div key={qIdx}>
             <p className="text-sm font-semibold text-gray-800 mb-3">
-              {qIdx + 1}. {q.text}
+              {qIdx + 1}. {question.text}
             </p>
-            {/* Answer buttons (hidden once verified) */}
+
+            {/* Options — hidden after verify */}
             {!verified && (
               <div className="flex flex-col gap-2">
-                {OPTION_KEYS.map((key, optIdx) => {
-                  const optionText = q.options[optIdx]?.replace(/^\([A-D]\)\s*/, "") ?? "";
+                {OPTION_KEYS.map((key, idx) => {
+                  const optionText =
+                    question.options[idx]?.replace(/^\([A-D]\)\s*/, "") ?? "";
                   return (
                     <button
                       key={key}
                       onClick={() => handleSelect(qIdx, key)}
-                      disabled={!hasPlayedAudio}
                       className={getOptionStyle(qIdx, key)}
                     >
                       <span className={getLetterBadgeStyle(qIdx, key)}>{key}</span>
@@ -444,15 +438,15 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
               </div>
             )}
 
-            {/* Per-question explanation rows after verification */}
+            {/* Explanation rows — shown after verify */}
             {verified && (
-              <div className="mt-3 rounded-xl border border-gray-100 overflow-hidden">
-                {OPTION_KEYS.map((key, optIdx) => {
-                  const isCorrectKey = key === q.answer;
+              <div className="rounded-xl border border-gray-100 overflow-hidden">
+                {OPTION_KEYS.map((key, idx) => {
+                  const isCorrectKey = key === question.answer;
                   const isChosen = currentAnswers[qIdx] === key;
                   const text = isCorrectKey
-                    ? q.explanation.correct
-                    : q.explanation.distractors[key];
+                    ? question.explanation.correct
+                    : question.explanation.distractors[key];
                   if (!text) return null;
                   return (
                     <div
@@ -482,7 +476,7 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
                               : "text-gray-400"
                           }`}
                         >
-                          {q.options[optIdx]?.replace(/^\([A-D]\)\s*/, "")}
+                          {question.options[idx]?.replace(/^\([A-D]\)\s*/, "")}
                         </p>
                         <p
                           className={`text-sm ${
@@ -505,7 +499,7 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
         ))}
       </div>
 
-      {/* Vérifier / Next */}
+      {/* Vérifier / Suivant */}
       <div className="flex justify-end mt-2">
         {!verified ? (
           <button
@@ -522,11 +516,11 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
         ) : (
           <button
             onClick={handleNext}
-            className="bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors duration-150 cursor-pointer"
+            className="bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors duration-150 cursor-pointer"
           >
-            {currentTalkIndex + 1 >= totalTalks
+            {currentPassageIndex + 1 >= totalPassages
               ? "Voir les résultats →"
-              : "Monologue suivant →"}
+              : "Ensemble suivant →"}
           </button>
         )}
       </div>

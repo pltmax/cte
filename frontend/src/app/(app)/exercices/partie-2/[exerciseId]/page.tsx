@@ -34,6 +34,7 @@ export default async function ExerciceP2Page({
             questions={questions}
             types={[type]}
             advice={exercicesData.advice}
+            exerciseKey={`partie-2:${exerciseId}`}
           />
         </div>
       </div>

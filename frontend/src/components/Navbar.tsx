@@ -19,23 +19,25 @@ export default function Navbar() {
   useEffect(() => {
     if (!isLanding) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+    const handleScroll = () => {
+      const threshold = window.innerHeight * 0.45;
+      let active: string | null = null;
+
+      for (const { id } of NAV_TABS) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= threshold) {
+          active = id;
         }
-      },
-      { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
-    );
+      }
 
-    NAV_TABS.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+      setActiveSection(active);
+    };
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isLanding]);
 
   return (

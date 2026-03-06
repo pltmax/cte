@@ -1,0 +1,1151 @@
+{
+  "advice": {
+    "intro": "5 textes à trous avec 4 blancs chacun. Chaque blanc teste une compétence précise : forme du mot, vocabulaire, temps verbal ou insertion de phrase.",
+    "strategy": "Lis le texte en entier avant de répondre pour comprendre le contexte global. Identifie le type de document (lettre, publicité, ...) pour anticiper le registre. Analyse la position grammaticale du texte manquant avant de regarder les options.",
+    "traps": [
+      {
+        "label": "Mauvaise catégorie grammaticale",
+        "example": "Choisir 'confirmation' (nom) là où 'confirm' (verbe infinitif) est attendu après 'to'"
+      },
+      {
+        "label": "Insertion hors contexte",
+        "example": "Choisir une phrase vraie mais sans lien avec le paragraphe qui précède ou suit"
+      },
+      {
+        "label": "Association de mots incorrecte",
+        "example": "Écrire 'do a decision' au lieu de 'make a decision'"
+      },
+      {
+        "label": "Voix passive oubliée",
+        "example": "Choisir 'tow' au lieu de 'towed' dans une structure 'will be [blank]'"
+      }
+    ]
+  },
+  "passages": [
+    {
+      "doctype": "email",
+      "title": "Client Meeting Confirmation",
+      "text": "To: Rebecca Lowe\nFrom: James Hartley, Sales Manager\nDate: April 14\nSubject: Appointment Confirmation\n\nDear Ms. Lowe,\n\nI am writing to _____[1] our meeting scheduled for Tuesday, April 20, at 2:00 PM at our downtown office.\n\nPlease note that our Director of Operations, Ms. Chen, will also be _____[2] at the meeting to discuss the logistics of the proposed partnership.\n\nWe have prepared a brief presentation outlining the key terms of our offer. _____[3].\n\nShould you need to reschedule, please contact my assistant at least 48 hours in _____[4].",
+      "questions": [
+        {
+          "options": [
+            "(A) confirm",
+            "(B) confirmation",
+            "(C) confirmed",
+            "(D) confirming"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'To _____[1]' impose un infinitif — 'confirm' (base verbale) est le seul choix possible après 'to'.",
+            "distractors": {
+              "B": "'Confirmation' est un nom — incompatible avec 'to + NOM' sans article.",
+              "C": "'Confirmed' est un participe passé — ne suit pas 'to' seul.",
+              "D": "'Confirming' est un gérondif — 'to + -ing' n'est pas grammaticalement correct ici."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) present",
+            "(B) presence",
+            "(C) presently",
+            "(D) presenting"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Will be present' — 'present' est l'adjectif standard signifiant 'en présence de', attendu après 'be'.",
+            "distractors": {
+              "B": "'Presence' est un nom — 'will be presence' est grammaticalement incorrect.",
+              "C": "'Presently' est un adverbe de temps — un adverbe ne suit pas 'be' directement.",
+              "D": "'Presenting' changerait le sens (en train de présenter) et rendrait la phrase ambiguë."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) The parking garage will be closed for maintenance.",
+            "(B) We look forward to exploring how we can work together effectively.",
+            "(C) Our offices are located near the financial district.",
+            "(D) The project was completed ahead of schedule."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Cette phrase conclut logiquement le paragraphe sur la présentation et marque une transition positive vers la rencontre.",
+            "distractors": {
+              "A": "Sans rapport avec une confirmation de réunion professionnelle.",
+              "C": "L'emplacement des bureaux est hors sujet à ce stade de l'email.",
+              "D": "Non pertinent — aucun projet n'a été mentionné dans le texte."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) advance",
+            "(B) advanced",
+            "(C) advancing",
+            "(D) advancement"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'In advance' est une locution adverbiale figée signifiant 'à l'avance' — 'advance' est le seul nom correct ici.",
+            "distractors": {
+              "B": "'Advanced' est un adjectif — 'in advanced' n'est pas une expression correcte.",
+              "C": "'Advancing' est un gérondif — 'in advancing' change complètement le sens.",
+              "D": "'Advancement' désigne une progression de carrière — hors contexte ici."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "notice",
+      "title": "Elevator Out of Service",
+      "text": "Building Management Announcement\n\nPlease be _____[1] that the elevator in Building B will be temporarily out of service from Monday, May 3, to Thursday, May 6.\n\nDuring this time, residents and staff are encouraged to use the staircase at the east end of the building. We _____[2] for any inconvenience this may cause.\n\nThe maintenance crew will be working to replace worn components and upgrade the _____[3] system.\n\n_____[4]. Thank you for your understanding.",
+      "questions": [
+        {
+          "options": [
+            "(A) advised",
+            "(B) advising",
+            "(C) advisable",
+            "(D) advice"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Please be advised that' est une formule passive figée dans les communications officielles — 'advised' (participe passé) est la seule forme correcte.",
+            "distractors": {
+              "B": "'Advising' est un participe présent — 'be advising' aurait un sens actif incompatible ici.",
+              "C": "'Advisable' est un adjectif signifiant 'recommandable' — change le sens de la phrase.",
+              "D": "'Advice' est un nom — 'be advice' est grammaticalement impossible."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) apologize",
+            "(B) apology",
+            "(C) apologetic",
+            "(D) apologetically"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'We apologize' — après un sujet, seul un verbe conjugué peut être le prédicat. 'Apologize' est la base verbale correcte.",
+            "distractors": {
+              "B": "'Apology' est un nom — 'We apology' est grammaticalement impossible.",
+              "C": "'Apologetic' est un adjectif — 'We apologetic' est incomplet sans verbe.",
+              "D": "'Apologetically' est un adverbe — il ne peut pas être le prédicat d'un sujet."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) secure",
+            "(B) securely",
+            "(C) security",
+            "(D) secured"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "'Security system' est le nom composé standard — 'security' est un nom employé comme modificateur.",
+            "distractors": {
+              "A": "'Secure' est un adjectif — 'secure system' est possible mais 'security system' est la collocation attendue.",
+              "B": "'Securely' est un adverbe — il ne peut pas modifier un nom.",
+              "D": "'Secured' est un participe passé — 'secured system' change le sens (un système verrouillé, pas un système de sécurité)."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) Normal service will resume as soon as the work is completed.",
+            "(B) The gym on the fourth floor is now open to all tenants.",
+            "(C) Parking rates will increase starting next month.",
+            "(D) The rooftop garden is available for private events."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase rassure les résidents sur la reprise du service — conclusion logique et attendue pour un avis de maintenance.",
+            "distractors": {
+              "B": "Hors sujet — l'avis concerne l'ascenseur, pas le gymnase.",
+              "C": "Sans lien avec la panne d'ascenseur ou la maintenance.",
+              "D": "Hors contexte — pas de rapport avec l'interruption de service annoncée."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "letter",
+      "title": "Job Offer – Marketing Manager",
+      "text": "Dear Ms. Nakamura,\n\nWe are pleased to _____[1] you a position as Marketing Manager at BlueWave Communications, effective June 1.\n\nYour salary will be _____[2] at $85,000 per year, with a performance review scheduled after your first six months.\n\nYou will be expected to lead a team of six and oversee all _____[3] campaigns across our digital and print channels.\n\n_____[4]. We look forward to welcoming you to our team.",
+      "questions": [
+        {
+          "options": [
+            "(A) offer",
+            "(B) offering",
+            "(C) offered",
+            "(D) offers"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Pleased to offer' — après 'to', la base verbale (infinitif) est obligatoire.",
+            "distractors": {
+              "B": "'Offering' est un gérondif — 'to offering' est grammaticalement incorrect.",
+              "C": "'Offered' est un participe passé — ne suit pas 'to' dans ce contexte.",
+              "D": "'Offers' est conjugué à la 3e personne — incompatible avec 'to + verbe conjugué'."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) fixed",
+            "(B) set",
+            "(C) placed",
+            "(D) valued"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Set at' est la collocation standard pour fixer un salaire à un montant précis.",
+            "distractors": {
+              "A": "'Fixed at' est grammaticalement possible mais moins courant que 'set at' pour un salaire.",
+              "C": "'Placed at' ne collocate pas avec 'salary' dans ce sens.",
+              "D": "'Valued at' s'emploie pour estimer la valeur d'un actif, pas pour fixer un salaire."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) market",
+            "(B) marketing",
+            "(C) marketed",
+            "(D) marketable"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Marketing campaigns' — 'marketing' est un nom employé comme modificateur de 'campaigns', collocation standard.",
+            "distractors": {
+              "A": "'Market campaigns' n'est pas une collocation établie dans le contexte professionnel.",
+              "C": "'Marketed' est un participe passé — 'marketed campaigns' signifierait des campagnes déjà commercialisées.",
+              "D": "'Marketable' est un adjectif signifiant 'commercialisable' — hors contexte ici."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) Please send your acceptance by Friday to confirm your start date.",
+            "(B) The company will not cover relocation costs.",
+            "(C) Benefits including health insurance and a 401(k) plan will begin on your start date.",
+            "(D) Your contract is available at the reception desk."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Cette phrase complète l'offre en précisant les avantages sociaux — information clé et attendue dans une lettre d'embauche.",
+            "distractors": {
+              "A": "Trop directif pour cette position dans le texte — s'attendrait plutôt en fin de lettre.",
+              "B": "Une information négative aussi abrupte serait déplacée entre le salaire et la conclusion.",
+              "D": "Hors contexte — la lettre elle-même constitue l'offre officielle."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "advertisement",
+      "title": "CloudSync Pro – Business Cloud Storage",
+      "text": "Manage Your Files Smarter with CloudSync Pro\n\nIs your team struggling to _____[1] important documents efficiently? CloudSync Pro is the solution your business has been waiting for.\n\nOur platform allows multiple users to _____[2] and edit files simultaneously, from any device, anywhere in the world.\n\nWith advanced encryption and daily backups, your data is _____[3] protected at all times.\n\n_____[4]. Start your free 30-day trial today and experience the difference.",
+      "questions": [
+        {
+          "options": [
+            "(A) store",
+            "(B) stores",
+            "(C) stored",
+            "(D) storage"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'To store' — infinitif après 'to'. La base verbale est obligatoire dans cette position.",
+            "distractors": {
+              "B": "'Stores' est conjugué à la 3e personne — incompatible avec 'to + verbe conjugué'.",
+              "C": "'Stored' est un participe passé — ne suit pas 'to' dans ce contexte actif.",
+              "D": "'Storage' est un nom — 'to storage' n'est pas grammaticalement correct."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) access",
+            "(B) accessed",
+            "(C) accessible",
+            "(D) accessing"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'To access and edit' — parallélisme de deux infinitifs après 'to'; 'access' (base verbale) est requis.",
+            "distractors": {
+              "B": "'Accessed' est un participe passé — brise le parallélisme avec 'edit'.",
+              "C": "'Accessible' est un adjectif — incompatible avec la structure 'to + VERBE'.",
+              "D": "'Accessing' est un gérondif — 'to accessing' est grammaticalement incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) safe",
+            "(B) safely",
+            "(C) safest",
+            "(D) safeguard"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Is safely protected' — entre 'is' et 'protected' (participe), seul un adverbe de manière est possible.",
+            "distractors": {
+              "A": "'Safe' est un adjectif — il modifie des noms, pas des participes dans cette position.",
+              "C": "'Safest' est un superlatif — grammaticalement incorrect dans cette position.",
+              "D": "'Safeguard' est un verbe ou un nom — incompatible entre 'is' et 'protected'."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) We also offer a basic version for individual users at no cost.",
+            "(B) The product has been discontinued as of last month.",
+            "(C) Free shipping is available for hardware purchases over $100.",
+            "(D) Our support team is not available on weekends."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase ajoute une information commerciale positive (offre gratuite) — cohérente avec le discours promotionnel.",
+            "distractors": {
+              "B": "Une information de discontinuation contredit complètement l'objectif d'une publicité.",
+              "C": "Hors sujet — la publicité porte sur un logiciel, pas du matériel informatique.",
+              "D": "Une limitation de support affaiblirait l'argument commercial — déplacée ici."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "memo",
+      "title": "Year-End Budget Review",
+      "text": "To: All Department Heads\nFrom: Linda Torres, CFO\nDate: November 10\nSubject: Year-End Budget Review\n\nAs we _____[1] the end of the fiscal year, I would like to remind all departments to submit their final budget reports by November 30.\n\nReports must _____[2] actual expenditures against the original forecast and provide explanations for any variances exceeding 10%.\n\nPlease ensure that all _____[3] are approved by your direct supervisor before submission.\n\n_____[4]. Reports submitted after the deadline will not be included in the annual financial summary.",
+      "questions": [
+        {
+          "options": [
+            "(A) approach",
+            "(B) approaches",
+            "(C) approaching",
+            "(D) approached"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'As we approach' — dans une proposition temporelle avec 'as', le présent simple est requis après le sujet 'we'.",
+            "distractors": {
+              "B": "'Approaches' est la 3e personne du singulier — incompatible avec le sujet 'we'.",
+              "C": "'Approaching' est un participe — 'as we approaching' est grammaticalement incorrect.",
+              "D": "'Approached' est au passé — la phrase porte sur la situation actuelle, pas le passé."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) compare",
+            "(B) comparison",
+            "(C) compared",
+            "(D) comparative"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Reports must compare' — après un modal ('must'), la base verbale est obligatoire.",
+            "distractors": {
+              "B": "'Comparison' est un nom — 'must comparison' est grammaticalement impossible.",
+              "C": "'Compared' est un participe passé — 'must compared' est incorrect.",
+              "D": "'Comparative' est un adjectif — incompatible avec la structure modale."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) report",
+            "(B) reports",
+            "(C) reported",
+            "(D) reporting"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'All reports' — 'all + nom pluriel' est la structure standard; le contexte porte sur plusieurs documents.",
+            "distractors": {
+              "A": "'All report' (singulier) n'est pas idiomatique — 'all' avec un nom dénombrable prend le pluriel.",
+              "C": "'Reported' est un participe passé — 'all reported' changerait le sens (tous les rapports signalés).",
+              "D": "'Reporting' est un gérondif — 'all reporting' modifierait le sens (toute la production de rapports)."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) The accounting team is available to assist with any questions.",
+            "(B) Staff salaries will be increased next quarter.",
+            "(C) The company cafeteria will be closed during the review period.",
+            "(D) Please print reports on both sides to save paper."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase offre une ressource d'assistance — suite logique après une directive complexe sur les rapports financiers.",
+            "distractors": {
+              "B": "Les augmentations de salaires sont hors sujet dans un mémo sur les rapports budgétaires.",
+              "C": "La fermeture de la cafétéria est sans lien avec la soumission des rapports.",
+              "D": "Un conseil d'impression est trop anecdotique pour conclure une directive financière importante."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "email",
+      "title": "Update on Order #8847",
+      "text": "To: Franklin Webb\nFrom: customer.service@PrimeSupply.com\nDate: September 8\nSubject: Update on Order #8847\n\nDear Mr. Webb,\n\nWe are writing to _____[1] you that your order, placed on September 1, has been slightly delayed due to higher-than-expected demand.\n\nWe anticipate that your items will be _____[2] within the next five to seven business days.\n\nIn the meantime, you can _____[3] your order status at any time by logging into your account on our website.\n\n_____[4]. We appreciate your patience and thank you for choosing PrimeSupply.",
+      "questions": [
+        {
+          "options": [
+            "(A) inform",
+            "(B) information",
+            "(C) informed",
+            "(D) informing"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'To inform you' — infinitif après 'to'; 'inform' (base verbale) est le seul choix correct.",
+            "distractors": {
+              "B": "'Information' est un nom — 'to information' est grammaticalement impossible.",
+              "C": "'Informed' est un participe passé — ne suit pas 'to' dans ce sens actif.",
+              "D": "'Informing' est un gérondif — 'to informing' est grammaticalement incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) shipping",
+            "(B) shipment",
+            "(C) shipped",
+            "(D) ship"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "'Will be shipped' — structure passive (will be + participe passé); 'shipped' est le seul participe de la liste.",
+            "distractors": {
+              "A": "'Shipping' est un gérondif/nom — 'will be shipping' serait le futur progressif actif, pas passif.",
+              "B": "'Shipment' est un nom — 'will be shipment' est grammaticalement incorrect.",
+              "D": "'Ship' est la base verbale — 'will be ship' est incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) monitor",
+            "(B) monitors",
+            "(C) monitored",
+            "(D) monitoring"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'You can monitor' — après un modal ('can'), la base verbale est obligatoire.",
+            "distractors": {
+              "B": "'Monitors' est conjugué à la 3e personne — incompatible avec le sujet 'you'.",
+              "C": "'Monitored' est un participe passé — 'can monitored' est grammaticalement incorrect.",
+              "D": "'Monitoring' est un gérondif — 'can monitoring' est grammaticalement incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) A $10 discount has been applied to your account as an apology for the delay.",
+            "(B) Your payment method has been declined.",
+            "(C) Please place a new order to receive your items.",
+            "(D) Our warehouse is relocating to a new facility next month."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase introduit un geste commercial de compensation — attendu et logique dans un email de retard de livraison.",
+            "distractors": {
+              "B": "Un problème de paiement serait une mauvaise nouvelle supplémentaire — incohérent avec le ton positif.",
+              "C": "Demander de repasser commande contredirait l'annonce que la commande existante est en route.",
+              "D": "La relocalisation de l'entrepôt est hors sujet et peu pertinente pour le client."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "article",
+      "title": "The Rise of Remote Work",
+      "text": "Remote Work Becomes the New Standard\n\nOver the past decade, remote work has _____[1] from a rare perk to a widely accepted practice in many industries.\n\nCompanies that _____[2] flexible work arrangements have seen improvements in both employee satisfaction and overall productivity.\n\nExperts suggest that the key to a _____[3] remote work policy lies in clear communication and the use of collaborative digital tools.\n\n_____[4]. As more organizations adopt this model, the traditional office environment may continue to evolve.",
+      "questions": [
+        {
+          "options": [
+            "(A) evolved",
+            "(B) evolving",
+            "(C) evolution",
+            "(D) evolve"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Has evolved' — le present perfect est imposé par 'over the past decade' pour une évolution récente avec résultat actuel.",
+            "distractors": {
+              "B": "'Evolving' serait le participe présent — 'has evolving' est grammaticalement incorrect.",
+              "C": "'Evolution' est un nom — 'has evolution' est impossible.",
+              "D": "'Evolve' est la base verbale — 'has evolve' est incorrect; le present perfect requiert le participe passé."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) adopt",
+            "(B) adopted",
+            "(C) adopting",
+            "(D) adoption"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Companies that adopt' — dans une proposition relative, 'that' + présent simple décrit une caractéristique générale.",
+            "distractors": {
+              "B": "'Adopted' au passé limiterait les entreprises à celles ayant déjà adopté ce modèle — sens trop restrictif.",
+              "C": "'Adopting' formerait 'companies that adopting' — grammaticalement incorrect sans auxiliaire.",
+              "D": "'Adoption' est un nom — 'companies that adoption' est impossible."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) success",
+            "(B) successful",
+            "(C) successfully",
+            "(D) succeed"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'A successful remote work policy' — adjectif avant le nom; seul un adjectif peut modifier 'policy'.",
+            "distractors": {
+              "A": "'Success' est un nom — 'a success policy' n'est pas une collocation établie.",
+              "C": "'Successfully' est un adverbe — il modifie des verbes, pas des noms.",
+              "D": "'Succeed' est un verbe — incompatible avec 'a [blank] policy'."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) However, remote work is not suitable for every job role or industry.",
+            "(B) All employees are now required to work from the office.",
+            "(C) The company has recently hired a new HR director.",
+            "(D) Remote workers must purchase their own equipment."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase introduit une nuance équilibrée — structure argumentative typique des articles TOEIC ('avantages... cependant...').",
+            "distractors": {
+              "B": "Contredit directement la thèse de l'article sur l'essor du télétravail.",
+              "C": "Hors sujet — un recrutement RH n'est pas lié à l'argument sur le télétravail.",
+              "D": "Trop prescriptif et négatif — ne correspond pas au ton nuancé de l'article."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "letter",
+      "title": "Notice of Contract Termination",
+      "text": "Dear Mr. Obi,\n\nWe are writing to _____[1] you that Helix Corporation has decided not to renew its service contract with PaperFlow Ltd., effective January 31.\n\nThis decision was made _____[2] a comprehensive review of our operational needs, during which we identified opportunities to consolidate our supply chain.\n\nWe appreciate the service PaperFlow has _____[3] over the past three years and wish your company continued success.\n\n_____[4]. Please do not hesitate to contact us if you have any questions.",
+      "questions": [
+        {
+          "options": [
+            "(A) notify",
+            "(B) notification",
+            "(C) notified",
+            "(D) notifying"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'To notify you' — infinitif après 'to'; 'notify' (base verbale) est le seul choix correct.",
+            "distractors": {
+              "B": "'Notification' est un nom — 'to notification' est grammaticalement impossible.",
+              "C": "'Notified' est un participe passé — ne suit pas 'to' dans ce contexte actif.",
+              "D": "'Notifying' est un gérondif — 'to notifying' est grammaticalement incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) following",
+            "(B) followed",
+            "(C) follow",
+            "(D) follows"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Made following a review' — 'following' fonctionne ici comme une préposition signifiant 'après', suivie d'un groupe nominal.",
+            "distractors": {
+              "B": "'Followed' serait un participe passé — 'made followed a review' est grammaticalement incorrect.",
+              "C": "'Follow' est la base verbale — 'made follow a review' ne forme pas de structure correcte.",
+              "D": "'Follows' est conjugué — incompatible dans cette position participiale."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) provides",
+            "(B) provided",
+            "(C) providing",
+            "(D) provision"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'PaperFlow has provided' — present perfect dans une proposition relative; 'provided' est le participe passé requis.",
+            "distractors": {
+              "A": "'Provides' est le présent simple — 'has provides' est grammaticalement incorrect.",
+              "C": "'Providing' est un participe présent — 'has providing' est grammaticalement incorrect.",
+              "D": "'Provision' est un nom — 'has provision' est impossible."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) All outstanding invoices must be settled before January 31.",
+            "(B) We plan to expand our supplier network significantly next year.",
+            "(C) A new contract will be signed with PaperFlow shortly.",
+            "(D) The merger has been completed ahead of schedule."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase traite de la liquidation administrative — suite logique et pratique dans une lettre de résiliation.",
+            "distractors": {
+              "B": "L'expansion du réseau de fournisseurs est une information stratégique déplacée ici.",
+              "C": "Contradictoire — la lettre annonce précisément le non-renouvellement du contrat.",
+              "D": "Hors contexte — aucune fusion n'a été mentionnée dans la lettre."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "notice",
+      "title": "Updated Parking Regulations",
+      "text": "Attention: All Building Tenants\n\nEffective Monday, October 6, the following _____[1] to parking regulations will be in effect for the Meridian Tower complex.\n\nAll vehicles must display a _____[2] parking permit at all times. Permits can be obtained from the building management office on the second floor.\n\nAny vehicle found in a reserved space without the appropriate permit will be _____[3] at the owner's expense.\n\n_____[4]. Management thanks all tenants for their cooperation.",
+      "questions": [
+        {
+          "options": [
+            "(A) change",
+            "(B) changes",
+            "(C) changed",
+            "(D) changing"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'The following changes' — 'following' + nom pluriel; le contexte liste plusieurs règles, donc le pluriel est correct.",
+            "distractors": {
+              "A": "'Change' (singulier) est peu naturel avec 'the following' qui annonce généralement plusieurs éléments.",
+              "C": "'Changed' est un participe passé — 'the following changed' est grammaticalement incorrect comme sujet.",
+              "D": "'Changing' est un participe présent — 'the following changing' ne forme pas un groupe nominal correct."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) validity",
+            "(B) validate",
+            "(C) valid",
+            "(D) validated"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "'A valid parking permit' — adjectif avant le nom; 'valid' signifie 'en cours de validité, reconnu officiellement'.",
+            "distractors": {
+              "A": "'Validity' est un nom — 'a validity permit' n'est pas une collocation établie.",
+              "B": "'Validate' est un verbe — incompatible avec 'a [blank] permit'.",
+              "D": "'Validated' est un participe passé — 'a validated permit' changerait le sens (un permis ayant été validé)."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) towing",
+            "(B) towed",
+            "(C) tow",
+            "(D) tower"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Will be towed' — voix passive (will be + participe passé); 'towed' est le seul participe passé de la liste.",
+            "distractors": {
+              "A": "'Towing' est un participe présent ou gérondif — 'will be towing' serait actif, pas passif.",
+              "C": "'Tow' est la base verbale — 'will be tow' est grammaticalement incorrect.",
+              "D": "'Tower' est un nom (tour) — hors contexte et grammaticalement impossible ici."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) Visitor parking is available on the ground level and is limited to two hours.",
+            "(B) The building will be closed for renovations next month.",
+            "(C) Monthly parking fees will increase by 20% starting January.",
+            "(D) Bicycles are not permitted inside the building."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase complète les règles de stationnement en précisant les options pour les visiteurs — information directement pertinente.",
+            "distractors": {
+              "B": "La fermeture pour rénovation est hors sujet par rapport aux règles de stationnement.",
+              "C": "Une augmentation de tarif non mentionnée ailleurs serait une information isolée déplacée.",
+              "D": "Les bicyclettes à l'intérieur du bâtiment sont hors sujet dans un avis de stationnement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "press_release",
+      "title": "Horizon Bank Opens New Downtown Branch",
+      "text": "FOR IMMEDIATE RELEASE\n\nHorizon Bank Expands with New Downtown Location\n\nCHICAGO, IL — Horizon Bank today _____[1] the opening of its newest branch, located at 225 West Madison Street in the heart of downtown Chicago.\n\nThe new branch will offer a full _____[2] of personal and business banking services, including mortgage consultations and investment planning.\n\nCustomers are invited to attend an opening event on Saturday, June 7, from 10:00 AM to 3:00 PM. _____[3].\n\nFor more information or to schedule an appointment, please visit our website or call our _____[4] customer line at 1-800-555-0192.",
+      "questions": [
+        {
+          "options": [
+            "(A) announced",
+            "(B) announce",
+            "(C) announcing",
+            "(D) announcement"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Horizon Bank today announced' — simple past de narration; les communiqués de presse utilisent le passé pour les faits du jour.",
+            "distractors": {
+              "B": "'Announce' est la base verbale — 'today announce' est grammaticalement incorrect sans auxiliaire.",
+              "C": "'Announcing' est un participe présent — 'today announcing' est grammaticalement incorrect comme prédicat.",
+              "D": "'Announcement' est un nom — 'Bank today announcement' est grammaticalement impossible."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) range",
+            "(B) ranging",
+            "(C) ranged",
+            "(D) ranger"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'A full range of services' est la collocation figée standard — 'range' est le seul nom correct ici.",
+            "distractors": {
+              "B": "'Ranging' est un participe — 'a full ranging of' n'est pas une collocation établie.",
+              "C": "'Ranged' est un participe passé — 'a full ranged of' est incorrect.",
+              "D": "'Ranger' désigne une personne (garde forestier) — hors contexte."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) Refreshments and complimentary gifts will be available for all visitors.",
+            "(B) The bank will be closed on federal holidays.",
+            "(C) Parking will not be validated at this location.",
+            "(D) Only current account holders are eligible to attend."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase annonce les modalités pratiques et attractives de l'événement — information attendue pour une invitation d'inauguration.",
+            "distractors": {
+              "B": "Les jours fériés sont hors contexte pour une annonce d'ouverture et un événement.",
+              "C": "Une information négative sur le stationnement affaiblirait l'invitation.",
+              "D": "Limiter l'accès aux clients actuels contredirait la vocation d'une ouverture grand public."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) dedicated",
+            "(B) dedication",
+            "(C) dedicate",
+            "(D) dedicating"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Our dedicated customer line' — adjectif avant le nom; 'dedicated' signifie 'réservé à cet usage'.",
+            "distractors": {
+              "B": "'Dedication' est un nom — 'our dedication customer line' n'est pas une collocation correcte.",
+              "C": "'Dedicate' est la base verbale — incompatible avec la position modificatrice avant 'customer'.",
+              "D": "'Dedicating' est un participe présent — ne peut pas modifier un nom dans cette position."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "memo",
+      "title": "Updated Remote Work Policy",
+      "text": "To: All Employees\nFrom: Human Resources Department\nDate: February 20\nSubject: Updated Remote Work Policy\n\nEffective March 1, the company will _____[1] its remote work policy to allow eligible employees to work from home up to three days per week.\n\nEmployees who wish to participate must submit a written _____[2] to their department manager no later than February 25.\n\nApproval will be _____[3] on the nature of the role and individual performance records.\n\n_____[4]. Please direct any questions to the HR department.",
+      "questions": [
+        {
+          "options": [
+            "(A) update",
+            "(B) updates",
+            "(C) updated",
+            "(D) updating"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Will update' — après un modal ('will'), la base verbale est obligatoire.",
+            "distractors": {
+              "B": "'Updates' est conjugué à la 3e personne — incompatible avec 'will + verbe conjugué'.",
+              "C": "'Updated' est un participe passé — 'will updated' est grammaticalement incorrect.",
+              "D": "'Updating' est un gérondif — 'will updating' est grammaticalement incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) apply",
+            "(B) applying",
+            "(C) application",
+            "(D) applicable"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "'A written application' — nom attendu après l'adjectif 'written'; 'application' est le nom standard pour une demande formelle.",
+            "distractors": {
+              "A": "'Apply' est un verbe — 'a written apply' est grammaticalement impossible.",
+              "B": "'Applying' est un gérondif — 'a written applying' n'est pas idiomatique.",
+              "D": "'Applicable' est un adjectif — deux adjectifs consécutifs sans nom forment une structure incomplète."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) basing",
+            "(B) based",
+            "(C) base",
+            "(D) basic"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Will be based on' — voix passive (will be + participe passé); 'based on' est la collocation figée.",
+            "distractors": {
+              "A": "'Basing' est un participe présent — 'will be basing' serait actif, pas passif.",
+              "C": "'Base' est la base verbale — 'will be base' est grammaticalement incorrect.",
+              "D": "'Basic' est un adjectif — 'will be basic on' est grammaticalement incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) A full list of eligibility criteria is available on the company intranet.",
+            "(B) All employees must now work from the office five days a week.",
+            "(C) The HR director will be retiring at the end of the year.",
+            "(D) Remote work requests submitted after March 1 will be reviewed quarterly."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase renvoie à une ressource concrète — suite logique et utile après l'annonce d'une nouvelle politique.",
+            "distractors": {
+              "B": "Contredit directement la politique de télétravail annoncée dans le mémo.",
+              "C": "La retraite du DRH est hors sujet par rapport à la politique de télétravail.",
+              "D": "Introduire une nouvelle règle de délai ici est prématuré et potentiellement contradictoire."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "advertisement",
+      "title": "Leadership Excellence Program",
+      "text": "Develop Tomorrow's Leaders Today\n\nIs your organization looking for _____[1] ways to build management skills within your team?\n\nThe Leadership Excellence Program offered by ProGrowth Institute provides _____[2] training in communication, strategic thinking, and conflict resolution.\n\nOur sessions are available in both in-person and online formats, making it easy to _____[3] the program around your existing schedule.\n\n_____[4]. Contact us at info@progrowth.com to book your first session.",
+      "questions": [
+        {
+          "options": [
+            "(A) effect",
+            "(B) effective",
+            "(C) effectively",
+            "(D) effectiveness"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Effective ways' — adjectif avant le nom; 'effective' signifie 'efficace', collocation standard.",
+            "distractors": {
+              "A": "'Effect' est un nom — 'effect ways' n'est pas une collocation correcte.",
+              "C": "'Effectively' est un adverbe — il ne peut pas modifier un nom.",
+              "D": "'Effectiveness' est un nom abstrait — 'effectiveness ways' n'est pas idiomatique."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) comprehensive",
+            "(B) comprehension",
+            "(C) comprehend",
+            "(D) comprehensively"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Comprehensive training' — adjectif avant le nom; 'comprehensive' signifie 'complet, approfondi'.",
+            "distractors": {
+              "B": "'Comprehension' est un nom — 'comprehension training' changerait le sens (formation en compréhension).",
+              "C": "'Comprehend' est un verbe — incompatible avec la position de modificateur avant 'training'.",
+              "D": "'Comprehensively' est un adverbe — il modifie des verbes, pas des noms."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) fit",
+            "(B) fitting",
+            "(C) fitter",
+            "(D) fitted"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Easy to fit' — infinitif après 'to'; 'fit' (base verbale) est le seul choix correct dans cette structure.",
+            "distractors": {
+              "B": "'Fitting' est un gérondif — 'to fitting' est grammaticalement incorrect.",
+              "C": "'Fitter' est un comparatif ou un nom — incompatible avec 'easy to + verbe'.",
+              "D": "'Fitted' est un participe passé — 'to fitted' est grammaticalement incorrect."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) Group discounts are available for teams of five or more participants.",
+            "(B) Our instructors are not certified professionals.",
+            "(C) The program is no longer accepting new registrations.",
+            "(D) Participants must have at least ten years of management experience."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase ajoute un argument commercial pour les groupes — cohérent avec une publicité ciblant les organisations.",
+            "distractors": {
+              "B": "Souligner que les formateurs ne sont pas certifiés nuirait directement à la crédibilité de la publicité.",
+              "C": "Annoncer la fermeture des inscriptions est contradictoire dans une publicité invitant à s'inscrire.",
+              "D": "Une barrière d'entrée aussi restrictive réduirait considérablement le public cible."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "email",
+      "title": "Response to Your Feedback",
+      "text": "To: Angela Kim\nFrom: CustomerRelations@ShopFast.com\nDate: July 19\nSubject: Response to Your Feedback\n\nDear Ms. Kim,\n\nThank you for _____[1] the time to share your experience regarding your recent purchase. We are sorry to hear that your order did not arrive in the _____[2] condition.\n\nAfter reviewing your case, we have _____[3] a full refund to your original payment method. You should see this reflected in your account within three to five business days.\n\n_____[4]. We hope to have the opportunity to serve you again in the future.",
+      "questions": [
+        {
+          "options": [
+            "(A) take",
+            "(B) taking",
+            "(C) took",
+            "(D) taken"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Thank you for taking' — après la préposition 'for', un gérondif (-ing) est obligatoire.",
+            "distractors": {
+              "A": "'Take' est la base verbale — 'for take' est grammaticalement incorrect.",
+              "C": "'Took' est le simple past — ne peut pas suivre une préposition.",
+              "D": "'Taken' est un participe passé — 'for taken' changerait le sens (pour avoir été pris)."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) expect",
+            "(B) expecting",
+            "(C) expectant",
+            "(D) expected"
+          ],
+          "answer": "D",
+          "explanation": {
+            "correct": "'In the expected condition' — participe passé employé comme adjectif; 'expected' signifie 'conforme aux attentes'.",
+            "distractors": {
+              "A": "'Expect' est un verbe — incompatible avec la position d'adjectif avant 'condition'.",
+              "B": "'Expecting' est un participe présent — 'in the expecting condition' n'est pas idiomatique.",
+              "C": "'Expectant' signifie 'dans l'attente de' — hors contexte pour décrire l'état d'un colis."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) issue",
+            "(B) issued",
+            "(C) issuing",
+            "(D) issuance"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Have issued' — present perfect (have + participe passé); 'issued' est le seul participe passé de la liste.",
+            "distractors": {
+              "A": "'Issue' est la base verbale — 'have issue' est grammaticalement incorrect.",
+              "C": "'Issuing' est un participe présent — 'have issuing' est grammaticalement incorrect.",
+              "D": "'Issuance' est un nom — 'have issuance' est grammaticalement impossible."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) We have also forwarded your complaint to our quality control team to prevent similar issues.",
+            "(B) We are unable to process any further refunds on this account.",
+            "(C) The item you ordered is currently out of stock.",
+            "(D) Your account has been temporarily suspended pending review."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase montre une action corrective concrète — essentielle pour une réponse professionnelle crédible à une plainte.",
+            "distractors": {
+              "B": "Refuser de futurs remboursements après avoir accordé un remboursement est contradictoire et peu professionnel.",
+              "C": "Annoncer une rupture de stock après avoir traité le remboursement est hors sujet.",
+              "D": "Suspendre le compte d'un client qui s'est plaint serait perçu comme une réaction hostile."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "letter",
+      "title": "Partnership Proposal – Office Supplies",
+      "text": "Dear Ms. Carter,\n\nOn behalf of OfficeWorks Ltd., I am pleased to _____[1] our latest product catalog and pricing schedule for your review.\n\nAs a preferred supplier to over 300 businesses in the region, OfficeWorks is _____[2] positioned to meet your organization's office supply needs.\n\nWe are currently offering a 10% discount on all orders _____[3] $500 for new clients who sign up before June 30.\n\n_____[4]. We would welcome the opportunity to discuss how we can best support your operations.",
+      "questions": [
+        {
+          "options": [
+            "(A) submit",
+            "(B) submitting",
+            "(C) submitted",
+            "(D) submission"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Pleased to submit' — infinitif après 'to'; 'submit' (base verbale) est le seul choix correct.",
+            "distractors": {
+              "B": "'Submitting' est un gérondif — 'to submitting' est grammaticalement incorrect.",
+              "C": "'Submitted' est un participe passé — ne suit pas 'to' dans ce contexte actif.",
+              "D": "'Submission' est un nom — 'to submission' est grammaticalement impossible ici."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) unique",
+            "(B) uniquely",
+            "(C) uniqueness",
+            "(D) uniquified"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Uniquely positioned' — adverbe modifiant le participe passé 'positioned'; 'uniquely' est la seule forme en -ly.",
+            "distractors": {
+              "A": "'Unique' est un adjectif — 'unique positioned' est grammaticalement incorrect sans trait d'union.",
+              "C": "'Uniqueness' est un nom — un nom ne peut pas modifier un participe passé dans cette position.",
+              "D": "'Uniquified' n'existe pas en anglais standard."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) exceed",
+            "(B) exceeds",
+            "(C) exceeded",
+            "(D) exceeding"
+          ],
+          "answer": "D",
+          "explanation": {
+            "correct": "'Orders exceeding $500' — participe présent en position de modificateur post-nominal; 'exceeding' qualifie 'orders'.",
+            "distractors": {
+              "A": "'Exceed' est la base verbale — 'orders exceed $500' formerait une nouvelle proposition, pas un modificateur.",
+              "B": "'Exceeds' est conjugué — même problème que (A), formerait une proposition relative sans 'that'.",
+              "C": "'Exceeded' est un participe passé — 'orders exceeded $500' impliquerait que le seuil a déjà été dépassé."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) Please find our contact details and terms of service enclosed with this letter.",
+            "(B) We apologize for any delays in our recent deliveries.",
+            "(C) Our prices are fixed and cannot be negotiated under any circumstances.",
+            "(D) We are no longer accepting new clients at this time."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase annonce la documentation jointe — formule standard et attendue dans une lettre de proposition commerciale.",
+            "distractors": {
+              "B": "Des excuses pour des retards seraient déplacées dans une lettre de première approche commerciale.",
+              "C": "Présenter les prix comme non négociables affaiblirait l'invitation à discuter.",
+              "D": "Refuser de nouveaux clients contredirait directement l'objet de la lettre."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "notice",
+      "title": "Annual Staff Conference – Registration Open",
+      "text": "Annual Staff Conference — Registration Now Open\n\nThis year's Annual Staff Conference will be held on Friday, August 15, at the Grand Meridian Hotel.\n\nAll employees are _____[1] to attend and should register no later than July 31 through the company intranet.\n\nThe event will feature keynote presentations, departmental workshops, and a networking reception in the _____[2].\n\n_____[3].\n\nSpace is _____[4], so early registration is strongly encouraged.",
+      "questions": [
+        {
+          "options": [
+            "(A) encouraging",
+            "(B) encouraged",
+            "(C) encourage",
+            "(D) encouragement"
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Are encouraged to attend' — voix passive (are + participe passé); 'encouraged' est la seule forme correcte.",
+            "distractors": {
+              "A": "'Encouraging' est un participe présent — 'are encouraging' serait actif (en train d'encourager), pas passif.",
+              "C": "'Encourage' est la base verbale — 'are encourage' est grammaticalement incorrect.",
+              "D": "'Encouragement' est un nom — 'are encouragement' est grammaticalement impossible."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) evening",
+            "(B) eve",
+            "(C) afternoon",
+            "(D) night"
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "'Reception in the evening' — 'in the evening' est la locution temporelle standard pour désigner la soirée.",
+            "distractors": {
+              "B": "'Eve' désigne la veille d'un événement — 'in the eve' n'est pas l'expression correcte pour la soirée.",
+              "C": "'In the afternoon' est possible mais 'evening' est plus cohérent avec une réception de clôture en fin de journée.",
+              "D": "'Night' évoque une période trop tardive — 'in the night' n'est pas idiomatique dans ce contexte."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) A detailed agenda will be distributed to all registered participants by August 1.",
+            "(B) Attendance is optional and will not affect performance reviews.",
+            "(C) The conference has been moved to a different location.",
+            "(D) Only senior managers are invited to the departmental workshops."
+          ],
+          "answer": "A",
+          "explanation": {
+            "correct": "Cette phrase complète les informations pratiques en annonçant la distribution du programme — suite logique après la description des activités.",
+            "distractors": {
+              "B": "Rendre la présence optionnelle contredirait 'All employees are encouraged to attend'.",
+              "C": "Annoncer un changement de lieu contredirait l'information donnée au début de l'avis.",
+              "D": "Restreindre les ateliers aux managers contredirait 'All employees are encouraged to attend'."
+            }
+          }
+        },
+        {
+          "options": [
+            "(A) limit",
+            "(B) limiting",
+            "(C) limited",
+            "(D) limitation"
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "'Space is limited' — adjectif dans le prédicat après 'is'; 'limited' signifie 'en nombre restreint'.",
+            "distractors": {
+              "A": "'Limit' est un verbe ou un nom — 'space is limit' est grammaticalement incorrect.",
+              "B": "'Limiting' est un participe présent — 'space is limiting' signifierait que l'espace est contraignant (sens différent).",
+              "D": "'Limitation' est un nom — 'space is limitation' est grammaticalement incorrect."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

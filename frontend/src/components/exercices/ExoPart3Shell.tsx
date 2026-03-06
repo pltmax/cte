@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useExerciseCompletion } from "@/hooks/useExerciseCompletion";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -43,6 +44,8 @@ interface Conversation {
 interface ExoPart3ShellProps {
   conversations: Conversation[];
   advice: Advice;
+  exerciseLabel: string;
+  exerciseKey: string;
 }
 
 type Phase = "advice" | "questions" | "done";
@@ -51,8 +54,9 @@ const OPTION_KEYS = ["A", "B", "C", "D"] as const;
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function ExoPart3Shell({ conversations, advice }: ExoPart3ShellProps) {
+export default function ExoPart3Shell({ conversations, advice, exerciseLabel, exerciseKey }: ExoPart3ShellProps) {
   const router = useRouter();
+  const { markCompleted } = useExerciseCompletion();
   const [phase, setPhase] = useState<Phase>("advice");
   const [currentConvIndex, setCurrentConvIndex] = useState(0);
   const [hasPlayedAudio, setHasPlayedAudio] = useState(false);
@@ -64,6 +68,10 @@ export default function ExoPart3Shell({ conversations, advice }: ExoPart3ShellPr
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioUrlRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    document.querySelector("main")?.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentConvIndex]);
 
   const currentConv = conversations[currentConvIndex];
   const totalConvs = conversations.length;
@@ -93,10 +101,12 @@ export default function ExoPart3Shell({ conversations, advice }: ExoPart3ShellPr
     setVerified(true);
     setAllAnswers((prev) => ({ ...prev, [currentConvIndex]: currentAnswers }));
     stopAudio();
+    document.querySelector("main")?.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function handleNext() {
     if (currentConvIndex + 1 >= totalConvs) {
+      markCompleted(exerciseKey);
       setPhase("done");
     } else {
       setCurrentConvIndex((i) => i + 1);
@@ -191,7 +201,12 @@ export default function ExoPart3Shell({ conversations, advice }: ExoPart3ShellPr
           Partie 3 — Exercice
         </p>
         <h1 className="text-2xl font-bold text-gray-900 mb-1">Conversations</h1>
-        <p className="text-sm text-gray-500 mb-6">{advice.intro}</p>
+        <p className="text-sm text-gray-500 mb-5">{advice.intro}</p>
+
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#ddd6fe] bg-[#f3eeff] px-4 py-1.5 mb-5">
+          <span className="text-sm font-semibold text-[#7c3aed]">{exerciseLabel}</span>
+          <span className="text-xs text-[#9f7aea]">· {totalConvs} conversation{totalConvs > 1 ? "s" : ""} · {totalQs} questions</span>
+        </div>
 
         {/* Strategy tip */}
         <div className="flex gap-3 items-start bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6">

@@ -1,0 +1,1172 @@
+{
+  "advice": {
+    "intro": "5 des ensembles de 2 à 3 documents liés. Les questions testent votre capacité à comprendre chaque document et à croiser les informations entre elles.",
+    "strategy": "Lisez d'abord les questions, repérez les mots-clés, puis cherchez les réponses dans les documents. Pour les questions qui croisent deux documents, vérifiez les deux avant de répondre.",
+    "traps": [
+      {
+        "label": "Source incorrecte",
+        "example": "L'information est vraie dans le document B mais la question porte sur le document A."
+      },
+      {
+        "label": "Paraphrase trompeuse",
+        "example": "\"complimentary\" dans le texte correspond à \"free\" dans l'option."
+      },
+      {
+        "label": "Réponse partielle",
+        "example": "Choisir une réponse vraie dans un seul document quand la question exige de croiser les deux."
+      },
+      {
+        "label": "Chiffres et dates",
+        "example": "Plusieurs dates ou montants mentionnés. Choisis celui qui répond précisément à la question."
+      }
+    ]
+  },
+  "passages": [
+    {
+      "documents": [
+        {
+          "doctype": "advertisement",
+          "title": "Job Opening — Marketing Coordinator",
+          "text": "Bright Media is seeking a Marketing Coordinator to join our Chicago team.\n\nResponsibilities:\n• Manage social media channels\n• Coordinate marketing campaigns\n• Prepare monthly performance reports\n\nRequirements:\n• Bachelor's degree in Marketing or related field\n• Minimum 2 years of relevant experience\n• Proficiency in Adobe Creative Suite\n\nSalary: $45,000–$55,000/year\nBenefits: Health insurance, 401(k), 15 days paid vacation\n\nSend resume and cover letter to: jobs@brightmedia.com\nDeadline: March 20"
+        },
+        {
+          "doctype": "email",
+          "title": "Application — Sarah Kim",
+          "text": "From: sarah.kim@email.com\nTo: jobs@brightmedia.com\nDate: March 15\nSubject: Marketing Coordinator Application\n\nDear Hiring Manager,\n\nI am writing to apply for the Marketing Coordinator position. I hold a Bachelor's degree in Communications and have three years of experience managing social media for a retail brand. I am proficient in Adobe Creative Suite and consistently exceeded campaign targets by 20%.\n\nPlease find my resume attached. I am available for an interview at your earliest convenience.\n\nBest regards,\nSarah Kim"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What position is Bright Media advertising?",
+          "options": ["(A) Social Media Manager", "(B) Marketing Coordinator", "(C) Campaign Director", "(D) Creative Designer"],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le titre de l'annonce est clairement « Marketing Coordinator ».",
+            "distractors": {
+              "A": "La gestion des réseaux sociaux est une tâche du poste, pas le titre.",
+              "C": "Non mentionné dans l'annonce.",
+              "D": "Non mentionné dans l'annonce."
+            }
+          }
+        },
+        {
+          "text": "What is the application deadline?",
+          "options": ["(A) March 10", "(B) March 15", "(C) March 20", "(D) March 25"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'annonce précise « Deadline: March 20 ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "C'est la date à laquelle Sarah Kim a envoyé son email.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What is the minimum experience required for the position?",
+          "options": ["(A) 1 year", "(B) 2 years", "(C) 3 years", "(D) 5 years"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'annonce indique « Minimum 2 years of relevant experience ».",
+            "distractors": {
+              "A": "Inférieur à l'exigence.",
+              "C": "C'est l'expérience de Sarah Kim, pas l'exigence minimale.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What can be inferred about Sarah Kim's qualifications?",
+          "options": ["(A) She lacks the required education.", "(B) She does not have enough experience.", "(C) She meets all the stated requirements.", "(D) She is not proficient in the required software."],
+          "answer": "C",
+          "explanation": {
+            "correct": "Elle a un Bachelor's degree (≥ requis), 3 ans d'expérience (≥ 2 requis) et maîtrise Adobe Creative Suite.",
+            "distractors": {
+              "A": "Elle a un Bachelor's degree en Communications.",
+              "B": "Elle a 3 ans d'expérience, soit plus que les 2 ans requis.",
+              "D": "Elle mentionne explicitement sa maîtrise d'Adobe Creative Suite."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "memo",
+          "title": "Office Renovation — Staff Notice",
+          "text": "To: All Staff\nFrom: Facilities Department\nDate: April 2\nSubject: Temporary Office Relocation\n\nDue to planned renovations on floors 3 and 4, all employees on these floors will be relocated to the 6th floor conference rooms from April 10 to April 24.\n\nPlease take all personal belongings and essential equipment before April 9. Storage boxes will be available from the reception desk.\n\nWe apologize for any inconvenience. For questions, contact facilities@haltongroup.com."
+        },
+        {
+          "doctype": "email",
+          "title": "Re: Office Renovation — James Patel",
+          "text": "From: james.patel@haltongroup.com\nTo: facilities@haltongroup.com\nDate: April 3\nSubject: Re: Office Renovation\n\nHello,\n\nThank you for the notice. I work on the 3rd floor and have a few questions:\n\n1. Will workstations be available on the 6th floor, or should I bring my laptop?\n2. Is there a parking area accessible during the renovation?\n\nAlso, I am traveling on April 9 and may not be able to clear my desk in time. Is there a way to arrange early access on April 8?\n\nThank you,\nJames Patel"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Which floors will be renovated?",
+          "options": ["(A) Floors 2 and 3", "(B) Floors 3 and 4", "(C) Floors 4 and 5", "(D) Floors 5 and 6"],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le mémo mentionne explicitement « floors 3 and 4 ».",
+            "distractors": {
+              "A": "Le 2ème étage n'est pas concerné.",
+              "C": "Le 5ème étage n'est pas mentionné.",
+              "D": "Le 6ème étage est la destination temporaire, pas la zone rénovée."
+            }
+          }
+        },
+        {
+          "text": "Where will relocated employees work during the renovation?",
+          "options": ["(A) A nearby building", "(B) From home", "(C) The 6th floor conference rooms", "(D) The lobby area"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le mémo indique « relocated to the 6th floor conference rooms ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "Why does James Patel request early access on April 8?",
+          "options": ["(A) He wants to help colleagues move.", "(B) He will be traveling on April 9.", "(C) His office is on the 4th floor.", "(D) He needs to pick up storage boxes."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Il écrit « I am traveling on April 9 and may not be able to clear my desk in time ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Il précise qu'il est au 3ème étage.",
+              "D": "Les boîtes sont disponibles à la réception et ce n'est pas la raison de sa demande."
+            }
+          }
+        },
+        {
+          "text": "What is TRUE about the renovation schedule?",
+          "options": ["(A) It will last for two weeks.", "(B) It begins on April 3.", "(C) Employees must clear their desks by April 10.", "(D) It affects all floors of the building."],
+          "answer": "A",
+          "explanation": {
+            "correct": "La rénovation dure du 10 au 24 avril inclus — exactement deux semaines.",
+            "distractors": {
+              "B": "Le mémo est daté du 2 avril, mais la rénovation commence le 10.",
+              "C": "Les employés doivent libérer leur bureau avant le 9 avril, pas le 10.",
+              "D": "Seuls les étages 3 et 4 sont concernés."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "email",
+          "title": "Q2 Review Meeting Invitation",
+          "text": "From: linda.chen@nexatech.com\nTo: project-team@nexatech.com\nDate: May 5\nSubject: Q2 Review Meeting — May 12\n\nHi everyone,\n\nI'd like to schedule our Q2 review meeting on Wednesday, May 12, at 2:00 PM in Conference Room B.\n\nAgenda:\n• Q2 sales results (Linda Chen)\n• Client feedback summary (Tom Harris)\n• Q3 planning overview (all)\n\nPlease confirm attendance by May 9. If you cannot attend in person, a video link will be shared. Light refreshments will be provided.\n\nBest,\nLinda"
+        },
+        {
+          "doctype": "schedule",
+          "title": "Conference Room B — May Bookings",
+          "text": "CONFERENCE ROOM B — MAY BOOKINGS\n\nMay 8  (Mon): 10:00–11:30  Product Team Sync\nMay 10 (Wed): 14:00–15:00  HR Onboarding Session\nMay 12 (Wed): 09:00–10:00  Board Call [reserved]\n              14:00–16:00  Q2 Review Meeting [reserved]\nMay 15 (Fri): 11:00–12:00  Client Demo\nMay 19 (Tue): All-day training — room unavailable\n\nBookings: contact reception@nexatech.com"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What time is the Q2 review meeting scheduled to begin?",
+          "options": ["(A) 9:00 AM", "(B) 11:00 AM", "(C) 2:00 PM", "(D) 4:00 PM"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'email et le planning indiquent 14:00 (2:00 PM) pour la réunion Q2.",
+            "distractors": {
+              "A": "C'est l'heure du Board Call le même jour.",
+              "B": "Non mentionné pour cette réunion.",
+              "D": "C'est l'heure de fin de la réunion, pas le début."
+            }
+          }
+        },
+        {
+          "text": "Who is responsible for presenting the client feedback summary?",
+          "options": ["(A) Linda Chen", "(B) Tom Harris", "(C) All team members", "(D) The reception staff"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'agenda précise « Client feedback summary (Tom Harris) ».",
+            "distractors": {
+              "A": "Linda Chen présente les résultats Q2.",
+              "C": "Toute l'équipe participe à la planification Q3, pas au feedback client.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "By what date must attendees confirm their attendance?",
+          "options": ["(A) May 5", "(B) May 8", "(C) May 9", "(D) May 12"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'email indique « Please confirm attendance by May 9 ».",
+            "distractors": {
+              "A": "C'est la date d'envoi de l'email.",
+              "B": "C'est la date du premier événement dans le planning.",
+              "D": "C'est la date de la réunion elle-même."
+            }
+          }
+        },
+        {
+          "text": "What does the room schedule indicate about May 19?",
+          "options": ["(A) A client demo is planned.", "(B) The room is unavailable all day.", "(C) A product team meeting is scheduled.", "(D) The Q2 review will be held that day."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le planning indique « All-day training — room unavailable » pour le 19 mai.",
+            "distractors": {
+              "A": "Le client demo est le 15 mai.",
+              "C": "La réunion produit est le 8 mai.",
+              "D": "La réunion Q2 est le 12 mai."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "notice",
+          "title": "Building Maintenance Policy Update",
+          "text": "PINEWOOD TOWERS — MAINTENANCE NOTICE\n\nEffective June 1, all maintenance requests must be submitted through the online portal at pinewoodtowers.com/maintenance or via the Pinewood App.\n\nPhone requests will no longer be accepted.\n\nFor urgent issues (water leaks, heating failures, electrical faults), use the Priority Request option. A technician will respond within 2 hours.\n\nStandard requests will be processed within 3–5 business days.\n\nFor portal access questions, contact the building office: office@pinewoodtowers.com"
+        },
+        {
+          "doctype": "form",
+          "title": "Maintenance Request — Unit 14B",
+          "text": "MAINTENANCE REQUEST FORM\nSubmitted via: Pinewood App\nDate: June 4\nUnit: 14B\nResident: Ms. Angela Ross\n\nIssue type: Standard\nDescription: The kitchen faucet has been dripping for several days. Water pressure in the bathroom is also lower than usual.\n\nPreferred access time: Weekday mornings (9 AM – 12 PM)\nContact: a.ross@email.com / 555-0182\n\nStatus: Submitted — awaiting assignment"
+        }
+      ],
+      "questions": [
+        {
+          "text": "How must maintenance requests be submitted starting June 1?",
+          "options": ["(A) By phone only", "(B) Via the online portal or the Pinewood App", "(C) By visiting the building office", "(D) By email to the management team"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'avis indique que les demandes doivent être soumises via le portail en ligne ou l'application Pinewood.",
+            "distractors": {
+              "A": "L'avis précise que les demandes par téléphone ne seront plus acceptées.",
+              "C": "Non mentionné comme méthode de soumission.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "How long does a standard maintenance request typically take?",
+          "options": ["(A) 2 hours", "(B) 1 business day", "(C) 3–5 business days", "(D) 1 week"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'avis indique « Standard requests will be processed within 3–5 business days ».",
+            "distractors": {
+              "A": "C'est le délai de réponse pour les urgences (Priority Request).",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "How did Ms. Ross submit her maintenance request?",
+          "options": ["(A) By phone", "(B) By email", "(C) Through the Pinewood App", "(D) At the building office"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le formulaire indique « Submitted via: Pinewood App ».",
+            "distractors": {
+              "A": "Les demandes par téléphone ne sont plus acceptées.",
+              "B": "Non indiqué.",
+              "D": "Non indiqué."
+            }
+          }
+        },
+        {
+          "text": "What issue did Ms. Ross report?",
+          "options": ["(A) A water leak and an electrical fault", "(B) A broken heating system", "(C) A dripping faucet and low water pressure", "(D) A broken faucet and a flooded bathroom"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Elle signale « kitchen faucet dripping » et « lower water pressure in the bathroom ».",
+            "distractors": {
+              "A": "Une fuite d'eau et une panne électrique seraient des urgences; ce n'est pas ce qu'elle décrit.",
+              "B": "Non mentionné.",
+              "D": "Le robinet goutte mais n'est pas cassé; la salle de bain n'est pas inondée."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "job_posting",
+          "title": "Head Chef — The Riverside Grill",
+          "text": "The Riverside Grill is looking for an experienced Head Chef to lead our kitchen team.\n\nRequirements:\n• 5+ years of professional kitchen experience\n• Proven leadership and team management skills\n• Expertise in Mediterranean and French cuisine\n• Culinary degree or equivalent certification preferred\n\nResponsibilities:\n• Design seasonal menus\n• Supervise kitchen staff\n• Ensure food quality and hygiene standards\n\nSchedule: Tuesday to Sunday, evenings\nSalary: Competitive, based on experience\nContact: hr@riversidegrill.com"
+        },
+        {
+          "doctype": "letter",
+          "title": "Application Letter — Marc Dubois",
+          "text": "Marc Dubois\n14 Maple Street, Lyon\nm.dubois@email.com\n\nApril 18\n\nDear Hiring Team,\n\nI am applying for the Head Chef position at The Riverside Grill. I have worked in professional kitchens for seven years, most recently as Sous Chef at Café Mistral in Lyon, where I specialized in Mediterranean cuisine.\n\nI hold a Culinary Arts diploma from the Institut Paul Bocuse and have led a team of eight kitchen staff. I am particularly proud of having redesigned the seasonal menu, which increased repeat customer visits by 30%.\n\nI am available for a tasting session or interview at your convenience.\n\nSincerely,\nMarc Dubois"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What cuisine expertise is required for the Head Chef position?",
+          "options": ["(A) Asian and Italian", "(B) Mediterranean and French", "(C) American and Spanish", "(D) French and Japanese"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'annonce mentionne « Expertise in Mediterranean and French cuisine ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Non mentionné.",
+              "D": "Seule la cuisine française est mentionnée, pas la japonaise."
+            }
+          }
+        },
+        {
+          "text": "What was Marc Dubois's most recent position?",
+          "options": ["(A) Head Chef at The Riverside Grill", "(B) Chef Instructor at Institut Paul Bocuse", "(C) Sous Chef at Café Mistral", "(D) Kitchen Manager at a hotel"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Il indique avoir été « Sous Chef at Café Mistral in Lyon ».",
+            "distractors": {
+              "A": "C'est le poste pour lequel il postule.",
+              "B": "L'Institut Paul Bocuse est l'école dont il est diplômé, pas son employeur.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "How does Marc Dubois meet the experience requirement?",
+          "options": ["(A) He has exactly 5 years of experience.", "(B) He has 7 years of professional experience.", "(C) He completed a cooking internship.", "(D) He managed a restaurant for 3 years."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Sa lettre indique « seven years » d'expérience, ce qui dépasse les 5 ans requis.",
+            "distractors": {
+              "A": "Il a 7 ans, pas exactement 5.",
+              "C": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What achievement does Marc Dubois highlight in his letter?",
+          "options": ["(A) Opening his own restaurant", "(B) Winning a culinary award", "(C) Increasing repeat customer visits by redesigning the menu", "(D) Training a team of 20 chefs"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Il mentionne avoir redessiné le menu saisonnier, augmentant les visites clients de 30%.",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "Non mentionné.",
+              "D": "Son équipe était de 8 personnes, pas 20."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "advertisement",
+          "title": "BrewMaster Pro 3000 — Coffee Maker",
+          "text": "BrewMaster Pro 3000 — The perfect coffee maker for home and office.\n\n• 12-cup capacity\n• Programmable 24-hour timer\n• Built-in grinder with 5 coarseness settings\n• Keep-warm function (up to 2 hours)\n• Compatible with ground coffee and whole beans\n• 2-year manufacturer warranty\n\nAvailable in: Black, Silver, and Red\nRetail price: $129.99\nFree shipping on orders over $100\n\nOrder at brewmasterpro.com or at selected retailers."
+        },
+        {
+          "doctype": "review",
+          "title": "Customer Review — Jane M.",
+          "text": "★★★★☆ (4/5)\nReviewer: Jane M. — Verified Purchase\nDate: February 10\n\nI purchased the BrewMaster Pro 3000 in Silver last month. The grinder is excellent and the programmable timer is a lifesaver in the mornings. Coffee quality is noticeably better than my previous machine.\n\nHowever, the keep-warm function stops after about 90 minutes, not the 2 hours advertised. I contacted customer service, and they acknowledged this is a known issue with some units.\n\nOverall, a great machine — but check for this issue before your warranty expires."
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the retail price of the BrewMaster Pro 3000?",
+          "options": ["(A) $99.99", "(B) $119.99", "(C) $129.99", "(D) $149.99"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'annonce indique « Retail price: $129.99 ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What problem did Jane M. experience with the machine?",
+          "options": ["(A) The grinder was broken.", "(B) The timer did not work.", "(C) The keep-warm function stopped earlier than advertised.", "(D) She received the wrong color."],
+          "answer": "C",
+          "explanation": {
+            "correct": "Elle signale que la fonction keep-warm s'arrête après 90 minutes au lieu des 2 heures annoncées.",
+            "distractors": {
+              "A": "Elle dit au contraire que le broyeur est excellent.",
+              "B": "Elle apprécie la minuterie programmable.",
+              "D": "Elle a bien reçu le modèle Silver qu'elle a commandé."
+            }
+          }
+        },
+        {
+          "text": "In what color did Jane M. purchase the machine?",
+          "options": ["(A) Black", "(B) Red", "(C) Silver", "(D) White"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Elle indique avoir acheté le modèle « in Silver ».",
+            "distractors": {
+              "A": "Black est disponible mais n'est pas la couleur de Jane.",
+              "B": "Red est disponible mais n'est pas la couleur de Jane.",
+              "D": "White n'est pas une couleur disponible."
+            }
+          }
+        },
+        {
+          "text": "What advice does Jane M. give to potential buyers?",
+          "options": ["(A) Return the machine if the grinder is noisy.", "(B) Check the keep-warm function before the warranty expires.", "(C) Purchase the machine only in-store.", "(D) Choose the Black model for better performance."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Elle recommande de vérifier le problème du keep-warm avant l'expiration de la garantie de 2 ans.",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Non mentionné — elle l'a achetée en ligne.",
+              "D": "Non mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "email",
+          "title": "Order Inquiry — Westfield Office Supplies",
+          "text": "From: claire.nguyen@topnotch.com\nTo: orders@westfieldsupplies.com\nDate: September 3\nSubject: Order #WF-4821 — Delivery Inquiry\n\nDear Westfield Team,\n\nI placed order #WF-4821 on August 28 for 10 boxes of copy paper and 5 HP ink cartridges (model 305). Our delivery was scheduled for September 3, but we have not received it.\n\nCould you confirm the status and provide an updated delivery estimate?\n\nAlso, please let me know if there are any additional charges we should expect.\n\nBest regards,\nClaire Nguyen\nProcurement Manager, Topnotch Solutions"
+        },
+        {
+          "doctype": "invoice",
+          "title": "Invoice #WF-4821",
+          "text": "WESTFIELD OFFICE SUPPLIES\nInvoice #WF-4821 — Date: August 28\nBill to: Topnotch Solutions, Attn: Claire Nguyen\n\nITEMS:\n• Copy Paper A4 (box × 10) ............. $89.50\n• HP Ink Cartridge 305 (× 5) ........... $74.75\n\nSubtotal: $164.25\nShipping: $12.00\nDiscount (10% loyalty): –$16.43\nTOTAL DUE: $159.82\n\nPayment due: September 17\nDelivery: September 3–5 (standard shipping)\n\nThank you for your business!"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What did Claire Nguyen order?",
+          "options": ["(A) Printer paper and toner cartridges", "(B) Copy paper and HP ink cartridges", "(C) Copy paper and office chairs", "(D) Envelopes and ink cartridges"],
+          "answer": "B",
+          "explanation": {
+            "correct": "La commande comprend 10 boîtes de papier copie et 5 cartouches d'encre HP 305.",
+            "distractors": {
+              "A": "Des cartouches d'encre, pas du toner; le terme exact est « copy paper ».",
+              "C": "Aucune chaise n'est commandée.",
+              "D": "Des enveloppes ne sont pas mentionnées."
+            }
+          }
+        },
+        {
+          "text": "According to the invoice, what is the total amount due?",
+          "options": ["(A) $164.25", "(B) $159.82", "(C) $176.25", "(D) $89.50"],
+          "answer": "B",
+          "explanation": {
+            "correct": "La facture indique « TOTAL DUE: $159.82 » après remise de fidélité.",
+            "distractors": {
+              "A": "C'est le sous-total avant remise et frais de port.",
+              "C": "Non mentionné.",
+              "D": "C'est uniquement le prix du papier."
+            }
+          }
+        },
+        {
+          "text": "Why did Claire Nguyen write the email?",
+          "options": ["(A) To cancel her order", "(B) To dispute the invoice amount", "(C) To inquire about a delayed delivery", "(D) To request a product exchange"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Elle n'a pas reçu sa livraison prévue pour le 3 septembre et demande une mise à jour.",
+            "distractors": {
+              "A": "Elle ne cherche pas à annuler.",
+              "B": "Elle ne conteste pas le montant.",
+              "D": "Elle ne demande pas d'échange."
+            }
+          }
+        },
+        {
+          "text": "According to the invoice, what is the delivery window?",
+          "options": ["(A) August 28–30", "(B) September 1–3", "(C) September 3–5", "(D) September 10–12"],
+          "answer": "C",
+          "explanation": {
+            "correct": "La facture indique « Delivery: September 3–5 (standard shipping) ».",
+            "distractors": {
+              "A": "C'est la date de la commande.",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "article",
+          "title": "Nexatech Expands to European Market",
+          "text": "Nexatech, the California-based software firm, announced plans to open a European headquarters in Amsterdam by end of Q3. The expansion follows record revenue of $240 million in the previous fiscal year.\n\nCEO Rachel Moore said: \"Europe is a natural next step. We have strong client relationships across the UK, Germany, and France, and Amsterdam provides the talent and infrastructure we need.\"\n\nThe Amsterdam office will initially house 80 employees, with plans to grow to 200 within two years. Nexatech will also host a hiring event in Amsterdam on October 15."
+        },
+        {
+          "doctype": "memo",
+          "title": "European Expansion — Opportunities for Staff",
+          "text": "To: All Staff\nFrom: HR Department\nDate: October 1\nSubject: European Expansion — Relocation Opportunities\n\nAs announced, Nexatech is opening its Amsterdam office in Q3. Current employees are encouraged to apply for relocation.\n\nRelocation Package:\n• Flight and moving costs covered\n• 3-month temporary housing allowance\n• €500 settling-in bonus\n\nInterested employees should submit applications to hr@nexatech.com by October 10. Priority will be given to employees with relevant language skills (Dutch, German, or French).\n\nJoin us in building something great in Europe!"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where will Nexatech open its European headquarters?",
+          "options": ["(A) London", "(B) Berlin", "(C) Paris", "(D) Amsterdam"],
+          "answer": "D",
+          "explanation": {
+            "correct": "L'article et le mémo indiquent tous deux qu'Amsterdam est le siège européen choisi.",
+            "distractors": {
+              "A": "Le Royaume-Uni est mentionné comme marché existant, pas comme siège.",
+              "B": "L'Allemagne est mentionnée comme marché.",
+              "C": "La France est mentionnée comme marché."
+            }
+          }
+        },
+        {
+          "text": "What was Nexatech's revenue in the previous fiscal year?",
+          "options": ["(A) $120 million", "(B) $200 million", "(C) $240 million", "(D) $300 million"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'article mentionne « record revenue of $240 million ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "200 est la cible d'employés, pas le chiffre d'affaires.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What is included in the relocation package for staff?",
+          "options": ["(A) A permanent housing subsidy", "(B) A €500 settling-in bonus", "(C) A company car", "(D) A salary increase of 20%"],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le mémo mentionne un « €500 settling-in bonus » parmi les avantages du package.",
+            "distractors": {
+              "A": "Le logement temporaire est couvert 3 mois, pas de façon permanente.",
+              "C": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "By what date must interested employees apply for relocation?",
+          "options": ["(A) October 1", "(B) October 10", "(C) October 15", "(D) End of Q3"],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le mémo indique que les candidatures doivent être soumises « by October 10 ».",
+            "distractors": {
+              "A": "C'est la date du mémo.",
+              "C": "C'est la date de l'événement de recrutement à Amsterdam.",
+              "D": "C'est la date prévue d'ouverture du bureau."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "advertisement",
+          "title": "Leadership Skills Workshop — Register Now",
+          "text": "LEADERSHIP SKILLS WORKSHOP\nDate: November 8, 9:00 AM – 5:00 PM\nVenue: Grandview Conference Center, Room 201\nPrice: $180/person ($150 for groups of 3+)\n\nTopics:\n• Effective communication\n• Conflict resolution\n• Team motivation and delegation\n• Strategic decision-making\n\nIncludes: Workbook, lunch, and certificate of completion\nInstructor: Dr. Patricia Wells (20 years of corporate training experience)\n\nRegister at: leadershipworkshop.com\nDeadline: November 1"
+        },
+        {
+          "doctype": "email",
+          "title": "Group Registration — Kairotech",
+          "text": "From: paul.martin@kairotech.com\nTo: info@leadershipworkshop.com\nDate: October 28\nSubject: Group Registration — 4 Attendees\n\nHello,\n\nI would like to register four employees: Emma Clarke, David Osei, Nina Patel, and myself (Paul Martin).\n\nCould you confirm:\n1. Whether the group discount applies to our registration?\n2. If we can pay by company invoice?\n\nThank you,\nPaul Martin, HR Manager, Kairotech"
+        },
+        {
+          "doctype": "email",
+          "title": "Confirmation — Leadership Workshop",
+          "text": "From: info@leadershipworkshop.com\nTo: paul.martin@kairotech.com\nDate: October 29\nSubject: Re: Group Registration — Confirmed\n\nDear Mr. Martin,\n\nWe confirm 4 spots for your team on November 8.\n\nYour group qualifies for the discounted rate of $150 per person. Total: $600.\n\nPayment by company invoice is accepted. Please send billing details to billing@leadershipworkshop.com.\n\nWe look forward to welcoming your team!\n\nBest,\nLeadership Workshop Team"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the standard price per person for the workshop?",
+          "options": ["(A) $130", "(B) $150", "(C) $180", "(D) $200"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'annonce indique « $180/person » comme tarif standard.",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "C'est le tarif de groupe (3+ personnes).",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "How many people does Paul Martin register for the workshop?",
+          "options": ["(A) 2", "(B) 3", "(C) 4", "(D) 5"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Il inscrit Emma Clarke, David Osei, Nina Patel et lui-même — 4 personnes.",
+            "distractors": {
+              "A": "Non.",
+              "B": "Non.",
+              "D": "Non."
+            }
+          }
+        },
+        {
+          "text": "What is the total amount Kairotech will pay?",
+          "options": ["(A) $540", "(B) $600", "(C) $720", "(D) $750"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'email de confirmation indique « Total: $600 » (4 × $150 tarif de groupe).",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Ce serait 4 × $180 (tarif standard) sans remise.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What does the confirmation email say about payment?",
+          "options": ["(A) Payment must be made by credit card.", "(B) Payment by company invoice is accepted.", "(C) A deposit is required before November 1.", "(D) Cash payment is the only option."],
+          "answer": "B",
+          "explanation": {
+            "correct": "La confirmation indique « Payment by company invoice is accepted ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What information must Kairotech send to complete the payment process?",
+          "options": ["(A) A list of attendees' job titles", "(B) The company billing details", "(C) A signed registration form", "(D) Proof of company size"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'email de confirmation demande d'envoyer les « billing details » à billing@leadershipworkshop.com.",
+            "distractors": {
+              "A": "Non demandé.",
+              "C": "Non mentionné.",
+              "D": "Non demandé."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "memo",
+          "title": "New Remote Work Policy — Effective October 1",
+          "text": "To: All Department Managers\nFrom: Executive Team\nDate: September 5\nSubject: Remote Work Policy Update\n\nStarting October 1, all employees must be present in the office at least 3 days per week. The remaining 2 days may be worked remotely.\n\nExceptions may be granted for medical or caregiving reasons with supporting documentation submitted to your direct manager.\n\nManagers must track team attendance via the updated HR portal. Monthly reports are due on the 5th of each month."
+        },
+        {
+          "doctype": "email",
+          "title": "Re: Remote Work Policy — Sophie Durand",
+          "text": "From: sophie.durand@globalcore.com\nTo: michael.jones@globalcore.com\nDate: September 7\nSubject: Re: Remote Work Policy\n\nHi Michael,\n\nI saw the memo about the new remote policy. I currently care for my elderly mother three mornings per week and was approved for full remote work for that reason.\n\nDoes this new policy affect my arrangement? Should I submit a formal exception request?\n\nI can come into the office Tuesday, Wednesday, and Thursday if needed.\n\nThanks,\nSophie"
+        },
+        {
+          "doctype": "schedule",
+          "title": "Team Weekly Schedule — October",
+          "text": "TEAM SCHEDULE — OCTOBER\n\nName          | Mon  | Tue  | Wed  | Thu  | Fri\n--------------|------|------|------|------|-----\nMichael Jones | OFF  | OFC  | OFC  | OFC  | REM\nSophie Durand | REM  | OFC  | OFC  | OFC  | REM\nLiam Torres   | OFC  | OFC  | REM  | OFC  | OFC\nAnna Weber    | OFC  | REM  | OFC  | OFC  | REM\n\nOFC = In office  /  REM = Remote  /  OFF = Day off"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Under the new policy, how many days per week must employees work in the office?",
+          "options": ["(A) 2 days", "(B) 3 days", "(C) 4 days", "(D) 5 days"],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le mémo précise « at least 3 days per week » en présentiel.",
+            "distractors": {
+              "A": "2 jours est le nombre de jours de télétravail autorisés.",
+              "C": "Non mentionné.",
+              "D": "La politique autorise 2 jours de télétravail par semaine."
+            }
+          }
+        },
+        {
+          "text": "Why is Sophie Durand concerned about the new policy?",
+          "options": ["(A) She lives far from the office.", "(B) She cares for her elderly mother three mornings a week.", "(C) She has a health condition that requires rest.", "(D) She recently started a project requiring full remote work."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Sophie indique qu'elle s'occupe de sa mère âgée trois matins par semaine.",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Sa raison est le soin familial, pas une condition médicale personnelle.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "According to the schedule, how many days does Sophie Durand work in the office per week?",
+          "options": ["(A) 2", "(B) 3", "(C) 4", "(D) 5"],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le planning montre Sophie au bureau mardi, mercredi et jeudi — 3 jours, conforme à la nouvelle politique.",
+            "distractors": {
+              "A": "2 jours correspond à ses jours de télétravail (lundi et vendredi).",
+              "C": "Non.",
+              "D": "Non."
+            }
+          }
+        },
+        {
+          "text": "When are monthly attendance reports due?",
+          "options": ["(A) The last day of each month", "(B) Every Monday", "(C) The 5th of each month", "(D) The 1st of each month"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le mémo indique « Monthly reports are due on the 5th of each month ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "Non mentionné.",
+              "D": "Le 1er octobre est la date d'entrée en vigueur de la politique, pas la date de rapport."
+            }
+          }
+        },
+        {
+          "text": "What does the schedule indicate about Michael Jones on Monday?",
+          "options": ["(A) He works remotely.", "(B) He is in the office.", "(C) He has a day off.", "(D) He attends a training session."],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le planning indique « OFF » pour Michael Jones le lundi.",
+            "distractors": {
+              "A": "Non — « OFF » signifie jour de congé, pas télétravail.",
+              "B": "Non — « OFC » signifie bureau, mais Michael est « OFF ».",
+              "D": "Non mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "job_posting",
+          "title": "IT Support Specialist — Cornerstone Bank",
+          "text": "Cornerstone Bank is hiring an IT Support Specialist for our downtown branch.\n\nKey responsibilities:\n• Provide technical support to 150+ staff\n• Maintain hardware, software, and network systems\n• Document incidents in our ticketing system\n• Liaise with external vendors for equipment upgrades\n\nRequirements:\n• Bachelor's degree in IT or Computer Science\n• 3+ years of IT support experience\n• CompTIA A+ certification required\n• Experience with Windows 10/11 and Microsoft 365\n\nSalary: $52,000–$60,000\nApply to: it-hr@cornerstonebank.com"
+        },
+        {
+          "doctype": "email",
+          "title": "Application — Oliver Park",
+          "text": "From: oliver.park@email.com\nTo: it-hr@cornerstonebank.com\nDate: January 12\nSubject: IT Support Specialist Application\n\nDear Hiring Team,\n\nI am applying for the IT Support Specialist role. I have a Bachelor's degree in Computer Science and four years of IT support experience in a financial services environment.\n\nI hold CompTIA A+ and Network+ certifications. At Orion Financial, I support over 200 employees and reduced ticket resolution time by 35% through process improvements.\n\nI am proficient in Windows 10/11 and Microsoft 365 and have experience coordinating with hardware vendors.\n\nPlease find my resume attached. Thank you.\n\nOliver Park"
+        },
+        {
+          "doctype": "letter",
+          "title": "Reference Letter — Orion Financial",
+          "text": "January 10\n\nTo Whom It May Concern,\n\nI am pleased to recommend Oliver Park for the IT Support Specialist position. Oliver has been a valued member of our IT team at Orion Financial for the past four years.\n\nHe consistently demonstrates outstanding technical skills and a patient, professional manner with non-technical colleagues. His initiative in redesigning our help desk workflows resulted in a 35% reduction in average ticket resolution time.\n\nOliver is reliable, detail-oriented, and a team player. I recommend him without reservation.\n\nSincerely,\nDiana Walsh, IT Manager, Orion Financial"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What certification is required for the IT Support Specialist position?",
+          "options": ["(A) CompTIA Network+", "(B) Microsoft Azure Fundamentals", "(C) CompTIA A+", "(D) ITIL Foundation"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'offre d'emploi précise « CompTIA A+ certification required ».",
+            "distractors": {
+              "A": "Oliver possède cette certification mais elle n'est pas exigée dans l'offre.",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "How many employees does Oliver Park currently support at Orion Financial?",
+          "options": ["(A) 100", "(B) 150", "(C) 175", "(D) 200+"],
+          "answer": "D",
+          "explanation": {
+            "correct": "Oliver indique qu'il supporte « over 200 employees » dans son rôle actuel.",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "150+ est le nombre d'employés de Cornerstone Bank, pas d'Orion Financial.",
+              "C": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What improvement did Oliver Park make at Orion Financial?",
+          "options": ["(A) He implemented a new software system.", "(B) He reduced ticket resolution time by 35%.", "(C) He upgraded all network hardware.", "(D) He trained 50 new IT staff."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Son email et la lettre de recommandation confirment une réduction de 35% du temps de résolution des tickets.",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Il coordonne avec des fournisseurs mais cela n'est pas son amélioration principale.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What does Diana Walsh say about Oliver Park?",
+          "options": ["(A) He needs to improve his communication skills.", "(B) He has been at Orion Financial for two years.", "(C) He is reliable and detail-oriented.", "(D) He recently completed his Bachelor's degree."],
+          "answer": "C",
+          "explanation": {
+            "correct": "La lettre de recommandation décrit Oliver comme « reliable, detail-oriented, and a team player ».",
+            "distractors": {
+              "A": "Au contraire, elle mentionne ses compétences relationnelles avec des collègues non techniques.",
+              "B": "Il est chez Orion Financial depuis 4 ans, pas 2.",
+              "D": "Son diplôme est mentionné dans son email, pas dans la lettre."
+            }
+          }
+        },
+        {
+          "text": "Which statement about Oliver Park's qualifications is TRUE?",
+          "options": ["(A) He does not have the required experience.", "(B) He exceeds the experience requirement.", "(C) He lacks the required certification.", "(D) He has no experience in financial services."],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'offre exige 3+ ans d'expérience; Oliver en a 4. Il dépasse donc l'exigence minimale.",
+            "distractors": {
+              "A": "Il a 4 ans d'expérience, soit plus que les 3 requis.",
+              "C": "Il possède CompTIA A+ (et Network+ en plus).",
+              "D": "Son expérience actuelle est dans les services financiers (Orion Financial)."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "notice",
+          "title": "Annual Company Picnic — July 20",
+          "text": "HALCYON INDUSTRIES — ANNUAL COMPANY PICNIC\nDate: Saturday, July 20, 11:00 AM – 4:00 PM\nLocation: Riverside Park, Pavilion B\n\nJoin us for a day of fun, food, and team spirit!\n\nActivities:\n• BBQ lunch (vegetarian options available)\n• Volleyball and relay races\n• Kids' zone (for employees with children)\n• Door prizes and raffle\n\nAttendance is free. RSVPs required by July 10.\nBring your family and friends!\n\nContact: events@halcyon.com"
+        },
+        {
+          "doctype": "email",
+          "title": "RSVP — Mark Lawson",
+          "text": "From: mark.lawson@halcyon.com\nTo: events@halcyon.com\nDate: July 7\nSubject: Picnic RSVP — Attending\n\nHi,\n\nHappy to confirm attendance for July 20. I'll be bringing my partner and our two children (ages 6 and 8).\n\nCould you let me know if volleyball is a tournament or casual play? My partner is keen to join if it's competitive.\n\nAlso, are there gluten-free options in addition to vegetarian?\n\nThank you,\nMark Lawson"
+        },
+        {
+          "doctype": "email",
+          "title": "Re: Picnic RSVP — Halcyon Events",
+          "text": "From: events@halcyon.com\nTo: mark.lawson@halcyon.com\nDate: July 8\nSubject: Re: Picnic RSVP — Confirmed!\n\nHi Mark,\n\nGreat — we've registered you, your partner, and your two children!\n\nVolleyball will be a friendly tournament — teams of 6. Your partner is welcome to sign up on the day.\n\nRegarding food: yes, we will have gluten-free options labeled at the buffet. Please mention it when you arrive so the catering team can assist.\n\nSee you on the 20th!\n\nEvents Team, Halcyon Industries"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Where will the company picnic take place?",
+          "options": ["(A) The company headquarters", "(B) Riverside Park, Pavilion B", "(C) A local sports center", "(D) The Halcyon Industries cafeteria"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'avis indique « Riverside Park, Pavilion B ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "By what date must employees RSVP for the picnic?",
+          "options": ["(A) July 7", "(B) July 8", "(C) July 10", "(D) July 20"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'avis indique « RSVPs required by July 10 ».",
+            "distractors": {
+              "A": "C'est la date à laquelle Mark a envoyé son RSVP.",
+              "B": "C'est la date de la réponse de l'équipe événementielle.",
+              "D": "C'est la date du pique-nique lui-même."
+            }
+          }
+        },
+        {
+          "text": "How many people from the Lawson family will attend the picnic?",
+          "options": ["(A) 2", "(B) 3", "(C) 4", "(D) 5"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Mark, son partenaire et leurs deux enfants = 4 personnes.",
+            "distractors": {
+              "A": "Seulement Mark et son partenaire, sans les enfants.",
+              "B": "Mark, son partenaire et un seul enfant.",
+              "D": "Il n'y a que 4 membres dans la famille mentionnés."
+            }
+          }
+        },
+        {
+          "text": "How will the volleyball be organized at the picnic?",
+          "options": ["(A) As a casual game with no fixed teams", "(B) As a formal league over multiple weeks", "(C) As a friendly tournament with teams of 6", "(D) As an individual skills competition"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'email de réponse précise « a friendly tournament — teams of 6 ».",
+            "distractors": {
+              "A": "Ce n'est pas du jeu libre — il y a un format tournoi.",
+              "B": "Il s'agit d'un seul événement, pas d'une ligue.",
+              "D": "Le format est en équipes, pas individuel."
+            }
+          }
+        },
+        {
+          "text": "What should Mark do to ensure gluten-free food is available for his family?",
+          "options": ["(A) Email the catering company directly", "(B) Fill out a dietary form before July 10", "(C) Mention it to the catering team upon arrival", "(D) Bring his own food to the picnic"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'email de réponse indique « Please mention it when you arrive so the catering team can assist ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "Non demandé dans les emails.",
+              "D": "Non suggéré."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "article",
+          "title": "EcoWrap Launches Biodegradable Packaging Line",
+          "text": "EcoWrap, a sustainable packaging startup based in Vancouver, has launched its fully biodegradable packaging line — GreenSeal. Made from plant-based materials, GreenSeal decomposes within 90 days in standard composting conditions.\n\nCEO Fiona Marsh said: \"GreenSeal is our answer to the global packaging waste crisis. We've been developing this for three years and are proud to bring it to market.\"\n\nEcoWrap targets food and beverage companies and has already secured contracts with two regional grocery chains. The product comes in five sizes starting at $0.08 per unit."
+        },
+        {
+          "doctype": "letter",
+          "title": "Partnership Inquiry — GreenCycle Distributors",
+          "text": "GreenCycle Distributors\n88 Harbor Drive, Seattle\n\nNovember 5\n\nDear Ms. Marsh,\n\nWe read about EcoWrap's GreenSeal launch with great interest. GreenCycle specializes in distributing eco-friendly products across the Pacific Northwest and currently works with 300+ retailers in Washington, Oregon, and Idaho.\n\nWe believe GreenSeal would be an excellent addition to our catalog. Could we schedule a call this month to discuss a potential distribution partnership?\n\nBest regards,\nThomas Reid, Partnership Director, GreenCycle Distributors"
+        },
+        {
+          "doctype": "email",
+          "title": "Re: Partnership Inquiry — EcoWrap",
+          "text": "From: fiona.marsh@ecowrap.com\nTo: thomas.reid@greencycle.com\nDate: November 8\nSubject: Re: GreenSeal Partnership\n\nDear Thomas,\n\nThank you for reaching out! We are very interested in partnering with GreenCycle.\n\nWe have distribution capacity for up to 500,000 units per month and are actively expanding. A partnership with your 300+ retailer network would be a significant step for us.\n\nI am available for a call on November 14 or 18. Could you confirm which date works best?\n\nBest regards,\nFiona Marsh, CEO, EcoWrap"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is GreenSeal made from?",
+          "options": ["(A) Recycled plastic", "(B) Plant-based materials", "(C) Bamboo fiber", "(D) Biodegradable petroleum compounds"],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'article précise que GreenSeal est fabriqué à partir de « plant-based materials ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "How long has EcoWrap been developing GreenSeal?",
+          "options": ["(A) 1 year", "(B) 2 years", "(C) 3 years", "(D) 5 years"],
+          "answer": "C",
+          "explanation": {
+            "correct": "La PDG dit « We've been developing this for three years ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "In how many states does GreenCycle Distributors operate?",
+          "options": ["(A) 2", "(B) 3", "(C) 4", "(D) 5"],
+          "answer": "B",
+          "explanation": {
+            "correct": "GreenCycle opère dans Washington, Oregon et Idaho — 3 États.",
+            "distractors": {
+              "A": "Non.",
+              "C": "Non.",
+              "D": "Non."
+            }
+          }
+        },
+        {
+          "text": "What dates does Fiona Marsh propose for a call?",
+          "options": ["(A) November 5 and 8", "(B) November 10 and 12", "(C) November 14 and 18", "(D) November 20 and 25"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Son email propose « November 14 or 18 ».",
+            "distractors": {
+              "A": "Ce sont les dates de la lettre et de l'email.",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "What can be inferred about EcoWrap's current production capacity?",
+          "options": ["(A) It cannot meet large retail demand.", "(B) It can distribute up to 500,000 units per month.", "(C) It is currently operating at full capacity.", "(D) It produces 1 million units per month."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Fiona Marsh indique « distribution capacity for up to 500,000 units per month ».",
+            "distractors": {
+              "A": "Au contraire, ils ont une capacité importante et cherchent à se développer.",
+              "C": "Non mentionné — ils sont « actively expanding ».",
+              "D": "Non mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "menu",
+          "title": "The Blue Spoon — Lunch Menu",
+          "text": "THE BLUE SPOON\nLunch — Monday to Friday, 11:30 AM – 2:30 PM\n\nSTARTERS\n• Garden Salad ............... $7\n• French Onion Soup .......... $9\n\nMAINS\n• Grilled Salmon ............. $22  [GF]\n• Mushroom Risotto ........... $18  [V, GF]\n• Chicken Sandwich ........... $15\n• Daily Pasta Special ........ $17\n\nDESSERTS\n• Chocolate Lava Cake ........ $8\n• Seasonal Fruit Sorbet ...... $6  [V, GF]\n\n[V] = Vegetarian  /  [GF] = Gluten-Free\nGroup discount: 10% for parties of 8 or more.\nReservations recommended."
+        },
+        {
+          "doctype": "review",
+          "title": "Online Review — TripAdvisor",
+          "text": "★★★★★ (5/5)\nReviewer: Rachel T. — Visited October 14\n\nWe had a wonderful business lunch at The Blue Spoon. The Grilled Salmon was perfectly cooked — light and flavorful. Our group of 10 appreciated the 10% group discount, which made the bill much more manageable.\n\nService was attentive and the ambiance is ideal for a professional setting. Only minor note: the daily pasta was sold out by 1:30 PM.\n\nWill definitely return for our next team lunch!"
+        },
+        {
+          "doctype": "email",
+          "title": "Reservation Request — Dan Foster",
+          "text": "From: dan.foster@reachventures.com\nTo: reservations@bluespoon.com\nDate: October 20\nSubject: Lunch Reservation — October 28\n\nHello,\n\nI'd like to book a table for 9 people on Tuesday, October 28, at 12:30 PM.\n\nTwo members of our group have gluten intolerance. Could you confirm which dishes are gluten-free?\n\nAlso, does the 10% group discount apply to our reservation?\n\nThank you,\nDan Foster, Reach Ventures"
+        }
+      ],
+      "questions": [
+        {
+          "text": "What is the price of the Mushroom Risotto?",
+          "options": ["(A) $15", "(B) $17", "(C) $18", "(D) $22"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le menu indique « Mushroom Risotto ... $18 ».",
+            "distractors": {
+              "A": "C'est le prix du Chicken Sandwich.",
+              "B": "C'est le prix du Daily Pasta Special.",
+              "D": "C'est le prix du Grilled Salmon."
+            }
+          }
+        },
+        {
+          "text": "What minor problem did Rachel T. mention in her review?",
+          "options": ["(A) The service was slow.", "(B) The salmon was overcooked.", "(C) The daily pasta was sold out early.", "(D) The group discount was not applied."],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'avis indique que « the daily pasta was sold out by 1:30 PM ».",
+            "distractors": {
+              "A": "L'avis dit que le service était attentif.",
+              "B": "Le saumon est décrit comme parfaitement cuit.",
+              "D": "La remise de groupe a bien été appliquée."
+            }
+          }
+        },
+        {
+          "text": "Will Dan Foster's group qualify for the group discount?",
+          "options": ["(A) No, they need at least 10 people.", "(B) Yes, because they have 9 people.", "(C) No, the discount only applies on weekends.", "(D) Yes, but only for the prix-fixe menu."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le menu indique une remise de 10% pour les groupes de 8 personnes ou plus. Avec 9 personnes, ils sont éligibles.",
+            "distractors": {
+              "A": "Il faut 8+ personnes, pas 10.",
+              "C": "Aucune restriction au week-end n'est mentionnée.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "Which dishes on the menu are gluten-free?",
+          "options": ["(A) Grilled Salmon, Garden Salad, and Chicken Sandwich", "(B) Mushroom Risotto, Grilled Salmon, and Seasonal Fruit Sorbet", "(C) French Onion Soup, Mushroom Risotto, and Seasonal Fruit Sorbet", "(D) Daily Pasta Special and Chocolate Lava Cake"],
+          "answer": "B",
+          "explanation": {
+            "correct": "Les plats marqués [GF] sont : Grilled Salmon, Mushroom Risotto et Seasonal Fruit Sorbet.",
+            "distractors": {
+              "A": "La Garden Salad et le Chicken Sandwich ne sont pas marqués [GF].",
+              "C": "La French Onion Soup n'est pas marquée [GF].",
+              "D": "Le Daily Pasta Special et le Chocolate Lava Cake ne sont pas [GF]."
+            }
+          }
+        },
+        {
+          "text": "What can be inferred from the review about Rachel T.'s group?",
+          "options": ["(A) They were a group of 8.", "(B) They arrived after 1:30 PM.", "(C) They qualified for the group discount.", "(D) They ordered the daily pasta special."],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le groupe de Rachel comptait 10 personnes et a bénéficié de la remise de 10%, comme elle le mentionne.",
+            "distractors": {
+              "A": "Le groupe était de 10, pas 8.",
+              "B": "La pâte étant épuisée avant 13h30 ne signifie pas qu'ils sont arrivés après.",
+              "D": "La pâte était épuisée — ils ne l'ont pas nécessairement commandée."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "documents": [
+        {
+          "doctype": "memo",
+          "title": "Updated PTO Request Policy",
+          "text": "To: All Staff\nFrom: Human Resources\nDate: December 1\nSubject: Updated Paid Time Off (PTO) Request Process\n\nEffective December 15, all PTO requests must be submitted at least 10 business days in advance through the HR portal.\n\nKey changes:\n• Requests under 3 days: approved by your direct manager\n• Requests of 3 days or more: require VP-level approval\n• Blackout dates (December 22 – January 3): no PTO approved unless pre-existing medical documentation is provided\n\nFor questions: hr@globalcorp.com"
+        },
+        {
+          "doctype": "form",
+          "title": "PTO Request — Kevin Yuen",
+          "text": "PTO REQUEST — GlobalCorp HR Portal\nSubmitted: December 5\nEmployee: Kevin Yuen, Sales Team\nManager: Sandra Hill\n\nRequested dates: December 29 – January 2 (5 business days)\nReason: Family vacation\n\nNote: I understand this falls within the blackout period. However, the flights were booked before the new policy was announced.\n\nStatus: Pending review"
+        },
+        {
+          "doctype": "email",
+          "title": "Re: PTO Request — HR Team",
+          "text": "From: hr@globalcorp.com\nTo: kevin.yuen@globalcorp.com\nDate: December 7\nSubject: Re: PTO Request — December 29 – January 2\n\nDear Kevin,\n\nThank you for submitting your request. We have reviewed your situation.\n\nYour request falls within the blackout period and covers 5 days, requiring VP-level approval. We have forwarded your request to VP Mark Thornton for review.\n\nPlease note that without documented medical reasons, approval is not guaranteed. Mr. Thornton's decision will be communicated to you by December 12.\n\nKind regards,\nHR Team, GlobalCorp"
+        }
+      ],
+      "questions": [
+        {
+          "text": "How many business days in advance must employees submit PTO requests?",
+          "options": ["(A) 5 business days", "(B) 7 business days", "(C) 10 business days", "(D) 14 business days"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le mémo indique « at least 10 business days in advance ».",
+            "distractors": {
+              "A": "Non mentionné.",
+              "B": "Non mentionné.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "Who must approve PTO requests of 3 days or more?",
+          "options": ["(A) The direct manager", "(B) The HR department", "(C) A VP-level approver", "(D) The CEO"],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le mémo stipule « Requests of 3 days or more: require VP-level approval ».",
+            "distractors": {
+              "A": "Les demandes de moins de 3 jours peuvent être approuvées par le manager direct.",
+              "B": "Les RH transmettent la demande mais n'ont pas le pouvoir d'approbation pour les congés longs.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "Why is Kevin Yuen's request forwarded to VP Mark Thornton?",
+          "options": ["(A) His manager is unavailable.", "(B) His request falls within the blackout period and covers 5 days.", "(C) He submitted the request too late.", "(D) He did not provide a reason for the leave."],
+          "answer": "B",
+          "explanation": {
+            "correct": "La demande couvre 5 jours (≥ 3) ET tombe dans la période de fermeture, nécessitant l'approbation du VP.",
+            "distractors": {
+              "A": "Non mentionné.",
+              "C": "Il a soumis le 5 décembre pour un départ le 29 décembre — plus de 10 jours ouvrables.",
+              "D": "Il a indiqué « Family vacation » comme raison."
+            }
+          }
+        },
+        {
+          "text": "What is Kevin Yuen's concern about the blackout period?",
+          "options": ["(A) He is unaware of the blackout policy.", "(B) His flights were booked before the policy was announced.", "(C) He has a medical need that requires travel.", "(D) His manager already approved his leave verbally."],
+          "answer": "B",
+          "explanation": {
+            "correct": "Kevin note que ses vols ont été réservés avant l'annonce de la nouvelle politique.",
+            "distractors": {
+              "A": "Il est au courant — il le mentionne explicitement dans le formulaire.",
+              "C": "La raison est les vacances en famille, pas médicale.",
+              "D": "Non mentionné."
+            }
+          }
+        },
+        {
+          "text": "When will Kevin Yuen receive the VP's decision?",
+          "options": ["(A) December 5", "(B) December 7", "(C) December 12", "(D) December 15"],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'email des RH précise que la décision sera communiquée « by December 12 ».",
+            "distractors": {
+              "A": "C'est la date de soumission du formulaire.",
+              "B": "C'est la date de l'email des RH.",
+              "D": "C'est la date d'entrée en vigueur de la nouvelle politique."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

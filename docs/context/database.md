@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-03-03 21:51
+> Auto-generated on 2026-03-06 13:36
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions

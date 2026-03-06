@@ -43,6 +43,7 @@ export default async function ExerciceP5Page({
             categoryLabel={typeInfo.label}
             categoryDescription={typeInfo.description}
             advice={exercicesData.advice}
+            exerciseKey={`partie-5:${exerciseId}`}
           />
         </div>
       </div>

@@ -29,6 +29,8 @@ export default async function ExerciceP4Page({
           <ExoPart4Shell
             talks={talks as Parameters<typeof ExoPart4Shell>[0]["talks"]}
             advice={exercicesData.advice}
+            exerciseLabel={`Exercice ${exerciseId}`}
+            exerciseKey={`partie-4:${exerciseId}`}
           />
         </div>
       </div>

@@ -34,7 +34,15 @@
             "(C) To request a payment deadline extension",
             "(D) To introduce a new legal partner"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The call's purpose is explicitly to dispute the non-compete clause duration — a specific term in the contract.",
+            "distractors": {
+              "A": "Partial truth — the payment schedule was agreed upon, which might suggest the contract is settled, but the call's purpose is to dispute one remaining clause.",
+              "C": "Vocabulary recycling — 'payment' appears in the talk, but the caller wants to discuss the clause, not extend a payment deadline.",
+              "D": "Fabrication — no new legal partner is introduced; the caller already represents the client's law firm."
+            }
+          }
         },
         {
           "text": "What concern does the speaker raise?",
@@ -44,7 +52,15 @@
             "(C) The non-compete period is too long",
             "(D) The industry standards have changed"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The caller specifically objects to the three-year non-compete duration and proposes reducing it to eighteen months.",
+            "distractors": {
+              "A": "Direct reversal — the payment schedule is the one thing both parties agree on.",
+              "B": "Fabrication — no mention of a submission deadline or lateness.",
+              "D": "Inference bait — 'industry standards' are cited as justification, but the caller is not saying standards changed; she says the proposed term differs from them."
+            }
+          }
         },
         {
           "text": "What does the speaker ask Mr. Ito to do?",
@@ -54,7 +70,15 @@
             "(C) Visit the office in person tomorrow",
             "(D) Send an email to the senior partner"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The speaker asks Mr. Ito to 'call me back at your earliest convenience, or have your assistant schedule a call'.",
+            "distractors": {
+              "A": "Fabrication — the caller does not ask for the contract to be revised and resubmitted; she wants to discuss one clause.",
+              "C": "Chronology trap — the speaker says she is available 'tomorrow afternoon', but she asks to be called, not visited in person.",
+              "D": "Fabrication — email is never mentioned in the recording."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (A) is a partial truth — the payment schedule was actually agreed upon, which might suggest things are settled, but the call's purpose is to dispute a remaining clause. (C) is vocabulary recycling: 'payment' appears in the talk, but no extension is requested. Q2 trap: (A) is a direct reversal — the payment schedule is the one thing they do agree on. (D) is an inference bait: the speaker mentions 'industry standards' as justification, but she is not saying standards have changed, only that the proposed duration differs from them. Q3 trap: (C) is a chronology trap — the speaker says she is available 'tomorrow afternoon', but she does not ask for an in-person visit; she says 'call me back'. (D) goes beyond the talk; she never mentions email.",
@@ -72,7 +96,15 @@
             "(C) High costs of customer relationship software",
             "(D) Slow internet connections in offices"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The ad opens by asking 'Is your business losing hours each week to manual data entry?' — the problem addressed is time lost to repetitive tasks.",
+            "distractors": {
+              "A": "Fabrication — hiring difficulty is never mentioned.",
+              "C": "Vocabulary trap — 'CRM' is mentioned as one of the tools Nexara connects to, but the ad never says CRM software is expensive; the problem is time lost to manual work.",
+              "D": "Fabrication — internet connections are never cited as a problem."
+            }
+          }
         },
         {
           "text": "How does Nexara's pricing differ from competitors?",
@@ -82,7 +114,15 @@
             "(C) It uses a fixed fee independent of team size",
             "(D) It requires an annual upfront payment"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The ad explicitly states Nexara operates on a 'flat monthly fee regardless of team size'.",
+            "distractors": {
+              "A": "Plausible-sounding fabrication — blends 'automation' with 'pricing' in a way that sounds logical but was never stated.",
+              "B": "Near-miss — a 60-day free trial is offered, but not a permanent free version.",
+              "D": "Inference bait — an annual fee might seem logical for a flat-rate SaaS, but the recording specifies 'flat monthly fee'."
+            }
+          }
         },
         {
           "text": "What is offered to new customers right now?",
@@ -92,7 +132,15 @@
             "(C) Free onboarding by a consultant",
             "(D) A rebate after 30 days"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The ad offers a '60-day free trial with full access to all premium features. No credit card required.' — sixty days is two months, at no cost.",
+            "distractors": {
+              "A": "Chronology error — the trial is sixty days (two months), not one month, and it is free, not discounted.",
+              "C": "Fabrication — no consultant onboarding is mentioned.",
+              "D": "Fabrication — no rebate after 30 days is mentioned; the trial is simply free."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (C) is vocabulary recycling — 'CRM' (customer relationship management) is mentioned as one of the tools Nexara connects to, but the advertisement never says CRM software is expensive; the problem is time lost to manual work. Q2 trap: (A) is a plausible-sounding fabrication that blends 'automation' with 'pricing' — never stated. (D) is an inference bait: an annual fee might seem logical for a flat-rate SaaS product, but the talk specifies 'flat monthly fee'. Q3 trap: (A) says 'discounted first month', but the talk says '60-day free trial' — that is two months, not one, and it is free, not discounted. (C) invents a consultant; no human onboarding is mentioned.",
@@ -118,7 +166,15 @@
             "(C) Audio equipment work is underway in the Grand Hall",
             "(D) The terrace is unavailable today"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The announcement states the keynote moved 'due to a sound system upgrade taking place in the Grand Hall'.",
+            "distractors": {
+              "A": "Inference bait — the Grand Hall is unavailable, but the reason is the sound system upgrade, not that it is 'fully booked' — a false cause.",
+              "B": "Fabrication — Dr. Rao's preferences are never cited as a reason.",
+              "D": "Vocabulary trap — the terrace is mentioned in the same breath but for the networking lunch, which is unchanged; it is not the reason for the keynote move."
+            }
+          }
         },
         {
           "text": "Look at the graphic. Which information in the printed schedule is now incorrect?",
@@ -128,7 +184,15 @@
             "(C) The workshop end time",
             "(D) The panel discussion start time"
           ],
-          "answer": "A"
+          "answer": "A",
+          "explanation": {
+            "correct": "The printed schedule shows the keynote in the Grand Hall, but the speaker announced it has moved to the Riverside Room — that entry is now incorrect.",
+            "distractors": {
+              "B": "Unchanged — the networking lunch on the terrace is confirmed as still scheduled.",
+              "C": "Misleading — the workshop end time also changed, but the most explicitly announced error in the printed schedule is the keynote location (Grand Hall → Riverside Room).",
+              "D": "Unchanged — the panel discussion start time is not modified by any announcement."
+            }
+          }
         },
         {
           "text": "What change was made to the carbon offset workshop?",
@@ -138,7 +202,15 @@
             "(C) It will finish earlier than planned",
             "(D) It will now include an extra speaker"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The workshop 'will now end at three-thirty' instead of four o'clock — thirty minutes earlier than originally listed.",
+            "distractors": {
+              "A": "Attribution error — it is the keynote that changed location, not the workshop.",
+              "B": "Fabrication — the workshop was shortened, not cancelled.",
+              "D": "Fabrication — no extra speaker is mentioned; only the end time changed."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (A) is an inference bait — the room is unavailable for the keynote, but the reason is the sound system upgrade, not that it is 'fully booked' (a rephrasing that introduces a false cause). (D) is a distractor using 'terrace', which is mentioned in the same sentence but for the lunch, which is unchanged. Q2 graphic trap: This is the key graphic-question trap. The printed schedule shows the keynote in the Grand Hall — but the speaker just announced it has moved to the Riverside Room. (B) and (D) are correct per the graphic and unchanged per the talk. (C) is partially incorrect in the schedule too, but the question asks what is 'now incorrect' because of the announcement — the keynote location is the first and most explicit change stated. Q3 trap: (A) confuses the two changes — the location change applies to the keynote, not the workshop. (D) invents a new speaker; only the end time changed.",
@@ -156,7 +228,15 @@
             "(C) A regulatory investigation into Soltera",
             "(D) A stock market crash in the pharmaceutical sector"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The report covers Helix Dynamics' merger with Soltera Inc. — a corporate acquisition deal in the biotechnology sector.",
+            "distractors": {
+              "A": "Vocabulary recycling — 'FDA' and 'drug' appear in the report, but the FDA is cited as a regulatory approver of the merger, not as an agency approving a new drug.",
+              "C": "Fabrication — no regulatory investigation into Soltera is mentioned.",
+              "D": "Direct reversal — Helix shares rose nearly twelve percent; the sector did not crash."
+            }
+          }
         },
         {
           "text": "What must happen before the deal is finalised?",
@@ -166,7 +246,15 @@
             "(C) Two regulatory bodies must approve it",
             "(D) Soltera must raise additional capital"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The deal is 'pending regulatory approval from both the European Medicines Agency and the US Food and Drug Administration' — two regulatory bodies.",
+            "distractors": {
+              "A": "Partial truth — clinical trials are mentioned, but the talk says they are 'currently in late-stage trials'; completing them is not stated as a precondition for the merger closing.",
+              "B": "Fabrication — a shareholder vote is never mentioned.",
+              "D": "Fabrication — Soltera's capital position is never discussed."
+            }
+          }
         },
         {
           "text": "How did Helix shareholders react to the news?",
@@ -176,7 +264,15 @@
             "(C) They demanded a higher acquisition price",
             "(D) They filed a complaint with the European regulator"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "Helix shareholders 'saw their stock rise nearly twelve percent in early morning trading' following the announcement.",
+            "distractors": {
+              "A": "Direct reversal — a twelve percent rise suggests active buying, not large-scale selling.",
+              "C": "Inference bait — a rising stock does not imply shareholders demanded a higher price; this goes well beyond what was stated.",
+              "D": "Fabrication — no complaint or regulator filing is mentioned."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (A) is vocabulary recycling — 'FDA' and 'drug' both appear in the talk, but the FDA is mentioned as a regulatory approver, not as an agency approving a drug. (D) is the opposite of what happened (stock rose, not crashed). Q2 trap: (A) is partial truth — clinical trials are mentioned, but the talk says the drugs are 'currently in late-stage trials', meaning they are ongoing; there is no statement that they must be completed before the merger closes. (B) invents a shareholder vote; it was never mentioned. Q3 trap: (A) is a direct reversal — the stock rose, which means buyers are likely active, not sellers. (C) is an inference bait: a rising stock doesn't necessarily mean shareholders want a higher price — that goes well beyond what was stated.",
@@ -194,7 +290,15 @@
             "(C) To promote a technology company's product",
             "(D) To recruit candidates for a leadership role"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The speaker introduces 'this evening's recipient of the Whitmore Prize' — it is an award presentation ceremony for Director Claudia Reyes.",
+            "distractors": {
+              "A": "Partial truth — a government AI system is described, but announcing a programme is not the purpose of an award ceremony introduction.",
+              "C": "Partial truth — the AI system could sound like a tech pitch, but the event is clearly a ceremony.",
+              "D": "Fabrication — no recruiting is happening; this is a recognition event."
+            }
+          }
         },
         {
           "text": "What has Director Reyes most recently accomplished?",
@@ -204,7 +308,15 @@
             "(C) Launching an AI-driven emergency dispatch system",
             "(D) Joining a private logistics consulting firm"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The 'most recently' qualifier points to the AI-assisted dispatch system that 'went live just eight months ago'.",
+            "distractors": {
+              "A": "Chronology error — completing her degrees happened long before her current role; they are background, not a recent accomplishment.",
+              "B": "Chronology confusion — the 22% response time reduction is the cumulative result of three initiatives over 15 years, not a single most-recent accomplishment.",
+              "D": "Direct reversal — she left private consulting to join the city; she did not recently join a consulting firm."
+            }
+          }
         },
         {
           "text": "Where did Director Reyes work before her current role?",
@@ -214,7 +326,15 @@
             "(C) At a municipal emergency department",
             "(D) At a national public health agency"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The talk states she 'spent a decade with the private sector in logistics consulting' before joining the city.",
+            "distractors": {
+              "A": "Fabrication — no university research centre is mentioned.",
+              "C": "Inference bait — she now works in emergency services, but the talk explicitly states her prior role was in private-sector logistics consulting.",
+              "D": "Fabrication — a national public health agency is never mentioned."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (C) is a partial truth — an AI system is described, but the talk is clearly a ceremony introduction, not a product pitch. The distinction is purpose vs. content. Q2 trap: (B) is a chronology confusion — reducing response times by 22% is the cumulative achievement of three initiatives over 15 years, not the 'most recent' one. The most recent is the AI dispatch system (8 months ago). (D) is a reversal: she left private consulting to join the city, she did not join a consulting firm recently. (A) is a partial truth: the degrees are real, but completing them is not her most recent accomplishment. Q3 trap: (C) is an inference bait — she now works in emergency services, so it seems plausible she came from an emergency department, but the talk explicitly states she came from 'private sector logistics consulting'.",
@@ -232,7 +352,15 @@
             "(C) 1880 to 1920",
             "(D) 1900 to 1950"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The guide explicitly states 'The artefacts in this room span the period from 1880 to 1920'.",
+            "distractors": {
+              "A": "Boundary shift — 1820 to 1860 predates the stated range by sixty years.",
+              "B": "Partial overlap — 1850 to 1900 shares part of the range but shifts the start date back by thirty years.",
+              "D": "Boundary shift — 1900 to 1950 overlaps with the end of the stated range but extends beyond it."
+            }
+          }
         },
         {
           "text": "What made the dual-shaft mechanism significant?",
@@ -242,7 +370,15 @@
             "(C) It allowed the loom to run without steam power",
             "(D) It was the first mechanism patented by the Harcastle family"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The guide states the dual-shaft mechanism 'doubled the output of a standard loom without increasing its footprint' — more production, same size.",
+            "distractors": {
+              "A": "Direct reversal — the machine did not get smaller; it kept the same footprint while doubling output.",
+              "C": "Fabrication — steam power is integral to the loom's design; the dual-shaft mechanism did not remove the need for it.",
+              "D": "Partial truth — the Harcastle family donated the loom, but the guide does not say they filed the 1891 patent for the dual-shaft."
+            }
+          }
         },
         {
           "text": "What instruction is given to visitors who want to take photographs?",
@@ -252,7 +388,15 @@
             "(C) They should turn off their flash",
             "(D) They may only photograph the central display"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The guide states 'Photography is permitted in this gallery, but please ensure your flash is disabled to protect the more fragile textile samples'.",
+            "distractors": {
+              "A": "Fabrication — no permit is required; photography is freely allowed with the flash disabled.",
+              "B": "Direct contradiction — photography is explicitly permitted in Gallery Seven.",
+              "D": "Fabrication — no restriction to the central display is mentioned; visitors can photograph any part of the gallery (flash off)."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: Options (B) and (D) are boundary-shift traps — they overlap partially with the stated range but shift one end. Candidates who hear '1880' or '1920' but do not register both may select an adjacent option. Q2 trap: (A) is a direct reversal — the mechanism 'doubled output without increasing footprint', meaning the machine did not get bigger. Reversing this gives 'reduced size', which is wrong. (C) is a content fabrication; steam power is mentioned as part of the machine's description, not as something the dual-shaft removed. (D) is a partial truth: the Harcastle family donated the loom, but the talk does not say they filed the patent. Q3 trap: (A) and (B) are common 'museum rules' that test-takers might expect but that were never stated. (D) is a restriction that wasn't imposed — visitors can photograph, they just need to disable flash.",
@@ -279,7 +423,15 @@
             "(C) Customer service will only be available online",
             "(D) The mobile app menu has been updated"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording states 'a processing fee will apply to all wire transfers initiated through this phone line' effective the first of next month.",
+            "distractors": {
+              "A": "Direct reversal — the recording explicitly says app and online banking transfers 'will remain free of charge'.",
+              "C": "Fabrication — customer service (press zero) is still available by phone; it is not being moved online.",
+              "D": "Vocabulary recycling — the phone menu 'has recently changed', which could suggest the app menu changed, but it is the phone menu that was updated."
+            }
+          }
         },
         {
           "text": "Look at the graphic. How much will a wire transfer through the phone line cost?",
@@ -289,7 +441,15 @@
             "(C) €8.00",
             "(D) €4.50"
           ],
-          "answer": "D"
+          "answer": "D",
+          "explanation": {
+            "correct": "The graphic shows '€4.50 per transfer' for wire transfers initiated through the phone line — matching the fee announced in the recording.",
+            "distractors": {
+              "A": "Direct reversal — wire transfers via the phone line are gaining a fee; the graphic shows them at €4.50, not free.",
+              "B": "Wrong row — €6.00 applies to international payments, a different service in the graphic.",
+              "C": "Wrong row — €8.00 applies to card replacement, another different service in the graphic."
+            }
+          }
         },
         {
           "text": "What does the bank recommend to customers?",
@@ -299,7 +459,15 @@
             "(C) Using the app or website for transfers",
             "(D) Visiting a branch in person"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording says 'We recommend switching to digital channels to avoid this fee', and confirms app and online transfers remain free.",
+            "distractors": {
+              "A": "Fabrication — a 'premium account' is a plausible bank product but is never mentioned.",
+              "B": "Fabrication — off-peak hours are never suggested as a strategy.",
+              "D": "Fabrication — visiting a branch in person is not suggested anywhere in the recording."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (A) is a direct reversal — the talk explicitly says app and online transfers 'will remain free of charge'. (D) is a vocabulary recycling trap: the talk says 'our menu options have recently changed', which could suggest the app menu changed, but it is specifically the phone menu that changed. Q2 graphic trap: The graphic lists three different fees that could be confused: €4.50 for phone wire transfers, €6.00 for international payments, and €8.00 for card replacement. (B) matches international payments, (C) matches card replacement — both are present in the graphic to bait candidates who pick the wrong row. The answer requires combining the graphic (€4.50) with the talk's confirmation of a phone-line fee. Q3 trap: (A) is an inference bait — the concept of a 'premium account' is a plausible bank product, but it is never mentioned. (D) is another common banking context inference that the talk never suggests.",
@@ -324,7 +492,15 @@
             "(C) Shut down any active machinery",
             "(D) Check that their colleagues are present"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The broadcast instructs employees to 'immediately stop what they are doing, shut down any active machinery, and proceed to their designated assembly point'.",
+            "distractors": {
+              "A": "Common misconception — people instinctively think they should grab belongings during an evacuation, but collecting items is never mentioned.",
+              "B": "Inference bait — department heads have a post-drill reporting role, but notifying them before leaving is never instructed.",
+              "D": "Fabrication — checking on colleagues is a natural impulse but is not part of the stated instructions."
+            }
+          }
         },
         {
           "text": "Look at the graphic. Which information in the evacuation map is now outdated?",
@@ -334,7 +510,15 @@
             "(C) The assembly point for floors 7 and above",
             "(D) The stairwell assigned to floors 1–3"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The graphic shows floors 4–6 using Stairwell B, but the broadcast announces Stairwell B is closed for maintenance — that entry is now wrong.",
+            "distractors": {
+              "A": "Unchanged — floors 1–3 use Stairwell A and assemble in the north car park, confirmed by both the graphic and the broadcast.",
+              "C": "Unchanged — the announcement does not affect the floors 7+ row; Stairwell C and the east car park are unaffected.",
+              "D": "Unchanged — floors 1–3 using Stairwell A is correct and unaffected by the Stairwell B closure."
+            }
+          }
         },
         {
           "text": "What must department heads do after the drill?",
@@ -344,7 +528,15 @@
             "(C) Submit a headcount to the Safety Officer",
             "(D) Inspect Stairwell B for maintenance completion"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The broadcast states 'department heads are asked to submit a headcount report to the Safety Officer by twelve-thirty'.",
+            "distractors": {
+              "A": "Fabrication — a debrief session is not mentioned; the task is a written headcount report.",
+              "B": "Misattribution — the personnel file is mentioned in relation to employees who miss the drill without exemption, not as something department heads must file.",
+              "D": "Confusion of roles — Stairwell B maintenance is an ongoing facilities matter, not a post-drill responsibility for department heads."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (A) is a common test-taking assumption — people instinctively think they should grab belongings during an evacuation, but the talk says to 'immediately stop' and proceed; no mention of collecting items. (B) is an inference bait: department heads have a post-drill role, but notifying them before leaving is never instructed. Q2 graphic trap: The graphic shows floors 4–6 using Stairwell B and assembling in the south car park. The talk announces Stairwell B is closed for maintenance — meaning the graphic entry for floors 4–6 is now wrong. Candidates who don't integrate the spoken update with the visual will miss this. (A) and (D) are unchanged by the announcement. Q3 trap: (A) invents a debrief session — the task mentioned is a written headcount report, not a meeting. (D) confuses who deals with Stairwell B: that is a maintenance matter, not a department head's responsibility.",
@@ -370,7 +562,15 @@
             "(C) Forecasted bad weather",
             "(D) A signal system failure"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording states services are disrupted 'due to severe weather forecast for this weekend'.",
+            "distractors": {
+              "A": "Most common distractor in rail disruption contexts — track maintenance is the default assumption, but the stated cause is severe weather.",
+              "B": "Fabrication — no worker strike is mentioned anywhere in the recording.",
+              "D": "Fabrication — no signal system failure is cited; the cause is weather."
+            }
+          }
         },
         {
           "text": "What option is available to passengers who do not want to travel on Saturday?",
@@ -380,7 +580,15 @@
             "(C) They will be automatically transferred to Sunday",
             "(D) They can use the shuttle bus at a reduced price"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording advises passengers to 'rebook on an alternative date using our website or app at no extra charge'.",
+            "distractors": {
+              "A": "Vocabulary recycling — 'rebook' appears in the talk, but 'compensation' is a different concept that is never mentioned.",
+              "C": "Fabrication — no automatic transfer to Sunday is offered; passengers must actively rebook.",
+              "D": "Partial truth — shuttle buses are available on Saturday, but the recording says nothing about a reduced price for them; the no-extra-charge applies to train ticket rebooking."
+            }
+          }
         },
         {
           "text": "Look at the graphic. What does the graphic show about Sunday services on the Coastal Express?",
@@ -390,7 +598,15 @@
             "(C) They are expected to resume",
             "(D) They will be replaced by shuttle buses"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The graphic shows 'Sunday — Coastal Express: Expected to resume', matching the recording's statement that 'full train services are expected to resume' on Sunday.",
+            "distractors": {
+              "A": "Direct contradiction — Saturday services are suspended, not Sunday's.",
+              "B": "Overstatement — the graphic says 'Expected to resume' and the recording notes 'some delays are possible in the morning'; 'normally without delays' is factually wrong.",
+              "D": "Confusion of days — shuttle buses are the Saturday replacement arrangement; Sunday services return by train."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (A) is the most common trap in rail disruption contexts — maintenance is the default assumption candidates reach for, but the talk clearly states 'severe weather forecast'. (B) is a fabrication with no basis in the talk. Q2 trap: (A) is vocabulary recycling — 'rebook' and 'no extra charge' are in the talk, but 'compensation' is a different concept not mentioned. (C) is a fabrication that sounds like a helpful policy but was never stated. (D) is a partial truth: shuttle buses are available, but the talk says nothing about a 'reduced price' — the rebooking at no extra charge applies to train tickets. Q3 graphic trap: (B) adds 'without delays' — the graphic says 'Expected to resume' and the talk itself notes 'some delays are possible in the morning', making (B) a direct contradiction. (D) confuses Saturday's shuttle arrangement with Sunday's train status.",
@@ -408,7 +624,15 @@
             "(C) Introduce the employee to their department buddy",
             "(D) Send the employee's onboarding file to HR"
           ],
-          "answer": "B"
+          "answer": "B",
+          "explanation": {
+            "correct": "The recording states 'your line manager will walk you through our project management platform, Taskflow, and create your account credentials' on day one.",
+            "distractors": {
+              "A": "Speaker confusion — the IT Security team leads the day-two session, not the line manager.",
+              "C": "Chronology error — the buddy programme starts on day three, not day one.",
+              "D": "Reversal — HR has the onboarding file; the recording implies the line manager may not have received it yet."
+            }
+          }
         },
         {
           "text": "What happens if the IT Security session is not completed?",
@@ -418,7 +642,15 @@
             "(C) The employee cannot access the full network",
             "(D) The employee's buddy programme will be cancelled"
           ],
-          "answer": "C"
+          "answer": "C",
+          "explanation": {
+            "correct": "The recording explicitly states the session 'must be completed before you are granted full network access'.",
+            "distractors": {
+              "A": "Inference bait — postponing the start date seems like a plausible corporate consequence but is never stated.",
+              "B": "Inference bait — additional training sounds like a logical penalty but is not mentioned.",
+              "D": "Fabrication — the buddy programme is not linked to IT session completion anywhere in the recording."
+            }
+          }
         },
         {
           "text": "Who should new employees contact with questions before their start date?",
@@ -428,7 +660,15 @@
             "(C) Their department buddy",
             "(D) The HR onboarding team"
           ],
-          "answer": "D"
+          "answer": "D",
+          "explanation": {
+            "correct": "The recording instructs: 'If you have any questions before your start date, please contact HR at onboarding@calpine.com'.",
+            "distractors": {
+              "A": "The most dangerous trap — the recording explicitly tells you not to contact your line manager before your start date, as they may not have received the full onboarding file yet.",
+              "B": "Misattribution — the IT Security team is mentioned as session leaders on day two, not as the contact point for pre-start questions.",
+              "C": "Chronology error — the buddy is available from day three onwards, not before the start date."
+            }
+          }
         }
       ],
       "explanation": "Q1 trap: (A) is a speaker confusion trap — the IT Security team leads the day-two session, not the line manager. Both are authority figures mentioned in the talk, making this a classic attribution error. (C) is a chronology confusion: the buddy programme starts on day three, not day one. (D) is a reversal: HR has the onboarding file; the talk implies the line manager may not have received it yet. Q2 trap: (A) and (B) are inference baits — they describe plausible consequences of missing compliance training in a corporate context, but neither is stated. The talk explicitly says the session must be completed 'before you are granted full network access', making (C) the only grounded answer. Q3 trap: (A) is the most dangerous trap — the talk explicitly tells you not to contact your line manager before your start date, and the reason given (they may not have the file yet) makes this a highly memorable negative instruction. Candidates who hear 'line manager' prominently throughout the talk may default to (A) without registering the correction.",

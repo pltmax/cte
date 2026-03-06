@@ -257,15 +257,17 @@ export default function Part1Question({
 
       {/* Image — real or placeholder */}
       {imageUrl ? (
-        <div className="w-full aspect-video rounded-xl overflow-hidden border border-gray-200 relative">
-          <Image
-            src={imageUrl}
-            alt={`Photo ${questionIndex + 1}`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 600px"
-            priority
-          />
+        <div className="w-full flex justify-center mb-5">
+            <div className="relative w-80 h-80 aspect-video rounded-xl overflow-hidden border border-gray-200">
+            <Image
+                src={imageUrl}
+                alt={`Photo ${questionIndex + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 600px"
+                priority
+            />
+            </div>
         </div>
       ) : (
         <div className="w-full aspect-video bg-gray-50 rounded-xl border border-gray-200 flex flex-col items-center justify-center gap-2">

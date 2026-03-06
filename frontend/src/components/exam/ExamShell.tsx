@@ -171,7 +171,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
         timerLabel={timerLabel}
       />
 
-      <main className="flex-1 flex items-center justify-center px-6 py-15">
+      <main className="flex-1 flex items-center justify-center px-6 py-5">
         <div className="w-full max-w-4xl">
           {/* Admin-only: skip the current part entirely */}
           {isAdmin && phase !== "done" && (

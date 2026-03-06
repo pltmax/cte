@@ -1,0 +1,1031 @@
+{
+  "advice": {
+    "intro": "5 textes variés suivis de questions de compréhension à choix multiples. Lis chaque texte attentivement avant de répondre.",
+    "strategy": "Lis d'abord la question, puis cherche la réponse dans le texte. Ne réponds jamais de mémoire. Pour les questions de déduction, reste proche de ce qui est dit, n'imagine pas d'informations absentes.",
+    "traps": [
+      {
+        "label": "Paraphrase trompeuse",
+        "example": "L'option reprend des mots du texte mais déforme le sens. Lis toujours le contexte complet"
+      },
+      {
+        "label": "Trop vrai pour être bon",
+        "example": "Une option vraie en général mais non mentionnée dans CE texte. La bonne réponse doit être dans le document"
+      },
+      {
+        "label": "Détail hors contexte",
+        "example": "Un chiffre ou nom repris tel quel du texte mais associé à la mauvaise information"
+      },
+      {
+        "label": "Déduction excessive",
+        "example": "Aller trop loin dans la déduction. Elle doit rester logiquement ancrée dans le texte"
+      }
+    ]
+  },
+  "passages": [
+    {
+      "doctype": "article",
+      "title": "Greenfield Logistics Expands Operations",
+      "text": "Greenfield Logistics Expands to Southeast Asia\n\nGreenfield Logistics, a mid-sized freight company based in Portland, announced on Monday that it will open two new distribution hubs in Vietnam and Thailand by the end of next year. CEO Patricia Dunn cited growing demand from retail partners and lower operating costs in the region as the primary drivers of the decision.\n\nThe expansion will create approximately 300 local jobs and is expected to reduce delivery times for clients in the Asia-Pacific region by up to 40 percent. Greenfield has partnered with regional firm Delta Bridge Logistics to manage local compliance and customs procedures.",
+      "questions": [
+        {
+          "text": "What is the main purpose of the article?",
+          "options": [
+            "(A) To announce the hiring of a new CEO.",
+            "(B) To report a company's regional expansion.",
+            "(C) To describe a merger between two firms.",
+            "(D) To review shipping costs in Asia."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'article annonce l'ouverture de deux hubs en Asie du Sud-Est — c'est une expansion régionale.",
+            "distractors": {
+              "A": "Patricia Dunn est mentionnée comme CEO existante, pas recrutée.",
+              "C": "Il s'agit d'un partenariat, pas d'une fusion.",
+              "D": "Les coûts opérationnels sont évoqués mais ne sont pas le sujet principal."
+            }
+          }
+        },
+        {
+          "text": "In which countries will the new hubs be located?",
+          "options": [
+            "(A) China and Japan.",
+            "(B) Thailand and Indonesia.",
+            "(C) Vietnam and Thailand.",
+            "(D) Vietnam and Singapore."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le texte indique explicitement 'Vietnam and Thailand'.",
+            "distractors": {
+              "A": "Ces pays ne sont pas mentionnés.",
+              "B": "L'Indonésie n'est pas citée dans le texte.",
+              "D": "Singapour n'est pas mentionné."
+            }
+          }
+        },
+        {
+          "text": "What is the role of Delta Bridge Logistics?",
+          "options": [
+            "(A) To fund the expansion.",
+            "(B) To build the distribution hubs.",
+            "(C) To manage local regulations and customs.",
+            "(D) To recruit the 300 new employees."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le texte précise que Delta Bridge gère 'local compliance and customs procedures'.",
+            "distractors": {
+              "A": "Aucun financement par Delta Bridge n'est mentionné.",
+              "B": "La construction des hubs n'est pas attribuée à Delta Bridge.",
+              "D": "Le recrutement n'est pas lié à Delta Bridge."
+            }
+          }
+        },
+        {
+          "text": "What benefit does the expansion offer to clients?",
+          "options": [
+            "(A) Lower product prices.",
+            "(B) Faster delivery times.",
+            "(C) Free customs clearance.",
+            "(D) Access to new product lines."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Reduce delivery times by up to 40 percent' est un bénéfice direct pour les clients.",
+            "distractors": {
+              "A": "Les prix des produits ne sont pas évoqués.",
+              "C": "Le dédouanement gratuit n'est pas mentionné.",
+              "D": "Aucune nouvelle gamme de produits n'est citée."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "email",
+      "title": "Q3 Budget Report Deadline",
+      "text": "To: Finance Team\nFrom: Helen Carter, CFO\nDate: September 18\nSubject: Q3 Budget Report Submission\n\nDear Team,\n\nPlease be reminded that all Q3 budget reports must be submitted to my office no later than September 30. Reports should include a summary of departmental spending, any variance from the approved budget, and a brief forecast for Q4.\n\nAll files must be uploaded to the shared drive in PDF format. If you anticipate any difficulties meeting this deadline, contact me directly by September 24 so that we can make alternative arrangements.",
+      "questions": [
+        {
+          "text": "Why was this email sent?",
+          "options": [
+            "(A) To request a budget increase.",
+            "(B) To remind staff of a submission deadline.",
+            "(C) To announce a new accounting software.",
+            "(D) To schedule a finance meeting."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'email est un rappel ('please be reminded') pour la soumission des rapports avant le 30 septembre.",
+            "distractors": {
+              "A": "Aucune augmentation de budget n'est demandée.",
+              "C": "Aucun logiciel n'est mentionné.",
+              "D": "Aucune réunion n'est planifiée dans cet email."
+            }
+          }
+        },
+        {
+          "text": "What format should the files be submitted in?",
+          "options": [
+            "(A) Excel spreadsheet.",
+            "(B) Word document.",
+            "(C) PDF.",
+            "(D) PowerPoint presentation."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le texte indique clairement 'uploaded to the shared drive in PDF format'.",
+            "distractors": {
+              "A": "Excel n'est pas mentionné.",
+              "B": "Word n'est pas mentionné.",
+              "D": "PowerPoint n'est pas mentionné."
+            }
+          }
+        },
+        {
+          "text": "What should employees do if they cannot meet the deadline?",
+          "options": [
+            "(A) Submit a partial report.",
+            "(B) Ask a colleague to submit on their behalf.",
+            "(C) Contact Helen Carter before September 24.",
+            "(D) Request an extension by October 1."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'email dit de contacter Helen Carter 'by September 24' en cas de difficulté.",
+            "distractors": {
+              "A": "Un rapport partiel n'est pas mentionné comme option.",
+              "B": "La délégation à un collègue n'est pas évoquée.",
+              "D": "La date du 1er octobre n'apparaît pas dans le texte."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "notice",
+      "title": "Elevator Out of Service",
+      "text": "NOTICE — Elevator Maintenance\n\nPlease be advised that the main elevator in Building A will be out of service from Monday, October 7 through Wednesday, October 9, due to scheduled maintenance.\n\nDuring this period, please use the stairwells on the east and west sides of the building. Staff requiring accessible accommodations should contact Facilities Management at extension 4200 to arrange assistance.\n\nWe apologize for the inconvenience and thank you for your patience.",
+      "questions": [
+        {
+          "text": "What is the notice about?",
+          "options": [
+            "(A) A fire safety drill.",
+            "(B) A building relocation.",
+            "(C) Temporary elevator closure.",
+            "(D) New stairwell construction."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'avis informe que l'ascenseur sera hors service du 7 au 9 octobre pour maintenance.",
+            "distractors": {
+              "A": "Aucun exercice incendie n'est mentionné.",
+              "B": "Il n'y a pas de déménagement.",
+              "D": "Les escaliers existants sont mentionnés, pas de nouveaux."
+            }
+          }
+        },
+        {
+          "text": "How long will the elevator be unavailable?",
+          "options": [
+            "(A) One day.",
+            "(B) Two days.",
+            "(C) Three days.",
+            "(D) One week."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Du lundi 7 au mercredi 9 octobre = 3 jours (lundi, mardi, mercredi).",
+            "distractors": {
+              "A": "Un seul jour ne couvre pas la période indiquée.",
+              "B": "Deux jours serait du 7 au 8 seulement.",
+              "D": "Une semaine dépasse largement la période annoncée."
+            }
+          }
+        },
+        {
+          "text": "Who should staff needing accessibility assistance contact?",
+          "options": [
+            "(A) Building Security.",
+            "(B) Human Resources.",
+            "(C) Their direct manager.",
+            "(D) Facilities Management."
+          ],
+          "answer": "D",
+          "explanation": {
+            "correct": "Le texte indique 'contact Facilities Management at extension 4200'.",
+            "distractors": {
+              "A": "La sécurité n'est pas mentionnée.",
+              "B": "Les RH ne sont pas citées.",
+              "C": "Le manager direct n'est pas mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "memo",
+      "title": "New Remote Work Policy",
+      "text": "To: All Employees\nFrom: Sandra Walsh, HR Director\nSubject: Updated Remote Work Policy\nDate: March 3\n\nEffective April 1, the company will implement a revised remote work policy. Employees may work remotely up to three days per week, provided that they attend all scheduled team meetings in person on Tuesdays.\n\nEmployees wishing to take advantage of this policy must submit a Remote Work Agreement form to HR by March 20. Forms are available on the company intranet. Questions should be directed to hr@company.com.",
+      "questions": [
+        {
+          "text": "What is the purpose of the memo?",
+          "options": [
+            "(A) To announce staff layoffs.",
+            "(B) To introduce a revised remote work policy.",
+            "(C) To remind employees of existing rules.",
+            "(D) To schedule a team-building event."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "La note annonce une politique de télétravail révisée, effective au 1er avril.",
+            "distractors": {
+              "A": "Aucun licenciement n'est évoqué.",
+              "C": "La politique est nouvelle ('revised'), pas un rappel.",
+              "D": "Aucun événement d'équipe n'est mentionné."
+            }
+          }
+        },
+        {
+          "text": "How many days per week can employees work remotely?",
+          "options": [
+            "(A) One.",
+            "(B) Two.",
+            "(C) Three.",
+            "(D) Five."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le mémo précise 'up to three days per week'.",
+            "distractors": {
+              "A": "Un seul jour n'est pas ce qui est indiqué.",
+              "B": "Deux jours n'est pas mentionné.",
+              "D": "Cinq jours signifierait un télétravail complet, ce qui contredit le texte."
+            }
+          }
+        },
+        {
+          "text": "What must employees do to participate in the remote work program?",
+          "options": [
+            "(A) Attend a training session.",
+            "(B) Get manager approval in writing.",
+            "(C) Submit a form to HR by March 20.",
+            "(D) Contact IT to set up a home office."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le mémo demande de soumettre un formulaire aux RH avant le 20 mars.",
+            "distractors": {
+              "A": "Aucune session de formation n'est mentionnée.",
+              "B": "L'approbation écrite du manager n'est pas requise selon le texte.",
+              "D": "L'IT n'est pas mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "job_posting",
+      "title": "Customer Service Representative",
+      "text": "Job Opening: Customer Service Representative\nCompany: Maple Solutions Inc.\nLocation: Boston, MA (On-site)\nType: Full-time\n\nWe are seeking a motivated Customer Service Representative to join our Boston team. The successful candidate will handle customer inquiries by phone and email, process orders, and resolve complaints in a timely manner.\n\nRequirements:\n- At least 2 years of customer service experience\n- Proficiency in CRM software (Salesforce preferred)\n- Strong written and verbal communication skills\n\nBenefits include health insurance, 15 days of paid vacation, and a monthly transportation allowance. To apply, send your CV to jobs@maplesolutions.com by November 15.",
+      "questions": [
+        {
+          "text": "Where is the position located?",
+          "options": [
+            "(A) New York.",
+            "(B) Chicago.",
+            "(C) Boston.",
+            "(D) Toronto."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "La fiche de poste précise 'Boston, MA (On-site)'.",
+            "distractors": {
+              "A": "New York n'est pas mentionné.",
+              "B": "Chicago n'est pas mentionné.",
+              "D": "Toronto n'est pas mentionné."
+            }
+          }
+        },
+        {
+          "text": "What software experience is preferred for this role?",
+          "options": [
+            "(A) Microsoft Excel.",
+            "(B) Salesforce.",
+            "(C) SAP.",
+            "(D) HubSpot."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'annonce mentionne 'Salesforce preferred' parmi les exigences.",
+            "distractors": {
+              "A": "Excel n'est pas mentionné.",
+              "C": "SAP n'est pas mentionné.",
+              "D": "HubSpot n'est pas mentionné."
+            }
+          }
+        },
+        {
+          "text": "Which of the following is listed as a benefit?",
+          "options": [
+            "(A) A company car.",
+            "(B) A gym membership.",
+            "(C) Paid vacation days.",
+            "(D) A signing bonus."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "'15 days of paid vacation' est explicitement listé comme avantage.",
+            "distractors": {
+              "A": "Une voiture de fonction n'est pas mentionnée.",
+              "B": "Un abonnement salle de sport n'est pas mentionné.",
+              "D": "Une prime de signature n'est pas mentionnée."
+            }
+          }
+        },
+        {
+          "text": "What is the application deadline?",
+          "options": [
+            "(A) October 15.",
+            "(B) November 1.",
+            "(C) November 15.",
+            "(D) December 1."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le texte indique 'send your CV to jobs@maplesolutions.com by November 15'.",
+            "distractors": {
+              "A": "Le 15 octobre n'est pas mentionné.",
+              "B": "Le 1er novembre n'est pas mentionné.",
+              "D": "Le 1er décembre n'est pas mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "advertisement",
+      "title": "ProFit Gym — Summer Membership",
+      "text": "ProFit Gym — Join This Summer!\n\nSign up for a ProFit membership between June 1 and June 30 and pay no enrollment fee. Choose from three plans:\n\n- Basic: $29/month (gym floor access only)\n- Standard: $45/month (gym + group classes)\n- Premium: $65/month (gym + classes + personal trainer, 2 sessions/month)\n\nAll new members receive a free ProFit water bottle and a nutrition consultation on their first visit. Monthly contracts — no annual commitment required.\n\nVisit us at 88 Harbor Road or call 555-0147.",
+      "questions": [
+        {
+          "text": "What special offer is available in June?",
+          "options": [
+            "(A) A free one-month membership.",
+            "(B) No enrollment fee.",
+            "(C) Half-price monthly rates.",
+            "(D) A free personal trainer session."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "La publicité indique 'pay no enrollment fee' pour les inscriptions en juin.",
+            "distractors": {
+              "A": "Un mois gratuit n'est pas proposé.",
+              "C": "Les tarifs mensuels ne sont pas réduits de moitié.",
+              "D": "Une session de coach gratuite n'est pas l'offre principale de juin."
+            }
+          }
+        },
+        {
+          "text": "Which plan includes personal training sessions?",
+          "options": [
+            "(A) Basic.",
+            "(B) Standard.",
+            "(C) Premium.",
+            "(D) All plans."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Seul le plan Premium inclut 'personal trainer, 2 sessions/month'.",
+            "distractors": {
+              "A": "Basic donne accès à la salle uniquement.",
+              "B": "Standard inclut les cours collectifs mais pas de coach personnel.",
+              "D": "Le coach personnel n'est pas disponible dans tous les plans."
+            }
+          }
+        },
+        {
+          "text": "What do all new members receive on their first visit?",
+          "options": [
+            "(A) A free class pass.",
+            "(B) A discount coupon.",
+            "(C) A water bottle and nutrition consultation.",
+            "(D) A gym bag."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le texte mentionne 'a free ProFit water bottle and a nutrition consultation'.",
+            "distractors": {
+              "A": "Un pass de cours gratuit n'est pas mentionné.",
+              "B": "Un coupon de réduction n'est pas mentionné.",
+              "D": "Un sac de sport n'est pas mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "letter",
+      "title": "Response to Complaint — Delayed Order",
+      "text": "Dear Mr. Okafor,\n\nThank you for contacting us regarding your order #TK-8821. We sincerely apologize for the delay in delivery, which was caused by an unexpected disruption at our regional warehouse.\n\nYour order has now been dispatched and is expected to arrive within two business days. As a gesture of goodwill, we have applied a 15% discount to your next purchase. This credit has been added automatically to your account.\n\nIf you have any further questions, please do not hesitate to contact our customer support team at support@shopnow.com.\n\nSincerely,\nCustomer Experience Team, ShopNow",
+      "questions": [
+        {
+          "text": "Why was the letter written?",
+          "options": [
+            "(A) To confirm a new order.",
+            "(B) To respond to a delivery complaint.",
+            "(C) To advertise a discount sale.",
+            "(D) To cancel an order."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "La lettre répond à une réclamation concernant un retard de livraison de la commande #TK-8821.",
+            "distractors": {
+              "A": "Il n'y a pas de nouvelle commande — c'est une commande existante.",
+              "C": "La remise est un geste commercial, pas une promotion publicitaire.",
+              "D": "La commande n'est pas annulée, elle a été expédiée."
+            }
+          }
+        },
+        {
+          "text": "What caused the delay?",
+          "options": [
+            "(A) An incorrect shipping address.",
+            "(B) A warehouse disruption.",
+            "(C) A payment processing error.",
+            "(D) High seasonal demand."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "La lettre indique 'unexpected disruption at our regional warehouse'.",
+            "distractors": {
+              "A": "Une adresse incorrecte n'est pas mentionnée.",
+              "C": "Un problème de paiement n'est pas évoqué.",
+              "D": "La demande saisonnière n'est pas citée."
+            }
+          }
+        },
+        {
+          "text": "What compensation is offered to the customer?",
+          "options": [
+            "(A) A full refund.",
+            "(B) A free replacement item.",
+            "(C) A 15% discount on the next purchase.",
+            "(D) Free shipping on future orders."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "ShopNow offre 'a 15% discount to your next purchase', ajouté automatiquement au compte.",
+            "distractors": {
+              "A": "Aucun remboursement n'est proposé.",
+              "B": "Aucun article de remplacement gratuit n'est mentionné.",
+              "D": "La livraison gratuite n'est pas mentionnée."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "flyer",
+      "title": "Riverside Community Clean-Up Day",
+      "text": "Riverside Community Clean-Up Day\n\nJoin your neighbors and make a difference!\n\nDate: Saturday, April 19\nTime: 9:00 AM – 1:00 PM\nMeeting Point: Riverside Park, Main Gate\n\nVolunteers are needed to collect litter along the riverbank, plant native shrubs, and repaint the park benches. All equipment and gloves will be provided. Refreshments will be available throughout the morning.\n\nChildren aged 12 and above are welcome to participate with a parent or guardian. Register online at www.riversidecommunity.org or call 555-0284 by April 14.",
+      "questions": [
+        {
+          "text": "What is the purpose of the event?",
+          "options": [
+            "(A) To raise funds for a local school.",
+            "(B) To clean and improve a community park.",
+            "(C) To celebrate a neighborhood anniversary.",
+            "(D) To launch a recycling program."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'événement consiste à ramasser des déchets, planter des arbustes et repeindre — amélioration du parc.",
+            "distractors": {
+              "A": "Aucune collecte de fonds n'est mentionnée.",
+              "C": "Aucun anniversaire n'est célébré.",
+              "D": "Aucun programme de recyclage n'est lancé."
+            }
+          }
+        },
+        {
+          "text": "What will participants NOT need to bring?",
+          "options": [
+            "(A) Comfortable clothes.",
+            "(B) Their own gloves.",
+            "(C) Water.",
+            "(D) Enthusiasm."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le flyer précise 'All equipment and gloves will be provided' — les gants sont fournis.",
+            "distractors": {
+              "A": "Des vêtements confortables sont implicitement recommandés.",
+              "C": "De l'eau n'est pas mentionnée comme fournie.",
+              "D": "L'enthousiasme n'est pas un équipement — cette option est un piège d'humour."
+            }
+          }
+        },
+        {
+          "text": "What is the registration deadline?",
+          "options": [
+            "(A) April 12.",
+            "(B) April 14.",
+            "(C) April 17.",
+            "(D) April 19."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le flyer indique 'Register... by April 14'.",
+            "distractors": {
+              "A": "Le 12 avril n'est pas mentionné.",
+              "C": "Le 17 avril n'est pas mentionné.",
+              "D": "Le 19 avril est la date de l'événement, pas la date limite d'inscription."
+            }
+          }
+        },
+        {
+          "text": "What age requirement applies to children?",
+          "options": [
+            "(A) Must be at least 10 years old.",
+            "(B) Must be at least 12 years old.",
+            "(C) Must be at least 14 years old.",
+            "(D) No age restriction applies."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le flyer indique 'Children aged 12 and above are welcome'.",
+            "distractors": {
+              "A": "10 ans n'est pas l'âge minimum indiqué.",
+              "C": "14 ans dépasse l'âge minimum indiqué.",
+              "D": "Il y a bien une restriction d'âge (12 ans)."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "review",
+      "title": "Hotel Review — The Grand Harlow",
+      "text": "The Grand Harlow ★★★★\nReviewed by: Claire Fontaine\n\nI stayed at The Grand Harlow for three nights during a business trip. The location is excellent — just a five-minute walk from the central train station and surrounded by good restaurants.\n\nThe room was spacious and very clean, though the air conditioning was noisy at night. Breakfast was included in the rate and offered a solid selection, though it became repetitive by day three. The front desk staff were consistently friendly and efficient.\n\nOverall, I would recommend this hotel for business travelers, but light sleepers may want to request a quieter room.",
+      "questions": [
+        {
+          "text": "What was the reviewer's main reason for staying at the hotel?",
+          "options": [
+            "(A) A leisure vacation.",
+            "(B) A business trip.",
+            "(C) A family event.",
+            "(D) A conference stay."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "La critique mentionne explicitement 'during a business trip'.",
+            "distractors": {
+              "A": "Un voyage de loisirs n'est pas indiqué.",
+              "C": "Un événement familial n'est pas mentionné.",
+              "D": "Une conférence n'est pas mentionnée."
+            }
+          }
+        },
+        {
+          "text": "What negative aspect did the reviewer mention about the room?",
+          "options": [
+            "(A) It was too small.",
+            "(B) It was not clean.",
+            "(C) The air conditioning was loud.",
+            "(D) The view was poor."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "La critique mentionne 'the air conditioning was noisy at night'.",
+            "distractors": {
+              "A": "La chambre est décrite comme 'spacious' — grande.",
+              "B": "La chambre est décrite comme 'very clean'.",
+              "D": "La vue n'est pas commentée."
+            }
+          }
+        },
+        {
+          "text": "What does the reviewer imply about the breakfast?",
+          "options": [
+            "(A) It was not included in the rate.",
+            "(B) It had a limited variety over multiple days.",
+            "(C) It was served too early.",
+            "(D) The quality declined during the stay."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "'Became repetitive by day three' implique un manque de variété sur plusieurs jours.",
+            "distractors": {
+              "A": "Le petit-déjeuner était bien inclus dans le tarif.",
+              "C": "L'heure de service n'est pas mentionnée.",
+              "D": "La qualité n'est pas décrite comme ayant baissé, seulement comme répétitive."
+            }
+          }
+        },
+        {
+          "text": "For whom does the reviewer particularly recommend the hotel?",
+          "options": [
+            "(A) Families with children.",
+            "(B) Budget travelers.",
+            "(C) Business travelers.",
+            "(D) Long-term guests."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "La critique conclut 'I would recommend this hotel for business travelers'.",
+            "distractors": {
+              "A": "Les familles ne sont pas mentionnées.",
+              "B": "Le prix n'est pas discuté — rien ne suggère un hôtel budget.",
+              "D": "Les séjours longue durée ne sont pas évoqués."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "schedule",
+      "title": "Digital Marketing Workshop — Day 2",
+      "text": "Digital Marketing Workshop — Day 2 Schedule\nVenue: Lakeview Conference Center, Room 12\n\n9:00 AM   Welcome & Recap of Day 1 (Presenter: Tom Rivas)\n10:00 AM  SEO Fundamentals (Presenter: Aisha Patel)\n11:30 AM  Coffee Break\n11:45 AM  Social Media Strategy (Presenter: Tom Rivas)\n1:00 PM   Lunch Break\n2:00 PM   Paid Advertising Workshop (Hands-on session)\n3:30 PM   Q&A and Wrap-Up\n4:00 PM   End of Day 2\n\nNote: Participants are encouraged to bring a laptop for the 2:00 PM hands-on session.",
+      "questions": [
+        {
+          "text": "How long is the morning coffee break?",
+          "options": [
+            "(A) 10 minutes.",
+            "(B) 15 minutes.",
+            "(C) 20 minutes.",
+            "(D) 30 minutes."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "La pause café dure de 11h30 à 11h45, soit 15 minutes.",
+            "distractors": {
+              "A": "10 minutes serait de 11h30 à 11h40.",
+              "C": "20 minutes serait de 11h30 à 11h50.",
+              "D": "30 minutes serait de 11h30 à 12h00."
+            }
+          }
+        },
+        {
+          "text": "What are participants encouraged to bring for the 2:00 PM session?",
+          "options": [
+            "(A) A printed workbook.",
+            "(B) A laptop.",
+            "(C) Business cards.",
+            "(D) A smartphone."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "La note indique 'bring a laptop for the 2:00 PM hands-on session'.",
+            "distractors": {
+              "A": "Un classeur imprimé n'est pas mentionné.",
+              "C": "Des cartes de visite ne sont pas mentionnées.",
+              "D": "Un smartphone n'est pas mentionné."
+            }
+          }
+        },
+        {
+          "text": "Who presents more than one session on Day 2?",
+          "options": [
+            "(A) Aisha Patel.",
+            "(B) Tom Rivas.",
+            "(C) Both presenters equally.",
+            "(D) A guest speaker."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Tom Rivas anime le 'Welcome & Recap' et la 'Social Media Strategy' — deux sessions.",
+            "distractors": {
+              "A": "Aisha Patel n'anime qu'une session (SEO Fundamentals).",
+              "C": "Les présentateurs n'ont pas le même nombre de sessions.",
+              "D": "Aucun intervenant invité n'est mentionné."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "text_message",
+      "title": "Office Supply Delivery Issue",
+      "text": "Lisa (2:14 PM): Hi Marco, the office supplies we ordered arrived this morning but the printer paper is missing from the delivery.\nMarco (2:17 PM): That's strange. Did you check the packing slip?\nLisa (2:19 PM): Yes, the paper is listed on the slip but it wasn't in the boxes.\nMarco (2:21 PM): Okay. Can you call the supplier and ask them to send the missing items? The account number is OFC-4492.\nLisa (2:23 PM): Sure. Should I also ask for a credit note for the inconvenience?\nMarco (2:24 PM): Yes, go ahead. Let me know what they say.",
+      "questions": [
+        {
+          "text": "What is the main issue discussed in the messages?",
+          "options": [
+            "(A) A damaged printer.",
+            "(B) A missing item from a delivery.",
+            "(C) An incorrect invoice.",
+            "(D) A delayed shipment."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Lisa signale que le papier pour imprimante est manquant dans la livraison reçue.",
+            "distractors": {
+              "A": "L'imprimante elle-même n'est pas endommagée.",
+              "C": "La facture n'est pas incorrecte — le bon de livraison liste bien le papier.",
+              "D": "La livraison est arrivée ce matin — il n'y a pas de retard."
+            }
+          }
+        },
+        {
+          "text": "What does Marco ask Lisa to do first?",
+          "options": [
+            "(A) Return all the delivered items.",
+            "(B) Send an email to the supplier.",
+            "(C) Call the supplier about the missing items.",
+            "(D) Check the delivery again."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Marco demande 'Can you call the supplier and ask them to send the missing items?'.",
+            "distractors": {
+              "A": "Retourner tous les articles n'est pas demandé.",
+              "B": "Marco demande d'appeler, pas d'envoyer un email.",
+              "D": "Vérifier la livraison à nouveau n'est pas demandé — Lisa a déjà vérifié le bon."
+            }
+          }
+        },
+        {
+          "text": "What additional request does Lisa suggest?",
+          "options": [
+            "(A) Canceling the order entirely.",
+            "(B) Asking for a discount on the next order.",
+            "(C) Requesting a credit note.",
+            "(D) Speaking with the delivery driver."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Lisa propose de demander 'a credit note for the inconvenience', ce que Marco approuve.",
+            "distractors": {
+              "A": "Annuler la commande n'est pas suggéré.",
+              "B": "Une remise sur la prochaine commande n'est pas mentionnée.",
+              "D": "Parler au livreur n'est pas évoqué."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "invoice",
+      "title": "Catering Services Invoice",
+      "text": "INVOICE #2274\nBilled to: Hartwell & Partners LLP\nService Date: November 8\nIssued by: Primo Catering Co.\n\nDescription:\n- Executive Lunch (25 guests) .................. $875.00\n- Non-alcoholic beverages package .............. $150.00\n- Staff service fee (3 hours) .................. $210.00\n- Equipment rental (tables & linens) ........... $95.00\n\nSubtotal: $1,330.00\nDiscount (10% — loyalty client): -$133.00\nTotal Due: $1,197.00\n\nPayment due within 30 days of invoice date. Please reference invoice #2274 in your payment.",
+      "questions": [
+        {
+          "text": "Who is the invoice billed to?",
+          "options": [
+            "(A) Primo Catering Co.",
+            "(B) Hartwell & Partners LLP.",
+            "(C) Executive Lunch Services.",
+            "(D) The event venue."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "L'en-tête de la facture indique 'Billed to: Hartwell & Partners LLP'.",
+            "distractors": {
+              "A": "Primo Catering est l'émetteur de la facture, pas le destinataire.",
+              "C": "Ce n'est pas une entité — c'est une ligne de service.",
+              "D": "Le lieu de l'événement n'est pas mentionné."
+            }
+          }
+        },
+        {
+          "text": "Why was a discount applied?",
+          "options": [
+            "(A) The food was delivered late.",
+            "(B) The number of guests was reduced.",
+            "(C) The client is a returning customer.",
+            "(D) The event was canceled."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "La facture indique '10% — loyalty client', soit une remise fidélité.",
+            "distractors": {
+              "A": "Aucun retard n'est mentionné.",
+              "B": "Le nombre d'invités n'a pas changé selon la facture.",
+              "D": "L'événement a bien eu lieu le 8 novembre."
+            }
+          }
+        },
+        {
+          "text": "What is the total amount due after the discount?",
+          "options": [
+            "(A) $875.00.",
+            "(B) $1,197.00.",
+            "(C) $1,330.00.",
+            "(D) $133.00."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le total après remise est clairement indiqué : $1,197.00.",
+            "distractors": {
+              "A": "$875 est le coût du déjeuner uniquement.",
+              "C": "$1,330 est le sous-total avant remise.",
+              "D": "$133 est le montant de la remise, pas le total dû."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "itinerary",
+      "title": "Business Trip — Tokyo",
+      "text": "Traveler: Daniel Reeves\nDestination: Tokyo, Japan\nPurpose: Annual Supplier Summit\n\nDay 1 — Monday, May 12\n  7:45 AM  Departure from JFK (Flight NH010)\n  11:30 AM Arrival at Narita International Airport (local time)\n  1:00 PM  Hotel check-in: Shibuya Grand Hotel (Confirmation #SH-3391)\n  3:00 PM  Pre-summit briefing at Tanaka Corp. HQ\n\nDay 2 — Tuesday, May 13\n  9:00 AM  Supplier Summit — Main Hall, Tanaka Corp.\n  7:00 PM  Networking Dinner (hosted by Tanaka Corp.)\n\nNote: Airport transfer arranged via Narita Express. All meals on Day 2 are covered by Tanaka Corp.",
+      "questions": [
+        {
+          "text": "What is the purpose of Daniel Reeves' trip?",
+          "options": [
+            "(A) A job interview.",
+            "(B) A product launch event.",
+            "(C) An annual supplier summit.",
+            "(D) A factory inspection."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'itinéraire précise 'Purpose: Annual Supplier Summit'.",
+            "distractors": {
+              "A": "Aucun entretien d'embauche n'est mentionné.",
+              "B": "Aucun lancement de produit n'est mentionné.",
+              "D": "Aucune inspection d'usine n'est mentionnée."
+            }
+          }
+        },
+        {
+          "text": "Where will Daniel stay in Tokyo?",
+          "options": [
+            "(A) Tanaka Corp. Guest House.",
+            "(B) Narita Airport Hotel.",
+            "(C) Shibuya Grand Hotel.",
+            "(D) JFK Transit Hotel."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'itinéraire indique 'Hotel check-in: Shibuya Grand Hotel (Confirmation #SH-3391)'.",
+            "distractors": {
+              "A": "Tanaka Corp. n'a pas de maison d'hôtes mentionnée.",
+              "B": "L'hôtel de l'aéroport de Narita n'est pas mentionné.",
+              "D": "JFK est l'aéroport de départ, pas un lieu d'hébergement."
+            }
+          }
+        },
+        {
+          "text": "What does the note say about meals on Day 2?",
+          "options": [
+            "(A) Meals must be paid by Daniel.",
+            "(B) Breakfast only is covered.",
+            "(C) All Day 2 meals are covered by Tanaka Corp.",
+            "(D) Dinner is not included."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "La note indique 'All meals on Day 2 are covered by Tanaka Corp.'.",
+            "distractors": {
+              "A": "C'est le contraire — les repas sont pris en charge.",
+              "B": "Seul le petit-déjeuner n'est pas mentionné spécifiquement — tous les repas sont couverts.",
+              "D": "Le dîner est explicitement listé au programme et couvert."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "product_label",
+      "title": "EcoClean All-Purpose Spray",
+      "text": "EcoClean All-Purpose Spray\n\nDirections: Spray directly onto the surface to be cleaned. Leave for 30 seconds, then wipe with a clean cloth or sponge. For stubborn stains, apply a second coat and leave for up to 2 minutes before wiping.\n\nWarning: Do not use on marble, natural stone, or untreated wood surfaces. Avoid contact with eyes and skin. In case of contact with eyes, rinse immediately with plenty of water for 15 minutes. Keep out of reach of children.\n\nIngredients: Water, citric acid, sodium lauryl sulfate, eucalyptus extract.\nNet weight: 500 ml\nStore below 25°C.",
+      "questions": [
+        {
+          "text": "How long should the product be left on stubborn stains?",
+          "options": [
+            "(A) 30 seconds.",
+            "(B) 1 minute.",
+            "(C) Up to 2 minutes.",
+            "(D) 5 minutes."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'étiquette indique 'leave for up to 2 minutes' pour les taches tenaces.",
+            "distractors": {
+              "A": "30 secondes est le temps standard, pas pour les taches tenaces.",
+              "B": "1 minute n'est pas mentionné.",
+              "D": "5 minutes n'est pas mentionné."
+            }
+          }
+        },
+        {
+          "text": "On which surface should the product NOT be used?",
+          "options": [
+            "(A) Glass.",
+            "(B) Ceramic tiles.",
+            "(C) Marble.",
+            "(D) Stainless steel."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'avertissement précise 'Do not use on marble, natural stone, or untreated wood'.",
+            "distractors": {
+              "A": "Le verre n'est pas interdit par l'étiquette.",
+              "B": "Le carrelage céramique n'est pas interdit.",
+              "D": "L'acier inoxydable n'est pas interdit."
+            }
+          }
+        },
+        {
+          "text": "What should be done if the product contacts the eyes?",
+          "options": [
+            "(A) Apply a cold compress.",
+            "(B) Seek medical attention immediately.",
+            "(C) Rinse with water for 15 minutes.",
+            "(D) Wipe with a dry cloth."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "L'étiquette dit 'rinse immediately with plenty of water for 15 minutes'.",
+            "distractors": {
+              "A": "Une compresse froide n'est pas mentionnée.",
+              "B": "Consulter un médecin immédiatement n'est pas la première consigne.",
+              "D": "Essuyer avec un tissu sec aggraverait la situation et n'est pas conseillé."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "doctype": "memo",
+      "title": "End-of-Year Performance Reviews",
+      "text": "To: All Department Managers\nFrom: Laura Bennett, VP of Human Resources\nSubject: End-of-Year Performance Review Process\nDate: November 25\n\nThe annual performance review period will run from December 9 to December 20. All managers are required to complete reviews for each of their direct reports using the updated evaluation form available on the HR portal.\n\nPlease ensure that all forms are submitted by December 20. Late submissions will delay the processing of year-end bonuses. Employees should be informed of their review date at least five business days in advance.\n\nA training session on using the new evaluation form will be held on December 5 at 10:00 AM in the main boardroom. Attendance is mandatory for all managers.",
+      "questions": [
+        {
+          "text": "When does the performance review period begin?",
+          "options": [
+            "(A) November 25.",
+            "(B) December 5.",
+            "(C) December 9.",
+            "(D) December 20."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "Le mémo indique que la période commence 'from December 9 to December 20'.",
+            "distractors": {
+              "A": "Le 25 novembre est la date du mémo, pas le début des évaluations.",
+              "B": "Le 5 décembre est la date de la session de formation.",
+              "D": "Le 20 décembre est la fin de la période et la date limite de soumission."
+            }
+          }
+        },
+        {
+          "text": "What will happen if forms are submitted late?",
+          "options": [
+            "(A) Managers will be penalized.",
+            "(B) Year-end bonuses will be delayed.",
+            "(C) Employees will not receive a review.",
+            "(D) The review period will be extended."
+          ],
+          "answer": "B",
+          "explanation": {
+            "correct": "Le mémo précise 'Late submissions will delay the processing of year-end bonuses'.",
+            "distractors": {
+              "A": "Aucune sanction envers les managers n'est mentionnée.",
+              "C": "Le texte ne dit pas que les évaluations seront annulées.",
+              "D": "Une prolongation de la période n'est pas évoquée."
+            }
+          }
+        },
+        {
+          "text": "What is the purpose of the December 5 meeting?",
+          "options": [
+            "(A) To announce year-end bonuses.",
+            "(B) To conduct employee reviews.",
+            "(C) To train managers on the new evaluation form.",
+            "(D) To introduce a new HR portal."
+          ],
+          "answer": "C",
+          "explanation": {
+            "correct": "'A training session on using the new evaluation form' — c'est l'objet de la réunion du 5 décembre.",
+            "distractors": {
+              "A": "Les primes ne sont pas annoncées lors de cette réunion.",
+              "B": "La réunion est pour les managers, pas pour conduire des évaluations.",
+              "D": "Le portail RH n'est pas présenté ce jour-là."
+            }
+          }
+        },
+        {
+          "text": "Who must attend the December 5 training session?",
+          "options": [
+            "(A) All employees.",
+            "(B) Only HR staff.",
+            "(C) New hires only.",
+            "(D) All department managers."
+          ],
+          "answer": "D",
+          "explanation": {
+            "correct": "Le mémo précise 'Attendance is mandatory for all managers'.",
+            "distractors": {
+              "A": "Tous les employés ne sont pas convoqués — seulement les managers.",
+              "B": "Le service RH n'est pas spécifiquement ciblé.",
+              "C": "Les nouvelles recrues ne sont pas mentionnées."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

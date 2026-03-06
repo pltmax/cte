@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useExerciseCompletion } from "@/hooks/useExerciseCompletion";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -34,6 +35,7 @@ interface ExoPart5ShellProps {
   categoryLabel: string;
   categoryDescription: string;
   advice: Advice;
+  exerciseKey: string;
 }
 
 type Phase = "advice" | "questions" | "done";
@@ -47,8 +49,10 @@ export default function ExoPart5Shell({
   categoryLabel,
   categoryDescription,
   advice,
+  exerciseKey,
 }: ExoPart5ShellProps) {
   const router = useRouter();
+  const { markCompleted } = useExerciseCompletion();
   const [phase, setPhase] = useState<Phase>("advice");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -76,6 +80,7 @@ export default function ExoPart5Shell({
 
   function handleNext() {
     if (currentIndex + 1 >= totalQuestions) {
+      markCompleted(exerciseKey);
       setPhase("done");
     } else {
       setCurrentIndex((i) => i + 1);
@@ -132,7 +137,7 @@ export default function ExoPart5Shell({
             {categoryLabel}
           </span>
           <span className="text-xs text-[#9f7aea]">
-            · {categoryDescription}
+             · {totalQuestions} questions
           </span>
         </div>
 
@@ -313,124 +318,106 @@ export default function ExoPart5Shell({
       {/* Sentence */}
       <div className="mb-6 rounded-xl bg-gray-50 border border-gray-100 px-5 py-4">
         <p className="text-base text-gray-900 leading-relaxed font-medium">
-          {currentQ.sentence}
+          {(() => {
+            const parts = currentQ.sentence.split(/_{2,}/);
+            if (!isAnswered || parts.length < 2) return currentQ.sentence;
+            const selectedIdx = OPTION_KEYS.indexOf(selected as "A" | "B" | "C" | "D");
+            const selectedText =
+              currentQ.options[selectedIdx]?.replace(/^\([A-D]\)\s*/, "") ?? selected ?? "—";
+            return (
+              <>
+                {parts[0]}
+                <span
+                  className={`inline-flex items-center rounded-md px-2 py-0.5 mx-0.5 text-sm font-semibold border ${
+                    isCorrect
+                      ? "bg-green-50 text-green-700 border-green-300"
+                      : "bg-red-50 text-red-700 border-red-300"
+                  }`}
+                >
+                  {selectedText}
+                </span>
+                {parts[1]}
+              </>
+            );
+          })()}
         </p>
       </div>
 
-      {/* Options */}
-      <div className="flex flex-col gap-2 mb-6">
-        {OPTION_KEYS.map((key, idx) => {
-          const optionText =
-            currentQ.options[idx]?.replace(/^\([A-D]\)\s*/, "") ?? "";
-          return (
-            <button
-              key={key}
-              onClick={() => handleSelect(key)}
-              disabled={isAnswered}
-              className={getOptionStyle(key)}
-            >
-              <span className={getLetterBadgeStyle(key)}>{key}</span>
-              <span>{optionText}</span>
-            </button>
-          );
-        })}
-      </div>
+      {/* Options — hidden after answer */}
+      {!isAnswered && (
+        <div className="flex flex-col gap-2 mb-6">
+          {OPTION_KEYS.map((key, idx) => {
+            const optionText =
+              currentQ.options[idx]?.replace(/^\([A-D]\)\s*/, "") ?? "";
+            return (
+              <button
+                key={key}
+                onClick={() => handleSelect(key)}
+                className={getOptionStyle(key)}
+              >
+                <span className={getLetterBadgeStyle(key)}>{key}</span>
+                <span>{optionText}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
 
-      {/* Feedback + explanation (shown after selection) */}
+      {/* Explanation rows — shown after answer */}
       {isAnswered && (
-        <div className="mb-6 space-y-3">
-          {/* Feedback pill */}
-          <div
-            className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-semibold ${
-              isCorrect
-                ? "bg-green-100 text-green-700"
-                : "bg-red-100 text-red-700"
-            }`}
-          >
-            {isCorrect ? (
-              <>
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-                Correct
-              </>
-            ) : (
-              <>
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                Faux — la bonne réponse était ({currentQ.answer})
-              </>
-            )}
-          </div>
-
-          {/* Per-option explanation rows */}
-          <div className="rounded-xl border border-gray-100 overflow-hidden">
-            {OPTION_KEYS.map((key, idx) => {
-              const isCorrectKey = key === currentQ.answer;
-              const isChosen = selected === key;
-              const text = isCorrectKey
-                ? currentQ.explanation.correct
-                : currentQ.explanation.distractors[key];
-              if (!text) return null;
-              return (
-                <div
-                  key={key}
-                  className={`flex items-start gap-3 px-4 py-3 border-b border-gray-100 last:border-b-0 ${
-                    isCorrectKey ? "bg-green-50" : isChosen ? "bg-red-50" : "bg-white"
+        <div className="rounded-xl border border-gray-100 overflow-hidden mb-6">
+          {OPTION_KEYS.map((key, idx) => {
+            const isCorrectKey = key === currentQ.answer;
+            const isChosen = selected === key;
+            const text = isCorrectKey
+              ? currentQ.explanation.correct
+              : currentQ.explanation.distractors[key];
+            if (!text) return null;
+            return (
+              <div
+                key={key}
+                className={`flex items-start gap-3 px-4 py-3 border-b border-gray-100 last:border-b-0 ${
+                  isCorrectKey ? "bg-green-50" : isChosen ? "bg-red-50" : "bg-white"
+                }`}
+              >
+                <span
+                  className={`shrink-0 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center mt-0.5 ${
+                    isCorrectKey
+                      ? "bg-green-500 text-white"
+                      : isChosen
+                      ? "bg-red-100 text-red-600"
+                      : "bg-gray-100 text-gray-500"
                   }`}
                 >
-                  <span
-                    className={`shrink-0 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center mt-0.5 ${
+                  {key}
+                </span>
+                <div className="min-w-0">
+                  <p
+                    className={`text-xs font-medium mb-0.5 ${
                       isCorrectKey
-                        ? "bg-green-500 text-white"
+                        ? "text-green-700"
                         : isChosen
-                        ? "bg-red-100 text-red-600"
-                        : "bg-gray-100 text-gray-500"
+                        ? "text-red-600"
+                        : "text-gray-400"
                     }`}
                   >
-                    {key}
-                  </span>
-                  <div className="min-w-0">
-                    <p
-                      className={`text-xs font-medium mb-0.5 ${
-                        isCorrectKey
-                          ? "text-green-700"
-                          : isChosen
-                          ? "text-red-600"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      {currentQ.options[idx]?.replace(/^\([A-D]\)\s*/, "")}
-                    </p>
-                    <p
-                      className={`text-sm ${
-                        isCorrectKey
-                          ? "text-green-800"
-                          : isChosen
-                          ? "text-red-700"
-                          : "text-gray-500"
-                      }`}
-                    >
-                      {text}
-                    </p>
-                  </div>
+                    {currentQ.options[idx]?.replace(/^\([A-D]\)\s*/, "")}
+                  </p>
+                  <p
+                    className={`text-sm ${
+                      isCorrectKey
+                        ? "text-green-800"
+                        : isChosen
+                        ? "text-red-700"
+                        : "text-gray-500"
+                    }`}
+                  >
+                    {text}
+                  </p>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       )}
 

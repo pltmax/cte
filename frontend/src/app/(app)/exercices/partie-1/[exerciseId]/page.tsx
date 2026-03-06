@@ -32,6 +32,7 @@ export default async function ExerciceTypePage({
             questions={questions}
             types={[type]}
             advice={exercicesData.advice}
+            exerciseKey={`partie-1:${exerciseId}`}
           />
         </div>
       </div>
