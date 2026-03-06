@@ -12,7 +12,9 @@ import Part6Shell from "@/components/exam/Part6Shell";
 import Part7Shell from "@/components/exam/Part7Shell";
 import { createClient } from "@/lib/supabase/client";
 import { scoreExam, type AllExamAnswers, type PartAnswers } from "@/lib/toeic-scoring";
+import { loadPriorityStore, updateAfterExam, savePriorityStore } from "@/lib/exam/priority";
 import type { ExamData } from "@/types/exam-data";
+import type { ExamSelectionMeta } from "@/types/exam-pools";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -20,7 +22,7 @@ const LISTENING_SECONDS = 45 * 60; // 45 minutes
 const READING_SECONDS = 75 * 60; // 75 minutes
 const EXAM_TOTAL_QUESTIONS = 200;
 
-// 1-based global numbering offsets per part (add to each part’s local 1-based numbering)
+// 1-based global numbering offsets per part (add to each part's local 1-based numbering)
 const QUESTION_OFFSETS = {
   p1: 0,   // 1–6
   p2: 6,   // 7–31
@@ -54,10 +56,29 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
   const [timerActive, setTimerActive] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(LISTENING_SECONDS);
 
+  // localStorage-hydrated exam data (overrides DB-fetched examData when present)
+  const [localExamData, setLocalExamData] = useState<ExamData | null>(null);
+
   // Accumulate per-part answers without triggering re-renders (ref, not state).
   const allAnswersRef = useRef<AllExamAnswers>({
     p1: {}, p2: {}, p3: {}, p4: {}, p5: {}, p6: {}, p7: {},
   });
+
+  // ── Hydrate from localStorage on mount ────────────────────────────────────
+  useEffect(() => {
+    if (!examId) return;
+    const raw = localStorage.getItem(`cts_exam_data_${examId}`);
+    if (raw) {
+      try {
+        setLocalExamData(JSON.parse(raw) as ExamData);
+      } catch {
+        // corrupted — fall back to DB data
+      }
+    }
+  }, [examId]);
+
+  // localStorage wins for new (dynamically built) exams; DB data is the fallback.
+  const effectiveExamData = localExamData ?? examData;
 
   const timerLabel = LISTENING_PHASES.includes(phase) ? "Écoute" : "Lecture";
 
@@ -132,9 +153,27 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
       const supabase = createClient();
       const all = allAnswersRef.current;
 
-      if (examData) {
+      // ── Update priority store when this was a dynamically-built exam ──────
+      if (localExamData) {
+        const rawMeta = localStorage.getItem(`cts_exam_meta_${examId}`);
+        if (rawMeta) {
+          try {
+            const meta = JSON.parse(rawMeta) as ExamSelectionMeta;
+            const results = computeUnitResults(all, localExamData, meta);
+            const store = loadPriorityStore();
+            const updatedStore = updateAfterExam(store, results);
+            savePriorityStore(updatedStore);
+          } catch {
+            // non-fatal — priority store update best-effort
+          }
+        }
+        localStorage.removeItem(`cts_exam_data_${examId}`);
+        localStorage.removeItem(`cts_exam_meta_${examId}`);
+      }
+
+      if (effectiveExamData) {
         // Score the exam and persist answers + scores.
-        const { listeningScore, readingScore, totalScore } = scoreExam(all, examData);
+        const { listeningScore, readingScore, totalScore } = scoreExam(all, effectiveExamData);
         await supabase.rpc("complete_exam", {
           exam_id: examId,
           p_listening_score: listeningScore,
@@ -143,13 +182,13 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
           p_answers: all as unknown as Record<string, unknown>,
         });
       } else {
-        // Local JSON fallback: no correct-answer data, store without scoring.
+        // No correct-answer data available; store without scoring.
         await supabase.rpc("complete_exam", { exam_id: examId });
       }
 
       router.push(`/mockexams/${examId}/bilan`);
     }
-  }, [examId, examData, router]);
+  }, [examId, localExamData, effectiveExamData, router]);
 
   // ── Admin: skip current part ──────────────────────────────────────────────
   const handleSkipPart = useCallback(() => {
@@ -193,7 +232,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onStart={handlePart1Start}
                 onComplete={handlePart1Complete}
                 inExam
-                questions={examData?.part1}
+                questions={effectiveExamData?.part1}
                 isAdmin={isAdmin}
                 questionNumberOffset={QUESTION_OFFSETS.p1}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
@@ -204,7 +243,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onStart={handlePart2Start}
                 onComplete={handlePart2Complete}
                 inExam
-                questions={examData?.part2}
+                questions={effectiveExamData?.part2}
                 questionNumberOffset={QUESTION_OFFSETS.p2}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -214,7 +253,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onStart={handlePart3Start}
                 onComplete={handlePart3Complete}
                 inExam
-                conversations={examData?.part3}
+                conversations={effectiveExamData?.part3}
                 questionNumberOffset={QUESTION_OFFSETS.p3}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -224,7 +263,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onStart={handlePart4Start}
                 onComplete={handlePart4Complete}
                 inExam
-                talks={examData?.part4}
+                talks={effectiveExamData?.part4}
                 questionNumberOffset={QUESTION_OFFSETS.p4}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -234,7 +273,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onStart={handlePart5Start}
                 onComplete={handlePart5Complete}
                 inExam
-                questions={examData?.part5}
+                questions={effectiveExamData?.part5}
                 questionNumberOffset={QUESTION_OFFSETS.p5}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -245,7 +284,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onStart={handlePart6Start}
                 onComplete={handlePart6Complete}
                 inExam
-                passages={examData?.part6}
+                passages={effectiveExamData?.part6}
                 questionNumberOffset={QUESTION_OFFSETS.p6}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -256,7 +295,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onStart={handlePart7Start}
                 onComplete={handlePart7Complete}
                 inExam
-                passages={examData?.part7}
+                passages={effectiveExamData?.part7}
                 questionNumberOffset={QUESTION_OFFSETS.p7}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -297,4 +336,95 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
       </main>
     </div>
   );
+}
+
+// ─── Per-unit correctness computation ─────────────────────────────────────────
+
+function computeUnitResults(
+  all: AllExamAnswers,
+  data: ExamData,
+  meta: ExamSelectionMeta
+): Record<string, "correct" | "partial" | "incorrect"> {
+  const results: Record<string, "correct" | "partial" | "incorrect"> = {};
+
+  // Individual parts (P1, P2, P5) — one pool item = one question
+  const individualParts = [
+    { ids: meta.p1Ids, answers: all.p1, items: data.part1 ?? [] },
+    { ids: meta.p2Ids, answers: all.p2, items: data.part2 ?? [] },
+    { ids: meta.p5Ids, answers: all.p5, items: data.part5 ?? [] },
+  ] as const;
+
+  for (const { ids, answers, items } of individualParts) {
+    ids.forEach((id, i) => {
+      const correct = (items[i] as { answer: string } | undefined)?.answer;
+      const given = answers[i]?.toUpperCase();
+      results[id] = given && correct && given === correct.toUpperCase()
+        ? "correct"
+        : "incorrect";
+    });
+  }
+
+  // P3 — 3 questions per conversation
+  meta.p3Ids.forEach((id, i) => {
+    const conv = (data.part3 ?? [])[i];
+    if (!conv) return;
+    const base = i * 3;
+    const correctCount = conv.questions.filter(
+      (q, qi) => all.p3[base + qi]?.toUpperCase() === q.answer.toUpperCase()
+    ).length;
+    results[id] = correctCount === conv.questions.length
+      ? "correct"
+      : correctCount === 0
+      ? "incorrect"
+      : "partial";
+  });
+
+  // P4 — 3 questions per talk
+  meta.p4Ids.forEach((id, i) => {
+    const talk = (data.part4 ?? [])[i];
+    if (!talk) return;
+    const base = i * 3;
+    const correctCount = talk.questions.filter(
+      (q, qi) => all.p4[base + qi]?.toUpperCase() === q.answer.toUpperCase()
+    ).length;
+    results[id] = correctCount === talk.questions.length
+      ? "correct"
+      : correctCount === 0
+      ? "incorrect"
+      : "partial";
+  });
+
+  // P6 — 4 questions per passage
+  meta.p6Ids.forEach((id, i) => {
+    const passage = (data.part6 ?? [])[i];
+    if (!passage) return;
+    const base = i * 4;
+    const correctCount = passage.questions.filter(
+      (q, qi) => all.p6[base + qi]?.toUpperCase() === q.answer.toUpperCase()
+    ).length;
+    results[id] = correctCount === passage.questions.length
+      ? "correct"
+      : correctCount === 0
+      ? "incorrect"
+      : "partial";
+  });
+
+  // P7 — variable question count per passage
+  let p7Offset = 0;
+  meta.p7Ids.forEach((id, i) => {
+    const passage = (data.part7 ?? [])[i];
+    const qCount = meta.p7QuestionCounts[i] ?? 0;
+    if (!passage) { p7Offset += qCount; return; }
+    const correctCount = passage.questions.filter(
+      (q, qi) => all.p7[p7Offset + qi]?.toUpperCase() === q.answer.toUpperCase()
+    ).length;
+    results[id] = correctCount === passage.questions.length
+      ? "correct"
+      : correctCount === 0
+      ? "incorrect"
+      : "partial";
+    p7Offset += qCount;
+  });
+
+  return results;
 }

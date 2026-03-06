@@ -1,0 +1,2970 @@
+[
+  {
+    "id": "p7_e1_q000",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "invitation",
+        "text": "You are cordially invited to the 10th Annual Charity Gala.\n\nAll proceeds from this event will benefit the \"Books for Kids\" foundation.\n\nKeynote Speaker: Author Diane Rivers\nTickets: $100 (Includes a three-course dinner and live music)\nDress Code: Formal attire required."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the purpose of the gala?",
+        "options": [
+          "(A) To celebrate a birthday.",
+          "(B) To raise money for a foundation.",
+          "(C) To promote a new book.",
+          "(D) To open a new library."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Who will give a speech at the event?",
+        "options": [
+          "(A) A local politician.",
+          "(B) A writer.",
+          "(C) A musician.",
+          "(D) A chef."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is included in the price of the ticket?",
+        "options": [
+          "(A) A free book.",
+          "(B) A formal suit.",
+          "(C) A meal.",
+          "(D) Parking fees."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q001",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "policy",
+        "text": "POLICY: Spark Co. Travel Reimbursement\n\nEmployees traveling for business are entitled to a daily meal allowance of $50. All original receipts must be submitted within 7 days of returning. For mileage, the company pays $0.55 per mile if a personal vehicle is used."
+      },
+      {
+        "doctype": "text_message",
+        "text": "TEXT MESSAGES\nMark (2:15 PM): Hey Sarah, I just got back from the client meeting in Springfield. It was a 100-mile round trip.\nSarah (2:17 PM): Okay, don't forget to submit your reimbursement form. Did you keep your lunch receipt?\nMark (2:18 PM): Yes, it was $42. I'll get the paperwork to you by Friday.\nSarah (2:20 PM): Great. Since today is Monday, you're well within the deadline."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the maximum daily meal allowance?",
+        "options": [
+          "(A) $30.",
+          "(B) $42.",
+          "(C) $50.",
+          "(D) $100."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How much will Mark be reimbursed for his 100-mile drive?",
+        "options": [
+          "(A) $42.00.",
+          "(B) $55.00.",
+          "(C) $100.00.",
+          "(D) $50.00."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "When does the company require reimbursement forms to be turned in?",
+        "options": [
+          "(A) On the day of travel.",
+          "(B) Within one week of returning.",
+          "(C) By the end of the month.",
+          "(D) Every Friday."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "On what day of the week did Mark return from his trip?",
+        "options": [
+          "(A) Monday.",
+          "(B) Friday.",
+          "(C) Saturday.",
+          "(D) Sunday."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "Is Mark's lunch receipt eligible for full reimbursement?",
+        "options": [
+          "(A) No, it exceeds the limit.",
+          "(B) Yes, because it is under $50.",
+          "(C) No, lunch is not covered.",
+          "(D) Yes, but only 50% of it."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q002",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "article",
+        "text": "Local Bakery Expands\n\nThe Daily Crumb, a popular local bakery known for its sourdough bread, announced yesterday that it will open a second location in the West End district this winter. Owner Thomas Brier stated that the current shop on Oak Street has become too crowded to handle the weekend rush. The new facility will feature a larger seating area and a dedicated space for baking classes, which Brier hopes to launch in early spring."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is The Daily Crumb famous for?",
+        "options": [
+          "(A) Pastries.",
+          "(B) Bread.",
+          "(C) Coffee.",
+          "(D) Baking classes."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Why is a second location being opened?",
+        "options": [
+          "(A) To lower production costs.",
+          "(B) The original shop is too small.",
+          "(C) The Oak Street shop is closing.",
+          "(D) To compete with a supermarket."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "When is the new location expected to open?",
+        "options": [
+          "(A) Spring.",
+          "(B) Summer.",
+          "(C) Autumn.",
+          "(D) Winter."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What does Mr. Brier plan to do in the spring?",
+        "options": [
+          "(A) Sell the business.",
+          "(B) Renovate the Oak Street shop.",
+          "(C) Start offering lessons.",
+          "(D) Hire a new manager."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q003",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "catalog",
+        "text": "CATALOG: Office Furniture\n\n- Desk Chair: $120\n- Filing Cabinet: $80\n- Bookshelf: $150\n- Shipping: Flat rate of $20 for all orders."
+      },
+      {
+        "doctype": "order",
+        "text": "ORDER #772\nCustomer: Sarah Jenkins\nItem: 1 Bookshelf\nDate: June 1\nTotal: $170.00"
+      },
+      {
+        "doctype": "notification",
+        "text": "SHIPPING NOTIFICATION\nTo: Sarah Jenkins\nStatus: Shipped\nCarrier: SwiftFreight\n\nNote: Because your item is over 30kg, an additional \"Heavy Item\" fee of $15 was applied to your card after the initial purchase."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the base price of a bookshelf?",
+        "options": [
+          "(A) $20.",
+          "(B) $80.",
+          "(C) $120.",
+          "(D) $150."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "How much was the standard shipping rate?",
+        "options": [
+          "(A) Free.",
+          "(B) $10.",
+          "(C) $15.",
+          "(D) $20."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What was the total amount Sarah paid before the shipping notification?",
+        "options": [
+          "(A) $150.",
+          "(B) $185.",
+          "(C) $80.",
+          "(D) $170."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Why did Sarah have to pay more money later?",
+        "options": [
+          "(A) She added another item.",
+          "(B) She changed her address.",
+          "(C) The price of the shelf rose.",
+          "(D) The item was very heavy."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What is the final total Sarah paid for everything?",
+        "options": [
+          "(A) $150.",
+          "(B) $170.",
+          "(C) $20.",
+          "(D) $185."
+        ],
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q004",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "ADVERTISEMENT: Prime Print Solutions\n\n- Business Cards: $20 per 100\n- Flyers: $50 per 500\n- Banners: $40 each\n- Special: Orders over $100 receive free shipping!"
+      },
+      {
+        "doctype": "form",
+        "text": "ORDER FORM\nCustomer: Clara Vance, Bloom Florist\nItems:\n- 200 Business Cards\n- 1 Banner\nOrder Date: April 10\nShipping Choice: Standard ($10)"
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: Clara Vance\nFrom: Prime Print Solutions\nDate: April 11\n\nDear Ms. Vance, We received your order. However, we noticed that if you add just one more item to your cart, you would qualify for our free shipping promotion. Our custom pens are currently on sale for $15 per box. Would you like to add a box to your order?"
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the base price for a single banner?",
+        "options": [
+          "(A) $20.",
+          "(B) $40.",
+          "(C) $50.",
+          "(D) $80."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What was the original subtotal of Clara's order (excluding shipping)?",
+        "options": [
+          "(A) $60.",
+          "(B) $80.",
+          "(C) $100.",
+          "(D) $110."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Why did Clara NOT get free shipping initially?",
+        "options": [
+          "(A) She ordered after the deadline.",
+          "(B) She is not a new customer.",
+          "(C) Her total was under $100.",
+          "(D) She lives outside the delivery zone."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What is the minimum amount Clara needs to add to get free shipping?",
+        "options": [
+          "(A) $10.",
+          "(B) $15.",
+          "(C) $20.",
+          "(D) $40."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What kind of business does Clara likely run?",
+        "options": [
+          "(A) A print shop.",
+          "(B) A delivery service.",
+          "(C) A flower shop.",
+          "(D) A stationery store."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q005",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "itinerary",
+        "text": "Traveler: Mark Sterling\nDestination: London, UK\nDeparture: Oct 5, 8:30 PM (Flight BA202)\nArrival: Oct 6, 9:00 AM (Heathrow Terminal 5)\nHotel: The Regency Square (Confirmation #RE773)\nTransport: Private car pickup arranged for 10:00 AM at the Arrivals Lounge."
+      }
+    ],
+    "questions": [
+      {
+        "text": "When does Mr. Sterling arrive in London?",
+        "options": [
+          "(A) October 5.",
+          "(B) October 6.",
+          "(C) October 10.",
+          "(D) 8:30 PM."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Where will the traveler be staying?",
+        "options": [
+          "(A) The Regency Square.",
+          "(B) Heathrow Terminal 5.",
+          "(C) A private residence.",
+          "(D) Near the Arrivals Lounge."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "How will Mr. Sterling get to his hotel?",
+        "options": [
+          "(A) By taking a bus.",
+          "(B) By riding the subway.",
+          "(C) By a pre-booked car.",
+          "(D) By walking from the terminal."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q006",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "NOTICE: Company Garden Club\n\nWe are starting a community garden on the rooftop! We need volunteers to help plant vegetables on Saturday, April 5, at 10:00 AM. Tools and gloves will be provided."
+      },
+      {
+        "doctype": "form",
+        "text": "SIGNUP SHEET\n- Linda V. (Tools: No)\n- Gary T. (Tools: Yes)\n- Sam R. (Tools: No)"
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: All Gardeners\nFrom: Club Leader\nDate: April 4\n\nUnfortunately, it is forecast to rain heavily tomorrow. We will move the planting session to Sunday, April 6, at the same time. Since Gary can no longer make it on Sunday, we are short one set of gardening shears. Does anyone else have a pair they can bring?"
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where will the garden be located?",
+        "options": [
+          "(A) In a local park.",
+          "(B) In the lobby.",
+          "(C) In the parking lot.",
+          "(D) On the roof."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "On what day was the planting originally scheduled?",
+        "options": [
+          "(A) Friday.",
+          "(B) Sunday.",
+          "(C) Monday.",
+          "(D) Saturday."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Why was the event rescheduled?",
+        "options": [
+          "(A) Not enough people signed up.",
+          "(B) The tools were missing.",
+          "(C) The plants didn't arrive.",
+          "(D) The weather was poor."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Who is bringing their own equipment?",
+        "options": [
+          "(A) Linda V.",
+          "(B) Sam R.",
+          "(C) The Club Leader.",
+          "(D) Gary T."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What is the club lacking for the Sunday session?",
+        "options": [
+          "(A) Volunteers.",
+          "(B) Vegetables.",
+          "(C) Gloves.",
+          "(D) Shears."
+        ],
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q007",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "memo",
+        "text": "To: All Residents, Northwood Apartments\nFrom: Property Management\nDate: Jan 15\nSubject: Gym Maintenance\n\nPlease be informed that the fitness center will be closed for equipment upgrades from January 20 to January 22. During this period, the painting crew will also refresh the interior walls. The facility will reopen for regular use at 6:00 AM on January 23."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the main reason for the closure?",
+        "options": [
+          "(A) To paint the lobby.",
+          "(B) To install new equipment.",
+          "(C) To change the gym hours.",
+          "(D) To repair the ventilation system."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "When can residents use the gym again?",
+        "options": [
+          "(A) January 20.",
+          "(B) January 22.",
+          "(C) January 23.",
+          "(D) January 15."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q008",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "ADVERTISEMENT: City Car Rentals\n\n- Compact: $35/day\n- Luxury: $75/day\n- SUV: $90/day\n- Insurance: $15/day (Mandatory for drivers under 25)"
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: City Car Rentals\nFrom: Mark Stevens (Age: 22)\nDate: March 1\n\nI would like to book a luxury car for 2 days, starting March 10. I see your daily rate is $75. Please confirm the total price including any necessary fees."
+      },
+      {
+        "doctype": "confirmation",
+        "text": "CONFIRMATION #1129\nCustomer: Mark Stevens\nVehicle: Luxury Sedan\nDates: March 10–11\nDaily Rate: $75.00\nSurcharge: $15.00\nTotal Per Day: $90.00\nTotal Due: $180.00"
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the standard daily rate for a luxury car?",
+        "options": [
+          "(A) $35.",
+          "(B) $15.",
+          "(C) $90.",
+          "(D) $75."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Why was a $15 surcharge added to Mark's bill?",
+        "options": [
+          "(A) He chose a luxury vehicle.",
+          "(B) He is picking up the car late.",
+          "(C) He requested extra GPS.",
+          "(D) He is in a specific age group."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "How many days will Mark have the car?",
+        "options": [
+          "(A) 1.",
+          "(B) 3.",
+          "(C) 5.",
+          "(D) 2."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What would the total daily cost be if Mark were 30 years old?",
+        "options": [
+          "(A) $90.",
+          "(B) $35.",
+          "(C) $180.",
+          "(D) $75."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What is the total amount Mark must pay for the entire rental?",
+        "options": [
+          "(A) $75.",
+          "(B) $90.",
+          "(C) $150.",
+          "(D) $180."
+        ],
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q009",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "Skyline Tours: City from Above\n\nExperience the city like never before with our luxury helicopter tours!\n\nDuration: 30 minutes\nPrice: $150 per person\nAvailability: Daily from 10:00 AM to 4:00 PM\n\nPre-booking is essential. Cancellations made less than 24 hours in advance will not be refunded."
+      }
+    ],
+    "questions": [
+      {
+        "text": "How long does the tour last?",
+        "options": [
+          "(A) 15 minutes.",
+          "(B) 30 minutes.",
+          "(C) One hour.",
+          "(D) All day."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is true about the booking policy?",
+        "options": [
+          "(A) Walk-ins are welcome.",
+          "(B) Advanced booking is required.",
+          "(C) Tours are only available on weekends.",
+          "(D) Children fly for free."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What happens if someone cancels 5 hours before the flight?",
+        "options": [
+          "(A) They get a 50% refund.",
+          "(B) They can reschedule for free.",
+          "(C) They will not get their money back.",
+          "(D) They must pay an extra fee."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q010",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "memo",
+        "text": "MEMO\nTo: Sales Staff\nSubject: Room Change\n\nPlease note that the \"Client Pitch\" meeting on Wednesday will no longer be in the Boardroom because of a double-booking. We will meet in the small annex next to the cafeteria."
+      },
+      {
+        "doctype": "schedule",
+        "text": "CALENDAR: WEDNESDAY\n\n- 10:00 AM: Marketing Review (Boardroom)\n- 2:00 PM: Client Pitch (Annex)\n- 4:00 PM: Budget Prep (Boardroom)"
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: Sales Staff\nFrom: John Doe\nDate: Wednesday, 1:45 PM\n\nI am standing in the annex, but it is locked! I have just called security, and they are sending someone with a key. Please wait in the cafeteria for 5 minutes."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where was the \"Client Pitch\" originally supposed to be?",
+        "options": [
+          "(A) The cafeteria.",
+          "(B) The annex.",
+          "(C) The sales office.",
+          "(D) The Boardroom."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "At what time is the \"Client Pitch\" scheduled?",
+        "options": [
+          "(A) 10:00 AM.",
+          "(B) 4:00 PM.",
+          "(C) 1:45 PM.",
+          "(D) 2:00 PM."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Which group is using the Boardroom at 10:00 AM?",
+        "options": [
+          "(A) Sales.",
+          "(B) Budgeting.",
+          "(C) Security.",
+          "(D) Marketing."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Why can't John Doe get into the meeting room?",
+        "options": [
+          "(A) It is being cleaned.",
+          "(B) He is at the wrong building.",
+          "(C) It is full of people.",
+          "(D) The door is locked."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Where should the staff wait briefly?",
+        "options": [
+          "(A) In the Boardroom.",
+          "(B) In the annex.",
+          "(C) In the lobby.",
+          "(D) In the cafeteria."
+        ],
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q011",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "memo",
+        "text": "To: Maintenance Team\nFrom: Building Manager\nDate: June 4\nSubject: Roof Inspection\n\nPlease be advised that a team of inspectors will be on the roof of the South Wing tomorrow between 10:00 AM and 3:00 PM to check for leaks following the recent storm. For safety reasons, the outdoor smoking area and the fourth-floor terrace will be closed to all employees during these hours. Please ensure that the service elevator is reserved for the inspectors' equipment."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why is the inspection taking place?",
+        "options": [
+          "(A) To install solar panels.",
+          "(B) To look for damage from rain.",
+          "(C) To paint the exterior.",
+          "(D) To build a new terrace."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Which area will be inaccessible tomorrow morning?",
+        "options": [
+          "(A) The parking garage.",
+          "(B) The main lobby.",
+          "(C) The fourth-floor terrace.",
+          "(D) The employee cafeteria."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What is the maintenance team asked to do?",
+        "options": [
+          "(A) Keep an elevator free for use.",
+          "(B) Clear the roof of debris.",
+          "(C) Provide smoking materials.",
+          "(D) Guide the inspectors through the building."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "At what time will the inspection likely end?",
+        "options": [
+          "(A) 10:00 AM.",
+          "(B) 12:00 PM.",
+          "(C) 3:00 PM.",
+          "(D) 6:00 PM."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e1_q012",
+    "source_exam": 1,
+    "documents": [
+      {
+        "doctype": "flyer",
+        "text": "Employee Retirement Party\n\nJoin us in celebrating the 35-year career of our Lead Engineer, Robert Miller!\n\nBob has been a cornerstone of the firm since 1991 and has overseen the construction of over 50 bridges.\n\nDate: Friday, May 14\nTime: 4:30 PM\nLocation: Main Lobby\n\nPlease RSVP to Linda in HR by Monday if you wish to contribute to the group gift."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Who is being honored?",
+        "options": [
+          "(A) A new intern.",
+          "(B) A retiring employee.",
+          "(C) A bridge inspector.",
+          "(D) A new HR director."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "How long has Robert Miller worked for the firm?",
+        "options": [
+          "(A) Since 1991.",
+          "(B) 35 years.",
+          "(C) 14 years.",
+          "(D) 50 years."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is Robert Miller's job title?",
+        "options": [
+          "(A) Architect.",
+          "(B) Lead Engineer.",
+          "(C) Construction Worker.",
+          "(D) Office Manager."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Why should people contact Linda?",
+        "options": [
+          "(A) To book a bridge tour.",
+          "(B) To apply for a job.",
+          "(C) To donate money for a present.",
+          "(D) To reserve a seat at the party."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q000",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "letter",
+        "text": "Dear Ms. Kim,\n\nWe are pleased to confirm your reservation at the Pearl View Hotel. You are scheduled to check in on October 12 and check out on October 15. As per your request, we have reserved a non-smoking room with a king-sized bed and a view of the harbor. If you need to cancel, please do so at least 48 hours before your arrival date to avoid a penalty fee."
+      }
+    ],
+    "questions": [
+      {
+        "text": "How long will Ms. Kim stay at the hotel?",
+        "options": [
+          "(A) One night.",
+          "(B) Two nights.",
+          "(C) Three nights.",
+          "(D) Four nights."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What specific room feature was requested?",
+        "options": [
+          "(A) A balcony.",
+          "(B) A view of the water.",
+          "(C) Two twin beds.",
+          "(D) Early check-in."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is mentioned about the cancellation policy?",
+        "options": [
+          "(A) It is free at any time.",
+          "(B) It must be done in person.",
+          "(C) Notice is required two days in advance.",
+          "(D) Cancellations are not allowed."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q001",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "business_card",
+        "text": "Elena Rodriguez\nSenior Interior Designer\nModern Spaces Co.\n442 Skyway Tower, Chicago, IL\nPhone: 555-0192 | Email: e.rodriguez@modernspaces.com\n\nSpecializing in eco-friendly office layouts."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is Elena Rodriguez's profession?",
+        "options": [
+          "(A) Architect.",
+          "(B) Interior Designer.",
+          "(C) Real Estate Agent.",
+          "(D) Office Manager."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Where is Modern Spaces Co. located?",
+        "options": [
+          "(A) Chicago.",
+          "(B) New York.",
+          "(C) Skyway City.",
+          "(D) Los Angeles."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "What is Elena's area of expertise?",
+        "options": [
+          "(A) Residential kitchen remodeling.",
+          "(B) Sustainable office design.",
+          "(C) High-rise construction.",
+          "(D) Industrial lighting."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q002",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "article",
+        "text": "Market Trends: Smartphone Industry\n\nOur latest data shows that while smartphone sales grew by 5% globally last year, consumers are now keeping their devices for an average of 3.5 years, compared to 2 years in 2020. This shift is attributed to the rising cost of new flagship models and the increased durability of hardware. To compensate for slower hardware sales, manufacturers are shifting their focus toward subscription-based software services."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is happening to the length of time people keep their phones?",
+        "options": [
+          "(A) It is decreasing.",
+          "(B) It has stayed the same.",
+          "(C) It is increasing.",
+          "(D) It is becoming unpredictable."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What is cited as a reason for this trend?",
+        "options": [
+          "(A) Faster internet speeds.",
+          "(B) Higher device prices.",
+          "(C) Shorter battery life.",
+          "(D) Better camera software."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "According to the report, what are manufacturers focusing on more?",
+        "options": [
+          "(A) Developing cheaper phones.",
+          "(B) Opening more retail stores.",
+          "(C) Selling software services.",
+          "(D) Improving shipping times."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How much did global sales grow last year?",
+        "options": [
+          "(A) 5%.",
+          "(B) 2%.",
+          "(C) 3.5%.",
+          "(D) 20%."
+        ],
+        "answer": "A"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q003",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "NOTICE: Peak Fitness Membership Rates\n\nStandard: $40/month\nPremium: $60/month (Includes pool and sauna access)\n10% Discount for Corporate Partners (includes local hospital staff)."
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: Peak Fitness\nFrom: Dr. Kevin Aris\nSubject: Billing Error\n\nI am a doctor at the City Hospital and recently signed up for a Premium membership. I noticed my first invoice does not reflect the discount we discussed during my orientation. Could you please adjust this?"
+      },
+      {
+        "doctype": "invoice",
+        "text": "INVOICE #441\nMember: Kevin Aris\nPlan: Premium\nAmount Due: $60.00\nDue Date: June 1"
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the difference between the Standard and Premium plans?",
+        "options": [
+          "(A) The price is the same.",
+          "(B) Premium includes more facilities.",
+          "(C) Standard has a discount.",
+          "(D) Premium is for doctors only."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Where does Kevin Aris work?",
+        "options": [
+          "(A) At Peak Fitness.",
+          "(B) At a hospital.",
+          "(C) At a law firm.",
+          "(D) At a bank."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is the problem with Invoice #441?",
+        "options": [
+          "(A) The name is spelled wrong.",
+          "(B) The due date has passed.",
+          "(C) A discount was not applied.",
+          "(D) The wrong plan is listed."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How much should the adjusted invoice total be (with the 10% discount)?",
+        "options": [
+          "(A) $40.00.",
+          "(B) $50.00.",
+          "(C) $54.00.",
+          "(D) $60.00."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How did Kevin Aris learn about the discount?",
+        "options": [
+          "(A) During an orientation session.",
+          "(B) From a newspaper ad.",
+          "(C) From a colleague.",
+          "(D) On the gym's website."
+        ],
+        "answer": "A"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q004",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "Library Policy Update\n\nStarting July 1, the City Central Library will implement a new borrowing limit. Patrons may now check out up to 15 items at a time, including books, magazines, and DVDs. However, the loan period for DVDs has been shortened from seven days to three days to ensure high availability for all members. Overdue fines remain at $0.50 per day."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the maximum number of items a patron can borrow?",
+        "options": [
+          "(A) 3",
+          "(B) 7",
+          "(C) 15",
+          "(D) 50"
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What has changed regarding DVDs?",
+        "options": [
+          "(A) The late fees have increased.",
+          "(B) The rental duration is shorter.",
+          "(C) They can no longer be borrowed.",
+          "(D) They are now free to rent."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is the purpose of the new DVD rule?",
+        "options": [
+          "(A) To raise more money in fines.",
+          "(B) To encourage people to buy DVDs.",
+          "(C) To reduce the library's inventory.",
+          "(D) To make them available to more people."
+        ],
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q005",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: Maintenance Dept\nFrom: Robert Chen (Room 402)\nDate: October 3\n\nI am writing to report that the air conditioning in Room 402 is making a loud rattling noise. It started this morning and is very distracting for the staff. Could someone please come and look at it as soon as possible?"
+      },
+      {
+        "doctype": "memo",
+        "text": "MEMO\nTo: Building Staff\nFrom: Maintenance Supervisor\nDate: October 4\n\nWe are aware of the HVAC issues in the North Wing. A technician from Cool-Air Systems is scheduled to visit tomorrow, October 5, to inspect all units on the 4th and 5th floors. Please ensure that all offices are accessible during work hours."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the problem in Room 402?",
+        "options": [
+          "(A) The lights are flickering.",
+          "(B) The cooling system is noisy.",
+          "(C) The window is broken.",
+          "(D) The office is too small."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Who is Robert Chen?",
+        "options": [
+          "(A) A maintenance worker.",
+          "(B) An employee in the building.",
+          "(C) A technician from Cool-Air Systems.",
+          "(D) The building owner."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "When will the technician arrive?",
+        "options": [
+          "(A) October 3.",
+          "(B) October 4.",
+          "(C) October 5.",
+          "(D) October 6."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Which company does the technician work for?",
+        "options": [
+          "(A) North Wing Maintenance.",
+          "(B) Chen & Associates.",
+          "(C) Cool-Air Systems.",
+          "(D) HVAC Global."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What are employees asked to do?",
+        "options": [
+          "(A) Leave the building for the day.",
+          "(B) Allow access to their offices.",
+          "(C) Fix the units themselves.",
+          "(D) Move to the 6th floor."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q006",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "email",
+        "text": "EMAIL 1\nTo: Catering by Cora\nFrom: Linda Wright\nDate: Feb 1\nSubject: Order for March 5\n\nI would like to order a lunch buffet for 30 people for a corporate event on March 5. We would like the \"Classic Italian\" menu, which includes pasta, salad, and breadsticks. Please let me know the total cost and the deadline for payment."
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL 2\nTo: Linda Wright\nFrom: Catering by Cora\nDate: Feb 2\n\nThank you for your inquiry, Ms. Wright. The cost for the Classic Italian buffet is $15 per person. Since you have 30 guests, the total is $450. To secure the date, a 50% deposit is required by February 15. The remaining balance must be paid on the day of the event."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What type of event is Linda Wright planning?",
+        "options": [
+          "(A) A wedding.",
+          "(B) A business function.",
+          "(C) A birthday party.",
+          "(D) A cooking class."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is included in the \"Classic Italian\" menu?",
+        "options": [
+          "(A) Salad.",
+          "(B) Pizza.",
+          "(C) Soup.",
+          "(D) Fish."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "How much is the total cost of the catering?",
+        "options": [
+          "(A) $15.",
+          "(B) $30.",
+          "(C) $225.",
+          "(D) $450."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "How much is the deposit required by February 15?",
+        "options": [
+          "(A) $15.",
+          "(B) $150.",
+          "(C) $225.",
+          "(D) $450."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "When should the final payment be made?",
+        "options": [
+          "(A) February 1.",
+          "(B) February 15.",
+          "(C) March 5.",
+          "(D) March 1."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q007",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "text_message",
+        "text": "Sam (9:10 AM): Did the delivery from OfficeMax arrive yet? We're out of toner.\nLila (9:12 AM): The courier just dropped it off at the front desk. I'm heading down to get it now.\nSam (9:13 AM): Great. Could you also check if they sent the blue folders I ordered?\nLila (9:15 AM): I'll check the packing slip once I get the box to my desk."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is Sam's main concern?",
+        "options": [
+          "(A) The cost of the delivery.",
+          "(B) A lack of printing supplies.",
+          "(C) A mistake in an invoice.",
+          "(D) The delay of a meeting."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Where is the package at 9:12 AM?",
+        "options": [
+          "(A) At Sam's desk.",
+          "(B) In the delivery truck.",
+          "(C) At the reception area.",
+          "(D) In the storage room."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What will Lila do next?",
+        "options": [
+          "(A) Call OfficeMax.",
+          "(B) Retrieve the shipment.",
+          "(C) Order blue folders.",
+          "(D) Print a document."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q008",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "memo",
+        "text": "To: All Staff\nFrom: IT Department\nSubject: Passwords\n\nTo improve data security, all employees are required to change their system passwords every 90 days. New passwords must be at least 10 characters long and contain at least one number and one special symbol. You will receive an automated prompt when your current password is about to expire."
+      }
+    ],
+    "questions": [
+      {
+        "text": "How often must passwords be updated?",
+        "options": [
+          "(A) Every 30 days.",
+          "(B) Every 90 days.",
+          "(C) Once a year.",
+          "(D) Every week."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is a requirement for new passwords?",
+        "options": [
+          "(A) They must be short.",
+          "(B) They must use only letters.",
+          "(C) They must include a symbol.",
+          "(D) They must be the same as the old one."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How will employees know it is time to change their password?",
+        "options": [
+          "(A) They will get a phone call.",
+          "(B) They will see a notification on the screen.",
+          "(C) Their manager will tell them.",
+          "(D) The system will shut down."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q009",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "invoice",
+        "text": "Invoice #9982\nCustomer: Riverside Hotel\nService Date: Sept 14\n\nDescription:\n- Window Cleaning (Exterior): $200\n- Gutter Inspection: $75\n\nTotal Due: $275\n\nNote: Please remit payment within 15 days. A 5% late fee applies thereafter."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where was the work performed?",
+        "options": [
+          "(A) At a private residence.",
+          "(B) At a hotel.",
+          "(C) At a window factory.",
+          "(D) At a cleaning supply store."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What service cost the most?",
+        "options": [
+          "(A) Gutter inspection.",
+          "(B) Interior dusting.",
+          "(C) Exterior window cleaning.",
+          "(D) Repairing a roof."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What happens if the customer pays after 15 days?",
+        "options": [
+          "(A) They get a discount.",
+          "(B) They must pay an extra fee.",
+          "(C) The service is canceled.",
+          "(D) They receive a second invoice."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q010",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "Gleam & Go Car Wash\n\nGet your vehicle looking like new! We offer full-service interior and exterior cleaning.\n\nStandard Wash: $15\nDeluxe Detail: $45 (Includes wax and upholstery steam cleaning)\n\nSpecial Offer: Visit us on a Tuesday or Wednesday and receive $5 off any service!\n\nLocated on Miller Avenue, right next to the public library."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is indicated about the Deluxe Detail service?",
+        "options": [
+          "(A) It includes steam cleaning.",
+          "(B) It is only available on Tuesdays.",
+          "(C) It costs $15.",
+          "(D) It is performed at the library."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "How can customers get a discount?",
+        "options": [
+          "(A) By washing the car themselves.",
+          "(B) By visiting on specific weekdays.",
+          "(C) By bringing a friend.",
+          "(D) By presenting a library card."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q011",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "schedule",
+        "text": "STAFF TRAINING DAY: AUGUST 20\n\n- 9:00 AM: Software Basics (Room 101) - Lead: Sarah Wu\n- 11:00 AM: Cyber Security (Room 102) - Lead: Mark Evans\n- 1:00 PM: Group Lunch (Cafeteria)\n- 2:30 PM: Client Relations (Room 101) - Lead: Janet Thorne"
+      },
+      {
+        "doctype": "memo",
+        "text": "MEMO\nTo: All Staff\nFrom: Training Coordinator\nDate: August 15\n\nDue to a scheduling conflict, Sarah Wu will be unable to attend the training day. Janet Thorne will now cover the morning session in Room 101. Consequently, the afternoon session on Client Relations has been rescheduled for the following Monday, August 23, at the same time."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What was originally scheduled for 9:00 AM on August 20?",
+        "options": [
+          "(A) Software Basics.",
+          "(B) Cyber Security.",
+          "(C) Group Lunch.",
+          "(D) Client Relations."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "Who will lead the session in Room 102?",
+        "options": [
+          "(A) Sarah Wu.",
+          "(B) Mark Evans.",
+          "(C) Janet Thorne.",
+          "(D) The Training Coordinator."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What change has been made to Janet Thorne's schedule?",
+        "options": [
+          "(A) She is leading a lunch session.",
+          "(B) She is moving to Room 102.",
+          "(C) She is taking over an earlier time slot.",
+          "(D) She is canceling her training."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "When will the Client Relations session now take place?",
+        "options": [
+          "(A) August 20 at 9:00 AM.",
+          "(B) August 20 at 2:30 PM.",
+          "(C) August 23 at 2:30 PM.",
+          "(D) August 23 at 11:00 AM."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Where will the Cyber Security session be held?",
+        "options": [
+          "(A) Room 101.",
+          "(B) Room 102.",
+          "(C) The Cafeteria.",
+          "(D) Room 203."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q012",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "coupon",
+        "text": "Fresh-Cut Florals\n\nBrighten someone's day!\n\nUse this coupon to receive 25% off any bouquet valued at $40 or more.\nValid only at our Springfield location.\nExpiration Date: June 30\n\nNote: Cannot be combined with other discounts or used for delivery fees."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the minimum purchase required to use the coupon?",
+        "options": [
+          "(A) $25.",
+          "(B) $30.",
+          "(C) $40.",
+          "(D) $60."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Where can the coupon be used?",
+        "options": [
+          "(A) At any florist in the city.",
+          "(B) Only for online orders.",
+          "(C) At the Springfield store.",
+          "(D) For delivery services only."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q013",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "job_posting",
+        "text": "Help Wanted: Administrative Assistant\n\nPeak Consulting is seeking a part-time Administrative Assistant to support our executive team.\n\nResponsibilities: Managing schedules, answering phones, and preparing expense reports.\nRequirements: At least 2 years of office experience and proficiency in spreadsheet software.\nHours: Monday – Thursday, 9:00 AM to 1:00 PM.\n\nTo apply, send your resume to jobs@peakconsulting.com."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What type of position is being advertised?",
+        "options": [
+          "(A) Full-time.",
+          "(B) Part-time.",
+          "(C) Temporary.",
+          "(D) Internship."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is one of the job duties?",
+        "options": [
+          "(A) Preparing reports.",
+          "(B) Hiring new staff.",
+          "(C) Designing websites.",
+          "(D) Cleaning the office."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "What qualification is necessary?",
+        "options": [
+          "(A) A master's degree.",
+          "(B) Work experience in an office.",
+          "(C) Fluency in three languages.",
+          "(D) A driver's license."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q014",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "The Ultra-Lite X1 Laptop\n\nWeighing only 0.9 kg, the Ultra-Lite X1 is designed for the modern traveler. It features a 13-inch anti-glare screen and a battery life of up to 15 hours.\n\nStandard Model: $899\nPro Model: $1,199 (includes extra storage and a touch-screen display)\n\nOrder within the next 48 hours to receive a free padded carrying case."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Who is the target audience for this product?",
+        "options": [
+          "(A) Gamers.",
+          "(B) Frequent travelers.",
+          "(C) Graphic designers.",
+          "(D) Video editors."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is the difference between the Pro and Standard models?",
+        "options": [
+          "(A) The screen size.",
+          "(B) The weight.",
+          "(C) The storage capacity.",
+          "(D) The battery life."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How can a customer get a free gift?",
+        "options": [
+          "(A) By buying the Pro model.",
+          "(B) By visiting a retail store.",
+          "(C) By purchasing quickly.",
+          "(D) By trading in an old laptop."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e2_q015",
+    "source_exam": 2,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "Notice: Community Center Closure\n\nThe Oak Valley Community Center will be closed on Saturday, October 12, for a private event. All scheduled classes, including the morning yoga session and the afternoon pottery workshop, are canceled. We will reopen for normal hours on Sunday, October 13. Monthly pass holders will receive a one-day credit to their accounts."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why will the center be closed?",
+        "options": [
+          "(A) For renovations.",
+          "(B) Because of a holiday.",
+          "(C) For a private function.",
+          "(D) Due to bad weather."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Which class is specifically mentioned as canceled?",
+        "options": [
+          "(A) Cooking.",
+          "(B) Painting.",
+          "(C) Yoga.",
+          "(D) Swimming."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What will happen to monthly pass holders?",
+        "options": [
+          "(A) They will get a refund in cash.",
+          "(B) Their account will be credited.",
+          "(C) They can attend the private event.",
+          "(D) They must pay a small fee."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q000",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "product_description",
+        "text": "PRODUCT DESCRIPTION: Brew-Master 5000\n\nThe Brew-Master 5000 is a programmable coffee maker with a 12-cup capacity. Features include:\n- Built-in water filter\n- Automatic shut-off after 2 hours\n- 2-year manufacturer's warranty\n- Price: $85.00"
+      },
+      {
+        "doctype": "review",
+        "text": "REVIEW\nRating: 4/5 stars\n\nI purchased the Brew-Master 5000 last month. I love the timer feature, which allows me to wake up to fresh coffee. However, after three weeks, the automatic shut-off stopped working. I contacted the company, and because I was still within the warranty period, they sent me a replacement unit for free. Great customer service!\n— Reviewed by Linda G."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the capacity of the Brew-Master 5000?",
+        "options": [
+          "(A) 2 cups.",
+          "(B) 4 cups.",
+          "(C) 5 cups.",
+          "(D) 12 cups."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "How long will the machine stay on before turning itself off?",
+        "options": [
+          "(A) 30 minutes.",
+          "(B) 1 hour.",
+          "(C) 2 hours.",
+          "(D) 3 hours."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What part of the machine did Linda G. particularly enjoy?",
+        "options": [
+          "(A) The water filter.",
+          "(B) The timer.",
+          "(C) The price.",
+          "(D) The size."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Why did Linda G. receive a free replacement?",
+        "options": [
+          "(A) The machine was too small.",
+          "(B) A specific feature was faulty.",
+          "(C) She didn't like the color.",
+          "(D) She won a contest."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "How long is the warranty for the Brew-Master 5000?",
+        "options": [
+          "(A) 6 months.",
+          "(B) 1 year.",
+          "(C) 2 years.",
+          "(D) 5 years."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q001",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "memo",
+        "text": "To: All Tenants, Bridgeview Offices\nFrom: Property Management\nDate: August 22\nSubject: Window Cleaning\n\nExterior window cleaning for the entire building is scheduled for August 25 and 26. For your privacy, please lower your blinds or close your curtains during daylight hours. Please ensure that all windows are fully closed to prevent water from entering your workspace."
+      }
+    ],
+    "questions": [
+      {
+        "text": "When will the cleaning take place?",
+        "options": [
+          "(A) August 22.",
+          "(B) August 25 and 26.",
+          "(C) Every weekend in August.",
+          "(D) Next month."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What are tenants asked to do for privacy?",
+        "options": [
+          "(A) Leave the office for the day.",
+          "(B) Use window coverings.",
+          "(C) Move their desks.",
+          "(D) Lock their doors."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What should tenants check before the cleaning begins?",
+        "options": [
+          "(A) That their computers are off.",
+          "(B) That their blinds are open.",
+          "(C) That their windows are shut.",
+          "(D) That no valuables are near the glass."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q002",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "product_label",
+        "text": "SunShield SPF 50+\n\nDirections: Apply generously to all exposed skin 15 minutes before sun exposure. Reapply every two hours, or after swimming or sweating.\n\nWarning: For external use only. Avoid contact with eyes. If irritation occurs, discontinue use and consult a doctor.\n\nStore in a cool, dry place."
+      }
+    ],
+    "questions": [
+      {
+        "text": "When should the product be applied?",
+        "options": [
+          "(A) Immediately after getting a sunburn.",
+          "(B) Before going outside.",
+          "(C) Only after swimming.",
+          "(D) Once every 24 hours."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What should a user do if the product causes skin redness?",
+        "options": [
+          "(A) Apply more product.",
+          "(B) Stop using it.",
+          "(C) Wash it off with hot water.",
+          "(D) Move to a warmer location."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Where should the product be kept?",
+        "options": [
+          "(A) In a car trunk.",
+          "(B) In a cool location.",
+          "(C) In direct sunlight.",
+          "(D) In a freezer."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q003",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "article",
+        "text": "ARTICLE: Tech-Globe to Acquire Star-App\n\nSeattle (Nov 10) — Tech-Globe Corp announced today that it has reached an agreement to acquire the mobile gaming company Star-App for $500 million. The deal is expected to close in early January. Tech-Globe plans to keep Star-App's current management team but will move its 50 employees to the Tech-Globe headquarters in downtown Seattle by the end of the year."
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: All Star-App Employees\nFrom: CEO, Star-App\nDate: Nov 12\n\nAs you saw in the news, we are joining Tech-Globe! We will be holding an orientation session on November 20 at the Tech-Globe campus to help everyone get familiar with the new office. Transportation will be provided from our current building at 9:00 AM."
+      }
+    ],
+    "questions": [
+      {
+        "text": "How much is the acquisition worth?",
+        "options": [
+          "(A) $50 million.",
+          "(B) $100 million.",
+          "(C) $500 million.",
+          "(D) $1 billion."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "When will the deal officially be completed?",
+        "options": [
+          "(A) November 10.",
+          "(B) December 31.",
+          "(C) January.",
+          "(D) November 20."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What will happen to the Star-App staff?",
+        "options": [
+          "(A) They will all be fired.",
+          "(B) They will work at a different location.",
+          "(C) They will receive a pay cut.",
+          "(D) They will move to a new city."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is scheduled for November 20?",
+        "options": [
+          "(A) A press conference.",
+          "(B) A holiday party.",
+          "(C) A visit to the new headquarters.",
+          "(D) A final board meeting."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How will employees get to the Tech-Globe campus on Nov 20?",
+        "options": [
+          "(A) By walking downtown.",
+          "(B) By taking the subway.",
+          "(C) By a company-arranged vehicle.",
+          "(D) By driving their own cars."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q004",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "NOTICE: Annual Leadership Retreat\n\nThis year's retreat will be held at the Blue Mountain Lodge from September 12–14. All department heads are required to attend. The company will provide shuttle transportation leaving from the main office at 8:00 AM on the 12th. Please confirm your dietary requirements by September 1."
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: Retreat Coordinator\nFrom: David Kim\nDate: August 25\nSubject: Retreat Attendance\n\nI will be attending the retreat next month. However, I have a client meeting on the morning of the 12th, so I will be driving my own vehicle and arriving at the lodge around 4:00 PM. Also, please note that I require vegetarian meals."
+      },
+      {
+        "doctype": "schedule",
+        "text": "SCHEDULE: September 12\n\n- 9:00 AM – 12:00 PM: Group Hiking (Optional)\n- 1:00 PM – 3:00 PM: Budget Planning (Conference Room 1)\n- 3:30 PM – 5:30 PM: Conflict Resolution Workshop (Grand Hall)\n- 6:00 PM: Welcome Dinner"
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where will the retreat be held?",
+        "options": [
+          "(A) At the main office.",
+          "(B) At Blue Mountain Lodge.",
+          "(C) In a local park.",
+          "(D) At a downtown hotel."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is David Kim's likely job title?",
+        "options": [
+          "(A) Department Head.",
+          "(B) Shuttle Driver.",
+          "(C) Professional Chef.",
+          "(D) Client Representative."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "How will David Kim get to the retreat?",
+        "options": [
+          "(A) By company shuttle.",
+          "(B) By public bus.",
+          "(C) By personal car.",
+          "(D) By taxi."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Which activity will David Kim likely miss entirely?",
+        "options": [
+          "(A) The Welcome Dinner.",
+          "(B) The Conflict Resolution Workshop.",
+          "(C) The Budget Planning session.",
+          "(D) All activities on the 12th."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What information did David provide to meet the September 1 deadline?",
+        "options": [
+          "(A) His arrival time.",
+          "(B) His meeting schedule.",
+          "(C) His dietary needs.",
+          "(D) His license plate number."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q005",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "Vantage Cinema: Lost and Found\n\nHave you misplaced an item during a movie? Our Lost and Found office is located behind the main ticket counter. Items are held for a maximum of 30 days. After this period, unclaimed electronics are recycled, and clothing is donated to local shelters. To claim an item, you must provide a detailed description and show a valid ID."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where is the Lost and Found office?",
+        "options": [
+          "(A) Next to the snack bar.",
+          "(B) Behind the ticket area.",
+          "(C) Inside the theater rooms.",
+          "(D) Near the exit doors."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What happens to clothing that is not picked up within a month?",
+        "options": [
+          "(A) It is sold in the lobby.",
+          "(B) It is thrown away.",
+          "(C) It is given to charity.",
+          "(D) It is returned to the manufacturer."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What is required to retrieve a lost item?",
+        "options": [
+          "(A) A movie ticket stub.",
+          "(B) A processing fee.",
+          "(C) Identification.",
+          "(D) The original receipt."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q006",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "policy",
+        "text": "POLICY: SkyHigh Air Luggage\n\n- Carry-on: Free (Max 7kg)\n- Checked Bag (up to 20kg): $30\n- Overweight Fee: $10 per kg over 20kg"
+      },
+      {
+        "doctype": "itinerary",
+        "text": "ITINERARY\nPassenger: Maria Rossi\nFlight: SH102 (New York to London)\nChecked Bag Weight: 23kg"
+      },
+      {
+        "doctype": "voucher",
+        "text": "VOUCHER\nIssued to: Maria Rossi\nReason: Overcharge Error\nValue: $30.00\nNote: We accidentally charged for a full second bag instead of just the overweight fee."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the weight limit for a standard checked bag without extra fees?",
+        "options": [
+          "(A) 7kg.",
+          "(B) 20kg.",
+          "(C) 23kg.",
+          "(D) 30kg."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Based on the policy, what should Maria's overweight fee have been?",
+        "options": [
+          "(A) $10.",
+          "(B) $20.",
+          "(C) $30.",
+          "(D) $60."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How much did the airline likely charge Maria by mistake?",
+        "options": [
+          "(A) $30.",
+          "(B) $60.",
+          "(C) $10.",
+          "(D) $23."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Why was the voucher issued?",
+        "options": [
+          "(A) The flight was delayed.",
+          "(B) A bag was lost.",
+          "(C) A billing mistake occurred.",
+          "(D) Maria is a frequent flyer."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Where is Maria traveling to?",
+        "options": [
+          "(A) New York.",
+          "(B) London.",
+          "(C) Paris.",
+          "(D) Rome."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q007",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "ADVERTISEMENT\nTechPro Repair Services\n\nIs your laptop running slowly? Cracked phone screen? At TechPro, we fix all major brands.\n\nStandard Diagnostic Fee: $30 (Waived if you proceed with repairs)\nExpress Service: $50 extra (Guaranteed 24-hour turnaround)\nLocation: 422 West Way | Hours: Mon-Sat, 9 AM – 6 PM"
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: Customer Service, TechPro\nFrom: James Miller\nDate: June 12\nSubject: Repair Inquiry\n\nI dropped off my tablet yesterday morning (June 11) for a screen replacement. I opted for the Express Service because I need it for a business trip tomorrow, June 13. However, I haven't received a call saying it's ready. Could you please check the status of my order (#8821)?"
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is true about the diagnostic fee at TechPro?",
+        "options": [
+          "(A) It must be paid upfront in cash.",
+          "(B) It is $50 for tablets.",
+          "(C) It is free if the customer chooses to have the repair done.",
+          "(D) It is only charged for express services."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "When did James Miller drop off his tablet?",
+        "options": [
+          "(A) June 10.",
+          "(B) June 11.",
+          "(C) June 12.",
+          "(D) June 13."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Why is Mr. Miller contacting TechPro?",
+        "options": [
+          "(A) To request a price estimate.",
+          "(B) To cancel his repair order.",
+          "(C) To find out if his device is ready.",
+          "(D) To complain about a high bill."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What service did Mr. Miller pay extra for?",
+        "options": [
+          "(A) A loaner device.",
+          "(B) Faster processing time.",
+          "(C) Home delivery.",
+          "(D) An extended warranty."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Based on the advertisement, when should the tablet be ready?",
+        "options": [
+          "(A) June 11.",
+          "(B) June 12.",
+          "(C) June 13.",
+          "(D) June 14."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q008",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "ADVERTISEMENT\nGreen Valley Summer 5K Run\n\nJoin us on July 12 for our annual charity run!\n\nRegistration Fees:\n- Early Bird (by June 1): $25\n- Regular (June 2 – July 10): $35\n- Same-day: $45\n\nAll participants receive a race T-shirt and a finisher's medal. Proceeds benefit the City Children's Hospital.\n\nNote: Race packets must be picked up at the Community Center between July 10 and July 11."
+      },
+      {
+        "doctype": "form",
+        "text": "REGISTRATION FORM\nName: Elena Rossi\nDate of Registration: June 15\nShirt Size: Medium\nPayment Method: Credit Card\nTotal Paid: $35.00\nEmail: e.rossi@email.com"
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the main purpose of the event?",
+        "options": [
+          "(A) To open a new hospital.",
+          "(B) To raise money for charity.",
+          "(C) To sell athletic clothing.",
+          "(D) To celebrate a city holiday."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "How much did Elena Rossi pay for her registration?",
+        "options": [
+          "(A) $25.",
+          "(B) $35.",
+          "(C) $45.",
+          "(D) $10."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Why did Elena NOT receive the Early Bird rate?",
+        "options": [
+          "(A) She requested a medium shirt.",
+          "(B) She paid by credit card.",
+          "(C) She registered after June 1.",
+          "(D) She is not a local resident."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Where can participants get their race packets?",
+        "options": [
+          "(A) At the hospital.",
+          "(B) At the Community Center.",
+          "(C) At the finish line.",
+          "(D) At Green Valley Park."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What will Elena Rossi receive for participating?",
+        "options": [
+          "(A) A free pair of shoes.",
+          "(B) A training manual.",
+          "(C) A T-shirt.",
+          "(D) A gift card to a restaurant."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q009",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "memo",
+        "text": "To: All Staff\nFrom: Human Resources\nDate: March 12\nSubject: Direct Deposit\n\nThis is a reminder that the company is transitioning to a fully paperless payroll system. Starting next month, physical paychecks will no longer be issued. All employees must log in to the employee portal and provide their banking information by Friday. If you already receive your pay via direct deposit, no action is required."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What change is being announced?",
+        "options": [
+          "(A) A decrease in salaries.",
+          "(B) The elimination of paper checks.",
+          "(C) A new banking partner.",
+          "(D) An update to the holiday schedule."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Who needs to take action?",
+        "options": [
+          "(A) Employees who want a pay raise.",
+          "(B) Employees not yet using direct deposit.",
+          "(C) The accounting department only.",
+          "(D) All staff members without exception."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "When is the deadline to provide information?",
+        "options": [
+          "(A) Next month.",
+          "(B) Wednesday.",
+          "(C) Friday.",
+          "(D) March 12."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q010",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "Museum of Natural History: Renovations\n\nPlease be advised that the Hall of Dinosaurs will be closed for restoration from Monday, Nov 14, until Friday, Nov 18. During this time, our new exhibit, \"Ocean Giants,\" will open in the East Wing. Tickets for the new exhibit can be purchased at the main entrance or online for a 10% discount. We thank you for your patience as we improve our facilities."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why is the Hall of Dinosaurs closing?",
+        "options": [
+          "(A) To undergo repair work.",
+          "(B) It is being moved to another museum.",
+          "(C) To make room for ocean exhibits.",
+          "(D) Due to a lack of staff."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "How can visitors save money on tickets?",
+        "options": [
+          "(A) By visiting on a Friday.",
+          "(B) By buying them on the website.",
+          "(C) By bringing a group of ten.",
+          "(D) By presenting a student ID."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Where is the new exhibit located?",
+        "options": [
+          "(A) In the Hall of Dinosaurs.",
+          "(B) In the East Wing.",
+          "(C) Near the cafeteria.",
+          "(D) In the basement."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q011",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "text_message",
+        "text": "Alicia (11:40 AM): Hey Ben, I'm at the deli. They're out of the turkey club you wanted.\nBen (11:42 AM): Oh, that's a shame. Do they have any roast beef left?\nAlicia (11:43 AM): No, the lunch rush wiped them out. They only have vegetarian wraps and tuna salad.\nBen (11:44 AM): I'll take the wrap then. Get a side of chips for me too, please!"
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where is Alicia?",
+        "options": [
+          "(A) At a grocery store.",
+          "(B) At a sandwich shop.",
+          "(C) At the office kitchen.",
+          "(D) At a busy restaurant."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What will Alicia buy for Ben?",
+        "options": [
+          "(A) A turkey club.",
+          "(B) A roast beef sandwich.",
+          "(C) A vegetarian wrap.",
+          "(D) Just a bag of chips."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Why couldn't Ben get his first choice?",
+        "options": [
+          "(A) He arrived too late.",
+          "(B) The item was sold out.",
+          "(C) Alicia forgot the order.",
+          "(D) The price was too high."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q012",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "schedule",
+        "text": "Conference Day 1: Digital Innovation\n\n- 9:00 AM: Opening Remarks (Main Hall)\n- 10:30 AM: AI in Healthcare (Room 4)\n- 12:00 PM: Networking Lunch (Garden Terrace)\n- 1:30 PM: Cyber Security Trends (Room 2)\n- 3:00 PM: Closing Panel (Main Hall)"
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where will the opening remarks be held?",
+        "options": [
+          "(A) Room 4.",
+          "(B) Room 2.",
+          "(C) Garden Terrace.",
+          "(D) Main Hall."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Which topic is discussed at 10:30 AM?",
+        "options": [
+          "(A) Cyber Security.",
+          "(B) AI in Healthcare.",
+          "(C) Networking.",
+          "(D) Digital Marketing."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is scheduled for noon?",
+        "options": [
+          "(A) A panel discussion.",
+          "(B) A coffee break.",
+          "(C) A meal.",
+          "(D) A presentation."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How many different rooms/locations are mentioned in the schedule?",
+        "options": [
+          "(A) 2.",
+          "(B) 3.",
+          "(C) 4.",
+          "(D) 5."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e3_q013",
+    "source_exam": 3,
+    "documents": [
+      {
+        "doctype": "text_message",
+        "text": "Mark (10:01 AM): Hi Jean, are you at the office yet? I forgot my keycard at home.\nJean (10:03 AM): I'm just pulling into the parking lot. I can let you in. Give me 2 minutes.\nMark (10:04 AM): Great, thanks! I'll be waiting by the side entrance.\nJean (10:05 AM): Actually, use the main lobby. The side door sensor is broken today."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why did Mark contact Jean?",
+        "options": [
+          "(A) To ask for a ride.",
+          "(B) To report a broken door.",
+          "(C) To get help entering the building.",
+          "(D) To invite her to coffee."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Where is Jean at 10:03 AM?",
+        "options": [
+          "(A) At her desk.",
+          "(B) At the office parking area.",
+          "(C) At Mark's house.",
+          "(D) In the main lobby."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What does Jean suggest Mark do?",
+        "options": [
+          "(A) Call a repairman.",
+          "(B) Wait in his car.",
+          "(C) Go to a different entrance.",
+          "(D) Go home to get his card."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q000",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "review",
+        "text": "Dining Review: The Sizzling Skillet\nReviewed by: Anthony Thorne\n\nI visited The Sizzling Skillet last Tuesday for lunch. The atmosphere was modern and inviting, and the staff was exceptionally attentive. I ordered the grilled salmon, which was cooked to perfection. However, the side of roasted vegetables was slightly over-salted. While the prices are a bit higher than other bistros in the area, the quality of the main course makes it worth the visit. I recommend making a reservation if you plan to go for dinner."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What did Anthony Thorne think of the staff?",
+        "options": [
+          "(A) They were slow.",
+          "(B) They were rude.",
+          "(C) They were helpful and observant.",
+          "(D) They were inexperienced."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What part of the meal did the reviewer dislike?",
+        "options": [
+          "(A) The grilled salmon.",
+          "(B) The roasted vegetables.",
+          "(C) The dessert.",
+          "(D) The soup."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is noted about the restaurant's pricing?",
+        "options": [
+          "(A) It is the cheapest in town.",
+          "(B) It is relatively expensive.",
+          "(C) It changes every day.",
+          "(D) It includes a free drink."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What does the reviewer suggest for evening diners?",
+        "options": [
+          "(A) Ordering the salmon.",
+          "(B) Arriving very early.",
+          "(C) Booking a table in advance.",
+          "(D) Dressing formally."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q001",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "text_message",
+        "text": "Sonia (2:15 PM): Hi Bill, the printer in the marketing room is jammed again.\nBill (2:17 PM): I just fixed it this morning! Did someone try to print on heavy cardstock?\nSonia (2:18 PM): Yes, the interns were making brochures.\nBill (2:20 PM): That explains it. I'll be up there in 10 minutes. Tell them to use the high-capacity machine in the basement for those jobs from now on."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the problem?",
+        "options": [
+          "(A) The marketing room is locked.",
+          "(B) A piece of equipment is not working.",
+          "(C) The interns are late for a meeting.",
+          "(D) The brochures have the wrong date."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "According to Bill, why did the issue occur?",
+        "options": [
+          "(A) The machine is too old.",
+          "(B) The power went out.",
+          "(C) The wrong type of paper was used.",
+          "(D) There is no more ink."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Where should brochures be printed in the future?",
+        "options": [
+          "(A) In the main lobby.",
+          "(B) In the basement.",
+          "(C) At a professional print shop.",
+          "(D) On Sonia's personal printer."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q002",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "Green Valley Park Rules\n\n1. All dogs must be kept on a leash at all times.\n2. No camping or campfires are permitted.\n3. Please place all trash in the designated bins near the entrance.\n4. Do not feed the wildlife. Violators may be subject to a $100 fine."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is required for dog owners?",
+        "options": [
+          "(A) Using a leash.",
+          "(B) Keeping dogs in the car.",
+          "(C) Paying a pet fee.",
+          "(D) Carrying a permit."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "What activity is prohibited?",
+        "options": [
+          "(A) Hiking.",
+          "(B) Starting a fire.",
+          "(C) Taking photos.",
+          "(D) Running."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "Where should visitors dispose of garbage?",
+        "options": [
+          "(A) In the parking lot.",
+          "(B) Near the entrance.",
+          "(C) In the lake.",
+          "(D) At the ranger station."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q003",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "job_posting",
+        "text": "JOB POSTING: Junior Web Developer\n\nRequirements:\n- Proficiency in HTML and CSS\n- 1+ year of experience\n- Portfolio of recent work\n\nDeadline to apply: June 5."
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: Hiring Manager\nFrom: Alex Rivera\nDate: June 3\n\nAttached is my resume and a link to my portfolio. I have been working as a freelancer for the past 14 months and have completed five major website projects. I look forward to hearing from you."
+      },
+      {
+        "doctype": "schedule",
+        "text": "INTERVIEW SCHEDULE: June 15\n\n- 9:00 AM: Sarah Jenkins\n- 10:30 AM: Alex Rivera\n- 1:00 PM: Michael Scott"
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is a requirement for the Junior Web Developer position?",
+        "options": [
+          "(A) A Master's degree.",
+          "(B) Previous work experience.",
+          "(C) Proficiency in Japanese.",
+          "(D) A driver's license."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "How long has Alex Rivera been working in this field?",
+        "options": [
+          "(A) 5 months.",
+          "(B) 10 months.",
+          "(C) Over a year.",
+          "(D) Exactly two years."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "When did Alex Rivera submit his application?",
+        "options": [
+          "(A) Two days before the deadline.",
+          "(B) On June 5.",
+          "(C) On June 15.",
+          "(D) After the interview."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "Who is scheduled to be interviewed first on June 15?",
+        "options": [
+          "(A) Alex Rivera.",
+          "(B) Michael Scott.",
+          "(C) Sarah Jenkins.",
+          "(D) The Hiring Manager."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What did Alex include with his email?",
+        "options": [
+          "(A) A list of his past projects.",
+          "(B) A letter of recommendation.",
+          "(C) A copy of his diploma.",
+          "(D) His salary requirements."
+        ],
+        "answer": "A"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q004",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "email",
+        "text": "To: Marketing Team\nFrom: Sarah Jenkins\nDate: April 5\nSubject: New Client Meeting\n\nDear Team,\n\nPlease be advised that our meeting with the representatives from Apex Solutions has been rescheduled. Instead of tomorrow at 10:00 AM, we will now meet on Friday at 2:00 PM in Conference Room B. Please update your calendars accordingly. I will send out the revised agenda by the end of today."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why was the email written?",
+        "options": [
+          "(A) To introduce a new client.",
+          "(B) To cancel a project.",
+          "(C) To announce a schedule change.",
+          "(D) To request a new agenda."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "When will the meeting take place?",
+        "options": [
+          "(A) Wednesday at 10:00 AM.",
+          "(B) Thursday at 10:00 AM.",
+          "(C) Friday at 2:00 PM.",
+          "(D) Friday at 10:00 AM."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What will Sarah Jenkins do later today?",
+        "options": [
+          "(A) Call Apex Solutions.",
+          "(B) Book a conference room.",
+          "(C) Distribute a document.",
+          "(D) Update the team's calendars."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q005",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "article",
+        "text": "Urban Green Initiative\n\nThe city council yesterday approved a $2 million budget for the \"Urban Green Initiative.\" The project aims to convert five abandoned industrial lots into public parks by the end of next year. Mayor Linda Chen stated that the initiative will provide much-needed recreational space for families in the city center. Additionally, the parks will feature drought-resistant plants to minimize water usage."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the primary goal of the Urban Green Initiative?",
+        "options": [
+          "(A) To build new factories.",
+          "(B) To increase taxes.",
+          "(C) To create new parks.",
+          "(D) To repair city roads."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How much money has been allocated for the project?",
+        "options": [
+          "(A) $500,000.",
+          "(B) $1 million.",
+          "(C) $2 million.",
+          "(D) $5 million."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Where will the new spaces be located?",
+        "options": [
+          "(A) In the suburbs.",
+          "(B) Near the airport.",
+          "(C) In the middle of the city.",
+          "(D) Along the riverbank."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Why were drought-resistant plants chosen?",
+        "options": [
+          "(A) They are the cheapest to buy.",
+          "(B) They grow very quickly.",
+          "(C) They are native to the area.",
+          "(D) They require less water."
+        ],
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q006",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "Master Chef Cooking Classes\n\nDiscover the secrets of Italian cuisine! Our 4-week course covers everything from handmade pasta to classic tiramisu.\n\nCost: $120 (includes all ingredients and a professional apron)\nLocation: Downtown Culinary Center\nTime: Tuesdays, 6:30 PM – 8:30 PM\n\nLimited to 12 participants per session."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is included in the course fee?",
+        "options": [
+          "(A) A recipe book.",
+          "(B) Cooking attire.",
+          "(C) A bottle of olive oil.",
+          "(D) Transportation to the center."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "How many people can join each class?",
+        "options": [
+          "(A) 4.",
+          "(B) 6.",
+          "(C) 8.",
+          "(D) 12."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What is the main subject of the classes?",
+        "options": [
+          "(A) French pastries.",
+          "(B) Kitchen safety.",
+          "(C) Italian food.",
+          "(D) Restaurant management."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q007",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: All Tenants, Oakwood Towers\nFrom: Management Office\nDate: May 10\nSubject: Lobby Renovations\n\nDear Residents, Please be advised that we will begin renovating the main lobby on May 15. The project is expected to take two weeks. During this time, the front entrance will be closed. Please use the side entrance located on Elm Street. We apologize for the inconvenience."
+      },
+      {
+        "doctype": "notice",
+        "text": "NOTICE (Posted at Side Entrance)\nTemporary Access Rules (May 15–May 29)\n\n1. All deliveries must be directed to the side entrance.\n2. Security guards will be stationed here 24/7 to verify ID badges.\n3. Visitors must call the resident they are visiting to be let in.\n4. The front entrance will reopen on May 30 at 8:00 AM."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why was the email sent to tenants?",
+        "options": [
+          "(A) To inform them of a construction project.",
+          "(B) To announce a rent increase.",
+          "(C) To introduce new security guards.",
+          "(D) To recruit volunteers for a committee."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "Where should residents enter the building starting May 15?",
+        "options": [
+          "(A) The parking garage.",
+          "(B) The main lobby.",
+          "(C) Elm Street entrance.",
+          "(D) The service elevator."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "How long is the renovation project scheduled to last?",
+        "options": [
+          "(A) One week.",
+          "(B) Two weeks.",
+          "(C) One month.",
+          "(D) Two months."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is required of visitors during the renovation?",
+        "options": [
+          "(A) They must wear a temporary badge.",
+          "(B) They must sign in at the front desk.",
+          "(C) They must contact a resident for entry.",
+          "(D) They are not allowed in the building."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "On what day can the main entrance be used again?",
+        "options": [
+          "(A) May 15.",
+          "(B) May 29.",
+          "(C) May 30.",
+          "(D) June 1."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q008",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "email",
+        "text": "To: Greg Miller\nFrom: Customer Support, Global Stream\nSubject: Subscription Update\n\nDear Mr. Miller,\n\nWe are writing to confirm that your subscription to Global Stream has been successfully upgraded to the \"Premium\" plan. Your next billing statement will reflect the new monthly price of $19.99. You now have access to ultra-high-definition streaming and can use the service on up to four devices simultaneously."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the purpose of the email?",
+        "options": [
+          "(A) To promote a new movie.",
+          "(B) To cancel a subscription.",
+          "(C) To confirm a plan change.",
+          "(D) To report a technical error."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "What is the new monthly cost?",
+        "options": [
+          "(A) $4.00.",
+          "(B) $10.99.",
+          "(C) $15.00.",
+          "(D) $19.99."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What is one benefit of the Premium plan?",
+        "options": [
+          "(A) No advertisements.",
+          "(B) Streaming on multiple devices.",
+          "(C) Free movie tickets.",
+          "(D) A free tablet."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q009",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "menu",
+        "text": "MENU: The Golden Grill\n\n- Steak Frites: $25\n- Vegetable Risotto: $18\n- Catch of the Day: Market Price\n- Daily Special (Tuesdays only): Buy one Steak Frites, get a free dessert!"
+      },
+      {
+        "doctype": "review",
+        "text": "REVIEW\nDate: Tuesday, May 4\nUser: Foodie99\n\n\"I visited for the Tuesday special. The steak was great, but the waiter said they were out of the free chocolate cake, so I didn't get my dessert. Disappointing.\""
+      },
+      {
+        "doctype": "reply",
+        "text": "RESPONSE FROM MANAGEMENT\n\n\"Dear Foodie99, we apologize for the shortage. Please show this message on your next visit for a free appetizer of your choice to make up for the missed dessert.\""
+      }
+    ],
+    "questions": [
+      {
+        "text": "Which item's price varies?",
+        "options": [
+          "(A) Steak Frites.",
+          "(B) Vegetable Risotto.",
+          "(C) Catch of the Day.",
+          "(D) The dessert."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "On what day of the week did Foodie99 visit the restaurant?",
+        "options": [
+          "(A) Monday.",
+          "(B) Tuesday.",
+          "(C) Wednesday.",
+          "(D) Friday."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What did Foodie99 order?",
+        "options": [
+          "(A) Steak Frites.",
+          "(B) Vegetable Risotto.",
+          "(C) The Catch of the Day.",
+          "(D) An appetizer."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "What was the restaurant out of during the visit?",
+        "options": [
+          "(A) Steak.",
+          "(B) Cake.",
+          "(C) Risotto.",
+          "(D) Appetizers."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is the restaurant offering as compensation?",
+        "options": [
+          "(A) A full refund.",
+          "(B) A different free dish.",
+          "(C) A 50% discount.",
+          "(D) A free steak."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q010",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "memo",
+        "text": "To: All Department Heads\nFrom: Finance Office\nSubject: Budget Reports\n\nPlease be reminded that all quarterly budget reports must be submitted by the 5th of next month. Reports should be sent as PDF files via the internal server. Late submissions will result in a delay in fund allocation for the following quarter. If you require assistance with the new reporting software, please contact the IT department for a training manual."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the purpose of the memo?",
+        "options": [
+          "(A) To announce a new software purchase.",
+          "(B) To remind staff of a deadline.",
+          "(C) To change the company's fiscal year.",
+          "(D) To introduce a new CFO."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "When are the reports due?",
+        "options": [
+          "(A) Today.",
+          "(B) By the 5th of next month.",
+          "(C) At the end of the year.",
+          "(D) Every Friday."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is a consequence of a late report?",
+        "options": [
+          "(A) A salary reduction.",
+          "(B) A delay in receiving funds.",
+          "(C) A mandatory meeting with the CEO.",
+          "(D) A permanent budget cut."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What should someone do if they have trouble using the software?",
+        "options": [
+          "(A) Ask the Finance Office for help.",
+          "(B) Request a manual from IT.",
+          "(C) Submit a paper report instead.",
+          "(D) Use their own spreadsheet."
+        ],
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q011",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "advertisement",
+        "text": "Evergreen Office Supplies\n\nYour partner in productivity! Everything you need for your workspace, from ergonomic chairs to high-speed printers.\n\nBuy more, save more:\n- Order over $200 — Get 10% off\n- Order over $500 — Get 20% off\n\nFree delivery on all orders placed through our mobile app!"
+      }
+    ],
+    "questions": [
+      {
+        "text": "What type of products does this company sell?",
+        "options": [
+          "(A) Garden tools.",
+          "(B) Office equipment.",
+          "(C) Home electronics.",
+          "(D) Kitchen appliances."
+        ],
+        "answer": "B"
+      },
+      {
+        "text": "What is required to receive a 20% discount?",
+        "options": [
+          "(A) Spending at least $500.",
+          "(B) Buying a printer.",
+          "(C) Using the mobile app.",
+          "(D) Placing an order on a weekend."
+        ],
+        "answer": "A"
+      },
+      {
+        "text": "How can a customer avoid paying for shipping?",
+        "options": [
+          "(A) By ordering over $200.",
+          "(B) By picking up items at the store.",
+          "(C) By purchasing via the app.",
+          "(D) By becoming a premium member."
+        ],
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q012",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "brochure",
+        "text": "BROCHURE: City Museum Tours\n\n- General Entry: $20\n- Audio Guide: $5\n- Guided Tour (1 hour): $15 extra\n- Groups of 4 or more get 20% off total entry fees!"
+      },
+      {
+        "doctype": "email",
+        "text": "EMAIL\nTo: City Museum\nFrom: Amy Lin\nSubject: Group Visit\n\nI am bringing a group of 5 people tomorrow. We all want general entry and the 1-hour guided tour. We do not need audio guides."
+      },
+      {
+        "doctype": "receipt",
+        "text": "RECEIPT\nGroup Size: 5\nSubtotal (Entry + Tour): $175.00\nDiscount: -$35.00\nTotal: $140.00"
+      }
+    ],
+    "questions": [
+      {
+        "text": "How much does a guided tour cost per person?",
+        "options": [
+          "(A) $20.",
+          "(B) $5.",
+          "(C) $35.",
+          "(D) $15."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "How many people are in Amy's group?",
+        "options": [
+          "(A) 1.",
+          "(B) 4.",
+          "(C) 20.",
+          "(D) 5."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What is the total cost per person before the discount?",
+        "options": [
+          "(A) $15.",
+          "(B) $20.",
+          "(C) $40.",
+          "(D) $35."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Why did the group receive a discount?",
+        "options": [
+          "(A) They are students.",
+          "(B) It is a holiday.",
+          "(C) They bought audio guides.",
+          "(D) They met the group size requirement."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "What was the final price per person after the discount?",
+        "options": [
+          "(A) $35.",
+          "(B) $15.",
+          "(C) $140.",
+          "(D) $28."
+        ],
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "p7_e4_q013",
+    "source_exam": 4,
+    "documents": [
+      {
+        "doctype": "notice",
+        "text": "City Bus Route Changes\n\nDue to the upcoming \"Save the Earth\" marathon on Sunday, September 18, several bus routes will be diverted. Routes 4, 12, and 25 will not stop at Central Square between 8:00 AM and 1:00 PM. Temporary stops will be set up on 5th Avenue. We apologize for the inconvenience and recommend that travelers allow extra time for their journeys."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why are the bus routes changing?",
+        "options": [
+          "(A) Road construction.",
+          "(B) A holiday parade.",
+          "(C) A sporting event.",
+          "(D) A protest downtown."
+        ],
+        "answer": "C"
+      },
+      {
+        "text": "Which bus route is NOT mentioned as being affected?",
+        "options": [
+          "(A) Route 4.",
+          "(B) Route 12.",
+          "(C) Route 25.",
+          "(D) Route 7."
+        ],
+        "answer": "D"
+      },
+      {
+        "text": "Where can passengers catch the bus during the event?",
+        "options": [
+          "(A) Central Square.",
+          "(B) 5th Avenue.",
+          "(C) The train station.",
+          "(D) The marathon finish line."
+        ],
+        "answer": "B"
+      }
+    ]
+  }
+]

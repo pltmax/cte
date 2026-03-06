@@ -1,6 +1,6 @@
 # Database Context — Supabase
 
-> Auto-generated on 2026-03-06 13:36
+> Auto-generated on 2026-03-06 15:46
 > Do not edit manually. Regenerate with: `npm run context:db`
 
 ## Extensions
@@ -31,7 +31,7 @@
 | `score` | `integer` | ✓ | — |
 | `listening_score` | `integer` | ✓ | — |
 | `reading_score` | `integer` | ✓ | — |
-| `dataset_id` | `smallint` | ✗ | `1` |
+| `dataset_id` | `smallint` | ✓ | — |
 | `answers` | `jsonb` | ✓ | — |
 
 **RLS Policies:**
@@ -297,4 +297,5 @@
 - `20260301000001_complete_exam.sql`
 - `20260301000002_mock_exams_answers.sql`
 - `20260302000001_security_hardening.sql`
+- `20260306000001_pool_migration.sql`
 

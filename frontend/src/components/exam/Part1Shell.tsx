@@ -94,13 +94,17 @@ export default function Part1Shell({
   );
 
   // Preload Q0 during the intro screen.
+  // Depends on preloadQuestion so it re-runs if questionsData changes (e.g. async
+  // localStorage hydration in ExamShell), clearing any stale cached audio first.
   useEffect(() => {
+    for (const map of audioCacheRef.current.values()) destroyAudioMap(map);
+    audioCacheRef.current.clear();
     preloadQuestion(0);
     return () => {
       for (const map of audioCacheRef.current.values()) destroyAudioMap(map);
       audioCacheRef.current.clear();
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [preloadQuestion]);
 
   // ─── Handlers ─────────────────────────────────────────────────────────────
 
