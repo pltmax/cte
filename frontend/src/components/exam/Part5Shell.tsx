@@ -1,15 +1,9 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Part5Intro from "@/components/exam/Part5Intro";
 import Part5Batch, { type P5Question } from "@/components/exam/Part5Batch";
-import rawData from "@mockdata/TOEIC/reading_part5/part5_content.json";
-
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
-const allQuestions: P5Question[] = (
-  rawData as { questions: P5Question[] }
-).questions;
 const BATCH_SIZE = 5;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -21,9 +15,9 @@ type Phase = "intro" | "questions" | "done";
 interface Part5ShellProps {
   onStart?: () => void;
   onComplete?: (answers: Record<number, string>) => void;
+  onAnswersChange?: (answers: Record<number, string>) => void;
   inExam?: boolean;
-  /** Exam-specific question subset; falls back to full JSON when absent */
-  questions?: P5Question[];
+  questions: P5Question[];
   /** When inExam, adds an exam-wide numbering offset (1-based display) */
   questionNumberOffset?: number;
   /** When inExam, display total questions across the whole exam (e.g. 200) */
@@ -33,12 +27,12 @@ interface Part5ShellProps {
 export default function Part5Shell({
   onStart,
   onComplete,
+  onAnswersChange,
   inExam = false,
-  questions: questionsProp,
+  questions: questionsData,
   questionNumberOffset = 0,
   examTotalQuestions,
 }: Part5ShellProps) {
-  const questionsData = questionsProp ?? allQuestions;
   const PART5_TOTAL = questionsData.length;
   const TOTAL_BATCHES = Math.ceil(PART5_TOTAL / BATCH_SIZE);
 
@@ -70,9 +64,16 @@ export default function Part5Shell({
     requestAnimationFrame(scrollToTop);
   }, [phase, batchIndex, scrollToTop]);
 
+  const onAnswersChangeRef = useRef(onAnswersChange);
+  useEffect(() => { onAnswersChangeRef.current = onAnswersChange; }, [onAnswersChange]);
+
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
-      setAnswers((prev) => ({ ...prev, [batchStart + localIndex]: letter }));
+      setAnswers((prev) => {
+        const next = { ...prev, [batchStart + localIndex]: letter };
+        onAnswersChangeRef.current?.(next);
+        return next;
+      });
     },
     [batchStart]
   );

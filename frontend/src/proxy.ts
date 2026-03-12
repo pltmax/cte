@@ -2,9 +2,14 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 // Any authenticated user
-const AUTH_ONLY_PATHS = ["/dashboard", "/exam"];
-// Authenticated + premium (or admin) role
-const PREMIUM_PATHS = ["/exercices", "/mockexams"];
+const AUTH_ONLY_PATHS = ["/dashboard", "/exam", "/guides", "/exercices", "/parametres"];
+// Authenticated + premium (or admin) role — full page block
+const PREMIUM_PATHS = ["/mockexams"];
+// Exercise pages accessible without a premium plan
+const FREE_EXERCISE_PATHS = new Set([
+  "/exercices/partie-1/1",
+  "/exercices/partie-5/1",
+]);
 
 export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
@@ -39,15 +44,20 @@ export async function proxy(request: NextRequest) {
   const needsAuth = AUTH_ONLY_PATHS.some((p) => pathname.startsWith(p));
   const needsPremium = PREMIUM_PATHS.some((p) => pathname.startsWith(p));
 
-  // ── Unauthenticated → /login ─────────────────────────────────────────────
-  if ((needsAuth || needsPremium) && !user) {
+  // Individual exercise sub-pages that are NOT free require premium
+  const isLockedExercise =
+    /^\/exercices\/partie-\d+(\/multi)?\/\d+/.test(pathname) &&
+    !FREE_EXERCISE_PATHS.has(pathname);
+
+  // ── Unauthenticated → /login ──────────────────────────────────────────────
+  if ((needsAuth || needsPremium || isLockedExercise) && !user) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.redirect(url);
   }
 
-  // ── Authenticated but not premium → /premium-required ───────────────────
-  if (needsPremium && user) {
+  // ── Premium check (full-block paths + locked exercise pages) ─────────────
+  if ((needsPremium || isLockedExercise) && user) {
     const { data: profile } = await supabase
       .from("profiles")
       .select("role")
@@ -59,12 +69,12 @@ export async function proxy(request: NextRequest) {
 
     if (!isPremium) {
       const url = request.nextUrl.clone();
-      url.pathname = "/premium-required";
+      url.pathname = needsPremium ? "/premium-required" : "/exercices";
       return NextResponse.redirect(url);
     }
   }
 
-  // ── /reset-password requires a valid session ─────────────────────────────
+  // ── /reset-password requires a valid session ──────────────────────────────
   if (!user && pathname === "/reset-password") {
     const url = request.nextUrl.clone();
     url.pathname = "/forgot-password";

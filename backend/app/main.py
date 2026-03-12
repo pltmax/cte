@@ -1,4 +1,10 @@
 import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+# Load root .env (no-op in production where env vars are injected directly)
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / ".env")
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware

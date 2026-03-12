@@ -1,13 +1,9 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import Part4Intro from "@/components/exam/Part4Intro";
 import Part4Talk, { type TalkData } from "@/components/exam/Part4Talk";
-import rawData from "@mockdata/TOEIC/listening_part4/part4_transcript.json";
-
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
-const allTalks: TalkData[] = (rawData as { talks: TalkData[] }).talks;
 const QUESTIONS_PER_TALK = 3;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -19,9 +15,9 @@ type Phase = "intro" | "questions" | "done";
 interface Part4ShellProps {
   onStart?: () => void;
   onComplete?: (answers: Record<number, string>) => void;
+  onAnswersChange?: (answers: Record<number, string>) => void;
   inExam?: boolean;
-  /** Exam-specific talk subset; falls back to full JSON when absent */
-  talks?: TalkData[];
+  talks: TalkData[];
   /** When inExam, adds an exam-wide numbering offset (1-based display) */
   questionNumberOffset?: number;
   /** When inExam, display total questions across the whole exam (e.g. 200) */
@@ -31,12 +27,12 @@ interface Part4ShellProps {
 export default function Part4Shell({
   onStart,
   onComplete,
+  onAnswersChange,
   inExam = false,
-  talks: talksProp,
+  talks,
   questionNumberOffset = 0,
   examTotalQuestions,
 }: Part4ShellProps) {
-  const talks = talksProp ?? allTalks;
   const TOTAL_TALKS = talks.length;
   const PART4_TOTAL = TOTAL_TALKS * QUESTIONS_PER_TALK;
   const [phase, setPhase] = useState<Phase>("intro");
@@ -45,6 +41,9 @@ export default function Part4Shell({
 
   const talkStart = talkIndex * QUESTIONS_PER_TALK;
 
+  const onAnswersChangeRef = useRef(onAnswersChange);
+  useEffect(() => { onAnswersChangeRef.current = onAnswersChange; }, [onAnswersChange]);
+
   const handleStart = useCallback(() => {
     onStart?.();
     setPhase("questions");
@@ -52,7 +51,11 @@ export default function Part4Shell({
 
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
-      setAnswers((prev) => ({ ...prev, [talkStart + localIndex]: letter }));
+      setAnswers((prev) => {
+        const next = { ...prev, [talkStart + localIndex]: letter };
+        onAnswersChangeRef.current?.(next);
+        return next;
+      });
     },
     [talkStart]
   );

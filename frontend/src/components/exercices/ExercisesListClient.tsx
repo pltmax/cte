@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useExerciseCompletion } from "@/hooks/useExerciseCompletion";
+import { PremiumGateModal } from "@/components/app/PremiumGateModal";
 
 // ─── Static part metadata ─────────────────────────────────────────────────────
 
@@ -108,13 +110,44 @@ function ExerciseRow({
   available,
   href,
   completed,
+  locked,
+  onLockClick,
 }: {
   title: string;
   subtitle?: string;
   available: boolean;
   href: string;
   completed: boolean;
+  locked?: boolean;
+  onLockClick?: () => void;
 }) {
+  if (locked) {
+    return (
+      <button
+        onClick={onLockClick}
+        className="group flex items-center justify-between py-3.5 px-5 w-full hover:bg-gray-50 transition-colors"
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-gray-300">{title}</span>
+          {subtitle && <span className="text-xs text-gray-200">{subtitle}</span>}
+        </div>
+        <svg
+          className="w-4 h-4 text-gray-200 group-hover:text-gray-300 transition-colors shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+          />
+        </svg>
+      </button>
+    );
+  }
+
   if (!available) {
     return (
       <div className="flex items-center justify-between py-3.5 px-5">
@@ -164,46 +197,56 @@ function ExerciseRow({
   );
 }
 
+// Free exercises accessible without a premium plan
+const FREE_EXERCISE_KEYS = new Set(["partie-1:1", "partie-5:1"]);
+
 // ─── Client component ──────────────────────────────────────────────────────────
 
-export default function ExercisesListClient() {
+export default function ExercisesListClient({ isPremium }: { isPremium: boolean }) {
   const { isCompleted } = useExerciseCompletion();
+  const [gateOpen, setGateOpen] = useState(false);
 
   return (
-    <div className="flex flex-col gap-10">
-      {PARTS.map((part) => (
-        <section key={part.number}>
-          {/* Section header */}
-          <div className="flex items-baseline gap-3 mb-1">
-            <h2 className="text-sm font-semibold text-foreground">
-              Partie {part.number} —{" "}
-              <span className="text-[#6600CC]">{part.title}</span>
-            </h2>
-            <span
-              className={`text-[11px] font-semibold uppercase tracking-wide ${
-                part.tag === "Écoute" ? "text-blue-400" : "text-emerald-500"
-              }`}
-            >
-              {part.tag}
-            </span>
-          </div>
-          <p className="text-xs text-gray-400 mb-3">{part.description}</p>
+    <>
+      <div className="flex flex-col gap-10">
+        {PARTS.map((part) => (
+          <section key={part.number}>
+            {/* Section header */}
+            <div className="flex items-baseline gap-3 mb-1">
+              <h2 className="text-sm font-semibold text-foreground">
+                Partie {part.number} —{" "}
+                <span className="text-[#6600CC]">{part.title}</span>
+              </h2>
+              <span
+                className={`text-[11px] font-semibold uppercase tracking-wide ${
+                  part.tag === "Écoute" ? "text-blue-400" : "text-emerald-500"
+                }`}
+              >
+                {part.tag}
+              </span>
+            </div>
+            <p className="text-xs text-gray-400 mb-3">{part.description}</p>
 
-          {/* Exercise list */}
-          <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100 overflow-hidden">
-            {part.exercises.map((ex) => (
-              <ExerciseRow
-                key={ex.id}
-                title={ex.title}
-                subtitle={"subtitle" in ex ? ex.subtitle : undefined}
-                available={ex.available}
-                href={ex.href}
-                completed={isCompleted(ex.exerciseKey)}
-              />
-            ))}
-          </div>
-        </section>
-      ))}
-    </div>
+            {/* Exercise list */}
+            <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100 overflow-hidden">
+              {part.exercises.map((ex) => (
+                <ExerciseRow
+                  key={ex.id}
+                  title={ex.title}
+                  subtitle={"subtitle" in ex ? ex.subtitle : undefined}
+                  available={ex.available}
+                  href={ex.href}
+                  completed={isCompleted(ex.exerciseKey)}
+                  locked={!isPremium && !FREE_EXERCISE_KEYS.has(ex.exerciseKey)}
+                  onLockClick={() => setGateOpen(true)}
+                />
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      {gateOpen && <PremiumGateModal onClose={() => setGateOpen(false)} />}
+    </>
   );
 }

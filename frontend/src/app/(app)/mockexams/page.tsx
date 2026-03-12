@@ -21,6 +21,24 @@ function scoreLevel(score: number): { label: string; className: string } {
   return { label: "A2 / B1", className: "text-gray-400" };
 }
 
+function StatusBadge({ status }: { status: string }) {
+  if (status === "abandoned") {
+    return (
+      <span className="ml-1.5 px-1.5 py-0.5 text-[10px] font-semibold bg-amber-50 text-amber-500 rounded-full">
+        Abandonnée
+      </span>
+    );
+  }
+  if (status !== "completed") {
+    return (
+      <span className="ml-1.5 px-1.5 py-0.5 text-[10px] font-semibold bg-gray-100 text-gray-400 rounded-full">
+        Non terminé
+      </span>
+    );
+  }
+  return null;
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default async function MockExamsPage() {
@@ -41,7 +59,6 @@ export default async function MockExamsPage() {
       .from("mock_exams")
       .select("id, created_at, score, listening_score, reading_score, status")
       .eq("user_id", user.id)
-      .eq("status", "completed")
       .order("created_at", { ascending: false }),
   ]);
 
@@ -119,9 +136,8 @@ export default async function MockExamsPage() {
 
           {/* Compact warning */}
           <p className="text-xs text-gray-400 leading-relaxed max-w-lg">
-            Une fois démarré, l&apos;examen ne peut pas être mis en pause ni
-            abandonné. Assure-toi d&apos;avoir 2 heures devant toi, une bonne
-            connexion internet et un environnement calme.
+            Une fois démarré, l&apos;examen peut être abandonné à tout moment
+            via le bouton &quot;Abandonner&quot; pour sauvegarder tes réponses.
           </p>
         </div>
       </div>
@@ -163,19 +179,25 @@ export default async function MockExamsPage() {
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {pastExams.map((exam) => {
+                  const isCompleted = exam.status === "completed";
+                  const isAbandoned = exam.status === "abandoned";
+                  const isInProgress = !isCompleted && !isAbandoned;
                   const level =
-                    exam.score !== null ? scoreLevel(exam.score) : null;
+                    exam.score !== null && isCompleted
+                      ? scoreLevel(exam.score)
+                      : null;
                   return (
                     <tr
                       key={exam.id}
-                      className="hover:bg-gray-50 transition-colors"
+                      className={`hover:bg-gray-50 transition-colors ${isInProgress ? "opacity-60" : ""}`}
                     >
-                      <td className="px-6 py-3.5 text-sm text-gray-600">
+                      <td className={`px-6 py-3.5 text-sm ${isCompleted ? "text-gray-600" : "text-gray-400"}`}>
                         {formatDate(exam.created_at)}
+                        <StatusBadge status={exam.status} />
                       </td>
                       <td className="px-6 py-3.5">
-                        {exam.score !== null ? (
-                          <span className="text-sm font-semibold text-foreground tabular-nums">
+                        {exam.score !== null && !isInProgress ? (
+                          <span className={`text-sm font-semibold tabular-nums ${isCompleted ? "text-foreground" : "text-gray-400"}`}>
                             {exam.score}
                             <span className="font-normal text-gray-400">
                               {" "}/ 990
@@ -185,13 +207,13 @@ export default async function MockExamsPage() {
                           <span className="text-sm text-gray-300">—</span>
                         )}
                       </td>
-                      <td className="px-6 py-3.5 text-sm text-gray-500 tabular-nums">
-                        {exam.listening_score !== null
+                      <td className={`px-6 py-3.5 text-sm tabular-nums ${isCompleted ? "text-gray-500" : "text-gray-400"}`}>
+                        {exam.listening_score !== null && !isInProgress
                           ? `${exam.listening_score} / 495`
                           : "—"}
                       </td>
-                      <td className="px-6 py-3.5 text-sm text-gray-500 tabular-nums">
-                        {exam.reading_score !== null
+                      <td className={`px-6 py-3.5 text-sm tabular-nums ${isCompleted ? "text-gray-500" : "text-gray-400"}`}>
+                        {exam.reading_score !== null && !isInProgress
                           ? `${exam.reading_score} / 495`
                           : "—"}
                       </td>
@@ -205,12 +227,22 @@ export default async function MockExamsPage() {
                         )}
                       </td>
                       <td className="px-6 py-3.5 text-right">
-                        <Link
-                          href={`/mockexams/${exam.id}/bilan`}
-                          className="text-xs text-gray-400 hover:text-foreground transition-colors"
-                        >
-                          Voir le bilan →
-                        </Link>
+                        {isCompleted && (
+                          <Link
+                            href={`/mockexams/${exam.id}/bilan`}
+                            className="text-xs text-gray-400 hover:text-foreground transition-colors"
+                          >
+                            Voir le bilan →
+                          </Link>
+                        )}
+                        {isAbandoned && (
+                          <Link
+                            href={`/mockexams/${exam.id}/bilan`}
+                            className="text-xs text-gray-400 hover:text-foreground transition-colors"
+                          >
+                            Voir le bilan partiel →
+                          </Link>
+                        )}
                       </td>
                     </tr>
                   );

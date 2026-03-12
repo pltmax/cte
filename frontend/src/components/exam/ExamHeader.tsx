@@ -12,10 +12,12 @@ export default function ExamHeader({
   secondsLeft,
   timerActive,
   timerLabel = "Écoute",
+  onAbandon,
 }: {
   secondsLeft: number;
   timerActive: boolean;
   timerLabel?: string;
+  onAbandon?: () => void;
 }) {
   const isLow = timerActive && secondsLeft < 5 * 60;
 
@@ -37,33 +39,43 @@ export default function ExamHeader({
           </span>
         </div>
 
-        {/* Right: timer */}
-        <div
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl font-mono text-sm font-semibold transition-colors ${
-            !timerActive
-              ? "bg-gray-100 text-gray-300"
-              : isLow
-              ? "bg-red-50 text-red-600"
-              : "bg-gray-50 text-gray-700"
-          }`}
-        >
-          <svg
-            className="w-4 h-4 shrink-0"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+        {/* Right: timer + abandon */}
+        <div className="flex items-center gap-4">
+          {onAbandon && (
+            <button
+              onClick={onAbandon}
+              className="text-xs text-gray-300 hover:text-red-400 transition-colors"
+            >
+              Abandonner
+            </button>
+          )}
+          <div
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl font-mono text-sm font-semibold transition-colors ${
+              !timerActive
+                ? "bg-gray-100 text-gray-300"
+                : isLow
+                ? "bg-red-50 text-red-600"
+                : "bg-gray-50 text-gray-700"
+            }`}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          {formatTime(secondsLeft)}
-          <span className="text-xs font-sans font-normal text-gray-400 ml-1">
-            {timerLabel}
-          </span>
+            <svg
+              className="w-4 h-4 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            {formatTime(secondsLeft)}
+            <span className="text-xs font-sans font-normal text-gray-400 ml-1">
+              {timerLabel}
+            </span>
+          </div>
         </div>
       </div>
     </header>

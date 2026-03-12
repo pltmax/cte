@@ -12,9 +12,7 @@ import Part6Shell from "@/components/exam/Part6Shell";
 import Part7Shell from "@/components/exam/Part7Shell";
 import { createClient } from "@/lib/supabase/client";
 import { scoreExam, type AllExamAnswers, type PartAnswers } from "@/lib/toeic-scoring";
-import { loadPriorityStore, updateAfterExam, savePriorityStore } from "@/lib/exam/priority";
-import type { ExamData } from "@/types/exam-data";
-import type { ExamSelectionMeta } from "@/types/exam-pools";
+import type { ExamData, ExamMeta } from "@/types/exam-data";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -44,41 +42,32 @@ const LISTENING_PHASES: Phase[] = ["p1", "p2", "p3", "p4"];
 interface ExamShellProps {
   /** The exam UUID — used to mark the exam as completed in the DB. */
   examId?: string;
-  /** Pre-built exam dataset (from exam JSON). When absent, each Shell uses its full JSON. */
-  examData?: ExamData;
+  /** Pre-built exam dataset, sourced from mock_exams.exam_data. Always present. */
+  examData: ExamData;
+  /** Question IDs per part, sourced from mock_exams.exam_question_ids. */
+  examMeta?: ExamMeta;
   /** When true, shows admin-only skip controls (not visible to regular users). */
   isAdmin?: boolean;
 }
 
-export default function ExamShell({ examId = "", examData, isAdmin = false }: ExamShellProps) {
+export default function ExamShell({
+  examId = "",
+  examData,
+  examMeta,
+  isAdmin = false,
+}: ExamShellProps) {
+  // examData is guaranteed non-null by ExamPage (redirects on null)
   const router = useRouter();
   const [phase, setPhase] = useState<Phase>("p1");
   const [timerActive, setTimerActive] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(LISTENING_SECONDS);
 
-  // localStorage-hydrated exam data (overrides DB-fetched examData when present)
-  const [localExamData, setLocalExamData] = useState<ExamData | null>(null);
-
   // Accumulate per-part answers without triggering re-renders (ref, not state).
   const allAnswersRef = useRef<AllExamAnswers>({
     p1: {}, p2: {}, p3: {}, p4: {}, p5: {}, p6: {}, p7: {},
   });
-
-  // ── Hydrate from localStorage on mount ────────────────────────────────────
-  useEffect(() => {
-    if (!examId) return;
-    const raw = localStorage.getItem(`cts_exam_data_${examId}`);
-    if (raw) {
-      try {
-        setLocalExamData(JSON.parse(raw) as ExamData);
-      } catch {
-        // corrupted — fall back to DB data
-      }
-    }
-  }, [examId]);
-
-  // localStorage wins for new (dynamically built) exams; DB data is the fallback.
-  const effectiveExamData = localExamData ?? examData;
+  // Live answers for the currently active part (updated on every selection).
+  const livePartAnswersRef = useRef<PartAnswers>({});
 
   const timerLabel = LISTENING_PHASES.includes(phase) ? "Écoute" : "Lecture";
 
@@ -92,10 +81,50 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
     return () => clearInterval(id);
   }, [timerActive, secondsLeft]);
 
+  // ── beforeunload warning (tab close / refresh only) ───────────────────────
+  useEffect(() => {
+    if (phase === "done") return;
+    const handler = (e: BeforeUnloadEvent) => { e.preventDefault(); };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [phase]);
+
+  // ── Live answers callback (fired on every selection in the active shell) ──
+  const handleLiveAnswers = useCallback((answers: PartAnswers) => {
+    livePartAnswersRef.current = answers;
+  }, []);
+
+  // ── Abandon ───────────────────────────────────────────────────────────────
+  const handleAbandon = useCallback(async () => {
+    if (!examId) return;
+    const confirmed = window.confirm(
+      "Abandonner l'examen ? Tes réponses actuelles seront sauvegardées et consultables dans le bilan."
+    );
+    if (!confirmed) return;
+    const supabase = createClient();
+    // Merge live in-progress answers for the current part into the accumulated snapshot.
+    const all = { ...allAnswersRef.current, [phase]: livePartAnswersRef.current };
+    const { listeningScore, readingScore, totalScore } = scoreExam(all, examData);
+    const { error } = await supabase.rpc("abandon_exam", {
+      exam_id: examId,
+      p_answers: all as unknown as Record<string, unknown>,
+      p_listening_score: listeningScore,
+      p_reading_score: readingScore,
+      p_score: totalScore,
+    });
+    if (error) {
+      console.error("abandon_exam failed:", error);
+      alert("Une erreur est survenue. Veuillez réessayer.");
+      return;
+    }
+    router.push("/mockexams");
+  }, [examId, examData, router]);
+
   // ── Part 1 ────────────────────────────────────────────────────────────────
   const handlePart1Start = useCallback(() => setTimerActive(true), []);
   const handlePart1Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p1 = answers;
+    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p2");
   }, []);
@@ -104,6 +133,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
   const handlePart2Start = useCallback(() => setTimerActive(true), []);
   const handlePart2Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p2 = answers;
+    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p3");
   }, []);
@@ -112,6 +142,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
   const handlePart3Start = useCallback(() => setTimerActive(true), []);
   const handlePart3Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p3 = answers;
+    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p4");
   }, []);
@@ -120,6 +151,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
   const handlePart4Start = useCallback(() => setTimerActive(true), []);
   const handlePart4Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p4 = answers;
+    livePartAnswersRef.current = {};
     // Transition to reading section: reset timer to 75 minutes
     setTimerActive(false);
     setSecondsLeft(READING_SECONDS);
@@ -130,6 +162,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
   const handlePart5Start = useCallback(() => setTimerActive(true), []);
   const handlePart5Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p5 = answers;
+    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p6");
   }, []);
@@ -138,6 +171,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
   const handlePart6Start = useCallback(() => setTimerActive(true), []);
   const handlePart6Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p6 = answers;
+    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p7");
   }, []);
@@ -149,46 +183,32 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
     setTimerActive(false);
     setPhase("done");
 
-    if (examId) {
-      const supabase = createClient();
-      const all = allAnswersRef.current;
+    if (!examId) return;
 
-      // ── Update priority store when this was a dynamically-built exam ──────
-      if (localExamData) {
-        const rawMeta = localStorage.getItem(`cts_exam_meta_${examId}`);
-        if (rawMeta) {
-          try {
-            const meta = JSON.parse(rawMeta) as ExamSelectionMeta;
-            const results = computeUnitResults(all, localExamData, meta);
-            const store = loadPriorityStore();
-            const updatedStore = updateAfterExam(store, results);
-            savePriorityStore(updatedStore);
-          } catch {
-            // non-fatal — priority store update best-effort
-          }
-        }
-        localStorage.removeItem(`cts_exam_data_${examId}`);
-        localStorage.removeItem(`cts_exam_meta_${examId}`);
+    const supabase = createClient();
+    const all = allAnswersRef.current;
+    const { listeningScore, readingScore, totalScore } = scoreExam(all, examData);
+
+    let priorityUpdates: Record<string, "correct" | "partial" | "incorrect"> | null = null;
+    if (examMeta) {
+      try {
+        priorityUpdates = computeUnitResults(all, examData, examMeta);
+      } catch {
+        // non-fatal — priority update best-effort
       }
-
-      if (effectiveExamData) {
-        // Score the exam and persist answers + scores.
-        const { listeningScore, readingScore, totalScore } = scoreExam(all, effectiveExamData);
-        await supabase.rpc("complete_exam", {
-          exam_id: examId,
-          p_listening_score: listeningScore,
-          p_reading_score: readingScore,
-          p_score: totalScore,
-          p_answers: all as unknown as Record<string, unknown>,
-        });
-      } else {
-        // No correct-answer data available; store without scoring.
-        await supabase.rpc("complete_exam", { exam_id: examId });
-      }
-
-      router.push(`/mockexams/${examId}/bilan`);
     }
-  }, [examId, localExamData, effectiveExamData, router]);
+
+    await supabase.rpc("complete_exam", {
+      exam_id: examId,
+      p_listening_score: listeningScore,
+      p_reading_score: readingScore,
+      p_score: totalScore,
+      p_answers: all as unknown as Record<string, unknown>,
+      p_priority_updates: priorityUpdates as unknown as Record<string, unknown> | null,
+    });
+
+    router.push(`/mockexams/${examId}/bilan`);
+  }, [examId, examData, examMeta, router]); // examData is stable (from server props)
 
   // ── Admin: skip current part ──────────────────────────────────────────────
   const handleSkipPart = useCallback(() => {
@@ -208,6 +228,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
         secondsLeft={secondsLeft}
         timerActive={timerActive}
         timerLabel={timerLabel}
+        onAbandon={phase !== "done" ? handleAbandon : undefined}
       />
 
       <main className="flex-1 flex items-center justify-center px-6 py-5">
@@ -231,8 +252,9 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part1Shell
                 onStart={handlePart1Start}
                 onComplete={handlePart1Complete}
+                onAnswersChange={handleLiveAnswers}
                 inExam
-                questions={effectiveExamData?.part1}
+                questions={examData.part1 ?? []}
                 isAdmin={isAdmin}
                 questionNumberOffset={QUESTION_OFFSETS.p1}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
@@ -242,8 +264,9 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part2Shell
                 onStart={handlePart2Start}
                 onComplete={handlePart2Complete}
+                onAnswersChange={handleLiveAnswers}
                 inExam
-                questions={effectiveExamData?.part2}
+                questions={examData.part2 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p2}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -252,8 +275,9 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part3Shell
                 onStart={handlePart3Start}
                 onComplete={handlePart3Complete}
+                onAnswersChange={handleLiveAnswers}
                 inExam
-                conversations={effectiveExamData?.part3}
+                conversations={examData.part3 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p3}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -262,8 +286,9 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part4Shell
                 onStart={handlePart4Start}
                 onComplete={handlePart4Complete}
+                onAnswersChange={handleLiveAnswers}
                 inExam
-                talks={effectiveExamData?.part4}
+                talks={examData.part4 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p4}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -272,8 +297,9 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part5Shell
                 onStart={handlePart5Start}
                 onComplete={handlePart5Complete}
+                onAnswersChange={handleLiveAnswers}
                 inExam
-                questions={effectiveExamData?.part5}
+                questions={examData.part5 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p5}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -283,8 +309,9 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part6Shell
                 onStart={handlePart6Start}
                 onComplete={handlePart6Complete}
+                onAnswersChange={handleLiveAnswers}
                 inExam
-                passages={effectiveExamData?.part6}
+                passages={examData.part6 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p6}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -294,8 +321,9 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part7Shell
                 onStart={handlePart7Start}
                 onComplete={handlePart7Complete}
+                onAnswersChange={handleLiveAnswers}
                 inExam
-                passages={effectiveExamData?.part7}
+                passages={examData.part7 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p7}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -343,15 +371,15 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
 function computeUnitResults(
   all: AllExamAnswers,
   data: ExamData,
-  meta: ExamSelectionMeta
+  meta: ExamMeta
 ): Record<string, "correct" | "partial" | "incorrect"> {
   const results: Record<string, "correct" | "partial" | "incorrect"> = {};
 
   // Individual parts (P1, P2, P5) — one pool item = one question
   const individualParts = [
-    { ids: meta.p1Ids, answers: all.p1, items: data.part1 ?? [] },
-    { ids: meta.p2Ids, answers: all.p2, items: data.part2 ?? [] },
-    { ids: meta.p5Ids, answers: all.p5, items: data.part5 ?? [] },
+    { ids: meta.p1, answers: all.p1, items: data.part1 ?? [] },
+    { ids: meta.p2, answers: all.p2, items: data.part2 ?? [] },
+    { ids: meta.p5, answers: all.p5, items: data.part5 ?? [] },
   ] as const;
 
   for (const { ids, answers, items } of individualParts) {
@@ -365,7 +393,7 @@ function computeUnitResults(
   }
 
   // P3 — 3 questions per conversation
-  meta.p3Ids.forEach((id, i) => {
+  meta.p3.forEach((id, i) => {
     const conv = (data.part3 ?? [])[i];
     if (!conv) return;
     const base = i * 3;
@@ -380,7 +408,7 @@ function computeUnitResults(
   });
 
   // P4 — 3 questions per talk
-  meta.p4Ids.forEach((id, i) => {
+  meta.p4.forEach((id, i) => {
     const talk = (data.part4 ?? [])[i];
     if (!talk) return;
     const base = i * 3;
@@ -395,7 +423,7 @@ function computeUnitResults(
   });
 
   // P6 — 4 questions per passage
-  meta.p6Ids.forEach((id, i) => {
+  meta.p6.forEach((id, i) => {
     const passage = (data.part6 ?? [])[i];
     if (!passage) return;
     const base = i * 4;
@@ -411,9 +439,9 @@ function computeUnitResults(
 
   // P7 — variable question count per passage
   let p7Offset = 0;
-  meta.p7Ids.forEach((id, i) => {
+  meta.p7.forEach((id, i) => {
     const passage = (data.part7 ?? [])[i];
-    const qCount = meta.p7QuestionCounts[i] ?? 0;
+    const qCount = meta.p7_question_counts[i] ?? 0;
     if (!passage) { p7Offset += qCount; return; }
     const correctCount = passage.questions.filter(
       (q, qi) => all.p7[p7Offset + qi]?.toUpperCase() === q.answer.toUpperCase()

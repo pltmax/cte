@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import Part4Shell from "@/components/exam/Part4Shell";
-import type { ExamData } from "@/types/exam-data";
+import type { TalkData } from "@/components/exam/Part4Talk";
 
 export default async function Partie4Page() {
   const supabase = await createClient();
@@ -17,7 +17,7 @@ export default async function Partie4Page() {
           className="bg-white rounded-2xl border border-gray-100"
           style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
         >
-          <Part4Shell talks={(data ?? []) as unknown as ExamData["part4"]} />
+          <Part4Shell talks={(data ?? []) as TalkData[]} />
         </div>
       </div>
     </div>

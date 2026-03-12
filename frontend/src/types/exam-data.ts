@@ -44,3 +44,16 @@ export interface ExamData {
   part6?: PassageData[];
   part7?: P7Passage[];
 }
+
+/** Metadata stored in mock_exams.exam_question_ids — maps part → sampled UUIDs. */
+export interface ExamMeta {
+  p1: string[];
+  p2: string[];
+  p3: string[];
+  p4: string[];
+  p5: string[];
+  p6: string[];
+  p7: string[];
+  /** Number of questions per Part 7 passage (for answer-offset math during scoring). */
+  p7_question_counts: number[];
+}

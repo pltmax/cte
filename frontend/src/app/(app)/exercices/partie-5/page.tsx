@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import Part5Shell from "@/components/exam/Part5Shell";
-import type { ExamData } from "@/types/exam-data";
+import type { P5Question } from "@/components/exam/Part5Batch";
 
 export default async function Partie5Page() {
   const supabase = await createClient();
@@ -17,7 +17,7 @@ export default async function Partie5Page() {
           className="bg-white rounded-2xl border border-gray-100"
           style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
         >
-          <Part5Shell questions={(data ?? []) as unknown as ExamData["part5"]} />
+          <Part5Shell questions={(data ?? []) as P5Question[]} />
         </div>
       </div>
     </div>

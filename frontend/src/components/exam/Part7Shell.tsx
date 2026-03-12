@@ -1,13 +1,9 @@
 "use client";
 
-import { useState, useCallback, useEffect, useMemo } from "react";
+import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import Part7Intro from "@/components/exam/Part7Intro";
 import Part7Passage, { type P7Passage } from "@/components/exam/Part7Passage";
-import rawData from "@mockdata/TOEIC/reading_part7/part7_content.json";
-
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
-const allPassages: P7Passage[] = (rawData as { passages: P7Passage[] }).passages;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -18,9 +14,9 @@ type Phase = "intro" | "questions" | "done";
 interface Part7ShellProps {
   onStart?: () => void;
   onComplete?: (answers: Record<number, string>) => void;
+  onAnswersChange?: (answers: Record<number, string>) => void;
   inExam?: boolean;
-  /** Exam-specific passage subset; falls back to full JSON when absent */
-  passages?: P7Passage[];
+  passages: P7Passage[];
   /** When inExam, adds an exam-wide numbering offset (1-based display) */
   questionNumberOffset?: number;
   /** When inExam, display total questions across the whole exam (e.g. 200) */
@@ -30,12 +26,12 @@ interface Part7ShellProps {
 export default function Part7Shell({
   onStart,
   onComplete,
+  onAnswersChange,
   inExam = false,
-  passages: passagesProp,
+  passages,
   questionNumberOffset = 0,
   examTotalQuestions,
 }: Part7ShellProps) {
-  const passages = passagesProp ?? allPassages;
   const TOTAL_PASSAGES = passages.length;
 
   // Precompute 1-based start question number for each passage
@@ -71,12 +67,19 @@ export default function Part7Shell({
     setPhase("questions");
   }, [onStart]);
 
+  const onAnswersChangeRef = useRef(onAnswersChange);
+  useEffect(() => { onAnswersChangeRef.current = onAnswersChange; }, [onAnswersChange]);
+
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
       const globalIndex = questionStarts[passageIndex] - 1 + localIndex;
-      setAnswers((prev) => ({ ...prev, [globalIndex]: letter }));
+      setAnswers((prev) => {
+        const next = { ...prev, [globalIndex]: letter };
+        onAnswersChangeRef.current?.(next);
+        return next;
+      });
     },
-    [passageIndex]
+    [passageIndex, questionStarts]
   );
 
   const handleNext = useCallback(() => {

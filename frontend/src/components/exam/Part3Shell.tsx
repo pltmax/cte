@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import Part3Intro from "@/components/exam/Part3Intro";
 import Part3Conversation from "@/components/exam/Part3Conversation";
-import rawP3 from "@mockdata/TOEIC/listening_part3/part3_transcript.json";
 import type { ExamP3Conv } from "@/types/exam-data";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -11,10 +10,6 @@ import type { ExamP3Conv } from "@/types/exam-data";
 type P3Conv = ExamP3Conv;
 
 // ─── Config ───────────────────────────────────────────────────────────────────
-
-const allConversations = (
-  rawP3 as { conversations: P3Conv[] }
-).conversations;
 const QUESTIONS_PER_CONV = 3;
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
@@ -22,9 +17,9 @@ const QUESTIONS_PER_CONV = 3;
 interface Part3ShellProps {
   onStart?: () => void;
   onComplete?: (answers: Record<number, string>) => void;
+  onAnswersChange?: (answers: Record<number, string>) => void;
   inExam?: boolean;
-  /** Exam-specific conversation subset; falls back to first 13 when absent */
-  conversations?: P3Conv[];
+  conversations: P3Conv[];
   /** When inExam, adds an exam-wide numbering offset (1-based display) */
   questionNumberOffset?: number;
   /** When inExam, display total questions across the whole exam (e.g. 200) */
@@ -34,12 +29,12 @@ interface Part3ShellProps {
 export default function Part3Shell({
   onStart,
   onComplete,
+  onAnswersChange,
   inExam = false,
-  conversations: conversationsProp,
+  conversations: conversationsData,
   questionNumberOffset = 0,
   examTotalQuestions,
 }: Part3ShellProps) {
-  const conversationsData = conversationsProp ?? allConversations.slice(0, 13);
   const TOTAL_CONVS = conversationsData.length;
   const PART3_TOTAL = TOTAL_CONVS * QUESTIONS_PER_CONV;
   const [phase, setPhase] = useState<"intro" | "questions" | "done">("intro");
@@ -48,6 +43,9 @@ export default function Part3Shell({
 
   const convStart = conversationIndex * QUESTIONS_PER_CONV;
 
+  const onAnswersChangeRef = useRef(onAnswersChange);
+  useEffect(() => { onAnswersChangeRef.current = onAnswersChange; }, [onAnswersChange]);
+
   const handleStart = useCallback(() => {
     onStart?.();
     setPhase("questions");
@@ -55,7 +53,11 @@ export default function Part3Shell({
 
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
-      setAnswers((prev) => ({ ...prev, [convStart + localIndex]: letter }));
+      setAnswers((prev) => {
+        const next = { ...prev, [convStart + localIndex]: letter };
+        onAnswersChangeRef.current?.(next);
+        return next;
+      });
     },
     [convStart]
   );

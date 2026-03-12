@@ -1,14 +1,45 @@
 import Link from "next/link";
+import { fulfillCheckoutSession } from "@/lib/stripe/fulfill";
+import { RefreshOnMount } from "@/components/app/RefreshOnMount";
+
+const PLAN_MESSAGES: Record<string, { title: string; body: string; cta: string; href: string }> = {
+  rush: {
+    title: "Forfait Rush activé !",
+    body: "Ton accès Rush est maintenant actif pour 2 semaines. 2 crédits examens blancs ont été ajoutés à ton compte.",
+    cta: "Commencer les exercices →",
+    href: "/exercices",
+  },
+  chill: {
+    title: "Forfait Chill activé !",
+    body: "Ton accès Chill est maintenant actif pour 1 mois. 4 crédits examens blancs ont été ajoutés à ton compte.",
+    cta: "Commencer les exercices →",
+    href: "/exercices",
+  },
+  upgrade: {
+    title: "Forfait Chill activé !",
+    body: "Ton plan a été upgradé vers Chill. +2 semaines d'accès et +2 crédits ont été ajoutés à ton compte.",
+    cta: "Lancer un examen blanc →",
+    href: "/mockexams",
+  },
+  credit: {
+    title: "Crédit ajouté !",
+    body: "1 crédit examen blanc a été ajouté à ton compte. Bonne préparation !",
+    cta: "Lancer un examen blanc →",
+    href: "/mockexams",
+  },
+};
 
 export default async function SuccessPage({
   searchParams,
 }: {
-  searchParams: Promise<{ type?: string; quantity?: string }>;
+  searchParams: Promise<{ type?: string; session_id?: string }>;
 }) {
-  const { type, quantity } = await searchParams;
+  const { type, session_id } = await searchParams;
 
-  const isSubscription = type === "subscription";
-  const creditCount = quantity ? parseInt(quantity, 10) : 1;
+  if (session_id) {
+    await fulfillCheckoutSession(session_id).catch(() => {});
+  }
+  const msg = PLAN_MESSAGES[type ?? ""] ?? PLAN_MESSAGES["credit"];
 
   return (
     <div className="p-8 flex items-start justify-center">
@@ -33,42 +64,25 @@ export default async function SuccessPage({
           </svg>
         </div>
 
-        {/* Message */}
         <div>
-          <h1 className="text-2xl font-bold text-foreground">
-            {isSubscription ? "Bienvenue dans Premium !" : "Paiement réussi !"}
-          </h1>
-          <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-            {isSubscription
-              ? "Ton abonnement Premium est maintenant actif. Profite d'un accès illimité aux exercices."
-              : `${creditCount} crédit${creditCount > 1 ? "s" : ""} ajouté${creditCount > 1 ? "s" : ""} à ton compte. Bonne préparation !`}
-          </p>
+          <h1 className="text-2xl font-bold text-foreground">{msg.title}</h1>
+          <p className="text-sm text-gray-500 mt-2 leading-relaxed">{msg.body}</p>
         </div>
 
-        {/* Note */}
+        <RefreshOnMount />
         <p className="text-xs text-gray-400 bg-gray-50 rounded-xl px-4 py-3 leading-relaxed">
           La mise à jour du compte peut prendre quelques secondes. Si ton
           statut ne s&apos;est pas encore actualisé, rafraîchis la page dans
           un instant.
         </p>
 
-        {/* CTAs */}
         <div className="flex flex-col gap-3 w-full">
-          {isSubscription ? (
-            <Link
-              href="/exercices"
-              className="px-8 py-3.5 bg-[#6600CC] text-white text-sm font-bold rounded-full hover:bg-[#5500aa] transition-colors shadow-md text-center"
-            >
-              Commencer les exercices →
-            </Link>
-          ) : (
-            <Link
-              href="/mockexams"
-              className="px-8 py-3.5 bg-[#6600CC] text-white text-sm font-bold rounded-full hover:bg-[#5500aa] transition-colors shadow-md text-center"
-            >
-              Lancer un examen blanc →
-            </Link>
-          )}
+          <Link
+            href={msg.href}
+            className="px-8 py-3.5 bg-[#6600CC] text-white text-sm font-bold rounded-full hover:bg-[#5500aa] transition-colors shadow-md text-center"
+          >
+            {msg.cta}
+          </Link>
           <Link
             href="/dashboard"
             className="px-8 py-3.5 text-sm font-medium text-gray-500 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors text-center"

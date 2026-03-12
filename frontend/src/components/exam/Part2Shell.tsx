@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import Part2Intro from "@/components/exam/Part2Intro";
 import Part2Batch from "@/components/exam/Part2Batch";
-import rawP2 from "@mockdata/TOEIC/listening_part2/part2_transcript.json";
 import type { ExamP2Question } from "@/types/exam-data";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -11,8 +10,6 @@ import type { ExamP2Question } from "@/types/exam-data";
 type P2QuestionData = ExamP2Question;
 
 // ─── Config ───────────────────────────────────────────────────────────────────
-
-const allQuestions = (rawP2 as { questions: P2QuestionData[] }).questions;
 const BATCH_SIZE = 5;
 
 // ─── Shell ────────────────────────────────────────────────────────────────────
@@ -22,10 +19,10 @@ interface Part2ShellProps {
   onStart?: () => void;
   /** Called when all questions are answered */
   onComplete?: (answers: Record<number, string>) => void;
+  onAnswersChange?: (answers: Record<number, string>) => void;
   /** Controls copy in Part2Intro ("Le minuteur reprend…" vs default) */
   inExam?: boolean;
-  /** Exam-specific question subset; falls back to full JSON when absent */
-  questions?: P2QuestionData[];
+  questions: P2QuestionData[];
   /** When inExam, adds an exam-wide numbering offset (1-based display) */
   questionNumberOffset?: number;
   /** When inExam, display total questions across the whole exam (e.g. 200) */
@@ -35,12 +32,12 @@ interface Part2ShellProps {
 export default function Part2Shell({
   onStart,
   onComplete,
+  onAnswersChange,
   inExam = false,
-  questions: questionsProp,
+  questions: questionsData,
   questionNumberOffset = 0,
   examTotalQuestions,
 }: Part2ShellProps) {
-  const questionsData = questionsProp ?? allQuestions;
   const PART2_TOTAL = questionsData.length;
   const [phase, setPhase] = useState<"intro" | "questions" | "done">("intro");
   // First global question index of the current batch (0-based)
@@ -51,6 +48,9 @@ export default function Part2Shell({
   const batchIndex = Math.floor(batchStart / BATCH_SIZE);
   const batchSize = Math.min(BATCH_SIZE, PART2_TOTAL - batchStart);
 
+  const onAnswersChangeRef = useRef(onAnswersChange);
+  useEffect(() => { onAnswersChangeRef.current = onAnswersChange; }, [onAnswersChange]);
+
   const handleStart = useCallback(() => {
     onStart?.();
     setPhase("questions");
@@ -58,7 +58,11 @@ export default function Part2Shell({
 
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
-      setAnswers((prev) => ({ ...prev, [batchStart + localIndex]: letter }));
+      setAnswers((prev) => {
+        const next = { ...prev, [batchStart + localIndex]: letter };
+        onAnswersChangeRef.current?.(next);
+        return next;
+      });
     },
     [batchStart]
   );

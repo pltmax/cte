@@ -1,4 +1,4 @@
-export type MockExamStatus = "pending" | "in_progress" | "completed";
+export type MockExamStatus = "pending" | "in_progress" | "abandoned" | "completed";
 
 export interface MockExam {
   id: string;
@@ -9,4 +9,5 @@ export interface MockExam {
   score: number | null;
   listening_score: number | null;
   reading_score: number | null;
+  answers?: Record<string, Record<string, string>> | null;
 }

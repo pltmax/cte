@@ -1,15 +1,9 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Part6Intro from "@/components/exam/Part6Intro";
 import Part6Passage, { type PassageData } from "@/components/exam/Part6Passage";
-import rawData from "@mockdata/TOEIC/reading_part6/part6_content.json";
-
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
-const allPassages: PassageData[] = (
-  rawData as { passages: PassageData[] }
-).passages;
 const QUESTIONS_PER_PASSAGE = 4;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -21,9 +15,9 @@ type Phase = "intro" | "questions" | "done";
 interface Part6ShellProps {
   onStart?: () => void;
   onComplete?: (answers: Record<number, string>) => void;
+  onAnswersChange?: (answers: Record<number, string>) => void;
   inExam?: boolean;
-  /** Exam-specific passage subset; falls back to full JSON when absent */
-  passages?: PassageData[];
+  passages: PassageData[];
   /** When inExam, adds an exam-wide numbering offset (1-based display) */
   questionNumberOffset?: number;
   /** When inExam, display total questions across the whole exam (e.g. 200) */
@@ -33,12 +27,12 @@ interface Part6ShellProps {
 export default function Part6Shell({
   onStart,
   onComplete,
+  onAnswersChange,
   inExam = false,
-  passages: passagesProp,
+  passages,
   questionNumberOffset = 0,
   examTotalQuestions,
 }: Part6ShellProps) {
-  const passages = passagesProp ?? allPassages;
   const TOTAL_PASSAGES = passages.length;
   const PART6_TOTAL = TOTAL_PASSAGES * QUESTIONS_PER_PASSAGE;
 
@@ -66,9 +60,16 @@ export default function Part6Shell({
     setPhase("questions");
   }, [onStart]);
 
+  const onAnswersChangeRef = useRef(onAnswersChange);
+  useEffect(() => { onAnswersChangeRef.current = onAnswersChange; }, [onAnswersChange]);
+
   const handleSelect = useCallback(
     (localIndex: number, letter: string) => {
-      setAnswers((prev) => ({ ...prev, [passageStart + localIndex]: letter }));
+      setAnswers((prev) => {
+        const next = { ...prev, [passageStart + localIndex]: letter };
+        onAnswersChangeRef.current?.(next);
+        return next;
+      });
     },
     [passageStart]
   );

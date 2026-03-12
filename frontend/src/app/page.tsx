@@ -287,7 +287,7 @@ export default function Home() {
             name="Ambre P."
             exam="TOEIC"
             score="975/990"
-            body="Les examens blancs sont ultra-fidèles au vrai examen. D'habitude je suis très stressée mais je savais exactement où j'en étais avant le jour J."
+            body="Les examens blancs sont ultra-fidèles au vrai examen. D'habitude je suis très stressée mais je savais exactement où j'en étais avant le jour d'examen."
           />
           <ReviewCard
             name="Sofia L."

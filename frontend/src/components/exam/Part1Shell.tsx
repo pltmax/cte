@@ -3,7 +3,6 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import Part1Intro from "@/components/exam/Part1Intro";
 import Part1Question from "@/components/exam/Part1Question";
-import rawP1 from "@mockdata/TOEIC/listening_part1/part1_transcript.json";
 import type { ExamP1Question } from "@/types/exam-data";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -12,8 +11,6 @@ type P1QuestionData = ExamP1Question;
 type AudioMap = Record<"A" | "B" | "C" | "D", HTMLAudioElement>;
 
 // ─── Config ───────────────────────────────────────────────────────────────────
-
-const allQuestions = (rawP1 as { questions: P1QuestionData[] }).questions;
 const AUDIO_SEQUENCE = ["A", "B", "C", "D"] as const;
 
 // ─── Audio helpers ────────────────────────────────────────────────────────────
@@ -40,9 +37,9 @@ function destroyAudioMap(map: AudioMap) {
 interface Part1ShellProps {
   onStart?: () => void;
   onComplete?: (answers: Record<number, string>) => void;
+  onAnswersChange?: (answers: Record<number, string>) => void;
   inExam?: boolean;
-  /** Exam-specific question subset; falls back to full JSON when absent */
-  questions?: P1QuestionData[];
+  questions: P1QuestionData[];
   /** Admin-only: shows a per-question skip button */
   isAdmin?: boolean;
   /** When inExam, adds an exam-wide numbering offset (1-based display) */
@@ -54,13 +51,13 @@ interface Part1ShellProps {
 export default function Part1Shell({
   onStart,
   onComplete,
+  onAnswersChange,
   inExam = false,
-  questions: questionsProp,
+  questions: questionsData,
   isAdmin = false,
   questionNumberOffset = 0,
   examTotalQuestions,
 }: Part1ShellProps) {
-  const questionsData = questionsProp ?? allQuestions;
   const PART1_TOTAL = questionsData.length;
 
   // ─── Visual state ──────────────────────────────────────────────────────────
@@ -74,6 +71,10 @@ export default function Part1Shell({
   useEffect(() => {
     onCompleteRef.current = onComplete;
   }, [onComplete]);
+  const onAnswersChangeRef = useRef(onAnswersChange);
+  useEffect(() => {
+    onAnswersChangeRef.current = onAnswersChange;
+  }, [onAnswersChange]);
   // Keep a fresh copy of answers for the async auto-advance timer.
   const answersRef = useRef<Record<number, string>>({});
   useEffect(() => {
@@ -116,7 +117,11 @@ export default function Part1Shell({
 
   const handleSelect = useCallback(
     (answer: string) => {
-      setAnswers((prev) => ({ ...prev, [questionIndex]: answer }));
+      setAnswers((prev) => {
+        const next = { ...prev, [questionIndex]: answer };
+        onAnswersChangeRef.current?.(next);
+        return next;
+      });
     },
     [questionIndex]
   );

@@ -1,1 +1,1 @@
-{"files":["src/lib/supabase.ts","src/components/auth/LogoutButton.tsx"],"issues":[]}
+{"files":["src/lib/supabase.ts","src/components/auth/LogoutButton.tsx","src/app/(app)/credits/actions.ts"],"issues":[]}

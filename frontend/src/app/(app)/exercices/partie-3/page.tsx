@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import Part3Shell from "@/components/exam/Part3Shell";
-import type { ExamData } from "@/types/exam-data";
+import type { ExamP3Conv } from "@/types/exam-data";
 
 export default async function Partie3Page() {
   const supabase = await createClient();
@@ -17,7 +17,7 @@ export default async function Partie3Page() {
           className="bg-white rounded-2xl border border-gray-100"
           style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
         >
-          <Part3Shell conversations={(data ?? []) as unknown as ExamData["part3"]} />
+          <Part3Shell conversations={(data ?? []) as ExamP3Conv[]} />
         </div>
       </div>
     </div>
