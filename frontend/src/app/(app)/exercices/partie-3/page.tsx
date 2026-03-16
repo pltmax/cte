@@ -11,7 +11,7 @@ export default async function Partie3Page() {
     .order("position");
 
   return (
-    <div className="flex-1 flex items-center justify-center px-6 py-10">
+    <div className="flex-1 flex items-center justify-center px-4 md:px-6 py-8 md:py-10">
       <div className="w-full max-w-4xl">
         <div
           className="bg-white rounded-2xl border border-gray-100"

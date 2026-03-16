@@ -25,7 +25,7 @@ export default async function ExercicesPage() {
   }
 
   return (
-    <div className="px-6 py-10 max-w-5xl mx-auto">
+    <div className="px-4 md:px-6 py-8 md:py-10 max-w-5xl mx-auto">
       <div className="mb-10">
         <h1 className="text-2xl font-bold text-foreground">Exercices</h1>
         <p className="text-sm text-gray-500 mt-1">

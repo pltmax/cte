@@ -150,6 +150,28 @@ export default function Sidebar({ isPremium }: { isPremium: boolean }) {
 
         {/* Navigation */}
         <nav className="flex-1 min-h-0 px-2 pt-2 space-y-0.5 overflow-y-auto overflow-x-hidden">
+          {/* Test de niveau — non-premium only */}
+          {!isPremium && (
+            <Link
+              href="/diagnostic"
+              className={`flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-medium transition-colors border ${
+                isActive("/diagnostic")
+                  ? "bg-[#f3ebff] text-[#6600CC] border-[#6600CC]/30"
+                  : "text-[#6600CC] border-[#e9d9ff] hover:bg-[#faf6ff]"
+              }`}
+              title={isCollapsed ? "Test de niveau" : undefined}
+            >
+              <svg className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+              {!isCollapsed && (
+                <>
+                  <span className="flex-1 text-left truncate">Test de niveau</span>
+                </>
+              )}
+            </Link>
+          )}
+
           {/* Guides (accordion) */}
           <div>
             <button
@@ -180,6 +202,32 @@ export default function Sidebar({ isPremium }: { isPremium: boolean }) {
                 <Link href="/guides/lecture" className={navItem(isActive("/guides/lecture"))}>
                   <span className="truncate">Guide Lecture</span>
                 </Link>
+                {isPremium ? (
+                  <Link href="/guides/vocabulaire" className={navItem(isActive("/guides/vocabulaire"))}>
+                    <span className="truncate">Vocabulaire</span>
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => setGateOpen(true)}
+                    className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-gray-50 hover:text-gray-400 transition-colors"
+                  >
+                    <span className="flex-1 text-left truncate">Vocabulaire</span>
+                    <LockIcon className="w-3.5 h-3.5 shrink-0" />
+                  </button>
+                )}
+                {isPremium ? (
+                  <Link href="/guides/grammaire" className={navItem(isActive("/guides/grammaire"))}>
+                    <span className="truncate">Grammaire</span>
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => setGateOpen(true)}
+                    className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-medium text-gray-300 hover:bg-gray-50 hover:text-gray-400 transition-colors"
+                  >
+                    <span className="flex-1 text-left truncate">Grammaire</span>
+                    <LockIcon className="w-3.5 h-3.5 shrink-0" />
+                  </button>
+                )}
               </div>
             )}
           </div>

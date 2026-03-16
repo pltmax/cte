@@ -1,11 +1,11 @@
 # Project 1 API — API Context
 
-> Auto-generated on 2026-03-12 19:33
+> Auto-generated on 2026-03-16 18:08
 > Do not edit manually. Regenerate with: `npm run context:api`
 
 ## Summary
 - **Version:** 0.1.0
-- **Routes:** 6
+- **Routes:** 5
 - **Schemas:** 6
 
 ## Routes
@@ -29,7 +29,6 @@
 | Method | Path | Auth | Summary |
 |--------|------|------|---------|
 | `POST` | `/api/v1/stripe/checkout` | 🌐 | Create Checkout Session |
-| `POST` | `/api/v1/stripe/webhook` | 🌐 | Stripe Webhook |
 
 ## Pydantic Schemas
 

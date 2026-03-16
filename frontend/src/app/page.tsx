@@ -373,6 +373,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white">
           <span>© 2026 Choppe Ton Exam. Tous droits réservés.</span>
           <div className="flex gap-5">
+            <Link href="/a-propos" className="hover:text-[#6600CC] text-white transition-colors">À propos</Link>
+            <Link href="/confidentialite" className="hover:text-[#6600CC] text-white transition-colors">Confidentialité</Link>
+            <Link href="/cgv" className="hover:text-[#6600CC] text-white transition-colors">CGV</Link>
             <Link href="/login" className="hover:text-[#6600CC] text-white transition-colors">Se connecter</Link>
             <Link href="/signup" className="hover:text-[#6600CC] text-white transition-colors">S&apos;inscrire</Link>
           </div>

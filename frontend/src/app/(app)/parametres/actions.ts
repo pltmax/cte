@@ -1,6 +1,7 @@
 "use server";
 
 import Stripe from "stripe";
+import { Resend } from "resend";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
@@ -28,6 +29,16 @@ export async function updateProfile(
   _prev: FormState,
   formData: FormData
 ): Promise<FormState> {
+  const firstName = (formData.get("first_name") as string | null)?.trim() ?? "";
+  const lastName = (formData.get("last_name") as string | null)?.trim() ?? "";
+  const phone = (formData.get("phone") as string | null)?.trim() ?? "";
+
+  if (firstName.length > 100) return { error: "Prénom trop long (max 100 caractères)." };
+  if (lastName.length > 100) return { error: "Nom trop long (max 100 caractères)." };
+  if (phone.length > 20) return { error: "Numéro de téléphone trop long." };
+  if (phone && !/^[+\d\s\-().]{0,20}$/.test(phone))
+    return { error: "Format de téléphone invalide." };
+
   const supabase = await createClient();
   const {
     data: { user },
@@ -37,9 +48,9 @@ export async function updateProfile(
   const { error } = await supabase
     .from("profiles")
     .update({
-      first_name: (formData.get("first_name") as string).trim() || null,
-      last_name: (formData.get("last_name") as string).trim() || null,
-      phone: (formData.get("phone") as string).trim() || null,
+      first_name: firstName || null,
+      last_name: lastName || null,
+      phone: phone || null,
     })
     .eq("id", user.id);
 
@@ -64,6 +75,64 @@ export async function updatePassword(
   const supabase = await createClient();
   const { error } = await supabase.auth.updateUser({ password });
   if (error) return { error: error.message };
+  return { success: true };
+}
+
+export async function sendContactMessage(
+  _prev: FormState,
+  formData: FormData
+): Promise<FormState> {
+  const message = (formData.get("message") as string | null)?.trim() ?? "";
+  if (!message) return { error: "Veuillez écrire un message." };
+  if (message.length < 10) return { error: "Message trop court." };
+  if (message.length > 2000) return { error: "Message trop long (max 2000 caractères)." };
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Non authentifié." };
+
+  // Rate limit: one message per minute per user
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("last_contact_at")
+    .eq("id", user.id)
+    .single();
+  if (profile?.last_contact_at) {
+    const elapsed = Date.now() - new Date(profile.last_contact_at).getTime();
+    if (elapsed < 60_000)
+      return { error: "Veuillez attendre une minute avant d'envoyer un autre message." };
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  const toEmail = process.env.CONTACT_EMAIL;
+
+  if (!apiKey || !toEmail) {
+    return { error: "Service d'envoi non configuré. Veuillez réessayer plus tard." };
+  }
+
+  const fromEmail = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
+  const resend = new Resend(apiKey);
+  const { error } = await resend.emails.send({
+    from: `Choppe Ton Exam <${fromEmail}>`,
+    to: toEmail,
+    replyTo: user.email ?? undefined,
+    subject: `Message de ${user.email}`,
+    text: `De : ${user.email}\n\n${message}`,
+  });
+
+  if (error) {
+    console.error("[sendContactMessage] Resend error:", error);
+    return { error: "Envoi échoué. Réessaie plus tard." };
+  }
+
+  // Stamp timestamp for rate limiting
+  await supabase
+    .from("profiles")
+    .update({ last_contact_at: new Date().toISOString() })
+    .eq("id", user.id);
+
   return { success: true };
 }
 

@@ -45,7 +45,7 @@ export default async function ExerciceP4Page({
   if (!data?.length) notFound();
 
   return (
-    <div className="flex-1 flex items-center justify-center px-6 py-15">
+    <div className="flex-1 flex items-center justify-center px-4 md:px-6 py-15">
       <div className="w-full max-w-4xl">
         <div
           className="bg-white rounded-2xl border border-gray-100"

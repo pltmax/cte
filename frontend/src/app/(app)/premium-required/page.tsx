@@ -30,8 +30,8 @@ export default function PremiumRequiredPage() {
             Accès Premium requis
           </h1>
           <p className="text-sm text-gray-500 mt-2 leading-relaxed max-w-sm mx-auto">
-            Les exercices et les examens blancs sont réservés aux membres
-            Premium. Passez à l&apos;offre Premium pour un accès illimité.
+            Les exercices, les examens blancs et les guides Vocabulaire &amp;
+            Grammaire sont réservés aux membres Premium.
           </p>
         </div>
 
@@ -40,8 +40,9 @@ export default function PremiumRequiredPage() {
           {[
             "Exercices Parties 1 à 7",
             "Examens blancs en conditions réelles",
+            "Guide Vocabulaire TOEIC (100+ mots)",
+            "Guide Grammaire TOEIC (8 notions clés)",
             "Suivi de progression",
-            "Conseils personnalisés",
           ].map((feature) => (
             <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
               <svg

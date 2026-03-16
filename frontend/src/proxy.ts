@@ -2,9 +2,9 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 // Any authenticated user
-const AUTH_ONLY_PATHS = ["/dashboard", "/exam", "/guides", "/exercices", "/parametres"];
+const AUTH_ONLY_PATHS = ["/dashboard", "/exam", "/guides", "/exercices", "/parametres", "/diagnostic", "/credits"];
 // Authenticated + premium (or admin) role — full page block
-const PREMIUM_PATHS = ["/mockexams"];
+const PREMIUM_PATHS = ["/mockexams", "/guides/vocabulaire", "/guides/grammaire"];
 // Exercise pages accessible without a premium plan
 const FREE_EXERCISE_PATHS = new Set([
   "/exercices/partie-1/1",
@@ -83,8 +83,35 @@ export async function proxy(request: NextRequest) {
 
   // ── Redirect authenticated users away from auth pages ────────────────────
   if (user && (pathname === "/login" || pathname === "/signup")) {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("role, premium_expires_at")
+      .eq("id", user.id)
+      .single();
+    const role: string = profile?.role ?? "user";
+    const expiresAt: string | null = profile?.premium_expires_at ?? null;
+    const isPremium =
+      role === "admin" ||
+      (role === "premium" && expiresAt !== null && new Date(expiresAt) > new Date());
     const url = request.nextUrl.clone();
-    url.pathname = "/dashboard";
+    url.pathname = isPremium ? "/exercices" : "/diagnostic";
+    return NextResponse.redirect(url);
+  }
+
+  // ── /dashboard → smart redirect based on role ────────────────────────────
+  if (user && pathname === "/dashboard") {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("role, premium_expires_at")
+      .eq("id", user.id)
+      .single();
+    const role: string = profile?.role ?? "user";
+    const expiresAt: string | null = profile?.premium_expires_at ?? null;
+    const isPremium =
+      role === "admin" ||
+      (role === "premium" && expiresAt !== null && new Date(expiresAt) > new Date());
+    const url = request.nextUrl.clone();
+    url.pathname = isPremium ? "/exercices" : "/diagnostic";
     return NextResponse.redirect(url);
   }
 

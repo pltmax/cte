@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useActionState } from "react";
-import { updateProfile, updatePassword } from "./actions";
+import { updateProfile, updatePassword, sendContactMessage } from "./actions";
 
 type FormState = { error?: string; success?: boolean } | null;
 
@@ -160,6 +160,57 @@ export function ProfileSection({
         </button>
       </div>
     </form>
+  );
+}
+
+// ─── Contact Form ─────────────────────────────────────────────────────────────
+
+export function ContactForm() {
+  const [state, formAction, isPending] = useActionState<FormState, FormData>(
+    sendContactMessage,
+    null
+  );
+  const [message, setMessage] = useState("");
+
+  return (
+    <div>
+      <p className="text-sm text-gray-500 mb-4">
+        Tu as remarqué une erreur dans une question, une traduction approximative,
+        ou quelque chose qui ne fonctionne pas comme prévu&nbsp;?
+        Envoie-nous un message — on corrige rapidement.
+      </p>
+
+      {state?.success ? (
+        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3">
+          <p className="text-sm font-medium text-green-700">
+            Message envoyé, merci&nbsp;!
+          </p>
+        </div>
+      ) : (
+        <form action={formAction} className="space-y-3">
+          <textarea
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            rows={4}
+            placeholder="Décris ce que tu as remarqué…"
+            className="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-[#6600CC]/30 focus:border-[#6600CC]"
+          />
+          {state?.error && (
+            <p className="text-sm text-red-500">{state.error}</p>
+          )}
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              disabled={isPending || message.trim().length < 10}
+              className="px-5 py-2 text-sm font-semibold text-white bg-[#6600CC] rounded-full hover:bg-[#5500aa] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {isPending ? "Envoi…" : "Envoyer"}
+            </button>
+          </div>
+        </form>
+      )}
+    </div>
   );
 }
 

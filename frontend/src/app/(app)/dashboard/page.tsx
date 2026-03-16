@@ -11,12 +11,17 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold text-foreground">Tableau de bord</h1>
-      <p className="text-sm text-gray-500 mt-1">
-        Bienvenue, {user.email}
-      </p>
-    </div>
-  );
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role, premium_expires_at")
+    .eq("id", user.id)
+    .single();
+
+  const role: string = profile?.role ?? "user";
+  const expiresAt: string | null = profile?.premium_expires_at ?? null;
+  const isPremium =
+    role === "admin" ||
+    (role === "premium" && expiresAt !== null && new Date(expiresAt) > new Date());
+
+  redirect(isPremium ? "/exercices" : "/diagnostic");
 }

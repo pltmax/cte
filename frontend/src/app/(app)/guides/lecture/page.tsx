@@ -2,7 +2,11 @@
 
 export default function GuideLecturePage() {
   return (
-    <article className="px-6 py-10 max-w-3xl mx-auto">
+    <div className="px-3 md:px-6 py-8 md:py-10 max-w-4xl mx-auto">
+    <article
+      className="bg-white rounded-2xl border border-gray-100 px-4 md:px-8 py-8 md:py-10"
+      style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
+    >
       {/* Header */}
       <header className="mb-10">
         <p className="text-xs font-semibold text-[#6600CC] uppercase tracking-widest mb-2">
@@ -336,5 +340,6 @@ export default function GuideLecturePage() {
 
       </div>
     </article>
+    </div>
   );
 }

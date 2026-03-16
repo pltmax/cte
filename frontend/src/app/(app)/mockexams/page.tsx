@@ -67,7 +67,7 @@ export default async function MockExamsPage() {
   const pastExams: MockExam[] = (exams ?? []) as MockExam[];
 
   return (
-    <div className="px-6 py-10 max-w-5xl mx-auto space-y-8">
+    <div className="px-4 md:px-6 py-8 md:py-10 max-w-5xl mx-auto space-y-8">
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-foreground">Examens blancs</h1>
@@ -155,8 +155,8 @@ export default async function MockExamsPage() {
             </p>
           </div>
         ) : (
-          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-            <table className="w-full">
+          <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+            <table className="w-full min-w-[560px]">
               <thead>
                 <tr className="border-b border-gray-100">
                   <th className="text-left px-6 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wide">

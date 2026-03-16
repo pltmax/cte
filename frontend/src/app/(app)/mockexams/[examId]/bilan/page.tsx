@@ -196,7 +196,7 @@ export default async function BilanPage({
     : [];
 
   return (
-    <div className="p-8 max-w-3xl space-y-6">
+    <div className="px-4 md:px-6 py-8 md:py-10 max-w-3xl mx-auto space-y-6">
       {/* Back */}
       <Link
         href="/mockexams"
@@ -236,7 +236,7 @@ export default async function BilanPage({
       </div>
 
       {/* Score summary */}
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-8 py-10 flex flex-col items-center text-center gap-2">
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-4 md:px-8 py-8 md:py-10 flex flex-col items-center text-center gap-2">
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">
           Score total
         </p>
@@ -244,7 +244,7 @@ export default async function BilanPage({
           {e.score ?? "—"}
           <span className="text-2xl font-normal text-gray-300"> / 990</span>
         </p>
-        <div className="flex gap-6 mt-4 text-sm text-gray-500">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 text-sm text-gray-500">
           <span>
             Écoute :{" "}
             <span className="font-semibold text-foreground">
@@ -316,7 +316,7 @@ export default async function BilanPage({
 
       {/* Question review */}
       {hasAnswers && partReviews.length > 0 && (
-        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm px-8 py-6">
+        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm px-4 md:px-8 py-6">
           <h2 className="text-base font-semibold text-foreground mb-4">Revue des réponses</h2>
           {partReviews.map((part) => (
             <details key={part.n} className="mb-3 border border-gray-100 rounded-xl overflow-hidden">
@@ -326,7 +326,8 @@ export default async function BilanPage({
               {part.rows.length === 0 ? (
                 <p className="px-5 py-4 text-xs text-gray-300">Aucune réponse pour cette partie.</p>
               ) : (
-                <table className="w-full text-sm">
+                <div className="overflow-x-auto">
+                <table className="w-full min-w-[280px] text-sm">
                   <thead>
                     <tr className="border-b border-gray-100">
                       <th className="text-left px-5 py-2 text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Q#</th>
@@ -348,6 +349,7 @@ export default async function BilanPage({
                     ))}
                   </tbody>
                 </table>
+                </div>
               )}
             </details>
           ))}

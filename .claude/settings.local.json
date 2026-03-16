@@ -44,7 +44,15 @@
       "Bash(ELEVENLABS_API_KEY=sk_fc47be7a8cde76fb5db32ace72c829df6d503e0d0f3b1f23 python:*)",
       "Bash(kill 28757:*)",
       "WebFetch(domain:www.ets.org)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(npm audit:*)",
+      "Bash(pip-audit:*)",
+      "mcp__supabase__list_projects",
+      "Bash(ls:*)",
+      "mcp__supabase__execute_sql",
+      "mcp__supabase__apply_migration",
+      "Bash(npx tsc:*)",
+      "Bash(find:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

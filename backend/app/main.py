@@ -15,7 +15,13 @@ from app.limiter import limiter
 from app.routers import admin
 from app.routers import stripe_router
 
-app = FastAPI(title="Project 1 API")
+_is_production = os.environ.get("ENVIRONMENT") == "production"
+app = FastAPI(
+    title="Project 1 API",
+    docs_url=None if _is_production else "/docs",
+    redoc_url=None if _is_production else "/redoc",
+    openapi_url=None if _is_production else "/openapi.json",
+)
 
 # ─── Rate limiting ────────────────────────────────────────────────────────────
 
@@ -39,7 +45,7 @@ app.add_middleware(
     allow_origins=_allowed_origins,
     allow_credentials=True,
     allow_methods=["GET", "POST"],
-    allow_headers=["Authorization", "Content-Type", "stripe-signature"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 # ─── Routers ──────────────────────────────────────────────────────────────────

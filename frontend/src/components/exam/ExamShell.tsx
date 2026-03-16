@@ -12,7 +12,7 @@ import Part6Shell from "@/components/exam/Part6Shell";
 import Part7Shell from "@/components/exam/Part7Shell";
 import { createClient } from "@/lib/supabase/client";
 import { scoreExam, type AllExamAnswers, type PartAnswers } from "@/lib/toeic-scoring";
-import type { ExamData, ExamMeta } from "@/types/exam-data";
+import type { ExamData } from "@/types/exam-data";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -20,7 +20,8 @@ const LISTENING_SECONDS = 45 * 60; // 45 minutes
 const READING_SECONDS = 75 * 60; // 75 minutes
 const EXAM_TOTAL_QUESTIONS = 200;
 
-// 1-based global numbering offsets per part (add to each part's local 1-based numbering)
+
+// 1-based global numbering offsets per part (add to each part’s local 1-based numbering)
 const QUESTION_OFFSETS = {
   p1: 0,   // 1–6
   p2: 6,   // 7–31
@@ -42,21 +43,13 @@ const LISTENING_PHASES: Phase[] = ["p1", "p2", "p3", "p4"];
 interface ExamShellProps {
   /** The exam UUID — used to mark the exam as completed in the DB. */
   examId?: string;
-  /** Pre-built exam dataset, sourced from mock_exams.exam_data. Always present. */
-  examData: ExamData;
-  /** Question IDs per part, sourced from mock_exams.exam_question_ids. */
-  examMeta?: ExamMeta;
+  /** Pre-built exam dataset (from exam JSON). When absent, each Shell uses its full JSON. */
+  examData?: ExamData;
   /** When true, shows admin-only skip controls (not visible to regular users). */
   isAdmin?: boolean;
 }
 
-export default function ExamShell({
-  examId = "",
-  examData,
-  examMeta,
-  isAdmin = false,
-}: ExamShellProps) {
-  // examData is guaranteed non-null by ExamPage (redirects on null)
+export default function ExamShell({ examId = "", examData, isAdmin = false }: ExamShellProps) {
   const router = useRouter();
   const [phase, setPhase] = useState<Phase>("p1");
   const [timerActive, setTimerActive] = useState(false);
@@ -66,8 +59,6 @@ export default function ExamShell({
   const allAnswersRef = useRef<AllExamAnswers>({
     p1: {}, p2: {}, p3: {}, p4: {}, p5: {}, p6: {}, p7: {},
   });
-  // Live answers for the currently active part (updated on every selection).
-  const livePartAnswersRef = useRef<PartAnswers>({});
 
   const timerLabel = LISTENING_PHASES.includes(phase) ? "Écoute" : "Lecture";
 
@@ -81,50 +72,10 @@ export default function ExamShell({
     return () => clearInterval(id);
   }, [timerActive, secondsLeft]);
 
-  // ── beforeunload warning (tab close / refresh only) ───────────────────────
-  useEffect(() => {
-    if (phase === "done") return;
-    const handler = (e: BeforeUnloadEvent) => { e.preventDefault(); };
-    window.addEventListener("beforeunload", handler);
-    return () => window.removeEventListener("beforeunload", handler);
-  }, [phase]);
-
-  // ── Live answers callback (fired on every selection in the active shell) ──
-  const handleLiveAnswers = useCallback((answers: PartAnswers) => {
-    livePartAnswersRef.current = answers;
-  }, []);
-
-  // ── Abandon ───────────────────────────────────────────────────────────────
-  const handleAbandon = useCallback(async () => {
-    if (!examId) return;
-    const confirmed = window.confirm(
-      "Abandonner l'examen ? Tes réponses actuelles seront sauvegardées et consultables dans le bilan."
-    );
-    if (!confirmed) return;
-    const supabase = createClient();
-    // Merge live in-progress answers for the current part into the accumulated snapshot.
-    const all = { ...allAnswersRef.current, [phase]: livePartAnswersRef.current };
-    const { listeningScore, readingScore, totalScore } = scoreExam(all, examData);
-    const { error } = await supabase.rpc("abandon_exam", {
-      exam_id: examId,
-      p_answers: all as unknown as Record<string, unknown>,
-      p_listening_score: listeningScore,
-      p_reading_score: readingScore,
-      p_score: totalScore,
-    });
-    if (error) {
-      console.error("abandon_exam failed:", error);
-      alert("Une erreur est survenue. Veuillez réessayer.");
-      return;
-    }
-    router.push("/mockexams");
-  }, [examId, examData, router]);
-
   // ── Part 1 ────────────────────────────────────────────────────────────────
   const handlePart1Start = useCallback(() => setTimerActive(true), []);
   const handlePart1Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p1 = answers;
-    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p2");
   }, []);
@@ -133,7 +84,6 @@ export default function ExamShell({
   const handlePart2Start = useCallback(() => setTimerActive(true), []);
   const handlePart2Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p2 = answers;
-    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p3");
   }, []);
@@ -142,7 +92,6 @@ export default function ExamShell({
   const handlePart3Start = useCallback(() => setTimerActive(true), []);
   const handlePart3Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p3 = answers;
-    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p4");
   }, []);
@@ -151,7 +100,6 @@ export default function ExamShell({
   const handlePart4Start = useCallback(() => setTimerActive(true), []);
   const handlePart4Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p4 = answers;
-    livePartAnswersRef.current = {};
     // Transition to reading section: reset timer to 75 minutes
     setTimerActive(false);
     setSecondsLeft(READING_SECONDS);
@@ -162,7 +110,6 @@ export default function ExamShell({
   const handlePart5Start = useCallback(() => setTimerActive(true), []);
   const handlePart5Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p5 = answers;
-    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p6");
   }, []);
@@ -171,7 +118,6 @@ export default function ExamShell({
   const handlePart6Start = useCallback(() => setTimerActive(true), []);
   const handlePart6Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p6 = answers;
-    livePartAnswersRef.current = {};
     setTimerActive(false);
     setPhase("p7");
   }, []);
@@ -183,32 +129,28 @@ export default function ExamShell({
     setTimerActive(false);
     setPhase("done");
 
-    if (!examId) return;
+    if (examId) {
+      const supabase = createClient();
+      const all = allAnswersRef.current;
 
-    const supabase = createClient();
-    const all = allAnswersRef.current;
-    const { listeningScore, readingScore, totalScore } = scoreExam(all, examData);
-
-    let priorityUpdates: Record<string, "correct" | "partial" | "incorrect"> | null = null;
-    if (examMeta) {
-      try {
-        priorityUpdates = computeUnitResults(all, examData, examMeta);
-      } catch {
-        // non-fatal — priority update best-effort
+      if (examData) {
+        // Score the exam and persist answers + scores.
+        const { listeningScore, readingScore, totalScore } = scoreExam(all, examData);
+        await supabase.rpc("complete_exam", {
+          exam_id: examId,
+          p_listening_score: listeningScore,
+          p_reading_score: readingScore,
+          p_score: totalScore,
+          p_answers: all as unknown as Record<string, unknown>,
+        });
+      } else {
+        // Local JSON fallback: no correct-answer data, store without scoring.
+        await supabase.rpc("complete_exam", { exam_id: examId });
       }
+
+      router.push(`/mockexams/${examId}/bilan`);
     }
-
-    await supabase.rpc("complete_exam", {
-      exam_id: examId,
-      p_listening_score: listeningScore,
-      p_reading_score: readingScore,
-      p_score: totalScore,
-      p_answers: all as unknown as Record<string, unknown>,
-      p_priority_updates: priorityUpdates as unknown as Record<string, unknown> | null,
-    });
-
-    router.push(`/mockexams/${examId}/bilan`);
-  }, [examId, examData, examMeta, router]); // examData is stable (from server props)
+  }, [examId, examData, router]);
 
   // ── Admin: skip current part ──────────────────────────────────────────────
   const handleSkipPart = useCallback(() => {
@@ -228,7 +170,6 @@ export default function ExamShell({
         secondsLeft={secondsLeft}
         timerActive={timerActive}
         timerLabel={timerLabel}
-        onAbandon={phase !== "done" ? handleAbandon : undefined}
       />
 
       <main className="flex-1 flex items-center justify-center px-6 py-5">
@@ -252,9 +193,8 @@ export default function ExamShell({
               <Part1Shell
                 onStart={handlePart1Start}
                 onComplete={handlePart1Complete}
-                onAnswersChange={handleLiveAnswers}
                 inExam
-                questions={examData.part1 ?? []}
+                questions={examData?.part1}
                 isAdmin={isAdmin}
                 questionNumberOffset={QUESTION_OFFSETS.p1}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
@@ -264,9 +204,8 @@ export default function ExamShell({
               <Part2Shell
                 onStart={handlePart2Start}
                 onComplete={handlePart2Complete}
-                onAnswersChange={handleLiveAnswers}
                 inExam
-                questions={examData.part2 ?? []}
+                questions={examData?.part2}
                 questionNumberOffset={QUESTION_OFFSETS.p2}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -275,9 +214,8 @@ export default function ExamShell({
               <Part3Shell
                 onStart={handlePart3Start}
                 onComplete={handlePart3Complete}
-                onAnswersChange={handleLiveAnswers}
                 inExam
-                conversations={examData.part3 ?? []}
+                conversations={examData?.part3}
                 questionNumberOffset={QUESTION_OFFSETS.p3}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -286,9 +224,8 @@ export default function ExamShell({
               <Part4Shell
                 onStart={handlePart4Start}
                 onComplete={handlePart4Complete}
-                onAnswersChange={handleLiveAnswers}
                 inExam
-                talks={examData.part4 ?? []}
+                talks={examData?.part4}
                 questionNumberOffset={QUESTION_OFFSETS.p4}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -297,9 +234,8 @@ export default function ExamShell({
               <Part5Shell
                 onStart={handlePart5Start}
                 onComplete={handlePart5Complete}
-                onAnswersChange={handleLiveAnswers}
                 inExam
-                questions={examData.part5 ?? []}
+                questions={examData?.part5}
                 questionNumberOffset={QUESTION_OFFSETS.p5}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -309,9 +245,8 @@ export default function ExamShell({
               <Part6Shell
                 onStart={handlePart6Start}
                 onComplete={handlePart6Complete}
-                onAnswersChange={handleLiveAnswers}
                 inExam
-                passages={examData.part6 ?? []}
+                passages={examData?.part6}
                 questionNumberOffset={QUESTION_OFFSETS.p6}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -321,9 +256,8 @@ export default function ExamShell({
               <Part7Shell
                 onStart={handlePart7Start}
                 onComplete={handlePart7Complete}
-                onAnswersChange={handleLiveAnswers}
                 inExam
-                passages={examData.part7 ?? []}
+                passages={examData?.part7}
                 questionNumberOffset={QUESTION_OFFSETS.p7}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -364,95 +298,4 @@ export default function ExamShell({
       </main>
     </div>
   );
-}
-
-// ─── Per-unit correctness computation ─────────────────────────────────────────
-
-function computeUnitResults(
-  all: AllExamAnswers,
-  data: ExamData,
-  meta: ExamMeta
-): Record<string, "correct" | "partial" | "incorrect"> {
-  const results: Record<string, "correct" | "partial" | "incorrect"> = {};
-
-  // Individual parts (P1, P2, P5) — one pool item = one question
-  const individualParts = [
-    { ids: meta.p1, answers: all.p1, items: data.part1 ?? [] },
-    { ids: meta.p2, answers: all.p2, items: data.part2 ?? [] },
-    { ids: meta.p5, answers: all.p5, items: data.part5 ?? [] },
-  ] as const;
-
-  for (const { ids, answers, items } of individualParts) {
-    ids.forEach((id, i) => {
-      const correct = (items[i] as { answer: string } | undefined)?.answer;
-      const given = answers[i]?.toUpperCase();
-      results[id] = given && correct && given === correct.toUpperCase()
-        ? "correct"
-        : "incorrect";
-    });
-  }
-
-  // P3 — 3 questions per conversation
-  meta.p3.forEach((id, i) => {
-    const conv = (data.part3 ?? [])[i];
-    if (!conv) return;
-    const base = i * 3;
-    const correctCount = conv.questions.filter(
-      (q, qi) => all.p3[base + qi]?.toUpperCase() === q.answer.toUpperCase()
-    ).length;
-    results[id] = correctCount === conv.questions.length
-      ? "correct"
-      : correctCount === 0
-      ? "incorrect"
-      : "partial";
-  });
-
-  // P4 — 3 questions per talk
-  meta.p4.forEach((id, i) => {
-    const talk = (data.part4 ?? [])[i];
-    if (!talk) return;
-    const base = i * 3;
-    const correctCount = talk.questions.filter(
-      (q, qi) => all.p4[base + qi]?.toUpperCase() === q.answer.toUpperCase()
-    ).length;
-    results[id] = correctCount === talk.questions.length
-      ? "correct"
-      : correctCount === 0
-      ? "incorrect"
-      : "partial";
-  });
-
-  // P6 — 4 questions per passage
-  meta.p6.forEach((id, i) => {
-    const passage = (data.part6 ?? [])[i];
-    if (!passage) return;
-    const base = i * 4;
-    const correctCount = passage.questions.filter(
-      (q, qi) => all.p6[base + qi]?.toUpperCase() === q.answer.toUpperCase()
-    ).length;
-    results[id] = correctCount === passage.questions.length
-      ? "correct"
-      : correctCount === 0
-      ? "incorrect"
-      : "partial";
-  });
-
-  // P7 — variable question count per passage
-  let p7Offset = 0;
-  meta.p7.forEach((id, i) => {
-    const passage = (data.part7 ?? [])[i];
-    const qCount = meta.p7_question_counts[i] ?? 0;
-    if (!passage) { p7Offset += qCount; return; }
-    const correctCount = passage.questions.filter(
-      (q, qi) => all.p7[p7Offset + qi]?.toUpperCase() === q.answer.toUpperCase()
-    ).length;
-    results[id] = correctCount === passage.questions.length
-      ? "correct"
-      : correctCount === 0
-      ? "incorrect"
-      : "partial";
-    p7Offset += qCount;
-  });
-
-  return results;
 }

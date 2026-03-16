@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import CheckoutButton from "@/components/app/CheckoutButton";
-import { ProfileSection, PasswordForm } from "./ParametresClient";
+import { ProfileSection, PasswordForm, ContactForm } from "./ParametresClient";
 import { startCheckout } from "./actions";
 
 // ─── Static plan data ─────────────────────────────────────────────────────────
@@ -112,7 +112,7 @@ export default async function ParametresPage() {
     : null;
 
   return (
-    <div className="px-6 py-10 max-w-3xl mx-auto space-y-6">
+    <div className="px-4 md:px-6 py-8 md:py-10 max-w-3xl mx-auto space-y-6">
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-foreground">Paramètres</h1>
@@ -306,6 +306,17 @@ export default async function ParametresPage() {
             </div>
           </div>
         )}
+      </section>
+
+      {/* ── Contact ──────────────────────────────────────────────────────────── */}
+      <section
+        className="bg-white rounded-2xl border border-gray-100 p-6"
+        style={cardStyle}
+      >
+        <h2 className="text-base font-semibold text-foreground mb-4">
+          Signaler un problème
+        </h2>
+        <ContactForm />
       </section>
 
       <p className="text-xs text-gray-400 leading-relaxed">

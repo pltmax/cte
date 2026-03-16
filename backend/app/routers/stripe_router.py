@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Annotated
 
 import stripe
-from fastapi import APIRouter, Depends, Header, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 
 from app.db import get_admin_client
 from app.dependencies import require_auth
@@ -14,7 +14,6 @@ from app.models.stripe import CheckoutRequest, CheckoutResponse
 
 stripe.api_key = os.environ.get("STRIPE_SECRET_KEY", "")
 
-STRIPE_WEBHOOK_SECRET: str = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
 STRIPE_RUSH_PRICE_ID: str = os.environ.get("STRIPE_RUSH_PRICE_ID", "")
 STRIPE_CHILL_PRICE_ID: str = os.environ.get("STRIPE_CHILL_PRICE_ID", "")
 STRIPE_CREDIT_PRICE_ID: str = os.environ.get("STRIPE_CREDIT_PRICE_ID", "")
@@ -141,85 +140,3 @@ async def create_checkout_session(
         raise HTTPException(status_code=500, detail="Stripe did not return a URL")
 
     return CheckoutResponse(url=session.url)
-
-
-# ─── Webhook ──────────────────────────────────────────────────────────────────
-
-
-@router.post("/webhook")
-async def stripe_webhook(
-    request: Request,
-    stripe_signature: Annotated[str, Header(alias="stripe-signature")],
-) -> dict[str, str]:
-    """
-    Stripe webhook endpoint.
-    Verified via HMAC signature — no user auth required.
-    """
-    payload = await request.body()
-
-    try:
-        event = stripe.Webhook.construct_event(
-            payload, stripe_signature, STRIPE_WEBHOOK_SECRET
-        )
-    except ValueError:
-        raise HTTPException(status_code=400, detail="Invalid payload")
-    except stripe.SignatureVerificationError:
-        raise HTTPException(status_code=400, detail="Invalid signature")
-
-    if event["type"] == "checkout.session.completed":
-        _handle_checkout_completed(event["data"]["object"])
-
-    return {"received": "true"}
-
-
-# ─── Webhook handler ──────────────────────────────────────────────────────────
-
-
-def _handle_checkout_completed(session: dict) -> None:  # type: ignore[type-arg]
-    user_id: str = session.get("metadata", {}).get("user_id", "")
-    session_type: str = session.get("metadata", {}).get("type", "")
-    customer_id: str = session.get("customer", "")
-
-    if not user_id or not session_type:
-        return
-
-    admin = get_admin_client()
-
-    # Persist customer ID (idempotent)
-    if customer_id:
-        admin.table("profiles").update({"stripe_customer_id": customer_id}).eq(
-            "id", user_id
-        ).execute()
-
-    if session_type in ("rush", "chill"):
-        duration = PLAN_DURATIONS[session_type]
-        credits = PLAN_CREDITS[session_type]
-        expires_at = (datetime.now(timezone.utc) + duration).isoformat()
-
-        admin.table("profiles").update(
-            {
-                "role": "premium",
-                "plan_type": session_type,
-                "premium_expires_at": expires_at,
-            }
-        ).eq("id", user_id).execute()
-
-        admin.rpc(
-            "increment_credits",
-            {"target_user_id": user_id, "amount": credits},
-        ).execute()
-
-    elif session_type == "credit":
-        # Only add the credit if the plan is still active at webhook time
-        profile_res = (
-            admin.table("profiles")
-            .select("role, premium_expires_at")
-            .eq("id", user_id)
-            .single()
-            .execute()
-        )
-        if _plan_active(profile_res.data or {}):
-            admin.rpc(
-                "increment_credits",
-                {"target_user_id": user_id, "amount": 1},
-            ).execute()
