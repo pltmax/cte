@@ -34,8 +34,8 @@ export const metadata: Metadata = {
 
 function SeoPlaceholder({ label }: { label: string }) {
   return (
-    <div className="rounded-lg border-2 border-[#d8b4fe] bg-[#f1f1f1] px-5 py-4 mb-6">
-      <p className="text-md text-[#6d28d9] leading-relaxed">{label}</p>
+    <div className="rounded-lg border-2 border-[#cecece] bg-[#fafafa] px-5 py-4 mb-6">
+      <p className="text-md text-[#1e1e1e] leading-relaxed">{label}</p>
     </div>
   );
 }

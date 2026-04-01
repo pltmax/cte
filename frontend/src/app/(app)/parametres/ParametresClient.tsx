@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useActionState } from "react";
-import { updateProfile, updatePassword, sendContactMessage } from "./actions";
+import { updateProfile, sendPasswordReset, sendContactMessage } from "./actions";
 
 type FormState = { error?: string; success?: boolean } | null;
 
@@ -214,65 +214,42 @@ export function ContactForm() {
   );
 }
 
-// ─── Password Form ────────────────────────────────────────────────────────────
+// ─── Password Section ─────────────────────────────────────────────────────────
 
-export function PasswordForm() {
+export function PasswordSection() {
   const [state, formAction, isPending] = useActionState<FormState, FormData>(
-    updatePassword,
+    sendPasswordReset,
     null
   );
 
   return (
-    <form action={formAction} className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium text-gray-700 mb-1.5"
-          >
-            Nouveau mot de passe
-          </label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="new-password"
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label
-            htmlFor="confirm"
-            className="block text-sm font-medium text-gray-700 mb-1.5"
-          >
-            Confirmer le mot de passe
-          </label>
-          <input
-            id="confirm"
-            name="confirm"
-            type="password"
-            autoComplete="new-password"
-            className={inputClass}
-          />
-        </div>
-      </div>
+    <div>
+      <p className="text-sm text-gray-500 mb-4">
+        Pour des raisons de sécurité, la modification du mot de passe se fait par email.
+      </p>
 
-      {state?.error && (
-        <p className="text-sm text-red-500">{state.error}</p>
+      {state?.success ? (
+        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3">
+          <p className="text-sm font-medium text-green-700">
+            Un lien de réinitialisation a été envoyé à votre adresse email. Vérifiez votre boîte mail.
+          </p>
+        </div>
+      ) : (
+        <form action={formAction}>
+          {state?.error && (
+            <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 mb-3">
+              <p className="text-sm text-red-600">{state.error}</p>
+            </div>
+          )}
+          <button
+            type="submit"
+            disabled={isPending}
+            className="px-5 py-2 text-sm font-semibold text-[#6600CC] border border-[#6600CC]/30 rounded-full hover:bg-[#f3ebff] transition-colors disabled:opacity-50"
+          >
+            {isPending ? "Envoi…" : "Envoyer un lien de réinitialisation"}
+          </button>
+        </form>
       )}
-      {state?.success && (
-        <p className="text-sm text-green-600">Mot de passe modifié.</p>
-      )}
-
-      <div className="flex justify-end">
-        <button
-          type="submit"
-          disabled={isPending}
-          className="px-5 py-2 text-sm font-semibold text-white bg-[#6600CC] rounded-full hover:bg-[#5500aa] transition-colors disabled:opacity-50"
-        >
-          {isPending ? "Modification…" : "Modifier le mot de passe"}
-        </button>
-      </div>
-    </form>
+    </div>
   );
 }

@@ -11,6 +11,13 @@ const FREE_EXERCISE_PATHS = new Set([
   "/exercices/partie-5/1",
 ]);
 
+function isPremiumActive(role: string | null, expiresAt: string | null): boolean {
+  if (role === "admin") return true;
+  if (role !== "premium") return false;
+  if (!expiresAt) return false;
+  return new Date(expiresAt) > new Date();
+}
+
 export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
@@ -56,18 +63,27 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // ── Premium check (full-block paths + locked exercise pages) ─────────────
-  if ((needsPremium || isLockedExercise) && user) {
-    const { data: profile } = await supabase
+  // ── Single profile fetch for all premium/redirect checks ─────────────────
+  // Fetch once and reuse to avoid multiple round-trips to Supabase.
+  let profile: { role: string | null; premium_expires_at: string | null } | null = null;
+
+  const needsProfile =
+    (needsPremium || isLockedExercise) ||
+    (user && (pathname === "/login" || pathname === "/signup" || pathname === "/dashboard"));
+
+  if (user && needsProfile) {
+    const { data } = await supabase
       .from("profiles")
-      .select("role")
+      .select("role, premium_expires_at")
       .eq("id", user.id)
       .single();
+    profile = data ?? null;
+  }
 
-    const isPremium =
-      profile?.role === "premium" || profile?.role === "admin";
-
-    if (!isPremium) {
+  // ── Premium check (full-block paths + locked exercise pages) ─────────────
+  if ((needsPremium || isLockedExercise) && user) {
+    const active = isPremiumActive(profile?.role ?? null, profile?.premium_expires_at ?? null);
+    if (!active) {
       const url = request.nextUrl.clone();
       url.pathname = needsPremium ? "/premium-required" : "/exercices";
       return NextResponse.redirect(url);
@@ -83,35 +99,17 @@ export async function proxy(request: NextRequest) {
 
   // ── Redirect authenticated users away from auth pages ────────────────────
   if (user && (pathname === "/login" || pathname === "/signup")) {
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("role, premium_expires_at")
-      .eq("id", user.id)
-      .single();
-    const role: string = profile?.role ?? "user";
-    const expiresAt: string | null = profile?.premium_expires_at ?? null;
-    const isPremium =
-      role === "admin" ||
-      (role === "premium" && expiresAt !== null && new Date(expiresAt) > new Date());
+    const active = isPremiumActive(profile?.role ?? null, profile?.premium_expires_at ?? null);
     const url = request.nextUrl.clone();
-    url.pathname = isPremium ? "/exercices" : "/diagnostic";
+    url.pathname = active ? "/exercices" : "/diagnostic";
     return NextResponse.redirect(url);
   }
 
   // ── /dashboard → smart redirect based on role ────────────────────────────
   if (user && pathname === "/dashboard") {
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("role, premium_expires_at")
-      .eq("id", user.id)
-      .single();
-    const role: string = profile?.role ?? "user";
-    const expiresAt: string | null = profile?.premium_expires_at ?? null;
-    const isPremium =
-      role === "admin" ||
-      (role === "premium" && expiresAt !== null && new Date(expiresAt) > new Date());
+    const active = isPremiumActive(profile?.role ?? null, profile?.premium_expires_at ?? null);
     const url = request.nextUrl.clone();
-    url.pathname = isPremium ? "/exercices" : "/diagnostic";
+    url.pathname = active ? "/exercices" : "/diagnostic";
     return NextResponse.redirect(url);
   }
 

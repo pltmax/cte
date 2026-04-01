@@ -319,11 +319,11 @@ export default function CGVPage() {
                 médiateur de la consommation avant toute action judiciaire.
                 Le médiateur compétent est :{" "}
               </p>
-                <p className="font-bold text-[#6600CC]">Médiateur de la consommation CNPM - Médiation de la consommation</p>
+                <p className="font-bold text-[#6600CC]">Médiation Consommation Développement</p>
                 <ul className="list-disc list-inside text-gray-700">
-                    <li>27 avenue de la Libération, 42400 Saint-Chamond, France</li>
-                    <li>contact@cnpm-mediation-consommation.eu</li>
-                    <li className="text-[#6600CC]"> <a href="https://cnpm-mediation-consommation.eu" target="_blank" rel="noopener noreferrer">https://cnpm-mediation-consommation.eu</a></li>
+                    <li>3 rue J. Constant Milleret, 42000 Saint-Etienne, France</li>
+                    <li>contact-admin@cnpm-mediation-consommation.eu</li>
+                    <li className="text-[#6600CC]"> <a href="https://www.medconsodev.eu" target="_blank" rel="noopener noreferrer">https://cnpm-mediation-consommation.eu</a></li>
                 </ul>
               <p>
                 À défaut de résolution amiable, les tribunaux français seront

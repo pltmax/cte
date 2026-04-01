@@ -13,7 +13,7 @@ const PARTS = [
     slug: "partie-1",
     title: "Photographies",
     tag: "Écoute",
-    description: "Choisissez la phrase qui correspond le mieux à la photo.",
+    description: "Choisis la phrase qui correspond le mieux à la photo.",
     exercises: [
       { id: 1, title: "Exercice 1", subtitle: "Une personne",        available: true,  href: "/exercices/partie-1/1", exerciseKey: "partie-1:1" },
       { id: 2, title: "Exercice 2", subtitle: "Plusieurs personnes", available: true,  href: "/exercices/partie-1/2", exerciseKey: "partie-1:2" },
@@ -25,7 +25,7 @@ const PARTS = [
     slug: "partie-2",
     title: "Questions-réponses",
     tag: "Écoute",
-    description: "Choisissez la meilleure réponse à la question entendue.",
+    description: "Choisis la meilleure réponse à la question entendue.",
     exercises: [
       { id: 1, title: "Exercice 1", subtitle: "Questions en Wh-",           available: true, href: "/exercices/partie-2/1", exerciseKey: "partie-2:1" },
       { id: 2, title: "Exercice 2", subtitle: "Questions indirectes", available: true, href: "/exercices/partie-2/2", exerciseKey: "partie-2:2" },
@@ -39,7 +39,7 @@ const PARTS = [
     slug: "partie-3",
     title: "Conversations",
     tag: "Écoute",
-    description: "Répondez aux questions sur des conversations entre plusieurs personnes.",
+    description: "Réponds aux questions sur des conversations entre plusieurs personnes.",
     exercises: [
       { id: 1, title: "Exercice 1", subtitle: "Conversations (1ère partie)",  available: true, href: "/exercices/partie-3/1", exerciseKey: "partie-3:1" },
       { id: 2, title: "Exercice 2", subtitle: "Conversations (2ème partie)", available: true, href: "/exercices/partie-3/2", exerciseKey: "partie-3:2" },
@@ -51,7 +51,7 @@ const PARTS = [
     slug: "partie-4",
     title: "Monologues",
     tag: "Écoute",
-    description: "Répondez aux questions sur des discours ou annonces enregistrés.",
+    description: "Réponds aux questions sur des discours ou annonces enregistrés.",
     exercises: [
       { id: 1, title: "Exercice 1", subtitle: "Monologues (1ère partie)", available: true, href: "/exercices/partie-4/1", exerciseKey: "partie-4:1" },
       { id: 2, title: "Exercice 2", subtitle: "Monologues (2ème partie)", available: true, href: "/exercices/partie-4/2", exerciseKey: "partie-4:2" },
@@ -63,7 +63,7 @@ const PARTS = [
     slug: "partie-5",
     title: "Phrases incomplètes",
     tag: "Lecture",
-    description: "Complétez chaque phrase avec le mot ou groupe de mots le plus approprié.",
+    description: "Complète chaque phrase avec le mot ou groupe de mots le plus approprié.",
     exercises: [
       { id: 1, title: "Exercice 1", subtitle: "Forme du mot",   available: true, href: "/exercices/partie-5/1", exerciseKey: "partie-5:1" },
       { id: 2, title: "Exercice 2", subtitle: "Vocabulaire",    available: true, href: "/exercices/partie-5/2", exerciseKey: "partie-5:2" },
@@ -78,7 +78,7 @@ const PARTS = [
     slug: "partie-6",
     title: "Textes à trous",
     tag: "Lecture",
-    description: "Choisissez le mot, la phrase ou le groupe de mots qui convient dans un texte.",
+    description: "Choisis le mot, la phrase ou le groupe de mots qui convient dans un texte.",
     exercises: [
       { id: 1, title: "Exercice 1", subtitle: "Textes à trous (1ère partie)", available: true,  href: "/exercices/partie-6/1", exerciseKey: "partie-6:1" },
       { id: 2, title: "Exercice 2", subtitle: "Textes à trous (2ème partie)", available: true,  href: "/exercices/partie-6/2", exerciseKey: "partie-6:2" },
@@ -90,7 +90,7 @@ const PARTS = [
     slug: "partie-7",
     title: "Lecture de documents",
     tag: "Lecture",
-    description: "Lisez des documents variés et répondez aux questions de compréhension.",
+    description: "Lis des documents variés et réponds aux questions de compréhension.",
     exercises: [
       { id: 1, title: "Exercice 1", subtitle: "Texte unique (1ère partie)",  available: true, href: "/exercices/partie-7/1",       exerciseKey: "partie-7:1" },
       { id: 2, title: "Exercice 2", subtitle: "Texte unique (2ème partie)",  available: true, href: "/exercices/partie-7/2",       exerciseKey: "partie-7:2" },

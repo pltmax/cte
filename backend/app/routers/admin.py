@@ -1,10 +1,11 @@
 from typing import Annotated
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 
 from app.db import get_admin_client
 from app.dependencies import require_admin
+from app.limiter import limiter
 from app.models.admin import AddCreditsRequest, MessageResponse
 
 router = APIRouter(prefix="/api/v1/admin", tags=["admin"])
@@ -15,7 +16,9 @@ router = APIRouter(prefix="/api/v1/admin", tags=["admin"])
     response_model=MessageResponse,
     summary="Grant premium role to a user",
 )
+@limiter.limit("20/minute")
 async def grant_premium(
+    request: Request,
     user_id: UUID,
     _: Annotated[str, Depends(require_admin)],
 ) -> MessageResponse:
@@ -40,7 +43,9 @@ async def grant_premium(
     response_model=MessageResponse,
     summary="Add credits to a user's account",
 )
+@limiter.limit("20/minute")
 async def add_credits(
+    request: Request,
     user_id: UUID,
     body: AddCreditsRequest,
     _: Annotated[str, Depends(require_admin)],

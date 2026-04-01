@@ -12,7 +12,7 @@ import Part6Shell from "@/components/exam/Part6Shell";
 import Part7Shell from "@/components/exam/Part7Shell";
 import { createClient } from "@/lib/supabase/client";
 import { scoreExam, type AllExamAnswers, type PartAnswers } from "@/lib/toeic-scoring";
-import type { ExamData } from "@/types/exam-data";
+import type { ExamData, ExamMeta } from "@/types/exam-data";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -45,6 +45,8 @@ interface ExamShellProps {
   examId?: string;
   /** Pre-built exam dataset (from exam JSON). When absent, each Shell uses its full JSON. */
   examData?: ExamData;
+  /** Question-ID metadata (used for scoring context). */
+  examMeta?: ExamMeta;
   /** When true, shows admin-only skip controls (not visible to regular users). */
   isAdmin?: boolean;
 }
@@ -54,6 +56,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
   const [phase, setPhase] = useState<Phase>("p1");
   const [timerActive, setTimerActive] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(LISTENING_SECONDS);
+  const [examStarted, setExamStarted] = useState(false);
 
   // Accumulate per-part answers without triggering re-renders (ref, not state).
   const allAnswersRef = useRef<AllExamAnswers>({
@@ -72,8 +75,23 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
     return () => clearInterval(id);
   }, [timerActive, secondsLeft]);
 
+  // ── Refresh guard ─────────────────────────────────────────────────────────
+  useEffect(() => {
+    if (!examStarted) return;
+    const handler = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = "";
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [examStarted]);
+
   // ── Part 1 ────────────────────────────────────────────────────────────────
-  const handlePart1Start = useCallback(() => setTimerActive(true), []);
+  // Activation already happened server-side at page load — just start the timer.
+  const handlePart1Start = useCallback(() => {
+    setExamStarted(true);
+    setTimerActive(true);
+  }, []);
   const handlePart1Complete = useCallback((answers: PartAnswers = {}) => {
     allAnswersRef.current.p1 = answers;
     setTimerActive(false);
@@ -152,6 +170,35 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
     }
   }, [examId, examData, router]);
 
+  // ── Continuous answer sync ────────────────────────────────────────────────
+  const handlePart1AnswersChange = useCallback((a: PartAnswers) => { allAnswersRef.current.p1 = a; }, []);
+  const handlePart2AnswersChange = useCallback((a: PartAnswers) => { allAnswersRef.current.p2 = a; }, []);
+  const handlePart3AnswersChange = useCallback((a: PartAnswers) => { allAnswersRef.current.p3 = a; }, []);
+  const handlePart4AnswersChange = useCallback((a: PartAnswers) => { allAnswersRef.current.p4 = a; }, []);
+  const handlePart5AnswersChange = useCallback((a: PartAnswers) => { allAnswersRef.current.p5 = a; }, []);
+  const handlePart6AnswersChange = useCallback((a: PartAnswers) => { allAnswersRef.current.p6 = a; }, []);
+  const handlePart7AnswersChange = useCallback((a: PartAnswers) => { allAnswersRef.current.p7 = a; }, []);
+
+  // ── Abandon ───────────────────────────────────────────────────────────────
+  const handleAbandon = useCallback(async () => {
+    if (!examId) return;
+    const supabase = createClient();
+    const all = allAnswersRef.current;
+    if (examData) {
+      const { listeningScore, readingScore, totalScore } = scoreExam(all, examData);
+      await supabase.rpc("abandon_exam", {
+        exam_id: examId,
+        p_answers: all as unknown as Record<string, unknown>,
+        p_listening_score: listeningScore,
+        p_reading_score: readingScore,
+        p_score: totalScore,
+      });
+    } else {
+      await supabase.rpc("abandon_exam", { exam_id: examId });
+    }
+    router.push(`/mockexams/${examId}/bilan`);
+  }, [examId, examData, router]);
+
   // ── Admin: skip current part ──────────────────────────────────────────────
   const handleSkipPart = useCallback(() => {
     if (phase === "p1") handlePart1Complete();
@@ -170,6 +217,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
         secondsLeft={secondsLeft}
         timerActive={timerActive}
         timerLabel={timerLabel}
+        onAbandon={examId ? handleAbandon : undefined}
       />
 
       <main className="flex-1 flex items-center justify-center px-6 py-5">
@@ -185,6 +233,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               </button>
             </div>
           )}
+
           <div
             className="bg-white rounded-2xl border border-gray-100"
             style={{ boxShadow: "0px 2px 8px 0px rgba(0,0,0,0.08)" }}
@@ -193,6 +242,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part1Shell
                 onStart={handlePart1Start}
                 onComplete={handlePart1Complete}
+                onAnswersChange={handlePart1AnswersChange}
                 inExam
                 questions={examData?.part1}
                 isAdmin={isAdmin}
@@ -204,6 +254,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part2Shell
                 onStart={handlePart2Start}
                 onComplete={handlePart2Complete}
+                onAnswersChange={handlePart2AnswersChange}
                 inExam
                 questions={examData?.part2}
                 questionNumberOffset={QUESTION_OFFSETS.p2}
@@ -214,6 +265,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part3Shell
                 onStart={handlePart3Start}
                 onComplete={handlePart3Complete}
+                onAnswersChange={handlePart3AnswersChange}
                 inExam
                 conversations={examData?.part3}
                 questionNumberOffset={QUESTION_OFFSETS.p3}
@@ -224,6 +276,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part4Shell
                 onStart={handlePart4Start}
                 onComplete={handlePart4Complete}
+                onAnswersChange={handlePart4AnswersChange}
                 inExam
                 talks={examData?.part4}
                 questionNumberOffset={QUESTION_OFFSETS.p4}
@@ -234,6 +287,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part5Shell
                 onStart={handlePart5Start}
                 onComplete={handlePart5Complete}
+                onAnswersChange={handlePart5AnswersChange}
                 inExam
                 questions={examData?.part5}
                 questionNumberOffset={QUESTION_OFFSETS.p5}
@@ -245,6 +299,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part6Shell
                 onStart={handlePart6Start}
                 onComplete={handlePart6Complete}
+                onAnswersChange={handlePart6AnswersChange}
                 inExam
                 passages={examData?.part6}
                 questionNumberOffset={QUESTION_OFFSETS.p6}
@@ -256,6 +311,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
               <Part7Shell
                 onStart={handlePart7Start}
                 onComplete={handlePart7Complete}
+                onAnswersChange={handlePart7AnswersChange}
                 inExam
                 passages={examData?.part7}
                 questionNumberOffset={QUESTION_OFFSETS.p7}

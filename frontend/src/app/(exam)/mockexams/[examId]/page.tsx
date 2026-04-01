@@ -30,8 +30,17 @@ export default async function ExamPage({
   if (!examRow) redirect("/mockexams");
   if (examRow.status === "completed") redirect(`/mockexams/${examId}/bilan`);
   if (examRow.status === "abandoned") redirect(`/mockexams/${examId}/bilan`);
+  if (examRow.status === "in_progress") redirect("/mockexams");
   // Old exams (pre-migration) have no embedded data — treat as abandoned.
   if (!examRow.exam_data) redirect("/mockexams");
+
+  // Activate immediately server-side so the exam is locked to this session.
+  // Any concurrent load that races past the status check above will fail here
+  // (activate_exam is idempotent on in_progress but won't double-deduct credits).
+  const { error: activationError } = await supabase.rpc("activate_exam", {
+    exam_id: examId,
+  });
+  if (activationError) redirect("/mockexams");
 
   const isAdmin = profile?.role === "admin";
   const examData = examRow.exam_data as ExamData;

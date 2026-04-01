@@ -13,6 +13,7 @@ const LETTERS = ["A", "B", "C", "D"] as const;
 const AUDIO_ICON_FLICKER_MS = 1_000;
 const WAIT_BEFORE_AUDIO_S = 3;
 const GRACE_PERIOD_S = 5;
+const INTER_OPTION_PAUSE_MS = 800;
 
 // ─── Sound icon ───────────────────────────────────────────────────────────────
 
@@ -164,6 +165,7 @@ export default function Part1Question({
 
     let cancelled = false;
     const els = audioEls;
+    const pendingTimers: ReturnType<typeof setTimeout>[] = [];
 
     function enterGrace() {
       if (cancelled) return;
@@ -178,18 +180,28 @@ export default function Part1Question({
         return;
       }
 
-      const el = els[idx];
-      setSeqIdx(idx);
-      el.onended = () => playFrom(idx + 1);
+      const doStart = () => {
+        if (cancelled) return;
+        const el = els[idx];
+        setSeqIdx(idx);
+        el.onended = () => playFrom(idx + 1);
 
-      const doPlay = () => {
-        if (!cancelled) el.play().catch(console.error);
+        const doPlay = () => {
+          if (!cancelled) el.play().catch(console.error);
+        };
+
+        if (el.readyState >= 3) {
+          doPlay();
+        } else {
+          el.addEventListener("canplay", doPlay, { once: true });
+        }
       };
 
-      if (el.readyState >= 3) {
-        doPlay();
+      if (idx > 0) {
+        const tid = setTimeout(doStart, INTER_OPTION_PAUSE_MS);
+        pendingTimers.push(tid);
       } else {
-        el.addEventListener("canplay", doPlay, { once: true });
+        doStart();
       }
     }
 
@@ -197,6 +209,7 @@ export default function Part1Question({
 
     return () => {
       cancelled = true;
+      for (const tid of pendingTimers) clearTimeout(tid);
       for (const el of els) {
         el.onended = null;
         el.pause();
@@ -258,7 +271,7 @@ export default function Part1Question({
       {/* Image — real or placeholder */}
       {imageUrl ? (
         <div className="w-full flex justify-center mb-5">
-            <div className="relative w-80 h-80 aspect-video rounded-xl overflow-hidden border border-gray-200">
+            <div className="relative w-80 h-80 rounded-xl overflow-hidden border border-gray-200">
             <Image
                 src={imageUrl}
                 alt={`Photo ${questionIndex + 1}`}

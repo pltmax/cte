@@ -59,6 +59,7 @@ export default async function MockExamsPage() {
       .from("mock_exams")
       .select("id, created_at, score, listening_score, reading_score, status")
       .eq("user_id", user.id)
+      .neq("status", "pending")
       .order("created_at", { ascending: false }),
   ]);
 
@@ -109,7 +110,7 @@ export default async function MockExamsPage() {
                   Aucun crédit disponible —{" "}
                   <Link
                     href="/credits"
-                    className="underline hover:text-amber-800 transition-colors"
+                    className="underline hover:text-amber-800 text-[#6600CC] opacity-70 transition-colors"
                   >
                     en acheter
                   </Link>
@@ -123,7 +124,7 @@ export default async function MockExamsPage() {
                       {" "}—{" "}
                       <Link
                         href="/credits"
-                        className="hover:text-gray-600 transition-colors"
+                        className="underline hover:text-gray-600 text-[#6600CC] opacity-70 transition-colors"
                       >
                         en acheter
                       </Link>

@@ -13,6 +13,7 @@ const AUDIO_SEQUENCE = ["question", "A", "B", "C"] as const;
 type SeqKey = (typeof AUDIO_SEQUENCE)[number];
 // Pause inserted between question enunciation and first option
 const QA_PAUSE_MS = 1_000;
+const INTER_OPTION_PAUSE_MS = 800;
 
 // ─── Mini sound icon ──────────────────────────────────────────────────────────
 
@@ -166,8 +167,8 @@ export default function Part2Batch({
       const key = AUDIO_SEQUENCE[idx];
       const el = els[key];
 
-      // 1-second pause between the question enunciation (idx 0) and option A (idx 1).
-      const delayMs = idx === 1 ? QA_PAUSE_MS : 0;
+      // Pause after question (1s) and between options A→B, B→C (800ms).
+      const delayMs = idx === 1 ? QA_PAUSE_MS : idx >= 2 ? INTER_OPTION_PAUSE_MS : 0;
 
       const doStart = () => {
         if (cancelled) return;

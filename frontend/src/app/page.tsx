@@ -122,10 +122,10 @@ export default function Home() {
               Notre méthode
             </span>
             <h2 className="text-4xl md:text-4xl font-bold text-foreground leading-tight mb-6 ">
-                On t&apos;apprend pas l&apos;anglais. On t&apos;apprend à craquer l&apos;exam.
+                On t&apos;apprend pas l&apos;anglais. On t&apos;apprend à cracker l&apos;exam.
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed">
-            On va pas se mentir : tu vas pas devenir bilingue en deux semaines. Par contre, tu vas valider ton TOEIC. Oublie la grammaire interminable et apprends plutôt à craquer l'épreuve avec les bonnes méthodes.
+            On va pas se mentir : tu vas pas devenir bilingue en deux semaines. Par contre, tu vas valider ton TOEIC. Oublie la grammaire interminable et apprends plutôt à plier l'épreuve avec les bonnes méthodes.
             </p>
           </div>
 
@@ -210,7 +210,7 @@ export default function Home() {
             Arrête de bégayer. Viens tester ton vrai niveau.
           </h2>
           <p className="text-base text-gray-500 max-w-lg leading-relaxed">
-            Pas de blabla, pas de carte bancaire. Crée ton compte, évalue ton niveau, fais 2-3 exos et commence à t&apos;améliorer dès aujourd&apos;hui.
+            Pas de blabla, pas de carte bancaire. Crée ton compte, évalue ton niveau, fais 2-3 exos et commence à progresser dès aujourd&apos;hui.
           </p>
         </div>
 
@@ -273,7 +273,7 @@ export default function Home() {
             Ils ont chopé leur exam. Et toi ?
           </h2>
           <p className="text-base text-gray-500 max-w-lg leading-relaxed">
-            Des centaines d&apos;étudiants ont déjà amélioré leur score. Voici ce qu&apos;ils en pensent.
+            Des dizaines d&apos;étudiants ont déjà amélioré leur score. Voici ce qu&apos;ils en pensent.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -287,7 +287,7 @@ export default function Home() {
             name="Ambre P."
             exam="TOEIC"
             score="975/990"
-            body="Les examens blancs sont ultra-fidèles au vrai examen. D'habitude je suis très stressée mais je savais exactement où j'en étais avant le jour d'examen."
+            body="Les examens blancs sont ultra-fidèles au vrai examen. D'habitude je suis très stressée mais je savais exactement où j'en étais avant le jour du TOEIC."
           />
           <ReviewCard
             name="Sofia L."

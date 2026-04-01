@@ -12,7 +12,7 @@ const EXERCISE_RANGE: Record<string, [number, number]> = {
 };
 
 const ADVICE = {
-  intro: "13 conversations entre 2 ou 3 personnes suivies de 3 questions (A, B, C ou D). L'audio ne passe qu'une fois.",
+  intro: "5 conversations entre 2 ou 3 personnes suivies de 3 questions (A, B, C ou D). L'audio ne passe qu'une fois.",
   strategy: "Lis d'abord les questions avant l'audio pour savoir quoi écouter. Concentre-toi sur le problème exposé au début et la solution ou décision finale.",
   traps: [
     { label: "Réponse partielle", example: "Une option vraie mais qui ne répond qu'à une partie de la question" },

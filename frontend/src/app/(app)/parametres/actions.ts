@@ -5,6 +5,7 @@ import { Resend } from "resend";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 type FormState = { error?: string; success?: boolean } | null;
 
@@ -59,21 +60,20 @@ export async function updateProfile(
   return { success: true };
 }
 
-export async function updatePassword(
+export async function sendPasswordReset(
   _prev: FormState,
-  formData: FormData
+  _fd: FormData
 ): Promise<FormState> {
-  const password = (formData.get("password") as string).trim();
-  const confirm = (formData.get("confirm") as string).trim();
-
-  if (!password) return { error: "Veuillez saisir un nouveau mot de passe." };
-  if (password.length < 8)
-    return { error: "Le mot de passe doit contenir au moins 8 caractères." };
-  if (password !== confirm)
-    return { error: "Les mots de passe ne correspondent pas." };
-
   const supabase = await createClient();
-  const { error } = await supabase.auth.updateUser({ password });
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user?.email) return { error: "Non authentifié." };
+
+  const origin = process.env.APP_URL ?? "http://localhost:3000";
+  const { error } = await supabase.auth.resetPasswordForEmail(user.email, {
+    redirectTo: `${origin}/auth/callback?next=/reset-password`,
+  });
   if (error) return { error: error.message };
   return { success: true };
 }
@@ -123,7 +123,6 @@ export async function sendContactMessage(
   });
 
   if (error) {
-    console.error("[sendContactMessage] Resend error:", error);
     return { error: "Envoi échoué. Réessaie plus tard." };
   }
 
@@ -172,7 +171,7 @@ export async function startCheckout(
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
   const APP_URL = process.env.APP_URL ?? "http://localhost:3000";
 
-  // Get or create Stripe customer
+  // Get or create Stripe customer — use admin client to bypass RLS on stripe_customer_id
   let customerId: string = profile?.stripe_customer_id ?? "";
   if (!customerId) {
     const customer = await stripe.customers.create({
@@ -180,7 +179,8 @@ export async function startCheckout(
       metadata: { user_id: user.id },
     });
     customerId = customer.id;
-    await supabase
+    const admin = createAdminClient();
+    await admin
       .from("profiles")
       .update({ stripe_customer_id: customerId })
       .eq("id", user.id);

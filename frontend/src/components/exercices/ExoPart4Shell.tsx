@@ -68,6 +68,12 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
   const audioUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
+    return () => {
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; }
+    };
+  }, []);
+
+  useEffect(() => {
     document.querySelector("main")?.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentTalkIndex]);
 
@@ -364,11 +370,6 @@ export default function ExoPart4Shell({ talks, advice, exerciseLabel, exerciseKe
           className="h-full bg-[#7c3aed] rounded-full transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
-      </div>
-
-      {/* Topic banner */}
-      <div className="mb-5 rounded-xl bg-[#f3eeff] border border-[#ddd6fe] px-4 py-3">
-        <p className="text-sm font-semibold text-[#7c3aed]">{currentTalk.title}</p>
       </div>
 
       {/* Graphic (if present) */}

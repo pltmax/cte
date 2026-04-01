@@ -44,7 +44,7 @@ export default function ExamHeader({
           {onAbandon && (
             <button
               onClick={onAbandon}
-              className="text-xs text-gray-300 hover:text-red-400 transition-colors"
+              className="hidden md:block text-xs text-gray-300 hover:text-red-400 transition-colors"
             >
               Abandonner
             </button>

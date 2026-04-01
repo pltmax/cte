@@ -243,7 +243,7 @@ export default function GuideVocabulairePage() {
               les bons mots est beaucoup plus efficace que de tout étudier.
             </p>
             <p>
-              À l'<strong>Écoute</strong> (Parties 3 et 4), reconnaître un mot
+              À <strong>l'Écoute</strong> (Parties 3 et 4), reconnaître un mot
               en une fraction de seconde fait toute la différence — tu ne peux
               pas mettre pause. À la <strong>Lecture</strong> (Parties 5, 6, 7),
               comprendre le sens d'un mot dans son contexte est souvent

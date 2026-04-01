@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import CheckoutButton from "@/components/app/CheckoutButton";
-import { ProfileSection, PasswordForm, ContactForm } from "./ParametresClient";
+import { ProfileSection, PasswordSection, ContactForm } from "./ParametresClient";
 import { startCheckout } from "./actions";
 
 // ─── Static plan data ─────────────────────────────────────────────────────────
@@ -145,7 +145,7 @@ export default async function ParametresPage() {
         <h2 className="text-base font-semibold text-foreground mb-4">
           Sécurité
         </h2>
-        <PasswordForm />
+        <PasswordSection />
       </section>
 
       {/* ── Mon offre ────────────────────────────────────────────────────────── */}
@@ -210,7 +210,7 @@ export default async function ParametresPage() {
                 <div className="px-5 py-4 flex flex-col gap-3">
                   <div>
                     <p className="text-xs text-[#6600CC] font-medium uppercase tracking-wide">
-                      Votre abonnement Rush prend fin dans
+                      Votre plan Rush prend fin dans
                     </p>
                     <p className="text-2xl font-bold text-foreground mt-0.5">
                       {countdownText}
@@ -298,7 +298,7 @@ export default async function ParametresPage() {
                       action={startCheckout.bind(null, type)}
                       className="mt-auto w-full py-2.5 text-sm font-semibold text-white bg-[#6600CC] rounded-full hover:bg-[#5500aa] transition-colors"
                     >
-                      Choisir {label} →
+                      Choisir le parcours {label} →
                     </CheckoutButton>
                   </div>
                 </div>

@@ -83,12 +83,6 @@ export default async function SuccessPage({
           >
             {msg.cta}
           </Link>
-          <Link
-            href="/dashboard"
-            className="px-8 py-3.5 text-sm font-medium text-gray-500 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors text-center"
-          >
-            Retour au tableau de bord
-          </Link>
         </div>
       </div>
     </div>

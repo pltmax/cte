@@ -84,7 +84,15 @@ function LockIcon({ className }: { className?: string }) {
 
 // ─── Sidebar ──────────────────────────────────────────────────────────────────
 
-export default function Sidebar({ isPremium }: { isPremium: boolean }) {
+export default function Sidebar({
+  isPremium,
+  mobileOpen = false,
+  onMobileClose,
+}: {
+  isPremium: boolean;
+  mobileOpen?: boolean;
+  onMobileClose?: () => void;
+}) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [guidesOpen, setGuidesOpen] = useState(false);
   const [gateOpen, setGateOpen] = useState(false);
@@ -115,8 +123,22 @@ export default function Sidebar({ isPremium }: { isPremium: boolean }) {
 
   return (
     <>
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-30 md:hidden"
+          onClick={onMobileClose}
+        />
+      )}
+
       <aside
-        className={`relative flex flex-col bg-white border-r border-gray-100 shrink-0 h-screen transition-[width] duration-200 ease-in-out`}
+        className={`
+          flex flex-col bg-white border-r border-gray-100 h-screen shrink-0
+          fixed inset-y-0 left-0 z-40
+          transition-[width,transform] duration-200 ease-in-out
+          md:relative md:inset-auto md:z-auto
+          ${mobileOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
+        `}
         style={{ width: isCollapsed ? 72 : 240 }}
       >
         {/* Logo */}
@@ -135,10 +157,10 @@ export default function Sidebar({ isPremium }: { isPremium: boolean }) {
           </Link>
         </div>
 
-        {/* Collapse toggle */}
+        {/* Collapse toggle — desktop only */}
         <button
           onClick={() => (isCollapsed ? setIsCollapsed(false) : collapse())}
-          className="absolute -right-3 top-20 z-10 w-6 h-6 bg-white border border-gray-200 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-50 transition-colors"
+          className="hidden md:flex absolute -right-3 top-20 z-10 w-6 h-6 bg-white border border-gray-200 rounded-full items-center justify-center shadow-sm hover:bg-gray-50 transition-colors"
           aria-label={isCollapsed ? "Ouvrir le menu" : "Réduire le menu"}
         >
           {isCollapsed ? (

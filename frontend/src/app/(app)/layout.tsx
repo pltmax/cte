@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import Sidebar from "@/components/app/Sidebar";
+import AppShell from "@/components/app/AppShell";
 
 export default async function AppLayout({
   children,
@@ -28,10 +28,5 @@ export default async function AppLayout({
         new Date(expiresAt) > new Date());
   }
 
-  return (
-    <div className="flex h-screen overflow-hidden bg-background font-sans">
-      <Sidebar isPremium={isPremium} />
-      <main className="flex-1 min-w-0 overflow-y-auto pt-14 md:pt-0">{children}</main>
-    </div>
-  );
+  return <AppShell isPremium={isPremium}>{children}</AppShell>;
 }

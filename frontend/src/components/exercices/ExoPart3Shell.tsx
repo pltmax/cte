@@ -70,6 +70,12 @@ export default function ExoPart3Shell({ conversations, advice, exerciseLabel, ex
   const audioUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
+    return () => {
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; }
+    };
+  }, []);
+
+  useEffect(() => {
     document.querySelector("main")?.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentConvIndex]);
 
@@ -366,11 +372,6 @@ export default function ExoPart3Shell({ conversations, advice, exerciseLabel, ex
           className="h-full bg-[#7c3aed] rounded-full transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
-      </div>
-
-      {/* Topic banner */}
-      <div className="mb-5 rounded-xl bg-[#f3eeff] border border-[#ddd6fe] px-4 py-3">
-        <p className="text-sm font-semibold text-[#7c3aed]">{currentConv.type}</p>
       </div>
 
       {/* Audio button */}

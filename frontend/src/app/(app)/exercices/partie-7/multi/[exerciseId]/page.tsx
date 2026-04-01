@@ -12,8 +12,8 @@ const EXERCISE_RANGES: Record<string, [number, number]> = {
 };
 
 const ADVICE = {
-  intro: "5 des ensembles de 2 à 3 documents liés. Les questions testent votre capacité à comprendre chaque document et à croiser les informations entre elles.",
-  strategy: "Lisez d'abord les questions, repérez les mots-clés, puis cherchez les réponses dans les documents. Pour les questions qui croisent deux documents, vérifiez les deux avant de répondre.",
+  intro: "5 ensembles de 2 à 3 documents liés. Les questions testent ta capacité à comprendre chaque document et à croiser les informations entre elles.",
+  strategy: "Lis d'abord les questions, repère les mots-clés, puis cherchez les réponses dans les documents. Pour les questions qui croisent deux documents, vérifie les deux avant de répondre.",
   traps: [
     { label: "Source incorrecte", example: "L'information est vraie dans le document B mais la question porte sur le document A." },
     { label: "Paraphrase trompeuse", example: "\"complimentary\" dans le texte correspond à \"free\" dans l'option." },

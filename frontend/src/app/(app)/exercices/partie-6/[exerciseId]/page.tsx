@@ -12,7 +12,7 @@ const EXERCISE_RANGES: Record<string, [number, number]> = {
 };
 
 const ADVICE = {
-  intro: "4 textes à trous, chacun suivi de 4 questions à choix multiples (A, B, C ou D). Chaque blanc nécessite un mot, une expression ou une phrase entière.",
+  intro: "5 textes à trous, chacun suivi de 4 questions à choix multiples (A, B, C ou D). Chaque blanc nécessite un mot, une expression ou une phrase entière.",
   strategy: "Lis d'abord l'intégralité du texte pour saisir le contexte, puis traite chaque blanc dans l'ordre. Pour les blancs de phrase entière, vérifie la cohérence logique avec le paragraphe précédent et suivant.",
   traps: [
     { label: "Cohérence ignorée", example: "Choisir un mot grammaticalement correct mais incohérent avec le sujet du texte" },

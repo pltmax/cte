@@ -21,7 +21,7 @@ const TYPES = [
 ];
 
 const ADVICE = {
-  intro: "25 questions à choix multiples (A, B ou C). Une phrase ou question est lue ; tu dois choisir la meilleure réponse. Chaque audio ne passe qu'une fois.",
+  intro: "10 questions à choix multiples (A, B ou C). Une phrase ou question est lue ; tu dois choisir la meilleure réponse. Chaque audio ne passe qu'une fois.",
   strategy: "Identifie le mot interrogatif (Wh-, tag, alternative) dès la première seconde pour anticiper le type de réponse. Méfie-toi des répétitions de mots du stimulus qui n'apportent pas la bonne information.",
   traps: [
     { label: "Répétition de mot", example: "La bonne réponse reprend rarement un mot clé de la question" },

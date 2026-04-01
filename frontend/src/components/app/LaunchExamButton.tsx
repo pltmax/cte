@@ -23,7 +23,7 @@ export default function LaunchExamButton({
     setError(null);
 
     const supabase = createClient();
-    const { data: examId, error: rpcError } = await supabase.rpc("launch_exam");
+    const { data: examId, error: rpcError } = await supabase.rpc("prepare_exam");
 
     if (rpcError) {
       setLoading(false);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useExerciseCompletion } from "@/hooks/useExerciseCompletion";
 
@@ -75,6 +75,14 @@ export default function ExoPart2Shell({
 
   const audioRefs = useRef<Record<string, HTMLAudioElement | null>>({});
   const currentAudioKeyRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    return () => {
+      Object.values(audioRefs.current).forEach((el) => {
+        if (el) { el.pause(); el.currentTime = 0; }
+      });
+    };
+  }, []);
 
   const currentQ = questions[currentIndex];
   const totalQuestions = questions.length;
@@ -323,21 +331,6 @@ export default function ExoPart2Shell({
           </div>
         )}
       </div>
-      {/* Type header banner */}
-      {isFirstOfType && currentType && (
-        <div className="mb-5 rounded-xl bg-[#f3eeff] border border-[#ddd6fe] px-4 py-3 flex items-center justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-[#7c3aed]">{currentType.label}</p>
-            <p className="text-xs text-gray-500 mt-0.5">{currentType.description}</p>
-          </div>
-          {types.length > 1 && (
-            <span className="shrink-0 text-xs font-medium text-[#7c3aed] bg-[#ede9fe] px-2 py-1 rounded-full">
-              {typeIndex + 1} / {types.length} types
-            </span>
-          )}
-        </div>
-      )}
-
       {/* Progress */}
       <div className="flex items-center justify-between mb-2">
         <p className="text-xs font-medium text-gray-500">

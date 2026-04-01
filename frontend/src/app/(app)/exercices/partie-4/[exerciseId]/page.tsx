@@ -12,7 +12,7 @@ const EXERCISE_RANGE: Record<string, [number, number]> = {
 };
 
 const ADVICE = {
-  intro: "10 monologues (discours, annonces, messages) suivis chacun de 3 questions (A, B, C ou D). L'audio ne passe qu'une fois.",
+  intro: "5 monologues (discours, annonces, messages) suivis chacun de 3 questions (A, B, C ou D). L'audio ne passe qu'une fois.",
   strategy: "Lis les 3 questions avant l'audio pour identifier les informations-clés à retenir. Le but du message (sujet, décision, action à faire) est généralement annoncé au tout début.",
   traps: [
     { label: "Chiffres et dates", example: "Plusieurs nombres mentionnés — retiens uniquement celui lié à la question" },
