@@ -253,7 +253,7 @@ export default function SignupForm() {
           className="block text-sm font-medium text-foreground mb-1.5"
         >
           Comment as-tu entendu parler de nous ?{" "}
-          <span className="text-gray-400 font-normal">(optionnel)</span>
+          <span className="text-gray-400 font-normal">*</span>
         </label>
         <select
           id="how_heard"
