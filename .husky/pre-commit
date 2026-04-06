@@ -1,9 +1,5 @@
 #!/bin/sh
-# Pre-commit: context regeneration + ADR reminder + dead code detection
-
-echo "[pre-commit] Regenerating architectural context..."
-HUSKY=1 npm run context:sync
-git add docs/context/ 2>/dev/null || true
+# Pre-commit: ADR reminder + dead code detection
 
 # Check if architectural files are staged in this commit
 ARCH_FILES_CHANGED=$(git diff --cached --name-only 2>/dev/null | grep -E \
