@@ -244,7 +244,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onComplete={handlePart1Complete}
                 onAnswersChange={handlePart1AnswersChange}
                 inExam
-                questions={examData?.part1}
+                questions={examData?.part1 ?? []}
                 isAdmin={isAdmin}
                 questionNumberOffset={QUESTION_OFFSETS.p1}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
@@ -256,7 +256,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onComplete={handlePart2Complete}
                 onAnswersChange={handlePart2AnswersChange}
                 inExam
-                questions={examData?.part2}
+                questions={examData?.part2 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p2}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -267,7 +267,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onComplete={handlePart3Complete}
                 onAnswersChange={handlePart3AnswersChange}
                 inExam
-                conversations={examData?.part3}
+                conversations={examData?.part3 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p3}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -278,7 +278,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onComplete={handlePart4Complete}
                 onAnswersChange={handlePart4AnswersChange}
                 inExam
-                talks={examData?.part4}
+                talks={examData?.part4 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p4}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -289,7 +289,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onComplete={handlePart5Complete}
                 onAnswersChange={handlePart5AnswersChange}
                 inExam
-                questions={examData?.part5}
+                questions={examData?.part5 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p5}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -301,7 +301,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onComplete={handlePart6Complete}
                 onAnswersChange={handlePart6AnswersChange}
                 inExam
-                passages={examData?.part6}
+                passages={examData?.part6 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p6}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
@@ -313,7 +313,7 @@ export default function ExamShell({ examId = "", examData, isAdmin = false }: Ex
                 onComplete={handlePart7Complete}
                 onAnswersChange={handlePart7AnswersChange}
                 inExam
-                passages={examData?.part7}
+                passages={examData?.part7 ?? []}
                 questionNumberOffset={QUESTION_OFFSETS.p7}
                 examTotalQuestions={EXAM_TOTAL_QUESTIONS}
               />
