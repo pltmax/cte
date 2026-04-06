@@ -48,7 +48,8 @@ export default function SignupForm() {
     const firstName = formData.get("first_name") as string;
     const lastName = formData.get("last_name") as string;
     const rawPhone = (formData.get("phone") as string) ?? "";
-    const howHeard = formData.get("how_heard") as HowHeard;
+    const howHeardRaw = formData.get("how_heard") as string;
+    const howHeard = howHeardRaw || null;
 
     // Phone is required
     if (!rawPhone.trim()) {
@@ -96,7 +97,7 @@ export default function SignupForm() {
           full_name: `${firstName} ${lastName}`,
           phone: rawPhone.trim(),
           phone_e164: phoneE164,
-          how_heard: howHeard,
+          ...(howHeard ? { how_heard: howHeard } : {}),
         },
       },
     });
@@ -251,18 +252,16 @@ export default function SignupForm() {
           htmlFor="how_heard"
           className="block text-sm font-medium text-foreground mb-1.5"
         >
-          Comment as-tu entendu parler de nous ?
+          Comment as-tu entendu parler de nous ?{" "}
+          <span className="text-gray-400 font-normal">(optionnel)</span>
         </label>
         <select
           id="how_heard"
           name="how_heard"
-          required
           defaultValue=""
-          className="w-full px-4 py-3 border border-[var(--text-field-stroke-color)] rounded-[var(--text-field-corner-radius)] text-sm focus:outline-none focus:ring-2 focus:ring-[#6600CC] focus:border-transparent bg-white"
+          className="w-full px-4 py-3 border border-[var(--text-field-stroke-color)] rounded-[var(--text-field-corner-radius)] text-sm focus:outline-none focus:ring-2 focus:ring-[#6600CC] focus:border-transparent bg-white appearance-none"
         >
-          <option value="" disabled>
-            Sélectionne une option
-          </option>
+          <option value="">Sélectionne une option</option>
           {HOW_HEARD_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}
