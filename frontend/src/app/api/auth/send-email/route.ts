@@ -8,7 +8,7 @@ const HookPayloadSchema = z.object({
   user: z.object({
     id: z.string(),
     email: z.string().email(),
-    user_metadata: z.record(z.unknown()).optional(),
+    user_metadata: z.record(z.string(), z.unknown()).optional(),
   }),
   email_data: z.object({
     token: z.string(),
