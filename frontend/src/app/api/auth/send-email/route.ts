@@ -197,12 +197,17 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   );
 
   const resend = new Resend(process.env.RESEND_API_KEY!);
-  await resend.emails.send({
+  const { error: sendError } = await resend.emails.send({
     from: "Choppe Ton Exam <noreply@choppetonexam.com>",
     to: user.email,
     subject,
     html,
   });
+
+  if (sendError) {
+    console.error("[send-email] Resend error:", sendError);
+    return NextResponse.json({ error: "Email send failed" }, { status: 500 });
+  }
 
   // Supabase expects 200 + empty object on success
   return NextResponse.json({});
