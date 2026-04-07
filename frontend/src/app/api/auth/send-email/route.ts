@@ -171,7 +171,14 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   }
 
   const body = await req.text();
-  const headers = {
+
+  // Debug: log all incoming headers to understand what Supabase sends
+  const allHeaders: Record<string, string> = {};
+  req.headers.forEach((value, key) => { allHeaders[key] = value; });
+  console.log("[send-email] Incoming headers:", JSON.stringify(allHeaders));
+  console.log("[send-email] Secret prefix:", secret.slice(0, 10));
+
+  const webhookHeaders = {
     "webhook-id": req.headers.get("webhook-id") ?? "",
     "webhook-timestamp": req.headers.get("webhook-timestamp") ?? "",
     "webhook-signature": req.headers.get("webhook-signature") ?? "",
@@ -180,7 +187,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   let payload: z.infer<typeof HookPayloadSchema>;
   try {
     const wh = new Webhook(secret);
-    const verified = wh.verify(body, headers);
+    const verified = wh.verify(body, webhookHeaders);
     payload = HookPayloadSchema.parse(verified);
   } catch (err) {
     console.error("[send-email] Verification/parse error:", err);
