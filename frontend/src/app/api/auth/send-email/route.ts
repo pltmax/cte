@@ -198,7 +198,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const resend = new Resend(process.env.RESEND_API_KEY!);
   const { error: sendError } = await resend.emails.send({
-    from: "Choppe Ton Exam <noreply@choppetonexam.com>",
+    from: "Choppe Ton Exam <contact@choppetonexam.com>",
     to: user.email,
     subject,
     html,
