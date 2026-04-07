@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Webhook } from "svix";
 import { Resend } from "resend";
 import { z } from "zod";
 
@@ -163,19 +164,27 @@ function buildEmailTemplate(
 // ─── Route handler ─────────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
-  // 1. Verify shared secret
-  const authHeader = req.headers.get("authorization") ?? "";
+  // 1. Verify Standard Webhooks signature (svix)
   const secret = process.env.SUPABASE_AUTH_HOOK_SECRET;
-  if (!secret || authHeader !== `Bearer ${secret}`) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!secret) {
+    return NextResponse.json({ error: "Hook secret not configured" }, { status: 500 });
   }
 
-  // 2. Parse + validate body
+  const body = await req.text();
+  const headers = {
+    "webhook-id": req.headers.get("webhook-id") ?? "",
+    "webhook-timestamp": req.headers.get("webhook-timestamp") ?? "",
+    "webhook-signature": req.headers.get("webhook-signature") ?? "",
+  };
+
   let payload: z.infer<typeof HookPayloadSchema>;
   try {
-    payload = HookPayloadSchema.parse(await req.json());
-  } catch {
-    return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
+    const wh = new Webhook(secret);
+    const verified = wh.verify(body, headers);
+    payload = HookPayloadSchema.parse(verified);
+  } catch (err) {
+    console.error("[send-email] Verification/parse error:", err);
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const { user, email_data } = payload;
